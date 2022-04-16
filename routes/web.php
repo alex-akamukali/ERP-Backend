@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    if (!Gate::allows('create-foo')){
+        // dd('nope');
+    }
     // return view('welcome');
     return inertia()->render('Home',[
         'version'=>'2.0.0'
