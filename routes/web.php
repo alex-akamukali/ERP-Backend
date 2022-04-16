@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return inertia()->render('Home',[
+        'version'=>'2.0.0'
+    ]);
 });
