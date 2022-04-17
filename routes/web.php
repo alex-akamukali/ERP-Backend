@@ -19,7 +19,7 @@ Route::get('/', function () {
         // dd('nope');
     }
     // return view('welcome');
-    return inertia()->render('Home',[
+    return inertia()->render('Auth/Login',[
         'version'=>'2.0.0'
     ]);
 });

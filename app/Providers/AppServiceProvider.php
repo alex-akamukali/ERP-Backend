@@ -16,6 +16,8 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        inertia()->share('logo_white',asset('asset1/Olade_logo_white.png'));
+        inertia()->share('login_form_image',asset('asset1/uNGdWHi.png'));
 
     }
 
