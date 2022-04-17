@@ -1,4 +1,4 @@
-import { usePage } from "@inertiajs/inertia-react";
+import { useForm, usePage } from "@inertiajs/inertia-react";
 
 const Layout = ({ children }) => {
     const { logo_white } = usePage().props;
@@ -11,7 +11,11 @@ const Layout = ({ children }) => {
         </>
     );
 };
-const Login = ({ logo_white , login_form_image }) => {
+const Login = ({ logo_white, login_form_image, login_route }) => {
+    const { data, setData, post } = useForm({
+        email: "",
+        password: "",
+    });
     return (
         <>
             <div className="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
@@ -77,7 +81,10 @@ const Login = ({ logo_white , login_form_image }) => {
                                     <h4 className="or text-center">Sign In</h4>
                                     <div className="line" />
                                 </div>
-                                <form method="post" action="utility/login">
+                                <form method="post" onSubmit={(e) => {
+                                    e.preventDefault();
+                                    post(login_route,data);
+                                }}>
                                     <div className="row px-3">
                                         {" "}
                                         <label className="mb-1">
@@ -86,6 +93,10 @@ const Login = ({ logo_white , login_form_image }) => {
                                             </h6>
                                         </label>{" "}
                                         <input
+                                            value={data.email}
+                                            onChange={(e) =>
+                                                setData("email", e.target.value)
+                                            }
                                             className="mb-4"
                                             type="text"
                                             name="username"
@@ -101,6 +112,13 @@ const Login = ({ logo_white , login_form_image }) => {
                                             </h6>
                                         </label>{" "}
                                         <input
+                                            value={data.password}
+                                            onChange={(e) =>
+                                                setData(
+                                                    "password",
+                                                    e.target.value
+                                                )
+                                            }
                                             type="password"
                                             name="password"
                                             placeholder="Enter password"

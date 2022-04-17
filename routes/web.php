@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,10 @@ Route::get('/', function () {
     }
     // return view('welcome');
     return inertia()->render('Auth/Login',[
-        'version'=>'2.0.0'
+        'version'=>'2.0.0',
+        'login_route'=>route('login.store')
     ]);
 });
+
+
+Route::resource('login',LoginController::class);

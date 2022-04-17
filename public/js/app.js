@@ -2120,7 +2120,17 @@ var Layout = function Layout(_ref) {
 
 var Login = function Login(_ref2) {
   var logo_white = _ref2.logo_white,
-      login_form_image = _ref2.login_form_image;
+      login_form_image = _ref2.login_form_image,
+      login_route = _ref2.login_route;
+
+  var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.useForm)({
+    email: "",
+    password: ""
+  }),
+      data = _useForm.data,
+      setData = _useForm.setData,
+      post = _useForm.post;
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto",
@@ -2186,7 +2196,10 @@ var Login = function Login(_ref2) {
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
                 method: "post",
-                action: "utility/login",
+                onSubmit: function onSubmit(e) {
+                  e.preventDefault();
+                  post(login_route, data);
+                },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                   className: "row px-3",
                   children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
@@ -2196,6 +2209,10 @@ var Login = function Login(_ref2) {
                       children: "Email Address"
                     })
                   }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                    value: data.email,
+                    onChange: function onChange(e) {
+                      return setData("email", e.target.value);
+                    },
                     className: "mb-4",
                     type: "text",
                     name: "username",
@@ -2211,6 +2228,10 @@ var Login = function Login(_ref2) {
                       children: "Password"
                     })
                   }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                    value: data.password,
+                    onChange: function onChange(e) {
+                      return setData("password", e.target.value);
+                    },
                     type: "password",
                     name: "password",
                     placeholder: "Enter password",
