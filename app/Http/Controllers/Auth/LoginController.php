@@ -12,7 +12,7 @@ class LoginController extends Controller
     //
     function store(LoginRequest $loginRequest)
     {
-        $check = Auth::attempt($loginRequest->all());
+        $check = Auth::attempt($loginRequest->validated());
         if ($check) {
             return redirect()->back()->with([
                 'message' => 'Login successful',

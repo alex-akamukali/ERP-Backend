@@ -1,4 +1,6 @@
 import { useForm, usePage } from "@inertiajs/inertia-react";
+import _ from "lodash";
+import { useEffect } from "react";
 
 const Layout = ({ children }) => {
     const { logo_white } = usePage().props;
@@ -11,11 +13,16 @@ const Layout = ({ children }) => {
         </>
     );
 };
-const Login = ({ logo_white, login_form_image, login_route }) => {
+const Login = ({ logo_white, login_form_image, login_route ,csrf , message2 , message}) => {
     const { data, setData, post } = useForm({
         email: "",
         password: "",
+        _token:csrf
     });
+    // console.log(message2,'msg2',message);
+    useEffect(()=>{
+        console.log('message',message,'changed...');
+    },[message]);
     return (
         <>
             <div className="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
@@ -83,7 +90,7 @@ const Login = ({ logo_white, login_form_image, login_route }) => {
                                 </div>
                                 <form method="post" onSubmit={(e) => {
                                     e.preventDefault();
-                                    post(login_route,data);
+                                    post(login_route,{...data});
                                 }}>
                                     <div className="row px-3">
                                         {" "}
