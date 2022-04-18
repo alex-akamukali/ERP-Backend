@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\User\DashboardController;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 
