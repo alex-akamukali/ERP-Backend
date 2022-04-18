@@ -13,16 +13,23 @@ const Layout = ({ children }) => {
         </>
     );
 };
-const Login = ({ logo_white, login_form_image, login_route ,csrf , message2 , message}) => {
+const Login = ({ logo_white, login_form_image, login_route ,csrf , message2 , message , flash}) => {
+
     const { data, setData, post } = useForm({
         email: "",
         password: "",
         _token:csrf
     });
+
+    // console.log(flash,'...Flash...');
+
     // console.log(message2,'msg2',message);
     useEffect(()=>{
-        console.log('message',message,'changed...');
-    },[message]);
+        if (flash.message){
+            swal({ title: "", text: flash.message, icon: "error"  });
+            // console.log('message',flash.message,'changed...');
+        }
+    },[flash]);
     return (
         <>
             <div className="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">

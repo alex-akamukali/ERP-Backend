@@ -2135,7 +2135,8 @@ var Login = function Login(_ref2) {
       login_route = _ref2.login_route,
       csrf = _ref2.csrf,
       message2 = _ref2.message2,
-      message = _ref2.message;
+      message = _ref2.message,
+      flash = _ref2.flash;
 
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.useForm)({
     email: "",
@@ -2144,12 +2145,19 @@ var Login = function Login(_ref2) {
   }),
       data = _useForm.data,
       setData = _useForm.setData,
-      post = _useForm.post; // console.log(message2,'msg2',message);
+      post = _useForm.post; // console.log(flash,'...Flash...');
+  // console.log(message2,'msg2',message);
 
 
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
-    console.log('message', message, 'changed...');
-  }, [message]);
+    if (flash.message) {
+      swal({
+        title: "",
+        text: flash.message,
+        icon: "error"
+      }); // console.log('message',flash.message,'changed...');
+    }
+  }, [flash]);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto",
