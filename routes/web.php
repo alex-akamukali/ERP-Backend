@@ -36,8 +36,10 @@ use Illuminate\Support\Facades\Route;
 //     ]);
 // });
 
-Route::get('/',[LoginController::class,'index']);
+Route::get('/',[LoginController::class,'index'])->name('root');
 
 Route::resource('login',LoginController::class);
+
+Route::post('logout',[LoginController::class,'destroy'])->name('logout');
 
 Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');

@@ -42,4 +42,13 @@ class LoginController extends Controller
             'error' => true
         ]);
     }
+
+    function destroy(){
+        Auth::logout();
+        return redirect()->route('root')->with([
+           'message'=>'Just logged out!',
+           'error'=>false
+        ]);
+    }
+
 }
