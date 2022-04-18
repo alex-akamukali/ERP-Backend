@@ -9,6 +9,24 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+
+    function index()
+    {
+
+        if (Auth::check()) {
+            return redirect()->route('dashboard')->with([
+                'message' => 'Currently logged in.',
+                'error' => false
+            ]);
+        }
+
+        return inertia()->render('Auth/Login', [
+            'version' => '2.0.0',
+            'login_route' => route('login.store'),
+            'csrf' => csrf_token()
+        ]);
+    }
+
     //
     function store(LoginRequest $loginRequest)
     {
