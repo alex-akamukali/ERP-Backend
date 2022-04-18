@@ -1,5 +1,5 @@
-@auth
+{{-- @auth --}}
  @include('app-auth')
-@else
- @include('app-guest')
-@endauth
+{{-- @else --}}
+ {{-- @include('app-guest') --}}
+{{-- @endauth --}}

@@ -20,11 +20,13 @@ class LoginController extends Controller
             ]);
         }
 
-        return inertia()->render('Auth/Login', [
-            'version' => '2.0.0',
-            'login_route' => route('login.store'),
-            'csrf' => csrf_token()
-        ]);
+        return view('auth.login');
+
+        // return inertia()->render('Auth/Login', [
+        //     'version' => '2.0.0',
+        //     'login_route' => route('login.store'),
+        //     'csrf' => csrf_token()
+        // ]);
     }
 
     //
@@ -45,7 +47,7 @@ class LoginController extends Controller
 
     function destroy(){
         Auth::logout();
-        return redirect()->route('root')->with([
+        return redirect()->route('login')->with([
            'message'=>'Just logged out!',
            'error'=>false
         ]);
