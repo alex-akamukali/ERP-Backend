@@ -55,7 +55,51 @@
     </style>
 
 
+<style type="text/css">
+    .nav-tabs > li {
+      border-bottom: 3px solid #C0C0C0;
+      color: #C0C0C0;
+      text-transform: uppercase; font-weight: 800;
+    }
 
+     .nav-tabs > li.active  {
+      border-bottom: 3px solid #073367;
+      color: #073367;
+      text-transform: uppercase; font-weight: 800;
+    }
+  </style>
+
+<style type="text/css">
+    .boxTText
+    {
+      font-size: 15px; color:#5F7A9C;
+    }
+    .headTText
+    {
+      font-size: 14px; color:#4F4F4F; font-weight: 700;
+    }
+    .box-header
+    {
+      border: 1px solid #BFD7DD;
+    }
+
+    .panel
+    {
+      margin-bottom: 5px;
+    }
+  </style>
+
+<style type="text/css">
+    .nav-tabs li > a {
+      color: #C8C8C8;
+    }
+
+
+   /* .nav-tabs li.active {
+      background-color: #000;
+      color: red;
+    }*/
+  </style>
 
     <script src="{{ mix('/js/app.js') }}" defer></script>
     @inertiaHead

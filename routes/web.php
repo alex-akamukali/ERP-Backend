@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\User\DashboardController;
+use App\Http\Controllers\User\ProfileController;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 
@@ -45,3 +46,5 @@ Route::post('logout',[LoginController::class,'destroy'])->name('logout');
 
 
 Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware(['auth']);
+
+Route::get('user/profile',[ProfileController::class,'index'])->name('user.profile');

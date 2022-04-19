@@ -8,4 +8,8 @@ use Illuminate\Http\Request;
 class ProfileController extends Controller
 {
     //
+    function index(){
+        return inertia()->render('User/Profile',[]);
+    }
+
 }
