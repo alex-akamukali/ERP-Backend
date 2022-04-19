@@ -101,6 +101,12 @@
     }*/
   </style>
 
+
+<!-- Calendly inline widget begin -->
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<!-- Calendly inline widget end -->
+
+
     <script src="{{ mix('/js/app.js') }}" defer></script>
     @inertiaHead
 </head>

@@ -2333,903 +2333,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Layout */ "./resources/js/Pages/Dashboard/Layout.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
-
-var Dashboard = function Dashboard(_ref) {
-  var logout_route = _ref.logout_route,
-      csrf = _ref.csrf,
-      olade_logo = _ref.olade_logo,
-      user_logo = _ref.user_logo,
-      user_profile_route = _ref.user_profile_route;
-
-  var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.useForm)(),
-      post = _useForm.post;
-
-  var logOut = function logOut() {
-    post(logout_route, {
-      __token: csrf
-    });
-  };
-
+var Dashboard = function Dashboard() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "wrapper",
-      style: {
-        height: "auto",
-        minHeight: "100%"
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("header", {
-        className: "main-header",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-          className: "logo",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
-            className: "logo-mini",
-            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: olade_logo
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
-            className: "logo-lg",
-            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: olade_logo
-            }), " "]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("nav", {
-          className: "navbar navbar-static-top",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "https://erp.oladeconsulting.com/admin/#",
-            className: "sidebar-toggle",
-            "data-toggle": "push-menu",
-            role: "button",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "sr-only",
-              children: "Toggle navigation"
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "navbar-custom-menu",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-              className: "nav navbar-nav",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                className: "dropdown notifications-menu",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "https://erp.oladeconsulting.com/admin/#",
-                  className: "dropdown-toggle",
-                  "data-toggle": "dropdown",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "fa fa-bell-o"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                    className: "label label-danger",
-                    children: "15"
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-                  className: "dropdown-menu",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                    className: "header",
-                    children: "You have 15 notifications"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-                      className: "menu",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=b18550ec1bf9ec2fca2bf92fe4ce",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=361306d7cc9bc413ef624c72a19b",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                          target: "_blank",
-                          href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                            className: "fa fa-comment text-green"
-                          }), " ", "Payment Item for process"]
-                        })
-                      }), " "]
-                    })
-                  })]
-                })]
-              }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                className: "dropdown user user-menu",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "#",
-                  className: "dropdown-toggle",
-                  "data-toggle": "dropdown",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                    src: user_logo,
-                    className: "img-circle",
-                    alt: " .",
-                    style: {
-                      width: "20px",
-                      height: "20px"
-                    }
-                  }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
-                    className: "hidden-xs",
-                    children: [" ", "Alex Akamukali", " "]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-                  className: "dropdown-menu",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                    className: "user-header",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                      src: user_logo,
-                      className: "img-circle",
-                      alt: "User Image"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-                      children: ["Alex Akamukali -", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("small", {
-                        children: "Registered since Mar. 2022"
-                      })]
-                    })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                    className: "user-footer",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                      className: "pull-left",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                        href: "#",
-                        className: "btn btn-primary btn-flat",
-                        children: "Profile"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                      className: "pull-right",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
-                        method: "post",
-                        action: logout_route,
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                          type: "hidden",
-                          name: "_token",
-                          value: csrf
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
-                          className: "btn btn-primary btn-flat",
-                          children: "Sign out"
-                        })]
-                      })
-                    })]
-                  })]
-                })]
-              })]
-            })
-          })]
-        })]
-      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("aside", {
-        className: "main-sidebar",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
-          className: "sidebar active",
-          style: {
-            height: "auto"
-          },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-            className: "sidebar-menu tree",
-            "data-widget": "tree",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-              className: "header",
-              children: " \xA0 "
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-              className: "active",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-tachometer"
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: " Dashboard "
-                })]
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-              className: "treeview",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-                href: "#",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-users"
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: "Users.."
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  className: "pull-right-container",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "fa fa-angle-left pull-right"
-                  })
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-                className: "treeview-menu",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-                    href: user_profile_route,
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-id-card"
-                    }), " All User"]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/users",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-id-card"
-                    }), " All User"]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/activeusers",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-id-card text-green"
-                    }), " ", "Active"]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/inactiveusers",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-id-card text-red"
-                    }), " ", "Inactive"]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/alumniusers",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-id-card text-yellow"
-                    }), " ", "Alumni", " "]
-                  })]
-                })]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-              className: "treeview",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/admin/#",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-pie-chart"
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: " Reports "
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  className: "pull-right-container",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "fa fa-angle-left pull-right"
-                  })
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-                className: "treeview-menu",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/JobDetailsConsultants",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-line-chart text-green"
-                    }), " ", "Consultants on Job"]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-bar-chart text-blue"
-                    }), " ", "On FTE Job", " "]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-bar-chart text-aqua"
-                    }), " ", "On Contract Job", " "]
-                  })]
-                })]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/admin/#",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-envelope"
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: " Communication "
-                })]
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-              className: "treeview",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/admin/#",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-money text-aqua"
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: " Accounts Payments "
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  className: "pull-right-container",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "fa fa-angle-left pull-right"
-                  })
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-                className: "treeview-menu",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/ACCOUNTcontractPayment",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-money text-green"
-                    }), " ", "Contract Payment"]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/ACCOUNTFTEPayment",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-money text-blue"
-                    }), " ", "FTE Payment", " "]
-                  })]
-                })]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-              className: "treeview",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/admin/#",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-tasks"
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: "Document Library"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  className: "pull-right-container",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "fa fa-angle-left pull-right"
-                  })
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-                className: "treeview-menu",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/docContract",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-file"
-                    }), " Olade Contract"]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/#",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-file-o"
-                    }), " ", "Employment Contract"]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/#",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-file text-green"
-                    }), " ", "Invoices"]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/#",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-money"
-                    }), " ", "Payment Stub", " "]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/#",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-file text-aqua"
-                    }), " ", "Resumes", " "]
-                  })]
-                })]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/admin/#",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-folder"
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: " Projects "
-                })]
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/admin/usersTeams",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-users"
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: " Teams "
-                })]
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-              className: "treeview",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/admin/#",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-cogs"
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: " Settings "
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  className: "pull-right-container",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "fa fa-angle-left pull-right"
-                  })
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-                className: "treeview-menu",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/programtype",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-graduation-cap"
-                    }), " ", "Program Type", " "]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/knowledgearea",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-book text-orange"
-                    }), " ", "Knowledge Area", " "]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/oladecontracttype",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-file-o text-green"
-                    }), " ", "Olade Contract Type", " "]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/companies",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-bank text-aqua"
-                    }), " ", "Vendors", " "]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/payrollmgrs",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-money text-blue"
-                    }), " ", "Payroll Mgrs.", " "]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/zoomaccount",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-desktop text-orange"
-                    }), " ", "Zoom Setup", " "]
-                  })]
-                })]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-              className: "treeview",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/admin/#",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-key"
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: " Role Management "
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  className: "pull-right-container",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "fa fa-angle-left pull-right"
-                  })
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-                className: "treeview-menu",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/roles",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-wrench text-aqua"
-                    }), " ", "Assign Roles", " "]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                  children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                    href: "https://erp.oladeconsulting.com/admin/docusignsigners",
-                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-edit text-aqua"
-                    }), " ", "DocuSign Signers", " "]
-                  })]
-                })]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/utility/logout",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-power-off"
-                }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: " Sign Out "
-                })]
-              })
-            })]
-          })
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "content-wrapper",
-        style: {
-          minHeight: "531.141px"
-        },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
-          className: "content-header",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h1", {
-            children: ["Dashboard", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("small", {
-              children: "Version 1.0"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ol", {
-            className: "breadcrumb",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/admin/",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                  className: "fa fa-dashboard"
-                }), " Home"]
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-              className: "active",
-              children: "Dashboard"
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
-          className: "content"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("footer", {
-        className: "main-footer",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "pull-right hidden-xs",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
-            children: "Version"
-          }), " 1.0", " "]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("strong", {
-          children: ["Copyright \xA9 2021", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-            href: "https://oladeconsulting.com/",
-            target: "_blank",
-            children: [" ", "Olade Consulting", " "]
-          })]
-        }), " ", "All rights reserved."]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("aside", {
-        className: "control-sidebar control-sidebar-dark",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-          className: "nav nav-tabs nav-justified control-sidebar-tabs",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-              href: "https://erp.oladeconsulting.com/admin/#control-sidebar-home-tab",
-              "data-toggle": "tab",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                className: "fa fa-home"
-              })
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-              href: "https://erp.oladeconsulting.com/admin/#control-sidebar-settings-tab",
-              "data-toggle": "tab",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                className: "fa fa-gears"
-              })
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "tab-content",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            className: "tab-pane",
-            id: "control-sidebar-home-tab",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-              className: "control-sidebar-heading",
-              children: "Recent Activity"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-              className: "control-sidebar-menu",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "menu-icon fa fa-birthday-cake bg-red"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                    className: "menu-info",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
-                      className: "control-sidebar-subheading",
-                      children: "Langdon's Birthday"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-                      children: "Will be 23 on April 24th"
-                    })]
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "menu-icon fa fa-user bg-yellow"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                    className: "menu-info",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
-                      className: "control-sidebar-subheading",
-                      children: "Frodo Updated His Profile"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-                      children: "New phone +1(800)555-1234"
-                    })]
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "menu-icon fa fa-envelope-o bg-light-blue"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                    className: "menu-info",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
-                      className: "control-sidebar-subheading",
-                      children: "Nora Joined Mailing List"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-                      children: "nora@example.com"
-                    })]
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                    className: "menu-icon fa fa-file-code-o bg-green"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                    className: "menu-info",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
-                      className: "control-sidebar-subheading",
-                      children: "Cron Job 254 Executed"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-                      children: "Execution time 5 seconds"
-                    })]
-                  })]
-                })
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-              className: "control-sidebar-heading",
-              children: "Tasks Progress"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-              className: "control-sidebar-menu",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
-                    className: "control-sidebar-subheading",
-                    children: ["Custom Template Design", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                      className: "label label-danger pull-right",
-                      children: "70%"
-                    })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                    className: "progress progress-xxs",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                      className: "progress-bar progress-bar-danger",
-                      style: {
-                        width: "70%"
-                      }
-                    })
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
-                    className: "control-sidebar-subheading",
-                    children: ["Update Resume", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                      className: "label label-success pull-right",
-                      children: "95%"
-                    })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                    className: "progress progress-xxs",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                      className: "progress-bar progress-bar-success",
-                      style: {
-                        width: "95%"
-                      }
-                    })
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
-                    className: "control-sidebar-subheading",
-                    children: ["Laravel Integration", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                      className: "label label-warning pull-right",
-                      children: "50%"
-                    })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                    className: "progress progress-xxs",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                      className: "progress-bar progress-bar-warning",
-                      style: {
-                        width: "50%"
-                      }
-                    })
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
-                    className: "control-sidebar-subheading",
-                    children: ["Back End Framework", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                      className: "label label-primary pull-right",
-                      children: "68%"
-                    })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                    className: "progress progress-xxs",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                      className: "progress-bar progress-bar-primary",
-                      style: {
-                        width: "68%"
-                      }
-                    })
-                  })]
-                })
-              })]
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "tab-pane",
-            id: "control-sidebar-settings-tab",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
-              method: "post",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-                className: "control-sidebar-heading",
-                children: "General Settings"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                className: "form-group",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
-                  className: "control-sidebar-subheading",
-                  children: ["Report panel usage", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                    type: "checkbox",
-                    className: "pull-right",
-                    defaultChecked: true
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-                  children: "Some information about this general settings option"
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                className: "form-group",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
-                  className: "control-sidebar-subheading",
-                  children: ["Allow mail redirect", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                    type: "checkbox",
-                    className: "pull-right",
-                    defaultChecked: true
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-                  children: "Other sets of options are available"
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                className: "form-group",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
-                  className: "control-sidebar-subheading",
-                  children: ["Expose author name in posts", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                    type: "checkbox",
-                    className: "pull-right",
-                    defaultChecked: true
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-                  children: "Allow the user to show his name in blog posts"
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-                className: "control-sidebar-heading",
-                children: "Chat Settings"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                className: "form-group",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
-                  className: "control-sidebar-subheading",
-                  children: ["Show me as online", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                    type: "checkbox",
-                    className: "pull-right",
-                    defaultChecked: true
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                className: "form-group",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
-                  className: "control-sidebar-subheading",
-                  children: ["Turn off notifications", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-                    type: "checkbox",
-                    className: "pull-right"
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                className: "form-group",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
-                  className: "control-sidebar-subheading",
-                  children: ["Delete chat history", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                    href: "",
-                    className: "text-red pull-right",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
-                      className: "fa fa-trash-o"
-                    })
-                  })]
-                })
-              })]
-            })
-          })]
-        })]
-      }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "control-sidebar-bg"
-      })]
-    })
+    children: "..."
+  });
+};
+
+Dashboard.layout = function (page) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_Layout__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    children: page
   });
 };
 
@@ -4198,29 +3316,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _Dashboard_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Dashboard/Layout */ "./resources/js/Pages/Dashboard/Layout.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_calendly__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-calendly */ "./node_modules/react-calendly/dist/index.es.js");
+/* harmony import */ var _components_Calendly__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Calendly */ "./resources/js/components/Calendly.js");
+/* harmony import */ var _Dashboard_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Dashboard/Layout */ "./resources/js/Pages/Dashboard/Layout.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
 
 
 
 
 
 var UserProfileLayout = function UserProfileLayout(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+      _ref$tabIndex = _ref.tabIndex,
+      tabIndex = _ref$tabIndex === void 0 ? 0 : _ref$tabIndex;
   var user_logo = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.user_logo;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  var $ref = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "row",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
           className: "col-md-12",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             className: "box",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               className: "row",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
                 className: "col-md-12",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
                   id: "myProfileImage",
                   src: user_logo,
                   className: "profile-user-img img-responsive img-circle",
@@ -4233,26 +3360,26 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
                     marginTop: "-27px"
                   },
                   onclick: "openfileDialog();"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
                   style: {
                     display: "inline-block",
                     margin: "12px",
                     fontFamily: '"Arial Rounded MT Bold"'
                   },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
                     style: {
                       color: "#073367",
                       fontWeight: 700,
                       textTransform: "capitalize"
                     },
                     children: "chidi moses"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h4", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("h4", {
                     className: "text-muted",
                     style: {
                       textTransform: "capitalize"
                     },
                     children: [" ", "\xA0", " "]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
                     style: {
                       display: "none"
                     },
@@ -4263,50 +3390,54 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
                     onchange: "onFileSelected(event)"
                   })]
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("style", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("style", {
                 type: "text/css",
                 dangerouslySetInnerHTML: {
                   __html: "\n              .nav-tabs li > a {\n                color: #C8C8C8;\n              }\n\n              \n             /* .nav-tabs li.active {\n                background-color: #000;\n                color: red;\n              }*/\n            "
                 }
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                 className: "col-md-12",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("ul", {
                   className: "nav nav-tabs nav-justified",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+                    className: tabIndex == 1 ? 'active' : '',
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                       style: {
                         border: "none"
                       },
                       href: "userProfileDashboard",
                       children: "Dashboard"
                     })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+                    className: tabIndex == 2 ? 'active' : '',
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                       style: {
                         border: "none"
                       },
                       href: "userProfileProfile",
                       children: "Profile"
                     })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-                    className: "active",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+                    className: tabIndex == 3 ? 'active' : '',
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                       style: {
                         border: "none"
                       },
                       href: "userProfileWorkflow",
                       children: "Workflow"
                     })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+                    className: tabIndex == 4 ? 'active' : '',
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                       style: {
                         border: "none"
                       },
                       href: "userProfileContracts",
                       children: "Contracts"
                     })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+                    className: tabIndex == 5 ? 'active' : '',
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                       style: {
                         border: "none"
                       },
@@ -4319,11 +3450,22 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
             })
           })
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "row",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           className: "col-md-12",
-          children: children
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_calendly__WEBPACK_IMPORTED_MODULE_2__.PopupButton, {
+            text: "Schedule",
+            rootElement: document.getElementById('app'),
+            tex: true,
+            url: "https://calendly.com/easymagic1/30min",
+            prefill: {
+              email: "easymagic1@gmail.com",
+              firstName: "Nnamdi",
+              lastName: "Alexander",
+              name: "AKL"
+            }
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_Calendly__WEBPACK_IMPORTED_MODULE_3__.CalendlyListener, {}), children]
         })
       })]
     })
@@ -4331,13 +3473,14 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
 };
 
 var Profile = function Profile() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(UserProfileLayout, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(UserProfileLayout, {
+    tabIndex: 5,
     children: "...content..."
   });
 };
 
 Profile.layout = function (page) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Dashboard_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Dashboard_Layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
     children: page
   });
 };
@@ -4382,6 +3525,76 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }
 });
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init();
+
+/***/ }),
+
+/***/ "./resources/js/components/Calendly.js":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Calendly.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Calendly": () => (/* binding */ Calendly),
+/* harmony export */   "CalendlyListener": () => (/* binding */ CalendlyListener)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var Calendly = function Calendly() {
+  var $ref = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    Calendly.initInlineWidget({
+      url: "https://calendly.com/easymagic1/30min",
+      prefill: {
+        name: "John Doe",
+        email: "easymagic1@gmail.com",
+        customAnswers: {
+          a1: "Yes",
+          a2: "At the Starbucks on 3rd and 16th"
+        }
+      }
+    });
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      children: "Propose meeting..."
+    })
+  });
+};
+var CalendlyListener = function CalendlyListener() {
+  var isCalendlyEvent = function isCalendlyEvent(e) {
+    return e.origin === "https://calendly.com" && e.data.event && e.data.event.indexOf("calendly.") === 0;
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    window.addEventListener("message", function (e) {
+      if (isCalendlyEvent(e)) {
+        /* Example to get the name of the event */
+        console.log("Event name:", e.data.event);
+        /* Example to get the payload of the event */
+
+        console.log("Event details:", e.data.payload);
+      }
+    });
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {})
+  });
+}; // {
+//     "event": {
+//         "uri": "https://api.calendly.com/scheduled_events/22570bad-d629-4b04-9db6-2d18423fa79b"
+//     },
+//     "invitee": {
+//         "uri": "https://api.calendly.com/scheduled_events/22570bad-d629-4b04-9db6-2d18423fa79b/invitees/712f27d9-95d2-4cfb-89c8-2fba238f97fa"
+//     }
+// }
+// personal-access-token: eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNjUwMzk0MjI5LCJqdGkiOiIyMjczMDU5Ny00ODY1LTQzNWYtYjE2NS0wN2JkY2RlYTNiNjkiLCJ1c2VyX3V1aWQiOiJlZGI1ZmQzNC1hOTAxLTQyMGEtOWRkMi01OTRmNGIyMjZhMTgifQ.1R4dILhX4xh5RGAPzvlikMAAfmTcLcuGTZ6C6CPL3is
+// eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNjUwMzk0MjI5LCJqdGkiOiIyMjczMDU5Ny00ODY1LTQzNWYtYjE2NS0wN2JkY2RlYTNiNjkiLCJ1c2VyX3V1aWQiOiJlZGI1ZmQzNC1hOTAxLTQyMGEtOWRkMi01OTRmNGIyMjZhMTgifQ.1R4dILhX4xh5RGAPzvlikMAAfmTcLcuGTZ6C6CPL3is
 
 /***/ }),
 
@@ -26429,6 +25642,363 @@ module.exports = {
     maybeMap: maybeMap,
     merge: merge
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/react-calendly/dist/index.es.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-calendly/dist/index.es.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CalendlyEventListener": () => (/* binding */ CalendlyEventListener),
+/* harmony export */   "InlineWidget": () => (/* binding */ InlineWidget),
+/* harmony export */   "PopupButton": () => (/* binding */ PopupButton),
+/* harmony export */   "PopupModal": () => (/* binding */ Modal),
+/* harmony export */   "PopupWidget": () => (/* binding */ PopupWidget)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+
+
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var css = "/*\n  code is extracted from Calendly's embed stylesheet: https://assets.calendly.com/assets/external/widget.css\n*/\n\n.calendly-inline-widget,\n.calendly-inline-widget *,\n.calendly-badge-widget,\n.calendly-badge-widget *,\n.calendly-overlay,\n.calendly-overlay * {\n    font-size:16px;\n    line-height:1.2em\n}\n\n.calendly-inline-widget iframe,\n.calendly-badge-widget iframe,\n.calendly-overlay iframe {\n    display:inline;\n    width:100%;\n    height:100%\n}\n\n.calendly-popup-content {\n    position:relative\n}\n\n.calendly-popup-content.calendly-mobile {\n    -webkit-overflow-scrolling:touch;\n    overflow-y:auto\n}\n\n.calendly-overlay {\n    position:fixed;\n    top:0;\n    left:0;\n    right:0;\n    bottom:0;\n    overflow:hidden;\n    z-index:9999;\n    background-color:#a5a5a5;\n    background-color:rgba(31,31,31,0.4)\n}\n\n.calendly-overlay .calendly-close-overlay {\n    position:absolute;\n    top:0;\n    left:0;\n    right:0;\n    bottom:0\n}\n\n.calendly-overlay .calendly-popup {\n    box-sizing:border-box;\n    position:absolute;\n    top:50%;\n    left:50%;\n    -webkit-transform:translateY(-50%) translateX(-50%);\n    transform:translateY(-50%) translateX(-50%);\n    width:80%;\n    min-width:900px;\n    max-width:1000px;\n    height:90%;\n    max-height:680px\n}\n\n@media (max-width: 975px) {\n    .calendly-overlay .calendly-popup {\n        position:fixed;\n        top:50px;\n        left:0;\n        right:0;\n        bottom:0;\n        -webkit-transform:none;\n        transform:none;\n        width:100%;\n        height:auto;\n        min-width:0;\n        max-height:none\n    }\n}\n\n.calendly-overlay .calendly-popup .calendly-popup-content {\n    height:100%;\n}\n\n.calendly-overlay .calendly-popup-close {\n    position:absolute;\n    top:25px;\n    right:25px;\n    color:#fff;\n    width:19px;\n    height:19px;\n    cursor:pointer;\n    background:url(https://assets.calendly.com/assets/external/close-icon.svg) no-repeat;\n    background-size:contain\n}\n\n@media (max-width: 975px) {\n    .calendly-overlay .calendly-popup-close {\n        top:15px;\n        right:15px\n    }\n}\n\n.calendly-badge-widget {\n    position:fixed;\n    right:20px;\n    bottom:15px;\n    z-index:9998\n}\n\n.calendly-badge-widget .calendly-badge-content {\n    display:table-cell;\n    width:auto;\n    height:45px;\n    padding:0 30px;\n    border-radius:25px;\n    box-shadow:rgba(0,0,0,0.25) 0 2px 5px;\n    font-family:sans-serif;\n    text-align:center;\n    vertical-align:middle;\n    font-weight:bold;\n    font-size:14px;\n    color:#fff;\n    cursor:pointer\n}\n\n.calendly-badge-widget .calendly-badge-content.calendly-white {\n    color:#666a73\n}\n\n.calendly-badge-widget .calendly-badge-content span {\n    display:block;\n    font-size:12px\n}\n\n.calendly-spinner {\n    position:absolute;\n    top:50%;\n    left:0;\n    right:0;\n    -webkit-transform:translateY(-50%);\n    transform:translateY(-50%);\n    text-align:center;\n    z-index:-1\n}\n\n.calendly-spinner>div {\n    display:inline-block;\n    width:18px;\n    height:18px;\n    background-color:#e1e1e1;\n    border-radius:50%;\n    vertical-align:middle;\n    -webkit-animation:calendly-bouncedelay 1.4s infinite ease-in-out;\n    animation:calendly-bouncedelay 1.4s infinite ease-in-out;\n    -webkit-animation-fill-mode:both;\n    animation-fill-mode:both\n}\n\n.calendly-spinner .calendly-bounce1 {\n    -webkit-animation-delay:-0.32s;\n    animation-delay:-0.32s\n}\n\n.calendly-spinner .calendly-bounce2 {\n    -webkit-animation-delay:-0.16s;\n    animation-delay:-0.16s\n}\n\n@-webkit-keyframes calendly-bouncedelay {\n    0%,80%,100% {\n        -webkit-transform:scale(0);\n        transform:scale(0)\n    } \n    \n    40%{\n        -webkit-transform:scale(1);\n        transform:scale(1)\n    }\n}\n\n@keyframes calendly-bouncedelay{ \n    0%,80%,100% {\n        -webkit-transform:scale(0);\n        transform:scale(0)\n    }\n    \n    40% {\n        -webkit-transform:scale(1);\n        transform:scale(1)\n    }\n}";
+styleInject(css);
+
+var CalendlyEvent;
+(function (CalendlyEvent) {
+    CalendlyEvent["PROFILE_PAGE_VIEWED"] = "calendly.profile_page_viewed";
+    CalendlyEvent["EVENT_TYPE_VIEWED"] = "calendly.event_type_viewed";
+    CalendlyEvent["DATE_AND_TIME_SELECTED"] = "calendly.date_and_time_selected";
+    CalendlyEvent["EVENT_SCHEDULED"] = "calendly.event_scheduled";
+})(CalendlyEvent || (CalendlyEvent = {}));
+var formatCalendlyUrl = function (_a) {
+    var url = _a.url, _b = _a.prefill, prefill = _b === void 0 ? {} : _b, _c = _a.pageSettings, pageSettings = _c === void 0 ? {} : _c, _d = _a.utm, utm = _d === void 0 ? {} : _d, embedType = _a.embedType;
+    var backgroundColor = pageSettings.backgroundColor, hideEventTypeDetails = pageSettings.hideEventTypeDetails, hideLandingPageDetails = pageSettings.hideLandingPageDetails, primaryColor = pageSettings.primaryColor, textColor = pageSettings.textColor, hideGdprBanner = pageSettings.hideGdprBanner;
+    var customAnswers = prefill.customAnswers, date = prefill.date, email = prefill.email, firstName = prefill.firstName, guests = prefill.guests, lastName = prefill.lastName, location = prefill.location, name = prefill.name;
+    var utmCampaign = utm.utmCampaign, utmContent = utm.utmContent, utmMedium = utm.utmMedium, utmSource = utm.utmSource, utmTerm = utm.utmTerm;
+    var queryStringIndex = url.indexOf("?");
+    var hasQueryString = queryStringIndex > -1;
+    var queryString = url.slice(queryStringIndex + 1);
+    var baseUrl = hasQueryString ? url.slice(0, queryStringIndex) : url;
+    var updatedQueryString = [
+        hasQueryString ? queryString : null,
+        backgroundColor ? "background_color=" + backgroundColor : null,
+        hideEventTypeDetails ? "hide_event_type_details=1" : null,
+        hideLandingPageDetails ? "hide_landing_page_details=1" : null,
+        primaryColor ? "primary_color=" + primaryColor : null,
+        textColor ? "text_color=" + textColor : null,
+        hideGdprBanner ? "hide_gdpr_banner=1" : null,
+        name ? "name=" + encodeURIComponent(name) : null,
+        location ? "location=" + encodeURIComponent(location) : null,
+        firstName ? "first_name=" + encodeURIComponent(firstName) : null,
+        lastName ? "last_name=" + encodeURIComponent(lastName) : null,
+        guests ? "guests=" + guests.join(",") : null,
+        email ? "email=" + email : null,
+        date && date instanceof Date ? "date=" + formatDate(date) : null,
+        utmCampaign ? "utm_campaign=" + encodeURIComponent(utmCampaign) : null,
+        utmContent ? "utm_content=" + encodeURIComponent(utmContent) : null,
+        utmMedium ? "utm_medium=" + encodeURIComponent(utmMedium) : null,
+        utmSource ? "utm_source=" + encodeURIComponent(utmSource) : null,
+        utmTerm ? "utm_term=" + encodeURIComponent(utmTerm) : null,
+        embedType ? "embed_type=" + embedType : null,
+        /*
+         * https://github.com/tcampb/react-calendly/pull/31
+         * embed_domain must be defined to receive messages from the Calendly iframe.
+         */
+        "embed_domain=1",
+    ]
+        .concat(customAnswers ? formatCustomAnswers(customAnswers) : [])
+        .filter(function (item) { return item !== null; })
+        .join("&");
+    return baseUrl + "?" + updatedQueryString;
+};
+var formatDate = function (d) {
+    var month = d.getMonth() + 1;
+    var day = d.getDate();
+    var year = d.getFullYear();
+    return [
+        year,
+        month < 10 ? "0" + month : month,
+        day < 10 ? "0" + day : day,
+    ].join("-");
+};
+var CUSTOM_ANSWER_PATTERN = /^a\d{1,2}$/;
+var formatCustomAnswers = function (customAnswers) {
+    var customAnswersFiltered = Object.keys(customAnswers).filter(function (key) {
+        return key.match(CUSTOM_ANSWER_PATTERN);
+    });
+    if (!customAnswersFiltered.length)
+        return [];
+    return customAnswersFiltered.map(function (key) { return key + "=" + encodeURIComponent(customAnswers[key]); });
+};
+
+var LoadingSpinner = /** @class */ (function (_super) {
+    __extends(LoadingSpinner, _super);
+    function LoadingSpinner() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    LoadingSpinner.prototype.render = function () {
+        return ((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", { className: "calendly-spinner" },
+            (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", { className: "calendly-bounce1" }),
+            (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", { className: "calendly-bounce2" }),
+            (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", { className: "calendly-bounce3" })));
+    };
+    return LoadingSpinner;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+var defaultStyles = {
+    minWidth: "320px",
+    height: "630px",
+};
+var InlineWidget = /** @class */ (function (_super) {
+    __extends(InlineWidget, _super);
+    function InlineWidget(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            isLoading: true,
+        };
+        _this.onLoad = _this.onLoad.bind(_this);
+        return _this;
+    }
+    InlineWidget.prototype.onLoad = function () {
+        this.setState({
+            isLoading: false,
+        });
+    };
+    InlineWidget.prototype.render = function () {
+        var src = formatCalendlyUrl({
+            url: this.props.url,
+            pageSettings: this.props.pageSettings,
+            prefill: this.props.prefill,
+            utm: this.props.utm,
+            embedType: "Inline",
+        });
+        return ((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", { className: "calendly-inline-widget", style: this.props.styles || defaultStyles },
+            this.state.isLoading && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(LoadingSpinner, null),
+            (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("iframe", { width: "100%", height: "100%", frameBorder: "0", title: this.props.iframeTitle || "Calendly Scheduling Page", onLoad: this.onLoad, src: src })));
+    };
+    return InlineWidget;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+var ModalContent = /** @class */ (function (_super) {
+    __extends(ModalContent, _super);
+    function ModalContent(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            isLoading: true,
+        };
+        _this.onLoad = _this.onLoad.bind(_this);
+        return _this;
+    }
+    ModalContent.prototype.onLoad = function () {
+        this.setState({
+            isLoading: false,
+        });
+    };
+    ModalContent.prototype.render = function () {
+        var src = formatCalendlyUrl({
+            url: this.props.url,
+            pageSettings: this.props.pageSettings,
+            prefill: this.props.prefill,
+            utm: this.props.utm,
+            embedType: "PopupWidget",
+        });
+        return ((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null,
+            this.state.isLoading && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(LoadingSpinner, null),
+            (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("iframe", { width: "100%", height: "100%", frameBorder: "0", title: this.props.iframeTitle || "Calendly Scheduling Page", onLoad: this.onLoad, src: src })));
+    };
+    return ModalContent;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+var Modal = (function (props) {
+    if (!props.open)
+        return null;
+    return (0,react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal)((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", { className: "calendly-overlay" },
+        (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", { onClick: props.onModalClose, className: "calendly-close-overlay" }),
+        (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", { className: "calendly-popup" },
+            (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", { className: "calendly-popup-content" },
+                (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(ModalContent, __assign({}, props)))),
+        (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", { className: "calendly-popup-close", onClick: props.onModalClose, "aria-label": "Close modal", style: {
+                display: "block",
+                border: "none",
+                padding: 0,
+            } })), props.rootElement);
+});
+
+var PopupButton = /** @class */ (function (_super) {
+    __extends(PopupButton, _super);
+    function PopupButton(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            isOpen: false,
+        };
+        _this.onClick = _this.onClick.bind(_this);
+        _this.onClose = _this.onClose.bind(_this);
+        return _this;
+    }
+    PopupButton.prototype.onClick = function (e) {
+        e.preventDefault();
+        this.setState({
+            isOpen: true,
+        });
+    };
+    PopupButton.prototype.onClose = function (e) {
+        e.stopPropagation();
+        this.setState({
+            isOpen: false,
+        });
+    };
+    PopupButton.prototype.render = function () {
+        return ((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null,
+            (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", { onClick: this.onClick, style: this.props.styles || {}, className: this.props.className || "" }, this.props.text),
+            (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(Modal, __assign({}, this.props, { open: this.state.isOpen, onModalClose: this.onClose, rootElement: this.props.rootElement }))));
+    };
+    return PopupButton;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+var PopupWidget = /** @class */ (function (_super) {
+    __extends(PopupWidget, _super);
+    function PopupWidget(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            isOpen: false,
+        };
+        _this.onClick = _this.onClick.bind(_this);
+        _this.onClose = _this.onClose.bind(_this);
+        return _this;
+    }
+    PopupWidget.prototype.onClick = function () {
+        this.setState({
+            isOpen: true,
+        });
+    };
+    PopupWidget.prototype.onClose = function (e) {
+        e.stopPropagation();
+        this.setState({
+            isOpen: false,
+        });
+    };
+    PopupWidget.prototype.render = function () {
+        return ((0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", { className: "calendly-badge-widget", onClick: this.onClick },
+            (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", { className: "calendly-badge-content", style: {
+                    background: this.props.color || "#00a2ff",
+                    color: this.props.textColor || "#ffffff",
+                } },
+                this.props.text || "Schedule time with me",
+                this.props.branding && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, "powered by Calendly")),
+            (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(Modal, __assign({}, this.props, { open: this.state.isOpen, onModalClose: this.onClose, rootElement: this.props.rootElement }))));
+    };
+    return PopupWidget;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+var CalendlyEventListener = /** @class */ (function (_super) {
+    __extends(CalendlyEventListener, _super);
+    function CalendlyEventListener(props) {
+        var _this = _super.call(this, props) || this;
+        _this.handleEvent = _this.handleEvent.bind(_this);
+        return _this;
+    }
+    CalendlyEventListener.prototype.componentDidMount = function () {
+        window.addEventListener("message", this.handleEvent);
+    };
+    CalendlyEventListener.prototype.componentWillUnmount = function () {
+        window.removeEventListener("message", this.handleEvent);
+    };
+    CalendlyEventListener.prototype.handleEvent = function (e) {
+        var eventName = e.data.event;
+        if (eventName === CalendlyEvent.DATE_AND_TIME_SELECTED) {
+            this.props.onDateAndTimeSelected && this.props.onDateAndTimeSelected(e);
+        }
+        else if (eventName === CalendlyEvent.EVENT_SCHEDULED) {
+            this.props.onEventScheduled && this.props.onEventScheduled(e);
+        }
+        else if (eventName === CalendlyEvent.EVENT_TYPE_VIEWED) {
+            this.props.onEventTypeViewed && this.props.onEventTypeViewed(e);
+        }
+        else if (eventName === CalendlyEvent.PROFILE_PAGE_VIEWED) {
+            this.props.onProfilePageViewed && this.props.onProfilePageViewed(e);
+        }
+    };
+    CalendlyEventListener.prototype.render = function () {
+        return this.props.children || null;
+    };
+    return CalendlyEventListener;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component));
+
+
+//# sourceMappingURL=index.es.js.map
 
 
 /***/ }),

@@ -1,8 +1,13 @@
 import { usePage } from "@inertiajs/inertia-react";
+import { useRef } from "react";
+import { InlineWidget, PopupButton, PopupModal } from "react-calendly";
+import { CalendlyListener } from "../../components/Calendly";
+
 import Layout from "../Dashboard/Layout";
 
-export const UserProfileLayout = ({ children }) => {
-    const {user_logo} = usePage().props;
+export const UserProfileLayout = ({ children , tabIndex = 0}) => {
+    const { user_logo } = usePage().props;
+    const $ref = useRef(null);
     return (
         <>
             <div>
@@ -71,7 +76,7 @@ export const UserProfileLayout = ({ children }) => {
                                 />
                                 <div className="col-md-12">
                                     <ul className="nav nav-tabs nav-justified">
-                                        <li>
+                                        <li className={(tabIndex == 1)? 'active' : ''}>
                                             <a
                                                 style={{ border: "none" }}
                                                 href="userProfileDashboard"
@@ -79,7 +84,7 @@ export const UserProfileLayout = ({ children }) => {
                                                 Dashboard
                                             </a>
                                         </li>
-                                        <li>
+                                        <li className={(tabIndex == 2)? 'active' : ''}>
                                             <a
                                                 style={{ border: "none" }}
                                                 href="userProfileProfile"
@@ -87,7 +92,7 @@ export const UserProfileLayout = ({ children }) => {
                                                 Profile
                                             </a>
                                         </li>
-                                        <li className="active">
+                                        <li  className={(tabIndex == 3)? 'active' : ''}>
                                             <a
                                                 style={{ border: "none" }}
                                                 href="userProfileWorkflow"
@@ -95,7 +100,7 @@ export const UserProfileLayout = ({ children }) => {
                                                 Workflow
                                             </a>
                                         </li>
-                                        <li>
+                                        <li className={(tabIndex == 4)? 'active' : ''}>
                                             <a
                                                 style={{ border: "none" }}
                                                 href="userProfileContracts"
@@ -103,7 +108,7 @@ export const UserProfileLayout = ({ children }) => {
                                                 Contracts
                                             </a>
                                         </li>
-                                        <li>
+                                        <li className={(tabIndex == 5)? 'active' : ''}>
                                             <a
                                                 style={{ border: "none" }}
                                                 href="userProfilePayments"
@@ -123,6 +128,24 @@ export const UserProfileLayout = ({ children }) => {
                 <div className="row">
                     <div className="col-md-12">
                         {/* Custom Tabs */}
+                        <PopupButton
+
+                            text="Schedule"
+                            rootElement={document.getElementById('app')}
+                            tex
+                            url="https://calendly.com/easymagic1/30min"
+                            prefill={{
+                                email: "easymagic1@gmail.com",
+                                firstName: "Nnamdi",
+                                lastName: "Alexander",
+                                name: "AKL",
+                            }}
+                        />
+
+                        <CalendlyListener />
+
+                        {/* <InlineWidget   /> */}
+
                         {children}
                         {/* nav-tabs-custom */}
                     </div>
@@ -133,8 +156,8 @@ export const UserProfileLayout = ({ children }) => {
     );
 };
 
-const Profile =()=> {
-    return <UserProfileLayout>...content...</UserProfileLayout>;
+const Profile = () => {
+    return <UserProfileLayout tabIndex={5}>...content...</UserProfileLayout>;
 };
 
 Profile.layout = (page) => <Layout children={page} />;
