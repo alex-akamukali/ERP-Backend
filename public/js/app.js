@@ -3465,7 +3465,14 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
               lastName: "Alexander",
               name: "AKL"
             }
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_Calendly__WEBPACK_IMPORTED_MODULE_3__.CalendlyListener, {}), children]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_calendly__WEBPACK_IMPORTED_MODULE_2__.CalendlyEventListener, {
+            onEventScheduled: function onEventScheduled(e) {
+              return console.log('event-scheduled', e, e.target);
+            },
+            onDateAndTimeSelected: function onDateAndTimeSelected(e) {
+              return console.log('date-time-selected', e, e.data.payload);
+            }
+          }), children]
         })
       })]
     })

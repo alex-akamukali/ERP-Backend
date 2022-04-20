@@ -1,6 +1,6 @@
 import { usePage } from "@inertiajs/inertia-react";
 import { useRef } from "react";
-import { InlineWidget, PopupButton, PopupModal } from "react-calendly";
+import { CalendlyEventListener, InlineWidget, PopupButton, PopupModal } from "react-calendly";
 import { CalendlyListener } from "../../components/Calendly";
 
 import Layout from "../Dashboard/Layout";
@@ -142,12 +142,15 @@ export const UserProfileLayout = ({ children , tabIndex = 0}) => {
                             }}
                         />
 
-                        <CalendlyListener />
+                        <CalendlyEventListener onEventScheduled={(e)=>console.log('event-scheduled',e,e.target)}
+                         onDateAndTimeSelected={(e)=>console.log('date-time-selected',e,e.data.payload)}
+                        />
 
+                        {/* <CalendlyListener /> */}
                         {/* <InlineWidget   /> */}
-
                         {children}
                         {/* nav-tabs-custom */}
+
                     </div>
                     {/* /.col */}
                 </div>

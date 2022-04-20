@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\User\DashboardController;
 use App\Http\Controllers\User\ProfileController;
+use App\Http\Controllers\User\Workflow\Assessment\PreEmploymentAssessmentController;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 
@@ -48,3 +49,8 @@ Route::post('logout',[LoginController::class,'destroy'])->name('logout');
 Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware(['auth']);
 
 Route::get('user/profile',[ProfileController::class,'index'])->name('user.profile');
+
+/////////////////////////////// [Workflow]////////////////////////////////
+///Assessment
+Route::get('workflow-assessment/preemployment-assessment',[PreEmploymentAssessmentController::class,'index'])->name('workflow.assessment.preemployment.assessment');
+Route::post('workflow-assessment/preemployment-assessment/propose-meeting',[PreEmploymentAssessmentController::class,'proposeMeeting'])->name('workflow.assessment.preemployment.assessment.propose.metting');
