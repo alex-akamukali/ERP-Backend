@@ -2333,20 +2333,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Layout */ "./resources/js/Pages/Dashboard/Layout.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Profile_Profile__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Profile/Profile */ "./resources/js/Pages/Profile/Profile.js");
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ "./resources/js/Pages/Dashboard/Layout.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 var Dashboard = function Dashboard() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-    children: "..."
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Profile_Profile__WEBPACK_IMPORTED_MODULE_0__.UserProfileLayout, {
+      tabIndex: 1,
+      children: "Dashboard..."
+    })
   });
 };
 
 Dashboard.layout = function (page) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_Layout__WEBPACK_IMPORTED_MODULE_0__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     children: page
   });
 };
@@ -2380,7 +2385,10 @@ var Layout = function Layout(_ref) {
       csrf = _usePage$props.csrf,
       olade_logo = _usePage$props.olade_logo,
       user_logo = _usePage$props.user_logo,
-      user_profile_route = _usePage$props.user_profile_route;
+      user_profile_route = _usePage$props.user_profile_route,
+      all_users_route = _usePage$props.all_users_route,
+      user = _usePage$props.user,
+      dashboard_route = _usePage$props.dashboard_route;
 
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.useForm)(),
       post = _useForm.post;
@@ -2588,7 +2596,7 @@ var Layout = function Layout(_ref) {
                     }
                   }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
                     className: "hidden-xs",
-                    children: [" ", "Alex Akamukali", " "]
+                    children: [" ", user.name]
                   })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
                   className: "dropdown-menu",
@@ -2648,8 +2656,8 @@ var Layout = function Layout(_ref) {
               children: " \xA0 "
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
               className: "active",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "https://erp.oladeconsulting.com/",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+                href: dashboard_route,
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
                   className: "fa fa-tachometer"
                 }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
@@ -2663,7 +2671,7 @@ var Layout = function Layout(_ref) {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
                   className: "fa fa-users"
                 }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: "Users.."
+                  children: "Users"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                   className: "pull-right-container",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
@@ -2674,7 +2682,7 @@ var Layout = function Layout(_ref) {
                 className: "treeview-menu",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-                    href: user_profile_route,
+                    href: all_users_route,
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
                       className: "fa fa-id-card"
                     }), " All User"]
@@ -3333,7 +3341,9 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
   var children = _ref.children,
       _ref$tabIndex = _ref.tabIndex,
       tabIndex = _ref$tabIndex === void 0 ? 0 : _ref$tabIndex;
-  var user_logo = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.user_logo;
+  var _usePage$props = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props,
+      user_logo = _usePage$props.user_logo,
+      user = _usePage$props.user;
   var $ref = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
@@ -3400,7 +3410,7 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("ul", {
                   className: "nav nav-tabs nav-justified",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
-                    className: tabIndex == 1 ? 'active' : '',
+                    className: tabIndex == 1 ? "active" : "",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                       style: {
                         border: "none"
@@ -3409,7 +3419,7 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
                       children: "Dashboard"
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
-                    className: tabIndex == 2 ? 'active' : '',
+                    className: tabIndex == 2 ? "active" : "",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                       style: {
                         border: "none"
@@ -3418,7 +3428,7 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
                       children: "Profile"
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
-                    className: tabIndex == 3 ? 'active' : '',
+                    className: tabIndex == 3 ? "active" : "",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                       style: {
                         border: "none"
@@ -3427,7 +3437,7 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
                       children: "Workflow"
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
-                    className: tabIndex == 4 ? 'active' : '',
+                    className: tabIndex == 4 ? "active" : "",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                       style: {
                         border: "none"
@@ -3436,7 +3446,7 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
                       children: "Contracts"
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
-                    className: tabIndex == 5 ? 'active' : '',
+                    className: tabIndex == 5 ? "active" : "",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                       style: {
                         border: "none"
@@ -3456,7 +3466,7 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
           className: "col-md-12",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_calendly__WEBPACK_IMPORTED_MODULE_2__.PopupButton, {
             text: "Schedule",
-            rootElement: document.getElementById('app'),
+            rootElement: document.getElementById("app"),
             tex: true,
             url: "https://calendly.com/easymagic1/30min",
             prefill: {
@@ -3467,10 +3477,10 @@ var UserProfileLayout = function UserProfileLayout(_ref) {
             }
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_calendly__WEBPACK_IMPORTED_MODULE_2__.CalendlyEventListener, {
             onEventScheduled: function onEventScheduled(e) {
-              return console.log('event-scheduled', e, e.target);
+              return console.log("event-scheduled", e, e.target);
             },
             onDateAndTimeSelected: function onDateAndTimeSelected(e) {
-              return console.log('date-time-selected', e, e.data.payload);
+              return console.log("date-time-selected", e, e.data.payload);
             }
           }), children]
         })
@@ -3493,6 +3503,1040 @@ Profile.layout = function (page) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Profile);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/User/UserList.js":
+/*!*********************************************!*\
+  !*** ./resources/js/Pages/User/UserList.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Dashboard_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Dashboard/Layout */ "./resources/js/Pages/Dashboard/Layout.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+var UserList = function UserList() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "row",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "col-md-12",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "box box-info",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "box-header with-border",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
+              className: "box-title"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "box-tools pull-right",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+                className: "btn btn-info",
+                "data-toggle": "modal",
+                "data-target": "#modal-ivuser",
+                children: " Invite Candidate "
+              })
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "box-body",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "table-responsive",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                id: "DataTables_Table_0_wrapper",
+                className: "dataTables_wrapper form-inline dt-bootstrap no-footer",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                  className: "row",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                    className: "col-sm-6",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                      className: "dataTables_length",
+                      id: "DataTables_Table_0_length",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                        children: ["Show ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("select", {
+                          name: "DataTables_Table_0_length",
+                          "aria-controls": "DataTables_Table_0",
+                          className: "form-control input-sm",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                            value: 10,
+                            children: "10"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                            value: 25,
+                            children: "25"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                            value: 50,
+                            children: "50"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+                            value: 100,
+                            children: "100"
+                          })]
+                        }), " entries"]
+                      })
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                    className: "col-sm-6",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                      id: "DataTables_Table_0_filter",
+                      className: "dataTables_filter",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                        children: ["Search:", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                          type: "search",
+                          className: "form-control input-sm",
+                          placeholder: true,
+                          "aria-controls": "DataTables_Table_0"
+                        })]
+                      })
+                    })
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                  className: "row",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                    className: "col-sm-12",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
+                      className: "table data-table table-striped table-bordered table-hover simple dataTable no-footer",
+                      id: "DataTables_Table_0",
+                      role: "grid",
+                      "aria-describedby": "DataTables_Table_0_info",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                          role: "row",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+                            className: "sorting_asc",
+                            tabIndex: 0,
+                            "aria-controls": "DataTables_Table_0",
+                            rowSpan: 1,
+                            colSpan: 1,
+                            "aria-sort": "ascending",
+                            "aria-label": "Name: activate to sort column descending",
+                            children: "Name"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+                            className: "sorting",
+                            tabIndex: 0,
+                            "aria-controls": "DataTables_Table_0",
+                            rowSpan: 1,
+                            colSpan: 1,
+                            "aria-label": "Email: activate to sort column ascending",
+                            children: "Email"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+                            className: "sorting",
+                            tabIndex: 0,
+                            "aria-controls": "DataTables_Table_0",
+                            rowSpan: 1,
+                            colSpan: 1,
+                            "aria-label": "Program: activate to sort column ascending",
+                            children: "Program"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+                            className: "sorting",
+                            tabIndex: 0,
+                            "aria-controls": "DataTables_Table_0",
+                            rowSpan: 1,
+                            colSpan: 1,
+                            "aria-label": "Date: activate to sort column ascending",
+                            children: "Date"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+                            className: "sorting",
+                            tabIndex: 0,
+                            "aria-controls": "DataTables_Table_0",
+                            rowSpan: 1,
+                            colSpan: 1,
+                            "aria-label": "Status: activate to sort column ascending",
+                            children: "Status"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+                            className: "sorting",
+                            tabIndex: 0,
+                            "aria-controls": "DataTables_Table_0",
+                            rowSpan: 1,
+                            colSpan: 1,
+                            "aria-label": " \xA0 : activate to sort column ascending",
+                            children: " \xA0 "
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+                            className: "sorting",
+                            tabIndex: 0,
+                            "aria-controls": "DataTables_Table_0",
+                            rowSpan: 1,
+                            colSpan: 1,
+                            "aria-label": " \xA0 : activate to sort column ascending",
+                            children: " \xA0 "
+                          })]
+                        })
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                          role: "row",
+                          className: "odd",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            className: "sorting_1",
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae",
+                              style: {
+                                color: '#000'
+                              },
+                              children: "  Chidi  Moses "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " Chidorimoses@gmail.com "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " Project Management "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: " 2022-03-09 09:42:00"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                              className: "text-success",
+                              id: "acctstc2aa1951a32f33b047954754f0ae",
+                              children: " Active "
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                              className: "btn-group",
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                                className: "dropdown-toggle",
+                                "data-toggle": "dropdown",
+                                children: ["... ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                                  className: "sr-only",
+                                  children: "Toggle Dropdown"
+                                })]
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+                                className: "dropdown-menu",
+                                role: "menu",
+                                style: {
+                                  zIndex: 9000
+                                },
+                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-file text-info"
+                                    }), " View Profile "]
+                                  })
+                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "javascript:void(0)",
+                                    usx: "c2aa1951a32f33b047954754f0ae",
+                                    onclick: "reInvite(this)",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-refresh text-info"
+                                    }), " Re-invite"]
+                                  })
+                                })]
+                              })]
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+                              style: {
+                                color: '#FFF'
+                              },
+                              children: " ________ "
+                            }), " "]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                          role: "row",
+                          className: "even",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            className: "sorting_1",
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=878d35927ebab7003ce59c4a4af5",
+                              style: {
+                                color: '#000'
+                              },
+                              children: "  gaurav  kathuria "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=878d35927ebab7003ce59c4a4af5",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " kathuriagaurav416@gmail.com "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=878d35927ebab7003ce59c4a4af5",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " Business Analysis "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: " 2021-09-03 13:46:29"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                              className: "text-success",
+                              id: "acctst878d35927ebab7003ce59c4a4af5",
+                              children: " Active "
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                              className: "btn-group",
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                                className: "dropdown-toggle",
+                                "data-toggle": "dropdown",
+                                children: ["... ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                                  className: "sr-only",
+                                  children: "Toggle Dropdown"
+                                })]
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+                                className: "dropdown-menu",
+                                role: "menu",
+                                style: {
+                                  zIndex: 9000
+                                },
+                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "userProfileDashboard?scand=878d35927ebab7003ce59c4a4af5",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-file text-info"
+                                    }), " View Profile "]
+                                  })
+                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "javascript:void(0)",
+                                    usx: "878d35927ebab7003ce59c4a4af5",
+                                    onclick: "reInvite(this)",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-refresh text-info"
+                                    }), " Re-invite"]
+                                  })
+                                })]
+                              })]
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+                              style: {
+                                color: '#FFF'
+                              },
+                              children: " ________ "
+                            }), " "]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                          role: "row",
+                          className: "odd",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            className: "sorting_1",
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=e7d47ecb8f3ff65596f9aa14bed2",
+                              style: {
+                                color: '#000'
+                              },
+                              children: "  Jamila  Rufai "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=e7d47ecb8f3ff65596f9aa14bed2",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " jamilausman212@gmail.com "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=e7d47ecb8f3ff65596f9aa14bed2",
+                              style: {
+                                color: '#000'
+                              }
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: " 2022-03-14 20:15:28"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                              className: "text-success",
+                              id: "acctste7d47ecb8f3ff65596f9aa14bed2",
+                              children: " Active "
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                              className: "btn-group",
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                                className: "dropdown-toggle",
+                                "data-toggle": "dropdown",
+                                children: ["... ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                                  className: "sr-only",
+                                  children: "Toggle Dropdown"
+                                })]
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+                                className: "dropdown-menu",
+                                role: "menu",
+                                style: {
+                                  zIndex: 9000
+                                },
+                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "userProfileDashboard?scand=e7d47ecb8f3ff65596f9aa14bed2",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-file text-info"
+                                    }), " View Profile "]
+                                  })
+                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "javascript:void(0)",
+                                    usx: "e7d47ecb8f3ff65596f9aa14bed2",
+                                    onclick: "reInvite(this)",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-refresh text-info"
+                                    }), " Re-invite"]
+                                  })
+                                })]
+                              })]
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+                              style: {
+                                color: '#FFF'
+                              },
+                              children: " ________ "
+                            }), " "]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                          role: "row",
+                          className: "even",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            className: "sorting_1",
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=7f20f0d9b2504614e9b127a9b2ca",
+                              style: {
+                                color: '#000'
+                              },
+                              children: "  Jennifer  Oden "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=7f20f0d9b2504614e9b127a9b2ca",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " Jennifer.vangelis-oden@pro-insight.com "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=7f20f0d9b2504614e9b127a9b2ca",
+                              style: {
+                                color: '#000'
+                              }
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: " 2022-03-09 20:25:31"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                              className: "text-warning",
+                              id: "acctst7f20f0d9b2504614e9b127a9b2ca",
+                              children: " Invited"
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                              className: "btn-group",
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                                className: "dropdown-toggle",
+                                "data-toggle": "dropdown",
+                                children: ["... ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                                  className: "sr-only",
+                                  children: "Toggle Dropdown"
+                                })]
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+                                className: "dropdown-menu",
+                                role: "menu",
+                                style: {
+                                  zIndex: 9000
+                                },
+                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "userProfileDashboard?scand=7f20f0d9b2504614e9b127a9b2ca",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-file text-info"
+                                    }), " View Profile "]
+                                  })
+                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "javascript:void(0)",
+                                    usx: "7f20f0d9b2504614e9b127a9b2ca",
+                                    onclick: "reInvite(this)",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-refresh text-info"
+                                    }), " Re-invite"]
+                                  })
+                                })]
+                              })]
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+                              style: {
+                                color: '#FFF'
+                              },
+                              children: " ________ "
+                            }), " "]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                          role: "row",
+                          className: "odd",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            className: "sorting_1",
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=471b2dc92c93feb015f975a018a3",
+                              style: {
+                                color: '#000'
+                              },
+                              children: "  Jenny  Oden "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=471b2dc92c93feb015f975a018a3",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " jennifer.vangelis@gmail.com "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=471b2dc92c93feb015f975a018a3",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " Business Analysis "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: " 2022-03-09 20:51:35"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                              className: "text-success",
+                              id: "acctst471b2dc92c93feb015f975a018a3",
+                              children: " Active "
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                              className: "btn-group",
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                                className: "dropdown-toggle",
+                                "data-toggle": "dropdown",
+                                children: ["... ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                                  className: "sr-only",
+                                  children: "Toggle Dropdown"
+                                })]
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+                                className: "dropdown-menu",
+                                role: "menu",
+                                style: {
+                                  zIndex: 9000
+                                },
+                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "userProfileDashboard?scand=471b2dc92c93feb015f975a018a3",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-file text-info"
+                                    }), " View Profile "]
+                                  })
+                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "javascript:void(0)",
+                                    usx: "471b2dc92c93feb015f975a018a3",
+                                    onclick: "reInvite(this)",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-refresh text-info"
+                                    }), " Re-invite"]
+                                  })
+                                })]
+                              })]
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+                              style: {
+                                color: '#FFF'
+                              },
+                              children: " ________ "
+                            }), " "]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                          role: "row",
+                          className: "even",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            className: "sorting_1",
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=dc15434a3e58e1d95c5a90f7e0b8",
+                              style: {
+                                color: '#000'
+                              },
+                              children: "  Kemi  Johnson "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=dc15434a3e58e1d95c5a90f7e0b8",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " segunlogba69@gmail.com "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=dc15434a3e58e1d95c5a90f7e0b8",
+                              style: {
+                                color: '#000'
+                              }
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: " 2022-03-10 21:52:03"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                              className: "text-warning",
+                              id: "acctstdc15434a3e58e1d95c5a90f7e0b8",
+                              children: " Invited"
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                              className: "btn-group",
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                                className: "dropdown-toggle",
+                                "data-toggle": "dropdown",
+                                children: ["... ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                                  className: "sr-only",
+                                  children: "Toggle Dropdown"
+                                })]
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+                                className: "dropdown-menu",
+                                role: "menu",
+                                style: {
+                                  zIndex: 9000
+                                },
+                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "userProfileDashboard?scand=dc15434a3e58e1d95c5a90f7e0b8",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-file text-info"
+                                    }), " View Profile "]
+                                  })
+                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "javascript:void(0)",
+                                    usx: "dc15434a3e58e1d95c5a90f7e0b8",
+                                    onclick: "reInvite(this)",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-refresh text-info"
+                                    }), " Re-invite"]
+                                  })
+                                })]
+                              })]
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+                              style: {
+                                color: '#FFF'
+                              },
+                              children: " ________ "
+                            }), " "]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                          role: "row",
+                          className: "odd",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            className: "sorting_1",
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=b5aaa4dabfd8e23329dc621f9d57",
+                              style: {
+                                color: '#000'
+                              },
+                              children: "  Kemi  Nkechi "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=b5aaa4dabfd8e23329dc621f9d57",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " kemi.nkechi@gmail.com "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=b5aaa4dabfd8e23329dc621f9d57",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " Business Analysis "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: " 2022-03-14 12:45:51"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                              className: "text-success",
+                              id: "acctstb5aaa4dabfd8e23329dc621f9d57",
+                              children: " Active "
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                              className: "btn-group",
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                                className: "dropdown-toggle",
+                                "data-toggle": "dropdown",
+                                children: ["... ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                                  className: "sr-only",
+                                  children: "Toggle Dropdown"
+                                })]
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+                                className: "dropdown-menu",
+                                role: "menu",
+                                style: {
+                                  zIndex: 9000
+                                },
+                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "userProfileDashboard?scand=b5aaa4dabfd8e23329dc621f9d57",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-file text-info"
+                                    }), " View Profile "]
+                                  })
+                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "javascript:void(0)",
+                                    usx: "b5aaa4dabfd8e23329dc621f9d57",
+                                    onclick: "reInvite(this)",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-refresh text-info"
+                                    }), " Re-invite"]
+                                  })
+                                })]
+                              })]
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+                              style: {
+                                color: '#FFF'
+                              },
+                              children: " ________ "
+                            }), " "]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                          role: "row",
+                          className: "even",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            className: "sorting_1",
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=bc66d290f28df0176ee1aecc6a19",
+                              style: {
+                                color: '#000'
+                              },
+                              children: "  Lola  Olasimbo "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=bc66d290f28df0176ee1aecc6a19",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " fumyzee@yahoo.ca "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=bc66d290f28df0176ee1aecc6a19",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " Business Analysis "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: " 2021-06-28 03:04:37"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                              className: "text-success",
+                              id: "acctstbc66d290f28df0176ee1aecc6a19",
+                              children: " Active "
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                              className: "btn-group",
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                                className: "dropdown-toggle",
+                                "data-toggle": "dropdown",
+                                children: ["... ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                                  className: "sr-only",
+                                  children: "Toggle Dropdown"
+                                })]
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+                                className: "dropdown-menu",
+                                role: "menu",
+                                style: {
+                                  zIndex: 9000
+                                },
+                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "userProfileDashboard?scand=bc66d290f28df0176ee1aecc6a19",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-file text-info"
+                                    }), " View Profile "]
+                                  })
+                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "javascript:void(0)",
+                                    usx: "bc66d290f28df0176ee1aecc6a19",
+                                    onclick: "reInvite(this)",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-refresh text-info"
+                                    }), " Re-invite"]
+                                  })
+                                })]
+                              })]
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+                              style: {
+                                color: '#FFF'
+                              },
+                              children: " ________ "
+                            }), " "]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                          role: "row",
+                          className: "odd",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            className: "sorting_1",
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=6a7526e6e4cff5dcf2f082cf9e6e",
+                              style: {
+                                color: '#000'
+                              },
+                              children: "  nkechi  Moses "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=6a7526e6e4cff5dcf2f082cf9e6e",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " ukluvs11@gmail.com "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=6a7526e6e4cff5dcf2f082cf9e6e",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " Business Analysis "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: " 2022-03-08 19:58:10"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                              className: "text-success",
+                              id: "acctst6a7526e6e4cff5dcf2f082cf9e6e",
+                              children: " Active "
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                              className: "btn-group",
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                                className: "dropdown-toggle",
+                                "data-toggle": "dropdown",
+                                children: ["... ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                                  className: "sr-only",
+                                  children: "Toggle Dropdown"
+                                })]
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+                                className: "dropdown-menu",
+                                role: "menu",
+                                style: {
+                                  zIndex: 9000
+                                },
+                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "userProfileDashboard?scand=6a7526e6e4cff5dcf2f082cf9e6e",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-file text-info"
+                                    }), " View Profile "]
+                                  })
+                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "javascript:void(0)",
+                                    usx: "6a7526e6e4cff5dcf2f082cf9e6e",
+                                    onclick: "reInvite(this)",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-refresh text-info"
+                                    }), " Re-invite"]
+                                  })
+                                })]
+                              })]
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+                              style: {
+                                color: '#FFF'
+                              },
+                              children: " ________ "
+                            }), " "]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                          role: "row",
+                          className: "even",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            className: "sorting_1",
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=b18550ec1bf9ec2fca2bf92fe4ce",
+                              style: {
+                                color: '#000'
+                              },
+                              children: "  Puneet P.M Mehta "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=b18550ec1bf9ec2fca2bf92fe4ce",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " mehtapuneet06@gmail.com "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                              href: "userProfileDashboard?scand=b18550ec1bf9ec2fca2bf92fe4ce",
+                              style: {
+                                color: '#000'
+                              },
+                              children: " Business Analysis "
+                            }), " "]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: " 2021-07-05 17:10:39"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                              className: "text-success",
+                              id: "acctstb18550ec1bf9ec2fca2bf92fe4ce",
+                              children: " Active "
+                            })]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                              className: "btn-group",
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+                                className: "dropdown-toggle",
+                                "data-toggle": "dropdown",
+                                children: ["... ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                                  className: "sr-only",
+                                  children: "Toggle Dropdown"
+                                })]
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+                                className: "dropdown-menu",
+                                role: "menu",
+                                style: {
+                                  zIndex: 9000
+                                },
+                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "userProfileDashboard?scand=b18550ec1bf9ec2fca2bf92fe4ce",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-file text-info"
+                                    }), " View Profile "]
+                                  })
+                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                                    href: "javascript:void(0)",
+                                    usx: "b18550ec1bf9ec2fca2bf92fe4ce",
+                                    onclick: "reInvite(this)",
+                                    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                                      className: "fa fa-refresh text-info"
+                                    }), " Re-invite"]
+                                  })
+                                })]
+                              })]
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
+                              style: {
+                                color: '#FFF'
+                              },
+                              children: " ________ "
+                            }), " "]
+                          })]
+                        })]
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                  className: "row",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                    className: "col-sm-5",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                      className: "dataTables_info",
+                      id: "DataTables_Table_0_info",
+                      role: "status",
+                      "aria-live": "polite",
+                      children: "Showing 1 to 10 of 11 entries"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                    className: "col-sm-7",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                      className: "dataTables_paginate paging_simple_numbers",
+                      id: "DataTables_Table_0_paginate",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+                        className: "pagination",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                          className: "paginate_button previous disabled",
+                          id: "DataTables_Table_0_previous",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                            href: "#",
+                            "aria-controls": "DataTables_Table_0",
+                            "data-dt-idx": 0,
+                            tabIndex: 0,
+                            children: "Previous"
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                          className: "paginate_button active",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                            href: "#",
+                            "aria-controls": "DataTables_Table_0",
+                            "data-dt-idx": 1,
+                            tabIndex: 0,
+                            children: "1"
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                          className: "paginate_button ",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                            href: "#",
+                            "aria-controls": "DataTables_Table_0",
+                            "data-dt-idx": 2,
+                            tabIndex: 0,
+                            children: "2"
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                          className: "paginate_button next",
+                          id: "DataTables_Table_0_next",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                            href: "#",
+                            "aria-controls": "DataTables_Table_0",
+                            "data-dt-idx": 3,
+                            tabIndex: 0,
+                            children: "Next"
+                          })
+                        })]
+                      })
+                    })
+                  })]
+                })]
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "box-footer clearfix"
+          })]
+        })
+      })
+    })
+  });
+};
+
+UserList.layout = function (page) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_Dashboard_Layout__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    children: page
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserList);
 
 /***/ }),
 
@@ -57128,7 +58172,9 @@ var map = {
 	"./Home": "./resources/js/Pages/Home.js",
 	"./Home.js": "./resources/js/Pages/Home.js",
 	"./Profile/Profile": "./resources/js/Pages/Profile/Profile.js",
-	"./Profile/Profile.js": "./resources/js/Pages/Profile/Profile.js"
+	"./Profile/Profile.js": "./resources/js/Pages/Profile/Profile.js",
+	"./User/UserList": "./resources/js/Pages/User/UserList.js",
+	"./User/UserList.js": "./resources/js/Pages/User/UserList.js"
 };
 
 

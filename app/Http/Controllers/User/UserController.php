@@ -17,6 +17,7 @@ class UserController extends Controller
     public function index()
     {
         //
+        return inertia()->render('User/UserList',[]);
     }
 
     /**

@@ -1,12 +1,17 @@
 import { usePage } from "@inertiajs/inertia-react";
 import { useRef } from "react";
-import { CalendlyEventListener, InlineWidget, PopupButton, PopupModal } from "react-calendly";
+import {
+    CalendlyEventListener,
+    InlineWidget,
+    PopupButton,
+    PopupModal,
+} from "react-calendly";
 import { CalendlyListener } from "../../components/Calendly";
 
 import Layout from "../Dashboard/Layout";
 
-export const UserProfileLayout = ({ children , tabIndex = 0}) => {
-    const { user_logo } = usePage().props;
+export const UserProfileLayout = ({ children, tabIndex = 0 }) => {
+    const { user_logo, user } = usePage().props;
     const $ref = useRef(null);
     return (
         <>
@@ -76,7 +81,11 @@ export const UserProfileLayout = ({ children , tabIndex = 0}) => {
                                 />
                                 <div className="col-md-12">
                                     <ul className="nav nav-tabs nav-justified">
-                                        <li className={(tabIndex == 1)? 'active' : ''}>
+                                        <li
+                                            className={
+                                                tabIndex == 1 ? "active" : ""
+                                            }
+                                        >
                                             <a
                                                 style={{ border: "none" }}
                                                 href="userProfileDashboard"
@@ -84,7 +93,11 @@ export const UserProfileLayout = ({ children , tabIndex = 0}) => {
                                                 Dashboard
                                             </a>
                                         </li>
-                                        <li className={(tabIndex == 2)? 'active' : ''}>
+                                        <li
+                                            className={
+                                                tabIndex == 2 ? "active" : ""
+                                            }
+                                        >
                                             <a
                                                 style={{ border: "none" }}
                                                 href="userProfileProfile"
@@ -92,7 +105,11 @@ export const UserProfileLayout = ({ children , tabIndex = 0}) => {
                                                 Profile
                                             </a>
                                         </li>
-                                        <li  className={(tabIndex == 3)? 'active' : ''}>
+                                        <li
+                                            className={
+                                                tabIndex == 3 ? "active" : ""
+                                            }
+                                        >
                                             <a
                                                 style={{ border: "none" }}
                                                 href="userProfileWorkflow"
@@ -100,7 +117,11 @@ export const UserProfileLayout = ({ children , tabIndex = 0}) => {
                                                 Workflow
                                             </a>
                                         </li>
-                                        <li className={(tabIndex == 4)? 'active' : ''}>
+                                        <li
+                                            className={
+                                                tabIndex == 4 ? "active" : ""
+                                            }
+                                        >
                                             <a
                                                 style={{ border: "none" }}
                                                 href="userProfileContracts"
@@ -108,7 +129,11 @@ export const UserProfileLayout = ({ children , tabIndex = 0}) => {
                                                 Contracts
                                             </a>
                                         </li>
-                                        <li className={(tabIndex == 5)? 'active' : ''}>
+                                        <li
+                                            className={
+                                                tabIndex == 5 ? "active" : ""
+                                            }
+                                        >
                                             <a
                                                 style={{ border: "none" }}
                                                 href="userProfilePayments"
@@ -129,9 +154,8 @@ export const UserProfileLayout = ({ children , tabIndex = 0}) => {
                     <div className="col-md-12">
                         {/* Custom Tabs */}
                         <PopupButton
-
                             text="Schedule"
-                            rootElement={document.getElementById('app')}
+                            rootElement={document.getElementById("app")}
                             tex
                             url="https://calendly.com/easymagic1/30min"
                             prefill={{
@@ -142,15 +166,23 @@ export const UserProfileLayout = ({ children , tabIndex = 0}) => {
                             }}
                         />
 
-                        <CalendlyEventListener onEventScheduled={(e)=>console.log('event-scheduled',e,e.target)}
-                         onDateAndTimeSelected={(e)=>console.log('date-time-selected',e,e.data.payload)}
+                        <CalendlyEventListener
+                            onEventScheduled={(e) =>
+                                console.log("event-scheduled", e, e.target)
+                            }
+                            onDateAndTimeSelected={(e) =>
+                                console.log(
+                                    "date-time-selected",
+                                    e,
+                                    e.data.payload
+                                )
+                            }
                         />
 
                         {/* <CalendlyListener /> */}
                         {/* <InlineWidget   /> */}
                         {children}
                         {/* nav-tabs-custom */}
-
                     </div>
                     {/* /.col */}
                 </div>

@@ -1,9 +1,12 @@
+import { UserProfileLayout } from "../Profile/Profile";
 import Layout from "./Layout";
 const Dashboard =()=>{
 
 
     return (<>
-      ...
+      <UserProfileLayout tabIndex={1}>
+Dashboard...
+      </UserProfileLayout>
     </>);
 
 };

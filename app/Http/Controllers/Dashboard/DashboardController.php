@@ -10,6 +10,6 @@ class DashboardController extends Controller
     //
     function index(){
         // return '...';
-        return inertia()->render('Dashboard/Dashboard.js',[]);
+        return inertia()->render('Dashboard/Dashboard',[]);
     }
 }

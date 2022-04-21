@@ -1,8 +1,16 @@
 import { Link, useForm, usePage } from "@inertiajs/inertia-react";
 
 const Layout = ({ children }) => {
-    const { logout_route, csrf, olade_logo, user_logo, user_profile_route } =
-        usePage().props;
+    const {
+        logout_route,
+        csrf,
+        olade_logo,
+        user_logo,
+        user_profile_route,
+        all_users_route,
+        user,
+        dashboard_route
+    } = usePage().props;
     const { post } = useForm();
     const logOut = () => {
         post(logout_route, {
@@ -222,7 +230,7 @@ const Layout = ({ children }) => {
                                         />{" "}
                                         <span className="hidden-xs">
                                             {" "}
-                                            Alex Akamukali{" "}
+                                            {user.name}
                                         </span>
                                     </a>
                                     <ul className="dropdown-menu">
@@ -306,22 +314,22 @@ const Layout = ({ children }) => {
                             <li className="header"> &nbsp; </li>
                             {/* Optionally, you can add icons to the links */}
                             <li className="active">
-                                <a href="https://erp.oladeconsulting.com/">
+                                <Link href={dashboard_route}>
                                     <i className="fa fa-tachometer" />{" "}
                                     <span> Dashboard </span>
-                                </a>
+                                </Link>
                             </li>
                             <li className="treeview">
                                 <Link href="#">
                                     <i className="fa fa-users" />{" "}
-                                    <span>Users..</span>
+                                    <span>Users</span>
                                     <span className="pull-right-container">
                                         <i className="fa fa-angle-left pull-right" />
                                     </span>
                                 </Link>
                                 <ul className="treeview-menu">
                                     <li>
-                                        <Link href={user_profile_route}>
+                                        <Link href={all_users_route}>
                                             <i className="fa fa-id-card" /> All
                                             User
                                         </Link>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Profile\ProfileController;
+use App\Http\Controllers\User\UserController;
 // use App\Http\Controllers\User\DashboardController;
 // use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\User\Workflow\Assessment\PreEmploymentAssessmentController;
@@ -49,6 +50,8 @@ Route::post('logout',[LoginController::class,'destroy'])->name('logout');
 
 
 Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware(['auth']);
+
+Route::get('all-users',[UserController::class,'index'])->name('all.users');
 
 Route::get('user/profile',[ProfileController::class,'index'])->name('user.profile');
 
