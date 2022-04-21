@@ -3303,10 +3303,10 @@ var Home = function Home(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/User/Profile.js":
-/*!********************************************!*\
-  !*** ./resources/js/Pages/User/Profile.js ***!
-  \********************************************/
+/***/ "./resources/js/Pages/Profile/Profile.js":
+/*!***********************************************!*\
+  !*** ./resources/js/Pages/Profile/Profile.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -57127,8 +57127,8 @@ var map = {
 	"./Dashboard/Layout.js": "./resources/js/Pages/Dashboard/Layout.js",
 	"./Home": "./resources/js/Pages/Home.js",
 	"./Home.js": "./resources/js/Pages/Home.js",
-	"./User/Profile": "./resources/js/Pages/User/Profile.js",
-	"./User/Profile.js": "./resources/js/Pages/User/Profile.js"
+	"./Profile/Profile": "./resources/js/Pages/Profile/Profile.js",
+	"./Profile/Profile.js": "./resources/js/Pages/Profile/Profile.js"
 };
 
 

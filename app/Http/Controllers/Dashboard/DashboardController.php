@@ -8,4 +8,8 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     //
+    function index(){
+        // return '...';
+        return inertia()->render('Dashboard/Dashboard.js',[]);
+    }
 }

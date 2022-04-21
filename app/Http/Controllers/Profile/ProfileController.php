@@ -17,6 +17,8 @@ class ProfileController extends Controller
     public function index()
     {
         //
+        // return '0000';
+        return inertia()->render('Profile/Profile.js', []);
     }
 
     /**

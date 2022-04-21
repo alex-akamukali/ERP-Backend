@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\User\DashboardController;
-use App\Http\Controllers\User\ProfileController;
+use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Profile\ProfileController;
+// use App\Http\Controllers\User\DashboardController;
+// use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\User\Workflow\Assessment\PreEmploymentAssessmentController;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
@@ -51,6 +53,3 @@ Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard')-
 Route::get('user/profile',[ProfileController::class,'index'])->name('user.profile');
 
 /////////////////////////////// [Workflow]////////////////////////////////
-///Assessment
-Route::get('workflow-assessment/preemployment-assessment',[PreEmploymentAssessmentController::class,'index'])->name('workflow.assessment.preemployment.assessment');
-Route::post('workflow-assessment/preemployment-assessment/propose-meeting',[PreEmploymentAssessmentController::class,'proposeMeeting'])->name('workflow.assessment.preemployment.assessment.propose.metting');
