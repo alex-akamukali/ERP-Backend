@@ -17,7 +17,10 @@ class UserController extends Controller
     public function index()
     {
         //
-        return inertia()->render('User/UserList',[]);
+        $list = User::paginate(2);
+        return inertia()->render('User/UserList',[
+            'users'=>$list
+        ]);
     }
 
     /**

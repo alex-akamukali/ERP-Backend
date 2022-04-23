@@ -1,6 +1,14 @@
 <script context="module">
     import Layout from "../Dashboard/Layout.svelte";
+    import {page} from "@inertiajs/inertia-svelte"
+
     export const layout = Layout;
+
+</script>
+
+<script>
+   let users = $page.props.users;
+   console.log(users);
 </script>
 
 <section class="content-header">
