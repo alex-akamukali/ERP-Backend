@@ -9,7 +9,14 @@
     //         'all_users_route'=>route('all.users'),
     //         'user'=>$request->user(),
     //         'dashboard_route'=>route('dashboard')
-    let { olade_logo, user_logo, dashboard_route ,all_users_route} = $page.props;
+    let {
+        olade_logo,
+        user_logo,
+        dashboard_route,
+        all_users_route,
+        user_profile_route,
+        user
+    } = $page.props;
 </script>
 
 <div class="wrapper" style="height: auto; min-height: 100%;">
@@ -243,7 +250,7 @@
                                 class="img-circle"
                                 alt=" ."
                                 style="width:20px; height:20px"
-                            /> <span class="hidden-xs"> Alex Akamukali </span>
+                            /> <span class="hidden-xs"> {user.name} </span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -276,7 +283,8 @@
                             <li class="user-footer">
                                 <div class="pull-left">
                                     <a
-                                        href="myprofile"
+                                        use:inertia
+                                        href={user_profile_route}
                                         class="btn btn-primary btn-flat"
                                         >Profile</a
                                     >

@@ -18,7 +18,7 @@ class ProfileController extends Controller
     {
         //
         // return '0000';
-        return inertia()->render('Profile/Profile.js', []);
+        return inertia()->render('Profile/Profile', []);
     }
 
     /**
