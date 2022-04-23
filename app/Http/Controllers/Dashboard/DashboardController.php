@@ -11,5 +11,6 @@ class DashboardController extends Controller
     function index(){
         // return '...';
         return inertia()->render('Dashboard/Dashboard',[]);
+        // return inertia()->render('Test',[]);
     }
 }
