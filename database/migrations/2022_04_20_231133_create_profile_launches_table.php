@@ -15,6 +15,12 @@ class CreateProfileLaunchesTable extends Migration
     {
         Schema::create('profile_launches', function (Blueprint $table) {
             $table->id();
+
+            $table->integer('user_id')->nullable();
+            $table->string('email_password')->nullable();
+            $table->string('resume')->nullable();
+            $table->integer('created_by')->nullable();
+
             $table->timestamps();
         });
     }

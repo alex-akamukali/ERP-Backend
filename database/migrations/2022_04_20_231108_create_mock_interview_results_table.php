@@ -15,6 +15,13 @@ class CreateMockInterviewResultsTable extends Migration
     {
         Schema::create('mock_interview_results', function (Blueprint $table) {
             $table->id();
+
+            $table->integer('user_id')->nullable();
+            $table->string('first_trial')->nullable()->comment('pass or fail');
+            $table->string('second_trial')->nullable()->comment('pass or fail');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+
             $table->timestamps();
         });
     }

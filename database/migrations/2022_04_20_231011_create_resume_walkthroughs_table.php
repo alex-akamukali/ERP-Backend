@@ -15,6 +15,11 @@ class CreateResumeWalkthroughsTable extends Migration
     {
         Schema::create('resume_walkthroughs', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id')->nullable();
+            $table->string('status')->nullable()->comment('completed,pending');
+            $table->string('scheduled_date')->nullable();
+            $table->integer('created_by')->nullable();
+
             $table->timestamps();
         });
     }
