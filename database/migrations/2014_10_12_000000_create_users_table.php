@@ -26,11 +26,11 @@ class CreateUsersTable extends Migration
             $table->string('middle_name')->nullable();
 
             $table->string('last_name')->nullable();
-            $table->string('gender')->nullable();
+
             $table->string('highest_qualification')->nullable();
             $table->string('date_of_birth')->nullable();
             $table->string('phone')->nullable();
-            $table->string('email')->nullable();
+
             $table->string('program_type_id')->nullable();
             $table->string('address')->nullable();
             $table->integer('province_id')->nullable();
