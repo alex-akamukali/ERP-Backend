@@ -15,6 +15,15 @@ class CreateFTEMscPaymentsTable extends Migration
     {
         Schema::create('f_t_e_msc_payments', function (Blueprint $table) {
             $table->id();
+
+            $table->integer('f_t_e_payment_id')->nullable();
+            $table->string('impact_on_invoice')->nullable()->comment('(addition or deduction)');
+            $table->string('amount')->nullable();
+            $table->string('description')->nullable();
+            $table->string('due_date')->nullable();
+            $table->string('taxable')->nullable();
+
+
             $table->timestamps();
         });
     }
