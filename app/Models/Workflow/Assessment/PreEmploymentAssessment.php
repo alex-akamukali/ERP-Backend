@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class PreEmploymentAssessment extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+       'user_id',
+       'status',
+       'scheduled_date',
+       'created_by'
+    ];
 }
