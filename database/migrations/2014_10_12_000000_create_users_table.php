@@ -22,44 +22,34 @@ class CreateUsersTable extends Migration
 
 
             ////new
+            $table->string('first_name')->nullable();
+            $table->string('middle_name')->nullable();
 
+            $table->string('last_name')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('highest_qualification')->nullable();
+            $table->string('date_of_birth')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->string('program_type_id')->nullable();
+            $table->string('address')->nullable();
+            $table->integer('province_id')->nullable();
+            $table->integer('province_town_city_id')->nullable();
+            $table->string('postal_code')->nullable();
+            $table->string('account_status')->nullable();
+            $table->string('incorporation_name')->nullable();
+            $table->string('incorporation_address')->nullable();
+            $table->string('notes')->nullable();
+            $table->string('resume')->nullable();
+            $table->string('id_card')->nullable();
+            $table->string('void_check_doc')->nullable();
+            $table->string('hst_no')->nullable();
+            $table->integer('assign_admin')->nullable();
+            $table->integer('assign_director_id')->nullable();
+            $table->string('account_type')->nullable();
+            $table->string('dob')->nullable();
+            $table->string('gender')->nullable();
 
-            $table->text('userid')->nullable();
-            $table->text('FirstName')->nullable();
-            $table->string('MiddleName')->nullable();
-            $table->text('LastName')->nullable();
-
-
-            $table->string('Phone')->nullable();
-            $table->string('DOB')->nullable();
-            $table->string('Gender')->nullable();
-            $table->text('Profession')->nullable();
-            $table->text('Education')->nullable();
-            $table->integer('ProgramType')->nullable();
-            $table->text('Address')->nullable();
-            $table->string('apartment')->nullable();
-            $table->string('town')->nullable();
-            $table->string('postalcode')->nullable();
-            $table->string('province')->nullable();
-            $table->string('countryOrRegion')->nullable();
-
-            $table->string('RegisteredOn')->nullable();
-            $table->string('lastLogin')->nullable();
-            $table->integer('user_r')->nullable();
-            $table->integer('alumni_r')->nullable();
-            $table->integer('account_r')->nullable();
-            $table->integer('cuscare_r')->nullable();
-            $table->integer('admin_r')->nullable();
-            $table->integer('mgt_r')->nullable();
-            $table->integer('superadmin_r')->nullable();
-            $table->integer('docu_signSigner')->nullable();
-            $table->integer('isActive')->nullable();
-            $table->text('myIncorp')->nullable();
-            $table->text('myIncorpAddress')->nullable();
-            $table->text('HST')->nullable();
-            $table->integer('Director')->nullable();
-            $table->integer('Admin')->nullable();
-            $table->text('VoidCheck')->nullable();
             ///new
 
             $table->rememberToken();

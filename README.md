@@ -28,6 +28,8 @@ assign_admin
 
 assign_director_id
 
+account_type
+
 
 pre_employment_assessments
 ===========================
@@ -43,11 +45,28 @@ assessment_results
 id
 user_id
 program_type_id
-exam_type_id
+knowledge_area_type
 knowledge_area_id
 no_of_correct_answer
 score
 created_by
+
+
+program_types**
+=============
+id
+name
+status
+
+
+knowledge_areas**
+===============
+id
+program_type_id
+knowledge_area_type
+name
+no_of_question
+status
 
 
 assessment_interviews

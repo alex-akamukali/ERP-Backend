@@ -15,6 +15,15 @@ class CreateAssessmentResultsTable extends Migration
     {
         Schema::create('assessment_results', function (Blueprint $table) {
             $table->id();
+
+            $table->integer('user_id')->nullable();
+            $table->integer('program_type_id')->nullable();
+            $table->integer('exam_type_id')->nullable();
+            $table->integer('knowledge_area_id')->nullable();
+            $table->string('no_of_correct_answer')->nullable();
+            $table->string('score')->nullable();
+            $table->integer('created_by')->nullable();
+
             $table->timestamps();
         });
     }

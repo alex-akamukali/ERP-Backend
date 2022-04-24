@@ -15,6 +15,12 @@ class CreatePreEmploymentAssessmentsTable extends Migration
     {
         Schema::create('pre_employment_assessments', function (Blueprint $table) {
             $table->id();
+
+            $table->integer('user_id')->nullable();
+            $table->string('status')->nullable();
+            $table->string('scheduled_date')->nullable();
+            $table->integer('created_by')->nullable();
+
             $table->timestamps();
         });
     }
