@@ -17,6 +17,21 @@ class ProgramTypeController extends Controller
     public function index()
     {
         //
+        $message = '';
+        $error = false;
+        if (session()->has('message')){
+          $message = session()->get('message');
+          $error = session()->get('error');
+        }
+        return inertia()->render('Settings/ProgramType',[
+            'programTypes'=>ProgramType::all(),
+            'store'=>route('program-type.store'),
+            'update'=>route('program-type.update',['']),
+            'destroy'=>route('program-type.destroy',['']),
+            'message'=>$message,
+            'error'=>$error,
+            'csrf'=>csrf_token()
+        ]);
     }
 
     /**
@@ -38,6 +53,10 @@ class ProgramTypeController extends Controller
     public function store(StoreProgramTypeRequest $request)
     {
         //
+        return redirect()->back()->with([
+            'message'=>'Program Type Added',
+            'error'=>false
+        ]);
     }
 
     /**

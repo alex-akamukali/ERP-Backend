@@ -48,7 +48,8 @@ class HandleInertiaRequests extends Middleware
             'user_profile_route'=>route('user.profile'),
             'all_users_route'=>route('all.users'),
             'user'=>$request->user(),
-            'dashboard_route'=>route('dashboard')
+            'dashboard_route'=>route('dashboard'),
+            'program_type_index_route'=>route('program-type.index')
         ]);
     }
 }

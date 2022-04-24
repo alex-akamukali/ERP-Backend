@@ -15,7 +15,8 @@
         dashboard_route,
         all_users_route,
         user_profile_route,
-        user
+        user,
+        program_type_index_route
     } = $page.props;
 </script>
 
@@ -477,7 +478,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li>
-                            <a href="programtype">
+                            <a use:inertia href={program_type_index_route}>
                                 <i class="fa fa-graduation-cap" /> Program Type
                             </a>
                         </li>
