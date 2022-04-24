@@ -1,13 +1,13 @@
 <script context="module">
     import Layout from "../Dashboard/Layout.svelte";
     import {page} from "@inertiajs/inertia-svelte"
-
+    import Pagination from "../../components/Pagination.svelte";
     export const layout = Layout;
-
 </script>
 
 <script>
-   let users = $page.props.users;
+
+export let users; // = $page.props.users;
    console.log(users);
 </script>
 
@@ -27,7 +27,7 @@
         <div class="col-md-12">
             <div class="box box-info">
                 <div class="box-header with-border">
-                    <h3 class="box-title">...</h3>
+                    <h3 class="box-title">All Users</h3>
 
                     <div class="box-tools pull-right">
                         <button
@@ -47,52 +47,17 @@
                 <div class="box-body">
                     <div class="table-responsive">
                         <div
-                            id="DataTables_Table_0_wrapper"
-                            class="dataTables_wrapper form-inline dt-bootstrap no-footer"
+
                         >
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <div
-                                        class="dataTables_length"
-                                        id="DataTables_Table_0_length"
-                                    >
-                                        <label
-                                            >Show <select
-                                                name="DataTables_Table_0_length"
-                                                aria-controls="DataTables_Table_0"
-                                                class="form-control input-sm"
-                                                ><option value="10">10</option
-                                                ><option value="25">25</option
-                                                ><option value="50">50</option
-                                                ><option value="100">100</option
-                                                ></select
-                                            > entries</label
-                                        >
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div
-                                        id="DataTables_Table_0_filter"
-                                        class="dataTables_filter"
-                                    >
-                                        <label
-                                            >Search:<input
-                                                type="search"
-                                                class="form-control input-sm"
-                                                placeholder=""
-                                                aria-controls="DataTables_Table_0"
-                                            /></label
-                                        >
-                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <table
-                                        class="table data-table table-striped table-bordered table-hover simple dataTable no-footer"
-                                        id="DataTables_Table_0"
-                                        role="grid"
-                                        aria-describedby="DataTables_Table_0_info"
+                                        class="table  table-striped"
+
                                     >
                                         <thead>
                                             <!-- svelte-ignore a11y-no-redundant-roles -->
@@ -161,32 +126,17 @@
                                         </thead>
                                         <tbody>
                                             <!-- svelte-ignore a11y-no-redundant-roles -->
+                                            {#each users.data as user}
                                             <tr role="row" class="odd">
                                                 <td class="sorting_1">
-                                                    <a
-                                                        href="userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae"
-                                                        style="color:#000"
-                                                    >
-                                                        Chidi Moses
-                                                    </a>
+                                                        {user.name}
                                                 </td>
                                                 <td>
-                                                    <a
-                                                        href="userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae"
-                                                        style="color:#000"
-                                                    >
-                                                        Chidorimoses@gmail.com
-                                                    </a>
+                                                        {user.email}
                                                 </td>
                                                 <td>
-                                                    <a
-                                                        href="userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae"
-                                                        style="color:#000"
-                                                    >
-                                                        Project Management
-                                                    </a>
                                                 </td>
-                                                <td> 2022-03-09 09:42:00</td>
+                                                <td> {user.created_at}</td>
 
                                                 <!-- svelte-ignore a11y-label-has-associated-control -->
                                                 <td>
@@ -245,6 +195,7 @@
                                                     </b>
                                                 </td>
                                             </tr>
+                                            {/each}
 
 
                                             </tbody
@@ -253,64 +204,9 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-5">
-                                    <div
-                                        class="dataTables_info"
-                                        id="DataTables_Table_0_info"
-                                        role="status"
-                                        aria-live="polite"
-                                    >
-                                        Showing 1 to 10 of 11 entries
-                                    </div>
-                                </div>
+
                                 <div class="col-sm-7">
-                                    <div
-                                        class="dataTables_paginate paging_simple_numbers"
-                                        id="DataTables_Table_0_paginate"
-                                    >
-                                        <ul class="pagination">
-                                            <li
-                                                class="paginate_button previous disabled"
-                                                id="DataTables_Table_0_previous"
-                                            >
-                                                <!-- svelte-ignore a11y-invalid-attribute -->
-                                                <a
-                                                    href="#"
-                                                    aria-controls="DataTables_Table_0"
-                                                    data-dt-idx="0"
-                                                    tabindex="0">Previous</a
-                                                >
-                                            </li>
-                                            <li class="paginate_button active">
-                                                <!-- svelte-ignore a11y-invalid-attribute -->
-                                                <a
-                                                    href="#"
-                                                    aria-controls="DataTables_Table_0"
-                                                    data-dt-idx="1"
-                                                    tabindex="0">1</a
-                                                >
-                                            </li>
-                                            <li class="paginate_button ">
-                                                <a
-                                                    href="null"
-                                                    aria-controls="DataTables_Table_0"
-                                                    data-dt-idx="2"
-                                                    tabindex="0">2</a
-                                                >
-                                            </li>
-                                            <li
-                                                class="paginate_button next"
-                                                id="DataTables_Table_0_next"
-                                            >
-                                                <a
-                                                    href="null"
-                                                    aria-controls="DataTables_Table_0"
-                                                    data-dt-idx="3"
-                                                    tabindex="0">Next</a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <Pagination pages={users.links} />
                                 </div>
                             </div>
                         </div>

@@ -107,6 +107,8 @@
 <!-- Calendly inline widget end -->
 
 
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+
     <script src="{{ mix('/js/app.js') }}" defer></script>
     @inertiaHead
 </head>
@@ -147,8 +149,8 @@ AdminLTE for demo purposes
 
 
     <!-- DataTables -->
-    <script src="{{ asset('asset1/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('asset1/dataTables.bootstrap.min.js') }}"></script>
+    {{-- <script src="{{ asset('asset1/jquery.dataTables.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('asset1/dataTables.bootstrap.min.js') }}"></script> --}}
     <script src="{{ asset('asset1/toastr.min.js') }}"></script>
     <!-- date-range-picker -->
     <script src="{{ asset('asset1/moment.min.js') }}"></script>
