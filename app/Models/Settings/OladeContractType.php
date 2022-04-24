@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class OladeContractType extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'primary_commission',
+        'secondary_commission',
+        'no_of_months',
+        'status',
+        'body',
+        'instructions'
+    ];
 }

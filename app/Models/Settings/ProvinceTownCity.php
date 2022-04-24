@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class ProvinceTownCity extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+      'province_id',
+      'name'
+    ];
 }
