@@ -4732,7 +4732,7 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[20] = list[i];
   return child_ctx;
-} // (119:44) {#each programTypes as programType}
+} // (120:44) {#each programTypes as programType}
 
 
 function create_each_block(ctx) {
@@ -4854,7 +4854,7 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
-} // (212:36) {#if $form.errors.title}
+} // (213:36) {#if $form.errors.title}
 
 
 function create_if_block_2(ctx) {
@@ -4884,7 +4884,7 @@ function create_if_block_2(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (232:36) {#if $form.errors.description}
+} // (233:36) {#if $form.errors.description}
 
 
 function create_if_block_1(ctx) {
@@ -4914,7 +4914,7 @@ function create_if_block_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (255:36) {#if $form.errors.status}
+} // (256:36) {#if $form.errors.status}
 
 
 function create_if_block(ctx) {
@@ -5165,7 +5165,7 @@ function create_fragment(ctx) {
       textarea.required = "";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div14, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label2, "class", "control-label");
-      option0.__value = "Select";
+      option0.__value = "";
       option0.value = option0.__value;
       option1.__value = "active";
       option1.value = option1.__value;
