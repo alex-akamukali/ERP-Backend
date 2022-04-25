@@ -12,37 +12,56 @@
     export let destroy;
     export let message;
     export let error;
-    export let csrf;
+    // export let csrf;
+
+    let mode = "create";
 
     let closeModal = null;
 
-    $: msg = message;
-
-
     let form = useForm({
-        description:'...',
-        title:'...',
-        // _token:csrf
+        description: "",
+        title: "",
+        status: "active",
+        id: "0",
     });
 
-    function selectRow(data) {}
-
-    function callStore(){
-        $form.post(store);
+    function selectRow(data) {
+        $form.description = data.description;
+        $form.title = data.title;
+        $form.status = data.status;
+        $form.id = data.id;
+        mode = "update";
     }
 
+    function removeRow(data){
+        if (confirm("Do you want to confirm this action?")){
+            $form.delete(destroy + '/' + data.id);
+        }
+    }
 
-   $: if (message != '' && !error){
-     closeModal.click();
-    toastr.success(message);
-     message = '';
+    function clearForm() {
+        $form.reset();
+        mode = "create";
+    }
 
+    function callStore() {
+        if (mode == "create") {
+            $form.post(store);
+        } else {
+            $form.put(update + '/' + $form.id);
+        }
+    }
+
+    $: if (message != "" && !error) {
+        closeModal.click();
+        toastr.success(message);
+        message = "";
     }
 </script>
 
 <section class="content-header">
     <h1>
-        Program Type {message}
+        Program Type
         <!-- <small>Version 1.0</small> -->
     </h1>
     <ol class="breadcrumb">
@@ -65,6 +84,7 @@
                             class="btn btn-primary btn-sm"
                             data-toggle="modal"
                             data-target="#modal-progtype"
+                            on:click|preventDefault={clearForm}
                         >
                             <i class="fa fa-plus" /> Program Type
                         </button>
@@ -77,8 +97,7 @@
                             id="example1_wrapper"
                             class="dataTables_wrapper form-inline dt-bootstrap no-footer"
                         >
-                            <div class="row">
-                            </div>
+                            <div class="row" />
                             <div class="row">
                                 <div class="col-sm-12">
                                     <table
@@ -91,81 +110,61 @@
                                             <!-- svelte-ignore a11y-no-redundant-roles -->
                                             <tr role="row"
                                                 ><th
-                                                    class="sorting_asc"
-                                                    tabindex="0"
-                                                    aria-controls="example1"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-sort="ascending"
-                                                    aria-label="Title: activate to sort column descending"
-                                                    style="width: 269.18px;"
                                                     >Title</th
                                                 ><th
-                                                    class="sorting"
-                                                    tabindex="0"
-                                                    aria-controls="example1"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-label="Description: activate to sort column ascending"
-                                                    style="width: 206.18px;"
                                                     >Description</th
                                                 ><th
-                                                    class="sorting"
-                                                    tabindex="0"
-                                                    aria-controls="example1"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-label="Status: activate to sort column ascending"
-                                                    style="width: 134.781px;"
                                                     >Status</th
-                                                ><th
-                                                    class="sorting"
-                                                    tabindex="0"
-                                                    aria-controls="example1"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-label=" &amp;nbsp; : activate to sort column ascending"
-                                                    style="width: 53.4219px;"
                                                 >
-                                                    &nbsp;
-                                                </th><th
-                                                    class="sorting"
-                                                    tabindex="0"
-                                                    aria-controls="example1"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-label=" &amp;nbsp; : activate to sort column ascending"
-                                                    style="width: 53.4375px;"
+                                                <th
                                                 >
-                                                    &nbsp;
-                                                </th></tr
-                                            >
+                                                    Actions
+                                                </th>
+                                                </tr>
                                         </thead>
                                         <tbody>
                                             {#each programTypes as programType}
+                                                <tr class="odd">
+                                                    <td>
+                                                        {programType.title}
+                                                    </td>
+                                                    <td>
+                                                        {programType.description}
+                                                    </td>
+                                                    <td>
+                                                        {programType.status}
+                                                    </td>
+                                                    <td>
+                                                        <a
+                                                            data-toggle="modal"
+                                                            data-target="#modal-progtype"
+                                                            href={null}
+                                                            on:click|preventDefault={() =>
+                                                                selectRow(
+                                                                    programType
+                                                                )}
+                                                        >
+                                                            <i
+                                                                class="fa fa-edit text-green"
+                                                            />
+                                                        </a>
+                                                        &nbsp;&nbsp;
+                                                        <a
+                                                        href={null}
+                                                        on:click|preventDefault={() =>
+                                                            removeRow(
+                                                                programType
+                                                            )}
+                                                    >
+                                                        <i
+                                                            class="fa fa-trash text-red"
+                                                        />
+                                                    </a>
 
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1">
-                                                    Business Analysis
-                                                </td>
-                                                <td />
-                                                <td> Active </td>
-
-                                                <td>
-                                                    <i
-                                                        class="fa fa-eye text-green"
-                                                    />
-                                                </td>
-                                                <td>
-                                                    <i
-                                                        class="fa fa-edit text-green"
-                                                    />
-                                                </td>
-                                            </tr>
-
+                                                    </td>
+                                                </tr>
                                             {/each}
-
-</tbody>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -199,7 +198,6 @@
                 <form
                     on:submit|preventDefault={callStore}
                     class="form-horizontal"
-
                     method="post"
                 >
                     <div class="modal-body">
@@ -236,7 +234,22 @@
                                     />
                                 </div>
                                 <div class="col-md-12">
-                                    <input type="checkbox"  />
+                                    <!-- svelte-ignore a11y-label-has-associated-control -->
+                                    <label class="control-label"
+                                        >Status<b style="color:red">*</b></label
+                                    >
+                                    <select
+                                        class="form-control"
+                                        name="proDescription"
+                                        required=""
+                                        bind:value={$form.status}
+                                    >
+                                        <option>Select</option>
+                                        <option value="active">Active</option>
+                                        <option value="inactive"
+                                            >Inactive</option
+                                        >
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -248,7 +261,7 @@
                             data-dismiss="modal">Close</button
                         >
                         <button type="submit" class="btn btn-primary">
-                            <i class="fa fa-save" /> &nbsp; Add Program Type
+                            <i class="fa fa-save" /> &nbsp; {mode == 'create'? "Add Program Type":"Update Program Type"}
                         </button>
                     </div>
                 </form>

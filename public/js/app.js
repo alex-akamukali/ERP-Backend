@@ -474,6 +474,18 @@ function e(e){return e&&"object"==typeof e&&"default"in e?e.default:e}var t=e(__
 
 /***/ }),
 
+/***/ "./node_modules/@inertiajs/progress/dist/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@inertiajs/progress/dist/index.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var n,e=(n=__webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogress.js"))&&"object"==typeof n&&"default"in n?n.default:n,t=null;function r(n){document.addEventListener("inertia:start",o.bind(null,n)),document.addEventListener("inertia:progress",i),document.addEventListener("inertia:finish",s)}function o(n){t=setTimeout(function(){return e.start()},n)}function i(n){e.isStarted()&&n.detail.progress.percentage&&e.set(Math.max(e.status,n.detail.progress.percentage/100*.9))}function s(n){clearTimeout(t),e.isStarted()&&(n.detail.visit.completed?e.done():n.detail.visit.interrupted?e.set(0):n.detail.visit.cancelled&&(e.done(),e.remove()))}exports.InertiaProgress={init:function(n){var t=void 0===n?{}:n,o=t.delay,i=t.color,s=void 0===i?"#29d":i,a=t.includeCSS,p=void 0===a||a,d=t.showSpinner,l=void 0!==d&&d;r(void 0===o?250:o),e.configure({showSpinner:l}),p&&function(n){var e=document.createElement("style");e.type="text/css",e.textContent="\n    #nprogress {\n      pointer-events: none;\n    }\n\n    #nprogress .bar {\n      background: "+n+";\n\n      position: fixed;\n      z-index: 1031;\n      top: 0;\n      left: 0;\n\n      width: 100%;\n      height: 2px;\n    }\n\n    #nprogress .peg {\n      display: block;\n      position: absolute;\n      right: 0px;\n      width: 100px;\n      height: 100%;\n      box-shadow: 0 0 10px "+n+", 0 0 5px "+n+";\n      opacity: 1.0;\n\n      -webkit-transform: rotate(3deg) translate(0px, -4px);\n          -ms-transform: rotate(3deg) translate(0px, -4px);\n              transform: rotate(3deg) translate(0px, -4px);\n    }\n\n    #nprogress .spinner {\n      display: block;\n      position: fixed;\n      z-index: 1031;\n      top: 15px;\n      right: 15px;\n    }\n\n    #nprogress .spinner-icon {\n      width: 18px;\n      height: 18px;\n      box-sizing: border-box;\n\n      border: solid 2px transparent;\n      border-top-color: "+n+";\n      border-left-color: "+n+";\n      border-radius: 50%;\n\n      -webkit-animation: nprogress-spinner 400ms linear infinite;\n              animation: nprogress-spinner 400ms linear infinite;\n    }\n\n    .nprogress-custom-parent {\n      overflow: hidden;\n      position: relative;\n    }\n\n    .nprogress-custom-parent #nprogress .spinner,\n    .nprogress-custom-parent #nprogress .bar {\n      position: absolute;\n    }\n\n    @-webkit-keyframes nprogress-spinner {\n      0%   { -webkit-transform: rotate(0deg); }\n      100% { -webkit-transform: rotate(360deg); }\n    }\n    @keyframes nprogress-spinner {\n      0%   { transform: rotate(0deg); }\n      100% { transform: rotate(360deg); }\n    }\n  ",document.head.appendChild(e)}(s)}};
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -4718,88 +4730,204 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[15] = list[i];
+  child_ctx[20] = list[i];
   return child_ctx;
-} // (145:44) {#each programTypes as programType}
+} // (126:44) {#each programTypes as programType}
 
 
 function create_each_block(ctx) {
   var tr;
+  var td0;
+  var t0_value =
+  /*programType*/
+  ctx[20].title + "";
+  var t0;
+  var t1;
+  var td1;
+  var t2_value =
+  /*programType*/
+  ctx[20].description + "";
+  var t2;
+  var t3;
+  var td2;
+  var t4_value =
+  /*programType*/
+  ctx[20].status + "";
+  var t4;
+  var t5;
+  var td3;
+  var a0;
+  var a0_href_value;
+  var t6;
+  var a1;
+  var a1_href_value;
+  var t7;
+  var mounted;
+  var dispose;
+
+  function click_handler() {
+    return (
+      /*click_handler*/
+      ctx[14](
+      /*programType*/
+      ctx[20])
+    );
+  }
+
+  function click_handler_1() {
+    return (
+      /*click_handler_1*/
+      ctx[15](
+      /*programType*/
+      ctx[20])
+    );
+  }
+
   return {
     c: function c() {
       tr = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tr");
-      tr.innerHTML = "<td class=\"sorting_1\">Business Analysis</td> \n                                                <td></td> \n                                                <td>Active</td> \n\n                                                <td><i class=\"fa fa-eye text-green\"></i></td> \n                                                <td><i class=\"fa fa-edit text-green\"></i></td> \n                                            ";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(tr, "role", "row");
+      td0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      td1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t2_value);
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      td2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t4_value);
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      td3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      a0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a0.innerHTML = "<i class=\"fa fa-edit text-green\"></i>";
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("\n                                                          \n                                                        ");
+      a1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a1.innerHTML = "<i class=\"fa fa-trash text-red\"></i>";
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "data-toggle", "modal");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "data-target", "#modal-progtype");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", a0_href_value = null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", a1_href_value = null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(tr, "class", "odd");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, tr, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td0, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td1, t2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td2, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td3, a0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td3, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td3, a1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t7);
+
+      if (!mounted) {
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(a0, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(click_handler)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(a1, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(click_handler_1))];
+        mounted = true;
+      }
     },
-    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    p: function p(new_ctx, dirty) {
+      ctx = new_ctx;
+      if (dirty &
+      /*programTypes*/
+      1 && t0_value !== (t0_value =
+      /*programType*/
+      ctx[20].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+      if (dirty &
+      /*programTypes*/
+      1 && t2_value !== (t2_value =
+      /*programType*/
+      ctx[20].description + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      if (dirty &
+      /*programTypes*/
+      1 && t4_value !== (t4_value =
+      /*programType*/
+      ctx[20].status + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t4, t4_value);
+    },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
+      mounted = false;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
 }
 
 function create_fragment(ctx) {
   var section0;
-  var h1;
-  var t0;
-  var t1;
-  var t2;
-  var ol;
-  var t6;
+  var t5;
   var section1;
   var div11;
   var div10;
   var div9;
   var div1;
-  var t9;
+  var h3;
+  var t6;
+  var div0;
+  var button0;
+  var t8;
   var div7;
   var div6;
   var div5;
   var div2;
-  var t10;
+  var t9;
   var div4;
   var div3;
   var table;
   var thead;
-  var t16;
+  var t15;
   var tbody;
-  var t17;
+  var t16;
   var div8;
-  var t18;
+  var t17;
   var div22;
   var div21;
   var div20;
   var div12;
   var button1;
-  var t20;
+  var t19;
   var h4;
-  var t22;
+  var t21;
   var form_1;
   var div18;
   var div17;
   var div16;
   var div13;
   var label0;
+  var t24;
+  var input;
   var t25;
-  var input0;
-  var t26;
   var div14;
   var label1;
-  var t29;
+  var t28;
   var textarea;
-  var t30;
+  var t29;
   var div15;
-  var t31;
+  var label2;
+  var t32;
+  var select;
+  var option0;
+  var option1;
+  var option2;
+  var t36;
   var div19;
+  var button2;
+  var t38;
+  var button3;
+  var i2;
+  var t39;
+  var t40_value = (
+  /*mode*/
+  ctx[2] == 'create' ? "Add Program Type" : "Update Program Type") + "";
+  var t40;
   var mounted;
   var dispose;
   var each_value =
   /*programTypes*/
-  ctx[1];
+  ctx[0];
   var each_blocks = [];
 
   for (var i = 0; i < each_value.length; i += 1) {
@@ -4809,52 +4937,49 @@ function create_fragment(ctx) {
   return {
     c: function c() {
       section0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
-      h1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Program Type ");
-      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(
-      /*message*/
-      ctx[0]);
-      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      ol = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ol");
-      ol.innerHTML = "<li><a href=\"#\"><i class=\"fa fa-dashboard\"></i> Home</a></li> \n        <li class=\"active\">Program Type</li>";
-      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      section0.innerHTML = "<h1>Program Type</h1> \n    <ol class=\"breadcrumb\"><li><a href=\"#\"><i class=\"fa fa-dashboard\"></i> Home</a></li> \n        <li class=\"active\">Program Type</li></ol>";
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       section1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
       div11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div1.innerHTML = "<h3 class=\"box-title\"></h3> \n\n                    <div class=\"box-tools pull-right\"><button class=\"btn btn-primary btn-sm\" data-toggle=\"modal\" data-target=\"#modal-progtype\"><i class=\"fa fa-plus\"></i> Program Type</button></div>";
-      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      h3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h3");
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      button0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      button0.innerHTML = "<i class=\"fa fa-plus\"></i> Program Type";
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
       thead = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("thead");
-      thead.innerHTML = "<tr role=\"row\"><th class=\"sorting_asc\" tabindex=\"0\" aria-controls=\"example1\" rowspan=\"1\" colspan=\"1\" aria-sort=\"ascending\" aria-label=\"Title: activate to sort column descending\" style=\"width: 269.18px;\">Title</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"example1\" rowspan=\"1\" colspan=\"1\" aria-label=\"Description: activate to sort column ascending\" style=\"width: 206.18px;\">Description</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"example1\" rowspan=\"1\" colspan=\"1\" aria-label=\"Status: activate to sort column ascending\" style=\"width: 134.781px;\">Status</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"example1\" rowspan=\"1\" colspan=\"1\" aria-label=\" &amp;nbsp; : activate to sort column ascending\" style=\"width: 53.4219px;\">\xA0\n                                                </th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"example1\" rowspan=\"1\" colspan=\"1\" aria-label=\" &amp;nbsp; : activate to sort column ascending\" style=\"width: 53.4375px;\">\xA0</th></tr>";
-      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      thead.innerHTML = "<tr role=\"row\"><th>Title</th><th>Description</th><th>Status</th> \n                                                <th>Actions</th></tr>";
+      t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       tbody = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tbody");
 
       for (var _i = 0; _i < each_blocks.length; _i += 1) {
         each_blocks[_i].c();
       }
 
-      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      t18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       button1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
       button1.innerHTML = "<span aria-hidden=\"true\">\xD7</span>";
-      t20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       h4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h4");
       h4.textContent = "Program Type";
-      t22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       form_1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
       div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
@@ -4862,22 +4987,41 @@ function create_fragment(ctx) {
       div13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label0.innerHTML = "Program Title <b style=\"color:red\">*</b>";
+      t24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
       t25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label1.innerHTML = "Program Description <b style=\"color:red\">*</b>";
-      t29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       textarea = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("textarea");
-      t30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div15.innerHTML = "<input type=\"checkbox\"/>";
-      t31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      label2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label2.innerHTML = "Status<b style=\"color:red\">*</b>";
+      t32 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      select = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option0.textContent = "Select";
+      option1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option1.textContent = "Active";
+      option2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option2.textContent = "Inactive";
+      t36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div19.innerHTML = "<button type=\"button\" class=\"btn btn-default pull-left\" data-dismiss=\"modal\">Close</button> \n                        <button type=\"submit\" class=\"btn btn-primary\"><i class=\"fa fa-save\"></i> \xA0 Add Program Type</button>";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ol, "class", "breadcrumb");
+      button2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      button2.textContent = "Close";
+      t38 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      button3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      i2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("i");
+      t39 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("   ");
+      t40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t40_value);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section0, "class", "content-header");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h3, "class", "box-title");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button0, "class", "btn btn-primary btn-sm");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button0, "data-toggle", "modal");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button0, "data-target", "#modal-progtype");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "box-tools pull-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "box-header with-border");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(table, "id", "example1");
@@ -4901,21 +5045,45 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h4, "class", "modal-title");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div12, "class", "modal-header");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label0, "class", "control-label");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "text");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "class", "form-control");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "name", "proTitle");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "placeholder", "");
-      input0.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "type", "text");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "name", "proTitle");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "placeholder", "");
+      input.required = "";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div13, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label1, "class", "control-label");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(textarea, "class", "form-control");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(textarea, "name", "proDescription");
       textarea.required = "";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div14, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label2, "class", "control-label");
+      option0.__value = "Select";
+      option0.value = option0.__value;
+      option1.__value = "active";
+      option1.value = option1.__value;
+      option2.__value = "inactive";
+      option2.value = option2.__value;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "name", "proDescription");
+      select.required = "";
+      if (
+      /*$form*/
+      ctx[3].status === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
+        return (
+          /*select_change_handler*/
+          ctx[19].call(select)
+        );
+      });
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div15, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div16, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div17, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div18, "class", "modal-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "type", "button");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "class", "btn btn-default pull-left");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "data-dismiss", "modal");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i2, "class", "fa fa-save");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button3, "type", "submit");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button3, "class", "btn btn-primary");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div19, "class", "modal-footer");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form_1, "class", "form-horizontal");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form_1, "method", "post");
@@ -4927,37 +5095,36 @@ function create_fragment(ctx) {
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, section0, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section0, h1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h1, t0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h1, t1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section0, t2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section0, ol);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t6, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t5, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, section1, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, div11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, div10);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, div9);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, div1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, t9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, h3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, button0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, t8);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, div7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, div6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, div5);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, div2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, t9);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, div4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, div3);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, table);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, thead);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t15);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, tbody);
 
       for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
         each_blocks[_i2].m(tbody, null);
       }
 
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, t17);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, t16);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, div8);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, t18);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, t17);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, div22);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, div21);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div20);
@@ -4965,42 +5132,61 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, button1);
       /*button1_binding*/
 
-      ctx[11](button1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, t20);
+      ctx[16](button1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, t19);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, h4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t21);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, form_1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form_1, div18);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div17);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, div16);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, div13);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div13, label0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div13, t25);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div13, input0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div13, t24);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div13, input);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input,
       /*$form*/
       ctx[3].title);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t26);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t25);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, div14);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, label1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, t29);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, t28);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, textarea);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(textarea,
       /*$form*/
       ctx[3].description);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t30);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t29);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, div15);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form_1, t31);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, label2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, t32);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, select);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
+      /*$form*/
+      ctx[3].status);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form_1, t36);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form_1, div19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, button2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t38);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, button3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button3, i2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button3, t39);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button3, t40);
 
       if (!mounted) {
-        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
-        /*input0_input_handler*/
-        ctx[12]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(textarea, "input",
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button0, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        /*clearForm*/
+        ctx[7])), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input, "input",
+        /*input_input_handler*/
+        ctx[17]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(textarea, "input",
         /*textarea_input_handler*/
-        ctx[13]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form_1, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        ctx[18]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
+        /*select_change_handler*/
+        ctx[19]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form_1, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
         /*callStore*/
-        ctx[5]))];
+        ctx[8]))];
         mounted = true;
       }
     },
@@ -5009,17 +5195,11 @@ function create_fragment(ctx) {
           dirty = _ref2[0];
 
       if (dirty &
-      /*message*/
-      1) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1,
-      /*message*/
-      ctx[0]);
-
-      if (dirty &
-      /*programTypes*/
-      2) {
+      /*removeRow, programTypes, selectRow*/
+      97) {
         each_value =
         /*programTypes*/
-        ctx[1];
+        ctx[0];
 
         var _i3;
 
@@ -5046,10 +5226,10 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*$form*/
-      8 && input0.value !==
+      8 && input.value !==
       /*$form*/
       ctx[3].title) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input,
         /*$form*/
         ctx[3].title);
       }
@@ -5061,17 +5241,31 @@ function create_fragment(ctx) {
         /*$form*/
         ctx[3].description);
       }
+
+      if (dirty &
+      /*$form*/
+      8) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
+        /*$form*/
+        ctx[3].status);
+      }
+
+      if (dirty &
+      /*mode*/
+      4 && t40_value !== (t40_value = (
+      /*mode*/
+      ctx[2] == 'create' ? "Add Program Type" : "Update Program Type") + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t40, t40_value);
     },
     i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
     o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section0);
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t6);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t5);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
       /*button1_binding*/
 
-      ctx[11](null);
+      ctx[16](null);
       mounted = false;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
@@ -5080,40 +5274,70 @@ function create_fragment(ctx) {
 
 var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_3__["default"];
 
-function selectRow(data) {}
-
 function instance($$self, $$props, $$invalidate) {
-  var msg;
   var $form;
   var programTypes = $$props.programTypes;
   var store = $$props.store;
   var update = $$props.update;
   var destroy = $$props.destroy;
   var message = $$props.message;
-  var error = $$props.error;
-  var csrf = $$props.csrf;
+  var error = $$props.error; // export let csrf;
+
+  var mode = "create";
   var closeModal = null;
   var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.useForm)({
-    description: '...',
-    title: '...'
-  }); // _token:csrf
-
+    description: "",
+    title: "",
+    status: "active",
+    id: "0"
+  });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
     return $$invalidate(3, $form = value);
   });
 
-  function callStore() {
-    $form.post(store);
+  function selectRow(data) {
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.description = data.description, $form);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.title = data.title, $form);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.status = data.status, $form);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.id = data.id, $form);
+    $$invalidate(2, mode = "update");
   }
+
+  function removeRow(data) {
+    if (confirm("Do you want to confirm this action?")) {
+      $form["delete"](destroy + '/' + data.id);
+    }
+  }
+
+  function clearForm() {
+    $form.reset();
+    $$invalidate(2, mode = "create");
+  }
+
+  function callStore() {
+    if (mode == "create") {
+      $form.post(store);
+    } else {
+      $form.put(update + '/' + $form.id);
+    }
+  }
+
+  var click_handler = function click_handler(programType) {
+    return selectRow(programType);
+  };
+
+  var click_handler_1 = function click_handler_1(programType) {
+    return removeRow(programType);
+  };
 
   function button1_binding($$value) {
     svelte_internal__WEBPACK_IMPORTED_MODULE_0__.binding_callbacks[$$value ? 'unshift' : 'push'](function () {
       closeModal = $$value;
-      $$invalidate(2, closeModal);
+      $$invalidate(1, closeModal);
     });
   }
 
-  function input0_input_handler() {
+  function input_input_handler() {
     $form.title = this.value;
     form.set($form);
   }
@@ -5123,35 +5347,33 @@ function instance($$self, $$props, $$invalidate) {
     form.set($form);
   }
 
+  function select_change_handler() {
+    $form.status = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_value)(this);
+    form.set($form);
+  }
+
   $$self.$$set = function ($$props) {
-    if ('programTypes' in $$props) $$invalidate(1, programTypes = $$props.programTypes);
-    if ('store' in $$props) $$invalidate(6, store = $$props.store);
-    if ('update' in $$props) $$invalidate(7, update = $$props.update);
-    if ('destroy' in $$props) $$invalidate(8, destroy = $$props.destroy);
-    if ('message' in $$props) $$invalidate(0, message = $$props.message);
-    if ('error' in $$props) $$invalidate(9, error = $$props.error);
-    if ('csrf' in $$props) $$invalidate(10, csrf = $$props.csrf);
+    if ('programTypes' in $$props) $$invalidate(0, programTypes = $$props.programTypes);
+    if ('store' in $$props) $$invalidate(10, store = $$props.store);
+    if ('update' in $$props) $$invalidate(11, update = $$props.update);
+    if ('destroy' in $$props) $$invalidate(12, destroy = $$props.destroy);
+    if ('message' in $$props) $$invalidate(9, message = $$props.message);
+    if ('error' in $$props) $$invalidate(13, error = $$props.error);
   };
 
   $$self.$$.update = function () {
     if ($$self.$$.dirty &
     /*message, error, closeModal*/
-    517) {
-      $: if (message != '' && !error) {
+    8706) {
+      $: if (message != "" && !error) {
         closeModal.click();
         toastr.success(message);
-        $$invalidate(0, message = '');
+        $$invalidate(9, message = "");
       }
-    }
-
-    if ($$self.$$.dirty &
-    /*message*/
-    1) {
-      $: msg = message;
     }
   };
 
-  return [message, programTypes, closeModal, $form, form, callStore, store, update, destroy, error, csrf, button1_binding, input0_input_handler, textarea_input_handler];
+  return [programTypes, closeModal, mode, $form, form, selectRow, removeRow, clearForm, callStore, message, store, update, destroy, error, click_handler, click_handler_1, button1_binding, input_input_handler, textarea_input_handler, select_change_handler];
 }
 
 var ProgramType = /*#__PURE__*/function (_SvelteComponent) {
@@ -5166,13 +5388,12 @@ var ProgramType = /*#__PURE__*/function (_SvelteComponent) {
 
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
-      programTypes: 1,
-      store: 6,
-      update: 7,
-      destroy: 8,
-      message: 0,
-      error: 9,
-      csrf: 10
+      programTypes: 0,
+      store: 10,
+      update: 11,
+      destroy: 12,
+      message: 9,
+      error: 13
     });
     return _this;
   }
@@ -6083,6 +6304,7 @@ var Pagination = /*#__PURE__*/function (_SvelteComponent) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+/* harmony import */ var _inertiajs_progress__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/progress */ "./node_modules/@inertiajs/progress/dist/index.js");
 // /**
 //  * First we will load all of this project's JavaScript dependencies which
 //  * includes Svelte and other libraries. It is a great starting point when
@@ -6096,6 +6318,8 @@ __webpack_require__.r(__webpack_exports__);
 // window.app = app;
 // export default app;
 
+
+_inertiajs_progress__WEBPACK_IMPORTED_MODULE_1__.InertiaProgress.init();
 (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_0__.createInertiaApp)({
   resolve: function resolve(name) {
     return __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*\\.svelte$")("./".concat(name, ".svelte"));
@@ -8722,6 +8946,492 @@ module.exports = isEqual;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./node_modules/nprogress/nprogress.js":
+/*!*********************************************!*\
+  !*** ./node_modules/nprogress/nprogress.js ***!
+  \*********************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
+ * @license MIT */
+
+;(function(root, factory) {
+
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+		__WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else {}
+
+})(this, function() {
+  var NProgress = {};
+
+  NProgress.version = '0.2.0';
+
+  var Settings = NProgress.settings = {
+    minimum: 0.08,
+    easing: 'ease',
+    positionUsing: '',
+    speed: 200,
+    trickle: true,
+    trickleRate: 0.02,
+    trickleSpeed: 800,
+    showSpinner: true,
+    barSelector: '[role="bar"]',
+    spinnerSelector: '[role="spinner"]',
+    parent: 'body',
+    template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+  };
+
+  /**
+   * Updates configuration.
+   *
+   *     NProgress.configure({
+   *       minimum: 0.1
+   *     });
+   */
+  NProgress.configure = function(options) {
+    var key, value;
+    for (key in options) {
+      value = options[key];
+      if (value !== undefined && options.hasOwnProperty(key)) Settings[key] = value;
+    }
+
+    return this;
+  };
+
+  /**
+   * Last number.
+   */
+
+  NProgress.status = null;
+
+  /**
+   * Sets the progress bar status, where `n` is a number from `0.0` to `1.0`.
+   *
+   *     NProgress.set(0.4);
+   *     NProgress.set(1.0);
+   */
+
+  NProgress.set = function(n) {
+    var started = NProgress.isStarted();
+
+    n = clamp(n, Settings.minimum, 1);
+    NProgress.status = (n === 1 ? null : n);
+
+    var progress = NProgress.render(!started),
+        bar      = progress.querySelector(Settings.barSelector),
+        speed    = Settings.speed,
+        ease     = Settings.easing;
+
+    progress.offsetWidth; /* Repaint */
+
+    queue(function(next) {
+      // Set positionUsing if it hasn't already been set
+      if (Settings.positionUsing === '') Settings.positionUsing = NProgress.getPositioningCSS();
+
+      // Add transition
+      css(bar, barPositionCSS(n, speed, ease));
+
+      if (n === 1) {
+        // Fade out
+        css(progress, { 
+          transition: 'none', 
+          opacity: 1 
+        });
+        progress.offsetWidth; /* Repaint */
+
+        setTimeout(function() {
+          css(progress, { 
+            transition: 'all ' + speed + 'ms linear', 
+            opacity: 0 
+          });
+          setTimeout(function() {
+            NProgress.remove();
+            next();
+          }, speed);
+        }, speed);
+      } else {
+        setTimeout(next, speed);
+      }
+    });
+
+    return this;
+  };
+
+  NProgress.isStarted = function() {
+    return typeof NProgress.status === 'number';
+  };
+
+  /**
+   * Shows the progress bar.
+   * This is the same as setting the status to 0%, except that it doesn't go backwards.
+   *
+   *     NProgress.start();
+   *
+   */
+  NProgress.start = function() {
+    if (!NProgress.status) NProgress.set(0);
+
+    var work = function() {
+      setTimeout(function() {
+        if (!NProgress.status) return;
+        NProgress.trickle();
+        work();
+      }, Settings.trickleSpeed);
+    };
+
+    if (Settings.trickle) work();
+
+    return this;
+  };
+
+  /**
+   * Hides the progress bar.
+   * This is the *sort of* the same as setting the status to 100%, with the
+   * difference being `done()` makes some placebo effect of some realistic motion.
+   *
+   *     NProgress.done();
+   *
+   * If `true` is passed, it will show the progress bar even if its hidden.
+   *
+   *     NProgress.done(true);
+   */
+
+  NProgress.done = function(force) {
+    if (!force && !NProgress.status) return this;
+
+    return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);
+  };
+
+  /**
+   * Increments by a random amount.
+   */
+
+  NProgress.inc = function(amount) {
+    var n = NProgress.status;
+
+    if (!n) {
+      return NProgress.start();
+    } else {
+      if (typeof amount !== 'number') {
+        amount = (1 - n) * clamp(Math.random() * n, 0.1, 0.95);
+      }
+
+      n = clamp(n + amount, 0, 0.994);
+      return NProgress.set(n);
+    }
+  };
+
+  NProgress.trickle = function() {
+    return NProgress.inc(Math.random() * Settings.trickleRate);
+  };
+
+  /**
+   * Waits for all supplied jQuery promises and
+   * increases the progress as the promises resolve.
+   *
+   * @param $promise jQUery Promise
+   */
+  (function() {
+    var initial = 0, current = 0;
+
+    NProgress.promise = function($promise) {
+      if (!$promise || $promise.state() === "resolved") {
+        return this;
+      }
+
+      if (current === 0) {
+        NProgress.start();
+      }
+
+      initial++;
+      current++;
+
+      $promise.always(function() {
+        current--;
+        if (current === 0) {
+            initial = 0;
+            NProgress.done();
+        } else {
+            NProgress.set((initial - current) / initial);
+        }
+      });
+
+      return this;
+    };
+
+  })();
+
+  /**
+   * (Internal) renders the progress bar markup based on the `template`
+   * setting.
+   */
+
+  NProgress.render = function(fromStart) {
+    if (NProgress.isRendered()) return document.getElementById('nprogress');
+
+    addClass(document.documentElement, 'nprogress-busy');
+    
+    var progress = document.createElement('div');
+    progress.id = 'nprogress';
+    progress.innerHTML = Settings.template;
+
+    var bar      = progress.querySelector(Settings.barSelector),
+        perc     = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
+        parent   = document.querySelector(Settings.parent),
+        spinner;
+    
+    css(bar, {
+      transition: 'all 0 linear',
+      transform: 'translate3d(' + perc + '%,0,0)'
+    });
+
+    if (!Settings.showSpinner) {
+      spinner = progress.querySelector(Settings.spinnerSelector);
+      spinner && removeElement(spinner);
+    }
+
+    if (parent != document.body) {
+      addClass(parent, 'nprogress-custom-parent');
+    }
+
+    parent.appendChild(progress);
+    return progress;
+  };
+
+  /**
+   * Removes the element. Opposite of render().
+   */
+
+  NProgress.remove = function() {
+    removeClass(document.documentElement, 'nprogress-busy');
+    removeClass(document.querySelector(Settings.parent), 'nprogress-custom-parent');
+    var progress = document.getElementById('nprogress');
+    progress && removeElement(progress);
+  };
+
+  /**
+   * Checks if the progress bar is rendered.
+   */
+
+  NProgress.isRendered = function() {
+    return !!document.getElementById('nprogress');
+  };
+
+  /**
+   * Determine which positioning CSS rule to use.
+   */
+
+  NProgress.getPositioningCSS = function() {
+    // Sniff on document.body.style
+    var bodyStyle = document.body.style;
+
+    // Sniff prefixes
+    var vendorPrefix = ('WebkitTransform' in bodyStyle) ? 'Webkit' :
+                       ('MozTransform' in bodyStyle) ? 'Moz' :
+                       ('msTransform' in bodyStyle) ? 'ms' :
+                       ('OTransform' in bodyStyle) ? 'O' : '';
+
+    if (vendorPrefix + 'Perspective' in bodyStyle) {
+      // Modern browsers with 3D support, e.g. Webkit, IE10
+      return 'translate3d';
+    } else if (vendorPrefix + 'Transform' in bodyStyle) {
+      // Browsers without 3D support, e.g. IE9
+      return 'translate';
+    } else {
+      // Browsers without translate() support, e.g. IE7-8
+      return 'margin';
+    }
+  };
+
+  /**
+   * Helpers
+   */
+
+  function clamp(n, min, max) {
+    if (n < min) return min;
+    if (n > max) return max;
+    return n;
+  }
+
+  /**
+   * (Internal) converts a percentage (`0..1`) to a bar translateX
+   * percentage (`-100%..0%`).
+   */
+
+  function toBarPerc(n) {
+    return (-1 + n) * 100;
+  }
+
+
+  /**
+   * (Internal) returns the correct CSS for changing the bar's
+   * position given an n percentage, and speed and ease from Settings
+   */
+
+  function barPositionCSS(n, speed, ease) {
+    var barCSS;
+
+    if (Settings.positionUsing === 'translate3d') {
+      barCSS = { transform: 'translate3d('+toBarPerc(n)+'%,0,0)' };
+    } else if (Settings.positionUsing === 'translate') {
+      barCSS = { transform: 'translate('+toBarPerc(n)+'%,0)' };
+    } else {
+      barCSS = { 'margin-left': toBarPerc(n)+'%' };
+    }
+
+    barCSS.transition = 'all '+speed+'ms '+ease;
+
+    return barCSS;
+  }
+
+  /**
+   * (Internal) Queues a function to be executed.
+   */
+
+  var queue = (function() {
+    var pending = [];
+    
+    function next() {
+      var fn = pending.shift();
+      if (fn) {
+        fn(next);
+      }
+    }
+
+    return function(fn) {
+      pending.push(fn);
+      if (pending.length == 1) next();
+    };
+  })();
+
+  /**
+   * (Internal) Applies css properties to an element, similar to the jQuery 
+   * css method.
+   *
+   * While this helper does assist with vendor prefixed property names, it 
+   * does not perform any manipulation of values prior to setting styles.
+   */
+
+  var css = (function() {
+    var cssPrefixes = [ 'Webkit', 'O', 'Moz', 'ms' ],
+        cssProps    = {};
+
+    function camelCase(string) {
+      return string.replace(/^-ms-/, 'ms-').replace(/-([\da-z])/gi, function(match, letter) {
+        return letter.toUpperCase();
+      });
+    }
+
+    function getVendorProp(name) {
+      var style = document.body.style;
+      if (name in style) return name;
+
+      var i = cssPrefixes.length,
+          capName = name.charAt(0).toUpperCase() + name.slice(1),
+          vendorName;
+      while (i--) {
+        vendorName = cssPrefixes[i] + capName;
+        if (vendorName in style) return vendorName;
+      }
+
+      return name;
+    }
+
+    function getStyleProp(name) {
+      name = camelCase(name);
+      return cssProps[name] || (cssProps[name] = getVendorProp(name));
+    }
+
+    function applyCss(element, prop, value) {
+      prop = getStyleProp(prop);
+      element.style[prop] = value;
+    }
+
+    return function(element, properties) {
+      var args = arguments,
+          prop, 
+          value;
+
+      if (args.length == 2) {
+        for (prop in properties) {
+          value = properties[prop];
+          if (value !== undefined && properties.hasOwnProperty(prop)) applyCss(element, prop, value);
+        }
+      } else {
+        applyCss(element, args[1], args[2]);
+      }
+    }
+  })();
+
+  /**
+   * (Internal) Determines if an element or space separated list of class names contains a class name.
+   */
+
+  function hasClass(element, name) {
+    var list = typeof element == 'string' ? element : classList(element);
+    return list.indexOf(' ' + name + ' ') >= 0;
+  }
+
+  /**
+   * (Internal) Adds a class to an element.
+   */
+
+  function addClass(element, name) {
+    var oldList = classList(element),
+        newList = oldList + name;
+
+    if (hasClass(oldList, name)) return; 
+
+    // Trim the opening space.
+    element.className = newList.substring(1);
+  }
+
+  /**
+   * (Internal) Removes a class from an element.
+   */
+
+  function removeClass(element, name) {
+    var oldList = classList(element),
+        newList;
+
+    if (!hasClass(element, name)) return;
+
+    // Replace the class name.
+    newList = oldList.replace(' ' + name + ' ', ' ');
+
+    // Trim the opening and closing spaces.
+    element.className = newList.substring(1, newList.length - 1);
+  }
+
+  /**
+   * (Internal) Gets a space separated list of the class names on the element. 
+   * The list is wrapped with a single space on each end to facilitate finding 
+   * matches within the list.
+   */
+
+  function classList(element) {
+    return (' ' + (element.className || '') + ' ').replace(/\s+/gi, ' ');
+  }
+
+  /**
+   * (Internal) Removes an element from the DOM.
+   */
+
+  function removeElement(element) {
+    element && element.parentNode && element.parentNode.removeChild(element);
+  }
+
+  return NProgress;
+});
+
 
 
 /***/ }),
@@ -14504,7 +15214,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
