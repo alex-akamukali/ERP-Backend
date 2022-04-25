@@ -33,9 +33,9 @@
         mode = "update";
     }
 
-    function removeRow(data){
-        if (confirm("Do you want to confirm this action?")){
-            $form.delete(destroy + '/' + data.id);
+    function removeRow(data) {
+        if (confirm("Do you want to confirm this action?")) {
+            $form.delete(destroy + "/" + data.id);
         }
     }
 
@@ -48,7 +48,7 @@
         if (mode == "create") {
             $form.post(store);
         } else {
-            $form.put(update + '/' + $form.id);
+            $form.put(update + "/" + $form.id);
         }
     }
 
@@ -109,18 +109,11 @@
                                         <thead>
                                             <!-- svelte-ignore a11y-no-redundant-roles -->
                                             <tr role="row"
-                                                ><th
-                                                    >Title</th
-                                                ><th
+                                                ><th>Title</th><th
                                                     >Description</th
-                                                ><th
-                                                    >Status</th
-                                                >
-                                                <th
-                                                >
-                                                    Actions
-                                                </th>
-                                                </tr>
+                                                ><th>Status</th>
+                                                <th> Actions </th>
+                                            </tr>
                                         </thead>
                                         <tbody>
                                             {#each programTypes as programType}
@@ -150,17 +143,16 @@
                                                         </a>
                                                         &nbsp;&nbsp;
                                                         <a
-                                                        href={null}
-                                                        on:click|preventDefault={() =>
-                                                            removeRow(
-                                                                programType
-                                                            )}
-                                                    >
-                                                        <i
-                                                            class="fa fa-trash text-red"
-                                                        />
-                                                    </a>
-
+                                                            href={null}
+                                                            on:click|preventDefault={() =>
+                                                                removeRow(
+                                                                    programType
+                                                                )}
+                                                        >
+                                                            <i
+                                                                class="fa fa-trash text-red"
+                                                            />
+                                                        </a>
                                                     </td>
                                                 </tr>
                                             {/each}
@@ -217,6 +209,11 @@
                                         required=""
                                         bind:value={$form.title}
                                     />
+                                    {#if $form.errors.title}
+                                        <div style="color: red;">
+                                            {$form.errors.title}
+                                        </div>
+                                    {/if}
                                 </div>
 
                                 <div class="col-md-12">
@@ -232,6 +229,11 @@
                                         required=""
                                         bind:value={$form.description}
                                     />
+                                    {#if $form.errors.description}
+                                        <div style="color: red;">
+                                            {$form.errors.description}
+                                        </div>
+                                    {/if}
                                 </div>
                                 <div class="col-md-12">
                                     <!-- svelte-ignore a11y-label-has-associated-control -->
@@ -250,6 +252,11 @@
                                             >Inactive</option
                                         >
                                     </select>
+                                    {#if $form.errors.status}
+                                        <div style="color: red;">
+                                            {$form.errors.status}
+                                        </div>
+                                    {/if}
                                 </div>
                             </div>
                         </div>
@@ -261,7 +268,9 @@
                             data-dismiss="modal">Close</button
                         >
                         <button type="submit" class="btn btn-primary">
-                            <i class="fa fa-save" /> &nbsp; {mode == 'create'? "Add Program Type":"Update Program Type"}
+                            <i class="fa fa-save" /> &nbsp; {mode == "create"
+                                ? "Add Program Type"
+                                : "Update Program Type"}
                         </button>
                     </div>
                 </form>
