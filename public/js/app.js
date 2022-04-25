@@ -5709,9 +5709,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[1] = list[i];
+  child_ctx[5] = list[i];
   return child_ctx;
-} // (129:44) {#each users.data as user}
+} // (134:44) {#each users.data as user}
 
 
 function create_each_block(ctx) {
@@ -5719,13 +5719,13 @@ function create_each_block(ctx) {
   var td0;
   var t0_value =
   /*user*/
-  ctx[1].name + "";
+  ctx[5].name + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
   /*user*/
-  ctx[1].email + "";
+  ctx[5].email + "";
   var t2;
   var t3;
   var td2;
@@ -5733,7 +5733,7 @@ function create_each_block(ctx) {
   var td3;
   var t5_value =
   /*user*/
-  ctx[1].created_at + "";
+  ctx[5].created_at + "";
   var t5;
   var t6;
   var td4;
@@ -5760,7 +5760,7 @@ function create_each_block(ctx) {
       td4.innerHTML = "<label class=\"text-success\" id=\"acctstc2aa1951a32f33b047954754f0ae\">Active</label>";
       t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       td5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
-      td5.innerHTML = "<div class=\"btn-group\"><label class=\"dropdown-toggle\" data-toggle=\"dropdown\">... \n                                                            <span class=\"sr-only\">Toggle Dropdown</span></label> \n                                                        <ul class=\"dropdown-menu\" role=\"menu\" style=\"z-index:9000\"><li><a href=\"userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-file text-info\"></i> View Profile</a></li> \n\n                                                            <li><a href=\"null\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"reInvite(this)\"><i class=\"fa fa-refresh text-info\"></i> Re-invite</a></li></ul></div>";
+      td5.innerHTML = "<div class=\"btn-group\"><label class=\"dropdown-toggle\" data-toggle=\"dropdown\">... \n                                                                <span class=\"sr-only\">Toggle\n                                                                    Dropdown</span></label> \n                                                            <ul class=\"dropdown-menu\" role=\"menu\" style=\"z-index:9000\"><li><a href=\"userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-file text-info\"></i> View Profile</a></li> \n\n                                                                <li><a href=\"null\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"reInvite(this)\"><i class=\"fa fa-refresh text-info\"></i> Re-invite</a></li></ul></div>";
       t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       td6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
       td6.innerHTML = "<b style=\"color:#FFF\">________</b>";
@@ -5794,17 +5794,17 @@ function create_each_block(ctx) {
       /*users*/
       1 && t0_value !== (t0_value =
       /*user*/
-      ctx[1].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+      ctx[5].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
       if (dirty &
       /*users*/
       1 && t2_value !== (t2_value =
       /*user*/
-      ctx[1].email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      ctx[5].email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
       if (dirty &
       /*users*/
       1 && t5_value !== (t5_value =
       /*user*/
-      ctx[1].created_at + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
+      ctx[5].created_at + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
@@ -6022,14 +6022,29 @@ function create_fragment(ctx) {
 var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_3__["default"];
 
 function instance($$self, $$props, $$invalidate) {
+  var $inviteCandidateForm;
   var users = $$props.users;
+  var invite_candidate_route = $$props.invite_candidate_route;
   console.log(users);
+  var inviteCandidateForm = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.useForm)({
+    first_name: "",
+    last_name: "",
+    email: ""
+  });
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, inviteCandidateForm, function (value) {
+    return $$invalidate(3, $inviteCandidateForm = value);
+  });
+
+  function sendInvitation() {
+    $inviteCandidateForm.post();
+  }
 
   $$self.$$set = function ($$props) {
     if ('users' in $$props) $$invalidate(0, users = $$props.users);
+    if ('invite_candidate_route' in $$props) $$invalidate(2, invite_candidate_route = $$props.invite_candidate_route);
   };
 
-  return [users];
+  return [users, inviteCandidateForm, invite_candidate_route];
 }
 
 var UserList = /*#__PURE__*/function (_SvelteComponent) {
@@ -6044,7 +6059,8 @@ var UserList = /*#__PURE__*/function (_SvelteComponent) {
 
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
-      users: 0
+      users: 0,
+      invite_candidate_route: 2
     });
     return _this;
   }

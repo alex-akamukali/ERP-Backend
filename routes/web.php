@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Profile\ProfileController;
 use App\Http\Controllers\Settings\ProgramTypeController;
+use App\Http\Controllers\User\InviteCandidateController;
 use App\Http\Controllers\User\UserController;
 // use App\Http\Controllers\User\DashboardController;
 // use App\Http\Controllers\User\ProfileController;
@@ -57,5 +58,7 @@ Route::get('all-users',[UserController::class,'index'])->name('all.users');
 Route::get('user/profile',[ProfileController::class,'index'])->name('user.profile');
 
 Route::resource('program-type',ProgramTypeController::class);
+
+Route::resource('invite-candidate',InviteCandidateController::class);
 
 /////////////////////////////// [Workflow]////////////////////////////////

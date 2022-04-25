@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Candidate\InviteCandidateRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Models\User;
 
-class UserController extends Controller
+class InviteCandidateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,13 +18,8 @@ class UserController extends Controller
     public function index()
     {
         //
-        $list = User::paginate(4);
-        return inertia()->render('User/UserList',[
-            'users'=>$list,
-            'invite_candidate_route'=>route('invite-candidate.store')
-        ]);
     }
-    // invite-candidate
+
     /**
      * Show the form for creating a new resource.
      *
@@ -40,7 +36,7 @@ class UserController extends Controller
      * @param  \App\Http\Requests\StoreUserRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUserRequest $request)
+    public function store(InviteCandidateRequest $request)
     {
         //
     }

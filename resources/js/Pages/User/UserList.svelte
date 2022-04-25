@@ -1,14 +1,25 @@
 <script context="module">
     import Layout from "../Dashboard/Layout.svelte";
-    import {page} from "@inertiajs/inertia-svelte"
+    import { page, useForm } from "@inertiajs/inertia-svelte";
     import Pagination from "../../components/Pagination.svelte";
     export const layout = Layout;
 </script>
 
 <script>
+    export let users; // = $page.props.users;
+    export let invite_candidate_route;
+    console.log(users);
+    let inviteCandidateForm = useForm({
+        first_name: "",
+        last_name: "",
+        email: ""
+    });
 
-export let users; // = $page.props.users;
-   console.log(users);
+
+    function sendInvitation(){
+       $inviteCandidateForm.post();
+    }
+
 </script>
 
 <section class="content-header">
@@ -46,19 +57,13 @@ export let users; // = $page.props.users;
                 <!-- /.box-header -->
                 <div class="box-body">
                     <div class="table-responsive">
-                        <div
-
-                        >
+                        <div>
                             <div class="row">
-                                <div class="col-sm-6">
-                                </div>
+                                <div class="col-sm-6" />
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <table
-                                        class="table  table-striped"
-
-                                    >
+                                    <table class="table  table-striped">
                                         <thead>
                                             <!-- svelte-ignore a11y-no-redundant-roles -->
                                             <tr role="row"
@@ -127,84 +132,80 @@ export let users; // = $page.props.users;
                                         <tbody>
                                             <!-- svelte-ignore a11y-no-redundant-roles -->
                                             {#each users.data as user}
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1">
+                                                <tr role="row" class="odd">
+                                                    <td class="sorting_1">
                                                         {user.name}
-                                                </td>
-                                                <td>
+                                                    </td>
+                                                    <td>
                                                         {user.email}
-                                                </td>
-                                                <td>
-                                                </td>
-                                                <td> {user.created_at}</td>
+                                                    </td>
+                                                    <td />
+                                                    <td> {user.created_at}</td>
 
-                                                <!-- svelte-ignore a11y-label-has-associated-control -->
-                                                <td>
-                                                    <label
-                                                        class="text-success"
-                                                        id="acctstc2aa1951a32f33b047954754f0ae"
-                                                    >
-                                                        Active
-                                                    </label></td
-                                                >
-                                                <td>
-                                                    <div class="btn-group">
-                                                        <!-- svelte-ignore a11y-label-has-associated-control -->
+                                                    <!-- svelte-ignore a11y-label-has-associated-control -->
+                                                    <td>
                                                         <label
-                                                            class="dropdown-toggle"
-                                                            data-toggle="dropdown"
+                                                            class="text-success"
+                                                            id="acctstc2aa1951a32f33b047954754f0ae"
                                                         >
-                                                            ... <!-- <span class="caret"></span> -->
-                                                            <span
-                                                                class="sr-only"
-                                                                >Toggle Dropdown</span
+                                                            Active
+                                                        </label></td
+                                                    >
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <!-- svelte-ignore a11y-label-has-associated-control -->
+                                                            <label
+                                                                class="dropdown-toggle"
+                                                                data-toggle="dropdown"
                                                             >
-                                                        </label>
-                                                        <ul
-                                                            class="dropdown-menu"
-                                                            role="menu"
-                                                            style="z-index:9000"
-                                                        >
-                                                            <li>
-                                                                <a
-                                                                    href="userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae"
+                                                                ... <!-- <span class="caret"></span> -->
+                                                                <span
+                                                                    class="sr-only"
+                                                                    >Toggle
+                                                                    Dropdown</span
                                                                 >
-                                                                    <i
-                                                                        class="fa fa-file text-info"
-                                                                    /> View Profile
-                                                                </a>
-                                                            </li>
+                                                            </label>
+                                                            <ul
+                                                                class="dropdown-menu"
+                                                                role="menu"
+                                                                style="z-index:9000"
+                                                            >
+                                                                <li>
+                                                                    <a
+                                                                        href="userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae"
+                                                                    >
+                                                                        <i
+                                                                            class="fa fa-file text-info"
+                                                                        /> View Profile
+                                                                    </a>
+                                                                </li>
 
-                                                            <li>
-                                                                <a
-                                                                    href="null"
-                                                                    usx="c2aa1951a32f33b047954754f0ae"
-                                                                    onclick="reInvite(this)"
-                                                                >
-                                                                    <i
-                                                                        class="fa fa-refresh text-info"
-                                                                    /> Re-invite</a
-                                                                >
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <b style="color:#FFF">
-                                                        ________
-                                                    </b>
-                                                </td>
-                                            </tr>
+                                                                <li>
+                                                                    <a
+                                                                        href="null"
+                                                                        usx="c2aa1951a32f33b047954754f0ae"
+                                                                        onclick="reInvite(this)"
+                                                                    >
+                                                                        <i
+                                                                            class="fa fa-refresh text-info"
+                                                                        /> Re-invite</a
+                                                                    >
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <b style="color:#FFF">
+                                                            ________
+                                                        </b>
+                                                    </td>
+                                                </tr>
                                             {/each}
-
-
-                                            </tbody
-                                        >
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
                             <div class="row">
-
                                 <div class="col-sm-7">
                                     <Pagination pages={users.links} />
                                 </div>
