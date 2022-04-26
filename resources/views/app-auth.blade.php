@@ -103,7 +103,12 @@
 
 
 <!-- Calendly inline widget begin -->
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<!-- Calendly link widget end -->
+{{-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script> --}}
 <!-- Calendly inline widget end -->
 
 

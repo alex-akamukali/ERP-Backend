@@ -20,6 +20,10 @@
        $inviteCandidateForm.post();
     }
 
+    function setCalend(){
+      Calendly.initPopupWidget({url: 'https://calendly.com/easymagic1/30min'});
+    }
+
 </script>
 
 <section class="content-header">
@@ -30,6 +34,9 @@
     <ol class="breadcrumb">
         <li><a href="./"><i class="fa fa-dashboard" /> Home</a></li>
         <li class="active">Users</li>
+        <button on:click={setCalend}>
+            Schedule
+        </button>
     </ol>
 </section>
 
