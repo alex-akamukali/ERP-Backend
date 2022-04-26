@@ -47,7 +47,7 @@ class MakeSveltePageCommand extends Command
 \nimport { page, useForm } from \"@inertiajs/inertia-svelte\";
 \n</script>\n
 <script>\n
-export let name;\n
+//export let name;\n
 </script>
 ");
         $this->info("Page/" . $name . '.svelte created successfully.');

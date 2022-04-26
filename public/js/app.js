@@ -5709,7 +5709,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[5] = list[i];
+  child_ctx[4] = list[i];
   return child_ctx;
 } // (134:44) {#each users.data as user}
 
@@ -5719,13 +5719,13 @@ function create_each_block(ctx) {
   var td0;
   var t0_value =
   /*user*/
-  ctx[5].name + "";
+  ctx[4].name + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
   /*user*/
-  ctx[5].email + "";
+  ctx[4].email + "";
   var t2;
   var t3;
   var td2;
@@ -5733,7 +5733,7 @@ function create_each_block(ctx) {
   var td3;
   var t5_value =
   /*user*/
-  ctx[5].created_at + "";
+  ctx[4].created_at + "";
   var t5;
   var t6;
   var td4;
@@ -5794,17 +5794,17 @@ function create_each_block(ctx) {
       /*users*/
       1 && t0_value !== (t0_value =
       /*user*/
-      ctx[5].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+      ctx[4].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
       if (dirty &
       /*users*/
       1 && t2_value !== (t2_value =
       /*user*/
-      ctx[5].email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      ctx[4].email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
       if (dirty &
       /*users*/
       1 && t5_value !== (t5_value =
       /*user*/
-      ctx[5].created_at + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
+      ctx[4].created_at + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
@@ -6023,8 +6023,8 @@ var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_3__["default"];
 
 function instance($$self, $$props, $$invalidate) {
   var $inviteCandidateForm;
-  var users = $$props.users;
-  var invite_candidate_route = $$props.invite_candidate_route;
+  var users = $$props.users; // export let invite_candidate_route;
+
   console.log(users);
   var inviteCandidateForm = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.useForm)({
     first_name: "",
@@ -6032,7 +6032,7 @@ function instance($$self, $$props, $$invalidate) {
     email: ""
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, inviteCandidateForm, function (value) {
-    return $$invalidate(3, $inviteCandidateForm = value);
+    return $$invalidate(2, $inviteCandidateForm = value);
   });
 
   function sendInvitation() {
@@ -6041,10 +6041,9 @@ function instance($$self, $$props, $$invalidate) {
 
   $$self.$$set = function ($$props) {
     if ('users' in $$props) $$invalidate(0, users = $$props.users);
-    if ('invite_candidate_route' in $$props) $$invalidate(2, invite_candidate_route = $$props.invite_candidate_route);
   };
 
-  return [users, inviteCandidateForm, invite_candidate_route];
+  return [users, inviteCandidateForm];
 }
 
 var UserList = /*#__PURE__*/function (_SvelteComponent) {
@@ -6059,8 +6058,7 @@ var UserList = /*#__PURE__*/function (_SvelteComponent) {
 
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
-      users: 0,
-      invite_candidate_route: 2
+      users: 0
     });
     return _this;
   }

@@ -7,7 +7,7 @@
 
 <script>
     export let users; // = $page.props.users;
-    export let invite_candidate_route;
+    // export let invite_candidate_route;
     console.log(users);
     let inviteCandidateForm = useForm({
         first_name: "",
