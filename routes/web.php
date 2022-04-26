@@ -65,3 +65,9 @@ Route::resource('invite-candidate',InviteCandidateController::class);
 
 
 
+
+Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\AssessmentController::class)->middleware(['auth']);
+
+Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\AssessmentInterviewController::class)->middleware(['auth']);
+
+Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\AssessmentResultController::class)->middleware(['auth']);
