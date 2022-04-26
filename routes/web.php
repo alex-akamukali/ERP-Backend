@@ -65,6 +65,3 @@ Route::resource('invite-candidate',InviteCandidateController::class);
 
 
 
-
-
-

@@ -49,6 +49,8 @@ class MakeResourceRoute extends Command
             $this->error('--controller= option required!');
             return 0;
         }
+        $controller = explode("/",$controller);
+        $controller = implode("\\",$controller);
         $routeOld = Storage::disk("root")->get("routes/web.php");
 
         $output = "\nRoute::resource('" . $name . "',\App\Http\Controllers\\" . $controller  . "::class)->middleware(['auth']);\n";
