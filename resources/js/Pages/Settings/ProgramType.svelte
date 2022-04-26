@@ -57,7 +57,6 @@
         toastr.success(message);
         message = "";
     }
-
 </script>
 
 <section class="content-header">
