@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -64,6 +65,8 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    protected $appends = ['created_ago'];
+
     /**
      * The attributes that should be cast.
      *
@@ -79,5 +82,10 @@ class User extends Authenticatable
 
     const ACCOUNT_STATUS_PENDING = 'pending'; //account_status
     const ACCOUNT_STATUS_ACTIVE = 'active'; //account_status
+
+
+    function getCreatedAgoAttribute(){
+        return $this->created_at->diffForHumans();
+    }
 
 }

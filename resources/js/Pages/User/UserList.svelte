@@ -130,7 +130,7 @@
                                                     rowspan="1"
                                                     colspan="1"
                                                     aria-label="Date: activate to sort column ascending"
-                                                    >Date</th
+                                                    >Created</th
                                                 ><th
                                                     class="sorting"
                                                     tabindex="0"
@@ -171,7 +171,7 @@
                                                         {user.email}
                                                     </td>
                                                     <td />
-                                                    <td> {user.created_at}</td>
+                                                    <td> {user.created_ago}</td>
 
                                                     <!-- svelte-ignore a11y-label-has-associated-control -->
                                                     <td>
@@ -179,7 +179,7 @@
                                                             class="text-success"
                                                             id="acctstc2aa1951a32f33b047954754f0ae"
                                                         >
-                                                            Active
+                                                            {user.account_status}
                                                         </label></td
                                                     >
                                                     <td>
