@@ -58,9 +58,9 @@
     <ol class="breadcrumb">
         <li><a href="./"><i class="fa fa-dashboard" /> Home</a></li>
         <li class="active">Users</li>
-        <button on:click={setCalend}>
+        <!-- <button on:click={setCalend}>
             Schedule
-        </button>
+        </button> -->
     </ol>
 </section>
 
@@ -238,7 +238,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-7">
+                                <div class="col-sm-10">
                                     <Pagination pages={users.links} />
                                 </div>
                             </div>

@@ -16,6 +16,8 @@
         all_users_route,
         user_profile_route,
         user,
+        logout_route,
+        csrf,
         program_type_index_route
     } = $page.props;
 </script>
@@ -292,7 +294,7 @@
                                 </div>
                                 <div class="pull-right">
                                     <a
-                                        href="../utility/logout"
+                                        href={logout_route}
                                         class="btn btn-primary btn-flat"
                                         >Sign out</a
                                     >
@@ -532,7 +534,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="../utility/logout"
+                    <a href={logout_route}
                         ><i class="fa fa-power-off" />
                         <span> Sign Out </span></a
                     >

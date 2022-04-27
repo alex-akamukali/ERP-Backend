@@ -3605,6 +3605,8 @@ function create_fragment(ctx) {
   var inertia_action;
   var t51;
   var div1;
+  var a22;
+  var t52;
   var t53;
   var aside0;
   var section;
@@ -3671,6 +3673,10 @@ function create_fragment(ctx) {
   var li55;
   var t135;
   var li56;
+  var a55;
+  var i56;
+  var t136;
+  var span21;
   var t138;
   var div3;
   var t139;
@@ -3684,10 +3690,10 @@ function create_fragment(ctx) {
   var dispose;
   var default_slot_template =
   /*#slots*/
-  ctx[8]["default"];
+  ctx[9]["default"];
   var default_slot = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_slot)(default_slot_template, ctx,
   /*$$scope*/
-  ctx[7], null);
+  ctx[8], null);
   return {
     c: function c() {
       div27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
@@ -3730,7 +3736,8 @@ function create_fragment(ctx) {
       t50 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Profile");
       t51 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div1.innerHTML = "<a href=\"../utility/logout\" class=\"btn btn-primary btn-flat\">Sign out</a>";
+      a22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      t52 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Sign out");
       t53 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       aside0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("aside");
       section = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
@@ -3811,7 +3818,11 @@ function create_fragment(ctx) {
       li55.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-key\"></i>  <span>Role Management</span> \n                        <span class=\"pull-right-container\"><i class=\"fa fa-angle-left pull-right\"></i></span></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"roles\"><i class=\"fa fa-wrench text-aqua\"></i> Assign Roles</a></li> \n                        <li><a href=\"docusignsigners\"><i class=\"fa fa-edit text-aqua\"></i> DocuSign Signers</a></li></ul>");
       t135 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li56 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li56.innerHTML = "<a href=\"../utility/logout\"><i class=\"fa fa-power-off\"></i> \n                        <span>Sign Out</span></a>";
+      a55 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      i56 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("i");
+      t136 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span21.textContent = "Sign Out";
       t138 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       if (default_slot) default_slot.c();
@@ -3862,6 +3873,10 @@ function create_fragment(ctx) {
       ctx[4]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a21, "class", "btn btn-primary btn-flat");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "pull-left");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a22, "href",
+      /*logout_route*/
+      ctx[6]);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a22, "class", "btn btn-primary btn-flat");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "pull-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li21, "class", "user-footer");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul2, "class", "dropdown-menu");
@@ -3890,10 +3905,14 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i46, "class", "fa fa-graduation-cap");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a46, "href",
       /*program_type_index_route*/
-      ctx[6]);
+      ctx[7]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul8, "class", "treeview-menu");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li52, "class", "treeview");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li55, "class", "treeview");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i56, "class", "fa fa-power-off");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a55, "href",
+      /*logout_route*/
+      ctx[6]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul10, "class", "sidebar-menu tree");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul10, "data-widget", "tree");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section, "class", "sidebar active");
@@ -3943,6 +3962,8 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a21, t50);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li21, t51);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li21, div1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, a22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a22, t52);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, t53);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, aside0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(aside0, section);
@@ -4004,6 +4025,10 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li55);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t135);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li56);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li56, a55);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a55, i56);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a55, t136);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a55, span21);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, t138);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, div3);
 
@@ -4031,14 +4056,14 @@ function create_fragment(ctx) {
       if (default_slot) {
         if (default_slot.p && (!current || dirty &
         /*$$scope*/
-        128)) {
+        256)) {
           (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.update_slot_base)(default_slot, default_slot_template, ctx,
           /*$$scope*/
-          ctx[7], !current ? (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.get_all_dirty_from_scope)(
+          ctx[8], !current ? (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.get_all_dirty_from_scope)(
           /*$$scope*/
-          ctx[7]) : (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.get_slot_changes)(default_slot_template,
+          ctx[8]) : (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.get_slot_changes)(default_slot_template,
           /*$$scope*/
-          ctx[7], dirty, null), null);
+          ctx[8], dirty, null), null);
         }
       }
     },
@@ -4065,7 +4090,7 @@ var c = 90;
 function instance($$self, $$props, $$invalidate) {
   var $page;
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.page, function ($$value) {
-    return $$invalidate(9, $page = $$value);
+    return $$invalidate(10, $page = $$value);
   });
   var _$$props$$$slots = $$props.$$slots,
       slots = _$$props$$$slots === void 0 ? {} : _$$props$$$slots,
@@ -4077,13 +4102,15 @@ function instance($$self, $$props, $$invalidate) {
       all_users_route = _$page$props.all_users_route,
       user_profile_route = _$page$props.user_profile_route,
       user = _$page$props.user,
+      logout_route = _$page$props.logout_route,
+      csrf = _$page$props.csrf,
       program_type_index_route = _$page$props.program_type_index_route;
 
   $$self.$$set = function ($$props) {
-    if ('$$scope' in $$props) $$invalidate(7, $$scope = $$props.$$scope);
+    if ('$$scope' in $$props) $$invalidate(8, $$scope = $$props.$$scope);
   };
 
-  return [olade_logo, user_logo, dashboard_route, all_users_route, user_profile_route, user, program_type_index_route, $$scope, slots];
+  return [olade_logo, user_logo, dashboard_route, all_users_route, user_profile_route, user, logout_route, program_type_index_route, $$scope, slots];
 }
 
 var Layout = /*#__PURE__*/function (_SvelteComponent) {
@@ -5958,76 +5985,68 @@ function create_if_block(ctx) {
 
 function create_fragment(ctx) {
   var section0;
-  var h1;
-  var t2;
-  var ol;
-  var li0;
-  var t4;
-  var li1;
   var t6;
-  var button0;
-  var t8;
   var section1;
   var div14;
   var div13;
   var div12;
   var div1;
-  var t12;
+  var t10;
   var div10;
   var div9;
   var div8;
   var div3;
-  var t13;
+  var t11;
   var div5;
   var div4;
   var table;
   var thead;
-  var t21;
+  var t19;
   var tbody;
-  var t22;
+  var t20;
   var div7;
   var div6;
   var pagination;
-  var t23;
+  var t21;
   var div11;
-  var t24;
+  var t22;
   var div25;
   var div24;
   var div23;
   var div15;
-  var button2;
-  var t26;
+  var button1;
+  var t24;
   var h4;
-  var t28;
+  var t26;
   var form;
   var div21;
   var div20;
   var div19;
   var div16;
   var label0;
-  var t31;
+  var t29;
   var input0;
-  var t32;
-  var t33;
+  var t30;
+  var t31;
   var div17;
   var label1;
-  var t36;
+  var t34;
   var input1;
-  var t37;
-  var t38;
+  var t35;
+  var t36;
   var div18;
   var label2;
-  var t41;
+  var t39;
   var input2;
-  var t42;
-  var t43;
+  var t40;
+  var t41;
   var div22;
+  var button2;
+  var t43;
   var button3;
-  var t45;
-  var button4;
   var i1;
-  var t46;
-  var button4_disabled_value;
+  var t44;
+  var button3_disabled_value;
   var current;
   var mounted;
   var dispose;
@@ -6059,61 +6078,50 @@ function create_fragment(ctx) {
   return {
     c: function c() {
       section0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
-      h1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h1");
-      h1.innerHTML = "Users\n        <small>Version 1.0</small>";
-      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      ol = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ol");
-      li0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li0.innerHTML = "<a href=\"./\"><i class=\"fa fa-dashboard\"></i> Home</a>";
-      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      li1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li1.textContent = "Users";
+      section0.innerHTML = "<h1>Users\n        <small>Version 1.0</small></h1> \n    <ol class=\"breadcrumb\"><li><a href=\"./\"><i class=\"fa fa-dashboard\"></i> Home</a></li> \n        <li class=\"active\">Users</li></ol>";
       t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      button0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
-      button0.textContent = "Schedule";
-      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       section1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
       div14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div1.innerHTML = "<h3 class=\"box-title\">All Candidates</h3> \n\n                    <div class=\"box-tools pull-right\"><button class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#modal-ivuser\">Invite Candidate</button></div>";
-      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div3.innerHTML = "<div class=\"col-sm-6\"></div>";
-      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
       thead = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("thead");
       thead.innerHTML = "<tr role=\"row\"><th class=\"sorting_asc\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-sort=\"ascending\" aria-label=\"Name: activate to sort column descending\">Name</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Email: activate to sort column ascending\">Email</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Program: activate to sort column ascending\">Program</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Date: activate to sort column ascending\">Date</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Status: activate to sort column ascending\">Status</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\" &amp;nbsp; : activate to sort column ascending\">\xA0\n                                                </th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\" &amp;nbsp; : activate to sort column ascending\">\xA0</th></tr>";
-      t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       tbody = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tbody");
 
       for (var _i = 0; _i < each_blocks.length; _i += 1) {
         each_blocks[_i].c();
       }
 
-      t22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(pagination.$$.fragment);
-      t23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      t24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      button2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
-      button2.innerHTML = "<span aria-hidden=\"true\">\xD7</span>";
-      t26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      button1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      button1.innerHTML = "<span aria-hidden=\"true\">\xD7</span>";
+      t24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       h4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h4");
       h4.textContent = "Invite Candidate";
-      t28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       form = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
       div21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
@@ -6121,43 +6129,41 @@ function create_fragment(ctx) {
       div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label0.innerHTML = "First Name <b style=\"color:red\">*</b>";
-      t31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t32 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if (if_block0) if_block0.c();
-      t33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label1.innerHTML = "Last Name <b style=\"color:red\">*</b>";
-      t36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t37 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t35 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if (if_block1) if_block1.c();
-      t38 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label2.innerHTML = "Email <b style=\"color:red\">*</b>";
-      t41 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t39 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       input2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t42 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if (if_block2) if_block2.c();
-      t43 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t41 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      button2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      button2.textContent = "Close";
+      t43 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       button3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
-      button3.textContent = "Close";
-      t45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      button4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
       i1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("i");
-      t46 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" Send Invite");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li1, "class", "active");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ol, "class", "breadcrumb");
+      t44 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" Send Invite");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section0, "class", "content-header");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "box-header with-border");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(table, "class", "table table-striped");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "col-sm-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "row");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "col-sm-7");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "col-sm-10");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div7, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "table-responsive");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div10, "class", "box-body");
@@ -6165,10 +6171,10 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div12, "class", "box box-info");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div13, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div14, "class", "row");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "type", "button");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "class", "close");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "data-dismiss", "modal");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "aria-label", "Close");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button1, "type", "button");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button1, "class", "close");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button1, "data-dismiss", "modal");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button1, "aria-label", "Close");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h4, "class", "modal-title");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div15, "class", "modal-header");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label0, "for", "inputName");
@@ -6201,15 +6207,15 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div19, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "modal-body");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button3, "type", "button");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button3, "class", "btn btn-default pull-left");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button3, "data-dismiss", "modal");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "type", "button");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "class", "btn btn-default pull-left");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "data-dismiss", "modal");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i1, "class", "fa fa-envelope");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button4, "type", "submit");
-      button4.disabled = button4_disabled_value =
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button3, "type", "submit");
+      button3.disabled = button3_disabled_value =
       /*$inviteCandidateForm*/
       ctx[2].processing;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button4, "class", "btn btn-primary");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button3, "class", "btn btn-primary");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div22, "class", "modal-footer");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "class", "form-horizontal");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "method", "post");
@@ -6221,99 +6227,91 @@ function create_fragment(ctx) {
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, section0, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section0, h1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section0, t2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section0, ol);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ol, li0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ol, t4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ol, li1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ol, t6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ol, button0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t8, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t6, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, section1, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, div14);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, div13);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div13, div12);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, div1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, t12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, t10);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, div10);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, div9);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, div8);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div5);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, div4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div4, table);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, thead);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t19);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, tbody);
 
       for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
         each_blocks[_i2].m(tbody, null);
       }
 
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t20);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, div6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(pagination, div6, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, t23);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, t21);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, div11);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, t24);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, t22);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, div25);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div25, div24);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, div23);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, div15);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, button2);
-      /*button2_binding*/
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, button1);
+      /*button1_binding*/
 
-      ctx[12](button2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, t26);
+      ctx[12](button1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, t24);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, h4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, t28);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, t26);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, form);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div21);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div20);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, div19);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div16);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, label0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t31);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t29);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, input0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
       /*$inviteCandidateForm*/
       ctx[2].first_name);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t32);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t30);
       if (if_block0) if_block0.m(div16, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t33);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t31);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div17);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, label1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t36);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t34);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, input1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
       /*$inviteCandidateForm*/
       ctx[2].last_name);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t37);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t35);
       if (if_block1) if_block1.m(div17, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t38);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t36);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div18);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, label2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t41);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t39);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, input2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input2,
       /*$inviteCandidateForm*/
       ctx[2].email);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t42);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t40);
       if (if_block2) if_block2.m(div18, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t43);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t41);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, button2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, t43);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, button3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, t45);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, button4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button4, i1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button4, t46);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button3, i1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button3, t44);
       current = true;
 
       if (!mounted) {
-        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button0, "click", setCalend), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
         /*input0_input_handler*/
         ctx[13]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
         /*input1_input_handler*/
@@ -6444,10 +6442,10 @@ function create_fragment(ctx) {
 
       if (!current || dirty &
       /*$inviteCandidateForm*/
-      4 && button4_disabled_value !== (button4_disabled_value =
+      4 && button3_disabled_value !== (button3_disabled_value =
       /*$inviteCandidateForm*/
       ctx[2].processing)) {
-        button4.disabled = button4_disabled_value;
+        button3.disabled = button3_disabled_value;
       }
     },
     i: function i(local) {
@@ -6461,11 +6459,11 @@ function create_fragment(ctx) {
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section0);
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t8);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t6);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(pagination);
-      /*button2_binding*/
+      /*button1_binding*/
 
       ctx[12](null);
       if (if_block0) if_block0.d();
@@ -6523,7 +6521,7 @@ function instance($$self, $$props, $$invalidate) {
     return sendReInvitation(user);
   };
 
-  function button2_binding($$value) {
+  function button1_binding($$value) {
     svelte_internal__WEBPACK_IMPORTED_MODULE_0__.binding_callbacks[$$value ? 'unshift' : 'push'](function () {
       inviteModal = $$value;
       $$invalidate(1, inviteModal);
@@ -6567,7 +6565,7 @@ function instance($$self, $$props, $$invalidate) {
     }
   };
 
-  return [users, inviteModal, $inviteCandidateForm, inviteCandidateForm, reInviteCandidateForm, sendInvitation, sendReInvitation, message, invite_candidate_route, reinvite_candidate_route, error, click_handler, button2_binding, input0_input_handler, input1_input_handler, input2_input_handler];
+  return [users, inviteModal, $inviteCandidateForm, inviteCandidateForm, reInviteCandidateForm, sendInvitation, sendReInvitation, message, invite_candidate_route, reinvite_candidate_route, error, click_handler, button1_binding, input0_input_handler, input1_input_handler, input2_input_handler];
 }
 
 var UserList = /*#__PURE__*/function (_SvelteComponent) {

@@ -47,7 +47,7 @@ Route::get('/',[LoginController::class,'index'])->name('login');
 
 Route::resource('login',LoginController::class);
 
-Route::post('logout',[LoginController::class,'destroy'])->name('logout');
+Route::get('logout',[LoginController::class,'destroy'])->name('logout');
 
 
 
