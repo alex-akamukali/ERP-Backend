@@ -5709,9 +5709,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[14] = list[i];
+  child_ctx[17] = list[i];
   return child_ctx;
-} // (165:44) {#each users.data as user}
+} // (164:44) {#each users.data as user}
 
 
 function create_each_block(ctx) {
@@ -5719,13 +5719,13 @@ function create_each_block(ctx) {
   var td0;
   var t0_value =
   /*user*/
-  ctx[14].name + "";
+  ctx[17].name + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
   /*user*/
-  ctx[14].email + "";
+  ctx[17].email + "";
   var t2;
   var t3;
   var td2;
@@ -5733,7 +5733,7 @@ function create_each_block(ctx) {
   var td3;
   var t5_value =
   /*user*/
-  ctx[14].created_at + "";
+  ctx[17].created_at + "";
   var t5;
   var t6;
   var td4;
@@ -5758,7 +5758,7 @@ function create_each_block(ctx) {
       /*click_handler*/
       ctx[11](
       /*user*/
-      ctx[14])
+      ctx[17])
     );
   }
 
@@ -5846,17 +5846,17 @@ function create_each_block(ctx) {
       /*users*/
       1 && t0_value !== (t0_value =
       /*user*/
-      ctx[14].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+      ctx[17].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
       if (dirty &
       /*users*/
       1 && t2_value !== (t2_value =
       /*user*/
-      ctx[14].email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      ctx[17].email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
       if (dirty &
       /*users*/
       1 && t5_value !== (t5_value =
       /*user*/
-      ctx[14].created_at + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
+      ctx[17].created_at + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
@@ -5894,7 +5894,7 @@ function create_if_block_2(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (313:36) {#if $inviteCandidateForm.errors.last_name}
+} // (314:36) {#if $inviteCandidateForm.errors.last_name}
 
 
 function create_if_block_1(ctx) {
@@ -5924,7 +5924,7 @@ function create_if_block_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (331:36) {#if $inviteCandidateForm.errors.first_name}
+} // (333:36) {#if $inviteCandidateForm.errors.first_name}
 
 
 function create_if_block(ctx) {
@@ -6258,6 +6258,9 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, label0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t31);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, input0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
+      /*$inviteCandidateForm*/
+      ctx[2].first_name);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t32);
       if (if_block0) if_block0.m(div16, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t33);
@@ -6265,6 +6268,9 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, label1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t36);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, input1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
+      /*$inviteCandidateForm*/
+      ctx[2].last_name);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t37);
       if (if_block1) if_block1.m(div17, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t38);
@@ -6272,6 +6278,9 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, label2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t41);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, input2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input2,
+      /*$inviteCandidateForm*/
+      ctx[2].email);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t42);
       if (if_block2) if_block2.m(div18, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t43);
@@ -6279,7 +6288,13 @@ function create_fragment(ctx) {
       current = true;
 
       if (!mounted) {
-        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button0, "click", setCalend), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button0, "click", setCalend), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
+        /*input0_input_handler*/
+        ctx[13]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
+        /*input1_input_handler*/
+        ctx[14]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input2, "input",
+        /*input2_input_handler*/
+        ctx[15]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
         /*sendInvitation*/
         ctx[5]))];
         mounted = true;
@@ -6327,6 +6342,16 @@ function create_fragment(ctx) {
       ctx[0].links;
       pagination.$set(pagination_changes);
 
+      if (dirty &
+      /*$inviteCandidateForm*/
+      4 && input0.value !==
+      /*$inviteCandidateForm*/
+      ctx[2].first_name) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
+        /*$inviteCandidateForm*/
+        ctx[2].first_name);
+      }
+
       if (
       /*$inviteCandidateForm*/
       ctx[2].errors.first_name) {
@@ -6342,6 +6367,16 @@ function create_fragment(ctx) {
         if_block0 = null;
       }
 
+      if (dirty &
+      /*$inviteCandidateForm*/
+      4 && input1.value !==
+      /*$inviteCandidateForm*/
+      ctx[2].last_name) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
+        /*$inviteCandidateForm*/
+        ctx[2].last_name);
+      }
+
       if (
       /*$inviteCandidateForm*/
       ctx[2].errors.last_name) {
@@ -6355,6 +6390,16 @@ function create_fragment(ctx) {
       } else if (if_block1) {
         if_block1.d(1);
         if_block1 = null;
+      }
+
+      if (dirty &
+      /*$inviteCandidateForm*/
+      4 && input2.value !==
+      /*$inviteCandidateForm*/
+      ctx[2].email) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input2,
+        /*$inviteCandidateForm*/
+        ctx[2].email);
       }
 
       if (
@@ -6429,7 +6474,7 @@ function instance($$self, $$props, $$invalidate) {
     email: ""
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, reInviteCandidateForm, function (value) {
-    return $$invalidate(13, $reInviteCandidateForm = value);
+    return $$invalidate(16, $reInviteCandidateForm = value);
   });
 
   function sendInvitation() {
@@ -6437,9 +6482,8 @@ function instance($$self, $$props, $$invalidate) {
   }
 
   function sendReInvitation(user) {
-    $reInviteCandidateForm.post(reinvite_candidate_route, {
-      email: user.email
-    });
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(reInviteCandidateForm, $reInviteCandidateForm.email = user.email, $reInviteCandidateForm);
+    $reInviteCandidateForm.put(reinvite_candidate_route + '/' + user.id);
   }
 
   var click_handler = function click_handler(user) {
@@ -6451,6 +6495,21 @@ function instance($$self, $$props, $$invalidate) {
       inviteModal = $$value;
       $$invalidate(1, inviteModal);
     });
+  }
+
+  function input0_input_handler() {
+    $inviteCandidateForm.first_name = this.value;
+    inviteCandidateForm.set($inviteCandidateForm);
+  }
+
+  function input1_input_handler() {
+    $inviteCandidateForm.last_name = this.value;
+    inviteCandidateForm.set($inviteCandidateForm);
+  }
+
+  function input2_input_handler() {
+    $inviteCandidateForm.email = this.value;
+    inviteCandidateForm.set($inviteCandidateForm);
   }
 
   $$self.$$set = function ($$props) {
@@ -6474,7 +6533,7 @@ function instance($$self, $$props, $$invalidate) {
     }
   };
 
-  return [users, inviteModal, $inviteCandidateForm, inviteCandidateForm, reInviteCandidateForm, sendInvitation, sendReInvitation, message, invite_candidate_route, reinvite_candidate_route, error, click_handler, button2_binding];
+  return [users, inviteModal, $inviteCandidateForm, inviteCandidateForm, reInviteCandidateForm, sendInvitation, sendReInvitation, message, invite_candidate_route, reinvite_candidate_route, error, click_handler, button2_binding, input0_input_handler, input1_input_handler, input2_input_handler];
 }
 
 var UserList = /*#__PURE__*/function (_SvelteComponent) {

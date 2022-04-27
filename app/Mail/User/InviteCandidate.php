@@ -30,6 +30,7 @@ class InviteCandidate extends Mailable
      */
     public function build()
     {
+        $this->from('info@olade.com');
         return $this->view('mail.candidate.invite_candidate_mail',[
             'user'=>$this->user
         ]);

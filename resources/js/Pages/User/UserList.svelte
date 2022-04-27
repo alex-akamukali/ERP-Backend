@@ -38,9 +38,8 @@
     }
 
     function sendReInvitation(user){
-       $reInviteCandidateForm.post(reinvite_candidate_route,{
-           email:user.email
-       });
+       $reInviteCandidateForm.email = user.email;
+       $reInviteCandidateForm.put(reinvite_candidate_route + '/' + user.id);
     }
 
 
@@ -289,6 +288,7 @@
                                         id="inputName"
                                         placeholder="First Name"
                                         required=""
+                                        bind:value={$inviteCandidateForm.first_name}
                                     />
                                     {#if $inviteCandidateForm.errors.first_name}
                                         <div style="color: red;">
@@ -309,6 +309,7 @@
                                         id="inputName"
                                         placeholder="Last Name"
                                         required=""
+                                        bind:value={$inviteCandidateForm.last_name}
                                     />
                                     {#if $inviteCandidateForm.errors.last_name}
                                         <div style="color: red;">
@@ -327,6 +328,7 @@
                                         id="inputName"
                                         placeholder="Candidate's Email"
                                         required=""
+                                        bind:value={$inviteCandidateForm.email}
                                     />
                                     {#if $inviteCandidateForm.errors.first_name}
                                         <div style="color: red;">
