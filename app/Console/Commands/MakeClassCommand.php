@@ -54,12 +54,12 @@ class MakeClassCommand extends Command
 
         $cls = '<?php
 
-        namespace App\\' . $path . ';
+namespace App\\' . $path . ';
 
-        class ' . $name . '
-        {
+class ' . $name . '
+{
 
-        }';
+}';
 
         Storage::disk("root")->put('app/' . $path . '/' . $name . '.php',$cls);
 
