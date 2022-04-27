@@ -30,6 +30,7 @@
         inviteModal.click();
         toastr.success(message);
         message = "";
+        $inviteCandidateForm.reset();
     }
 
 
@@ -345,7 +346,7 @@
                             class="btn btn-default pull-left"
                             data-dismiss="modal">Close</button
                         >
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" disabled={$inviteCandidateForm.processing} class="btn btn-primary">
                             <i class="fa fa-envelope" /> Send Invite</button
                         >
                     </div>

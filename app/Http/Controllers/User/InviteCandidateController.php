@@ -9,6 +9,7 @@ use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Mail\User\InviteCandidate;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 
 class InviteCandidateController extends Controller
@@ -43,8 +44,10 @@ class InviteCandidateController extends Controller
     {
         //account_type
         $data = $request->validated();
-        $data['name'] = $data['first_name'] . $data['last_name'];
+        $data['name'] = $data['first_name'] . ' ' . $data['last_name'];
         $data['account_type'] = User::ACCOUNT_TYPE_CANDIDATE;
+        $data['password'] = Hash::make('password'); //password
+        $data['account_status'] = User::ACCOUNT_STATUS_PENDING;
         $user = User::create($data);
         $this->sendInvitation($user);
         return $this->respondWithSuccess("Invitation Sent Successfully!");

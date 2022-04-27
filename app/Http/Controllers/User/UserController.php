@@ -17,7 +17,7 @@ class UserController extends Controller
     public function index()
     {
         //
-        $list = User::paginate(4);
+        $list = User::orderBy('id','desc')->paginate(4);
         return inertia()->render('User/UserList',[
             'users'=>$list,
             'message'=>$this->getMessage(),

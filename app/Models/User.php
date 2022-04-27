@@ -77,4 +77,7 @@ class User extends Authenticatable
     const ACCOUNT_TYPE_ADMIN = 'admin';
     const ACCOUNT_TYPE_STAFF = 'staff';
 
+    const ACCOUNT_STATUS_PENDING = 'pending'; //account_status
+    const ACCOUNT_STATUS_ACTIVE = 'active'; //account_status
+
 }

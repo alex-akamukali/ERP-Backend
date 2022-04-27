@@ -5711,7 +5711,7 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[17] = list[i];
   return child_ctx;
-} // (164:44) {#each users.data as user}
+} // (165:44) {#each users.data as user}
 
 
 function create_each_block(ctx) {
@@ -5864,7 +5864,7 @@ function create_each_block(ctx) {
       dispose();
     }
   };
-} // (293:36) {#if $inviteCandidateForm.errors.first_name}
+} // (294:36) {#if $inviteCandidateForm.errors.first_name}
 
 
 function create_if_block_2(ctx) {
@@ -5894,7 +5894,7 @@ function create_if_block_2(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (314:36) {#if $inviteCandidateForm.errors.last_name}
+} // (315:36) {#if $inviteCandidateForm.errors.last_name}
 
 
 function create_if_block_1(ctx) {
@@ -5924,7 +5924,7 @@ function create_if_block_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (333:36) {#if $inviteCandidateForm.errors.first_name}
+} // (334:36) {#if $inviteCandidateForm.errors.first_name}
 
 
 function create_if_block(ctx) {
@@ -6022,6 +6022,12 @@ function create_fragment(ctx) {
   var t42;
   var t43;
   var div22;
+  var button3;
+  var t45;
+  var button4;
+  var i1;
+  var t46;
+  var button4_disabled_value;
   var current;
   var mounted;
   var dispose;
@@ -6137,7 +6143,12 @@ function create_fragment(ctx) {
       if (if_block2) if_block2.c();
       t43 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div22.innerHTML = "<button type=\"button\" class=\"btn btn-default pull-left\" data-dismiss=\"modal\">Close</button> \n                        <button type=\"submit\" class=\"btn btn-primary\"><i class=\"fa fa-envelope\"></i> Send Invite</button>";
+      button3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      button3.textContent = "Close";
+      t45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      button4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      i1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("i");
+      t46 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" Send Invite");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li1, "class", "active");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ol, "class", "breadcrumb");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section0, "class", "content-header");
@@ -6190,6 +6201,15 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div19, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "modal-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button3, "type", "button");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button3, "class", "btn btn-default pull-left");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button3, "data-dismiss", "modal");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i1, "class", "fa fa-envelope");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button4, "type", "submit");
+      button4.disabled = button4_disabled_value =
+      /*$inviteCandidateForm*/
+      ctx[2].processing;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button4, "class", "btn btn-primary");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div22, "class", "modal-footer");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "class", "form-horizontal");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "method", "post");
@@ -6285,6 +6305,11 @@ function create_fragment(ctx) {
       if (if_block2) if_block2.m(div18, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t43);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, button3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, t45);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, button4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button4, i1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button4, t46);
       current = true;
 
       if (!mounted) {
@@ -6416,6 +6441,14 @@ function create_fragment(ctx) {
         if_block2.d(1);
         if_block2 = null;
       }
+
+      if (!current || dirty &
+      /*$inviteCandidateForm*/
+      4 && button4_disabled_value !== (button4_disabled_value =
+      /*$inviteCandidateForm*/
+      ctx[2].processing)) {
+        button4.disabled = button4_disabled_value;
+      }
     },
     i: function i(local) {
       if (current) return;
@@ -6522,13 +6555,14 @@ function instance($$self, $$props, $$invalidate) {
 
   $$self.$$.update = function () {
     if ($$self.$$.dirty &
-    /*message, error, inviteModal*/
-    1154) {
+    /*message, error, inviteModal, $inviteCandidateForm*/
+    1158) {
       // inviteModal
       $: if (message != '' && !error) {
         inviteModal.click();
         toastr.success(message);
         $$invalidate(7, message = "");
+        $inviteCandidateForm.reset();
       }
     }
   };
