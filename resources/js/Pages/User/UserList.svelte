@@ -147,7 +147,7 @@
                                                     colspan="1"
                                                     aria-label=" &amp;nbsp; : activate to sort column ascending"
                                                 >
-                                                    &nbsp;
+                                                    Account-Type
                                                 </th><th
                                                     class="sorting"
                                                     tabindex="0"
@@ -156,7 +156,7 @@
                                                     colspan="1"
                                                     aria-label=" &amp;nbsp; : activate to sort column ascending"
                                                 >
-                                                    &nbsp;
+                                                    Actions
                                                 </th></tr
                                             >
                                         </thead>
@@ -182,6 +182,9 @@
                                                             {user.account_status}
                                                         </label></td
                                                     >
+                                                    <td>
+                                                        {user.account_type}
+                                                    </td>
                                                     <td>
                                                         <div class="btn-group">
                                                             <!-- svelte-ignore a11y-label-has-associated-control -->
@@ -225,11 +228,6 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                    </td>
-                                                    <td>
-                                                        <b style="color:#FFF">
-                                                            ________
-                                                        </b>
                                                     </td>
                                                 </tr>
                                             {/each}

@@ -88,4 +88,10 @@ class User extends Authenticatable
         return $this->created_at->diffForHumans();
     }
 
+    function scopeCandidates($query){
+        return $query->where('account_type',self::ACCOUNT_TYPE_CANDIDATE);
+    }
+
+
+
 }

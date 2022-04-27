@@ -5771,16 +5771,20 @@ function create_each_block(ctx) {
   var t7;
   var t8;
   var td5;
+  var t9_value =
+  /*user*/
+  ctx[17].account_type + "";
+  var t9;
+  var t10;
+  var td6;
   var div;
   var label1;
-  var t11;
+  var t13;
   var ul;
   var li0;
-  var t13;
+  var t15;
   var li1;
   var a1;
-  var t15;
-  var td6;
   var t17;
   var mounted;
   var dispose;
@@ -5813,20 +5817,20 @@ function create_each_block(ctx) {
       t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t7_value);
       t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       td5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t9_value);
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      td6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
       div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label1.innerHTML = "... \n                                                                <span class=\"sr-only\">Toggle\n                                                                    Dropdown</span>";
-      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       ul = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
       li0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       li0.innerHTML = "<a href=\"userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-file text-info\"></i> View Profile</a>";
-      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       a1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       a1.innerHTML = "<i class=\"fa fa-refresh text-info\"></i> Re-invite";
-      t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      td6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
-      td6.innerHTML = "<b style=\"color:#FFF\">________</b>";
       t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td0, "class", "sorting_1");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label0, "class", "text-success");
@@ -5860,16 +5864,17 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(label0, t7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t8);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td5, div);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td5, t9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td6, div);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, label1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, t11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, t13);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, ul);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, t13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, t15);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li1, a1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t15);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t17);
 
       if (!mounted) {
@@ -5899,6 +5904,11 @@ function create_each_block(ctx) {
       1 && t7_value !== (t7_value =
       /*user*/
       ctx[17].account_status + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t7, t7_value);
+      if (dirty &
+      /*users*/
+      1 && t9_value !== (t9_value =
+      /*user*/
+      ctx[17].account_type + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t9, t9_value);
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
@@ -5906,7 +5916,7 @@ function create_each_block(ctx) {
       dispose();
     }
   };
-} // (294:36) {#if $inviteCandidateForm.errors.first_name}
+} // (292:36) {#if $inviteCandidateForm.errors.first_name}
 
 
 function create_if_block_2(ctx) {
@@ -5936,7 +5946,7 @@ function create_if_block_2(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (315:36) {#if $inviteCandidateForm.errors.last_name}
+} // (313:36) {#if $inviteCandidateForm.errors.last_name}
 
 
 function create_if_block_1(ctx) {
@@ -5966,7 +5976,7 @@ function create_if_block_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (334:36) {#if $inviteCandidateForm.errors.first_name}
+} // (332:36) {#if $inviteCandidateForm.errors.first_name}
 
 
 function create_if_block(ctx) {
@@ -6112,7 +6122,7 @@ function create_fragment(ctx) {
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
       thead = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("thead");
-      thead.innerHTML = "<tr role=\"row\"><th class=\"sorting_asc\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-sort=\"ascending\" aria-label=\"Name: activate to sort column descending\">Name</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Email: activate to sort column ascending\">Email</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Program: activate to sort column ascending\">Program</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Date: activate to sort column ascending\">Created</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Status: activate to sort column ascending\">Status</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\" &amp;nbsp; : activate to sort column ascending\">\xA0\n                                                </th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\" &amp;nbsp; : activate to sort column ascending\">\xA0</th></tr>";
+      thead.innerHTML = "<tr role=\"row\"><th class=\"sorting_asc\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-sort=\"ascending\" aria-label=\"Name: activate to sort column descending\">Name</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Email: activate to sort column ascending\">Email</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Program: activate to sort column ascending\">Program</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Date: activate to sort column ascending\">Created</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\"Status: activate to sort column ascending\">Status</th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\" &amp;nbsp; : activate to sort column ascending\">Account-Type\n                                                </th><th class=\"sorting\" tabindex=\"0\" aria-controls=\"DataTables_Table_0\" rowspan=\"1\" colspan=\"1\" aria-label=\" &amp;nbsp; : activate to sort column ascending\">Actions</th></tr>";
       t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       tbody = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tbody");
 

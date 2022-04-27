@@ -22,7 +22,7 @@ class UserFactory extends Factory
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
             'account_status'=>User::ACCOUNT_STATUS_ACTIVE,
-            'account_type'=>User::ACCOUNT_TYPE_ADMIN
+            'account_type'=>User::ACCOUNT_TYPE_CANDIDATE //User::ACCOUNT_TYPE_ADMIN
         ];
     }
 
