@@ -4,9 +4,12 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Candidate\InviteCandidateRequest;
+use App\Http\Requests\Candidate\ReInviteCandidateRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
+use App\Mail\User\InviteCandidate;
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 
 class InviteCandidateController extends Controller
 {
@@ -38,7 +41,18 @@ class InviteCandidateController extends Controller
      */
     public function store(InviteCandidateRequest $request)
     {
-        //
+        //account_type
+        $data = $request->validated();
+        $data['name'] = $data['first_name'] . $data['last_name'];
+        $data['account_type'] = User::ACCOUNT_TYPE_CANDIDATE;
+        $user = User::create($data);
+        $this->sendInvitation($user);
+        return $this->respondWithSuccess("Invitation Sent Successfully!");
+
+    }
+
+    function sendInvitation($user){
+       Mail::to($user->email)->send(new InviteCandidate($user));
     }
 
     /**
@@ -70,9 +84,13 @@ class InviteCandidateController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request, User $user)
+    public function update(ReInviteCandidateRequest $request, User $user) //re-invite
     {
-        //
+        $data = $request->validated();
+        $email = $data['email'];
+        $user = User::query()->where('email',$email)->first();
+        $this->sendInvitation($user);
+        return $this->respondWithSuccess("Invitation resent!");
     }
 
     /**

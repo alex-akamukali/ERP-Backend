@@ -59,7 +59,7 @@ Route::get('user/profile',[ProfileController::class,'index'])->name('user.profil
 
 Route::resource('program-type',ProgramTypeController::class);
 
-Route::resource('invite-candidate',InviteCandidateController::class);
+// Route::resource('invite-candidate',InviteCandidateController::class);
 
 /////////////////////////////// [Workflow]////////////////////////////////
 
@@ -71,3 +71,5 @@ Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\
 Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\AssessmentInterviewController::class)->middleware(['auth']);
 
 Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\AssessmentResultController::class)->middleware(['auth']);
+
+Route::resource('invite-candidate',\App\Http\Controllers\User\InviteCandidateController::class)->middleware(['auth']);

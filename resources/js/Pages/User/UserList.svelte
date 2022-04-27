@@ -7,7 +7,12 @@
 
 <script>
     export let users; // = $page.props.users;
-    // export let invite_candidate_route;
+    export let invite_candidate_route;
+    export let reinvite_candidate_route;
+    export let message;
+    export let error;
+
+    let inviteModal = null;
     console.log(users);
     let inviteCandidateForm = useForm({
         first_name: "",
@@ -15,10 +20,29 @@
         email: ""
     });
 
+    let reInviteCandidateForm = useForm({
+        email: ""
+    });
+
+    // inviteModal
+
+    $: if (message != '' && !error){
+        inviteModal.click();
+        toastr.success(message);
+        message = "";
+    }
+
 
     function sendInvitation(){
-       $inviteCandidateForm.post();
+       $inviteCandidateForm.post(invite_candidate_route);
     }
+
+    function sendReInvitation(user){
+       $reInviteCandidateForm.post(reinvite_candidate_route,{
+           email:user.email
+       });
+    }
+
 
     function setCalend(){
       Calendly.initPopupWidget({url: 'https://calendly.com/easymagic1/30min'});
@@ -45,7 +69,7 @@
         <div class="col-md-12">
             <div class="box box-info">
                 <div class="box-header with-border">
-                    <h3 class="box-title">All Users</h3>
+                    <h3 class="box-title">All Candidates</h3>
 
                     <div class="box-tools pull-right">
                         <button
@@ -191,7 +215,8 @@
                                                                     <a
                                                                         href="null"
                                                                         usx="c2aa1951a32f33b047954754f0ae"
-                                                                        onclick="reInvite(this)"
+                                                                        on:click|preventDefault={()=>sendReInvitation(user)}
+
                                                                     >
                                                                         <i
                                                                             class="fa fa-refresh text-info"
@@ -238,6 +263,7 @@
                         class="close"
                         data-dismiss="modal"
                         aria-label="Close"
+                        bind:this={inviteModal}
                     >
                         <span aria-hidden="true">×</span></button
                     >
@@ -245,7 +271,7 @@
                 </div>
                 <form
                     class="form-horizontal"
-                    action="../utility/inviteCandidate"
+                    on:submit|preventDefault={sendInvitation}
                     method="post"
                 >
                     <div class="modal-body">
@@ -264,11 +290,11 @@
                                         placeholder="First Name"
                                         required=""
                                     />
-                                    <input
-                                        type="hidden"
-                                        value="U"
-                                        name="UserType"
-                                    />
+                                    {#if $inviteCandidateForm.errors.first_name}
+                                        <div style="color: red;">
+                                            {$inviteCandidateForm.errors.first_name}
+                                        </div>
+                                    {/if}
                                 </div>
 
                                 <div class="col-md-4">
@@ -284,6 +310,11 @@
                                         placeholder="Last Name"
                                         required=""
                                     />
+                                    {#if $inviteCandidateForm.errors.last_name}
+                                        <div style="color: red;">
+                                            {$inviteCandidateForm.errors.last_name}
+                                        </div>
+                                    {/if}
                                 </div>
                                 <div class="col-md-4">
                                     <label for="inputName" class="control-label"
@@ -297,6 +328,11 @@
                                         placeholder="Candidate's Email"
                                         required=""
                                     />
+                                    {#if $inviteCandidateForm.errors.first_name}
+                                        <div style="color: red;">
+                                            {$inviteCandidateForm.errors.email}
+                                        </div>
+                                    {/if}
                                 </div>
                             </div>
                         </div>
@@ -318,93 +354,5 @@
         <!-- /.modal-dialog -->
     </div>
 
-    <div class="modal fade" id="modal-ivadmin">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button
-                        type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                    >
-                        <span aria-hidden="true">×</span></button
-                    >
-                    <h4 class="modal-title">Invite Admin</h4>
-                </div>
-                <form
-                    class="form-horizontal"
-                    action="../utility/inviteCandidate"
-                    method="post"
-                >
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="col-md-4">
-                                    <label for="inputName" class="control-label"
-                                        >First Name <b style="color:red">*</b
-                                        ></label
-                                    >
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        name="FirstName"
-                                        id="inputName"
-                                        placeholder="First Name"
-                                        required=""
-                                    />
-                                    <input
-                                        type="hidden"
-                                        value="A"
-                                        name="UserType"
-                                    />
-                                </div>
-
-                                <div class="col-md-4">
-                                    <label for="inputName" class="control-label"
-                                        >Last Name <b style="color:red">*</b
-                                        ></label
-                                    >
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        name="LastName"
-                                        id="inputName"
-                                        placeholder="Last Name"
-                                        required=""
-                                    />
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="inputName" class="control-label"
-                                        >Email <b style="color:red">*</b></label
-                                    >
-                                    <input
-                                        type="email"
-                                        class="form-control"
-                                        name="Email"
-                                        id="inputName"
-                                        placeholder="Admin's Email"
-                                        required=""
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button
-                            type="button"
-                            class="btn btn-default pull-left"
-                            data-dismiss="modal">Close</button
-                        >
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fa fa-send" /> Send Invite</button
-                        >
-                    </div>
-                </form>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
     <!-- /.modal -->
 </section>

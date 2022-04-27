@@ -20,7 +20,10 @@ class UserController extends Controller
         $list = User::paginate(4);
         return inertia()->render('User/UserList',[
             'users'=>$list,
-            'invite_candidate_route'=>route('invite-candidate.store')
+            'message'=>$this->getMessage(),
+            'error'=>$this->getError(),
+            'invite_candidate_route'=>route('invite-candidate.store'),
+            'reinvite_candidate_route'=>route('invite-candidate.update','')
         ]);
     }
     // invite-candidate

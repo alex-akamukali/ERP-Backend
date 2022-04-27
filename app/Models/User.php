@@ -72,4 +72,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    const ACCOUNT_TYPE_CANDIDATE = 'candidate';
+    const ACCOUNT_TYPE_ADMIN = 'admin';
+    const ACCOUNT_TYPE_STAFF = 'staff';
+
 }

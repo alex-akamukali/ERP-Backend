@@ -16,9 +16,11 @@ class InviteCandidate extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    private $user = null;
+
+    public function __construct($user)
     {
-        //
+       $this->user = $user;
     }
 
     /**
@@ -28,6 +30,8 @@ class InviteCandidate extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->view('mail.candidate.invite_candidate_mail',[
+            'user'=>$this->user
+        ]);
     }
 }

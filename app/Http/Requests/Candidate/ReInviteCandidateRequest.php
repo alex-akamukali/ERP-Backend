@@ -4,7 +4,7 @@ namespace App\Http\Requests\Candidate;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class InviteCandidateRequest extends FormRequest
+class ReInviteCandidateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,7 @@ class InviteCandidateRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_name'=>'required',
-            'last_name'=>'required',
-            'email'=>'required|unique:users,email'
+            'email'=>'required|exists:users,email'
         ];
     }
 }

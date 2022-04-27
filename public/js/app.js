@@ -5709,9 +5709,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[4] = list[i];
+  child_ctx[14] = list[i];
   return child_ctx;
-} // (141:44) {#each users.data as user}
+} // (165:44) {#each users.data as user}
 
 
 function create_each_block(ctx) {
@@ -5719,13 +5719,13 @@ function create_each_block(ctx) {
   var td0;
   var t0_value =
   /*user*/
-  ctx[4].name + "";
+  ctx[14].name + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
   /*user*/
-  ctx[4].email + "";
+  ctx[14].email + "";
   var t2;
   var t3;
   var td2;
@@ -5733,15 +5733,35 @@ function create_each_block(ctx) {
   var td3;
   var t5_value =
   /*user*/
-  ctx[4].created_at + "";
+  ctx[14].created_at + "";
   var t5;
   var t6;
   var td4;
   var t8;
   var td5;
+  var div;
+  var label1;
+  var t11;
+  var ul;
+  var li0;
+  var t13;
+  var li1;
+  var a1;
   var t15;
   var td6;
   var t17;
+  var mounted;
+  var dispose;
+
+  function click_handler() {
+    return (
+      /*click_handler*/
+      ctx[11](
+      /*user*/
+      ctx[14])
+    );
+  }
+
   return {
     c: function c() {
       tr = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tr");
@@ -5760,12 +5780,30 @@ function create_each_block(ctx) {
       td4.innerHTML = "<label class=\"text-success\" id=\"acctstc2aa1951a32f33b047954754f0ae\">Active</label>";
       t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       td5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
-      td5.innerHTML = "<div class=\"btn-group\"><label class=\"dropdown-toggle\" data-toggle=\"dropdown\">... \n                                                                <span class=\"sr-only\">Toggle\n                                                                    Dropdown</span></label> \n                                                            <ul class=\"dropdown-menu\" role=\"menu\" style=\"z-index:9000\"><li><a href=\"userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-file text-info\"></i> View Profile</a></li> \n\n                                                                <li><a href=\"null\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"reInvite(this)\"><i class=\"fa fa-refresh text-info\"></i> Re-invite</a></li></ul></div>";
+      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      label1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label1.innerHTML = "... \n                                                                <span class=\"sr-only\">Toggle\n                                                                    Dropdown</span>";
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      ul = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+      li0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li0.innerHTML = "<a href=\"userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-file text-info\"></i> View Profile</a>";
+      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a1.innerHTML = "<i class=\"fa fa-refresh text-info\"></i> Re-invite";
       t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       td6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
       td6.innerHTML = "<b style=\"color:#FFF\">________</b>";
       t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td0, "class", "sorting_1");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label1, "class", "dropdown-toggle");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label1, "data-toggle", "dropdown");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", "null");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "usx", "c2aa1951a32f33b047954754f0ae");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul, "class", "dropdown-menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul, "role", "menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(ul, "z-index", "9000");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "btn-group");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(tr, "role", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(tr, "class", "odd");
     },
@@ -5785,29 +5823,135 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t8);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td5, div);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, label1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, t11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, ul);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, t13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li1, a1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t15);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, td6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t17);
+
+      if (!mounted) {
+        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(a1, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(click_handler));
+        mounted = true;
+      }
     },
-    p: function p(ctx, dirty) {
+    p: function p(new_ctx, dirty) {
+      ctx = new_ctx;
       if (dirty &
       /*users*/
       1 && t0_value !== (t0_value =
       /*user*/
-      ctx[4].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+      ctx[14].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
       if (dirty &
       /*users*/
       1 && t2_value !== (t2_value =
       /*user*/
-      ctx[4].email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      ctx[14].email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
       if (dirty &
       /*users*/
       1 && t5_value !== (t5_value =
       /*user*/
-      ctx[4].created_at + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
+      ctx[14].created_at + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
+      mounted = false;
+      dispose();
+    }
+  };
+} // (293:36) {#if $inviteCandidateForm.errors.first_name}
+
+
+function create_if_block_2(ctx) {
+  var div;
+  var t_value =
+  /*$inviteCandidateForm*/
+  ctx[2].errors.first_name + "";
+  var t;
+  return {
+    c: function c() {
+      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div, "color", "red");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, t);
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*$inviteCandidateForm*/
+      4 && t_value !== (t_value =
+      /*$inviteCandidateForm*/
+      ctx[2].errors.first_name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
+    }
+  };
+} // (313:36) {#if $inviteCandidateForm.errors.last_name}
+
+
+function create_if_block_1(ctx) {
+  var div;
+  var t_value =
+  /*$inviteCandidateForm*/
+  ctx[2].errors.last_name + "";
+  var t;
+  return {
+    c: function c() {
+      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div, "color", "red");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, t);
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*$inviteCandidateForm*/
+      4 && t_value !== (t_value =
+      /*$inviteCandidateForm*/
+      ctx[2].errors.last_name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
+    }
+  };
+} // (331:36) {#if $inviteCandidateForm.errors.first_name}
+
+
+function create_if_block(ctx) {
+  var div;
+  var t_value =
+  /*$inviteCandidateForm*/
+  ctx[2].errors.email + "";
+  var t;
+  return {
+    c: function c() {
+      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div, "color", "red");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, t);
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*$inviteCandidateForm*/
+      4 && t_value !== (t_value =
+      /*$inviteCandidateForm*/
+      ctx[2].errors.email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
 }
@@ -5848,8 +5992,36 @@ function create_fragment(ctx) {
   var div11;
   var t24;
   var div25;
-  var t45;
-  var div36;
+  var div24;
+  var div23;
+  var div15;
+  var button2;
+  var t26;
+  var h4;
+  var t28;
+  var form;
+  var div21;
+  var div20;
+  var div19;
+  var div16;
+  var label0;
+  var t31;
+  var input0;
+  var t32;
+  var t33;
+  var div17;
+  var label1;
+  var t36;
+  var input1;
+  var t37;
+  var t38;
+  var div18;
+  var label2;
+  var t41;
+  var input2;
+  var t42;
+  var t43;
+  var div22;
   var current;
   var mounted;
   var dispose;
@@ -5869,6 +6041,15 @@ function create_fragment(ctx) {
       ctx[0].links
     }
   });
+  var if_block0 =
+  /*$inviteCandidateForm*/
+  ctx[2].errors.first_name && create_if_block_2(ctx);
+  var if_block1 =
+  /*$inviteCandidateForm*/
+  ctx[2].errors.last_name && create_if_block_1(ctx);
+  var if_block2 =
+  /*$inviteCandidateForm*/
+  ctx[2].errors.first_name && create_if_block(ctx);
   return {
     c: function c() {
       section0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
@@ -5890,7 +6071,7 @@ function create_fragment(ctx) {
       div13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div1.innerHTML = "<h3 class=\"box-title\">All Users</h3> \n\n                    <div class=\"box-tools pull-right\"><button class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#modal-ivuser\">Invite Candidate</button></div>";
+      div1.innerHTML = "<h3 class=\"box-title\">All Candidates</h3> \n\n                    <div class=\"box-tools pull-right\"><button class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#modal-ivuser\">Invite Candidate</button></div>";
       t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
@@ -5918,10 +6099,45 @@ function create_fragment(ctx) {
       div11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       t24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div25.innerHTML = "<div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">\xD7</span></button> \n                    <h4 class=\"modal-title\">Invite Candidate</h4></div> \n                <form class=\"form-horizontal\" action=\"../utility/inviteCandidate\" method=\"post\"><div class=\"modal-body\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">First Name <b style=\"color:red\">*</b></label> \n                                    <input type=\"text\" class=\"form-control\" name=\"FirstName\" id=\"inputName\" placeholder=\"First Name\" required=\"\"/> \n                                    <input type=\"hidden\" value=\"U\" name=\"UserType\"/></div> \n\n                                <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Last Name <b style=\"color:red\">*</b></label> \n                                    <input type=\"text\" class=\"form-control\" name=\"LastName\" id=\"inputName\" placeholder=\"Last Name\" required=\"\"/></div> \n                                <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Email <b style=\"color:red\">*</b></label> \n                                    <input type=\"email\" class=\"form-control\" name=\"Email\" id=\"inputName\" placeholder=\"Candidate&#39;s Email\" required=\"\"/></div></div></div></div> \n                    <div class=\"modal-footer\"><button type=\"button\" class=\"btn btn-default pull-left\" data-dismiss=\"modal\">Close</button> \n                        <button type=\"submit\" class=\"btn btn-primary\"><i class=\"fa fa-envelope\"></i> Send Invite</button></div></form></div></div>";
-      t45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div36.innerHTML = "<div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">\xD7</span></button> \n                    <h4 class=\"modal-title\">Invite Admin</h4></div> \n                <form class=\"form-horizontal\" action=\"../utility/inviteCandidate\" method=\"post\"><div class=\"modal-body\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">First Name <b style=\"color:red\">*</b></label> \n                                    <input type=\"text\" class=\"form-control\" name=\"FirstName\" id=\"inputName\" placeholder=\"First Name\" required=\"\"/> \n                                    <input type=\"hidden\" value=\"A\" name=\"UserType\"/></div> \n\n                                <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Last Name <b style=\"color:red\">*</b></label> \n                                    <input type=\"text\" class=\"form-control\" name=\"LastName\" id=\"inputName\" placeholder=\"Last Name\" required=\"\"/></div> \n                                <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Email <b style=\"color:red\">*</b></label> \n                                    <input type=\"email\" class=\"form-control\" name=\"Email\" id=\"inputName\" placeholder=\"Admin&#39;s Email\" required=\"\"/></div></div></div></div> \n                    <div class=\"modal-footer\"><button type=\"button\" class=\"btn btn-default pull-left\" data-dismiss=\"modal\">Close</button> \n                        <button type=\"submit\" class=\"btn btn-primary\"><i class=\"fa fa-send\"></i> Send Invite</button></div></form></div></div>";
+      div24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      button2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      button2.innerHTML = "<span aria-hidden=\"true\">\xD7</span>";
+      t26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      h4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h4");
+      h4.textContent = "Invite Candidate";
+      t28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      form = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
+      div21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      label0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label0.innerHTML = "First Name <b style=\"color:red\">*</b>";
+      t31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t32 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      if (if_block0) if_block0.c();
+      t33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      label1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label1.innerHTML = "Last Name <b style=\"color:red\">*</b>";
+      t36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t37 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      if (if_block1) if_block1.c();
+      t38 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      label2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label2.innerHTML = "Email <b style=\"color:red\">*</b>";
+      t41 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t42 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      if (if_block2) if_block2.c();
+      t43 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div22.innerHTML = "<button type=\"button\" class=\"btn btn-default pull-left\" data-dismiss=\"modal\">Close</button> \n                        <button type=\"submit\" class=\"btn btn-primary\"><i class=\"fa fa-envelope\"></i> Send Invite</button>";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li1, "class", "active");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ol, "class", "breadcrumb");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section0, "class", "content-header");
@@ -5938,10 +6154,49 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div12, "class", "box box-info");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div13, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div14, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "type", "button");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "class", "close");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "data-dismiss", "modal");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button2, "aria-label", "Close");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h4, "class", "modal-title");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div15, "class", "modal-header");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label0, "for", "inputName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label0, "class", "control-label");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "text");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "name", "FirstName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "id", "inputName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "placeholder", "First Name");
+      input0.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div16, "class", "col-md-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label1, "for", "inputName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label1, "class", "control-label");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "type", "text");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "name", "LastName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "id", "inputName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "placeholder", "Last Name");
+      input1.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div17, "class", "col-md-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label2, "for", "inputName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label2, "class", "control-label");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "type", "email");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "name", "Email");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "id", "inputName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "placeholder", "Candidate's Email");
+      input2.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div18, "class", "col-md-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div19, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "modal-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div22, "class", "modal-footer");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "class", "form-horizontal");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "method", "post");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div23, "class", "modal-content");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div24, "class", "modal-dialog");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div25, "class", "modal fade");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div25, "id", "modal-ivuser");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div36, "class", "modal fade");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div36, "id", "modal-ivadmin");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section1, "class", "content");
     },
     m: function m(target, anchor) {
@@ -5985,12 +6240,48 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, div11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, t24);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, div25);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, t45);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, div36);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div25, div24);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, div23);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, div15);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, button2);
+      /*button2_binding*/
+
+      ctx[12](button2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, t26);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, h4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, t28);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, form);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div20);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, div19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, label0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t31);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, input0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t32);
+      if (if_block0) if_block0.m(div16, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t33);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div17);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, label1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t36);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, input1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t37);
+      if (if_block1) if_block1.m(div17, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t38);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div18);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, label2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t41);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, input2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t42);
+      if (if_block2) if_block2.m(div18, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t43);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div22);
       current = true;
 
       if (!mounted) {
-        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button0, "click", setCalend);
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button0, "click", setCalend), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        /*sendInvitation*/
+        ctx[5]))];
         mounted = true;
       }
     },
@@ -5999,8 +6290,8 @@ function create_fragment(ctx) {
           dirty = _ref2[0];
 
       if (dirty &
-      /*users*/
-      1) {
+      /*sendReInvitation, users*/
+      65) {
         each_value =
         /*users*/
         ctx[0].data;
@@ -6035,6 +6326,51 @@ function create_fragment(ctx) {
       /*users*/
       ctx[0].links;
       pagination.$set(pagination_changes);
+
+      if (
+      /*$inviteCandidateForm*/
+      ctx[2].errors.first_name) {
+        if (if_block0) {
+          if_block0.p(ctx, dirty);
+        } else {
+          if_block0 = create_if_block_2(ctx);
+          if_block0.c();
+          if_block0.m(div16, null);
+        }
+      } else if (if_block0) {
+        if_block0.d(1);
+        if_block0 = null;
+      }
+
+      if (
+      /*$inviteCandidateForm*/
+      ctx[2].errors.last_name) {
+        if (if_block1) {
+          if_block1.p(ctx, dirty);
+        } else {
+          if_block1 = create_if_block_1(ctx);
+          if_block1.c();
+          if_block1.m(div17, null);
+        }
+      } else if (if_block1) {
+        if_block1.d(1);
+        if_block1 = null;
+      }
+
+      if (
+      /*$inviteCandidateForm*/
+      ctx[2].errors.first_name) {
+        if (if_block2) {
+          if_block2.p(ctx, dirty);
+        } else {
+          if_block2 = create_if_block(ctx);
+          if_block2.c();
+          if_block2.m(div18, null);
+        }
+      } else if (if_block2) {
+        if_block2.d(1);
+        if_block2 = null;
+      }
     },
     i: function i(local) {
       if (current) return;
@@ -6051,8 +6387,14 @@ function create_fragment(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(pagination);
+      /*button2_binding*/
+
+      ctx[12](null);
+      if (if_block0) if_block0.d();
+      if (if_block1) if_block1.d();
+      if (if_block2) if_block2.d();
       mounted = false;
-      dispose();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
 }
@@ -6066,9 +6408,14 @@ function setCalend() {
 }
 
 function instance($$self, $$props, $$invalidate) {
+  var $reInviteCandidateForm;
   var $inviteCandidateForm;
-  var users = $$props.users; // export let invite_candidate_route;
-
+  var users = $$props.users;
+  var invite_candidate_route = $$props.invite_candidate_route;
+  var reinvite_candidate_route = $$props.reinvite_candidate_route;
+  var message = $$props.message;
+  var error = $$props.error;
+  var inviteModal = null;
   console.log(users);
   var inviteCandidateForm = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.useForm)({
     first_name: "",
@@ -6078,16 +6425,56 @@ function instance($$self, $$props, $$invalidate) {
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, inviteCandidateForm, function (value) {
     return $$invalidate(2, $inviteCandidateForm = value);
   });
+  var reInviteCandidateForm = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.useForm)({
+    email: ""
+  });
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, reInviteCandidateForm, function (value) {
+    return $$invalidate(13, $reInviteCandidateForm = value);
+  });
 
   function sendInvitation() {
-    $inviteCandidateForm.post();
+    $inviteCandidateForm.post(invite_candidate_route);
+  }
+
+  function sendReInvitation(user) {
+    $reInviteCandidateForm.post(reinvite_candidate_route, {
+      email: user.email
+    });
+  }
+
+  var click_handler = function click_handler(user) {
+    return sendReInvitation(user);
+  };
+
+  function button2_binding($$value) {
+    svelte_internal__WEBPACK_IMPORTED_MODULE_0__.binding_callbacks[$$value ? 'unshift' : 'push'](function () {
+      inviteModal = $$value;
+      $$invalidate(1, inviteModal);
+    });
   }
 
   $$self.$$set = function ($$props) {
     if ('users' in $$props) $$invalidate(0, users = $$props.users);
+    if ('invite_candidate_route' in $$props) $$invalidate(8, invite_candidate_route = $$props.invite_candidate_route);
+    if ('reinvite_candidate_route' in $$props) $$invalidate(9, reinvite_candidate_route = $$props.reinvite_candidate_route);
+    if ('message' in $$props) $$invalidate(7, message = $$props.message);
+    if ('error' in $$props) $$invalidate(10, error = $$props.error);
   };
 
-  return [users, inviteCandidateForm];
+  $$self.$$.update = function () {
+    if ($$self.$$.dirty &
+    /*message, error, inviteModal*/
+    1154) {
+      // inviteModal
+      $: if (message != '' && !error) {
+        inviteModal.click();
+        toastr.success(message);
+        $$invalidate(7, message = "");
+      }
+    }
+  };
+
+  return [users, inviteModal, $inviteCandidateForm, inviteCandidateForm, reInviteCandidateForm, sendInvitation, sendReInvitation, message, invite_candidate_route, reinvite_candidate_route, error, click_handler, button2_binding];
 }
 
 var UserList = /*#__PURE__*/function (_SvelteComponent) {
@@ -6102,7 +6489,11 @@ var UserList = /*#__PURE__*/function (_SvelteComponent) {
 
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
-      users: 0
+      users: 0,
+      invite_candidate_route: 8,
+      reinvite_candidate_route: 9,
+      message: 7,
+      error: 10
     });
     return _this;
   }
