@@ -2,6 +2,7 @@
     // import Layout from "../Dashboard/Layout.svelte";
     import { page, useForm } from "@inertiajs/inertia-svelte";
     import Pagination from "../../components/Pagination.svelte";
+    import {createEventDispatcher} from "svelte";
     // export const layout = Layout;
 </script>
 
@@ -12,6 +13,8 @@
     export let message;
     export let error;
     export let label;
+
+    let dispatch = createEventDispatcher();
 
     let inviteModal = null;
     // console.log(users);
@@ -34,6 +37,7 @@
         inviteModal.click();
         toastr.success(message);
         message = "";
+        dispatch("clearMessage",message);
         $inviteCandidateForm.reset();
     }
 
