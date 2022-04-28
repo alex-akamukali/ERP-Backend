@@ -16,4 +16,26 @@ class KnowledgeArea extends Model
         'no_of_questions',
         'status'
     ];
+
+    const KNOWLEDGE_AREA_TYPES = [
+        'internal',
+        'external'
+    ];
+
+    const STATUSES = [
+        'active',
+        'inactive'
+    ];
+
+    const KNOWLEDGE_AREA_TYPE_INTERNAL = 'internal';
+    const KNOWLEDGE_AREA_TYPE_EXTERNAL = 'external';
+    const STATUS_ACTIVE = 'active';
+    const STATUS_INACTIVE = 'inactive';
+
+    protected $with = ['program_type'];
+
+    function program_type()
+    {
+        return $this->belongsTo(ProgramType::class, 'program_type_id');
+    }
 }

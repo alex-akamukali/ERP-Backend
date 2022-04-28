@@ -75,3 +75,5 @@ Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\
 Route::resource('invite-candidate',\App\Http\Controllers\User\InviteCandidateController::class)->middleware(['auth']);
 
 Route::resource('check-auth',\App\Http\Controllers\Auth\CheckAuthController::class);
+
+Route::resource('settings-knowledge-area',\App\Http\Controllers\Settings\KnowledgeAreaController::class)->middleware(['auth']);

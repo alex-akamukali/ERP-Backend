@@ -23,7 +23,8 @@
         user,
         logout_route,
         csrf,
-        program_type_index_route
+        program_type_index_route,
+        settings_knowledge_area_index_route
     } = $page.props;
 </script>
 
@@ -491,7 +492,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="knowledgearea">
+                            <a use:inertia href={settings_knowledge_area_index_route}>
                                 <i class="fa fa-book text-orange" /> Knowledge Area
                             </a>
                         </li>

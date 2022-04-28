@@ -14,4 +14,18 @@ class ProgramType extends Model
         'description',
         'status'
     ];
+
+    const STATUS_ACTIVE = 'active';
+    const STATUS_INACTIVE = 'inactive';
+
+
+    function scopeActive($query)
+    {
+        return $query->where('status', self::STATUS_ACTIVE);
+    }
+
+    function scopeInActive($query)
+    {
+        return $query->where('status', self::STATUS_INACTIVE);
+    }
 }

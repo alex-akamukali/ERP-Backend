@@ -45,4 +45,18 @@ class Controller extends BaseController
         ]);
     }
 
+    function inertiaRenderResource($view,$resource='',$__data__=[]){
+        // 'store'=>route('settings-knowledge-area.store'),
+        // 'update'=>route('settings-knowledge-area.update',''),
+        // 'destroy'=>route('settings-knowledge-area.destroy','')
+      $__data__['message'] = $this->getMessage();
+      $__data__['error'] = $this->getError();
+      if (!empty($resource)){
+        $__data__['store'] = route($resource . '.store');
+        $__data__['update'] = route($resource . '.update','');
+        $__data__['destroy'] = route($resource . '.destroy','');
+      }
+      return inertia()->render($view,$__data__);
+    }
+
 }

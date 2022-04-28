@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreKnowledgeAreaRequest;
 use App\Http\Requests\UpdateKnowledgeAreaRequest;
 use App\Models\Settings\KnowledgeArea;
+use App\Models\Settings\ProgramType;
 
 class KnowledgeAreaController extends Controller
 {
@@ -17,6 +18,17 @@ class KnowledgeAreaController extends Controller
     public function index()
     {
         //
+        // 'program_type_id',
+        // 'knowledge_area_type',
+        // 'name',
+        // 'no_of_questions',
+        // 'status'
+        return $this->inertiaRenderResource("Settings/KnowledgeArea", "settings-knowledge-area", [
+            'program_types' => ProgramType::active()->get(),
+            'list'=>KnowledgeArea::all(),
+            'knowledge_area_types'=>KnowledgeArea::KNOWLEDGE_AREA_TYPES,
+            'statuses'=>KnowledgeArea::STATUSES
+        ]);
     }
 
     /**
@@ -37,7 +49,9 @@ class KnowledgeAreaController extends Controller
      */
     public function store(StoreKnowledgeAreaRequest $request)
     {
-        //
+        $data = $request->validated();
+        KnowledgeArea::create($data);
+        return $this->respondWithSuccess("New Knowledge Area Added Successfully.");
     }
 
     /**
