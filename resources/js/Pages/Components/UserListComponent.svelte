@@ -35,11 +35,12 @@
         $inviteCandidateForm.reset();
     }
 
-    // $: if ($inviteCandidateForm.hasErrors){
-    //     setTimeout(()=>{
-    //         $inviteCandidateForm.clearErrors();
-    //     },12000);
-    // }
+    $: if ($inviteCandidateForm.hasErrors){
+        for (let i in $inviteCandidateForm.errors){
+            toastr.error($inviteCandidateForm.errors[i]);
+        }
+        $inviteCandidateForm.clearErrors();
+    }
 
     $:  if ($inviteCandidateForm.first_name){
        $inviteCandidateForm.clearErrors('first_name');
@@ -313,11 +314,11 @@
                                         required=""
                                         bind:value={$inviteCandidateForm.first_name}
                                     />
-                                    {#if $inviteCandidateForm.errors.first_name}
+                                    <!-- {#if $inviteCandidateForm.errors.first_name}
                                         <div style="color: red;">
                                             {$inviteCandidateForm.errors.first_name}
                                         </div>
-                                    {/if}
+                                    {/if} -->
                                 </div>
 
                                 <div class="col-md-6">
@@ -334,11 +335,11 @@
                                         required=""
                                         bind:value={$inviteCandidateForm.last_name}
                                     />
-                                    {#if $inviteCandidateForm.errors.last_name}
+                                    <!-- {#if $inviteCandidateForm.errors.last_name}
                                         <div style="color: red;">
                                             {$inviteCandidateForm.errors.last_name}
                                         </div>
-                                    {/if}
+                                    {/if} -->
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputName" class="control-label"
@@ -353,11 +354,11 @@
                                         required=""
                                         bind:value={$inviteCandidateForm.email}
                                     />
-                                    {#if $inviteCandidateForm.errors.email}
+                                    <!-- {#if $inviteCandidateForm.errors.email}
                                         <div style="color: red;">
                                             {$inviteCandidateForm.errors.email}
                                         </div>
-                                    {/if}
+                                    {/if} -->
                                 </div>
 
                                 <div class="col-md-6">
@@ -379,11 +380,11 @@
                                     <option value="staff">Staff</option>
 
                                 </select>
-                                    {#if $inviteCandidateForm.errors.account_type}
+                                    <!-- {#if $inviteCandidateForm.errors.account_type}
                                         <div style="color: red;">
                                             {$inviteCandidateForm.errors.account_type}
                                         </div>
-                                    {/if}
+                                    {/if} -->
                                 </div>
 
 

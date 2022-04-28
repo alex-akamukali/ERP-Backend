@@ -3487,7 +3487,7 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[19] = list[i];
   return child_ctx;
-} // (189:44) {#each users.data as user}
+} // (190:44) {#each users.data as user}
 
 
 function create_each_block(ctx) {
@@ -3665,126 +3665,6 @@ function create_each_block(ctx) {
       dispose();
     }
   };
-} // (316:36) {#if $inviteCandidateForm.errors.first_name}
-
-
-function create_if_block_3(ctx) {
-  var div;
-  var t_value =
-  /*$inviteCandidateForm*/
-  ctx[3].errors.first_name + "";
-  var t;
-  return {
-    c: function c() {
-      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div, "color", "red");
-    },
-    m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, t);
-    },
-    p: function p(ctx, dirty) {
-      if (dirty &
-      /*$inviteCandidateForm*/
-      8 && t_value !== (t_value =
-      /*$inviteCandidateForm*/
-      ctx[3].errors.first_name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
-    },
-    d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
-    }
-  };
-} // (337:36) {#if $inviteCandidateForm.errors.last_name}
-
-
-function create_if_block_2(ctx) {
-  var div;
-  var t_value =
-  /*$inviteCandidateForm*/
-  ctx[3].errors.last_name + "";
-  var t;
-  return {
-    c: function c() {
-      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div, "color", "red");
-    },
-    m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, t);
-    },
-    p: function p(ctx, dirty) {
-      if (dirty &
-      /*$inviteCandidateForm*/
-      8 && t_value !== (t_value =
-      /*$inviteCandidateForm*/
-      ctx[3].errors.last_name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
-    },
-    d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
-    }
-  };
-} // (356:36) {#if $inviteCandidateForm.errors.email}
-
-
-function create_if_block_1(ctx) {
-  var div;
-  var t_value =
-  /*$inviteCandidateForm*/
-  ctx[3].errors.email + "";
-  var t;
-  return {
-    c: function c() {
-      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div, "color", "red");
-    },
-    m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, t);
-    },
-    p: function p(ctx, dirty) {
-      if (dirty &
-      /*$inviteCandidateForm*/
-      8 && t_value !== (t_value =
-      /*$inviteCandidateForm*/
-      ctx[3].errors.email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
-    },
-    d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
-    }
-  };
-} // (382:36) {#if $inviteCandidateForm.errors.account_type}
-
-
-function create_if_block(ctx) {
-  var div;
-  var t_value =
-  /*$inviteCandidateForm*/
-  ctx[3].errors.account_type + "";
-  var t;
-  return {
-    c: function c() {
-      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div, "color", "red");
-    },
-    m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, t);
-    },
-    p: function p(ctx, dirty) {
-      if (dirty &
-      /*$inviteCandidateForm*/
-      8 && t_value !== (t_value =
-      /*$inviteCandidateForm*/
-      ctx[3].errors.account_type + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
-    },
-    d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
-    }
-  };
 }
 
 function create_fragment(ctx) {
@@ -3843,35 +3723,31 @@ function create_fragment(ctx) {
   var t28;
   var input0;
   var t29;
-  var t30;
   var div17;
   var label1;
-  var t33;
+  var t32;
   var input1;
-  var t34;
-  var t35;
+  var t33;
   var div18;
   var label2;
-  var t38;
+  var t36;
   var input2;
-  var t39;
-  var t40;
+  var t37;
   var div19;
   var label3;
-  var t43;
+  var t40;
   var select;
   var option0;
   var option1;
   var option2;
   var option3;
-  var t48;
-  var t49;
+  var t45;
   var div23;
   var button2;
-  var t51;
+  var t47;
   var button3;
   var i1;
-  var t52;
+  var t48;
   var button3_disabled_value;
   var current;
   var mounted;
@@ -3892,18 +3768,6 @@ function create_fragment(ctx) {
       ctx[0].links
     }
   });
-  var if_block0 =
-  /*$inviteCandidateForm*/
-  ctx[3].errors.first_name && create_if_block_3(ctx);
-  var if_block1 =
-  /*$inviteCandidateForm*/
-  ctx[3].errors.last_name && create_if_block_2(ctx);
-  var if_block2 =
-  /*$inviteCandidateForm*/
-  ctx[3].errors.email && create_if_block_1(ctx);
-  var if_block3 =
-  /*$inviteCandidateForm*/
-  ctx[3].errors.account_type && create_if_block(ctx);
   return {
     c: function c() {
       section0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
@@ -3979,28 +3843,22 @@ function create_fragment(ctx) {
       t28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
       t29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      if (if_block0) if_block0.c();
-      t30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label1.innerHTML = "Last Name <b style=\"color:red\">*</b>";
-      t33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t32 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      if (if_block1) if_block1.c();
-      t35 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label2.innerHTML = "Email <b style=\"color:red\">*</b>";
-      t38 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       input2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t39 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      if (if_block2) if_block2.c();
-      t40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t37 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label3.innerHTML = "Account Type <b style=\"color:red\">*</b>";
-      t43 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       select = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
       option0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
       option0.textContent = "Select";
@@ -4010,16 +3868,14 @@ function create_fragment(ctx) {
       option2.textContent = "Candidate";
       option3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
       option3.textContent = "Staff";
-      t48 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      if (if_block3) if_block3.c();
-      t49 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       button2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
       button2.textContent = "Close";
-      t51 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t47 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       button3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
       i1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("i");
-      t52 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" Send Invite");
+      t48 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" Send Invite");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li1, "class", "active");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ol, "class", "breadcrumb");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section0, "class", "content-header");
@@ -4183,32 +4039,26 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
       /*$inviteCandidateForm*/
       ctx[3].first_name);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t29);
-      if (if_block0) if_block0.m(div16, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t30);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t29);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, div17);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, label1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t33);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t32);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, input1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
       /*$inviteCandidateForm*/
       ctx[3].last_name);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t34);
-      if (if_block1) if_block1.m(div17, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t35);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t33);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, div18);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, label2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t38);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t36);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, input2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input2,
       /*$inviteCandidateForm*/
       ctx[3].email);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t39);
-      if (if_block2) if_block2.m(div18, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t40);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t37);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, div19);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, label3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t43);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t40);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, select);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option1);
@@ -4217,15 +4067,13 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
       /*$inviteCandidateForm*/
       ctx[3].account_type);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t48);
-      if (if_block3) if_block3.m(div19, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t49);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t45);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div23);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, button2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, t51);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, t47);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, button3);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button3, i1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button3, t52);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button3, t48);
       current = true;
 
       if (!mounted) {
@@ -4311,21 +4159,6 @@ function create_fragment(ctx) {
         ctx[3].first_name);
       }
 
-      if (
-      /*$inviteCandidateForm*/
-      ctx[3].errors.first_name) {
-        if (if_block0) {
-          if_block0.p(ctx, dirty);
-        } else {
-          if_block0 = create_if_block_3(ctx);
-          if_block0.c();
-          if_block0.m(div16, null);
-        }
-      } else if (if_block0) {
-        if_block0.d(1);
-        if_block0 = null;
-      }
-
       if (dirty &
       /*$inviteCandidateForm*/
       8 && input1.value !==
@@ -4334,21 +4167,6 @@ function create_fragment(ctx) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
         /*$inviteCandidateForm*/
         ctx[3].last_name);
-      }
-
-      if (
-      /*$inviteCandidateForm*/
-      ctx[3].errors.last_name) {
-        if (if_block1) {
-          if_block1.p(ctx, dirty);
-        } else {
-          if_block1 = create_if_block_2(ctx);
-          if_block1.c();
-          if_block1.m(div17, null);
-        }
-      } else if (if_block1) {
-        if_block1.d(1);
-        if_block1 = null;
       }
 
       if (dirty &
@@ -4361,42 +4179,12 @@ function create_fragment(ctx) {
         ctx[3].email);
       }
 
-      if (
-      /*$inviteCandidateForm*/
-      ctx[3].errors.email) {
-        if (if_block2) {
-          if_block2.p(ctx, dirty);
-        } else {
-          if_block2 = create_if_block_1(ctx);
-          if_block2.c();
-          if_block2.m(div18, null);
-        }
-      } else if (if_block2) {
-        if_block2.d(1);
-        if_block2 = null;
-      }
-
       if (dirty &
       /*$inviteCandidateForm*/
       8) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
         /*$inviteCandidateForm*/
         ctx[3].account_type);
-      }
-
-      if (
-      /*$inviteCandidateForm*/
-      ctx[3].errors.account_type) {
-        if (if_block3) {
-          if_block3.p(ctx, dirty);
-        } else {
-          if_block3 = create_if_block(ctx);
-          if_block3.c();
-          if_block3.m(div19, null);
-        }
-      } else if (if_block3) {
-        if_block3.d(1);
-        if_block3 = null;
       }
 
       if (!current || dirty &
@@ -4425,10 +4213,6 @@ function create_fragment(ctx) {
       /*button1_binding*/
 
       ctx[13](null);
-      if (if_block0) if_block0.d();
-      if (if_block1) if_block1.d();
-      if (if_block2) if_block2.d();
-      if (if_block3) if_block3.d();
       mounted = false;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
@@ -4533,11 +4317,18 @@ function instance($$self, $$props, $$invalidate) {
     if ($$self.$$.dirty &
     /*$inviteCandidateForm*/
     8) {
-      // $: if ($inviteCandidateForm.hasErrors){
-      //     setTimeout(()=>{
-      //         $inviteCandidateForm.clearErrors();
-      //     },12000);
-      // }
+      $: if ($inviteCandidateForm.hasErrors) {
+        for (var i in $inviteCandidateForm.errors) {
+          toastr.error($inviteCandidateForm.errors[i]);
+        }
+
+        $inviteCandidateForm.clearErrors();
+      }
+    }
+
+    if ($$self.$$.dirty &
+    /*$inviteCandidateForm*/
+    8) {
       $: if ($inviteCandidateForm.first_name) {
         $inviteCandidateForm.clearErrors('first_name');
       }
