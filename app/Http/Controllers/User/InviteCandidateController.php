@@ -47,7 +47,7 @@ class InviteCandidateController extends Controller
         $data['name'] = $data['first_name'] . ' ' . $data['last_name'];
         $data['account_type'] = User::ACCOUNT_TYPE_CANDIDATE;
         $data['password'] = Hash::make('password'); //password
-        $data['account_status'] = User::ACCOUNT_STATUS_PENDING;
+        $data['account_status'] = User::ACCOUNT_STATUS_INVITED;
         $user = User::create($data);
         $this->sendInvitation($user);
         return $this->respondWithSuccess("Invitation Sent Successfully!");
