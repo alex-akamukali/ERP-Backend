@@ -3428,6 +3428,134 @@ var Render = /*#__PURE__*/function (_SvelteComponent) {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Auth/CheckAuthComponent.svelte":
+/*!***********************************************************!*\
+  !*** ./resources/js/Pages/Auth/CheckAuthComponent.svelte ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+/* harmony import */ var svelte__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! svelte */ "./node_modules/svelte/index.mjs");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+/* resources/js/Pages/Auth/CheckAuthComponent.svelte generated by Svelte v3.47.0 */
+
+
+
+
+function instance($$self, $$props, $$invalidate) {
+  var timeout = null;
+  var checkLogged = null; //  export let name;
+
+  function checkAuth() {
+    return _checkAuth.apply(this, arguments);
+  }
+
+  function _checkAuth() {
+    _checkAuth = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      var url, response;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              url = '/check-auth';
+              _context.next = 3;
+              return fetch(url).then(function (res) {
+                return res.json();
+              });
+
+            case 3:
+              response = _context.sent;
+              //  console.log(response);
+              $$invalidate(0, checkLogged = response);
+              timeout = setTimeout(function () {
+                checkAuth();
+              }, 5000);
+
+            case 6:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+    return _checkAuth.apply(this, arguments);
+  }
+
+  (0,svelte__WEBPACK_IMPORTED_MODULE_3__.onMount)(function () {
+    checkAuth();
+  });
+
+  $$self.$$.update = function () {
+    if ($$self.$$.dirty &
+    /*checkLogged*/
+    1) {
+      $: if (checkLogged && !checkLogged.is_logged) {
+        alert('Not Logged, logging out!');
+        location.reload();
+      }
+    }
+  };
+
+  return [checkLogged];
+}
+
+var CheckAuthComponent = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(CheckAuthComponent, _SvelteComponent);
+
+  var _super = _createSuper(CheckAuthComponent);
+
+  function CheckAuthComponent(options) {
+    var _this;
+
+    _classCallCheck(this, CheckAuthComponent);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_1__.init)(_assertThisInitialized(_this), options, instance, null, svelte_internal__WEBPACK_IMPORTED_MODULE_1__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(CheckAuthComponent);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_1__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CheckAuthComponent);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Components/UserListComponent.svelte":
 /*!****************************************************************!*\
   !*** ./resources/js/Pages/Components/UserListComponent.svelte ***!
@@ -4481,7 +4609,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
-/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+/* harmony import */ var _Auth_CheckAuthComponent_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Auth/CheckAuthComponent.svelte */ "./resources/js/Pages/Auth/CheckAuthComponent.svelte");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -4517,6 +4646,8 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /* resources/js/Pages/Dashboard/Layout.svelte generated by Svelte v3.47.0 */
+
+ // import {CheckAuthComponent} from "../Auth/CheckAuthComponent.svelte";
 
 
 
@@ -4643,6 +4774,8 @@ function create_fragment(ctx) {
   var aside1;
   var t210;
   var div26;
+  var t211;
+  var checkauthcomponent;
   var current;
   var mounted;
   var dispose;
@@ -4652,6 +4785,7 @@ function create_fragment(ctx) {
   var default_slot = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_slot)(default_slot_template, ctx,
   /*$$scope*/
   ctx[8], null);
+  checkauthcomponent = new _Auth_CheckAuthComponent_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({});
   return {
     c: function c() {
       div27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
@@ -4792,6 +4926,8 @@ function create_fragment(ctx) {
       aside1.innerHTML = "<ul class=\"nav nav-tabs nav-justified control-sidebar-tabs\"><li><a href=\"control-sidebar-home-tab\" data-toggle=\"tab\"><i class=\"fa fa-home\"></i></a></li> \n            <li><a href=\"control-sidebar-settings-tab\" data-toggle=\"tab\"><i class=\"fa fa-gears\"></i></a></li></ul> \n        \n        <div class=\"tab-content\"><div class=\"tab-pane\" id=\"control-sidebar-home-tab\"><h3 class=\"control-sidebar-heading\">Recent Activity</h3> \n                <ul class=\"control-sidebar-menu\"><li><a href=\"".concat("/", "\"><i class=\"menu-icon fa fa-birthday-cake bg-red\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Langdon&#39;s Birthday</h4> \n\n                                <p>Will be 23 on April 24th</p></div></a></li> \n                    <li><a href=\"", "/", "\"><i class=\"menu-icon fa fa-user bg-yellow\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Frodo Updated His Profile</h4> \n\n                                <p>New phone +1(800)555-1234</p></div></a></li> \n                    <li><a href=\"", "/", "\"><i class=\"menu-icon fa fa-envelope-o bg-light-blue\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Nora Joined Mailing List</h4> \n\n                                <p>nora@example.com</p></div></a></li> \n                    <li><a href=\"", "/", "\"><i class=\"menu-icon fa fa-file-code-o bg-green\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Cron Job 254 Executed</h4> \n\n                                <p>Execution time 5 seconds</p></div></a></li></ul> \n                \n\n                <h3 class=\"control-sidebar-heading\">Tasks Progress</h3> \n                <ul class=\"control-sidebar-menu\"><li><a href=\"", "/", "\"><h4 class=\"control-sidebar-subheading\">Custom Template Design\n                                <span class=\"label label-danger pull-right\">70%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-danger\" style=\"width: 70%\"></div></div></a></li> \n                    <li><a href=\"", "/", "\"><h4 class=\"control-sidebar-subheading\">Update Resume\n                                <span class=\"label label-success pull-right\">95%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-success\" style=\"width: 95%\"></div></div></a></li> \n                    <li><a href=\"", "/", "\"><h4 class=\"control-sidebar-subheading\">Laravel Integration\n                                <span class=\"label label-warning pull-right\">50%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-warning\" style=\"width: 50%\"></div></div></a></li> \n                    <li><a href=\"", "/", "\"><h4 class=\"control-sidebar-subheading\">Back End Framework\n                                <span class=\"label label-primary pull-right\">68%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-primary\" style=\"width: 68%\"></div></div></a></li></ul></div> \n            \n\n            \n            <div class=\"tab-pane\" id=\"control-sidebar-settings-tab\"><form method=\"post\"><h3 class=\"control-sidebar-heading\">General Settings</h3> \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Report panel usage\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Some information about this general settings option</p></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Allow mail redirect\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Other sets of options are available</p></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Expose author name in posts\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Allow the user to show his name in blog posts</p></div> \n                    \n\n                    <h3 class=\"control-sidebar-heading\">Chat Settings</h3> \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Show me as online\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Turn off notifications\n                            <input type=\"checkbox\" class=\"pull-right\"/></label></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Delete chat history\n                            <a href=\"", "/", "\" class=\"text-red pull-right\"><i class=\"fa fa-trash-o\"></i></a></label></div></form></div></div>");
       t210 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t211 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(checkauthcomponent.$$.fragment);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img0, "alt", "img");
       if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img0.src, img0_src_value =
       /*olade_logo*/
@@ -5000,10 +5136,12 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, aside1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, t210);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, div26);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, t211);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(checkauthcomponent, div27, null);
       current = true;
 
       if (!mounted) {
-        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a21)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_1 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a23)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_2 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a25)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_3 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a46))];
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.inertia.call(null, a21)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_1 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.inertia.call(null, a23)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_2 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.inertia.call(null, a25)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_3 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.inertia.call(null, a46))];
         mounted = true;
       }
     },
@@ -5028,15 +5166,18 @@ function create_fragment(ctx) {
     i: function i(local) {
       if (current) return;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(default_slot, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(checkauthcomponent.$$.fragment, local);
       current = true;
     },
     o: function o(local) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(default_slot, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(checkauthcomponent.$$.fragment, local);
       current = false;
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div27);
       if (default_slot) default_slot.d(detaching);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(checkauthcomponent);
       mounted = false;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
@@ -5047,7 +5188,7 @@ var c = 90;
 
 function instance($$self, $$props, $$invalidate) {
   var $page;
-  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.page, function ($$value) {
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.page, function ($$value) {
     return $$invalidate(10, $page = $$value);
   });
   var _$$props$$$slots = $$props.$$slots,
@@ -12900,6 +13041,7 @@ module.exports = function getSideChannel() {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./Auth/CheckAuthComponent.svelte": "./resources/js/Pages/Auth/CheckAuthComponent.svelte",
 	"./Components/UserListComponent.svelte": "./resources/js/Pages/Components/UserListComponent.svelte",
 	"./Dashboard/Dashboard.svelte": "./resources/js/Pages/Dashboard/Dashboard.svelte",
 	"./Dashboard/Layout.svelte": "./resources/js/Pages/Dashboard/Layout.svelte",

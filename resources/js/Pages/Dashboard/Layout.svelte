@@ -1,5 +1,10 @@
+<script context="module">
+  import CheckAuthComponent from "../Auth/CheckAuthComponent.svelte";
+</script>
 <script>
+    // import {CheckAuthComponent} from "../Auth/CheckAuthComponent.svelte";
     import { inertia, Link, page } from "@inertiajs/inertia-svelte";
+    // export let name;
     let c = 90;
     // 'csrf'=>csrf_token(),
     //         'logout_route'=>route('logout'),
@@ -23,6 +28,7 @@
 </script>
 
 <div class="wrapper" style="height: auto; min-height: 100%;">
+
     <header class="main-header">
         <!-- Logo -->
         <a href={null} class="logo">
@@ -823,4 +829,6 @@
     <!-- Add the sidebar's background. This div must be placed
          immediately after the control sidebar -->
     <div class="control-sidebar-bg" />
+    <!-- watch dog -->
+    <CheckAuthComponent />
 </div>

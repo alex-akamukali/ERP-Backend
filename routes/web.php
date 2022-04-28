@@ -53,11 +53,11 @@ Route::get('logout',[LoginController::class,'destroy'])->name('logout');
 
 Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware(['auth']);
 
-Route::get('all-users',[UserController::class,'index'])->name('all.users');
+Route::get('all-users',[UserController::class,'index'])->name('all.users')->middleware(['auth']);
 
-Route::get('user/profile',[ProfileController::class,'index'])->name('user.profile');
+Route::get('user/profile',[ProfileController::class,'index'])->name('user.profile')->middleware(['auth']);
 
-Route::resource('program-type',ProgramTypeController::class);
+Route::resource('program-type',ProgramTypeController::class)->middleware(['auth']);
 
 // Route::resource('invite-candidate',InviteCandidateController::class);
 
@@ -73,3 +73,5 @@ Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\
 Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\AssessmentResultController::class)->middleware(['auth']);
 
 Route::resource('invite-candidate',\App\Http\Controllers\User\InviteCandidateController::class)->middleware(['auth']);
+
+Route::resource('check-auth',\App\Http\Controllers\Auth\CheckAuthController::class);
