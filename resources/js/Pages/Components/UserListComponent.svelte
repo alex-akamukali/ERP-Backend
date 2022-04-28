@@ -1,5 +1,5 @@
 <script context="module">
-    import Layout from "../Dashboard/Layout.svelte";
+    // import Layout from "../Dashboard/Layout.svelte";
     import { page, useForm } from "@inertiajs/inertia-svelte";
     import Pagination from "../../components/Pagination.svelte";
     // export const layout = Layout;
@@ -14,7 +14,7 @@
     export let label;
 
     let inviteModal = null;
-    console.log(users);
+    // console.log(users);
     let inviteCandidateForm = useForm({
         first_name: "",
         last_name: "",
@@ -27,6 +27,8 @@
     });
 
     // inviteModal
+
+    $: console.log(message,'message.');
 
     $: if (message != '' && !error){
         inviteModal.click();
@@ -42,21 +44,21 @@
         $inviteCandidateForm.clearErrors();
     }
 
-    $:  if ($inviteCandidateForm.first_name){
-       $inviteCandidateForm.clearErrors('first_name');
-    }
+    // $:  if ($inviteCandidateForm.first_name){
+    //    $inviteCandidateForm.clearErrors('first_name');
+    // }
 
-    $:  if ($inviteCandidateForm.last_name){
-       $inviteCandidateForm.clearErrors('last_name');
-    }
+    // $:  if ($inviteCandidateForm.last_name){
+    //    $inviteCandidateForm.clearErrors('last_name');
+    // }
 
     // $:  if ($inviteCandidateForm.email){
     //    $inviteCandidateForm.clearErrors('email');
     // }
 
-    $:  if ($inviteCandidateForm.account_type){
-       $inviteCandidateForm.clearErrors('account_type');
-    }
+    // $:  if ($inviteCandidateForm.account_type){
+    //    $inviteCandidateForm.clearErrors('account_type');
+    // }
 
 
     function sendInvitation(){
