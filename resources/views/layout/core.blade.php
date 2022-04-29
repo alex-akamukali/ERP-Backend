@@ -26,7 +26,7 @@
                  <!-- Notifications: style can be found in dropdown.less -->
                     <li class="dropdown notifications-menu">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-bell-o" />
+                            <i class="fa fa-bell-o" ></i>
                             <span class="label label-danger">17</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -37,103 +37,7 @@
                                     <li>
                                         <a target="_blank"
                                             href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=b18550ec1bf9ec2fca2bf92fe4ce">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=361306d7cc9bc413ef624c72a19b">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024">
-                                            <i class="fa fa-comment text-green" /> Payment Item for process
+                                            <i class="fa fa-comment text-green"> Payment Item for process</i>
                                         </a>
                                     </li>
                                 </ul>
@@ -143,14 +47,14 @@
                     </li>
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
-                        <a href={"/"} class="dropdown-toggle" data-toggle="dropdown">
-                            <img src={user_logo} class="img-circle" alt=" ." style="width:20px; height:20px" />
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="{{ asset('asset1/user2-160x160.jpg') }}" class="img-circle" alt=" ." style="width:20px; height:20px" />
                             <span class="hidden-xs"> {user.name} </span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src={user_logo} class="img-circle" alt="img" />
+                                <img src="{{ asset('asset1/user2-160x160.jpg') }}" class="img-circle" alt="img" />
                                 <p>
                                     Alex Akamukali -
                                     <!-- <small>Member since 2022/03/28 21:07:04</small> -->
@@ -174,11 +78,11 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a use:inertia href={user_profile_route}
+                                    <a use:inertia href=""
                                         class="btn btn-primary btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href={logout_route} class="btn btn-primary btn-flat">Sign out</a>
+                                    <a href="" class="btn btn-primary btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -204,31 +108,31 @@
                 <li class="header">&nbsp;</li>
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active">
-                    <a href=""><i class="fa fa-tachometer" />
+                    <a href=""><i class="fa fa-tachometer" ></i>
                         <span> Dashboard </span></a>
                 </li>
                 <li class="treeview">
-                    <a href={"/"}><i class="fa fa-users" /> <span>Users</span>
+                    <a href=""><i class="fa fa-users" ></i> <span>Users</span>
                         <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right" />
+                            <i class="fa fa-angle-left pull-right" ></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
                         <li>
                             <a href="">
-                                <i class="fa fa-id-card" /> All User</a>
+                                <i class="fa fa-id-card" ></i> All User</a>
                         </li>
                         <li>
                             <a href="activeusers">
-                                <i class="fa fa-id-card text-green" /> Active</a>
+                                <i class="fa fa-id-card text-green" ></i> Active</a>
                         </li>
                         <li>
                             <a href="inactiveusers">
-                                <i class="fa fa-id-card text-red" /> Inactive</a>
+                                <i class="fa fa-id-card text-red" ></i> Inactive</a>
                         </li>
                         <li>
                             <a href="alumniusers">
-                                <i class="fa fa-id-card text-yellow" /> Alumni
+                                <i class="fa fa-id-card text-yellow" ></i> Alumni
                             </a>
                         </li>
                     </ul>
@@ -245,155 +149,155 @@
               </ul>
             </li> -->
                 <li class="treeview">
-                    <a href={"/"}><i class="fa fa-pie-chart" /> <span> Reports </span>
+                    <a href=""><i class="fa fa-pie-chart" ></i> <span> Reports </span>
                         <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right" />
+                            <i class="fa fa-angle-left pull-right" ></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
                         <li>
                             <a href="JobDetailsConsultants">
-                                <i class="fa fa-line-chart text-green" /> Consultants
+                                <i class="fa fa-line-chart text-green" ></i> Consultants
                                 on Job</a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fa fa-bar-chart text-blue" /> On FTE Job
+                                <i class="fa fa-bar-chart text-blue" ></i> On FTE Job
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fa fa-bar-chart text-aqua" /> On Contract
+                                <i class="fa fa-bar-chart text-aqua" ></i> On Contract
                                 Job
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href=""><i class="fa fa-envelope" />
+                    <a href=""><i class="fa fa-envelope" ></i>
                         <span> Communication </span></a>
                 </li>
 
                 <li class="treeview">
-                    <a href=""><i class="fa fa-money text-aqua" />
+                    <a href=""><i class="fa fa-money text-aqua" ></i>
                         <span> Accounts Payments </span>
                         <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right" />
+                            <i class="fa fa-angle-left pull-right" ></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
                         <li>
                             <a href="ACCOUNTcontractPayment">
-                                <i class="fa fa-money text-green" /> Contract Payment</a>
+                                <i class="fa fa-money text-green" ></i> Contract Payment</a>
                         </li>
                         <li>
                             <a href="ACCOUNTFTEPayment">
-                                <i class="fa fa-money text-blue" /> FTE Payment
+                                <i class="fa fa-money text-blue" ></i> FTE Payment
                             </a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href=""><i class="fa fa-tasks" /> <span>Document Library</span>
+                    <a href=""><i class="fa fa-tasks" ></i> <span>Document Library</span>
                         <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right" />
+                            <i class="fa fa-angle-left pull-right" ></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
                         <li>
                             <a href="docContract">
-                                <i class="fa fa-file" /> Olade Contract</a>
+                                <i class="fa fa-file" ></i> Olade Contract</a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fa fa-file-o" /> Employment Contract</a>
+                                <i class="fa fa-file-o" ></i> Employment Contract</a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fa fa-file text-green" /> Invoices</a>
+                                <i class="fa fa-file text-green" ></i> Invoices</a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fa fa-money" /> Payment Stub
+                                <i class="fa fa-money" ></i> Payment Stub
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fa fa-file text-aqua" /> Resumes
+                                <i class="fa fa-file text-aqua" ></i> Resumes
                             </a>
                         </li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href=""><i class="fa fa-folder" /> <span> Projects </span></a>
+                    <a href=""><i class="fa fa-folder" ></i> <span> Projects </span></a>
                 </li>
                 <li>
-                    <a href="usersTeams"><i class="fa fa-users" /> <span> Teams </span></a>
+                    <a href="usersTeams"><i class="fa fa-users" ></i> <span> Teams </span></a>
                 </li>
                 <li class="treeview">
-                    <a href=""><i class="fa fa-cogs" /> <span> Settings </span>
+                    <a href=""><i class="fa fa-cogs" ></i> <span> Settings </span>
                         <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right" />
+                            <i class="fa fa-angle-left pull-right" ></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
                         <li>
                             <a href="">
-                                <i class="fa fa-graduation-cap" /> Program Type
+                                <i class="fa fa-graduation-cap" ></i> Program Type
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fa fa-book text-orange" /> Knowledge Area
+                                <i class="fa fa-book text-orange" ></i> Knowledge Area
                             </a>
                         </li>
                         <li>
                             <a href="oladecontracttype">
-                                <i class="fa fa-file-o text-green" /> Olade Contract
+                                <i class="fa fa-file-o text-green" ></i> Olade Contract
                                 Type
                             </a>
                         </li>
                         <li>
                             <a href="companies">
-                                <i class="fa fa-bank text-aqua" /> Vendors
+                                <i class="fa fa-bank text-aqua" ></i> Vendors
                             </a>
                         </li>
                         <li>
                             <a href="payrollmgrs">
-                                <i class="fa fa-money text-blue" /> Payroll Mgrs.
+                                <i class="fa fa-money text-blue" ></i> Payroll Mgrs.
                             </a>
                         </li>
                         <li>
                             <a href="zoomaccount">
-                                <i class="fa fa-desktop text-orange" /> Zoom Setup
+                                <i class="fa fa-desktop text-orange" ></i> Zoom Setup
                             </a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="treeview">
-                    <a href={"/"}><i class="fa fa-key" /> <span> Role Management </span>
+                    <a href=""><i class="fa fa-key" ></i> <span> Role Management </span>
                         <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right" />
+                            <i class="fa fa-angle-left pull-right" ></i>
                         </span>
                     </a>
                     <ul class="treeview-menu">
                         <li>
                             <a href="roles">
-                                <i class="fa fa-wrench text-aqua" /> Assign Roles
+                                <i class="fa fa-wrench text-aqua" ></i> Assign Roles
                             </a>
                         </li>
                         <li>
                             <a href="docusignsigners">
-                                <i class="fa fa-edit text-aqua" /> DocuSign Signers
+                                <i class="fa fa-edit text-aqua" ></i> DocuSign Signers
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="{{ route('logout') }}"><i class="fa fa-power-off" />
+                    <a href="{{ route('logout') }}"><i class="fa fa-power-off" ></i>
                         <span> Sign Out </span></a>
                 </li>
             </ul>
@@ -437,10 +341,10 @@
         <!-- Create the tabs -->
         <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
             <li>
-                <a href="control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home" /></a>
+                <a href="control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home" ></i></a>
             </li>
             <li>
-                <a href="control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears" /></a>
+                <a href="control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears" ></i></a>
             </li>
         </ul>
         <!-- Tab panes -->
@@ -450,8 +354,8 @@
                 <h3 class="control-sidebar-heading">Recent Activity</h3>
                 <ul class="control-sidebar-menu">
                     <li>
-                        <a href={"/"}>
-                            <i class="menu-icon fa fa-birthday-cake bg-red" />
+                        <a href="">
+                            <i class="menu-icon fa fa-birthday-cake bg-red" ></i>
 
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">
@@ -463,8 +367,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href={"/"}>
-                            <i class="menu-icon fa fa-user bg-yellow" />
+                        <a href="">
+                            <i class="menu-icon fa fa-user bg-yellow" ></i>
 
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">
@@ -476,8 +380,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href={"/"}>
-                            <i class="menu-icon fa fa-envelope-o bg-light-blue" />
+                        <a href="">
+                            <i class="menu-icon fa fa-envelope-o bg-light-blue" ></i>
 
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">
@@ -489,8 +393,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href={"/"}>
-                            <i class="menu-icon fa fa-file-code-o bg-green" />
+                        <a href="">
+                            <i class="menu-icon fa fa-file-code-o bg-green" ></i>
 
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">
@@ -507,50 +411,50 @@
                 <h3 class="control-sidebar-heading">Tasks Progress</h3>
                 <ul class="control-sidebar-menu">
                     <li>
-                        <a href={"/"}>
+                        <a href="">
                             <h4 class="control-sidebar-subheading">
                                 Custom Template Design
                                 <span class="label label-danger pull-right">70%</span>
                             </h4>
 
                             <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-danger" style="width: 70%" />
+                                <div class="progress-bar progress-bar-danger" style="width: 70%" ></div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href={"/"}>
+                        <a href="">
                             <h4 class="control-sidebar-subheading">
                                 Update Resume
                                 <span class="label label-success pull-right">95%</span>
                             </h4>
 
                             <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-success" style="width: 95%" />
+                                <div class="progress-bar progress-bar-success" style="width: 95%" ></div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href={"/"}>
+                        <a href="">
                             <h4 class="control-sidebar-subheading">
                                 Laravel Integration
                                 <span class="label label-warning pull-right">50%</span>
                             </h4>
 
                             <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-warning" style="width: 50%" />
+                                <div class="progress-bar progress-bar-warning" style="width: 50%" ></div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href={"/"}>
+                        <a href="">
                             <h4 class="control-sidebar-subheading">
                                 Back End Framework
                                 <span class="label label-primary pull-right">68%</span>
                             </h4>
 
                             <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-primary" style="width: 68%" />
+                                <div class="progress-bar progress-bar-primary" style="width: 68%" ></div>
                             </div>
                         </a>
                     </li>
@@ -618,7 +522,7 @@
                         <!-- svelte-ignore a11y-label-has-associated-control -->
                         <label class="control-sidebar-subheading">
                             Delete chat history
-                            <a href={"/"} class="text-red pull-right"><i class="fa fa-trash-o" /></a>
+                            <a href="" class="text-red pull-right"><i class="fa fa-trash-o" /></a>
                         </label>
                     </div>
                     <!-- /.form-group -->
@@ -630,7 +534,7 @@
     <!-- /.control-sidebar -->
     <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
-    <div class="control-sidebar-bg" />
+    <div class="control-sidebar-bg" ></div>
     <!-- watch dog -->
     <!-- <CheckAuthComponent /> -->
 </div>

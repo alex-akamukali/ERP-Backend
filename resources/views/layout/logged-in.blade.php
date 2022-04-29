@@ -123,6 +123,9 @@
     {{-- body  --}}
     @include('layout.core')
     <!-- jQuery 3 -->
+
+
+    <!-- jQuery 3 -->
     <script src="{{ asset('asset1/jquery.min.js') }}"></script>
     <!-- Bootstrap 3.3.7 -->
     <script src="{{ asset('asset1/bootstrap.min.js') }}"></script>
@@ -168,8 +171,6 @@ AdminLTE for demo purposes
     <script src="{{ asset('asset1/ckeditor.js') }}"></script>
     <!-- Bootstrap WYSIHTML5 -->
     <script src="{{ asset('asset1/bootstrap3-wysihtml5.all.min.js') }}"></script>
-
-
 
 </body>
 
