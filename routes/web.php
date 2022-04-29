@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\CheckAuthController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Profile\ProfileController;
@@ -77,3 +78,5 @@ Route::resource('invite-candidate',\App\Http\Controllers\User\InviteCandidateCon
 Route::resource('check-auth',\App\Http\Controllers\Auth\CheckAuthController::class);
 
 Route::resource('settings-knowledge-area',\App\Http\Controllers\Settings\KnowledgeAreaController::class)->middleware(['auth']);
+
+// Route::get('xlogin',[CheckAuthController::class,'xlogin'])->name('xlogin');

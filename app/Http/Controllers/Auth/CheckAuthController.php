@@ -16,4 +16,6 @@ class CheckAuthController extends Controller
         ];
         // return inertia()->render("Auth/Chec")
     }
+
+
 }
