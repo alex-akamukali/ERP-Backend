@@ -1,10 +1,6 @@
 <script context="module">
     import { page, useForm } from "@inertiajs/inertia-svelte";
     import MessageNotification from "../Components/MessageNotification.svelte";
-    import {writable} from "svelte/store";
-    import {onMount} from "svelte";
-    import MessageStore from "../../components/MessageStore";
-
 </script>
 
 <script>
@@ -12,23 +8,21 @@
     export let message;
     export let error;
 
-
     let loginForm = useForm({
-        email:'',
-        password:''
+        email: "",
+        password: "",
     });
 
-    function onResetMessage(){
-        message = '';
+    function onResetMessage() {
+        message = "";
+        $loginForm.clearErrors();
     }
 
-
-    function loginAction(){
-        $loginForm.post('/login');
+    function loginAction() {
+        $loginForm.post("/login");
     }
 
     //$: console.log(message,error,'m-e');
-
 
     // $: if (message != "") {
     //     // closeModal.click();
@@ -43,17 +37,21 @@
     //     // console.log(message);
     // }
 
-    $: if ($loginForm.hasErrors){
-        for (let i in $loginForm.errors){
-            toastr.error($loginForm.errors[i]);
-        }
-        $loginForm.clearErrors();
-    }
-
-
+    // $: if ($loginForm.hasErrors){
+    //     for (let i in $loginForm.errors){
+    //         toastr.error($loginForm.errors[i]);
+    //     }
+    //     $loginForm.clearErrors();
+    // }
 </script>
 
-<MessageNotification {error} {message} {onResetMessage} />
+<MessageNotification
+    errors={$loginForm.errors}
+    {error}
+    {message}
+    {onResetMessage}
+    hasErrors={$loginForm.hasErrors}
+/>
 
 <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
     <div class="card card0 border-0">
@@ -113,7 +111,6 @@
                                 placeholder="Enter a valid email address"
                                 required=""
                                 bind:value={$loginForm.email}
-
                             />
                         </div>
                         <div class="row px-3">
@@ -127,7 +124,6 @@
                                 placeholder="Enter password"
                                 required=""
                                 bind:value={$loginForm.password}
-
                             />
                         </div>
                         <div class="row px-3 mb-4">
@@ -175,8 +171,5 @@
     </div>
 </div>
 
-
-
 <style>
-
 </style>

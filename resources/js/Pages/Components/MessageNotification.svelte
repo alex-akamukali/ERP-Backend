@@ -1,34 +1,33 @@
 <script context="module">
-
     import MessageStore from "../../components/MessageStore";
-
 </script>
 
 <script>
-
     export let message;
     export let error;
     export let onResetMessage;
+    export let errors;
+    export let hasErrors;
 
-//    let msg = '';
-
-    // $: msg = message;
-
-$: if (message != "") {
-        // closeModal.click();
-        if (error){
+    $: if (message != "") {
+        if (error) {
             toastr.error(message);
         }
-        if (!error){
+        if (!error) {
             toastr.success(message);
         }
-        // $MessageStore.message = '';
-        if (onResetMessage){
-           onResetMessage();
+        if (onResetMessage) {
+            onResetMessage();
         }
-        // toastr.success(message);
-        // message = "";
-        // console.log(message);
-}
+    }
 
+    $: if (hasErrors) {
+        for (let i in errors) {
+            if (errors[i] != message) toastr.error(errors[i]);
+        }
+        if (onResetMessage) {
+            onResetMessage();
+        }
+
+    }
 </script>
