@@ -522,7 +522,7 @@
                         <!-- svelte-ignore a11y-label-has-associated-control -->
                         <label class="control-sidebar-subheading">
                             Delete chat history
-                            <a href="" class="text-red pull-right"><i class="fa fa-trash-o" /></a>
+                            <a href="" class="text-red pull-right"><i class="fa fa-trash-o" ></i></a>
                         </label>
                     </div>
                     <!-- /.form-group -->
