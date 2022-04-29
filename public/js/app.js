@@ -3556,6 +3556,396 @@ var CheckAuthComponent = /*#__PURE__*/function (_SvelteComponent) {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Auth/Login.svelte":
+/*!**********************************************!*\
+  !*** ./resources/js/Pages/Auth/Login.svelte ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _components_MessageStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/MessageStore */ "./resources/js/components/MessageStore.js");
+/* harmony import */ var svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! svelte */ "./node_modules/svelte/index.mjs");
+/* harmony import */ var svelte_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! svelte/store */ "./node_modules/svelte/store/index.mjs");
+/* harmony import */ var _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Components/MessageNotification.svelte */ "./resources/js/Pages/Components/MessageNotification.svelte");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/* resources/js/Pages/Auth/Login.svelte generated by Svelte v3.47.0 */
+
+
+
+
+
+
+
+function create_fragment(ctx) {
+  var messagenotification;
+  var t0;
+  var div22;
+  var div21;
+  var div3;
+  var t3;
+  var div18;
+  var div6;
+  var t4;
+  var div17;
+  var div16;
+  var div9;
+  var t8;
+  var form;
+  var div10;
+  var label0;
+  var t10;
+  var input0;
+  var t11;
+  var div11;
+  var label1;
+  var t13;
+  var input1;
+  var t14;
+  var div13;
+  var t19;
+  var div15;
+  var div14;
+  var button;
+  var t20;
+  var button_disabled_value;
+  var t21;
+  var div20;
+  var current;
+  var mounted;
+  var dispose;
+  messagenotification = new _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_4__["default"]({
+    props: {
+      error:
+      /*error*/
+      ctx[1],
+      message:
+      /*message*/
+      ctx[0],
+      onResetMessage:
+      /*onResetMessage*/
+      ctx[4]
+    }
+  });
+  return {
+    c: function c() {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(messagenotification.$$.fragment);
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div3.innerHTML = "<div class=\"row px-3\"><div class=\"ml-4 ml-sm-5 mb-0 col-sm-6\" style=\"display: inline;\"><img alt=\"logo\" src=\"/asset1/Olade_logo_white.png\" style=\"max-width: 70px; max-height: 50px;\"/></div> \n                <div class=\"social-contact col-sm-4\"><span class=\"float-right\" style=\"cursor: pointer;\">Contact Us</span></div></div>";
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div6.innerHTML = "<div class=\"card1 pb-5\"><div class=\"row px-3 justify-content-center mt-4 mb-5 border-line\"><img alt=\"logo\" src=\"/asset1/uNGdWHi.png\" class=\"image\"/></div></div>";
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div9.innerHTML = "<div class=\"line\"></div> \n                        <h4 class=\"or text-center\">Sign In</h4> \n                        <div class=\"line\"></div>";
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      form = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
+      div10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      label0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label0.innerHTML = "<h6 class=\"mb-0 text-sm\">Email Address</h6>";
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      label1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label1.innerHTML = "<h6 class=\"mb-0 text-sm\">Password</h6>";
+      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div13.innerHTML = "<div class=\"custom-control custom-checkbox custom-control-inline\"><input id=\"chk1\" type=\"checkbox\" name=\"chk\" class=\"custom-control-input\"/> \n                                <label for=\"chk1\" class=\"custom-control-label text-sm\">Remember me</label></div> \n                            <a href=\"passwordrecovery\" class=\"ml-auto mb-0 text-sm\">Forgot Password?</a>";
+      t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      t20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Login");
+      t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div20.innerHTML = "<div class=\"row px-3\"><small class=\"ml-4 ml-sm-5 mb-2\">Copyright \xA9 2021. All rights reserved.</small></div>";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "bg-blue py-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "col-lg-6 d-none d-lg-block");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "row px-3 mb-4 justify-content-center");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div9, "text-align", "center");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label0, "class", "mb-1");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "class", "mb-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "text");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "name", "email");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "placeholder", "Enter a valid email address");
+      input0.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div10, "class", "row px-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label1, "class", "mb-1");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "type", "password");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "name", "password");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "placeholder", "Enter password");
+      input1.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div11, "class", "row px-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div13, "class", "row px-3 mb-4");
+      button.disabled = button_disabled_value =
+      /*$loginForm*/
+      ctx[2].processing;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "type", "submit");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn btn-blue text-center");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(button, "float", "right");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div14, "width", "100%");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div15, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "method", "post");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div16, "class", "card2 card border-0 px-4 py-5");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div17, "class", "col-lg-6");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div18, "class", "row d-flex");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "bg-white py-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "card card0 border-0");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div22, "class", "container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(messagenotification, target, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t0, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div22, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, div21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div18);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div17);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, div16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, div9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, form);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, label0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, input0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
+      /*$loginForm*/
+      ctx[2].email);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, label1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, t13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, input1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
+      /*$loginForm*/
+      ctx[2].password);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t14);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div15);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, div14);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, button);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, t20);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, t21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div20);
+      current = true;
+
+      if (!mounted) {
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
+        /*input0_input_handler*/
+        ctx[6]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
+        /*input1_input_handler*/
+        ctx[7]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        /*loginAction*/
+        ctx[5]))];
+        mounted = true;
+      }
+    },
+    p: function p(ctx, _ref) {
+      var _ref2 = _slicedToArray(_ref, 1),
+          dirty = _ref2[0];
+
+      var messagenotification_changes = {};
+      if (dirty &
+      /*error*/
+      2) messagenotification_changes.error =
+      /*error*/
+      ctx[1];
+      if (dirty &
+      /*message*/
+      1) messagenotification_changes.message =
+      /*message*/
+      ctx[0];
+      messagenotification.$set(messagenotification_changes);
+
+      if (dirty &
+      /*$loginForm*/
+      4 && input0.value !==
+      /*$loginForm*/
+      ctx[2].email) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
+        /*$loginForm*/
+        ctx[2].email);
+      }
+
+      if (dirty &
+      /*$loginForm*/
+      4 && input1.value !==
+      /*$loginForm*/
+      ctx[2].password) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
+        /*$loginForm*/
+        ctx[2].password);
+      }
+
+      if (!current || dirty &
+      /*$loginForm*/
+      4 && button_disabled_value !== (button_disabled_value =
+      /*$loginForm*/
+      ctx[2].processing)) {
+        button.disabled = button_disabled_value;
+      }
+    },
+    i: function i(local) {
+      if (current) return;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(messagenotification.$$.fragment, local);
+      current = true;
+    },
+    o: function o(local) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(messagenotification.$$.fragment, local);
+      current = false;
+    },
+    d: function d(detaching) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(messagenotification, detaching);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t0);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div22);
+      mounted = false;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
+    }
+  };
+}
+
+function instance($$self, $$props, $$invalidate) {
+  var $loginForm;
+  var message = $$props.message;
+  var error = $$props.error;
+  var loginForm = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_5__.useForm)({
+    email: '',
+    password: ''
+  });
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, loginForm, function (value) {
+    return $$invalidate(2, $loginForm = value);
+  });
+
+  function onResetMessage() {
+    $$invalidate(0, message = '');
+  }
+
+  function loginAction() {
+    $loginForm.post('/login');
+  }
+
+  function input0_input_handler() {
+    $loginForm.email = this.value;
+    loginForm.set($loginForm);
+  }
+
+  function input1_input_handler() {
+    $loginForm.password = this.value;
+    loginForm.set($loginForm);
+  }
+
+  $$self.$$set = function ($$props) {
+    if ('message' in $$props) $$invalidate(0, message = $$props.message);
+    if ('error' in $$props) $$invalidate(1, error = $$props.error);
+  };
+
+  $$self.$$.update = function () {
+    if ($$self.$$.dirty &
+    /*$loginForm*/
+    4) {
+      //$: console.log(message,error,'m-e');
+      // $: if (message != "") {
+      //     // closeModal.click();
+      //     if (error){
+      //         toastr.error(message);
+      //     }
+      //     if (!error){
+      //         toastr.success(message);
+      //     }
+      //     // toastr.success(message);
+      //     message = "";
+      //     // console.log(message);
+      // }
+      $: if ($loginForm.hasErrors) {
+        for (var i in $loginForm.errors) {
+          toastr.error($loginForm.errors[i]);
+        }
+
+        $loginForm.clearErrors();
+      }
+    }
+  };
+
+  return [message, error, $loginForm, loginForm, onResetMessage, loginAction, input0_input_handler, input1_input_handler];
+}
+
+var Login = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Login, _SvelteComponent);
+
+  var _super = _createSuper(Login);
+
+  function Login(options) {
+    var _this;
+
+    _classCallCheck(this, Login);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
+      message: 0,
+      error: 1
+    });
+    return _this;
+  }
+
+  return _createClass(Login);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Login);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Components/CrudLayoutComponent.svelte":
 /*!******************************************************************!*\
   !*** ./resources/js/Pages/Components/CrudLayoutComponent.svelte ***!
@@ -4409,6 +4799,112 @@ var CrudLayoutComponent_1 = /*#__PURE__*/function (_SvelteComponent) {
 }(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CrudLayoutComponent_1);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Components/MessageNotification.svelte":
+/*!******************************************************************!*\
+  !*** ./resources/js/Pages/Components/MessageNotification.svelte ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _components_MessageStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/MessageStore */ "./resources/js/components/MessageStore.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/Components/MessageNotification.svelte generated by Svelte v3.47.0 */
+
+
+
+function instance($$self, $$props, $$invalidate) {
+  var message = $$props.message;
+  var error = $$props.error;
+  var onResetMessage = $$props.onResetMessage;
+
+  $$self.$$set = function ($$props) {
+    if ('message' in $$props) $$invalidate(0, message = $$props.message);
+    if ('error' in $$props) $$invalidate(1, error = $$props.error);
+    if ('onResetMessage' in $$props) $$invalidate(2, onResetMessage = $$props.onResetMessage);
+  };
+
+  $$self.$$.update = function () {
+    if ($$self.$$.dirty &
+    /*message, error, onResetMessage*/
+    7) {
+      //    let msg = '';
+      // $: msg = message;
+      $: if (message != "") {
+        // closeModal.click();
+        if (error) {
+          toastr.error(message);
+        }
+
+        if (!error) {
+          toastr.success(message);
+        } // $MessageStore.message = '';
+
+
+        if (onResetMessage) {
+          onResetMessage();
+        }
+      } // toastr.success(message);
+      // message = "";
+      // console.log(message);
+
+    }
+  };
+
+  return [message, error, onResetMessage];
+}
+
+var MessageNotification = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(MessageNotification, _SvelteComponent);
+
+  var _super = _createSuper(MessageNotification);
+
+  function MessageNotification(options) {
+    var _this;
+
+    _classCallCheck(this, MessageNotification);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
+      message: 0,
+      error: 1,
+      onResetMessage: 2
+    });
+    return _this;
+  }
+
+  return _createClass(MessageNotification);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MessageNotification);
 
 /***/ }),
 
@@ -9497,6 +9993,27 @@ _inertiajs_progress__WEBPACK_IMPORTED_MODULE_1__.InertiaProgress.init();
     });
   }
 });
+
+/***/ }),
+
+/***/ "./resources/js/components/MessageStore.js":
+/*!*************************************************!*\
+  !*** ./resources/js/components/MessageStore.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/store */ "./node_modules/svelte/store/index.mjs");
+
+var MessageStore = (0,svelte_store__WEBPACK_IMPORTED_MODULE_0__.writable)({
+  message: '',
+  error: false
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MessageStore);
 
 /***/ }),
 
@@ -15142,7 +15659,9 @@ module.exports = function getSideChannel() {
 
 var map = {
 	"./Auth/CheckAuthComponent.svelte": "./resources/js/Pages/Auth/CheckAuthComponent.svelte",
+	"./Auth/Login.svelte": "./resources/js/Pages/Auth/Login.svelte",
 	"./Components/CrudLayoutComponent.svelte": "./resources/js/Pages/Components/CrudLayoutComponent.svelte",
+	"./Components/MessageNotification.svelte": "./resources/js/Pages/Components/MessageNotification.svelte",
 	"./Components/UserListComponent.svelte": "./resources/js/Pages/Components/UserListComponent.svelte",
 	"./Dashboard/Dashboard.svelte": "./resources/js/Pages/Dashboard/Dashboard.svelte",
 	"./Dashboard/Layout.svelte": "./resources/js/Pages/Dashboard/Layout.svelte",

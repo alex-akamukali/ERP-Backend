@@ -20,7 +20,11 @@ class LoginController extends Controller
             ]);
         }
 
-        return view('auth.login');
+        // return view('auth.login');
+        return inertia()->render('Auth/Login',[
+            'message'=>$this->getMessage(),
+            'error'=>$this->getError()
+        ]);
 
         // return inertia()->render('Auth/Login', [
         //     'version' => '2.0.0',

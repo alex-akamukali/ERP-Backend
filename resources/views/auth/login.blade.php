@@ -5,6 +5,7 @@
     <title>OLED ERP - Login</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
     <link rel="stylesheet" href="{{ asset('asset1/extra.css') }}">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,600;1,800&display=swap" rel="stylesheet"> -->
     <link rel="icon" href="logo.ico" type="image/png" sizes="10x10">

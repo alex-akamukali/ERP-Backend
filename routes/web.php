@@ -46,6 +46,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[LoginController::class,'index'])->name('login');
 
+
+
 Route::resource('login',LoginController::class);
 
 Route::get('logout',[LoginController::class,'destroy'])->name('logout');
