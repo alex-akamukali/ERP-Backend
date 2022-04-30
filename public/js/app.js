@@ -3609,40 +3609,44 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+function add_css(target) {
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-dduplo", ".line.svelte-dduplo{display:inline-block;border-top:1px solid #aaa;height:2px;width:10%;position:relative;top:-2px}");
+}
+
 function create_fragment(ctx) {
   var messagenotification;
   var t0;
+  var span4;
   var div22;
+  var div0;
+  var t1;
   var div21;
-  var div3;
-  var t3;
+  var div20;
+  var div19;
+  var div4;
+  var t5;
+  var div5;
+  var t6;
   var div18;
-  var div6;
-  var t4;
   var div17;
-  var div16;
-  var div9;
+  var p;
   var t8;
   var form;
-  var div10;
-  var label0;
-  var t10;
+  var div9;
+  var div8;
+  var div6;
   var input0;
-  var t11;
-  var div11;
-  var label1;
-  var t13;
+  var t9;
+  var span2;
+  var t10;
+  var div7;
   var input1;
-  var t14;
+  var t11;
+  var span3;
+  var t12;
   var div13;
-  var t19;
-  var div15;
-  var div14;
-  var button;
-  var t20;
-  var button_disabled_value;
-  var t21;
-  var div20;
+  var t16;
+  var div16;
   var current;
   var mounted;
   var dispose;
@@ -3669,116 +3673,120 @@ function create_fragment(ctx) {
     c: function c() {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(messagenotification.$$.fragment);
       t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       div22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div3.innerHTML = "<div class=\"row px-3\"><div class=\"ml-4 ml-sm-5 mb-0 col-sm-6\" style=\"display: inline;\"><img alt=\"logo\" src=\"/asset1/Olade_logo_white.png\" style=\"max-width: 70px; max-height: 50px;\"/></div> \n                <div class=\"social-contact col-sm-4\"><span class=\"float-right\" style=\"cursor: pointer;\">Contact Us</span></div></div>";
-      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div4.innerHTML = "<div class=\"row\"><div class=\"col-md-6\" style=\"padding-top: 11px;\"><img alt=\"img\" src=\"/asset1/Olade_logo_white.png\" style=\"height: 55px;\"/></div> \n                            <div class=\"col-md-6\"><a href=\"null\" style=\"color: #fff;font-size: 17px;font-weight: bold;position: relative;top: 27px;float: right;\">Contact Us</a></div></div>\n\n                        \xA0";
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div5.innerHTML = "<img alt=\"img\" src=\"/asset1/uNGdWHi.png\" style=\"max-width: 100%;\"/>";
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div6.innerHTML = "<div class=\"card1 pb-5\"><div class=\"row px-3 justify-content-center mt-4 mb-5 border-line\"><img alt=\"logo\" src=\"/asset1/uNGdWHi.png\" class=\"image\"/></div></div>";
-      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div9.innerHTML = "<div class=\"line\"></div> \n                        <h4 class=\"or text-center\">Sign In</h4> \n                        <div class=\"line\"></div>";
+      p = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      p.innerHTML = "<span class=\"line svelte-dduplo\"></span>\n                                Sign In\n                                <span class=\"line svelte-dduplo\"></span>";
       t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       form = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
-      div10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      label0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
-      label0.innerHTML = "<h6 class=\"mb-0 text-sm\">Email Address</h6>";
-      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      label1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
-      label1.innerHTML = "<h6 class=\"mb-0 text-sm\">Password</h6>";
-      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div13.innerHTML = "<div class=\"custom-control custom-checkbox custom-control-inline\"><input id=\"chk1\" type=\"checkbox\" name=\"chk\" class=\"custom-control-input\"/> \n                                <label for=\"chk1\" class=\"custom-control-label text-sm\">Remember me</label></div> \n                            <a href=\"passwordrecovery\" class=\"ml-auto mb-0 text-sm\">Forgot Password?</a>";
-      t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
-      t20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Login");
-      t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div20.innerHTML = "<div class=\"row px-3\"><small class=\"ml-4 ml-sm-5 mb-2\">Copyright \xA9 2021. All rights reserved.</small></div>";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "bg-blue py-4");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "col-lg-6 d-none d-lg-block");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "row px-3 mb-4 justify-content-center");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div9, "text-align", "center");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label0, "class", "mb-1");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "class", "mb-4");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "text");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "name", "email");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "placeholder", "Enter a valid email address");
-      input0.required = "";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div10, "class", "row px-3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label1, "class", "mb-1");
+      div13.innerHTML = "<div class=\"col-md-6\"><div class=\"\"><label><input type=\"checkbox\"/> Remember\n                                            Me</label></div></div> \n                                <div class=\"col-md-6\"><a href=\"null\" style=\"float: right;margin-bottom: 11px;font-weight: bold;\">I forgot my password</a><br/></div>";
+      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div16.innerHTML = "<div class=\"col-xs-8\"></div> \n                                    \n                                    <div class=\"col-xs-4\"><button style=\"background: #093F82;\" type=\"submit\" class=\"btn btn-primary btn-block btn-flat\">Sign In</button></div>";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "login-logo");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div4, "background-color", "#093F82");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div4, "height", "92px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "col-md-6");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p, "class", "login-box-msg");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(p, "font-weight", "bold");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(p, "font-size", "22px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(p, "color", "#093F82");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "email");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "placeholder", "Email");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span2, "class", "glyphicon glyphicon-envelope form-control-feedback");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "form-group has-feedback");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "type", "password");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "name", "password");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "placeholder", "Enter password");
-      input1.required = "";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div11, "class", "row px-3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div13, "class", "row px-3 mb-4");
-      button.disabled = button_disabled_value =
-      /*$loginForm*/
-      ctx[2].processing;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "type", "submit");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn btn-blue text-center");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(button, "float", "right");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div14, "width", "100%");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div15, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "placeholder", "Password");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span3, "class", "glyphicon glyphicon-lock form-control-feedback");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div7, "class", "form-group has-feedback");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div13, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div16, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "method", "post");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div16, "class", "card2 card border-0 px-4 py-5");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div17, "class", "col-lg-6");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div18, "class", "row d-flex");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "bg-white py-4");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "card card0 border-0");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div22, "class", "container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div17, "class", "login-box-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div18, "class", "col-md-6");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div18, "border-left", "1px solid #ddd");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div19, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div19, "box-shadow", "3px 3px #ccc");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div20, "background-color", "#fff");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div22, "class", "login-box2");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span4, "class", "hold-transition login-page");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "display", "block");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "height", "100vh");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "padding-top", "41px");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(messagenotification, target, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t0, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div22, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, span4, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span4, div22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, t1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, div21);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, t3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div18);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div20);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, div19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div18);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div17);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, div16);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, div9);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t8);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, form);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div10);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, label0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, t10);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, input0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, p);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, form);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, div8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, input0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
       /*$loginForm*/
       ctx[2].email);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t11);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div11);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, label1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, t13);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, input1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, span2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, input1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
       /*$loginForm*/
       ctx[2].password);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t14);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, t11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, span3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t12);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div13);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t19);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div15);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, div14);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div14, button);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, t20);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, t21);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div20);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div16);
       current = true;
 
       if (!mounted) {
@@ -3838,14 +3846,6 @@ function create_fragment(ctx) {
         /*$loginForm*/
         ctx[2].password);
       }
-
-      if (!current || dirty &
-      /*$loginForm*/
-      4 && button_disabled_value !== (button_disabled_value =
-      /*$loginForm*/
-      ctx[2].processing)) {
-        button.disabled = button_disabled_value;
-      }
     },
     i: function i(local) {
       if (current) return;
@@ -3859,7 +3859,7 @@ function create_fragment(ctx) {
     d: function d(detaching) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(messagenotification, detaching);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t0);
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div22);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span4);
       mounted = false;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
@@ -3919,7 +3919,7 @@ var Login = /*#__PURE__*/function (_SvelteComponent) {
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
       message: 0,
       error: 1
-    });
+    }, add_css);
     return _this;
   }
 
