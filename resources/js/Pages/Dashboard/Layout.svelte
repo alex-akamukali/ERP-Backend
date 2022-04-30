@@ -1,6 +1,7 @@
 <script context="module">
-  import CheckAuthComponent from "../Auth/CheckAuthComponent.svelte";
+    import CheckAuthComponent from "../Auth/CheckAuthComponent.svelte";
 </script>
+
 <script>
     // import {CheckAuthComponent} from "../Auth/CheckAuthComponent.svelte";
     import { inertia, Link, page } from "@inertiajs/inertia-svelte";
@@ -24,15 +25,14 @@
         logout_route,
         csrf,
         program_type_index_route,
-        settings_knowledge_area_index_route
+        settings_knowledge_area_index_route,
     } = $page.props;
 </script>
 
 <div class="wrapper" style="height: auto; min-height: 100%;">
-
     <header class="main-header">
         <!-- Logo -->
-        <a href={null} class="logo">
+        <a href={""} class="logo" style="background-color: #093F82;">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini">
                 <img alt="img" src={olade_logo} style="height: 37px;" />
@@ -327,7 +327,9 @@
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu tree" data-widget="tree">
-                <li class="header">&nbsp;</li>
+                <li class="header" style="background-color: #073367;">
+                    &nbsp;
+                </li>
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active">
                     <a use:inertia href={dashboard_route}
@@ -339,28 +341,27 @@
                     <a href={"/"}
                         ><i class="fa fa-users" /> <span>Users</span>
 
-                            <i class="fa fa-angle-left pull-right" />
-
+                        <i class="fa fa-angle-left pull-right" />
                     </a>
                     <ul class="treeview-menu">
                         <li>
                             <a use:inertia href={all_users_route}>
-                                <i class="fa fa-id-card" /> All User</a
+                                <i class="fa fa-user" /> All User</a
                             >
                         </li>
                         <li>
                             <a href="activeusers">
-                                <i class="fa fa-id-card text-green" /> Active</a
+                                <i class="fa fa-id-card fa-user text-green" /> Active</a
                             >
                         </li>
                         <li>
                             <a href="inactiveusers">
-                                <i class="fa fa-id-card text-red" /> Inactive</a
+                                <i class="fa fa-user fa-id-card text-red" /> Inactive</a
                             >
                         </li>
                         <li>
                             <a href="alumniusers">
-                                <i class="fa fa-id-card text-yellow" /> Alumni
+                                <i class="fa fa-user fa-id-card text-yellow" /> Alumni
                             </a>
                         </li>
                     </ul>
@@ -484,7 +485,10 @@
                             </a>
                         </li>
                         <li>
-                            <a use:inertia href={settings_knowledge_area_index_route}>
+                            <a
+                                use:inertia
+                                href={settings_knowledge_area_index_route}
+                            >
                                 <i class="fa fa-book text-orange" /> Knowledge Area
                             </a>
                         </li>
@@ -823,3 +827,37 @@
     <!-- watch dog -->
     <!-- <CheckAuthComponent /> -->
 </div>
+
+<style>
+    nav {
+        background-color: #fff !important;
+    }
+
+    .sidebar-toggle {
+        color: #006a9d !important;
+    }
+
+    .sidebar-toggle:hover {
+        background-color: #fff !important;
+    }
+
+    .user-menu a {
+        color: #006a9d !important;
+    }
+
+    aside {
+        background-color: #073367 !important;
+    }
+
+     li.active ,li.active a{
+        color: #ffffff !important;
+        background: #042042 !important;
+    }
+
+
+    aside li:hover, aside li:hover a{
+        color: #ffffff !important;
+        background: #042042 !important;
+    }
+
+</style>

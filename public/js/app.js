@@ -5993,6 +5993,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+function add_css(target) {
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-9fvhrt", "nav.svelte-9fvhrt.svelte-9fvhrt.svelte-9fvhrt{background-color:#fff !important}.sidebar-toggle.svelte-9fvhrt.svelte-9fvhrt.svelte-9fvhrt{color:#006a9d !important}.sidebar-toggle.svelte-9fvhrt.svelte-9fvhrt.svelte-9fvhrt:hover{background-color:#fff !important}.user-menu.svelte-9fvhrt a.svelte-9fvhrt.svelte-9fvhrt{color:#006a9d !important}aside.svelte-9fvhrt.svelte-9fvhrt.svelte-9fvhrt{background-color:#073367 !important}li.active.svelte-9fvhrt.svelte-9fvhrt.svelte-9fvhrt,li.active.svelte-9fvhrt a.svelte-9fvhrt.svelte-9fvhrt{color:#ffffff !important;background:#042042 !important}aside.svelte-9fvhrt li.svelte-9fvhrt.svelte-9fvhrt:hover,aside.svelte-9fvhrt li.svelte-9fvhrt:hover a.svelte-9fvhrt{color:#ffffff !important;background:#042042 !important}");
+}
+
 function create_fragment(ctx) {
   var div27;
   var header;
@@ -6147,7 +6151,7 @@ function create_fragment(ctx) {
       div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       ul3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
       li19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li19.innerHTML = "<a href=\"".concat("/", "\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-bell-o\"></i> \n                            <span class=\"label label-danger\">17</span></a> \n                        <ul class=\"dropdown-menu\"><li class=\"header\">You have 17 notifications</li> \n                            <li><ul class=\"menu\"><li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=b18550ec1bf9ec2fca2bf92fe4ce\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=361306d7cc9bc413ef624c72a19b\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li></ul></li></ul>");
+      li19.innerHTML = "<a href=\"".concat("/", "\" class=\"dropdown-toggle svelte-9fvhrt\" data-toggle=\"dropdown\"><i class=\"fa fa-bell-o\"></i> \n                            <span class=\"label label-danger\">17</span></a> \n                        <ul class=\"dropdown-menu\"><li class=\"header\">You have 17 notifications</li> \n                            <li class=\"svelte-9fvhrt\"><ul class=\"menu\"><li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=b18550ec1bf9ec2fca2bf92fe4ce\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=361306d7cc9bc413ef624c72a19b\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li> \n                                    <li class=\"svelte-9fvhrt\"><a target=\"_blank\" href=\"ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024\" class=\"svelte-9fvhrt\"><i class=\"fa fa-comment text-green\"></i> Payment Item for process</a></li></ul></li></ul>");
       t42 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       a20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
@@ -6189,7 +6193,7 @@ function create_fragment(ctx) {
       t58 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       a24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
-      a24.innerHTML = "<i class=\"fa fa-users\"></i>  <span>Users</span> \n\n                            <i class=\"fa fa-angle-left pull-right\"></i>";
+      a24.innerHTML = "<i class=\"fa fa-users\"></i>  <span>Users</span> \n\n                        <i class=\"fa fa-angle-left pull-right\"></i>";
       t62 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       ul4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
       li25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
@@ -6198,31 +6202,31 @@ function create_fragment(ctx) {
       t63 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" All User");
       t64 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li26.innerHTML = "<a href=\"activeusers\"><i class=\"fa fa-id-card text-green\"></i> Active</a>";
+      li26.innerHTML = "<a href=\"activeusers\" class=\"svelte-9fvhrt\"><i class=\"fa fa-id-card fa-user text-green\"></i> Active</a>";
       t66 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li27.innerHTML = "<a href=\"inactiveusers\"><i class=\"fa fa-id-card text-red\"></i> Inactive</a>";
+      li27.innerHTML = "<a href=\"inactiveusers\" class=\"svelte-9fvhrt\"><i class=\"fa fa-user fa-id-card text-red\"></i> Inactive</a>";
       t68 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li28.innerHTML = "<a href=\"alumniusers\"><i class=\"fa fa-id-card text-yellow\"></i> Alumni</a>";
+      li28.innerHTML = "<a href=\"alumniusers\" class=\"svelte-9fvhrt\"><i class=\"fa fa-user fa-id-card text-yellow\"></i> Alumni</a>";
       t70 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li33.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-pie-chart\"></i>  <span>Reports</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"JobDetailsConsultants\"><i class=\"fa fa-line-chart text-green\"></i> Consultants\n                                on Job</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-bar-chart text-blue\"></i> On FTE Job</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-bar-chart text-aqua\"></i> On Contract\n                                Job</a></li></ul>");
+      li33.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-pie-chart\"></i>  <span>Reports</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li class=\"svelte-9fvhrt\"><a href=\"JobDetailsConsultants\" class=\"svelte-9fvhrt\"><i class=\"fa fa-line-chart text-green\"></i> Consultants\n                                on Job</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-bar-chart text-blue\"></i> On FTE Job</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-bar-chart text-aqua\"></i> On Contract\n                                Job</a></li></ul>");
       t80 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li34.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-envelope\"></i> \n                        <span>Communication</span></a>");
+      li34.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-envelope\"></i> \n                        <span>Communication</span></a>");
       t83 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li37 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li37.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-money text-aqua\"></i> \n                        <span>Accounts Payments</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"ACCOUNTcontractPayment\"><i class=\"fa fa-money text-green\"></i> Contract Payment</a></li> \n                        <li><a href=\"ACCOUNTFTEPayment\"><i class=\"fa fa-money text-blue\"></i> FTE Payment</a></li></ul>");
+      li37.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-money text-aqua\"></i> \n                        <span>Accounts Payments</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li class=\"svelte-9fvhrt\"><a href=\"ACCOUNTcontractPayment\" class=\"svelte-9fvhrt\"><i class=\"fa fa-money text-green\"></i> Contract Payment</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"ACCOUNTFTEPayment\" class=\"svelte-9fvhrt\"><i class=\"fa fa-money text-blue\"></i> FTE Payment</a></li></ul>");
       t91 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li43 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li43.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-tasks\"></i>  <span>Document Library</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"docContract\"><i class=\"fa fa-file\"></i> Olade Contract</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-file-o\"></i> Employment Contract</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-file text-green\"></i> Invoices</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-money\"></i> Payment Stub</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-file text-aqua\"></i> Resumes</a></li></ul>");
+      li43.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-tasks\"></i>  <span>Document Library</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li class=\"svelte-9fvhrt\"><a href=\"docContract\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file\"></i> Olade Contract</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file-o\"></i> Employment Contract</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file text-green\"></i> Invoices</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-money\"></i> Payment Stub</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file text-aqua\"></i> Resumes</a></li></ul>");
       t105 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li44 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li44.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-folder\"></i>  <span>Projects</span></a>");
+      li44.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-folder\"></i>  <span>Projects</span></a>");
       t108 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li45.innerHTML = "<a href=\"usersTeams\"><i class=\"fa fa-users\"></i>  <span>Teams</span></a>";
+      li45.innerHTML = "<a href=\"usersTeams\" class=\"svelte-9fvhrt\"><i class=\"fa fa-users\"></i>  <span>Teams</span></a>";
       t111 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li52 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       a45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
@@ -6240,19 +6244,19 @@ function create_fragment(ctx) {
       t118 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" Knowledge Area");
       t119 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li48 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li48.innerHTML = "<a href=\"oladecontracttype\"><i class=\"fa fa-file-o text-green\"></i> Olade Contract\n                                Type</a>";
+      li48.innerHTML = "<a href=\"oladecontracttype\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file-o text-green\"></i> Olade Contract\n                                Type</a>";
       t121 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li49 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li49.innerHTML = "<a href=\"companies\"><i class=\"fa fa-bank text-aqua\"></i> Vendors</a>";
+      li49.innerHTML = "<a href=\"companies\" class=\"svelte-9fvhrt\"><i class=\"fa fa-bank text-aqua\"></i> Vendors</a>";
       t123 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li50 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li50.innerHTML = "<a href=\"payrollmgrs\"><i class=\"fa fa-money text-blue\"></i> Payroll Mgrs.</a>";
+      li50.innerHTML = "<a href=\"payrollmgrs\" class=\"svelte-9fvhrt\"><i class=\"fa fa-money text-blue\"></i> Payroll Mgrs.</a>";
       t125 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li51 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li51.innerHTML = "<a href=\"zoomaccount\"><i class=\"fa fa-desktop text-orange\"></i> Zoom Setup</a>";
+      li51.innerHTML = "<a href=\"zoomaccount\" class=\"svelte-9fvhrt\"><i class=\"fa fa-desktop text-orange\"></i> Zoom Setup</a>";
       t127 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li55 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li55.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-key\"></i>  <span>Role Management</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"roles\"><i class=\"fa fa-wrench text-aqua\"></i> Assign Roles</a></li> \n                        <li><a href=\"docusignsigners\"><i class=\"fa fa-edit text-aqua\"></i> DocuSign Signers</a></li></ul>");
+      li55.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-key\"></i>  <span>Role Management</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li class=\"svelte-9fvhrt\"><a href=\"roles\" class=\"svelte-9fvhrt\"><i class=\"fa fa-wrench text-aqua\"></i> Assign Roles</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"docusignsigners\" class=\"svelte-9fvhrt\"><i class=\"fa fa-edit text-aqua\"></i> DocuSign Signers</a></li></ul>");
       t135 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li56 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       a55 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
@@ -6268,7 +6272,7 @@ function create_fragment(ctx) {
       footer.innerHTML = "<div class=\"pull-right hidden-xs\"><b>Version</b> 1.0</div> \n        <strong>Copyright \xA9 2021 <a href=\"https://oladeconsulting.com\" target=\"_blank\">Olade Consulting</a></strong> All rights reserved.";
       t146 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       aside1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("aside");
-      aside1.innerHTML = "<ul class=\"nav nav-tabs nav-justified control-sidebar-tabs\"><li><a href=\"control-sidebar-home-tab\" data-toggle=\"tab\"><i class=\"fa fa-home\"></i></a></li> \n            <li><a href=\"control-sidebar-settings-tab\" data-toggle=\"tab\"><i class=\"fa fa-gears\"></i></a></li></ul> \n        \n        <div class=\"tab-content\"><div class=\"tab-pane\" id=\"control-sidebar-home-tab\"><h3 class=\"control-sidebar-heading\">Recent Activity</h3> \n                <ul class=\"control-sidebar-menu\"><li><a href=\"".concat("/", "\"><i class=\"menu-icon fa fa-birthday-cake bg-red\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Langdon&#39;s Birthday</h4> \n\n                                <p>Will be 23 on April 24th</p></div></a></li> \n                    <li><a href=\"", "/", "\"><i class=\"menu-icon fa fa-user bg-yellow\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Frodo Updated His Profile</h4> \n\n                                <p>New phone +1(800)555-1234</p></div></a></li> \n                    <li><a href=\"", "/", "\"><i class=\"menu-icon fa fa-envelope-o bg-light-blue\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Nora Joined Mailing List</h4> \n\n                                <p>nora@example.com</p></div></a></li> \n                    <li><a href=\"", "/", "\"><i class=\"menu-icon fa fa-file-code-o bg-green\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Cron Job 254 Executed</h4> \n\n                                <p>Execution time 5 seconds</p></div></a></li></ul> \n                \n\n                <h3 class=\"control-sidebar-heading\">Tasks Progress</h3> \n                <ul class=\"control-sidebar-menu\"><li><a href=\"", "/", "\"><h4 class=\"control-sidebar-subheading\">Custom Template Design\n                                <span class=\"label label-danger pull-right\">70%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-danger\" style=\"width: 70%\"></div></div></a></li> \n                    <li><a href=\"", "/", "\"><h4 class=\"control-sidebar-subheading\">Update Resume\n                                <span class=\"label label-success pull-right\">95%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-success\" style=\"width: 95%\"></div></div></a></li> \n                    <li><a href=\"", "/", "\"><h4 class=\"control-sidebar-subheading\">Laravel Integration\n                                <span class=\"label label-warning pull-right\">50%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-warning\" style=\"width: 50%\"></div></div></a></li> \n                    <li><a href=\"", "/", "\"><h4 class=\"control-sidebar-subheading\">Back End Framework\n                                <span class=\"label label-primary pull-right\">68%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-primary\" style=\"width: 68%\"></div></div></a></li></ul></div> \n            \n\n            \n            <div class=\"tab-pane\" id=\"control-sidebar-settings-tab\"><form method=\"post\"><h3 class=\"control-sidebar-heading\">General Settings</h3> \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Report panel usage\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Some information about this general settings option</p></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Allow mail redirect\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Other sets of options are available</p></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Expose author name in posts\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Allow the user to show his name in blog posts</p></div> \n                    \n\n                    <h3 class=\"control-sidebar-heading\">Chat Settings</h3> \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Show me as online\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Turn off notifications\n                            <input type=\"checkbox\" class=\"pull-right\"/></label></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Delete chat history\n                            <a href=\"", "/", "\" class=\"text-red pull-right\"><i class=\"fa fa-trash-o\"></i></a></label></div></form></div></div>");
+      aside1.innerHTML = "<ul class=\"nav nav-tabs nav-justified control-sidebar-tabs\"><li class=\"svelte-9fvhrt\"><a href=\"control-sidebar-home-tab\" data-toggle=\"tab\" class=\"svelte-9fvhrt\"><i class=\"fa fa-home\"></i></a></li> \n            <li class=\"svelte-9fvhrt\"><a href=\"control-sidebar-settings-tab\" data-toggle=\"tab\" class=\"svelte-9fvhrt\"><i class=\"fa fa-gears\"></i></a></li></ul> \n        \n        <div class=\"tab-content\"><div class=\"tab-pane\" id=\"control-sidebar-home-tab\"><h3 class=\"control-sidebar-heading\">Recent Activity</h3> \n                <ul class=\"control-sidebar-menu\"><li class=\"svelte-9fvhrt\"><a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"menu-icon fa fa-birthday-cake bg-red\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Langdon&#39;s Birthday</h4> \n\n                                <p>Will be 23 on April 24th</p></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"menu-icon fa fa-user bg-yellow\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Frodo Updated His Profile</h4> \n\n                                <p>New phone +1(800)555-1234</p></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"menu-icon fa fa-envelope-o bg-light-blue\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Nora Joined Mailing List</h4> \n\n                                <p>nora@example.com</p></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"menu-icon fa fa-file-code-o bg-green\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Cron Job 254 Executed</h4> \n\n                                <p>Execution time 5 seconds</p></div></a></li></ul> \n                \n\n                <h3 class=\"control-sidebar-heading\">Tasks Progress</h3> \n                <ul class=\"control-sidebar-menu\"><li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><h4 class=\"control-sidebar-subheading\">Custom Template Design\n                                <span class=\"label label-danger pull-right\">70%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-danger\" style=\"width: 70%\"></div></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><h4 class=\"control-sidebar-subheading\">Update Resume\n                                <span class=\"label label-success pull-right\">95%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-success\" style=\"width: 95%\"></div></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><h4 class=\"control-sidebar-subheading\">Laravel Integration\n                                <span class=\"label label-warning pull-right\">50%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-warning\" style=\"width: 50%\"></div></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><h4 class=\"control-sidebar-subheading\">Back End Framework\n                                <span class=\"label label-primary pull-right\">68%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-primary\" style=\"width: 68%\"></div></div></a></li></ul></div> \n            \n\n            \n            <div class=\"tab-pane\" id=\"control-sidebar-settings-tab\"><form method=\"post\"><h3 class=\"control-sidebar-heading\">General Settings</h3> \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Report panel usage\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Some information about this general settings option</p></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Allow mail redirect\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Other sets of options are available</p></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Expose author name in posts\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Allow the user to show his name in blog posts</p></div> \n                    \n\n                    <h3 class=\"control-sidebar-heading\">Chat Settings</h3> \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Show me as online\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Turn off notifications\n                            <input type=\"checkbox\" class=\"pull-right\"/></label></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Delete chat history\n                            <a href=\"", "/", "\" class=\"text-red pull-right svelte-9fvhrt\"><i class=\"fa fa-trash-o\"></i></a></label></div></form></div></div>");
       t210 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img0, "alt", "img");
@@ -6283,13 +6287,14 @@ function create_fragment(ctx) {
       ctx[0])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img1, "src", img1_src_value);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img1, "height", "37px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span1, "class", "logo-lg");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", a0_href_value = null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", a0_href_value = "");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "class", "logo");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(a0, "background-color", "#093F82");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", a1_href_value = "/");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "class", "sidebar-toggle");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "class", "sidebar-toggle svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "data-toggle", "offcanvas");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "role", "button");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li19, "class", "dropdown notifications-menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li19, "class", "dropdown notifications-menu svelte-9fvhrt");
       if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img2.src, img2_src_value =
       /*user_logo*/
       ctx[1])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "src", img2_src_value);
@@ -6299,7 +6304,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img2, "height", "20px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span4, "class", "hidden-xs");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a20, "href", a20_href_value = "/");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a20, "class", "dropdown-toggle");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a20, "class", "dropdown-toggle svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a20, "data-toggle", "dropdown");
       if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img3.src, img3_src_value =
       /*user_logo*/
@@ -6310,61 +6315,83 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a21, "href",
       /*user_profile_route*/
       ctx[4]);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a21, "class", "btn btn-primary btn-flat");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a21, "class", "btn btn-primary btn-flat svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "pull-left");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a22, "href",
       /*logout_route*/
       ctx[6]);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a22, "class", "btn btn-primary btn-flat");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a22, "class", "btn btn-primary btn-flat svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "pull-right");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li21, "class", "user-footer");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li21, "class", "user-footer svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul2, "class", "dropdown-menu");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li22, "class", "dropdown user user-menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li22, "class", "dropdown user user-menu svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul3, "class", "nav navbar-nav");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "navbar-custom-menu");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(nav, "class", "navbar navbar-static-top");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(nav, "class", "navbar navbar-static-top svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(header, "class", "main-header");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li23, "class", "header");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li23, "class", "header svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(li23, "background-color", "#073367");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i18, "class", "fa fa-tachometer");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a23, "href",
       /*dashboard_route*/
       ctx[2]);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li24, "class", "active");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a23, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li24, "class", "active svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a24, "href", a24_href_value = "/");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i21, "class", "fa fa-id-card");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a24, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i21, "class", "fa fa-user");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a25, "href",
       /*all_users_route*/
       ctx[3]);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a25, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li25, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li26, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li27, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li28, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul4, "class", "treeview-menu");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li29, "class", "treeview");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li33, "class", "treeview");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li37, "class", "treeview");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li43, "class", "treeview");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li29, "class", "treeview svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li33, "class", "treeview svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li34, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li37, "class", "treeview svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li43, "class", "treeview svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li44, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li45, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a45, "href", a45_href_value = "/");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a45, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i46, "class", "fa fa-graduation-cap");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a46, "href",
       /*program_type_index_route*/
       ctx[7]);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a46, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li46, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i47, "class", "fa fa-book text-orange");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a47, "href",
       /*settings_knowledge_area_index_route*/
       ctx[8]);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a47, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li47, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li48, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li49, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li50, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li51, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul8, "class", "treeview-menu");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li52, "class", "treeview");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li55, "class", "treeview");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li52, "class", "treeview svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li55, "class", "treeview svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i56, "class", "fa fa-power-off");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a55, "href",
       /*logout_route*/
       ctx[6]);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a55, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li56, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul10, "class", "sidebar-menu tree");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul10, "data-widget", "tree");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section, "class", "sidebar active");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(section, "height", "auto");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(aside0, "class", "main-sidebar");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(aside0, "class", "main-sidebar svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "content-wrapper");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div3, "min-height", "531.141px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(footer, "class", "main-footer");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(aside1, "class", "control-sidebar control-sidebar-dark");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(aside1, "class", "control-sidebar control-sidebar-dark svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div26, "class", "control-sidebar-bg");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div27, "class", "wrapper");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div27, "height", "auto");
@@ -6571,7 +6598,7 @@ var Layout = /*#__PURE__*/function (_SvelteComponent) {
     _classCallCheck(this, Layout);
 
     _this = _super.call(this);
-    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {}, add_css);
     return _this;
   }
 
