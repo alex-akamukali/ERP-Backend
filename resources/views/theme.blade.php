@@ -31,6 +31,10 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script> --}}
+
+    <script src="https://cdn.ckeditor.com/4.18.0/standard/ckeditor.js"></script>
+
     <script src="{{ mix('/js/app.js') }}" defer></script>
     @inertiaHead
 
