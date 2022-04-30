@@ -3708,7 +3708,7 @@ function create_fragment(ctx) {
       div13.innerHTML = "<div class=\"col-md-6\"><div class=\"\"><label><input type=\"checkbox\"/> Remember\n                                            Me</label></div></div> \n                                <div class=\"col-md-6\"><a href=\"null\" style=\"float: right;margin-bottom: 11px;font-weight: bold;\">I forgot my password</a><br/></div>";
       t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div16.innerHTML = "<div class=\"col-xs-8\"></div> \n                                    \n                                    <div class=\"col-xs-4\"><button style=\"background: #093F82;\" type=\"submit\" class=\"btn btn-primary btn-block btn-flat\">Sign In</button></div>";
+      div16.innerHTML = "<div class=\"col-xs-8\"></div> \n                                    \n                                    <div class=\"col-xs-4\"><button style=\"background: #093F82;margin-top: 15px;\" type=\"submit\" class=\"btn btn-primary btn-block btn-flat\">Sign In</button></div>";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "login-logo");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div4, "background-color", "#093F82");
