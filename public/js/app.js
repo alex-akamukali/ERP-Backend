@@ -9724,16 +9724,20 @@ function instance($$self, $$props, $$invalidate) {
   var ref = null;
   var data = $$props.data;
   var htmlContent = '';
+  var editor = null;
   var dispatch = (0,svelte__WEBPACK_IMPORTED_MODULE_1__.createEventDispatcher)(); // export let onChange;
 
   (0,svelte__WEBPACK_IMPORTED_MODULE_1__.onMount)(function () {
-    var editor = CKEDITOR.replace(ref);
+    editor = CKEDITOR.replace(ref);
     editor.on('change', function (evt) {
       console.log('content chanaged...');
       $$invalidate(2, htmlContent = evt.editor.getData());
       dispatch("textChange", htmlContent);
     });
   });
+  (0,svelte__WEBPACK_IMPORTED_MODULE_1__.onDestroy)(function () {
+    editor.destroy();
+  }); // alert('removed...');
 
   function textarea_binding($$value) {
     svelte_internal__WEBPACK_IMPORTED_MODULE_0__.binding_callbacks[$$value ? 'unshift' : 'push'](function () {
