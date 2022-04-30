@@ -3681,7 +3681,7 @@ function create_fragment(ctx) {
       div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div4.innerHTML = "<div class=\"row\"><div class=\"col-md-6\" style=\"padding-top: 11px;\"><img alt=\"img\" src=\"/asset1/Olade_logo_white.png\" style=\"height: 55px;\"/></div> \n                            <div class=\"col-md-6\"><a href=\"null\" style=\"color: #fff;font-size: 17px;font-weight: bold;position: relative;top: 27px;float: right;\">Contact Us</a></div></div>\n\n                        \xA0";
+      div4.innerHTML = "<div class=\"row\"><div class=\"col-md-6\" style=\"padding-top: 11px;\"><img alt=\"img\" src=\"/asset1/Olade_logo_white.png\" style=\"height: 55px;\"/></div> \n                            <div class=\"col-md-6\"><a href=\"".concat("\" style=\"color: #fff;font-size: 17px;font-weight: bold;position: relative;top: 27px;float: right;\">Contact Us</a></div></div>\n\n                        \xA0");
       t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div5.innerHTML = "<img alt=\"img\" src=\"/asset1/uNGdWHi.png\" style=\"max-width: 100%;\"/>";
@@ -3705,7 +3705,7 @@ function create_fragment(ctx) {
       span3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div13.innerHTML = "<div class=\"col-md-6\"><div class=\"\"><label><input type=\"checkbox\"/> Remember\n                                            Me</label></div></div> \n                                <div class=\"col-md-6\"><a href=\"null\" style=\"float: right;margin-bottom: 11px;font-weight: bold;\">I forgot my password</a><br/></div>";
+      div13.innerHTML = "<div class=\"col-md-6\"><div class=\"\"><label><input type=\"checkbox\"/> Remember\n                                            Me</label></div></div> \n                                <div class=\"col-md-6\"><a href=\"".concat("\" style=\"float: right;margin-bottom: 11px;font-weight: bold;\">I forgot my password</a><br/></div>");
       t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div16.innerHTML = "<div class=\"col-xs-8\"></div> \n                                    \n                                    <div class=\"col-xs-4\"><button style=\"background: #093F82;margin-top: 15px;\" type=\"submit\" class=\"btn btn-primary btn-block btn-flat\">Sign In</button></div>";
@@ -6111,7 +6111,7 @@ function create_fragment(ctx) {
   var a55;
   var i56;
   var t136;
-  var span21;
+  var span15;
   var t138;
   var div3;
   var t139;
@@ -6189,7 +6189,7 @@ function create_fragment(ctx) {
       t58 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       a24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
-      a24.innerHTML = "<i class=\"fa fa-users\"></i>  <span>Users</span> \n                        <span class=\"pull-right-container\"><i class=\"fa fa-angle-left pull-right\"></i></span>";
+      a24.innerHTML = "<i class=\"fa fa-users\"></i>  <span>Users</span> \n\n                            <i class=\"fa fa-angle-left pull-right\"></i>";
       t62 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       ul4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
       li25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
@@ -6207,16 +6207,16 @@ function create_fragment(ctx) {
       li28.innerHTML = "<a href=\"alumniusers\"><i class=\"fa fa-id-card text-yellow\"></i> Alumni</a>";
       t70 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li33.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-pie-chart\"></i>  <span>Reports</span> \n                        <span class=\"pull-right-container\"><i class=\"fa fa-angle-left pull-right\"></i></span></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"JobDetailsConsultants\"><i class=\"fa fa-line-chart text-green\"></i> Consultants\n                                on Job</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-bar-chart text-blue\"></i> On FTE Job</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-bar-chart text-aqua\"></i> On Contract\n                                Job</a></li></ul>");
+      li33.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-pie-chart\"></i>  <span>Reports</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"JobDetailsConsultants\"><i class=\"fa fa-line-chart text-green\"></i> Consultants\n                                on Job</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-bar-chart text-blue\"></i> On FTE Job</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-bar-chart text-aqua\"></i> On Contract\n                                Job</a></li></ul>");
       t80 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       li34.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-envelope\"></i> \n                        <span>Communication</span></a>");
       t83 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li37 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li37.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-money text-aqua\"></i> \n                        <span>Accounts Payments</span> \n                        <span class=\"pull-right-container\"><i class=\"fa fa-angle-left pull-right\"></i></span></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"ACCOUNTcontractPayment\"><i class=\"fa fa-money text-green\"></i> Contract Payment</a></li> \n                        <li><a href=\"ACCOUNTFTEPayment\"><i class=\"fa fa-money text-blue\"></i> FTE Payment</a></li></ul>");
+      li37.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-money text-aqua\"></i> \n                        <span>Accounts Payments</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"ACCOUNTcontractPayment\"><i class=\"fa fa-money text-green\"></i> Contract Payment</a></li> \n                        <li><a href=\"ACCOUNTFTEPayment\"><i class=\"fa fa-money text-blue\"></i> FTE Payment</a></li></ul>");
       t91 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li43 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li43.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-tasks\"></i>  <span>Document Library</span> \n                        <span class=\"pull-right-container\"><i class=\"fa fa-angle-left pull-right\"></i></span></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"docContract\"><i class=\"fa fa-file\"></i> Olade Contract</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-file-o\"></i> Employment Contract</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-file text-green\"></i> Invoices</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-money\"></i> Payment Stub</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-file text-aqua\"></i> Resumes</a></li></ul>");
+      li43.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-tasks\"></i>  <span>Document Library</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"docContract\"><i class=\"fa fa-file\"></i> Olade Contract</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-file-o\"></i> Employment Contract</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-file text-green\"></i> Invoices</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-money\"></i> Payment Stub</a></li> \n                        <li><a href=\"", "/", "\"><i class=\"fa fa-file text-aqua\"></i> Resumes</a></li></ul>");
       t105 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li44 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       li44.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-folder\"></i>  <span>Projects</span></a>");
@@ -6226,7 +6226,7 @@ function create_fragment(ctx) {
       t111 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li52 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       a45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
-      a45.innerHTML = "<i class=\"fa fa-cogs\"></i>  <span>Settings</span> \n                        <span class=\"pull-right-container\"><i class=\"fa fa-angle-left pull-right\"></i></span>";
+      a45.innerHTML = "<i class=\"fa fa-cogs\"></i>  <span>Settings</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i>";
       t115 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       ul8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
       li46 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
@@ -6252,14 +6252,14 @@ function create_fragment(ctx) {
       li51.innerHTML = "<a href=\"zoomaccount\"><i class=\"fa fa-desktop text-orange\"></i> Zoom Setup</a>";
       t127 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li55 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li55.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-key\"></i>  <span>Role Management</span> \n                        <span class=\"pull-right-container\"><i class=\"fa fa-angle-left pull-right\"></i></span></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"roles\"><i class=\"fa fa-wrench text-aqua\"></i> Assign Roles</a></li> \n                        <li><a href=\"docusignsigners\"><i class=\"fa fa-edit text-aqua\"></i> DocuSign Signers</a></li></ul>");
+      li55.innerHTML = "<a href=\"".concat("/", "\"><i class=\"fa fa-key\"></i>  <span>Role Management</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li><a href=\"roles\"><i class=\"fa fa-wrench text-aqua\"></i> Assign Roles</a></li> \n                        <li><a href=\"docusignsigners\"><i class=\"fa fa-edit text-aqua\"></i> DocuSign Signers</a></li></ul>");
       t135 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li56 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       a55 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       i56 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("i");
       t136 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      span21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
-      span21.textContent = "Sign Out";
+      span15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span15.textContent = "Sign Out";
       t138 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       if (default_slot) default_slot.c();
@@ -6275,17 +6275,19 @@ function create_fragment(ctx) {
       if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img0.src, img0_src_value =
       /*olade_logo*/
       ctx[0])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img0, "src", img0_src_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img0, "height", "37px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span0, "class", "logo-mini");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img1, "alt", "img");
       if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img1.src, img1_src_value =
       /*olade_logo*/
       ctx[0])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img1, "src", img1_src_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img1, "height", "37px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span1, "class", "logo-lg");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", a0_href_value = null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "class", "logo");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", a1_href_value = "/");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "class", "sidebar-toggle");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "data-toggle", "push-menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "data-toggle", "offcanvas");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "role", "button");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li19, "class", "dropdown notifications-menu");
       if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img2.src, img2_src_value =
@@ -6472,7 +6474,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li56, a55);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a55, i56);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a55, t136);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a55, span21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a55, span15);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, t138);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, div3);
 

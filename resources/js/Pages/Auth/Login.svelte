@@ -58,7 +58,7 @@
                             </div>
                             <div class="col-md-6">
                                 <a
-                                    href="null"
+                                    href={''}
                                     style="color: #fff;font-size: 17px;font-weight: bold;position: relative;top: 27px;float: right;"
                                     >Contact Us</a
                                 >
@@ -127,7 +127,7 @@
 
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="null" style="float: right;margin-bottom: 11px;font-weight: bold;">I forgot my password</a><br />
+                                    <a href={''} style="float: right;margin-bottom: 11px;font-weight: bold;">I forgot my password</a><br />
                                 </div>
                             </div>
 

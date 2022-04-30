@@ -56,7 +56,7 @@
     <!-- ChartJS 1.0.1 -->
     <script src="{{ asset('theme/plugins/chartjs/Chart.min.js') }}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{ asset('theme/dist/js/pages/dashboard2.js') }}"></script>
+    <script src="{{ asset('theme/dist/js/pages/dashboard2.js') }}?90000"></script>
     <!-- AdminLTE for demo purposes -->
     {{-- <script src="{{ asset('theme/dist/js/demo.js') }}"></script> --}}
 

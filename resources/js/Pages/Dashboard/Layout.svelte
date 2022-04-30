@@ -35,11 +35,11 @@
         <a href={null} class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini">
-                <img alt="img" src={olade_logo} />
+                <img alt="img" src={olade_logo} style="height: 37px;" />
             </span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg">
-                <img alt="img" src={olade_logo} />
+                <img alt="img" src={olade_logo} style="height: 37px;" />
             </span>
         </a>
 
@@ -49,7 +49,7 @@
             <a
                 href={"/"}
                 class="sidebar-toggle"
-                data-toggle="push-menu"
+                data-toggle="offcanvas"
                 role="button"
             >
                 <span class="sr-only">Toggle navigation</span>
@@ -338,9 +338,9 @@
                 <li class="treeview">
                     <a href={"/"}
                         ><i class="fa fa-users" /> <span>Users</span>
-                        <span class="pull-right-container">
+
                             <i class="fa fa-angle-left pull-right" />
-                        </span>
+
                     </a>
                     <ul class="treeview-menu">
                         <li>
@@ -379,9 +379,7 @@
                 <li class="treeview">
                     <a href={"/"}
                         ><i class="fa fa-pie-chart" /> <span> Reports </span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right" />
-                        </span>
+                        <i class="fa fa-angle-left pull-right" />
                     </a>
                     <ul class="treeview-menu">
                         <li>
@@ -414,9 +412,7 @@
                     <a href={"/"}
                         ><i class="fa fa-money text-aqua" />
                         <span> Accounts Payments </span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right" />
-                        </span>
+                        <i class="fa fa-angle-left pull-right" />
                     </a>
                     <ul class="treeview-menu">
                         <li>
@@ -435,9 +431,7 @@
                 <li class="treeview">
                     <a href={"/"}
                         ><i class="fa fa-tasks" /> <span>Document Library</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right" />
-                        </span>
+                        <i class="fa fa-angle-left pull-right" />
                     </a>
                     <ul class="treeview-menu">
                         <li>
@@ -481,9 +475,7 @@
                 <li class="treeview">
                     <a href={"/"}
                         ><i class="fa fa-cogs" /> <span> Settings </span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right" />
-                        </span>
+                        <i class="fa fa-angle-left pull-right" />
                     </a>
                     <ul class="treeview-menu">
                         <li>
@@ -523,9 +515,7 @@
                 <li class="treeview">
                     <a href={"/"}
                         ><i class="fa fa-key" /> <span> Role Management </span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right" />
-                        </span>
+                        <i class="fa fa-angle-left pull-right" />
                     </a>
                     <ul class="treeview-menu">
                         <li>
