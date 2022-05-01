@@ -8,6 +8,7 @@
     export let onResetMessage;
     export let errors;
     export let hasErrors;
+    export let onCloseModal;
 
     $: if (message != "") {
         if (error) {
@@ -15,6 +16,7 @@
         }
         if (!error) {
             toastr.success(message);
+            if (onCloseModal)onCloseModal();
         }
         if (onResetMessage) {
             onResetMessage();
