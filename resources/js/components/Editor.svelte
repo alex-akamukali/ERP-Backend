@@ -26,4 +26,4 @@
 </script>
 
 <textarea bind:this={ref}>{data}</textarea>
-To-HTML: {htmlContent}
+Length: {htmlContent.length}

@@ -9669,14 +9669,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function create_fragment(ctx) {
   var textarea;
   var t0;
+  var t1_value =
+  /*htmlContent*/
+  ctx[2].length + "";
   var t1;
   return {
     c: function c() {
       textarea = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("textarea");
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("\nTo-HTML: ");
-      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(
-      /*htmlContent*/
-      ctx[2]);
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("\nLength: ");
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t1_value);
       textarea.value =
       /*data*/
       ctx[0];
@@ -9703,9 +9704,9 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*htmlContent*/
-      4) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1,
+      4 && t1_value !== (t1_value =
       /*htmlContent*/
-      ctx[2]);
+      ctx[2].length + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1, t1_value);
     },
     i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
     o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
