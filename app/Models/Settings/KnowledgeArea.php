@@ -38,4 +38,17 @@ class KnowledgeArea extends Model
     {
         return $this->belongsTo(ProgramType::class, 'program_type_id');
     }
+
+    function scopeActive($query){
+       return $query->where('status',self::STATUS_ACTIVE);
+    }
+
+    function scopeInactive($query){
+        return $query->where('status',self::STATUS_INACTIVE);
+    }
+
+    function scopeKnowledgeAreaType($query,$type){
+       return $query->where('knowledge_area_type',$type);
+    }
+
 }

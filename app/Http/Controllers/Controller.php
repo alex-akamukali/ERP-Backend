@@ -21,6 +21,20 @@ class Controller extends BaseController
         return $message;
     }
 
+    function getFlashMessageKey($key){
+        if (session()->has($key)){
+          return session()->get($key);
+        }
+        return '';
+    }
+
+    function getRequest($key){
+        if (request()->filled($key)){
+          return request($key);
+        }
+        return '';
+    }
+
     function getError(){
         // $message = '';
         $error = false;

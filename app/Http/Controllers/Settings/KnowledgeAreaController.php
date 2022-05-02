@@ -23,9 +23,15 @@ class KnowledgeAreaController extends Controller
         // 'name',
         // 'no_of_questions',
         // 'status'
+        $knowledgeAreaType = $this->getRequest('knowledge_area_type');
+        $query = KnowledgeArea::query();
+        if (!empty($knowledgeAreaType)){
+           $query = $query->knowledgeAreaType($knowledgeAreaType);
+        }
+
         return $this->inertiaRenderResource("Settings/KnowledgeArea", "knowledge-area", [
             'program_types' => ProgramType::active()->get(),
-            'list'=>KnowledgeArea::all(),
+            'list'=>$query->get(),
             'knowledge_area_types'=>KnowledgeArea::KNOWLEDGE_AREA_TYPES,
             'statuses'=>KnowledgeArea::STATUSES
         ]);

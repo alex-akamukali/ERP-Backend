@@ -94,7 +94,7 @@
 <MessageNotification {onCloseModal} {onResetMessage} {message} hasErrors={$form.hasErrors}  errors={$form.errors} {error} />
 
 <Page>
-  <span slot="title">Knowledge Area</span>
+  <span slot="title">Olade Contract Types</span>
 
   <button
   slot="createButton"
@@ -108,14 +108,6 @@
 
 
 <div slot="content">
-    <div class="col-md-12">
-        <select bind:value={$filter.knowledge_area_type} on:change={doFilter}>
-            <option value="">All Types</option>
-            {#each knowledge_area_types as knowledge_area_type}
-            <option value={knowledge_area_type}>{knowledge_area_type}</option>
-          {/each}
-        </select>
-    </div>
     <div class="col-sm-12">
         <table
             id="example1"
@@ -195,47 +187,6 @@
 
 
     <div class="col-md-12" slot="content">
-        <div class="col-md-12">
-            <!-- svelte-ignore a11y-label-has-associated-control -->
-            <label class="control-label"
-                >Program Type <b style="color:red">*</b
-                ></label
-            >
-            <select
-                type="text"
-                class="form-control"
-                name="proTitle"
-                placeholder=""
-                required=""
-                bind:value={$form.program_type_id}
-            >
-           <option value="">Select</option>
-           {#each program_types as program_type}
-             <option value={program_type.id}>{program_type.title}</option>
-           {/each}
-        </select>
-        </div>
-
-        <div class="col-md-12">
-            <!-- svelte-ignore a11y-label-has-associated-control -->
-            <label class="control-label"
-                >Knowledge Area Type<b style="color:red">*</b
-                ></label
-            >
-            <select
-                type="text"
-                class="form-control"
-                name="proTitle"
-                placeholder=""
-                required=""
-                bind:value={$form.knowledge_area_type}
-            >
-           <option value="">Select</option>
-           {#each knowledge_area_types as knowledge_area_type}
-             <option value={knowledge_area_type}>{knowledge_area_type}</option>
-           {/each}
-        </select>
-        </div>
 
 
 
@@ -270,28 +221,6 @@
             />
         </div>
 
-        <div class="col-md-12">
-            <!-- svelte-ignore a11y-label-has-associated-control -->
-            <label class="control-label"
-                >Status<b style="color:red">*</b></label
-            >
-            <select
-                class="form-control"
-                name="proDescription"
-                required=""
-                bind:value={$form.status}>
-                <option value="">Select</option>
-                {#each statuses as status}
-                <option value={status}>{status}</option>
-                {/each}
-
-            </select>
-            {#if $form.errors.status}
-                <div style="color: red;">
-                    {$form.errors.status}
-                </div>
-            {/if}
-        </div>
     </div>
     <!-- end -->
 
