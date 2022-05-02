@@ -163,7 +163,7 @@
                 >
                     <div class="modal-body">
                         <div class="row">
-                            <slot name="modalBody" data={$inviteCandidateForm} />
+                            <slot name="modalBody" data={$inviteCandidateForm}  />
                         </div>
                     </div>
                     <div class="modal-footer">

@@ -23,7 +23,7 @@ class KnowledgeAreaController extends Controller
         // 'name',
         // 'no_of_questions',
         // 'status'
-        return $this->inertiaRenderResource("Settings/KnowledgeArea", "settings-knowledge-area", [
+        return $this->inertiaRenderResource("Settings/KnowledgeArea", "knowledge-area", [
             'program_types' => ProgramType::active()->get(),
             'list'=>KnowledgeArea::all(),
             'knowledge_area_types'=>KnowledgeArea::KNOWLEDGE_AREA_TYPES,
@@ -86,6 +86,9 @@ class KnowledgeAreaController extends Controller
     public function update(UpdateKnowledgeAreaRequest $request, KnowledgeArea $knowledgeArea)
     {
         //
+        // dd($knowledgeArea,$request->validated());
+        $knowledgeArea->update($request->validated());
+        return $this->respondWithSuccess('Knowledge Area updated');
     }
 
     /**
@@ -97,5 +100,7 @@ class KnowledgeAreaController extends Controller
     public function destroy(KnowledgeArea $knowledgeArea)
     {
         //
+         $knowledgeArea->delete();
+         return $this->respondWithSuccess("Selected knowledge area removed.");
     }
 }

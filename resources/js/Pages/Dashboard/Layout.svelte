@@ -487,7 +487,7 @@
                         <li>
                             <a
                                 use:inertia
-                                href={settings_knowledge_area_index_route}
+                                href={'/knowledge-area'}
                             >
                                 <i class="fa fa-book text-orange" /> Knowledge Area
                             </a>
