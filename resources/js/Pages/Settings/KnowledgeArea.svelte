@@ -99,7 +99,15 @@
 
 
 
-<div class="row" slot="content">
+<div slot="content">
+    <div class="col-md-12">
+        <select>
+            <option>Filter By Type</option>
+            {#each knowledge_area_types as knowledge_area_type}
+            <option value={knowledge_area_type}>{knowledge_area_type}</option>
+          {/each}
+        </select>
+    </div>
     <div class="col-sm-12">
         <table
             id="example1"

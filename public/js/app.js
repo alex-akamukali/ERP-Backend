@@ -7255,12 +7255,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-function get_each_context_1(ctx, list, i) {
-  var child_ctx = ctx.slice();
-  child_ctx[27] = list[i];
-  return child_ctx;
-}
-
 function get_each_context_2(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[30] = list[i];
@@ -7269,7 +7263,13 @@ function get_each_context_2(ctx, list, i) {
 
 function get_each_context_3(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[33] = list[i];
+  child_ctx[27] = list[i];
+  return child_ctx;
+}
+
+function get_each_context_4(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[35] = list[i];
   return child_ctx;
 }
 
@@ -7277,7 +7277,13 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[24] = list[i];
   return child_ctx;
-} // (178:4) 
+}
+
+function get_each_context_1(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[27] = list[i];
+  return child_ctx;
+} // (186:4) 
 
 
 function create_title_slot_1(ctx) {
@@ -7296,14 +7302,14 @@ function create_title_slot_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
     }
   };
-} // (197:11) {#each program_types as program_type}
+} // (205:11) {#each program_types as program_type}
 
 
-function create_each_block_3(ctx) {
+function create_each_block_4(ctx) {
   var option;
   var t_value =
   /*program_type*/
-  ctx[33].title + "";
+  ctx[35].title + "";
   var t;
   var option_value_value;
   return {
@@ -7312,7 +7318,7 @@ function create_each_block_3(ctx) {
       t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
       option.__value = option_value_value =
       /*program_type*/
-      ctx[33].id;
+      ctx[35].id;
       option.value = option.__value;
     },
     m: function m(target, anchor) {
@@ -7324,13 +7330,13 @@ function create_each_block_3(ctx) {
       /*program_types*/
       4 && t_value !== (t_value =
       /*program_type*/
-      ctx[33].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+      ctx[35].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
 
       if (dirty[0] &
       /*program_types*/
       4 && option_value_value !== (option_value_value =
       /*program_type*/
-      ctx[33].id)) {
+      ctx[35].id)) {
         option.__value = option_value_value;
         option.value = option.__value;
       }
@@ -7339,14 +7345,14 @@ function create_each_block_3(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
     }
   };
-} // (218:11) {#each knowledge_area_types as knowledge_area_type}
+} // (226:11) {#each knowledge_area_types as knowledge_area_type}
 
 
-function create_each_block_2(ctx) {
+function create_each_block_3(ctx) {
   var option;
   var t_value =
   /*knowledge_area_type*/
-  ctx[30] + "";
+  ctx[27] + "";
   var t;
   var option_value_value;
   return {
@@ -7355,7 +7361,7 @@ function create_each_block_2(ctx) {
       t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
       option.__value = option_value_value =
       /*knowledge_area_type*/
-      ctx[30];
+      ctx[27];
       option.value = option.__value;
     },
     m: function m(target, anchor) {
@@ -7367,13 +7373,13 @@ function create_each_block_2(ctx) {
       /*knowledge_area_types*/
       8 && t_value !== (t_value =
       /*knowledge_area_type*/
-      ctx[30] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+      ctx[27] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
 
       if (dirty[0] &
       /*knowledge_area_types*/
       8 && option_value_value !== (option_value_value =
       /*knowledge_area_type*/
-      ctx[30])) {
+      ctx[27])) {
         option.__value = option_value_value;
         option.value = option.__value;
       }
@@ -7382,14 +7388,14 @@ function create_each_block_2(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
     }
   };
-} // (268:16) {#each statuses as status}
+} // (276:16) {#each statuses as status}
 
 
-function create_each_block_1(ctx) {
+function create_each_block_2(ctx) {
   var option;
   var t_value =
   /*status*/
-  ctx[27] + "";
+  ctx[30] + "";
   var t;
   var option_value_value;
   return {
@@ -7398,7 +7404,7 @@ function create_each_block_1(ctx) {
       t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
       option.__value = option_value_value =
       /*status*/
-      ctx[27];
+      ctx[30];
       option.value = option.__value;
     },
     m: function m(target, anchor) {
@@ -7410,13 +7416,13 @@ function create_each_block_1(ctx) {
       /*statuses*/
       2 && t_value !== (t_value =
       /*status*/
-      ctx[27] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+      ctx[30] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
 
       if (dirty[0] &
       /*statuses*/
       2 && option_value_value !== (option_value_value =
       /*status*/
-      ctx[27])) {
+      ctx[30])) {
         option.__value = option_value_value;
         option.value = option.__value;
       }
@@ -7425,7 +7431,7 @@ function create_each_block_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
     }
   };
-} // (273:12) {#if $form.errors.status}
+} // (281:12) {#if $form.errors.status}
 
 
 function create_if_block(ctx) {
@@ -7455,7 +7461,7 @@ function create_if_block(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
     }
   };
-} // (181:4) 
+} // (189:4) 
 
 
 function create_content_slot_1(ctx) {
@@ -7490,31 +7496,31 @@ function create_content_slot_1(ctx) {
   var t22;
   var mounted;
   var dispose;
-  var each_value_3 =
+  var each_value_4 =
   /*program_types*/
   ctx[2];
   var each_blocks_2 = [];
 
-  for (var i = 0; i < each_value_3.length; i += 1) {
-    each_blocks_2[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
+  for (var i = 0; i < each_value_4.length; i += 1) {
+    each_blocks_2[i] = create_each_block_4(get_each_context_4(ctx, each_value_4, i));
   }
 
-  var each_value_2 =
+  var each_value_3 =
   /*knowledge_area_types*/
   ctx[3];
   var each_blocks_1 = [];
 
-  for (var _i = 0; _i < each_value_2.length; _i += 1) {
-    each_blocks_1[_i] = create_each_block_2(get_each_context_2(ctx, each_value_2, _i));
+  for (var _i = 0; _i < each_value_3.length; _i += 1) {
+    each_blocks_1[_i] = create_each_block_3(get_each_context_3(ctx, each_value_3, _i));
   }
 
-  var each_value_1 =
+  var each_value_2 =
   /*statuses*/
   ctx[1];
   var each_blocks = [];
 
-  for (var _i2 = 0; _i2 < each_value_1.length; _i2 += 1) {
-    each_blocks[_i2] = create_each_block_1(get_each_context_1(ctx, each_value_1, _i2));
+  for (var _i2 = 0; _i2 < each_value_2.length; _i2 += 1) {
+    each_blocks[_i2] = create_each_block_2(get_each_context_2(ctx, each_value_2, _i2));
   }
 
   var if_block =
@@ -7718,19 +7724,19 @@ function create_content_slot_1(ctx) {
       if (dirty[0] &
       /*program_types*/
       4) {
-        each_value_3 =
+        each_value_4 =
         /*program_types*/
         ctx[2];
 
         var _i9;
 
-        for (_i9 = 0; _i9 < each_value_3.length; _i9 += 1) {
-          var child_ctx = get_each_context_3(ctx, each_value_3, _i9);
+        for (_i9 = 0; _i9 < each_value_4.length; _i9 += 1) {
+          var child_ctx = get_each_context_4(ctx, each_value_4, _i9);
 
           if (each_blocks_2[_i9]) {
             each_blocks_2[_i9].p(child_ctx, dirty);
           } else {
-            each_blocks_2[_i9] = create_each_block_3(child_ctx);
+            each_blocks_2[_i9] = create_each_block_4(child_ctx);
 
             each_blocks_2[_i9].c();
 
@@ -7742,7 +7748,7 @@ function create_content_slot_1(ctx) {
           each_blocks_2[_i9].d(1);
         }
 
-        each_blocks_2.length = each_value_3.length;
+        each_blocks_2.length = each_value_4.length;
       }
 
       if (dirty[0] &
@@ -7756,19 +7762,19 @@ function create_content_slot_1(ctx) {
       if (dirty[0] &
       /*knowledge_area_types*/
       8) {
-        each_value_2 =
+        each_value_3 =
         /*knowledge_area_types*/
         ctx[3];
 
         var _i10;
 
-        for (_i10 = 0; _i10 < each_value_2.length; _i10 += 1) {
-          var _child_ctx = get_each_context_2(ctx, each_value_2, _i10);
+        for (_i10 = 0; _i10 < each_value_3.length; _i10 += 1) {
+          var _child_ctx = get_each_context_3(ctx, each_value_3, _i10);
 
           if (each_blocks_1[_i10]) {
             each_blocks_1[_i10].p(_child_ctx, dirty);
           } else {
-            each_blocks_1[_i10] = create_each_block_2(_child_ctx);
+            each_blocks_1[_i10] = create_each_block_3(_child_ctx);
 
             each_blocks_1[_i10].c();
 
@@ -7780,7 +7786,7 @@ function create_content_slot_1(ctx) {
           each_blocks_1[_i10].d(1);
         }
 
-        each_blocks_1.length = each_value_2.length;
+        each_blocks_1.length = each_value_3.length;
       }
 
       if (dirty[0] &
@@ -7814,19 +7820,19 @@ function create_content_slot_1(ctx) {
       if (dirty[0] &
       /*statuses*/
       2) {
-        each_value_1 =
+        each_value_2 =
         /*statuses*/
         ctx[1];
 
         var _i11;
 
-        for (_i11 = 0; _i11 < each_value_1.length; _i11 += 1) {
-          var _child_ctx2 = get_each_context_1(ctx, each_value_1, _i11);
+        for (_i11 = 0; _i11 < each_value_2.length; _i11 += 1) {
+          var _child_ctx2 = get_each_context_2(ctx, each_value_2, _i11);
 
           if (each_blocks[_i11]) {
             each_blocks[_i11].p(_child_ctx2, dirty);
           } else {
-            each_blocks[_i11] = create_each_block_1(_child_ctx2);
+            each_blocks[_i11] = create_each_block_2(_child_ctx2);
 
             each_blocks[_i11].c();
 
@@ -7838,7 +7844,7 @@ function create_content_slot_1(ctx) {
           each_blocks[_i11].d(1);
         }
 
-        each_blocks.length = each_value_1.length;
+        each_blocks.length = each_value_2.length;
       }
 
       if (dirty[0] &
@@ -7874,7 +7880,7 @@ function create_content_slot_1(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
-} // (282:4) 
+} // (290:4) 
 
 
 function create_storeButton_slot(ctx) {
@@ -7953,7 +7959,7 @@ function create_default_slot(ctx) {
       /*mode, $form, statuses, knowledge_area_types, program_types*/
       334 | dirty[1] &
       /*$$scope*/
-      32) {
+      128) {
         modal_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -8027,7 +8033,50 @@ function create_createButton_slot(ctx) {
       dispose();
     }
   };
-} // (123:16) {#each list as item}
+} // (106:12) {#each knowledge_area_types as knowledge_area_type}
+
+
+function create_each_block_1(ctx) {
+  var option;
+  var t_value =
+  /*knowledge_area_type*/
+  ctx[27] + "";
+  var t;
+  var option_value_value;
+  return {
+    c: function c() {
+      option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
+      option.__value = option_value_value =
+      /*knowledge_area_type*/
+      ctx[27];
+      option.value = option.__value;
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, option, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(option, t);
+    },
+    p: function p(ctx, dirty) {
+      if (dirty[0] &
+      /*knowledge_area_types*/
+      8 && t_value !== (t_value =
+      /*knowledge_area_type*/
+      ctx[27] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+
+      if (dirty[0] &
+      /*knowledge_area_types*/
+      8 && option_value_value !== (option_value_value =
+      /*knowledge_area_type*/
+      ctx[27])) {
+        option.__value = option_value_value;
+        option.value = option.__value;
+      }
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
+    }
+  };
+} // (131:16) {#each list as item}
 
 
 function create_each_block(ctx) {
@@ -8187,56 +8236,120 @@ function create_each_block(ctx) {
 
 
 function create_content_slot(ctx) {
-  var div1;
+  var div2;
   var div0;
+  var select;
+  var option;
+  var t1;
+  var div1;
   var table;
   var thead;
-  var t10;
+  var t12;
   var tbody;
+  var each_value_1 =
+  /*knowledge_area_types*/
+  ctx[3];
+  var each_blocks_1 = [];
+
+  for (var i = 0; i < each_value_1.length; i += 1) {
+    each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+  }
+
   var each_value =
   /*list*/
   ctx[4];
   var each_blocks = [];
 
-  for (var i = 0; i < each_value.length; i += 1) {
-    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  for (var _i12 = 0; _i12 < each_value.length; _i12 += 1) {
+    each_blocks[_i12] = create_each_block(get_each_context(ctx, each_value, _i12));
   }
 
   return {
     c: function c() {
-      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      select = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option.textContent = "Filter By Type";
+
+      for (var _i13 = 0; _i13 < each_blocks_1.length; _i13 += 1) {
+        each_blocks_1[_i13].c();
+      }
+
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
       thead = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("thead");
       thead.innerHTML = "<tr role=\"row\"><th>Program Type</th><th>Knowledge Area Type</th> \n                    <th>Name</th> \n                    <th>No Of Question</th> \n                    <th>Status</th> \n                    <th>Actions</th></tr>";
-      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       tbody = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tbody");
 
-      for (var _i12 = 0; _i12 < each_blocks.length; _i12 += 1) {
-        each_blocks[_i12].c();
+      for (var _i14 = 0; _i14 < each_blocks.length; _i14 += 1) {
+        each_blocks[_i14].c();
       }
 
+      option.__value = "Filter By Type";
+      option.value = option.__value;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(table, "id", "example1");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(table, "class", "table table-data table-striped table-hover dataTable no-footer");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(table, "role", "grid");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(table, "aria-describedby", "example1_info");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "col-sm-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "row");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "slot", "content");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "col-sm-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "slot", "content");
     },
     m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div1, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, div0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, table);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div2, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, select);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option);
+
+      for (var _i15 = 0; _i15 < each_blocks_1.length; _i15 += 1) {
+        each_blocks_1[_i15].m(select, null);
+      }
+
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, table);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, thead);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t12);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, tbody);
 
-      for (var _i13 = 0; _i13 < each_blocks.length; _i13 += 1) {
-        each_blocks[_i13].m(tbody, null);
+      for (var _i16 = 0; _i16 < each_blocks.length; _i16 += 1) {
+        each_blocks[_i16].m(tbody, null);
       }
     },
     p: function p(ctx, dirty) {
+      if (dirty[0] &
+      /*knowledge_area_types*/
+      8) {
+        each_value_1 =
+        /*knowledge_area_types*/
+        ctx[3];
+
+        var _i17;
+
+        for (_i17 = 0; _i17 < each_value_1.length; _i17 += 1) {
+          var child_ctx = get_each_context_1(ctx, each_value_1, _i17);
+
+          if (each_blocks_1[_i17]) {
+            each_blocks_1[_i17].p(child_ctx, dirty);
+          } else {
+            each_blocks_1[_i17] = create_each_block_1(child_ctx);
+
+            each_blocks_1[_i17].c();
+
+            each_blocks_1[_i17].m(select, null);
+          }
+        }
+
+        for (; _i17 < each_blocks_1.length; _i17 += 1) {
+          each_blocks_1[_i17].d(1);
+        }
+
+        each_blocks_1.length = each_value_1.length;
+      }
+
       if (dirty[0] &
       /*removeRow, list, selectRow*/
       3088) {
@@ -8244,31 +8357,32 @@ function create_content_slot(ctx) {
         /*list*/
         ctx[4];
 
-        var _i14;
+        var _i18;
 
-        for (_i14 = 0; _i14 < each_value.length; _i14 += 1) {
-          var child_ctx = get_each_context(ctx, each_value, _i14);
+        for (_i18 = 0; _i18 < each_value.length; _i18 += 1) {
+          var _child_ctx3 = get_each_context(ctx, each_value, _i18);
 
-          if (each_blocks[_i14]) {
-            each_blocks[_i14].p(child_ctx, dirty);
+          if (each_blocks[_i18]) {
+            each_blocks[_i18].p(_child_ctx3, dirty);
           } else {
-            each_blocks[_i14] = create_each_block(child_ctx);
+            each_blocks[_i18] = create_each_block(_child_ctx3);
 
-            each_blocks[_i14].c();
+            each_blocks[_i18].c();
 
-            each_blocks[_i14].m(tbody, null);
+            each_blocks[_i18].m(tbody, null);
           }
         }
 
-        for (; _i14 < each_blocks.length; _i14 += 1) {
-          each_blocks[_i14].d(1);
+        for (; _i18 < each_blocks.length; _i18 += 1) {
+          each_blocks[_i18].d(1);
         }
 
         each_blocks.length = each_value.length;
       }
     },
     d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div1);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks_1, detaching);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
     }
   };
@@ -8352,10 +8466,10 @@ function create_fragment(ctx) {
       var page_1_changes = {};
 
       if (dirty[0] &
-      /*list, closeModal, mode, $form, statuses, knowledge_area_types, program_types*/
+      /*list, knowledge_area_types, closeModal, mode, $form, statuses, program_types*/
       478 | dirty[1] &
       /*$$scope*/
-      32) {
+      128) {
         page_1_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
