@@ -493,7 +493,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/olade-contract-type">
+                            <a use:inertia href="/olade-contract-type">
                                 <i class="fa fa-file-o text-green" /> Olade Contract
                                 Type
                             </a>

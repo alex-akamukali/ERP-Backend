@@ -1,6 +1,6 @@
 <script context="module">
     import Layout from "../Dashboard/Layout.svelte";
-    import { page, useForm } from "@inertiajs/inertia-svelte";
+    import { page, useForm , inertia } from "@inertiajs/inertia-svelte";
     import Pagination from "../../components/Pagination.svelte";
     import Page from "../../components/Page.svelte";
     import Modal from "../../components/Modal.svelte";
@@ -10,8 +10,8 @@
 
 <script>
     export let statuses;
-    export let program_types;
-    export let knowledge_area_types;
+    // export let program_types;
+    // export let knowledge_area_types;
     export let list;
     // export let store;
     // export let update;
@@ -22,63 +22,42 @@
 
     let mode = "create";
 
+    const resource = '/olade-contract-type/';
+
     let closeModal = null;
-
-
-    // 'program_type_id'=>'required',
-    //         'knowledge_area_type'=>'required',
-    //         'name'=>'required',
-    //         'no_of_questions'=>'required',
-    //         'status'=>'required'
+    // 'title' => 'required',
+    //         'primary_commission' => 'required',
+    //         'secondary_commission' => 'required',
+    //         'no_of_months' => 'required',
+    //         'status' => 'required',
+    //         'body' => 'required',
+    //         'instructions' => 'required'
 
 
     let form = useForm({
-        program_type_id: "",
-        knowledge_area_type: "",
-        name:"",
-        no_of_questions:10,
+        title: "",
+        primary_commission: "",
+        secondary_commission:"",
+        no_of_months:6,
         status: "active",
-        id: "0",
+        body: "",
+        instructions: "",
     });
 
     let filter = useForm({
-        knowledge_area_type:''
+        status:''
     });
 
-    function selectRow(data) {
-        $form.program_type_id = data.program_type_id;
-        $form.knowledge_area_type = data.knowledge_area_type;
-        $form.name = data.name;
-        $form.no_of_questions = data.no_of_questions;
-        $form.status = data.status;
-        $form.id = data.id;
-        mode = "update";
-    }
 
     function removeRow(data) {
         if (confirm("Do you want to confirm this action?")) {
-            $form.delete( "/knowledge-area/" + data.id);
-        }
-    }
-
-    function clearForm() {
-        $form.reset();
-        mode = "create";
-    }
-
-    function callStore() {
-        if (mode == "create") {
-            $form.post('/knowledge-area');
-        } else {
-            $form.put( "/knowledge-area/" + $form.id);
+            $form.delete( resource + data.id);
         }
     }
 
     function doFilter(){
-        $filter.get('/knowledge-area');
+        $filter.get(resource);
     }
-
-
 
     function onResetMessage(){
         $form.clearErrors();
@@ -96,18 +75,28 @@
 <Page>
   <span slot="title">Olade Contract Types</span>
 
-  <button
+  <a
+  use:inertia
+  href={resource + 'create'}
   slot="createButton"
-  class="btn btn-primary btn-sm"
-  data-toggle="modal"
-  data-target="#modal-progtype"
-  on:click|preventDefault={clearForm}>
-  <i class="fa fa-plus" />Add Knowledge Area
-</button>
+  class="btn btn-primary btn-sm">
+  <i class="fa fa-plus" />&nbsp;Add Olade Contract Type
+</a>
 
 
 
 <div slot="content">
+
+
+    <div class="col-md-12">
+        <select bind:value={$filter.status} on:change={doFilter}>
+            <option value="">All Statuses</option>
+            {#each statuses as status}
+            <option value={status}>{status}</option>
+          {/each}
+        </select>
+    </div>
+
     <div class="col-sm-12">
         <table
             id="example1"
@@ -119,9 +108,9 @@
                 <!-- svelte-ignore a11y-no-redundant-roles -->
                 <tr role="row">
                     <th>Title</th>
-                    <th>Knowledge Area Type</th>
-                    <th>Name</th>
-                    <th>No Of Question</th>
+                    <th>Primary Commission</th>
+                    <th>Secondary Commission</th>
+                    <th>No Of Months</th>
                     <th>Status</th>
                     <th> Actions </th>
                 </tr>
@@ -130,28 +119,22 @@
                 {#each list as item}
                     <tr class="odd">
                         <td>
-                            {item.program_type.title}
+                            {item.title}
                         </td>
                         <td>
-                            {item.knowledge_area_type}
+                            {item.primary_commission}
                         </td>
                         <td>
-                            {item.name}
+                            {item.secondary_commission}
                         </td>
                         <td>
-                            {item.no_of_questions}
+                            {item.no_of_months}
                         </td>
                         <td>{item.status}</td>
                         <td>
                             <a
-                                data-toggle="modal"
-                                data-target="#modal-progtype"
-                                href={null}
-                                on:click|preventDefault={() =>
-                                    selectRow(
-                                        item
-                                    )}
-                            >
+                                use:inertia
+                                href={resource + item.id + '/edit'}>
                                 <i
                                     class="fa fa-edit text-green"
                                 />

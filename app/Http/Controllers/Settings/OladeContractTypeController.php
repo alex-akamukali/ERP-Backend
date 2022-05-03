@@ -25,7 +25,8 @@ class OladeContractTypeController extends Controller
         return inertia()->render('Settings/OladeContractType', [
             'message' => $this->getMessage(),
             'error' => $this->getError(),
-            'list' => $query->get()
+            'list' => $query->get(),
+            'statuses'=>OladeContractType::STATUSES
         ]);
     }
 
@@ -37,6 +38,7 @@ class OladeContractTypeController extends Controller
     public function create()
     {
         //
+        return inertia()->render('Settings/OladeContractTypeCreate',[]);
     }
 
     /**
@@ -48,6 +50,8 @@ class OladeContractTypeController extends Controller
     public function store(StoreOladeContractTypeRequest $request)
     {
         //
+        OladeContractType::create($request->validated());
+        return $this->respondWithSuccess("New contract type added.");
     }
 
     /**
@@ -82,6 +86,9 @@ class OladeContractTypeController extends Controller
     public function update(UpdateOladeContractTypeRequest $request, OladeContractType $oladeContractType)
     {
         //
+        $data = $request->validated();
+        $oladeContractType->update($data);
+        return $this->respondWithSuccess("Contract type saved.");
     }
 
     /**
@@ -93,5 +100,7 @@ class OladeContractTypeController extends Controller
     public function destroy(OladeContractType $oladeContractType)
     {
         //
+        $oladeContractType->delete();
+        return $this->respondWithSuccess("Contract type removed.");
     }
 }

@@ -24,7 +24,7 @@
             <div class="box box-info">
                 <div class="box-header with-border">
                     <!-- svelte-ignore a11y-missing-content -->
-                    <h3 class="box-title"><slot name="title" /></h3>
+                    <!-- <h3 class="box-title"><slot name="title" /></h3> -->
 
                     <div class="box-tools pull-right">
                         <slot name="createButton" />
@@ -37,13 +37,14 @@
                             <i class="fa fa-plus" /> <slot name="createText" />
                         </button> -->
                     </div>
+                    <div style="clear: both;">&nbsp;</div>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
                     <div class="table-responsive">
                         <div
                             id="example1_wrapper"
-                            class="dataTables_wrapper form-inline dt-bootstrap no-footer"
+                            class=""
                         >
                             <div class="row">
                                 <slot name="content" />
