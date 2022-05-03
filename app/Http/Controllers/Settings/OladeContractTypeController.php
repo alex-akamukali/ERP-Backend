@@ -38,7 +38,9 @@ class OladeContractTypeController extends Controller
     public function create()
     {
         //
-        return inertia()->render('Settings/OladeContractTypeCreate',[]);
+        return inertia()->render('Settings/OladeContractTypeCreate',[
+            'statuses'=>OladeContractType::STATUSES
+        ]);
     }
 
     /**
@@ -75,7 +77,8 @@ class OladeContractTypeController extends Controller
     {
         //
         return inertia()->render('Settings/OladeContractTypeEdit',[
-            'data'=>$oladeContractType
+            'data'=>$oladeContractType,
+            'statuses'=>OladeContractType::STATUSES
         ]);
     }
 

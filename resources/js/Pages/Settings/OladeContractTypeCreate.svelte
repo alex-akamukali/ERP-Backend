@@ -10,7 +10,7 @@
 </script>
 
 <script>
-    // export let statuses;
+    export let statuses;
     // export let program_types;
     // export let knowledge_area_types;
 
@@ -145,6 +145,20 @@
                        <b>[mContractorCompanyAddress]</b> would be replaced with Contract Company Address <br>
                      </small>
                 </div>
+
+
+                <div class="col-md-12" style="text-align: right;">
+                    <label for="title">
+                        Status*
+                    </label>
+                    <select bind:value={$form.status}>
+                        <option value="">Select Status</option>
+                        {#each statuses as status}
+                        <option value={status}>{status}</option>
+                      {/each}
+                    </select>
+                </div>
+
 
 
               </div>
