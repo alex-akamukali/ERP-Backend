@@ -23,6 +23,9 @@
 
     let mode = "create";
 
+    let message = '';
+    let error = false;
+
     const resource = '/olade-contract-type/';
 
     let closeModal = null;
@@ -37,6 +40,10 @@
         instructions: "",
     });
 
+    function createContractType(){
+        $form.post(resource);
+    }
+
 
     let filter = useForm({
         knowledge_area_type:''
@@ -48,10 +55,15 @@
         $form.post(resource);
     }
 
+    function onResetMessage(){
+        $form.clearErrors();
+        // message = '';
+    }
+
 
 </script>
 
-<!-- <MessageNotification {onCloseModal} {onResetMessage} {message} hasErrors={$form.hasErrors}  errors={$form.errors} {error} /> -->
+<MessageNotification  {onResetMessage} {message} hasErrors={$form.hasErrors}  errors={$form.errors} {error} />
 
 <Page>
   <span slot="title">Add Olade Contract Type</span>
@@ -69,7 +81,7 @@
 <div slot="content">
 
 
-    <form method="post">
+    <form method="post" on:submit|preventDefault={createContractType}>
         <div class="col-md-12">
 
               <div class="row">
@@ -144,7 +156,7 @@
                       <label>
                           Body
                       </label>
-                    <Editor data="''" on:textChange={(data)=>console.log(data)}  />
+                    <Editor data="" on:textChange={(data)=>$form.body = data.detail}  />
                   </div>
 
                   <div class="col-md-12">

@@ -64,13 +64,10 @@
         message = '';
     }
 
-    function onCloseModal(){
-        closeModal.click();
-    }
 
 </script>
 
-<MessageNotification {onCloseModal} {onResetMessage} {message} hasErrors={$form.hasErrors}  errors={$form.errors} {error} />
+<MessageNotification  {onResetMessage} {message} hasErrors={$form.hasErrors}  errors={$form.errors} {error} />
 
 <Page>
   <span slot="title">Olade Contract Types</span>

@@ -51,7 +51,7 @@ class OladeContractTypeController extends Controller
     {
         //
         OladeContractType::create($request->validated());
-        return $this->respondWithSuccess("New contract type added.");
+        return $this->respondWithSuccessRoute("New contract type added.",route('olade-contract-type.index'));
     }
 
     /**
@@ -74,6 +74,9 @@ class OladeContractTypeController extends Controller
     public function edit(OladeContractType $oladeContractType)
     {
         //
+        return inertia()->render('Settings/OladeContractTypeEdit',[
+            'data'=>$oladeContractType
+        ]);
     }
 
     /**
@@ -88,7 +91,7 @@ class OladeContractTypeController extends Controller
         //
         $data = $request->validated();
         $oladeContractType->update($data);
-        return $this->respondWithSuccess("Contract type saved.");
+        return $this->respondWithSuccessRoute("Contract type saved.",route('olade-contract-type.index'));
     }
 
     /**

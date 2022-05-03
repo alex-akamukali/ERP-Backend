@@ -52,8 +52,22 @@ class Controller extends BaseController
         ]);
     }
 
+    function respondWithSuccessRoute($message,$route){
+        return redirect($route)->with([
+            'message' => $message,
+            'error' => false
+        ]);
+    }
+
     function respondWithError($message){
         return redirect()->back()->with([
+            'message' => $message,
+            'error' => true
+        ]);
+    }
+
+    function respondWithErrorRoute($message,$route){
+        return redirect($route)->with([
             'message' => $message,
             'error' => true
         ]);

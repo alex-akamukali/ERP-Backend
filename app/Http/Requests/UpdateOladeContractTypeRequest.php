@@ -30,7 +30,7 @@ class UpdateOladeContractTypeRequest extends FormRequest
             'no_of_months' => 'required',
             'status' => 'required',
             'body' => 'required',
-            'instructions' => 'required'
+            // 'instructions' => 'required'
         ];
     }
 }
