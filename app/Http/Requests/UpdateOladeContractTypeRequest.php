@@ -13,7 +13,7 @@ class UpdateOladeContractTypeRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,13 @@ class UpdateOladeContractTypeRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required',
+            'primary_commission' => 'required',
+            'secondary_commission' => 'required',
+            'no_of_months' => 'required',
+            'status' => 'required',
+            'body' => 'required',
+            'instructions' => 'required'
         ];
     }
 }

@@ -117,10 +117,9 @@
         >
             <thead>
                 <!-- svelte-ignore a11y-no-redundant-roles -->
-                <tr role="row"
-                    ><th>Program Type</th><th
-                        >Knowledge Area Type</th
-                    >
+                <tr role="row">
+                    <th>Title</th>
+                    <th>Knowledge Area Type</th>
                     <th>Name</th>
                     <th>No Of Question</th>
                     <th>Status</th>
@@ -179,61 +178,6 @@
 <!-- end -->
 
 
-
-
-<Modal id="modal-progtype" on:submit={callStore} on:setRef={(e)=>closeModal=e.detail}>
-
-    <span slot="title">Knowledge Area</span>
-
-
-    <div class="col-md-12" slot="content">
-
-
-
-        <div class="col-md-12">
-            <!-- svelte-ignore a11y-label-has-associated-control -->
-            <label class="control-label"
-                >Name<b
-                    style="color:red">*</b
-                ></label
-            >
-            <input
-                class="form-control"
-                name="proDescription"
-                required=""
-                bind:value={$form.name}
-            />
-        </div>
-
-
-        <div class="col-md-12">
-            <!-- svelte-ignore a11y-label-has-associated-control -->
-            <label class="control-label"
-                >No Of Questions<b
-                    style="color:red">*</b
-                ></label
-            >
-            <input
-                class="form-control"
-                name="proDescription"
-                required=""
-                bind:value={$form.no_of_questions}
-            />
-        </div>
-
-    </div>
-    <!-- end -->
-
-    <button slot="storeButton" type="submit" class="btn btn-primary">
-        <i class="fa fa-save" /> &nbsp; {mode == "create"
-            ? "Add Knowledge Area"
-            : "Update Knowledge Area"}
-    </button>
-
-
-
-
-</Modal>
 
 
 </Page>

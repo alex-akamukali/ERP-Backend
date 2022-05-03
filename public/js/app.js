@@ -8762,223 +8762,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[24] = list[i];
+  child_ctx[19] = list[i];
   return child_ctx;
-} // (186:4) 
-
-
-function create_title_slot_1(ctx) {
-  var span;
-  return {
-    c: function c() {
-      span = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
-      span.textContent = "Knowledge Area";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span, "slot", "title");
-    },
-    m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, span, anchor);
-    },
-    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
-    d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
-    }
-  };
-} // (189:4) 
-
-
-function create_content_slot_1(ctx) {
-  var div2;
-  var div0;
-  var label0;
-  var t2;
-  var input0;
-  var t3;
-  var div1;
-  var label1;
-  var t6;
-  var input1;
-  var mounted;
-  var dispose;
-  return {
-    c: function c() {
-      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      label0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
-      label0.innerHTML = "Name<b style=\"color:red\">*</b>";
-      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      label1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
-      label1.innerHTML = "No Of Questions<b style=\"color:red\">*</b>";
-      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label0, "class", "control-label");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "class", "form-control");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "name", "proDescription");
-      input0.required = "";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "col-md-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label1, "class", "control-label");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "class", "form-control");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "name", "proDescription");
-      input1.required = "";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "col-md-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "col-md-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "slot", "content");
-    },
-    m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div2, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, label0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, input0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
-      /*$form*/
-      ctx[5].name);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, t3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, label1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, input1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
-      /*$form*/
-      ctx[5].no_of_questions);
-
-      if (!mounted) {
-        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
-        /*input0_input_handler*/
-        ctx[19]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
-        /*input1_input_handler*/
-        ctx[20])];
-        mounted = true;
-      }
-    },
-    p: function p(ctx, dirty) {
-      if (dirty &
-      /*$form*/
-      32 && input0.value !==
-      /*$form*/
-      ctx[5].name) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
-        /*$form*/
-        ctx[5].name);
-      }
-
-      if (dirty &
-      /*$form*/
-      32 && input1.value !==
-      /*$form*/
-      ctx[5].no_of_questions) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
-        /*$form*/
-        ctx[5].no_of_questions);
-      }
-    },
-    d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div2);
-      mounted = false;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
-    }
-  };
-} // (227:4) 
-
-
-function create_storeButton_slot(ctx) {
-  var button;
-  var i;
-  var t0;
-  var t1_value = (
-  /*mode*/
-  ctx[3] == "create" ? "Add Knowledge Area" : "Update Knowledge Area") + "";
-  var t1;
-  return {
-    c: function c() {
-      button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
-      i = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("i");
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("   ");
-      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t1_value);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i, "class", "fa fa-save");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "slot", "storeButton");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "type", "submit");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn btn-primary");
-    },
-    m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, button, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, i);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, t0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(button, t1);
-    },
-    p: function p(ctx, dirty) {
-      if (dirty &
-      /*mode*/
-      8 && t1_value !== (t1_value = (
-      /*mode*/
-      ctx[3] == "create" ? "Add Knowledge Area" : "Update Knowledge Area") + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1, t1_value);
-    },
-    d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(button);
-    }
-  };
-} // (96:0) <Page>
-
-
-function create_default_slot(ctx) {
-  var modal;
-  var current;
-  modal = new _components_Modal_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
-    props: {
-      id: "modal-progtype",
-      $$slots: {
-        storeButton: [create_storeButton_slot],
-        content: [create_content_slot_1],
-        title: [create_title_slot_1]
-      },
-      $$scope: {
-        ctx: ctx
-      }
-    }
-  });
-  modal.$on("submit",
-  /*callStore*/
-  ctx[11]);
-  modal.$on("setRef",
-  /*setRef_handler*/
-  ctx[21]);
-  return {
-    c: function c() {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(modal.$$.fragment);
-    },
-    m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(modal, target, anchor);
-      current = true;
-    },
-    p: function p(ctx, dirty) {
-      var modal_changes = {};
-
-      if (dirty &
-      /*$$scope, mode, $form*/
-      134217768) {
-        modal_changes.$$scope = {
-          dirty: dirty,
-          ctx: ctx
-        };
-      }
-
-      modal.$set(modal_changes);
-    },
-    i: function i(local) {
-      if (current) return;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(modal.$$.fragment, local);
-      current = true;
-    },
-    o: function o(local) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(modal.$$.fragment, local);
-      current = false;
-    },
-    d: function d(detaching) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(modal, detaching);
-    }
-  };
 } // (97:2) 
 
 
@@ -9020,7 +8805,7 @@ function create_createButton_slot(ctx) {
       if (!mounted) {
         dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
         /*clearForm*/
-        ctx[10]));
+        ctx[8]));
         mounted = true;
       }
     },
@@ -9031,7 +8816,7 @@ function create_createButton_slot(ctx) {
       dispose();
     }
   };
-} // (131:16) {#each list as item}
+} // (130:16) {#each list as item}
 
 
 function create_each_block(ctx) {
@@ -9039,31 +8824,31 @@ function create_each_block(ctx) {
   var td0;
   var t0_value =
   /*item*/
-  ctx[24].program_type.title + "";
+  ctx[19].program_type.title + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
   /*item*/
-  ctx[24].knowledge_area_type + "";
+  ctx[19].knowledge_area_type + "";
   var t2;
   var t3;
   var td2;
   var t4_value =
   /*item*/
-  ctx[24].name + "";
+  ctx[19].name + "";
   var t4;
   var t5;
   var td3;
   var t6_value =
   /*item*/
-  ctx[24].no_of_questions + "";
+  ctx[19].no_of_questions + "";
   var t6;
   var t7;
   var td4;
   var t8_value =
   /*item*/
-  ctx[24].status + "";
+  ctx[19].status + "";
   var t8;
   var t9;
   var td5;
@@ -9079,18 +8864,18 @@ function create_each_block(ctx) {
   function click_handler() {
     return (
       /*click_handler*/
-      ctx[17](
+      ctx[13](
       /*item*/
-      ctx[24])
+      ctx[19])
     );
   }
 
   function click_handler_1() {
     return (
       /*click_handler_1*/
-      ctx[18](
+      ctx[14](
       /*item*/
-      ctx[24])
+      ctx[19])
     );
   }
 
@@ -9159,27 +8944,27 @@ function create_each_block(ctx) {
       /*list*/
       2 && t0_value !== (t0_value =
       /*item*/
-      ctx[24].program_type.title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+      ctx[19].program_type.title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
       if (dirty &
       /*list*/
       2 && t2_value !== (t2_value =
       /*item*/
-      ctx[24].knowledge_area_type + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      ctx[19].knowledge_area_type + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
       if (dirty &
       /*list*/
       2 && t4_value !== (t4_value =
       /*item*/
-      ctx[24].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t4, t4_value);
+      ctx[19].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t4, t4_value);
       if (dirty &
       /*list*/
       2 && t6_value !== (t6_value =
       /*item*/
-      ctx[24].no_of_questions + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t6, t6_value);
+      ctx[19].no_of_questions + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t6, t6_value);
       if (dirty &
       /*list*/
       2 && t8_value !== (t8_value =
       /*item*/
-      ctx[24].status + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t8, t8_value);
+      ctx[19].status + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t8, t8_value);
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
@@ -9195,7 +8980,7 @@ function create_content_slot(ctx) {
   var div0;
   var table;
   var thead;
-  var t10;
+  var t11;
   var tbody;
   var each_value =
   /*list*/
@@ -9212,8 +8997,8 @@ function create_content_slot(ctx) {
       div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
       thead = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("thead");
-      thead.innerHTML = "<tr role=\"row\"><th>Program Type</th><th>Knowledge Area Type</th> \n                    <th>Name</th> \n                    <th>No Of Question</th> \n                    <th>Status</th> \n                    <th>Actions</th></tr>";
-      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      thead.innerHTML = "<tr role=\"row\"><th>Title</th> \n                    <th>Knowledge Area Type</th> \n                    <th>Name</th> \n                    <th>No Of Question</th> \n                    <th>Status</th> \n                    <th>Actions</th></tr>";
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       tbody = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tbody");
 
       for (var _i = 0; _i < each_blocks.length; _i += 1) {
@@ -9232,7 +9017,7 @@ function create_content_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, div0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, table);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, thead);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, tbody);
 
       for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
@@ -9242,7 +9027,7 @@ function create_content_slot(ctx) {
     p: function p(ctx, dirty) {
       if (dirty &
       /*removeRow, list, selectRow*/
-      770) {
+      194) {
         each_value =
         /*list*/
         ctx[1];
@@ -9284,21 +9069,19 @@ function create_fragment(ctx) {
   var current;
   messagenotification = new _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({
     props: {
-      onCloseModal:
-      /*onCloseModal*/
-      ctx[13],
+      onCloseModal: onCloseModal,
       onResetMessage:
       /*onResetMessage*/
-      ctx[12],
+      ctx[9],
       message:
       /*message*/
       ctx[0],
       hasErrors:
       /*$form*/
-      ctx[5].hasErrors,
+      ctx[3].hasErrors,
       errors:
       /*$form*/
-      ctx[5].errors,
+      ctx[3].errors,
       error:
       /*error*/
       ctx[2]
@@ -9309,8 +9092,7 @@ function create_fragment(ctx) {
       $$slots: {
         content: [create_content_slot],
         createButton: [create_createButton_slot],
-        title: [create_title_slot],
-        "default": [create_default_slot]
+        title: [create_title_slot]
       },
       $$scope: {
         ctx: ctx
@@ -9341,14 +9123,14 @@ function create_fragment(ctx) {
       ctx[0];
       if (dirty &
       /*$form*/
-      32) messagenotification_changes.hasErrors =
+      8) messagenotification_changes.hasErrors =
       /*$form*/
-      ctx[5].hasErrors;
+      ctx[3].hasErrors;
       if (dirty &
       /*$form*/
-      32) messagenotification_changes.errors =
+      8) messagenotification_changes.errors =
       /*$form*/
-      ctx[5].errors;
+      ctx[3].errors;
       if (dirty &
       /*error*/
       4) messagenotification_changes.error =
@@ -9358,8 +9140,8 @@ function create_fragment(ctx) {
       var page_1_changes = {};
 
       if (dirty &
-      /*$$scope, list, closeModal, mode, $form*/
-      134217786) {
+      /*$$scope, list*/
+      4194306) {
         page_1_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -9388,6 +9170,11 @@ function create_fragment(ctx) {
 }
 
 var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_6__["default"];
+var closeModal = null;
+
+function onCloseModal() {
+  closeModal.click();
+}
 
 function instance($$self, $$props, $$invalidate) {
   var $form;
@@ -9399,8 +9186,7 @@ function instance($$self, $$props, $$invalidate) {
   var message = $$props.message;
   var error = $$props.error; // export let csrf;
 
-  var mode = "create";
-  var closeModal = null; // 'program_type_id'=>'required',
+  var mode = "create"; // 'program_type_id'=>'required',
   //         'knowledge_area_type'=>'required',
   //         'name'=>'required',
   //         'no_of_questions'=>'required',
@@ -9415,13 +9201,13 @@ function instance($$self, $$props, $$invalidate) {
     id: "0"
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
-    return $$invalidate(5, $form = value);
+    return $$invalidate(3, $form = value);
   });
   var filter = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_5__.useForm)({
     knowledge_area_type: ''
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, filter, function (value) {
-    return $$invalidate(22, $filter = value);
+    return $$invalidate(16, $filter = value);
   });
 
   function selectRow(data) {
@@ -9431,7 +9217,7 @@ function instance($$self, $$props, $$invalidate) {
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.no_of_questions = data.no_of_questions, $form);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.status = data.status, $form);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.id = data.id, $form);
-    $$invalidate(3, mode = "update");
+    mode = "update";
   }
 
   function removeRow(data) {
@@ -9442,7 +9228,7 @@ function instance($$self, $$props, $$invalidate) {
 
   function clearForm() {
     $form.reset();
-    $$invalidate(3, mode = "create");
+    mode = "create";
   }
 
   function callStore() {
@@ -9462,10 +9248,6 @@ function instance($$self, $$props, $$invalidate) {
     $$invalidate(0, message = '');
   }
 
-  function onCloseModal() {
-    closeModal.click();
-  }
-
   var click_handler = function click_handler(item) {
     return selectRow(item);
   };
@@ -9474,30 +9256,16 @@ function instance($$self, $$props, $$invalidate) {
     return removeRow(item);
   };
 
-  function input0_input_handler() {
-    $form.name = this.value;
-    form.set($form);
-  }
-
-  function input1_input_handler() {
-    $form.no_of_questions = this.value;
-    form.set($form);
-  }
-
-  var setRef_handler = function setRef_handler(e) {
-    return $$invalidate(4, closeModal = e.detail);
-  };
-
   $$self.$$set = function ($$props) {
-    if ('statuses' in $$props) $$invalidate(14, statuses = $$props.statuses);
-    if ('program_types' in $$props) $$invalidate(15, program_types = $$props.program_types);
-    if ('knowledge_area_types' in $$props) $$invalidate(16, knowledge_area_types = $$props.knowledge_area_types);
+    if ('statuses' in $$props) $$invalidate(10, statuses = $$props.statuses);
+    if ('program_types' in $$props) $$invalidate(11, program_types = $$props.program_types);
+    if ('knowledge_area_types' in $$props) $$invalidate(12, knowledge_area_types = $$props.knowledge_area_types);
     if ('list' in $$props) $$invalidate(1, list = $$props.list);
     if ('message' in $$props) $$invalidate(0, message = $$props.message);
     if ('error' in $$props) $$invalidate(2, error = $$props.error);
   };
 
-  return [message, list, error, mode, closeModal, $form, form, filter, selectRow, removeRow, clearForm, callStore, onResetMessage, onCloseModal, statuses, program_types, knowledge_area_types, click_handler, click_handler_1, input0_input_handler, input1_input_handler, setRef_handler];
+  return [message, list, error, $form, form, filter, selectRow, removeRow, clearForm, onResetMessage, statuses, program_types, knowledge_area_types, click_handler, click_handler_1];
 }
 
 var OladeContractType = /*#__PURE__*/function (_SvelteComponent) {
@@ -9512,9 +9280,9 @@ var OladeContractType = /*#__PURE__*/function (_SvelteComponent) {
 
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
-      statuses: 14,
-      program_types: 15,
-      knowledge_area_types: 16,
+      statuses: 10,
+      program_types: 11,
+      knowledge_area_types: 12,
       list: 1,
       message: 0,
       error: 2

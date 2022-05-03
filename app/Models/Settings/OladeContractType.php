@@ -18,4 +18,17 @@ class OladeContractType extends Model
         'body',
         'instructions'
     ];
+
+    const STATUSES = [
+        'active',
+        'inactive'
+    ];
+
+    const STATUS_ACTIVE = 'active';
+    const STATUS_INACTIVE = 'inactive';
+
+    function scopeWithStatus($query, $status)
+    {
+        return $query->where('status', $status);
+    }
 }

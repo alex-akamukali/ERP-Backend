@@ -17,12 +17,16 @@ class OladeContractTypeController extends Controller
     public function index()
     {
         //
-        return inertia()->render('Settings/OladeContractType',[
-            'message'=>$this->getMessage(),
-            'error'=>$this->getError(),
-            'list'=>OladeContractType::all()
+        $status = $this->getRequest('status');
+        $query = OladeContractType::query();
+        if (!empty($status)) {
+            $query = $query->withStatus($status);
+        }
+        return inertia()->render('Settings/OladeContractType', [
+            'message' => $this->getMessage(),
+            'error' => $this->getError(),
+            'list' => $query->get()
         ]);
-
     }
 
     /**
