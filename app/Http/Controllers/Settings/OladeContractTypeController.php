@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreOladeContractTypeRequest;
 use App\Http\Requests\UpdateOladeContractTypeRequest;
 use App\Models\Settings\OladeContractType;
+use App\Repositories\OladeContractTypeRepo;
 
 class OladeContractTypeController extends Controller
 {
@@ -14,18 +15,13 @@ class OladeContractTypeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(OladeContractTypeRepo $oladeContractTypeRepo)
     {
-        //
-        $status = $this->getRequest('status');
-        $query = OladeContractType::query();
-        if (!empty($status)) {
-            $query = $query->withStatus($status);
-        }
+
         return inertia()->render('Settings/OladeContractType', [
             'message' => $this->getMessage(),
             'error' => $this->getError(),
-            'list' => $query->get(),
+            'list' => $oladeContractTypeRepo->fetch(request()->all())->get(),
             'statuses'=>OladeContractType::STATUSES
         ]);
     }

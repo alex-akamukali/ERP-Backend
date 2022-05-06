@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProvinceRequest;
 use App\Http\Requests\UpdateProvinceRequest;
 use App\Models\Settings\Province;
+use App\Repositories\ProvinceRepo;
 
 class ProvinceController extends Controller
 {
@@ -14,9 +15,13 @@ class ProvinceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(ProvinceRepo $provinceRepo)
     {
-        //
+        return inertia()->render("Settings/Province",[
+            'list'=>$provinceRepo->fetch(request()->all())->get(),
+            'message'=>$this->getMessage(),
+            'error'=>$this->getError()
+        ]);
     }
 
     /**
@@ -38,6 +43,8 @@ class ProvinceController extends Controller
     public function store(StoreProvinceRequest $request)
     {
         //
+        Province::create($request->validated());
+        return $this->respondWithSuccess("New province added.");
     }
 
     /**
@@ -71,7 +78,8 @@ class ProvinceController extends Controller
      */
     public function update(UpdateProvinceRequest $request, Province $province)
     {
-        //
+        $province->update($request->validated());
+        return $this->respondWithSuccess("Province updated");
     }
 
     /**
@@ -82,6 +90,8 @@ class ProvinceController extends Controller
      */
     public function destroy(Province $province)
     {
-        //
+        $province->delete();
+        return $this->respondWithSuccess("Province removed.");
     }
+
 }

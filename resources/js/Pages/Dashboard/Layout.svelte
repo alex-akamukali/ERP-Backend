@@ -499,18 +499,28 @@
                             </a>
                         </li>
                         <li>
-                            <a href="companies">
+                            <!-- svelte-ignore a11y-invalid-attribute -->
+                            <a href="">
                                 <i class="fa fa-bank text-aqua" /> Vendors
                             </a>
                         </li>
                         <li>
-                            <a href="payrollmgrs">
+                            <!-- svelte-ignore a11y-invalid-attribute -->
+                            <a use:inertia href="/province">
+                                <i class="fa fa-bank text-aqua" /> Province
+                            </a>
+                        </li>
+
+                        <li>
+                            <!-- svelte-ignore a11y-invalid-attribute -->
+                            <a href="">
                                 <i class="fa fa-money text-blue" /> Payroll Mgrs.
                             </a>
                         </li>
                         <li>
-                            <a href="zoomaccount">
-                                <i class="fa fa-desktop text-orange" /> Zoom Setup
+                            <!-- svelte-ignore a11y-invalid-attribute -->
+                            <a href="">
+                                <i class="fa fa-desktop text-orange" /> Calendly Setup
                             </a>
                         </li>
                     </ul>

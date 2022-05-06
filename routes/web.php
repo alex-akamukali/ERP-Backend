@@ -84,3 +84,5 @@ Route::resource('knowledge-area',\App\Http\Controllers\Settings\KnowledgeAreaCon
 // Route::get('xlogin',[CheckAuthController::class,'xlogin'])->name('xlogin');
 
 Route::resource('olade-contract-type',\App\Http\Controllers\Settings\OladeContractTypeController::class)->middleware(['auth']);
+
+Route::resource('province',\App\Http\Controllers\Settings\ProvinceController::class)->middleware(['auth']);

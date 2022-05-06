@@ -13,4 +13,9 @@ class ProvinceTownCity extends Model
       'province_id',
       'name'
     ];
+
+    function scopeProvince($query,$province_id){
+        return $query->where('province_id',$province_id);
+    }
+
 }
