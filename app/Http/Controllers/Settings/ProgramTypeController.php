@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProgramTypeRequest;
 use App\Http\Requests\UpdateProgramTypeRequest;
 use App\Models\Settings\ProgramType;
+use App\Services\ProgramType\ValidateLogic;
 
 class ProgramTypeController extends Controller
 {
@@ -47,7 +48,7 @@ class ProgramTypeController extends Controller
      * @param  \App\Http\Requests\StoreProgramTypeRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProgramTypeRequest $request)
+    public function store(StoreProgramTypeRequest $request,ValidateLogic $validateLogic)
     {
         //
         ProgramType::create($request->validated());

@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -34,8 +35,32 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            //
-        });
+        // $this->reportable(function (Throwable $e) {
+        //     //
+        // });
+        // dd(990);
+
+        // $this->reportable(function(Exception $ex){
+        //     // dd(9909);
+        //     // return redirect()->back()->with([
+        //     //     'message'=>'msg.....'
+        //     // ]);
+        //     // dd(9909);
+        //     return response()->json([
+        //         'message'=>$ex->getMessage(),
+        //         'error'=>true
+        //     ],422);
+        // });
+    }
+
+    function render($request, Throwable $e)
+    {
+        if ($e instanceof MyException){
+           return redirect()->back()->with([
+               'message'=>$e->getMessage(),
+               'error'=>true
+           ]);
+        }
+        return parent::render($request,$e);
     }
 }

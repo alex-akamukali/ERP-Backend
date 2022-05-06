@@ -21,6 +21,11 @@ class AppServiceProvider extends ServiceProvider
         // inertia()->share('message2',session()->get('message'));
         // dd(csrf_token());
         // inertia()->share('crsf',csrf_token());
+        $this->app->bind('Fusers',function(){
+            return User::all();
+        });
+
+        // $this->renderable()
 
     }
 
