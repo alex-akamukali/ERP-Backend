@@ -28,6 +28,7 @@
 
                     <div class="box-tools pull-right">
                         <slot name="createButton" />
+                        <slot name="createButton2" />
                         <!-- <button
                             class="btn btn-primary btn-sm"
                             data-toggle="modal"

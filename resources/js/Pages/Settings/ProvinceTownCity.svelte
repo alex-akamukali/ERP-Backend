@@ -1,6 +1,6 @@
 <script context="module">
     import Layout from "../Dashboard/Layout.svelte";
-    import { page, useForm ,inertia} from "@inertiajs/inertia-svelte";
+    import { page, useForm, inertia } from "@inertiajs/inertia-svelte";
     import Pagination from "../../components/Pagination.svelte";
     import Page from "../../components/Page.svelte";
     import Modal from "../../components/Modal.svelte";
@@ -12,22 +12,34 @@
 <script>
     export let list;
     export let message;
+    export let provinces;
     export let error;
+    export let id;
     // export let csrf;
 
     let mode = "create";
 
-    const resource = '/province/';
+    const resource = "/province-town-city/";
 
     let closeModal = null;
 
     let form = useForm({
+        province_id: id,
         name: "",
-        id:"0"
+        id: "0",
     });
+
+    let filter = useForm({ id: id });
+
+    $: {
+        $form.province_id = id;
+        // alert(id);
+    }
+
 
     function selectRow(data) {
         $form.name = data.name;
+        $form.province_id = data.province_id;
         $form.id = data.id;
         mode = "update";
     }
@@ -62,6 +74,10 @@
         console.log(closeModal);
         closeModal.click();
     }
+
+    function onFilterChange() {
+        $filter.get(resource + "?id=" + $filter.id);
+    }
 </script>
 
 <MessageNotification
@@ -82,10 +98,24 @@
         data-target="#modal-progtype"
         on:click|preventDefault={clearForm}
     >
-        <i class="fa fa-plus" /> Add Province
+        <i class="fa fa-plus" /> Add Town/City
     </button>
+    &nbsp;
+    <a class="btn btn-primary btn-sm" use:inertia href="/province" slot="createButton2"> Back </a>
 
     <div class="col-sm-12" slot="content">
+        <div class="col-md-12" style="">
+            <label for="title">
+                Province*{$filter.id}
+            </label>
+            <select bind:value={$filter.id} on:change={onFilterChange}>
+                <option value="0">Select Province</option>
+                {#each provinces as item}
+                    <option value={item.id}>{item.name}</option>
+                {/each}
+            </select>
+        </div>
+
         <table
             id="example1"
             class="table table-data table-striped table-hover dataTable no-footer"
@@ -94,9 +124,7 @@
         >
             <thead>
                 <!-- svelte-ignore a11y-no-redundant-roles -->
-                <tr role="row"
-                    ><th>name</th>
-                </tr>
+                <tr role="row"><th>name</th> </tr>
             </thead>
             <tbody>
                 {#each list as item}
@@ -109,18 +137,14 @@
                                 data-toggle="modal"
                                 data-target="#modal-progtype"
                                 href={null}
-                                on:click|preventDefault={() =>
-                                    selectRow(item)}
+                                on:click|preventDefault={() => selectRow(item)}
                             >
                                 <i class="fa fa-edit text-green" />
                             </a>
                             &nbsp;&nbsp;
-                            <a use:inertia href={`/province-town-city/?id=${item.id}`}>Town/Cities</a>
-                            &nbsp;&nbsp;
                             <a
-                                href={'#'}
-                                on:click|preventDefault={() =>
-                                    removeRow(item)}
+                                href={"#"}
+                                on:click|preventDefault={() => removeRow(item)}
                             >
                                 <i class="fa fa-trash text-red" />
                             </a>
@@ -131,10 +155,24 @@
         </table>
     </div>
 
-    <Modal id="modal-progtype"  on:submit={callStore} on:setRef={(ref)=>closeModal=ref.detail}>
-        <span slot="title">Province</span>
+    <Modal
+        id="modal-progtype"
+        on:submit={callStore}
+        on:setRef={(ref) => (closeModal = ref.detail)}
+    >
+        <span slot="title">Town/City</span>
 
         <div class="col-md-12" slot="content">
+            <div class="col-md-12" style="text-align: right;">
+                <label for="title"> Province* </label>
+                <select bind:value={$form.province_id}>
+                    <option value="">Select Province</option>
+                    {#each provinces as item}
+                        <option value={item.id}>{item.name}</option>
+                    {/each}
+                </select>
+            </div>
+
             <div class="col-md-12">
                 <!-- svelte-ignore a11y-label-has-associated-control -->
                 <label class="control-label"
@@ -149,13 +187,12 @@
                     bind:value={$form.name}
                 />
             </div>
-
         </div>
 
         <button type="submit" class="btn btn-primary" slot="storeButton">
             <i class="fa fa-save" /> &nbsp; {mode == "create"
-                ? "Add Province"
-                : "Update Province"}
+                ? "Add Town/City"
+                : "Update Town/City"}
         </button>
     </Modal>
 </Page>

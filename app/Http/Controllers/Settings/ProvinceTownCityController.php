@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProvinceTownCityRequest;
 use App\Http\Requests\UpdateProvinceTownCityRequest;
 use App\Models\Settings\ProvinceTownCity;
+use App\Repositories\ProvinceRepo;
+use App\Repositories\ProvinceTownCityRepo;
 
 class ProvinceTownCityController extends Controller
 {
@@ -14,9 +16,16 @@ class ProvinceTownCityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(ProvinceTownCityRepo $provinceTownCityRepo, ProvinceRepo $provinceRepo)
     {
         //
+        return inertia()->render('Settings/ProvinceTownCity', [
+            'message' => $this->getMessage(),
+            'error' => $this->getError(),
+            'list' => $provinceTownCityRepo->fetch(request()->all())->get(),
+            'provinces' => $provinceRepo->fetch(request()->all())->get(),
+            'id'=>request('id')
+        ]);
     }
 
     /**
@@ -37,7 +46,8 @@ class ProvinceTownCityController extends Controller
      */
     public function store(StoreProvinceTownCityRequest $request)
     {
-        //
+        ProvinceTownCity::create($request->validated());
+        return $this->respondWithSuccess("Town/City added.");
     }
 
     /**
@@ -72,6 +82,8 @@ class ProvinceTownCityController extends Controller
     public function update(UpdateProvinceTownCityRequest $request, ProvinceTownCity $provinceTownCity)
     {
         //
+        $provinceTownCity->update($request->validated());
+        return $this->respondWithSuccess("Town/City updated.");
     }
 
     /**
@@ -83,5 +95,7 @@ class ProvinceTownCityController extends Controller
     public function destroy(ProvinceTownCity $provinceTownCity)
     {
         //
+        $provinceTownCity->delete();
+        return $this->respondWithSuccess("Town/City removed.");
     }
 }
