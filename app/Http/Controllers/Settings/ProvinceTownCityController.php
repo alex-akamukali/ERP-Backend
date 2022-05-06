@@ -26,6 +26,7 @@ class ProvinceTownCityController extends Controller
             'provinces' => $provinceRepo->fetch(request()->all())->get(),
             'id'=>request('id')
         ]);
+        //request('id')
     }
 
     /**

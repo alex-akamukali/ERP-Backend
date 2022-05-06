@@ -15,11 +15,10 @@
     export let provinces;
     export let error;
     export let id;
-    // export let csrf;
 
     let mode = "create";
 
-    let mid = 1;
+
 
     const resource = "/province-town-city/";
 
@@ -27,18 +26,19 @@
 
     // alert(id);
 
+
     let form = useForm({
-        province_id: id,
+        province_id: +id,
         name: "",
 
     });
 
-    let filter = useForm({ id: id });
+    let filter = useForm({ id:+id });
 
-    $: {
-        // $form.province_id = id;
-        // alert(id);
-    }
+    // $: {
+    //     $filter.id = id;
+    // }
+
 
 
     function selectRow(data) {
@@ -110,12 +110,14 @@
     <div class="col-sm-12" slot="content">
         <div class="col-md-12" style="">
             <label for="title">
-                Province*{$filter.id}
+                Province*({$filter.id})
             </label>
-            <select bind:value={$form.province_id} on:change={onFilterChange}>
+            <select bind:value={$filter.id}>
                 <option value="">Select Province</option>
-                {#each provinces as item}
-                    <option value={item.id}>{item.name}</option>
+                {#each provinces as item1}
+                    <option value={item1.id}>
+                        {item1.name}
+                    </option>
                 {/each}
             </select>
         </div>
