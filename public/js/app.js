@@ -12097,7 +12097,7 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "data-toggle", "modal");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "data-target", "#modal-progtype");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", a0_href_value = null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", a1_href_value = "/province-town-city/?id=".concat(
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", a1_href_value = "/province-town-city/?province_id=".concat(
       /*item*/
       ctx[17].id));
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", a2_href_value = '#');
@@ -12132,7 +12132,7 @@ function create_each_block(ctx) {
 
       if (dirty &
       /*list*/
-      2 && a1_href_value !== (a1_href_value = "/province-town-city/?id=".concat(
+      2 && a1_href_value !== (a1_href_value = "/province-town-city/?province_id=".concat(
       /*item*/
       ctx[17].id))) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", a1_href_value);
@@ -12633,7 +12633,7 @@ function create_content_slot_1(ctx) {
       ctx[7].province_id === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
         return (
           /*select_change_handler_1*/
-          ctx[20].call(select)
+          ctx[21].call(select)
         );
       });
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "col-md-12");
@@ -12675,9 +12675,9 @@ function create_content_slot_1(ctx) {
       if (!mounted) {
         dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
         /*select_change_handler_1*/
-        ctx[20]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input, "input",
+        ctx[21]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input, "input",
         /*input_input_handler*/
-        ctx[21])];
+        ctx[22])];
         mounted = true;
       }
     },
@@ -12801,7 +12801,7 @@ function create_default_slot(ctx) {
   ctx[13]);
   modal.$on("setRef",
   /*setRef_handler*/
-  ctx[22]);
+  ctx[23]);
   return {
     c: function c() {
       t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" \n    \n\n    \n\n    ");
@@ -12995,7 +12995,7 @@ function create_each_block(ctx) {
   function click_handler() {
     return (
       /*click_handler*/
-      ctx[18](
+      ctx[19](
       /*item*/
       ctx[24])
     );
@@ -13004,7 +13004,7 @@ function create_each_block(ctx) {
   function click_handler_1() {
     return (
       /*click_handler_1*/
-      ctx[19](
+      ctx[20](
       /*item*/
       ctx[24])
     );
@@ -13066,19 +13066,13 @@ function create_content_slot(ctx) {
   var div1;
   var div0;
   var label;
-  var t0;
-  var t1_value =
-  /*$filter*/
-  ctx[6].id + "";
   var t1;
-  var t2;
-  var t3;
   var select;
   var option;
-  var t5;
+  var t3;
   var table;
   var thead;
-  var t7;
+  var t5;
   var tbody;
   var mounted;
   var dispose;
@@ -13105,10 +13099,8 @@ function create_content_slot(ctx) {
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Province*(");
-      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t1_value);
-      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(")");
-      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      label.textContent = "Province*";
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       select = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
       option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
       option.textContent = "Select Province";
@@ -13117,11 +13109,11 @@ function create_content_slot(ctx) {
         each_blocks_1[_i5].c();
       }
 
-      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
       thead = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("thead");
       thead.innerHTML = "<tr role=\"row\"><th>name</th></tr>";
-      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       tbody = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tbody");
 
       for (var _i6 = 0; _i6 < each_blocks.length; _i6 += 1) {
@@ -13133,10 +13125,10 @@ function create_content_slot(ctx) {
       option.value = option.__value;
       if (
       /*$filter*/
-      ctx[6].id === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
+      ctx[6].province_id === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
         return (
           /*select_change_handler*/
-          ctx[17].call(select)
+          ctx[18].call(select)
         );
       });
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "col-md-12");
@@ -13152,10 +13144,7 @@ function create_content_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div1, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, div0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, label);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(label, t0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(label, t1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(label, t2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, select);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option);
 
@@ -13165,11 +13154,11 @@ function create_content_slot(ctx) {
 
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
       /*$filter*/
-      ctx[6].id);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t5);
+      ctx[6].province_id);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t3);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, table);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, thead);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t5);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, tbody);
 
       for (var _i8 = 0; _i8 < each_blocks.length; _i8 += 1) {
@@ -13177,19 +13166,15 @@ function create_content_slot(ctx) {
       }
 
       if (!mounted) {
-        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
         /*select_change_handler*/
-        ctx[17]);
+        ctx[18]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
+        /*onFilterChange*/
+        ctx[16])];
         mounted = true;
       }
     },
     p: function p(ctx, dirty) {
-      if (dirty[0] &
-      /*$filter*/
-      64 && t1_value !== (t1_value =
-      /*$filter*/
-      ctx[6].id + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1, t1_value);
-
       if (dirty[0] &
       /*provinces*/
       4) {
@@ -13225,7 +13210,7 @@ function create_content_slot(ctx) {
       68) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
         /*$filter*/
-        ctx[6].id);
+        ctx[6].province_id);
       }
 
       if (dirty[0] &
@@ -13263,7 +13248,7 @@ function create_content_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks_1, detaching);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
       mounted = false;
-      dispose();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
 }
@@ -13400,7 +13385,7 @@ function instance($$self, $$props, $$invalidate) {
     return $$invalidate(7, $form = value);
   });
   var filter = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_5__.useForm)({
-    id: +id
+    province_id: +id
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, filter, function (value) {
     return $$invalidate(6, $filter = value);
@@ -13447,11 +13432,11 @@ function instance($$self, $$props, $$invalidate) {
   }
 
   function onFilterChange() {
-    $filter.get(resource + "?id=" + $filter.id);
+    $filter.get(resource);
   }
 
   function select_change_handler() {
-    $filter.id = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_value)(this);
+    $filter.province_id = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_value)(this);
     filter.set($filter);
     $$invalidate(2, provinces);
   }
@@ -13485,10 +13470,10 @@ function instance($$self, $$props, $$invalidate) {
     if ('message' in $$props) $$invalidate(0, message = $$props.message);
     if ('provinces' in $$props) $$invalidate(2, provinces = $$props.provinces);
     if ('error' in $$props) $$invalidate(3, error = $$props.error);
-    if ('id' in $$props) $$invalidate(16, id = $$props.id);
+    if ('id' in $$props) $$invalidate(17, id = $$props.id);
   };
 
-  return [message, list, provinces, error, mode, closeModal, $filter, $form, form, filter, selectRow, removeRow, clearForm, callStore, onResetMessage, onCloseModal, id, select_change_handler, click_handler, click_handler_1, select_change_handler_1, input_input_handler, setRef_handler];
+  return [message, list, provinces, error, mode, closeModal, $filter, $form, form, filter, selectRow, removeRow, clearForm, callStore, onResetMessage, onCloseModal, onFilterChange, id, select_change_handler, click_handler, click_handler_1, select_change_handler_1, input_input_handler, setRef_handler];
 }
 
 var ProvinceTownCity = /*#__PURE__*/function (_SvelteComponent) {
@@ -13507,7 +13492,7 @@ var ProvinceTownCity = /*#__PURE__*/function (_SvelteComponent) {
       message: 0,
       provinces: 2,
       error: 3,
-      id: 16
+      id: 17
     }, null, [-1, -1]);
     return _this;
   }

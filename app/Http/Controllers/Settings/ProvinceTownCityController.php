@@ -24,7 +24,7 @@ class ProvinceTownCityController extends Controller
             'error' => $this->getError(),
             'list' => $provinceTownCityRepo->fetch(request()->all())->get(),
             'provinces' => $provinceRepo->fetch(request()->all())->get(),
-            'id'=>request('id')
+            'id'=>request('province_id')
         ]);
         //request('id')
     }

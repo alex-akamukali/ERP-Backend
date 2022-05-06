@@ -33,7 +33,7 @@
 
     });
 
-    let filter = useForm({ id:+id });
+    let filter = useForm({ province_id:+id });
 
     // $: {
     //     $filter.id = id;
@@ -80,7 +80,7 @@
     }
 
     function onFilterChange() {
-        $filter.get(resource + "?id=" + $filter.id);
+        $filter.get(resource);
     }
 </script>
 
@@ -110,9 +110,9 @@
     <div class="col-sm-12" slot="content">
         <div class="col-md-12" style="">
             <label for="title">
-                Province*({$filter.id})
+                Province*
             </label>
-            <select bind:value={$filter.id}>
+            <select bind:value={$filter.province_id} on:change={onFilterChange}>
                 <option value="">Select Province</option>
                 {#each provinces as item1}
                     <option value={item1.id}>

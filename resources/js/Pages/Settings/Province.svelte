@@ -115,7 +115,7 @@
                                 <i class="fa fa-edit text-green" />
                             </a>
                             &nbsp;&nbsp;
-                            <a use:inertia href={`/province-town-city/?id=${item.id}`}>Town/Cities</a>
+                            <a use:inertia href={`/province-town-city/?province_id=${item.id}`}>Town/Cities</a>
                             &nbsp;&nbsp;
                             <a
                                 href={'#'}
