@@ -12516,7 +12516,7 @@ function get_each_context_1(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[24] = list[i];
   return child_ctx;
-} // (163:8) 
+} // (167:8) 
 
 
 function create_title_slot_1(ctx) {
@@ -12535,7 +12535,7 @@ function create_title_slot_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
     }
   };
-} // (170:20) {#each provinces as item}
+} // (174:20) {#each provinces as item}
 
 
 function create_each_block_2(ctx) {
@@ -12578,7 +12578,7 @@ function create_each_block_2(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
     }
   };
-} // (165:8) 
+} // (169:8) 
 
 
 function create_content_slot_1(ctx) {
@@ -12737,7 +12737,7 @@ function create_content_slot_1(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
-} // (192:8) 
+} // (196:8) 
 
 
 function create_storeButton_slot(ctx) {
@@ -12776,7 +12776,7 @@ function create_storeButton_slot(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(button);
     }
   };
-} // (92:0) <Page>
+} // (96:0) <Page>
 
 
 function create_default_slot(ctx) {
@@ -12842,7 +12842,7 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(modal, detaching);
     }
   };
-} // (93:4) 
+} // (97:4) 
 
 
 function create_title_slot(ctx) {
@@ -12861,7 +12861,7 @@ function create_title_slot(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
     }
   };
-} // (94:4) 
+} // (98:4) 
 
 
 function create_createButton_slot(ctx) {
@@ -12894,7 +12894,7 @@ function create_createButton_slot(ctx) {
       dispose();
     }
   };
-} // (104:4) 
+} // (108:4) 
 
 
 function create_createButton2_slot(ctx) {
@@ -12925,7 +12925,7 @@ function create_createButton2_slot(ctx) {
       dispose();
     }
   };
-} // (113:16) {#each provinces as item}
+} // (117:16) {#each provinces as item}
 
 
 function create_each_block_1(ctx) {
@@ -12968,7 +12968,7 @@ function create_each_block_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
     }
   };
-} // (130:16) {#each list as item}
+} // (134:16) {#each list as item}
 
 
 function create_each_block(ctx) {
@@ -13056,7 +13056,7 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
-} // (106:4) 
+} // (110:4) 
 
 
 function create_content_slot(ctx) {
@@ -13124,11 +13124,11 @@ function create_content_slot(ctx) {
       }
 
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label, "for", "title");
-      option.__value = "0";
+      option.__value = "";
       option.value = option.__value;
       if (
-      /*$filter*/
-      ctx[6].id === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
+      /*$form*/
+      ctx[7].province_id === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
         return (
           /*select_change_handler*/
           ctx[18].call(select)
@@ -13158,8 +13158,8 @@ function create_content_slot(ctx) {
       }
 
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
-      /*$filter*/
-      ctx[6].id);
+      /*$form*/
+      ctx[7].province_id);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, table);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, thead);
@@ -13217,11 +13217,11 @@ function create_content_slot(ctx) {
       }
 
       if (dirty[0] &
-      /*$filter, provinces*/
-      68) {
+      /*$form, provinces*/
+      132) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
-        /*$filter*/
-        ctx[6].id);
+        /*$form*/
+        ctx[7].province_id);
       }
 
       if (dirty[0] &
@@ -13343,7 +13343,7 @@ function create_fragment(ctx) {
       var page_1_changes = {};
 
       if (dirty[0] &
-      /*list, $filter, provinces, closeModal, mode, $form*/
+      /*list, $form, provinces, $filter, closeModal, mode*/
       246 | dirty[1] &
       /*$$scope*/
       1) {
@@ -13375,6 +13375,7 @@ function create_fragment(ctx) {
 }
 
 var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_6__["default"];
+var mid = 1;
 var resource = "/province-town-city/";
 
 function instance($$self, $$props, $$invalidate) {
@@ -13387,11 +13388,11 @@ function instance($$self, $$props, $$invalidate) {
   var id = $$props.id; // export let csrf;
 
   var mode = "create";
-  var closeModal = null;
+  var closeModal = null; // alert(id);
+
   var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_5__.useForm)({
     province_id: id,
-    name: "",
-    id: "0"
+    name: ""
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
     return $$invalidate(7, $form = value);
@@ -13446,8 +13447,8 @@ function instance($$self, $$props, $$invalidate) {
   }
 
   function select_change_handler() {
-    $filter.id = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_value)(this);
-    filter.set($filter);
+    $form.province_id = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_value)(this);
+    form.set($form);
     $$invalidate(2, provinces);
   }
 
@@ -13483,16 +13484,9 @@ function instance($$self, $$props, $$invalidate) {
     if ('id' in $$props) $$invalidate(17, id = $$props.id);
   };
 
-  $$self.$$.update = function () {
-    if ($$self.$$.dirty[0] &
-    /*id*/
-    131072) {
-      $: {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.province_id = id, $form);
-      } // alert(id);
+  $: {} // $form.province_id = id;
+  // alert(id);
 
-    }
-  };
 
   return [message, list, provinces, error, mode, closeModal, $filter, $form, form, filter, selectRow, removeRow, clearForm, callStore, onResetMessage, onCloseModal, onFilterChange, id, select_change_handler, click_handler, click_handler_1, select_change_handler_1, input_input_handler, setRef_handler];
 }

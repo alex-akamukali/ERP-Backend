@@ -19,20 +19,24 @@
 
     let mode = "create";
 
+    let mid = 1;
+
     const resource = "/province-town-city/";
 
     let closeModal = null;
 
+    // alert(id);
+
     let form = useForm({
         province_id: id,
         name: "",
-        id: "0",
+
     });
 
     let filter = useForm({ id: id });
 
     $: {
-        $form.province_id = id;
+        // $form.province_id = id;
         // alert(id);
     }
 
@@ -108,8 +112,8 @@
             <label for="title">
                 Province*{$filter.id}
             </label>
-            <select bind:value={$filter.id} on:change={onFilterChange}>
-                <option value="0">Select Province</option>
+            <select bind:value={$form.province_id} on:change={onFilterChange}>
+                <option value="">Select Province</option>
                 {#each provinces as item}
                     <option value={item.id}>{item.name}</option>
                 {/each}
