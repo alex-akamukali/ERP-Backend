@@ -42,6 +42,8 @@ class PayrollManagerController extends Controller
     public function store(StorePayrollManagerRequest $request)
     {
         //
+        PayrollManager::create($request->validated());
+        return $this->respondWithSuccess("New payroll manager added");
     }
 
     /**
@@ -76,6 +78,8 @@ class PayrollManagerController extends Controller
     public function update(UpdatePayrollManagerRequest $request, PayrollManager $payrollManager)
     {
         //
+        $payrollManager->update($request->validated());
+        return $this->respondWithSuccess("Payroll manager updated");
     }
 
     /**
@@ -87,5 +91,7 @@ class PayrollManagerController extends Controller
     public function destroy(PayrollManager $payrollManager)
     {
         //
+        $payrollManager->delete();
+        return $this->respondWithSuccess("Payroll manager removed");
     }
 }

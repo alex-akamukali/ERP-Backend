@@ -17,6 +17,7 @@ class CreatePayrollManagersTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->text('description')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

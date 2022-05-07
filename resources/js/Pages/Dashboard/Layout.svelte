@@ -513,7 +513,7 @@
 
                         <li>
                             <!-- svelte-ignore a11y-invalid-attribute -->
-                            <a href="">
+                            <a use:inertia="{{ preserveScroll: true }}" href="/payroll-manager">
                                 <i class="fa fa-money text-blue" /> Payroll Mgrs.
                             </a>
                         </li>

@@ -25,7 +25,8 @@ class UpdatePayrollManagerRequest extends FormRequest
     {
         return [
             'name'=>'required',
-            'description'=>'required'
+            'description'=>'required',
+            'status'=>'required'
         ];
     }
 }
