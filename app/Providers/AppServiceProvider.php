@@ -26,6 +26,14 @@ class AppServiceProvider extends ServiceProvider
         });
 
         // $this->renderable()
+        // $message = '';
+        // // $error = false;
+        // if (session()->has('message')){
+        //   $message = session()->get('message');
+        // //   $error = session()->get('error');
+        // }
+        // return $message;
+
 
     }
 
@@ -37,6 +45,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-
+        // view()->share('message','ok...');
+        // view()->share('error',false);
     }
 }

@@ -10962,9 +10962,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[22] = list[i];
+  child_ctx[19] = list[i];
   return child_ctx;
-} // (145:8) 
+} // (146:8) 
 
 
 function create_title_slot_1(ctx) {
@@ -10983,7 +10983,7 @@ function create_title_slot_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
     }
   };
-} // (147:8) 
+} // (148:8) 
 
 
 function create_content_slot_1(ctx) {
@@ -11060,7 +11060,7 @@ function create_content_slot_1(ctx) {
       ctx[5].status === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
         return (
           /*select_change_handler*/
-          ctx[20].call(select)
+          ctx[17].call(select)
         );
       });
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "col-md-12");
@@ -11099,11 +11099,11 @@ function create_content_slot_1(ctx) {
       if (!mounted) {
         dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input, "input",
         /*input_input_handler*/
-        ctx[18]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(textarea, "input",
+        ctx[15]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(textarea, "input",
         /*textarea_input_handler*/
-        ctx[19]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
+        ctx[16]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
         /*select_change_handler*/
-        ctx[20])];
+        ctx[17])];
         mounted = true;
       }
     },
@@ -11140,7 +11140,7 @@ function create_content_slot_1(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
-} // (193:8) 
+} // (194:8) 
 
 
 function create_storeButton_slot(ctx) {
@@ -11179,7 +11179,7 @@ function create_storeButton_slot(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(button);
     }
   };
-} // (81:0) <Page>
+} // (82:0) <Page>
 
 
 function create_default_slot(ctx) {
@@ -11203,7 +11203,7 @@ function create_default_slot(ctx) {
   ctx[10]);
   modal.$on("setRef",
   /*setRef_handler*/
-  ctx[21]);
+  ctx[18]);
   return {
     c: function c() {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(modal.$$.fragment);
@@ -11217,7 +11217,7 @@ function create_default_slot(ctx) {
 
       if (dirty &
       /*$$scope, mode, $form*/
-      33554472) {
+      4194344) {
         modal_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -11239,7 +11239,7 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(modal, detaching);
     }
   };
-} // (82:4) 
+} // (83:4) 
 
 
 function create_title_slot(ctx) {
@@ -11258,7 +11258,7 @@ function create_title_slot(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
     }
   };
-} // (83:4) 
+} // (84:4) 
 
 
 function create_createButton_slot(ctx) {
@@ -11291,7 +11291,7 @@ function create_createButton_slot(ctx) {
       dispose();
     }
   };
-} // (108:16) {#each programTypes as programType}
+} // (109:16) {#each programTypes as programType}
 
 
 function create_each_block(ctx) {
@@ -11299,19 +11299,19 @@ function create_each_block(ctx) {
   var td0;
   var t0_value =
   /*programType*/
-  ctx[22].title + "";
+  ctx[19].title + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
   /*programType*/
-  ctx[22].description + "";
+  ctx[19].description + "";
   var t2;
   var t3;
   var td2;
   var t4_value =
   /*programType*/
-  ctx[22].status + "";
+  ctx[19].status + "";
   var t4;
   var t5;
   var td3;
@@ -11327,18 +11327,18 @@ function create_each_block(ctx) {
   function click_handler() {
     return (
       /*click_handler*/
-      ctx[16](
+      ctx[13](
       /*programType*/
-      ctx[22])
+      ctx[19])
     );
   }
 
   function click_handler_1() {
     return (
       /*click_handler_1*/
-      ctx[17](
+      ctx[14](
       /*programType*/
-      ctx[22])
+      ctx[19])
     );
   }
 
@@ -11395,17 +11395,17 @@ function create_each_block(ctx) {
       /*programTypes*/
       2 && t0_value !== (t0_value =
       /*programType*/
-      ctx[22].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+      ctx[19].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
       if (dirty &
       /*programTypes*/
       2 && t2_value !== (t2_value =
       /*programType*/
-      ctx[22].description + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      ctx[19].description + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
       if (dirty &
       /*programTypes*/
       2 && t4_value !== (t4_value =
       /*programType*/
-      ctx[22].status + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t4, t4_value);
+      ctx[19].status + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t4, t4_value);
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
@@ -11413,7 +11413,7 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
-} // (93:4) 
+} // (94:4) 
 
 
 function create_content_slot(ctx) {
@@ -11582,7 +11582,7 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*$$scope, programTypes, closeModal, mode, $form*/
-      33554490) {
+      4194362) {
         page_1_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -11611,13 +11611,11 @@ function create_fragment(ctx) {
 }
 
 var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_6__["default"];
+var resource = '/program-type/';
 
 function instance($$self, $$props, $$invalidate) {
   var $form;
   var programTypes = $$props.programTypes;
-  var store = $$props.store;
-  var update = $$props.update;
-  var destroy = $$props.destroy;
   var message = $$props.message;
   var error = $$props.error; // export let csrf;
 
@@ -11631,7 +11629,7 @@ function instance($$self, $$props, $$invalidate) {
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
     return $$invalidate(5, $form = value);
-  });
+  }); // alert(message);
 
   function selectRow(data) {
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.description = data.description, $form);
@@ -11643,7 +11641,7 @@ function instance($$self, $$props, $$invalidate) {
 
   function removeRow(data) {
     if (confirm("Do you want to confirm this action?")) {
-      $form["delete"](destroy + "/" + data.id);
+      $form["delete"](resource + data.id);
     }
   }
 
@@ -11654,9 +11652,9 @@ function instance($$self, $$props, $$invalidate) {
 
   function callStore() {
     if (mode == "create") {
-      $form.post(store);
+      $form.post(resource);
     } else {
-      $form.put(update + "/" + $form.id);
+      $form.put(resource + $form.id);
     }
   }
 
@@ -11701,14 +11699,11 @@ function instance($$self, $$props, $$invalidate) {
 
   $$self.$$set = function ($$props) {
     if ('programTypes' in $$props) $$invalidate(1, programTypes = $$props.programTypes);
-    if ('store' in $$props) $$invalidate(13, store = $$props.store);
-    if ('update' in $$props) $$invalidate(14, update = $$props.update);
-    if ('destroy' in $$props) $$invalidate(15, destroy = $$props.destroy);
     if ('message' in $$props) $$invalidate(0, message = $$props.message);
     if ('error' in $$props) $$invalidate(2, error = $$props.error);
   };
 
-  return [message, programTypes, error, mode, closeModal, $form, form, selectRow, removeRow, clearForm, callStore, onResetMessage, onCloseModal, store, update, destroy, click_handler, click_handler_1, input_input_handler, textarea_input_handler, select_change_handler, setRef_handler];
+  return [message, programTypes, error, mode, closeModal, $form, form, selectRow, removeRow, clearForm, callStore, onResetMessage, onCloseModal, click_handler, click_handler_1, input_input_handler, textarea_input_handler, select_change_handler, setRef_handler];
 }
 
 var ProgramType = /*#__PURE__*/function (_SvelteComponent) {
@@ -11724,9 +11719,6 @@ var ProgramType = /*#__PURE__*/function (_SvelteComponent) {
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
       programTypes: 1,
-      store: 13,
-      update: 14,
-      destroy: 15,
       message: 0,
       error: 2
     });

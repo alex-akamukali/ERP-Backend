@@ -11,6 +11,23 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    // protected $data = [];
+
+
+
+    // function __construct()
+    // {
+    //     // parent::__construct();
+    //     $this->data['message'] = $this->getMessage();
+    //     $this->data['error'] = $this->getError();
+    // }
+
+    function data($data=[]){
+        $data['message'] = $this->getMessage();
+        $data['error'] = $this->getError();
+        return $data;
+    }
+
     function getMessage(){
         $message = '';
         // $error = false;

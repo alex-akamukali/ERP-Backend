@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProgramTypeRequest;
 use App\Http\Requests\UpdateProgramTypeRequest;
 use App\Models\Settings\ProgramType;
+use App\Repositories\ProgramTypeRepo;
 use App\Services\ProgramType\ValidateLogic;
 
 class ProgramTypeController extends Controller
@@ -15,21 +16,11 @@ class ProgramTypeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(ProgramTypeRepo $programTypeRepo)
     {
-        //
-        $message = $this->getMessage();
-        $error = $this->getError();
-
-        return inertia()->render('Settings/ProgramType', [
-            'programTypes' => ProgramType::all(),
-            'store' => route('program-type.store'),
-            'update' => route('program-type.update', ['']),
-            'destroy' => route('program-type.destroy', ['']),
-            'message' => $message,
-            'error' => $error,
-            'csrf' => csrf_token()
-        ]);
+        return inertia()->render('Settings/ProgramType', $this->data([
+            'programTypes' => $programTypeRepo->fetch()->get()
+        ]));
     }
 
     /**
@@ -48,8 +39,9 @@ class ProgramTypeController extends Controller
      * @param  \App\Http\Requests\StoreProgramTypeRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProgramTypeRequest $request,ValidateLogic $validateLogic)
+    public function store(StoreProgramTypeRequest $request)
     {
+        // ValidateLogic $validateLogic
         //
         ProgramType::create($request->validated());
         return $this->respondWithSuccess('Program Type Added');

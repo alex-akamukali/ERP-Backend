@@ -11,14 +11,13 @@
 
 <script>
     export let programTypes;
-    export let store;
-    export let update;
-    export let destroy;
     export let message;
     export let error;
     // export let csrf;
 
     let mode = "create";
+
+    const resource = '/program-type/';
 
     let closeModal = null;
 
@@ -28,6 +27,8 @@
         status: "active",
         id: "0",
     });
+
+    // alert(message);
 
     function selectRow(data) {
         $form.description = data.description;
@@ -39,7 +40,7 @@
 
     function removeRow(data) {
         if (confirm("Do you want to confirm this action?")) {
-            $form.delete(destroy + "/" + data.id);
+            $form.delete(resource + data.id);
         }
     }
 
@@ -50,9 +51,9 @@
 
     function callStore() {
         if (mode == "create") {
-            $form.post(store);
+            $form.post(resource);
         } else {
-            $form.put(update + "/" + $form.id);
+            $form.put(resource + $form.id);
         }
     }
 
