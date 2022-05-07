@@ -332,7 +332,7 @@
                 </li>
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active">
-                    <a use:inertia href={dashboard_route}
+                    <a use:inertia="{{ preserveScroll: true }}" href={dashboard_route}
                         ><i class="fa fa-tachometer" />
                         <span> Dashboard </span></a
                     >
@@ -345,7 +345,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li>
-                            <a use:inertia href={all_users_route}>
+                            <a use:inertia="{{ preserveScroll: true }}" href="/all-users">
                                 <i class="fa fa-user" /> All User</a
                             >
                         </li>
@@ -480,33 +480,33 @@
                     </a>
                     <ul class="treeview-menu">
                         <li>
-                            <a use:inertia href={program_type_index_route}>
+                            <a use:inertia="{{ preserveScroll: true }}" href={program_type_index_route}>
                                 <i class="fa fa-graduation-cap" /> Program Type
                             </a>
                         </li>
                         <li>
                             <a
-                                use:inertia
+                            use:inertia="{{ preserveScroll: true }}"
                                 href={'/knowledge-area'}
                             >
                                 <i class="fa fa-book text-orange" /> Knowledge Area
                             </a>
                         </li>
                         <li>
-                            <a use:inertia href="/olade-contract-type">
+                            <a use:inertia="{{ preserveScroll: true }}" href="/olade-contract-type">
                                 <i class="fa fa-file-o text-green" /> Olade Contract
                                 Type
                             </a>
                         </li>
                         <li>
                             <!-- svelte-ignore a11y-invalid-attribute -->
-                            <a use:inertia href="/vendor-company">
+                            <a use:inertia="{{ preserveScroll: true }}" href="/vendor-company">
                                 <i class="fa fa-bank text-aqua" /> Vendors
                             </a>
                         </li>
                         <li>
                             <!-- svelte-ignore a11y-invalid-attribute -->
-                            <a use:inertia href="/province">
+                            <a use:inertia="{{ preserveScroll: true }}" href="/province">
                                 <i class="fa fa-bank text-aqua" /> Province
                             </a>
                         </li>
