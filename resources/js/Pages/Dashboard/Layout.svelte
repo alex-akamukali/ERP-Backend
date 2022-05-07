@@ -519,8 +519,8 @@
                         </li>
                         <li>
                             <!-- svelte-ignore a11y-invalid-attribute -->
-                            <a href="">
-                                <i class="fa fa-desktop text-orange" /> Calendly Setup
+                            <a use:inertia="{{ preserveScroll: true }}" href="/config">
+                                <i class="fa fa-desktop text-orange" /> Configurations
                             </a>
                         </li>
                     </ul>
