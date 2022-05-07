@@ -22,7 +22,7 @@ class KnowledgeAreaController extends Controller
         //
         return $this->inertiaRenderResource("Settings/KnowledgeArea", "knowledge-area", [
             'program_types' =>$programTypeRepo->fetch()->active()->get(),
-            'list'=>$knowledgeAreaRepo->fetch()->get(),
+            'list'=>$knowledgeAreaRepo->fetch(request()->all())->get(),
             'knowledge_area_types'=>KnowledgeArea::KNOWLEDGE_AREA_TYPES,
             'statuses'=>KnowledgeArea::STATUSES
         ]);
