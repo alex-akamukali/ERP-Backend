@@ -5,6 +5,7 @@
     import Page from "../../components/Page.svelte";
     import Modal from "../../components/Modal.svelte";
     import MessageNotification from "../Components/MessageNotification.svelte";
+    import Calendly from "../../components/Calendly.svelte";
 
     export const layout = Layout;
 </script>
@@ -90,6 +91,7 @@
     </button>
 
     <div class="col-sm-12" slot="content">
+        <Calendly url="easymagic1/30min" />
         <table
             id="example1"
             class="table table-data table-striped table-hover dataTable no-footer"
