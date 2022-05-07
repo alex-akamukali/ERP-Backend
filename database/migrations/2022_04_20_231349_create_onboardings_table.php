@@ -30,7 +30,6 @@ class CreateOnboardingsTable extends Migration
             $table->string('annual_salary')->nullable();
 
             //Contract
-
             $table->string('vendor_rate')->nullable();
             $table->string('olade_rate')->nullable();
             $table->string('consultant_incorporation_name')->nullable();
