@@ -12,15 +12,15 @@
 <script>
     export let list;
     export let message;
-    export let provinces;
+
     export let error;
-    export let id;
+
 
     let mode = "create";
 
 
 
-    const resource = "/province-town-city/";
+    const resource = "/vendor-company/";
 
     let closeModal = null;
 
@@ -28,22 +28,16 @@
 
 
     let form = useForm({
-        province_id: +id,
+        description: '',
         name: "",
-
+        id:0
     });
-
-    let filter = useForm({ province_id:+id });
-
-    // $: {
-    //     $filter.id = id;
-    // }
 
 
 
     function selectRow(data) {
         $form.name = data.name;
-        $form.province_id = data.province_id;
+        $form.description = data.description;
         $form.id = data.id;
         mode = "update";
     }
@@ -55,8 +49,7 @@
     }
 
     function clearForm() {
-        $form.reset('name');
-
+        $form.reset();
         mode = "create";
     }
 
@@ -84,9 +77,6 @@
         $form.get(resource);
     }
 
-    $: if ($form.province_id){
-    //    onFilterChange();
-    }
 
 </script>
 
@@ -100,7 +90,7 @@
 />
 
 <Page>
-    <span slot="title">Province</span>
+    <span slot="title">Vendors</span>
     <button
         slot="createButton"
         class="btn btn-primary btn-sm"
@@ -108,25 +98,11 @@
         data-target="#modal-progtype"
         on:click|preventDefault={clearForm}
     >
-        <i class="fa fa-plus" /> Add Town/City
+        <i class="fa fa-plus" /> Add Vendor
     </button>
-    &nbsp;
-    <a class="btn btn-primary btn-sm" use:inertia href="/province" slot="createButton2"> Back </a>
+
 
     <div class="col-sm-12" slot="content">
-        <div class="col-md-12" style="">
-            <label for="title">
-                Province*
-            </label>
-            <select bind:value={$form.province_id} on:change={onFilterChange}>
-                <option value="">Select Province</option>
-                {#each provinces as item1}
-                    <option value={item1.id}>
-                        {item1.name}
-                    </option>
-                {/each}
-            </select>
-        </div>
 
         <table
             id="example1"
@@ -172,18 +148,9 @@
         on:submit={callStore}
         on:setRef={(ref) => (closeModal = ref.detail)}
     >
-        <span slot="title">Town/City</span>
+        <span slot="title">Vendor</span>
 
         <div class="col-md-12" slot="content">
-            <div class="col-md-12" style="text-align: right;">
-                <label for="title"> Province* </label>
-                <select bind:value={$form.province_id} on:change={onFilterChange}>
-                    <option value="">Select Province</option>
-                    {#each provinces as item}
-                        <option value={item.id}>{item.name}</option>
-                    {/each}
-                </select>
-            </div>
 
             <div class="col-md-12">
                 <!-- svelte-ignore a11y-label-has-associated-control -->
@@ -199,12 +166,28 @@
                     bind:value={$form.name}
                 />
             </div>
+
+            <div class="col-md-12">
+                <!-- svelte-ignore a11y-label-has-associated-control -->
+                <label class="control-label"
+                    >Description <b style="color:red">*</b></label
+                >
+                <textarea
+                    type="text"
+                    class="form-control"
+                    name="proTitle"
+                    placeholder=""
+                    required=""
+                    bind:value={$form.description}
+                ></textarea>
+            </div>
+
         </div>
 
         <button type="submit" class="btn btn-primary" slot="storeButton">
             <i class="fa fa-save" /> &nbsp; {mode == "create"
-                ? "Add Town/City"
-                : "Update Town/City"}
+                ? "Add Vendor"
+                : "Update Vendor"}
         </button>
     </Modal>
 </Page>

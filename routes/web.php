@@ -88,3 +88,5 @@ Route::resource('olade-contract-type',\App\Http\Controllers\Settings\OladeContra
 Route::resource('province',\App\Http\Controllers\Settings\ProvinceController::class)->middleware(['auth']);
 
 Route::resource('province-town-city',\App\Http\Controllers\Settings\ProvinceTownCityController::class)->middleware(['auth']);
+
+Route::resource('vendor-company',\App\Http\Controllers\Settings\VendorController::class)->middleware(['auth']);

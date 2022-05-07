@@ -500,7 +500,7 @@
                         </li>
                         <li>
                             <!-- svelte-ignore a11y-invalid-attribute -->
-                            <a href="">
+                            <a use:inertia href="/vendor-company">
                                 <i class="fa fa-bank text-aqua" /> Vendors
                             </a>
                         </li>

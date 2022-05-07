@@ -21,7 +21,7 @@
                     (pages.length - 1 == index ? " next " : "")}
             >
 
-                <Link href={page.url? page.url : ''}>
+                <Link href={page.url? page.url : ''} preserveState>
                     {#if index == 0}
                         &laquo; Previous
                     {:else if pages.length - 1 == index}
