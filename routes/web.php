@@ -90,3 +90,5 @@ Route::resource('province',\App\Http\Controllers\Settings\ProvinceController::cl
 Route::resource('province-town-city',\App\Http\Controllers\Settings\ProvinceTownCityController::class)->middleware(['auth']);
 
 Route::resource('vendor-company',\App\Http\Controllers\Settings\VendorController::class)->middleware(['auth']);
+
+Route::resource('payroll-manager',\App\Http\Controllers\Settings\PayrollManagerController::class)->middleware(['auth']);
