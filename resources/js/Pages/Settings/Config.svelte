@@ -91,7 +91,7 @@
     </button>
 
     <div class="col-sm-12" slot="content">
-        <Calendly url="easymagic1/30min" />
+        <!-- <Calendly on:eventScheduled={(e)=>console.log(e.detail)} url="easymagic1/30min" /> -->
         <table
             id="example1"
             class="table table-data table-striped table-hover dataTable no-footer"

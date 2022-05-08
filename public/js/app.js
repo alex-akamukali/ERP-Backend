@@ -7698,18 +7698,10 @@ function create_each_block(ctx) {
 
 function create_content_slot(ctx) {
   var div;
-  var calendly;
-  var t0;
   var table;
   var thead;
-  var t5;
+  var t4;
   var tbody;
-  var current;
-  calendly = new _components_Calendly_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({
-    props: {
-      url: "easymagic1/30min"
-    }
-  });
   var each_value =
   /*list*/
   ctx[1];
@@ -7722,12 +7714,10 @@ function create_content_slot(ctx) {
   return {
     c: function c() {
       div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(calendly.$$.fragment);
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
       thead = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("thead");
       thead.innerHTML = "<tr role=\"row\"><th>#Config Name</th><th>Value</th> \n                    <th>Actions</th></tr>";
-      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       tbody = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tbody");
 
       for (var _i = 0; _i < each_blocks.length; _i += 1) {
@@ -7743,18 +7733,14 @@ function create_content_slot(ctx) {
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(calendly, div, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, t0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div, table);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, thead);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, t4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(table, tbody);
 
       for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
         each_blocks[_i2].m(tbody, null);
       }
-
-      current = true;
     },
     p: function p(ctx, dirty) {
       if (dirty &
@@ -7787,18 +7773,8 @@ function create_content_slot(ctx) {
         each_blocks.length = each_value.length;
       }
     },
-    i: function i(local) {
-      if (current) return;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(calendly.$$.fragment, local);
-      current = true;
-    },
-    o: function o(local) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(calendly.$$.fragment, local);
-      current = false;
-    },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(calendly);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
     }
   };
@@ -16168,7 +16144,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! svelte */ "./node_modules/svelte/index.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -16191,7 +16170,14 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 /* resources/js/components/Calendly.svelte generated by Svelte v3.47.0 */
+
 
 
 function create_fragment(ctx) {
@@ -16200,39 +16186,97 @@ function create_fragment(ctx) {
   var dispose;
   return {
     c: function c() {
-      a = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_1__.element)("a");
       a.textContent = "Schedule time with me";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "class", "btn btn-sm btn-primary");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "href", "#");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_1__.attr)(a, "class", "btn btn-sm btn-primary");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_1__.attr)(a, "href", "#");
     },
     m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, a, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_1__.insert)(target, a, anchor);
 
       if (!mounted) {
-        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(a, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_1__.listen)(a, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_1__.prevent_default)(
         /*openCalendly*/
         ctx[0]));
         mounted = true;
       }
     },
-    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
-    i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
-    o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    p: svelte_internal__WEBPACK_IMPORTED_MODULE_1__.noop,
+    i: svelte_internal__WEBPACK_IMPORTED_MODULE_1__.noop,
+    o: svelte_internal__WEBPACK_IMPORTED_MODULE_1__.noop,
     d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(a);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_1__.detach)(a);
       mounted = false;
       dispose();
     }
   };
 }
 
+function isCalendlyEvent(e) {
+  return e.origin === "https://calendly.com" && e.data.event && e.data.event.indexOf("calendly.") === 0;
+}
+
 function instance($$self, $$props, $$invalidate) {
   var url = $$props.url;
+  var dispatch = (0,svelte__WEBPACK_IMPORTED_MODULE_2__.createEventDispatcher)();
 
   function openCalendly() {
     Calendly.initPopupWidget({
-      url: 'https://calendly.com/' + url
+      url: "https://calendly.com/" + url
     });
+  }
+
+  window.addEventListener("message", function (e) {
+    if (isCalendlyEvent(e)) {
+      /* Example to get the name of the event */
+      console.log("Event name:", e.data.event);
+      /* Example to get the payload of the event */
+
+      console.log("Event details:", e.data.payload);
+
+      if (e.data.event == "calendly.event_scheduled") {
+        getBookedDate(e.data.payload.event.uri);
+      }
+    }
+  });
+
+  function getBookedDate(_x) {
+    return _getBookedDate.apply(this, arguments);
+  }
+
+  function _getBookedDate() {
+    _getBookedDate = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(url) {
+      var myHeaders, requestOptions, result;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              myHeaders = new Headers();
+              myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNjUxOTY2NzM5LCJqdGkiOiJmODFjN2I2Ni1lYTkzLTRmZTEtOTQ4Mi1mZjAzMGU5M2U4OTIiLCJ1c2VyX3V1aWQiOiJlZGI1ZmQzNC1hOTAxLTQyMGEtOWRkMi01OTRmNGIyMjZhMTgifQ.HnAX3gIvbp8e-KUnT3GabKijQp6KDvNPwd-ng4Bhoh8");
+              requestOptions = {
+                method: "GET",
+                headers: myHeaders,
+                redirect: "follow"
+              };
+              _context.next = 5;
+              return fetch(url, requestOptions).then(function (response) {
+                return response.json();
+              });
+
+            case 5:
+              result = _context.sent;
+              dispatch("eventScheduled", {
+                scheduledDate: new Date(result.resource.start_time)
+              });
+
+            case 7:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+    return _getBookedDate.apply(this, arguments);
   }
 
   $$self.$$set = function ($$props) {
@@ -16253,14 +16297,14 @@ var Calendly_1 = /*#__PURE__*/function (_SvelteComponent) {
     _classCallCheck(this, Calendly_1);
 
     _this = _super.call(this);
-    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_1__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_1__.safe_not_equal, {
       url: 1
     });
     return _this;
   }
 
   return _createClass(Calendly_1);
-}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_1__.SvelteComponent);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Calendly_1);
 
