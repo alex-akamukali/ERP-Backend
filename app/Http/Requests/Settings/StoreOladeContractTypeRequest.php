@@ -4,7 +4,7 @@ namespace App\Http\Requests\Settings;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreKnowledgeAreaRequest extends FormRequest
+class StoreOladeContractTypeRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,12 @@ class StoreKnowledgeAreaRequest extends FormRequest
     public function rules()
     {
         return [
-            'program_type_id'=>'required',
-            'knowledge_area_type'=>'required',
-            'name'=>'required',
-            'no_of_questions'=>'required',
-            'status'=>'required'
+            'title' => 'required',
+            'primary_commission' => 'required',
+            'secondary_commission' => 'required',
+            'no_of_months' => 'required',
+            'status' => 'required',
+            'body' => 'required',
         ];
     }
 }
