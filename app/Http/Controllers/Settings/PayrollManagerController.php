@@ -3,95 +3,47 @@
 namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StorePayrollManagerRequest;
-use App\Http\Requests\UpdatePayrollManagerRequest;
-use App\Models\Settings\PayrollManager;
-use App\Repositories\PayrollManagerRepo;
+use App\Http\Requests\Settings\StorePayrollManagerRequest;
+use App\Http\Requests\Settings\UpdatePayrollManagerRequest;
+use App\Settings\PayrollManagerRepository;
 
 class PayrollManagerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(PayrollManagerRepo $payrollManagerRepo)
-    {
 
-        return inertia()->render("Settings/PayrollManager",$this->data([
-            'list'=>$payrollManagerRepo->fetch()->get()
+    public function index(PayrollManagerRepository $payrollManagerRepository)
+    {
+        return inertia()->render("Settings/PayrollManager", $this->data([
+            'list' => $payrollManagerRepository->fetch(request()->all())->get()
         ]));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StorePayrollManagerRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StorePayrollManagerRequest $request)
+    public function store(StorePayrollManagerRequest $request, PayrollManagerRepository $payrollManagerRepository)
     {
-        //
-        PayrollManager::create($request->validated());
-        return $this->respondWithSuccess("New payroll manager added");
+        $record = $payrollManagerRepository->create($request->validated());
+        return $this->respondWithSuccess("New record added.");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Settings\PayrollManager  $payrollManager
-     * @return \Illuminate\Http\Response
-     */
-    public function show(PayrollManager $payrollManager)
+    public function show($id)
     {
-        //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Settings\PayrollManager  $payrollManager
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(PayrollManager $payrollManager)
+    public function edit($id)
     {
-        //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdatePayrollManagerRequest  $request
-     * @param  \App\Models\Settings\PayrollManager  $payrollManager
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdatePayrollManagerRequest $request, PayrollManager $payrollManager)
+    public function update(UpdatePayrollManagerRequest $request, $id, PayrollManagerRepository $payrollManagerRepository)
     {
-        //
-        $payrollManager->update($request->validated());
-        return $this->respondWithSuccess("Payroll manager updated");
+        $record = $payrollManagerRepository->update($id, $request->validated());
+        return $this->respondWithSuccess("Record updated.");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Settings\PayrollManager  $payrollManager
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(PayrollManager $payrollManager)
+    public function destroy($id, PayrollManagerRepository $payrollManagerRepository)
     {
-        //
-        $payrollManager->delete();
-        return $this->respondWithSuccess("Payroll manager removed");
+        $payrollManagerRepository->remove($id);
+        return $this->respondWithSuccess("Record removed.");
     }
 }

@@ -32,7 +32,7 @@
 
     function selectRow(data) {
         $form.description = data.description;
-        $form.title = data.name;
+        $form.name = data.name;
         $form.status = data.status;
         $form.id = data.id;
         mode = "update";
