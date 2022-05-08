@@ -12,7 +12,7 @@ class MakeClassCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:class {name} {--path=}';
+    protected $signature = 'make:class {name} {--path=} {--model=}';
 
     /**
      * The console command description.
@@ -41,6 +41,8 @@ class MakeClassCommand extends Command
     {
         $name = $this->argument('name');
         $path = $this->option('path');
+        $model = $this->option('model');
+
         if (!$name){
             $this->error('name argument is required!');
             return 0;
@@ -49,8 +51,46 @@ class MakeClassCommand extends Command
             $this->error('path option is required!');
             return 0;
         }
+        $className = '';
         $path = explode('/',$path);
         $path = implode('\\',$path);
+        if ($model){
+          $model = explode('/',$model);
+          $className = end($model);
+        //   dd($className);
+          $model = implode('\\',$model);
+        }
+
+        $clsRepo = '<?php
+namespace App\\' . $path . ';
+use App\\' . $model . ';
+
+class ' . $name . '
+{
+
+function fetch($filters=[]){
+    $query = ' . $className . '::query();
+    return $query;
+}
+
+function update($id,$data){
+    $record = ' . $className . '::query()->find($id);
+    $record->update($data);
+    return $record;
+}
+
+function create($data){
+    $record = ' . $className . '::create($data);
+    return $record;
+}
+
+function remove($id){
+   $record = ' . $className . '::query()->find($id);
+   $record->delete();
+   return $record;
+}
+
+}';
 
         $cls = '<?php
 
@@ -61,7 +101,11 @@ class ' . $name . '
 
 }';
 
-        Storage::disk("root")->put('app/' . $path . '/' . $name . '.php',$cls);
+if ($model){
+    Storage::disk("root")->put('app/' . $path . '/' . $name . '.php',$clsRepo);
+}else{
+    Storage::disk("root")->put('app/' . $path . '/' . $name . '.php',$cls);
+}
 
         $this->info("class name '" . $name . "' generated successfully");
         return 0;
