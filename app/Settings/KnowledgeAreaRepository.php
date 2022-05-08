@@ -16,6 +16,10 @@ class KnowledgeAreaRepository
         return $query;
     }
 
+    function statuses(){
+        return KnowledgeArea::STATUSES;
+    }
+
     function update($id, $data)
     {
         $record = KnowledgeArea::query()->find($id);

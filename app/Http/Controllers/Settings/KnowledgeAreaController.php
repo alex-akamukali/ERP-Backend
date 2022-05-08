@@ -18,7 +18,7 @@ class KnowledgeAreaController extends Controller
             'list' => $knowledgeAreaRepository->fetch(request()->all())->get(),
             'program_types' => $programTypeRepository->fetch()->active()->get(),
             'knowledge_area_types' => KnowledgeArea::KNOWLEDGE_AREA_TYPES,
-            'statuses' => KnowledgeArea::STATUSES
+            'statuses' => $knowledgeAreaRepository->statuses()
         ]));
     }
 

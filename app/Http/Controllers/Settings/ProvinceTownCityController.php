@@ -3,100 +3,50 @@
 namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreProvinceTownCityRequest;
-use App\Http\Requests\UpdateProvinceTownCityRequest;
-use App\Models\Settings\ProvinceTownCity;
-use App\Repositories\ProvinceRepo;
-use App\Repositories\ProvinceTownCityRepo;
+use App\Http\Requests\Settings\StoreProvinceTownCityRequest;
+use App\Http\Requests\Settings\UpdateProvinceTownCityRequest;
+use App\Settings\ProvinceRepository;
+use App\Settings\ProvinceTownCityRepository;
 
 class ProvinceTownCityController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(ProvinceTownCityRepo $provinceTownCityRepo, ProvinceRepo $provinceRepo)
+
+    public function index(ProvinceTownCityRepository $provinceTownCityRepository, ProvinceRepository $provinceRepository)
     {
-        //
-        return inertia()->render('Settings/ProvinceTownCity', [
-            'message' => $this->getMessage(),
-            'error' => $this->getError(),
-            'list' => $provinceTownCityRepo->fetch(request()->all())->get(),
-            'provinces' => $provinceRepo->fetch(request()->all())->get(),
-            'id'=>request('province_id')
-        ]);
-        //request('id')
+        return inertia()->render("Settings/ProvinceTownCity", $this->data([
+            'list' => $provinceTownCityRepository->fetch(request()->all())->get(),
+            'provinces' => $provinceRepository->fetch(request()->all())->get(),
+            'id' => request('province_id')
+        ]));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreProvinceTownCityRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreProvinceTownCityRequest $request)
+    public function store(StoreProvinceTownCityRequest $request, ProvinceTownCityRepository $provinceTownCityRepository)
     {
-        ProvinceTownCity::create($request->validated());
-        return $this->respondWithSuccess("Town/City added.");
+        $record = $provinceTownCityRepository->create($request->validated());
+        return $this->respondWithSuccess("New record added.");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Settings\ProvinceTownCity  $provinceTownCity
-     * @return \Illuminate\Http\Response
-     */
-    public function show(ProvinceTownCity $provinceTownCity)
+    public function show($id)
     {
-        //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Settings\ProvinceTownCity  $provinceTownCity
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ProvinceTownCity $provinceTownCity)
+    public function edit($id)
     {
-        //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateProvinceTownCityRequest  $request
-     * @param  \App\Models\Settings\ProvinceTownCity  $provinceTownCity
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateProvinceTownCityRequest $request, ProvinceTownCity $provinceTownCity)
+    public function update(UpdateProvinceTownCityRequest $request, $id, ProvinceTownCityRepository $provinceTownCityRepository)
     {
-        //
-        $provinceTownCity->update($request->validated());
-        return $this->respondWithSuccess("Town/City updated.");
+        $record = $provinceTownCityRepository->update($id, $request->validated());
+        return $this->respondWithSuccess("Record updated.");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Settings\ProvinceTownCity  $provinceTownCity
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(ProvinceTownCity $provinceTownCity)
+    public function destroy($id, ProvinceTownCityRepository $provinceTownCityRepository)
     {
-        //
-        $provinceTownCity->delete();
-        return $this->respondWithSuccess("Town/City removed.");
+        $provinceTownCityRepository->remove($id);
+        return $this->respondWithSuccess("Record removed.");
     }
 }
