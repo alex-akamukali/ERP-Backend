@@ -3,101 +3,52 @@
 namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreKnowledgeAreaRequest;
-use App\Http\Requests\UpdateKnowledgeAreaRequest;
+use App\Http\Requests\Settings\StoreKnowledgeAreaRequest;
+use App\Http\Requests\Settings\UpdateKnowledgeAreaRequest;
 use App\Models\Settings\KnowledgeArea;
-use App\Models\Settings\ProgramType;
-use App\Repositories\KnowledgeAreaRepo;
-use App\Repositories\ProgramTypeRepo;
+use App\Settings\KnowledgeAreaRepository;
+use App\Settings\ProgramTypeRepository;
 
 class KnowledgeAreaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(KnowledgeAreaRepo $knowledgeAreaRepo,ProgramTypeRepo $programTypeRepo)
+
+    public function index(KnowledgeAreaRepository $knowledgeAreaRepository, ProgramTypeRepository $programTypeRepository)
     {
-        //
-        return $this->inertiaRenderResource("Settings/KnowledgeArea", "knowledge-area", [
-            'program_types' =>$programTypeRepo->fetch()->active()->get(),
-            'list'=>$knowledgeAreaRepo->fetch(request()->all())->get(),
-            'knowledge_area_types'=>KnowledgeArea::KNOWLEDGE_AREA_TYPES,
-            'statuses'=>KnowledgeArea::STATUSES
-        ]);
+        return inertia()->render("Settings/KnowledgeArea", $this->data([
+            'list' => $knowledgeAreaRepository->fetch(request()->all())->get(),
+            'program_types' => $programTypeRepository->fetch()->active()->get(),
+            'knowledge_area_types' => KnowledgeArea::KNOWLEDGE_AREA_TYPES,
+            'statuses' => KnowledgeArea::STATUSES
+        ]));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreKnowledgeAreaRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreKnowledgeAreaRequest $request)
+    public function store(StoreKnowledgeAreaRequest $request, KnowledgeAreaRepository $knowledgeAreaRepository)
     {
-        $data = $request->validated();
-        KnowledgeArea::create($data);
-        return $this->respondWithSuccess("New Knowledge Area Added Successfully.");
+        $record = $knowledgeAreaRepository->create($request->validated());
+        return $this->respondWithSuccess("New record added.");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Settings\KnowledgeArea  $knowledgeArea
-     * @return \Illuminate\Http\Response
-     */
-    public function show(KnowledgeArea $knowledgeArea)
+    public function show($id)
     {
-        //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Settings\KnowledgeArea  $knowledgeArea
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(KnowledgeArea $knowledgeArea)
+    public function edit($id)
     {
-        //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateKnowledgeAreaRequest  $request
-     * @param  \App\Models\Settings\KnowledgeArea  $knowledgeArea
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateKnowledgeAreaRequest $request, KnowledgeArea $knowledgeArea)
+    public function update(UpdateKnowledgeAreaRequest $request, $id, KnowledgeAreaRepository $knowledgeAreaRepository)
     {
-        //
-        // dd($knowledgeArea,$request->validated());
-        $knowledgeArea->update($request->validated());
-        return $this->respondWithSuccess('Knowledge Area updated');
+        $record = $knowledgeAreaRepository->update($id, $request->validated());
+        return $this->respondWithSuccess("Record updated.");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Settings\KnowledgeArea  $knowledgeArea
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(KnowledgeArea $knowledgeArea)
+    public function destroy($id, KnowledgeAreaRepository $knowledgeAreaRepository)
     {
-        //
-         $knowledgeArea->delete();
-         return $this->respondWithSuccess("Selected knowledge area removed.");
+        $knowledgeAreaRepository->remove($id);
+        return $this->respondWithSuccess("Record removed.");
     }
 }

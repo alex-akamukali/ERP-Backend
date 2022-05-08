@@ -3,96 +3,48 @@
 namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreProgramTypeRequest;
-use App\Http\Requests\UpdateProgramTypeRequest;
-use App\Models\Settings\ProgramType;
-use App\Repositories\ProgramTypeRepo;
-use App\Services\ProgramType\ValidateLogic;
+use App\Http\Requests\Settings\StoreProgramTypeRequest;
+use App\Http\Requests\Settings\UpdateProgramTypeRequest;
+use App\Settings\ProgramTypeRepository;
 
 class ProgramTypeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(ProgramTypeRepo $programTypeRepo)
+
+    public function index(ProgramTypeRepository $programTypeRepository)
     {
-        return inertia()->render('Settings/ProgramType', $this->data([
-            'programTypes' => $programTypeRepo->fetch()->get()
+        return inertia()->render("Settings/ProgramType",$this->data([
+            'list'=>$programTypeRepository->fetch(request()->all())->get()
         ]));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreProgramTypeRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreProgramTypeRequest $request)
+    public function store(StoreProgramTypeRequest $request,ProgramTypeRepository $programTypeRepository)
     {
-        // ValidateLogic $validateLogic
-        //
-        ProgramType::create($request->validated());
-        return $this->respondWithSuccess('Program Type Added');
+        $record = $programTypeRepository->create($request->validated());
+        return $this->respondWithSuccess("New record added.");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Settings\ProgramType  $programType
-     * @return \Illuminate\Http\Response
-     */
-    public function show(ProgramType $programType)
+    public function show($id)
     {
-        //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Settings\ProgramType  $programType
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ProgramType $programType)
+    public function edit($id)
     {
-        //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateProgramTypeRequest  $request
-     * @param  \App\Models\Settings\ProgramType  $programType
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateProgramTypeRequest $request, ProgramType $programType)
+    public function update(UpdateProgramTypeRequest $request, $id ,ProgramTypeRepository $programTypeRepository)
     {
-        //
-        $programType->update($request->validated());
-        return $this->respondWithSuccess('Program Type Updated');
+        $record = $programTypeRepository->update($id,$request->validated());
+        return $this->respondWithSuccess("Record updated.");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Settings\ProgramType  $programType
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(ProgramType $programType)
+    public function destroy($id,ProgramTypeRepository $programTypeRepository)
     {
-        //
-        $programType->delete();
-        return $this->respondWithSuccess('Program Type Removed');
+        $programTypeRepository->remove($id);
+        return $this->respondWithSuccess("Record removed.");
     }
+
 }

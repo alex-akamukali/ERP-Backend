@@ -73,6 +73,12 @@ function fetch($filters=[]){
     return $query;
 }
 
+function fetchById($id){
+    $record = ' . $className . '::query()->find($id);
+    return $record;
+}
+
+
 function update($id,$data){
     $record = ' . $className . '::query()->find($id);
     $record->update($data);

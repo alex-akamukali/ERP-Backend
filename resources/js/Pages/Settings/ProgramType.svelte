@@ -10,7 +10,7 @@
 </script>
 
 <script>
-    export let programTypes;
+    export let list;
     export let message;
     export let error;
     // export let csrf;
@@ -106,7 +106,7 @@
                 </tr>
             </thead>
             <tbody>
-                {#each programTypes as programType}
+                {#each list as programType}
                     <tr class="odd">
                         <td>
                             {programType.title}

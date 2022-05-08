@@ -3,93 +3,48 @@
 namespace App\Http\Controllers\Settings;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreConfigRequest;
-use App\Http\Requests\UpdateConfigRequest;
-use App\Models\Settings\Config;
-use App\Repositories\ConfigRepo;
+use App\Http\Requests\Settings\StoreConfigRequest;
+use App\Http\Requests\Settings\UpdateConfigRequest;
+use App\Settings\ConfigRepository;
 
 class ConfigController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(ConfigRepo $configRepo)
+
+    public function index(ConfigRepository $configRepository)
     {
         return inertia()->render("Settings/Config",$this->data([
-            'list'=>$configRepo->fetch()->get()
+            'list'=>$configRepository->fetch(request()->all())->get()
         ]));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreConfigRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreConfigRequest $request)
+    public function store(StoreConfigRequest $request,ConfigRepository $configRepository)
     {
-        Config::create($request->validated());
-        return $this->respondWithSuccess("New config setting added.");
+        $record = $configRepository->create($request->validated());
+        return $this->respondWithSuccess("New record added.");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Settings\Config  $config
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Config $config)
+    public function show($id)
     {
-        //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Settings\Config  $config
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Config $config)
+    public function edit($id)
     {
-        //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateConfigRequest  $request
-     * @param  \App\Models\Settings\Config  $config
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateConfigRequest $request, Config $config)
+    public function update(UpdateConfigRequest $request, $id ,ConfigRepository $configRepository)
     {
-        //
-        $config->update($request->validated());
-        return $this->respondWithSuccess("Config setting updated.");
+        $record = $configRepository->update($id,$request->validated());
+        return $this->respondWithSuccess("Record updated.");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Settings\Config  $config
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Config $config)
+    public function destroy($id,ConfigRepository $configRepository)
     {
-        $config->delete();
-        return $this->respondWithSuccess("Config setting removed.");
+        $configRepository->remove($id);
+        return $this->respondWithSuccess("Record removed.");
     }
 
 }

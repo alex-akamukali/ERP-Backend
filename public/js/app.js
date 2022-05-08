@@ -12901,7 +12901,7 @@ function create_createButton_slot(ctx) {
       dispose();
     }
   };
-} // (109:16) {#each programTypes as programType}
+} // (109:16) {#each list as programType}
 
 
 function create_each_block(ctx) {
@@ -13002,17 +13002,17 @@ function create_each_block(ctx) {
     p: function p(new_ctx, dirty) {
       ctx = new_ctx;
       if (dirty &
-      /*programTypes*/
+      /*list*/
       2 && t0_value !== (t0_value =
       /*programType*/
       ctx[19].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
       if (dirty &
-      /*programTypes*/
+      /*list*/
       2 && t2_value !== (t2_value =
       /*programType*/
       ctx[19].description + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
       if (dirty &
-      /*programTypes*/
+      /*list*/
       2 && t4_value !== (t4_value =
       /*programType*/
       ctx[19].status + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t4, t4_value);
@@ -13033,7 +13033,7 @@ function create_content_slot(ctx) {
   var t5;
   var tbody;
   var each_value =
-  /*programTypes*/
+  /*list*/
   ctx[1];
   var each_blocks = [];
 
@@ -13074,10 +13074,10 @@ function create_content_slot(ctx) {
     },
     p: function p(ctx, dirty) {
       if (dirty &
-      /*removeRow, programTypes, selectRow*/
+      /*removeRow, list, selectRow*/
       386) {
         each_value =
-        /*programTypes*/
+        /*list*/
         ctx[1];
 
         var _i3;
@@ -13191,7 +13191,7 @@ function create_fragment(ctx) {
       var page_1_changes = {};
 
       if (dirty &
-      /*$$scope, programTypes, closeModal, mode, $form*/
+      /*$$scope, list, closeModal, mode, $form*/
       4194362) {
         page_1_changes.$$scope = {
           dirty: dirty,
@@ -13225,7 +13225,7 @@ var resource = '/program-type/';
 
 function instance($$self, $$props, $$invalidate) {
   var $form;
-  var programTypes = $$props.programTypes;
+  var list = $$props.list;
   var message = $$props.message;
   var error = $$props.error; // export let csrf;
 
@@ -13308,12 +13308,12 @@ function instance($$self, $$props, $$invalidate) {
   };
 
   $$self.$$set = function ($$props) {
-    if ('programTypes' in $$props) $$invalidate(1, programTypes = $$props.programTypes);
+    if ('list' in $$props) $$invalidate(1, list = $$props.list);
     if ('message' in $$props) $$invalidate(0, message = $$props.message);
     if ('error' in $$props) $$invalidate(2, error = $$props.error);
   };
 
-  return [message, programTypes, error, mode, closeModal, $form, form, selectRow, removeRow, clearForm, callStore, onResetMessage, onCloseModal, click_handler, click_handler_1, input_input_handler, textarea_input_handler, select_change_handler, setRef_handler];
+  return [message, list, error, mode, closeModal, $form, form, selectRow, removeRow, clearForm, callStore, onResetMessage, onCloseModal, click_handler, click_handler_1, input_input_handler, textarea_input_handler, select_change_handler, setRef_handler];
 }
 
 var ProgramType = /*#__PURE__*/function (_SvelteComponent) {
@@ -13328,7 +13328,7 @@ var ProgramType = /*#__PURE__*/function (_SvelteComponent) {
 
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
-      programTypes: 1,
+      list: 1,
       message: 0,
       error: 2
     });
