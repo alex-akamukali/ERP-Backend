@@ -88,11 +88,13 @@ class InertiaControllerCommand extends Command
         Artisan::call('make:request "' . $artisanStoreRequest . '"');
         Artisan::call('make:request "' . $artisanUpdateRequest . '"');
 
-        $svelteCreateView = $svelteBasePath . '//' . $name . 'Create';
-        $svelteEditView = $svelteBasePath . '//' . $name . 'Edit';
+        $svelteCreateView = $sveltePath . 'Create';
+        $svelteEditView = $sveltePath . 'Edit';
+        $svelteShowView = $sveltePath . 'Show';
 
         Artisan::call('make:svelte-page "' . $svelteCreateView . '"');
         Artisan::call('make:svelte-page "' . $svelteEditView . '"');
+        Artisan::call('make:svelte-page "' . $svelteShowView . '"');
 
         $clsRepo = '<?php
 
@@ -115,7 +117,7 @@ class ' . $name . 'Controller extends Controller
 
     public function create()
     {
-        return inertia()->render(,$this->data([]));
+        return inertia()->render("' . $svelteCreateView . '",$this->data([]));
     }
 
     public function store(' . $storeRequestName . ' $request,' . $repositoryName . ' $' . $repositoryInstanceName . ')
@@ -124,12 +126,18 @@ class ' . $name . 'Controller extends Controller
         return $this->respondWithSuccess("New record added.");
     }
 
-    public function show($id)
+    public function show($id,' . $repositoryName . ' $' . $repositoryInstanceName . ')
     {
+        return inertia()->render("' . $svelteShowView . '",$this->data([
+            "data"=>$' . $repositoryInstanceName . '->fetchById($id)
+        ]));
     }
 
-    public function edit($id)
+    public function edit($id,' . $repositoryName . ' $' . $repositoryInstanceName . ')
     {
+        return inertia()->render("' . $svelteCreateView . '",$this->data([
+            "data"=>$' . $repositoryInstanceName . '->fetchById($id)
+        ]));
     }
 
     public function update(' . $updateRequestName . ' $request, $id ,' . $repositoryName . ' $' . $repositoryInstanceName . ')
