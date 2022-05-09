@@ -1,41 +1,41 @@
 <?php
 
-namespace App\PaymentPortal;
+namespace App\Workflow\JobProfile;
 
-use App\Models\PaymentPortal\ContractorPaymentMsc;
+use App\Models\Workflow\JobProfile\ProfileDiscussion;
 
-class ContractorPaymentMscRepository
+class ProfileDiscussionRepository
 {
 
     function fetch($filters = [])
     {
-        $query = ContractorPaymentMsc::query();
+        $query = ProfileDiscussion::query();
         return $query;
     }
 
     function fetchById($id)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = ProfileDiscussion::query()->find($id);
         return $record;
     }
 
 
     function update($id, $data)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = ProfileDiscussion::query()->find($id);
         $record->update($data);
         return $record;
     }
 
     function create($data)
     {
-        $record = ContractorPaymentMsc::create($data);
+        $record = ProfileDiscussion::create($data);
         return $record;
     }
 
     function remove($id)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = ProfileDiscussion::query()->find($id);
         $record->delete();
         return $record;
     }

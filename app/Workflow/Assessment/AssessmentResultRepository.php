@@ -13,6 +13,13 @@ class AssessmentResultRepository
         return $query;
     }
 
+    function fetchById($id)
+    {
+        $record = AssessmentResult::query()->find($id);
+        return $record;
+    }
+
+
     function update($id, $data)
     {
         $record = AssessmentResult::query()->find($id);

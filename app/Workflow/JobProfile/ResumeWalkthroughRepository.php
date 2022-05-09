@@ -1,41 +1,41 @@
 <?php
 
-namespace App\PaymentPortal;
+namespace App\Workflow\JobProfile;
 
-use App\Models\PaymentPortal\ContractorPaymentMsc;
+use App\Models\Workflow\JobProfile\ResumeWalkthrough;
 
-class ContractorPaymentMscRepository
+class ResumeWalkthroughRepository
 {
 
     function fetch($filters = [])
     {
-        $query = ContractorPaymentMsc::query();
+        $query = ResumeWalkthrough::query();
         return $query;
     }
 
     function fetchById($id)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = ResumeWalkthrough::query()->find($id);
         return $record;
     }
 
 
     function update($id, $data)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = ResumeWalkthrough::query()->find($id);
         $record->update($data);
         return $record;
     }
 
     function create($data)
     {
-        $record = ContractorPaymentMsc::create($data);
+        $record = ResumeWalkthrough::create($data);
         return $record;
     }
 
     function remove($id)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = ResumeWalkthrough::query()->find($id);
         $record->delete();
         return $record;
     }

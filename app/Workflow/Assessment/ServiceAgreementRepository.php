@@ -1,41 +1,41 @@
 <?php
 
-namespace App\PaymentPortal;
+namespace App\Workflow\Assessment;
 
-use App\Models\PaymentPortal\ContractorPaymentMsc;
+use App\Models\Workflow\Assessment\ServiceAgreement;
 
-class ContractorPaymentMscRepository
+class ServiceAgreementRepository
 {
 
     function fetch($filters = [])
     {
-        $query = ContractorPaymentMsc::query();
+        $query = ServiceAgreement::query();
         return $query;
     }
 
     function fetchById($id)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = ServiceAgreement::query()->find($id);
         return $record;
     }
 
 
     function update($id, $data)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = ServiceAgreement::query()->find($id);
         $record->update($data);
         return $record;
     }
 
     function create($data)
     {
-        $record = ContractorPaymentMsc::create($data);
+        $record = ServiceAgreement::create($data);
         return $record;
     }
 
     function remove($id)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = ServiceAgreement::query()->find($id);
         $record->delete();
         return $record;
     }

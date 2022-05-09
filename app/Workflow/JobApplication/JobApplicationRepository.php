@@ -1,41 +1,41 @@
 <?php
 
-namespace App\PaymentPortal;
+namespace App\Workflow\JobApplication;
 
-use App\Models\PaymentPortal\ContractorPaymentMsc;
+use App\Models\Workflow\JobApplication\JobApplication;
 
-class ContractorPaymentMscRepository
+class JobApplicationRepository
 {
 
     function fetch($filters = [])
     {
-        $query = ContractorPaymentMsc::query();
+        $query = JobApplication::query();
         return $query;
     }
 
     function fetchById($id)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = JobApplication::query()->find($id);
         return $record;
     }
 
 
     function update($id, $data)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = JobApplication::query()->find($id);
         $record->update($data);
         return $record;
     }
 
     function create($data)
     {
-        $record = ContractorPaymentMsc::create($data);
+        $record = JobApplication::create($data);
         return $record;
     }
 
     function remove($id)
     {
-        $record = ContractorPaymentMsc::query()->find($id);
+        $record = JobApplication::query()->find($id);
         $record->delete();
         return $record;
     }

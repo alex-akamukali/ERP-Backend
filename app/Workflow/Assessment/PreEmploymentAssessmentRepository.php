@@ -2,40 +2,40 @@
 
 namespace App\Workflow\Assessment;
 
-use App\Models\Workflow\Assessment\AssessmentInterview;
+use App\Models\Workflow\Assessment\PreEmploymentAssessment;
 
-class AssessmentInterviewRepository
+class PreEmploymentAssessmentRepository
 {
 
     function fetch($filters = [])
     {
-        $query = AssessmentInterview::query();
+        $query = PreEmploymentAssessment::query();
         return $query;
     }
 
     function fetchById($id)
     {
-        $record = AssessmentInterview::query()->find($id);
+        $record = PreEmploymentAssessment::query()->find($id);
         return $record;
     }
 
 
     function update($id, $data)
     {
-        $record = AssessmentInterview::query()->find($id);
+        $record = PreEmploymentAssessment::query()->find($id);
         $record->update($data);
         return $record;
     }
 
     function create($data)
     {
-        $record = AssessmentInterview::create($data);
+        $record = PreEmploymentAssessment::create($data);
         return $record;
     }
 
     function remove($id)
     {
-        $record = AssessmentInterview::query()->find($id);
+        $record = PreEmploymentAssessment::query()->find($id);
         $record->delete();
         return $record;
     }
