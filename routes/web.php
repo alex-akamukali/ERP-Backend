@@ -96,3 +96,7 @@ Route::resource('payroll-manager',\App\Http\Controllers\Settings\PayrollManagerC
 Route::resource('config',\App\Http\Controllers\Settings\ConfigController::class)->middleware(['auth']);
 
 Route::resource('vendor-company',\App\Http\Controllers\Settings\VendorCompanyController::class)->middleware(['auth']);
+
+Route::resource('my-document',\App\Http\Controllers\User\MyDocumentController::class)->middleware(['auth']);
+
+Route::resource('my-activity',\App\Http\Controllers\User\MyActivityController::class)->middleware(['auth']);

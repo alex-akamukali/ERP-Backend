@@ -13,7 +13,7 @@ class InertiaControllerCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:inertia-controller {name} {--path=} {--repository=}';
+    protected $signature = 'make:inertia-controller {name} {--path=} {--repository=} {--extension=}';
 
     /**
      * The console command description.
@@ -43,6 +43,7 @@ class InertiaControllerCommand extends Command
         $name = $this->argument('name');
         $path = $this->option('path');
         $repository = $this->option('repository');
+        $extension = $this->option('extension');
 
         if (!$name){
             $this->error('name argument is required!');
@@ -92,10 +93,10 @@ class InertiaControllerCommand extends Command
         $svelteEditView = $sveltePath . 'Edit';
         $svelteShowView = $sveltePath . 'Show';
 
-        Artisan::call('make:svelte-page "' . $sveltePath . '"');
-        Artisan::call('make:svelte-page "' . $svelteCreateView . '"');
-        Artisan::call('make:svelte-page "' . $svelteEditView . '"');
-        Artisan::call('make:svelte-page "' . $svelteShowView . '"');
+        Artisan::call('make:svelte-page "' . $sveltePath . '" --extension=' . $extension);
+        Artisan::call('make:svelte-page "' . $svelteCreateView . '" --extension=' . $extension);
+        Artisan::call('make:svelte-page "' . $svelteEditView . '" --extension=' . $extension);
+        Artisan::call('make:svelte-page "' . $svelteShowView . '" --extension=' . $extension);
 
         $clsRepo = '<?php
 
