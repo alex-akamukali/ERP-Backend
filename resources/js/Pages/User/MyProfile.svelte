@@ -23,8 +23,9 @@
     let closeModal = null;
 
     let form = useForm({
-        avatar: "",
-        id:"0"
+        _method:'PUT',
+        avatar: null,
+        id:"jjjkj"
     });
 
     function selectRow(data) {
@@ -45,7 +46,7 @@
     }
 
     function updateProfile(){
-        $form.put("/my-profile/" + auth.id);
+        $form.post("/my-profile/" + auth.id);
     }
 
     function callStore() {
@@ -59,7 +60,7 @@
     function onResetMessage() {
         // toastr.success(message);
         message = "";
-        $form.clearErrors();
+        // $form.clearErrors();
         // avatarImage.src = null;
     }
 
@@ -96,7 +97,11 @@
                     reader.readAsDataURL(selectedFile);
 
                     // pushimgover();
+                    console.log($form.avatar,'1');
                     updateProfile();
+                    setTimeout(()=>{
+                        console.log($form.avatar,'2');
+                    },2000);
 
                   }
 
@@ -170,12 +175,12 @@
                 <div class="box-body box-profile">
 
 
-                    <img bind:this={avatarImage} id="myProfileImage" src="/asset1/user2-160x160.jpg" class="profile-user-img img-responsive img-circle" alt="User Profile" width="100" height="100">
+                    <img bind:this={avatarImage} id="myProfileImage" src={'/uploads/' + auth.avatar} class="profile-user-img img-responsive img-circle" alt="User Profile" width="100" height="100">
 
                   <h3 class="profile-username text-center">Alex Akamukali</h3>
 
                   <p class="text-muted text-center"></p>
-                  <input bind:value={$form.avatar} bind:this={avatar} style="display: none" type="file" id="fileLoader" name="ProfilePhoto" accept="image/*" on:change={onFileSelected}>
+                  <input on:input={e => $form.avatar = e.target.files[0]}  bind:this={avatar} style="display: none;" type="file" id="fileLoader" name="ProfilePhoto" accept="image/*" on:change={onFileSelected}>
 
 
                   <ul class="list-group list-group-unbordered">

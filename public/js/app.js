@@ -17474,7 +17474,7 @@ function create_title_slot(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
     }
   };
-} // (394:8) 
+} // (399:8) 
 
 
 function create_content_slot(ctx) {
@@ -17511,7 +17511,7 @@ function create_content_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, input);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input,
       /*$form*/
-      ctx[6].name);
+      ctx[7].name);
 
       if (!mounted) {
         dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input, "input",
@@ -17523,12 +17523,12 @@ function create_content_slot(ctx) {
     p: function p(ctx, dirty) {
       if (dirty &
       /*$form*/
-      64 && input.value !==
+      128 && input.value !==
       /*$form*/
-      ctx[6].name) {
+      ctx[7].name) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input,
         /*$form*/
-        ctx[6].name);
+        ctx[7].name);
       }
     },
     d: function d(detaching) {
@@ -17537,7 +17537,7 @@ function create_content_slot(ctx) {
       dispose();
     }
   };
-} // (412:8) 
+} // (417:8) 
 
 
 function create_storeButton_slot(ctx) {
@@ -17546,7 +17546,7 @@ function create_storeButton_slot(ctx) {
   var t0;
   var t1_value = (
   /*mode*/
-  ctx[2] == "create" ? "Add Province" : "Update Province") + "";
+  ctx[3] == "create" ? "Add Province" : "Update Province") + "";
   var t1;
   return {
     c: function c() {
@@ -17568,9 +17568,9 @@ function create_storeButton_slot(ctx) {
     p: function p(ctx, dirty) {
       if (dirty &
       /*mode*/
-      4 && t1_value !== (t1_value = (
+      8 && t1_value !== (t1_value = (
       /*mode*/
-      ctx[2] == "create" ? "Add Province" : "Update Province") + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1, t1_value);
+      ctx[3] == "create" ? "Add Province" : "Update Province") + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1, t1_value);
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(button);
@@ -17619,16 +17619,16 @@ function create_fragment(ctx) {
       ctx[1],
       errors:
       /*$form*/
-      ctx[6].errors,
+      ctx[7].errors,
       onResetMessage:
       /*onResetMessage*/
-      ctx[9],
+      ctx[10],
       hasErrors:
       /*$form*/
-      ctx[6].hasErrors,
+      ctx[7].hasErrors,
       onCloseModal:
       /*onCloseModal*/
-      ctx[10]
+      ctx[11]
     }
   });
   modal = new _components_Modal_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
@@ -17646,7 +17646,7 @@ function create_fragment(ctx) {
   });
   modal.$on("submit",
   /*callStore*/
-  ctx[8]);
+  ctx[9]);
   modal.$on("setRef",
   /*setRef_handler*/
   ctx[18]);
@@ -17686,7 +17686,9 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(modal.$$.fragment);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section0, "class", "content-header");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "id", "myProfileImage");
-      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = "/asset1/user2-160x160.jpg")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
+      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = '/uploads/' +
+      /*auth*/
+      ctx[2].avatar)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "class", "profile-user-img img-responsive img-circle");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "alt", "User Profile");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "width", "100");
@@ -17744,13 +17746,13 @@ function create_fragment(ctx) {
       current = true;
 
       if (!mounted) {
-        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "change",
-        /*input0_change_handler*/
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
+        /*input_handler*/
         ctx[15]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "change",
         /*onFileSelected*/
-        ctx[12]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button0, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        ctx[13]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button0, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
         /*openfileDialog*/
-        ctx[11]))];
+        ctx[12]))];
         mounted = true;
       }
     },
@@ -17771,20 +17773,29 @@ function create_fragment(ctx) {
       ctx[1];
       if (dirty &
       /*$form*/
-      64) messagenotification_changes.errors =
+      128) messagenotification_changes.errors =
       /*$form*/
-      ctx[6].errors;
+      ctx[7].errors;
       if (dirty &
       /*$form*/
-      64) messagenotification_changes.hasErrors =
+      128) messagenotification_changes.hasErrors =
       /*$form*/
-      ctx[6].hasErrors;
+      ctx[7].hasErrors;
       messagenotification.$set(messagenotification_changes);
+
+      if (!current || dirty &
+      /*auth*/
+      4 && !(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = '/uploads/' +
+      /*auth*/
+      ctx[2].avatar)) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
+      }
+
       var modal_changes = {};
 
       if (dirty &
       /*$$scope, mode, $form*/
-      8388676) {
+      8388744) {
         modal_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -17858,17 +17869,18 @@ function instance($$self, $$props, $$invalidate) {
   var mode = "create";
   var closeModal = null;
   var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_5__.useForm)({
-    avatar: "",
-    id: "0"
+    _method: 'PUT',
+    avatar: null,
+    id: "jjjkj"
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
-    return $$invalidate(6, $form = value);
+    return $$invalidate(7, $form = value);
   });
 
   function selectRow(data) {
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.name = data.name, $form);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.id = data.id, $form);
-    $$invalidate(2, mode = "update");
+    $$invalidate(3, mode = "update");
   }
 
   function removeRow(data) {
@@ -17879,11 +17891,11 @@ function instance($$self, $$props, $$invalidate) {
 
   function clearForm() {
     $form.reset();
-    $$invalidate(2, mode = "create");
+    $$invalidate(3, mode = "create");
   }
 
   function updateProfile() {
-    $form.put("/my-profile/" + auth.id);
+    $form.post("/my-profile/" + auth.id);
   }
 
   function callStore() {
@@ -17897,8 +17909,8 @@ function instance($$self, $$props, $$invalidate) {
   function onResetMessage() {
     // toastr.success(message);
     $$invalidate(0, message = "");
-    $form.clearErrors();
-  } // avatarImage.src = null;
+  } // $form.clearErrors();
+  // avatarImage.src = null;
 
 
   function onCloseModal() {
@@ -17913,7 +17925,7 @@ function instance($$self, $$props, $$invalidate) {
   function openfileDialog() {
     //   $("#fileLoader").click();
     // avatarImage.src = null;
-    $$invalidate(4, avatar.value = null, avatar);
+    $$invalidate(5, avatar.value = null, avatar);
     avatar.click();
   }
 
@@ -17932,25 +17944,28 @@ function instance($$self, $$props, $$invalidate) {
 
     reader.readAsDataURL(selectedFile); // pushimgover();
 
+    console.log($form.avatar, '1');
     updateProfile();
+    setTimeout(function () {
+      console.log($form.avatar, '2');
+    }, 2000);
   }
 
   function img_binding($$value) {
     svelte_internal__WEBPACK_IMPORTED_MODULE_0__.binding_callbacks[$$value ? 'unshift' : 'push'](function () {
       avatarImage = $$value;
-      $$invalidate(5, avatarImage);
+      $$invalidate(6, avatarImage);
     });
   }
 
-  function input0_change_handler() {
-    $form.avatar = this.value;
-    form.set($form);
-  }
+  var input_handler = function input_handler(e) {
+    return (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.avatar = e.target.files[0], $form);
+  };
 
   function input0_binding($$value) {
     svelte_internal__WEBPACK_IMPORTED_MODULE_0__.binding_callbacks[$$value ? 'unshift' : 'push'](function () {
       avatar = $$value;
-      $$invalidate(4, avatar);
+      $$invalidate(5, avatar);
     });
   }
 
@@ -17960,16 +17975,16 @@ function instance($$self, $$props, $$invalidate) {
   }
 
   var setRef_handler = function setRef_handler(ref) {
-    return $$invalidate(3, closeModal = ref.detail);
+    return $$invalidate(4, closeModal = ref.detail);
   };
 
   $$self.$$set = function ($$props) {
     if ('message' in $$props) $$invalidate(0, message = $$props.message);
     if ('error' in $$props) $$invalidate(1, error = $$props.error);
-    if ('auth' in $$props) $$invalidate(13, auth = $$props.auth);
+    if ('auth' in $$props) $$invalidate(2, auth = $$props.auth);
   };
 
-  return [message, error, mode, closeModal, avatar, avatarImage, $form, form, callStore, onResetMessage, onCloseModal, openfileDialog, onFileSelected, auth, img_binding, input0_change_handler, input0_binding, input_input_handler, setRef_handler];
+  return [message, error, auth, mode, closeModal, avatar, avatarImage, $form, form, callStore, onResetMessage, onCloseModal, openfileDialog, onFileSelected, img_binding, input_handler, input0_binding, input_input_handler, setRef_handler];
 }
 
 var MyProfile = /*#__PURE__*/function (_SvelteComponent) {
@@ -17986,7 +18001,7 @@ var MyProfile = /*#__PURE__*/function (_SvelteComponent) {
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
       message: 0,
       error: 1,
-      auth: 13
+      auth: 2
     });
     return _this;
   }
