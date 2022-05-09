@@ -43,7 +43,12 @@ class MakeViewCommand extends Command
             $this->error('name argument is required!');
             return 0;
         }
-        Storage::disk("root")->put("resources/views/" . $name . ".blade.php","<div>Blade template goes here...</div>");
+        $file = "resources/views/" . $name . ".blade.php";
+        if (Storage::disk("root")->exists($file)){
+            $this->info("Skipping overwrite, file exists!");
+            return;
+        }
+        Storage::disk("root")->put($file,"<div>Blade template goes here...</div>");
         $this->info($name . '.blade.php created successfully.');
         return 0;
     }

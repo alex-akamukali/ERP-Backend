@@ -43,7 +43,12 @@ class MakeSveltePageCommand extends Command
             $this->error('name argument is required!');
             return 0;
         }
-        Storage::disk("root")->put("resources/js/Pages/" . $name . ".svelte","<script context=\"module\">
+        $file = "resources/js/Pages/" . $name . ".svelte";
+        if (Storage::disk("root")->exists($file)){
+            $this->info("Skipping overwrite, file exists!");
+            return;
+        }
+        Storage::disk("root")->put($file,"<script context=\"module\">
 \nimport { page, useForm } from \"@inertiajs/inertia-svelte\";
 \n</script>\n
 <script>\n

@@ -64,6 +64,8 @@ class InertiaControllerCommand extends Command
 
         $sveltePath = explode('\\',$path);
         $sveltePath = implode('/',$sveltePath) . '/' . $name;
+        $svelteBasePath = explode('/',$sveltePath);
+        $svelteBasePath = $svelteBasePath[0];
 
         $repository = explode('/',$repository);
         $repositoryName = end($repository);
@@ -86,6 +88,12 @@ class InertiaControllerCommand extends Command
         Artisan::call('make:request "' . $artisanStoreRequest . '"');
         Artisan::call('make:request "' . $artisanUpdateRequest . '"');
 
+        $svelteCreateView = $svelteBasePath . '//' . $name . 'Create';
+        $svelteEditView = $svelteBasePath . '//' . $name . 'Edit';
+
+        Artisan::call('make:svelte-page "' . $svelteCreateView . '"');
+        Artisan::call('make:svelte-page "' . $svelteEditView . '"');
+
         $clsRepo = '<?php
 
 namespace App\Http\Controllers\\' . $path . ';
@@ -107,6 +115,7 @@ class ' . $name . 'Controller extends Controller
 
     public function create()
     {
+        return inertia()->render(,$this->data([]));
     }
 
     public function store(' . $storeRequestName . ' $request,' . $repositoryName . ' $' . $repositoryInstanceName . ')
