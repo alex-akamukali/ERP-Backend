@@ -92,6 +92,7 @@ class InertiaControllerCommand extends Command
         $svelteEditView = $sveltePath . 'Edit';
         $svelteShowView = $sveltePath . 'Show';
 
+        Artisan::call('make:svelte-page "' . $sveltePath . '"');
         Artisan::call('make:svelte-page "' . $svelteCreateView . '"');
         Artisan::call('make:svelte-page "' . $svelteEditView . '"');
         Artisan::call('make:svelte-page "' . $svelteShowView . '"');

@@ -12,13 +12,14 @@ class VendorCompanyController extends Controller
 
     public function index(VendorCompanyRepository $vendorCompanyRepository)
     {
-        return inertia()->render("Settings/Vendor", $this->data([
+        return inertia()->render("Settings/VendorCompany", $this->data([
             'list' => $vendorCompanyRepository->fetch(request()->all())->get()
         ]));
     }
 
     public function create()
     {
+        return inertia()->render("Settings/VendorCompanyCreate", $this->data([]));
     }
 
     public function store(StoreVendorCompanyRequest $request, VendorCompanyRepository $vendorCompanyRepository)
@@ -27,12 +28,18 @@ class VendorCompanyController extends Controller
         return $this->respondWithSuccess("New record added.");
     }
 
-    public function show($id)
+    public function show($id, VendorCompanyRepository $vendorCompanyRepository)
     {
+        return inertia()->render("Settings/VendorCompanyShow", $this->data([
+            "data" => $vendorCompanyRepository->fetchById($id)
+        ]));
     }
 
-    public function edit($id)
+    public function edit($id, VendorCompanyRepository $vendorCompanyRepository)
     {
+        return inertia()->render("Settings/VendorCompanyCreate", $this->data([
+            "data" => $vendorCompanyRepository->fetchById($id)
+        ]));
     }
 
     public function update(UpdateVendorCompanyRequest $request, $id, VendorCompanyRepository $vendorCompanyRepository)

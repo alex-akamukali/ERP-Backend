@@ -13,6 +13,13 @@ class VendorCompanyRepository
         return $query;
     }
 
+    function fetchById($id)
+    {
+        $record = VendorCompany::query()->find($id);
+        return $record;
+    }
+
+
     function update($id, $data)
     {
         $record = VendorCompany::query()->find($id);
