@@ -294,7 +294,7 @@
                                 <div class="pull-left">
                                     <a
                                         use:inertia
-                                        href={user_profile_route}
+                                        href="/my-profile"
                                         class="btn btn-primary btn-flat"
                                         >Profile</a
                                     >

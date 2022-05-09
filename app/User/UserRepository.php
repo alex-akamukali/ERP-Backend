@@ -71,4 +71,8 @@ class UserRepository
     function isLogged(){
         return Auth::check();
     }
+
+    function auth(){
+        return Auth::user();
+    }
 }
