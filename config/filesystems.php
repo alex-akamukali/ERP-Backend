@@ -40,6 +40,10 @@ return [
             'root' => base_path(''),
         ],
 
+        'upload' => [
+            'driver' => 'local',
+            'root' => public_path('uploads'),
+        ],
 
         'public' => [
             'driver' => 'local',

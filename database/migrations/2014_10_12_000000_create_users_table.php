@@ -50,6 +50,8 @@ class CreateUsersTable extends Migration
             $table->string('dob')->nullable();
             $table->string('gender')->nullable();
 
+            $table->longText("skills")->nullable();
+
             ///new
 
             $table->rememberToken();

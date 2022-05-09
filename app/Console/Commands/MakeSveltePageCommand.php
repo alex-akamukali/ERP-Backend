@@ -12,7 +12,7 @@ class MakeSveltePageCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:svelte-page {name}';
+    protected $signature = 'make:svelte-page {name} {--extension=}';
 
     /**
      * The console command description.
@@ -39,11 +39,16 @@ class MakeSveltePageCommand extends Command
     public function handle()
     {
         $name = $this->argument('name');
+        $extension = $this->option('extension');
         if (!$name){
             $this->error('name argument is required!');
             return 0;
         }
-        $file = "resources/js/Pages/" . $name . ".svelte";
+        if (!$extension){
+          $extension = 'svelte';
+        }
+
+        $file = "resources/js/Pages/" . $name . "." . $extension;
         if (Storage::disk("root")->exists($file)){
             $this->info("Skipping overwrite, file exists!");
             return;
