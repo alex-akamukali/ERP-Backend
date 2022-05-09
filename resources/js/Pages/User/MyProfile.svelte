@@ -13,6 +13,7 @@
     // export let list;
     export let message;
     export let error;
+    export let auth;
     // export let csrf;
 
     let mode = "create";
@@ -22,7 +23,7 @@
     let closeModal = null;
 
     let form = useForm({
-        name: "",
+        avatar: "",
         id:"0"
     });
 
@@ -43,6 +44,10 @@
         mode = "create";
     }
 
+    function updateProfile(){
+        $form.put("/my-profile/" + auth.id);
+    }
+
     function callStore() {
         if (mode == "create") {
             $form.post(resource);
@@ -55,6 +60,7 @@
         // toastr.success(message);
         message = "";
         $form.clearErrors();
+        // avatarImage.src = null;
     }
 
     function onCloseModal() {
@@ -68,7 +74,10 @@
 
     function openfileDialog() {
                     //   $("#fileLoader").click();
+                    // avatarImage.src = null;
+                    avatar.value = null;
                     avatar.click();
+
     }
 
                   function onFileSelected(event) {
@@ -87,6 +96,7 @@
                     reader.readAsDataURL(selectedFile);
 
                     // pushimgover();
+                    updateProfile();
 
                   }
 
@@ -159,13 +169,13 @@
               <div class="box box-primary">
                 <div class="box-body box-profile">
 
-                  {#if avatarImage}
-                    <img bind:this={avatarImage} id="myProfileImage" src="" class="profile-user-img img-responsive img-circle" alt="User Profile" width="100" height="100">
-                  {/if}
+
+                    <img bind:this={avatarImage} id="myProfileImage" src="/asset1/user2-160x160.jpg" class="profile-user-img img-responsive img-circle" alt="User Profile" width="100" height="100">
+
                   <h3 class="profile-username text-center">Alex Akamukali</h3>
 
                   <p class="text-muted text-center"></p>
-                  <input bind:this={avatar} style="display: none" type="file" id="fileLoader" name="ProfilePhoto" accept="image/*" on:change={onFileSelected}>
+                  <input bind:value={$form.avatar} bind:this={avatar} style="display: none" type="file" id="fileLoader" name="ProfilePhoto" accept="image/*" on:change={onFileSelected}>
 
 
                   <ul class="list-group list-group-unbordered">

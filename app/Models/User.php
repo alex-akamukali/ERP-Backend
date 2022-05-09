@@ -52,7 +52,10 @@ class User extends Authenticatable
         'assign_director_id',
         'account_type',
         'dob',
-        'gender'
+        'gender',
+
+        'avatar',
+        'skills'
     ];
 
     /**

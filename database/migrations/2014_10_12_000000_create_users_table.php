@@ -51,6 +51,7 @@ class CreateUsersTable extends Migration
             $table->string('gender')->nullable();
 
             $table->longText("skills")->nullable();
+            $table->string('avatar')->nullable();
 
             ///new
 

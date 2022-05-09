@@ -75,4 +75,5 @@ class UserRepository
     function auth(){
         return Auth::user();
     }
+
 }

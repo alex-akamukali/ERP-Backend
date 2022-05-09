@@ -17458,36 +17458,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function create_if_block(ctx) {
-  var img;
-  var img_src_value;
-  return {
-    c: function c() {
-      img = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("img");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "id", "myProfileImage");
-      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "class", "profile-user-img img-responsive img-circle");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "alt", "User Profile");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "width", "100");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "height", "100");
-    },
-    m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, img, anchor);
-      /*img_binding*/
-
-      ctx[13](img);
-    },
-    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
-    d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(img);
-      /*img_binding*/
-
-      ctx[13](null);
-    }
-  };
-} // (382:8) 
-
-
 function create_title_slot(ctx) {
   var span;
   return {
@@ -17504,7 +17474,7 @@ function create_title_slot(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
     }
   };
-} // (384:8) 
+} // (394:8) 
 
 
 function create_content_slot(ctx) {
@@ -17546,7 +17516,7 @@ function create_content_slot(ctx) {
       if (!mounted) {
         dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input, "input",
         /*input_input_handler*/
-        ctx[15]);
+        ctx[17]);
         mounted = true;
       }
     },
@@ -17567,7 +17537,7 @@ function create_content_slot(ctx) {
       dispose();
     }
   };
-} // (402:8) 
+} // (412:8) 
 
 
 function create_storeButton_slot(ctx) {
@@ -17618,6 +17588,8 @@ function create_fragment(ctx) {
   var div5;
   var div1;
   var div0;
+  var img;
+  var img_src_value;
   var t7;
   var h30;
   var t9;
@@ -17659,9 +17631,6 @@ function create_fragment(ctx) {
       ctx[10]
     }
   });
-  var if_block =
-  /*avatarImage*/
-  ctx[5] && create_if_block(ctx);
   modal = new _components_Modal_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
     props: {
       id: "modal-progtype",
@@ -17680,7 +17649,7 @@ function create_fragment(ctx) {
   ctx[8]);
   modal.$on("setRef",
   /*setRef_handler*/
-  ctx[16]);
+  ctx[18]);
   return {
     c: function c() {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(messagenotification.$$.fragment);
@@ -17693,7 +17662,7 @@ function create_fragment(ctx) {
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      if (if_block) if_block.c();
+      img = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("img");
       t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       h30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h3");
       h30.textContent = "Alex Akamukali";
@@ -17716,6 +17685,12 @@ function create_fragment(ctx) {
       t111 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(modal.$$.fragment);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section0, "class", "content-header");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "id", "myProfileImage");
+      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = "/asset1/user2-160x160.jpg")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "class", "profile-user-img img-responsive img-circle");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "alt", "User Profile");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "width", "100");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "height", "100");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h30, "class", "profile-username text-center");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p0, "class", "text-muted text-center");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(input0, "display", "none");
@@ -17743,7 +17718,10 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div36, div5);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, div1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, div0);
-      if (if_block) if_block.m(div0, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, img);
+      /*img_binding*/
+
+      ctx[14](img);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, h30);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t9);
@@ -17752,7 +17730,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, input0);
       /*input0_binding*/
 
-      ctx[14](input0);
+      ctx[16](input0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, ul0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t15);
@@ -17767,6 +17745,8 @@ function create_fragment(ctx) {
 
       if (!mounted) {
         dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "change",
+        /*input0_change_handler*/
+        ctx[15]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "change",
         /*onFileSelected*/
         ctx[12]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button0, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
         /*openfileDialog*/
@@ -17800,27 +17780,11 @@ function create_fragment(ctx) {
       /*$form*/
       ctx[6].hasErrors;
       messagenotification.$set(messagenotification_changes);
-
-      if (
-      /*avatarImage*/
-      ctx[5]) {
-        if (if_block) {
-          if_block.p(ctx, dirty);
-        } else {
-          if_block = create_if_block(ctx);
-          if_block.c();
-          if_block.m(div0, t7);
-        }
-      } else if (if_block) {
-        if_block.d(1);
-        if_block = null;
-      }
-
       var modal_changes = {};
 
       if (dirty &
       /*$$scope, mode, $form*/
-      1048644) {
+      8388676) {
         modal_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -17846,10 +17810,12 @@ function create_fragment(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section0);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t6);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section1);
-      if (if_block) if_block.d();
-      /*input0_binding*/
+      /*img_binding*/
 
       ctx[14](null);
+      /*input0_binding*/
+
+      ctx[16](null);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t111);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(modal, detaching);
       mounted = false;
@@ -17886,12 +17852,13 @@ function pushimgover() {
 function instance($$self, $$props, $$invalidate) {
   var $form;
   var message = $$props.message;
-  var error = $$props.error; // export let csrf;
+  var error = $$props.error;
+  var auth = $$props.auth; // export let csrf;
 
   var mode = "create";
   var closeModal = null;
   var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_5__.useForm)({
-    name: "",
+    avatar: "",
     id: "0"
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
@@ -17915,6 +17882,10 @@ function instance($$self, $$props, $$invalidate) {
     $$invalidate(2, mode = "create");
   }
 
+  function updateProfile() {
+    $form.put("/my-profile/" + auth.id);
+  }
+
   function callStore() {
     if (mode == "create") {
       $form.post(resource);
@@ -17927,7 +17898,8 @@ function instance($$self, $$props, $$invalidate) {
     // toastr.success(message);
     $$invalidate(0, message = "");
     $form.clearErrors();
-  }
+  } // avatarImage.src = null;
+
 
   function onCloseModal() {
     // alert('called');
@@ -17940,6 +17912,8 @@ function instance($$self, $$props, $$invalidate) {
 
   function openfileDialog() {
     //   $("#fileLoader").click();
+    // avatarImage.src = null;
+    $$invalidate(4, avatar.value = null, avatar);
     avatar.click();
   }
 
@@ -17956,15 +17930,21 @@ function instance($$self, $$props, $$invalidate) {
       imgtag.src = event.target.result;
     };
 
-    reader.readAsDataURL(selectedFile);
-  } // pushimgover();
+    reader.readAsDataURL(selectedFile); // pushimgover();
 
+    updateProfile();
+  }
 
   function img_binding($$value) {
     svelte_internal__WEBPACK_IMPORTED_MODULE_0__.binding_callbacks[$$value ? 'unshift' : 'push'](function () {
       avatarImage = $$value;
       $$invalidate(5, avatarImage);
     });
+  }
+
+  function input0_change_handler() {
+    $form.avatar = this.value;
+    form.set($form);
   }
 
   function input0_binding($$value) {
@@ -17986,9 +17966,10 @@ function instance($$self, $$props, $$invalidate) {
   $$self.$$set = function ($$props) {
     if ('message' in $$props) $$invalidate(0, message = $$props.message);
     if ('error' in $$props) $$invalidate(1, error = $$props.error);
+    if ('auth' in $$props) $$invalidate(13, auth = $$props.auth);
   };
 
-  return [message, error, mode, closeModal, avatar, avatarImage, $form, form, callStore, onResetMessage, onCloseModal, openfileDialog, onFileSelected, img_binding, input0_binding, input_input_handler, setRef_handler];
+  return [message, error, mode, closeModal, avatar, avatarImage, $form, form, callStore, onResetMessage, onCloseModal, openfileDialog, onFileSelected, auth, img_binding, input0_change_handler, input0_binding, input_input_handler, setRef_handler];
 }
 
 var MyProfile = /*#__PURE__*/function (_SvelteComponent) {
@@ -18004,7 +17985,8 @@ var MyProfile = /*#__PURE__*/function (_SvelteComponent) {
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
       message: 0,
-      error: 1
+      error: 1,
+      auth: 13
     });
     return _this;
   }

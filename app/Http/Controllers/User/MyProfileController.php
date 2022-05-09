@@ -44,6 +44,8 @@ class MyProfileController extends Controller
 
     public function update(UpdateMyProfileRequest $request, $id ,UserRepository $userRepository)
     {
+        $data = $request->validated();
+        $data['avatar'] = $request->uploadAvatar();
         $record = $userRepository->update($id,$request->validated());
         return $this->respondWithSuccess("Record updated.");
     }

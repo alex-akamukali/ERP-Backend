@@ -13,7 +13,7 @@ class UpdateMyProfileRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class UpdateMyProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'avatar'=>['required','file']
         ];
+    }
+
+    function uploadAvatar(){
+        $uploaded = $this->file('avatar')->store("avatar",[
+            'disk'=>'upload'
+        ]);
+        return $uploaded;
     }
 }
