@@ -48,30 +48,13 @@
         $inviteCandidateForm.clearErrors();
     }
 
-    // $:  if ($inviteCandidateForm.first_name){
-    //    $inviteCandidateForm.clearErrors('first_name');
-    // }
-
-    // $:  if ($inviteCandidateForm.last_name){
-    //    $inviteCandidateForm.clearErrors('last_name');
-    // }
-
-    // $:  if ($inviteCandidateForm.email){
-    //    $inviteCandidateForm.clearErrors('email');
-    // }
-
-    // $:  if ($inviteCandidateForm.account_type){
-    //    $inviteCandidateForm.clearErrors('account_type');
-    // }
-
-
     function sendInvitation(){
        $inviteCandidateForm.post(invite_candidate_route);
     }
 
     function sendReInvitation(user){
-       $reInviteCandidateForm.email = user.email;
-       $reInviteCandidateForm.put(reinvite_candidate_route + '/' + user.id);
+    //    $reInviteCandidateForm.email = user.email;
+       $reInviteCandidateForm.put(reinvite_candidate_route + user.id);
     }
 
 

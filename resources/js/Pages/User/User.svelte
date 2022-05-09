@@ -6,15 +6,16 @@
 </script>
 
 <script>
-    export let users; // = $page.props.users;
-    export let invite_candidate_route;
-    export let reinvite_candidate_route;
+    export let list; // = $page.props.users;
+    let invite_candidate_route = '/invite-candidate/';
+    let reinvite_candidate_route = '/invite-candidate/';
     export let message;
     export let error;
     // let msg = writable(message);
     function clearMessage(){
         message = '';
     }
+    $: users = list;
 </script>
 
 <UserListComponent

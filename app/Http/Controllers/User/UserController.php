@@ -3,48 +3,47 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreUserRequest;
-use App\Http\Requests\UpdateUserRequest;
-use App\Models\User;
-use App\Repositories\UserRepo;
+use App\Http\Requests\User\StoreUserRequest;
+use App\Http\Requests\User\UpdateUserRequest;
+use App\User\UserRepository;
 
 class UserController extends Controller
 {
 
-    public function index(UserRepo $userRepo)
+    public function index(UserRepository $userRepository)
     {
-
-        $list = $userRepo->fetch(request()->all())->orderBy('id', 'desc')->candidates()->paginate(7);
-        return inertia()->render('User/UserList', [
-            'users' => $list,
-            'message' => $this->getMessage(),
-            'error' => $this->getError(),
-            'invite_candidate_route' => route('invite-candidate.store'),
-            'reinvite_candidate_route' => route('invite-candidate.update', '')
-        ]);
+        return inertia()->render("User/User", $this->data([
+            'list' => $userRepository->fetch(request()->all())->paginate(15)
+        ]));
     }
 
     public function create()
     {
     }
 
-    public function store(StoreUserRequest $request)
+    public function store(StoreUserRequest $request, UserRepository $userRepository)
+    {
+        $record = $userRepository->create($request->validated());
+        return $this->respondWithSuccess("User invited.");
+    }
+
+    public function show($id)
     {
     }
 
-    public function show(User $user)
+    public function edit($id)
     {
     }
 
-    public function edit(User $user)
+    public function update(UpdateUserRequest $request, $id, UserRepository $userRepository)
     {
+        $record = $userRepository->update($id, $request->validated());
+        return $this->respondWithSuccess("Record updated.");
     }
 
-    public function update(UpdateUserRequest $request, User $user)
+    public function destroy($id, UserRepository $userRepository)
     {
-    }
-
-    public function destroy(User $user)
-    {
+        $userRepository->remove($id);
+        return $this->respondWithSuccess("Record removed.");
     }
 }

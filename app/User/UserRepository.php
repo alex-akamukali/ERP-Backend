@@ -2,44 +2,73 @@
 
 namespace App\User;
 
+use App\Mail\User\InviteCandidate;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class UserRepository
 {
 
-    function fetch($filters=[]){
-
+    function fetch($filters = [])
+    {
+        $query = User::query();
+        return $query;
     }
 
-    function login(){
-
+    function fetchById($id)
+    {
+        $record = User::query()->find($id);
+        return $record;
     }
 
-    function invite(){
-
+    function sendInvitation($user){
+        Mail::to($user->email)->send(new InviteCandidate($user));
     }
 
-    function inviteAdmin(){
-
+    function update($id, $data)
+    {
+        $record = User::query()->find($id);
+        $record->update($data);
+        return $record;
     }
 
-    function inviteStaff(){
-
+    function create($data)
+    {
+        $data['name'] = $data['first_name'] . ' ' . $data['last_name'];
+        // $data['account_type'] = User::ACCOUNT_TYPE_CANDIDATE;
+        $data['password'] = Hash::make('password'); //password
+        $data['account_status'] = User::ACCOUNT_STATUS_INVITED;
+        $record = User::create($data);
+        $this->sendInvitation($record);
+        return $record;
     }
 
-    function inviteCandidate(){
-
+    function resendInvitation($id){
+        $record = User::query()->find($id);
+        $this->sendInvitation($record);
+        return $record;
     }
 
-    function updateProfile($id,$data=[]){
-      $user = User::find($id)->update($data);
-      return $user;
+    function remove($id)
+    {
+        $record = User::query()->find($id);
+        $record->delete();
+        return $record;
     }
 
-    function deleteAccount($id){
-       $user = User::find($id);
-       $user->delete();
-       return $user;
+    function login($request=[]){
+        $auth = Auth::attempt($request);
+        return $auth;
     }
 
+    function logout(){
+        Auth::logout();
+        return true;
+    }
+
+    function isLogged(){
+        return Auth::check();
+    }
 }

@@ -4,39 +4,26 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\User\UserRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
 
-    function index()
+    function index(UserRepository $userRepository)
     {
-
-        if (Auth::check()) {
-            return redirect()->route('dashboard')->with([
-                'message' => 'Currently logged in.',
-                'error' => false
-            ]);
+        if ($userRepository->isLogged()) {
+            return $this->respondWithSuccessRoute('Currently logged in.',route('dashboard'));
         }
-
-        // return view('auth.login');
-        return inertia()->render('Auth/Login',[
-            'message'=>$this->getMessage(),
-            'error'=>$this->getError()
-        ]);
-
-        // return inertia()->render('Auth/Login', [
-        //     'version' => '2.0.0',
-        //     'login_route' => route('login.store'),
-        //     'csrf' => csrf_token()
-        // ]);
+        return inertia()->render('Auth/Login',$this->data([]));
     }
 
     //
-    function store(LoginRequest $loginRequest)
+    function store(LoginRequest $loginRequest, UserRepository $userRepository)
     {
-        $check = Auth::attempt($loginRequest->validated());
+
+        $check = $userRepository->login($loginRequest->validated());
         if ($check) {
             return redirect()->back()->with([
                 'message' => 'Login successful',
@@ -49,8 +36,8 @@ class LoginController extends Controller
         ]);
     }
 
-    function destroy(){
-        Auth::logout();
+    function destroy(UserRepository $userRepository){
+        $userRepository->logout();
         return redirect()->route('login')->with([
            'message'=>'Just logged out!',
            'error'=>false

@@ -21,7 +21,7 @@
                     (pages.length - 1 == index ? " next " : "")}
             >
 
-                <Link href={page.url? page.url : ''} preserveState>
+                <a use:inertia="{{ preserveScroll: true }}" href={page.url? page.url : ''}>
                     {#if index == 0}
                         &laquo; Previous
                     {:else if pages.length - 1 == index}
@@ -29,7 +29,7 @@
                     {:else}
                         {page.label}
                     {/if}
-                </Link>
+                </a>
             </li>
         {/each}
 
