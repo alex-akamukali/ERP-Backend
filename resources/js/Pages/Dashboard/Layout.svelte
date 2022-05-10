@@ -256,7 +256,7 @@
                             data-toggle="dropdown"
                         >
                             <img
-                                src={user_logo}
+                                src={'/uploads/' + user.avatar}
                                 class="img-circle"
                                 alt=" ."
                                 style="width:20px; height:20px"
@@ -266,7 +266,7 @@
                             <!-- User image -->
                             <li class="user-header">
                                 <img
-                                    src={user_logo}
+                                    src={'/uploads/' + user.avatar}
                                     class="img-circle"
                                     alt="img"
                                 />

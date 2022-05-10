@@ -6165,10 +6165,10 @@ function create_fragment(ctx) {
   var dispose;
   var default_slot_template =
   /*#slots*/
-  ctx[7]["default"];
+  ctx[6]["default"];
   var default_slot = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_slot)(default_slot_template, ctx,
   /*$$scope*/
-  ctx[6], null);
+  ctx[5], null);
   return {
     c: function c() {
       div27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
@@ -6196,7 +6196,7 @@ function create_fragment(ctx) {
       span4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       span4.textContent = "".concat(
       /*user*/
-      ctx[3].name);
+      ctx[2].name);
       t45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       ul2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
       li20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
@@ -6337,9 +6337,9 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "data-toggle", "offcanvas");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "role", "button");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li19, "class", "dropdown notifications-menu svelte-9fvhrt");
-      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img2.src, img2_src_value =
-      /*user_logo*/
-      ctx[1])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "src", img2_src_value);
+      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img2.src, img2_src_value = '/uploads/' +
+      /*user*/
+      ctx[2].avatar)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "src", img2_src_value);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "class", "img-circle");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "alt", " .");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img2, "width", "20px");
@@ -6348,9 +6348,9 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a20, "href", a20_href_value = "/");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a20, "class", "dropdown-toggle svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a20, "data-toggle", "dropdown");
-      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img3.src, img3_src_value =
-      /*user_logo*/
-      ctx[1])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "src", img3_src_value);
+      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img3.src, img3_src_value = '/uploads/' +
+      /*user*/
+      ctx[2].avatar)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "src", img3_src_value);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "class", "img-circle");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "alt", "img");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li20, "class", "user-header");
@@ -6359,7 +6359,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "pull-left");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a22, "href",
       /*logout_route*/
-      ctx[4]);
+      ctx[3]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a22, "class", "btn btn-primary btn-flat svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "pull-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li21, "class", "user-footer svelte-9fvhrt");
@@ -6374,7 +6374,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i18, "class", "fa fa-tachometer");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a23, "href",
       /*dashboard_route*/
-      ctx[2]);
+      ctx[1]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a23, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li24, "class", "active svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a24, "href", a24_href_value = "/");
@@ -6398,7 +6398,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i46, "class", "fa fa-graduation-cap");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a46, "href",
       /*program_type_index_route*/
-      ctx[5]);
+      ctx[4]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a46, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li46, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a47, "href", a47_href_value = '/knowledge-area');
@@ -6425,7 +6425,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i57, "class", "fa fa-power-off");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a56, "href",
       /*logout_route*/
-      ctx[4]);
+      ctx[3]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a56, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li57, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul10, "class", "sidebar-menu tree");
@@ -6594,14 +6594,14 @@ function create_fragment(ctx) {
       if (default_slot) {
         if (default_slot.p && (!current || dirty &
         /*$$scope*/
-        64)) {
+        32)) {
           (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.update_slot_base)(default_slot, default_slot_template, ctx,
           /*$$scope*/
-          ctx[6], !current ? (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.get_all_dirty_from_scope)(
+          ctx[5], !current ? (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.get_all_dirty_from_scope)(
           /*$$scope*/
-          ctx[6]) : (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.get_slot_changes)(default_slot_template,
+          ctx[5]) : (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.get_slot_changes)(default_slot_template,
           /*$$scope*/
-          ctx[6], dirty, null), null);
+          ctx[5], dirty, null), null);
         }
       }
     },
@@ -6628,7 +6628,7 @@ var c = 90;
 function instance($$self, $$props, $$invalidate) {
   var $page;
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.page, function ($$value) {
-    return $$invalidate(8, $page = $$value);
+    return $$invalidate(7, $page = $$value);
   });
   var _$$props$$$slots = $$props.$$slots,
       slots = _$$props$$$slots === void 0 ? {} : _$$props$$$slots,
@@ -6646,10 +6646,10 @@ function instance($$self, $$props, $$invalidate) {
       settings_knowledge_area_index_route = _$page$props.settings_knowledge_area_index_route;
 
   $$self.$$set = function ($$props) {
-    if ('$$scope' in $$props) $$invalidate(6, $$scope = $$props.$$scope);
+    if ('$$scope' in $$props) $$invalidate(5, $$scope = $$props.$$scope);
   };
 
-  return [olade_logo, user_logo, dashboard_route, user, logout_route, program_type_index_route, $$scope, slots];
+  return [olade_logo, dashboard_route, user, logout_route, program_type_index_route, $$scope, slots];
 }
 
 var Layout = /*#__PURE__*/function (_SvelteComponent) {
