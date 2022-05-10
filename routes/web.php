@@ -102,3 +102,5 @@ Route::resource('my-document',\App\Http\Controllers\User\MyDocumentController::c
 Route::resource('my-activity',\App\Http\Controllers\User\MyActivityController::class)->middleware(['auth']);
 
 Route::resource('my-profile',\App\Http\Controllers\User\MyProfileController::class)->middleware(['auth']);
+
+Route::resource('upload-avatar',\App\Http\Controllers\User\UploadAvatarController::class)->middleware(['auth']);

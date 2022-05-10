@@ -45,8 +45,8 @@
         mode = "create";
     }
 
-    function updateProfile(){
-        $form.post("/my-profile/" + auth.id);
+    function updateAvatar(){
+        $form.post("/upload-avatar/" + auth.id);
     }
 
     function callStore() {
@@ -96,37 +96,10 @@
 
                     reader.readAsDataURL(selectedFile);
 
-                    // pushimgover();
-                    console.log($form.avatar,'1');
-                    updateProfile();
-                    setTimeout(()=>{
-                        console.log($form.avatar,'2');
-                    },2000);
+                    updateAvatar();
 
                   }
 
-                  function pushimgover()
-                  {
-                    var file_data = jQuery('#fileLoader').prop('files')[0];
-                    var form_data = new FormData();
-                    form_data.append('file', file_data);
-                   // / alert(form_data);
-
-                     jQuery.ajax({
-                        url: '../utility/uploadavatar', // point to server-side PHP script
-                        dataType: 'text',  // what to expect back from the PHP script, if anything
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        data: form_data,
-                        type: 'post',
-                        success: function(ser_rep){
-                          //alert(ser_rep);
-                          toastr["success"](ser_rep);
-
-                        }
-                     });
-                  }
 
 </script>
 

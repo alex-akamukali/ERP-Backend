@@ -17474,7 +17474,7 @@ function create_title_slot(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
     }
   };
-} // (399:8) 
+} // (372:8) 
 
 
 function create_content_slot(ctx) {
@@ -17537,7 +17537,7 @@ function create_content_slot(ctx) {
       dispose();
     }
   };
-} // (417:8) 
+} // (390:8) 
 
 
 function create_storeButton_slot(ctx) {
@@ -17838,28 +17838,6 @@ function create_fragment(ctx) {
 var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_6__["default"];
 var resource = '/province/';
 
-function pushimgover() {
-  var file_data = jQuery('#fileLoader').prop('files')[0];
-  var form_data = new FormData();
-  form_data.append('file', file_data); // / alert(form_data);
-
-  jQuery.ajax({
-    url: '../utility/uploadavatar',
-    // point to server-side PHP script
-    dataType: 'text',
-    // what to expect back from the PHP script, if anything
-    cache: false,
-    contentType: false,
-    processData: false,
-    data: form_data,
-    type: 'post',
-    success: function success(ser_rep) {
-      //alert(ser_rep);
-      toastr["success"](ser_rep);
-    }
-  });
-}
-
 function instance($$self, $$props, $$invalidate) {
   var $form;
   var message = $$props.message;
@@ -17894,8 +17872,8 @@ function instance($$self, $$props, $$invalidate) {
     $$invalidate(3, mode = "create");
   }
 
-  function updateProfile() {
-    $form.post("/my-profile/" + auth.id);
+  function updateAvatar() {
+    $form.post("/upload-avatar/" + auth.id);
   }
 
   function callStore() {
@@ -17942,13 +17920,8 @@ function instance($$self, $$props, $$invalidate) {
       imgtag.src = event.target.result;
     };
 
-    reader.readAsDataURL(selectedFile); // pushimgover();
-
-    console.log($form.avatar, '1');
-    updateProfile();
-    setTimeout(function () {
-      console.log($form.avatar, '2');
-    }, 2000);
+    reader.readAsDataURL(selectedFile);
+    updateAvatar();
   }
 
   function img_binding($$value) {
