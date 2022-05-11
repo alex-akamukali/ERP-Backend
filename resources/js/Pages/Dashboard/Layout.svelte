@@ -1,6 +1,7 @@
 <script context="module">
     import CheckAuthComponent from "../Auth/CheckAuthComponent.svelte";
     import MessageNotification from "../../Pages/Components/MessageNotification.svelte";
+    import {notifications} from "../../Stores/GlobalStore";
 </script>
 
 <script>
@@ -32,6 +33,13 @@
     page.subscribe(function({props}){
        user = props.user;
     });
+
+    $notifications = [...$notifications,{
+        name:'Just logged in',
+        href:'#'
+    }];
+
+
 </script>
 
 <MessageNotification />
@@ -73,183 +81,30 @@
                             data-toggle="dropdown"
                         >
                             <i class="fa fa-bell-o" />
-                            <span class="label label-danger">17</span>
+                            <span class="label label-danger">
+                                {$notifications.length}
+                            </span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="header">You have 17 notifications</li>
+                            <li class="header">You have {$notifications.length} notification{$notifications.length <= 1? '':'s' }</li>
                             <li>
                                 <!-- inner menu: contains the actual data -->
                                 <ul class="menu">
+
+                                    {#each $notifications as notification}
                                     <li>
+                                        <!-- svelte-ignore a11y-invalid-attribute -->
                                         <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae"
+
+                                            href="#"
                                         >
                                             <i
                                                 class="fa fa-comment text-green"
-                                            /> Payment Item for process
+                                            /> {notification.name}
                                         </a>
                                     </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=b18550ec1bf9ec2fca2bf92fe4ce"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=c2aa1951a32f33b047954754f0ae"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=361306d7cc9bc413ef624c72a19b"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=3907d5938ce80bf016cd6a3b6fb3"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            target="_blank"
-                                            href="ACCOUNTcontractPayment?HKG=64ea3b9136cd52d8aa90e38c0024"
-                                        >
-                                            <i
-                                                class="fa fa-comment text-green"
-                                            /> Payment Item for process
-                                        </a>
-                                    </li>
+                                    {/each}
+
                                 </ul>
                             </li>
                             <!-- <li class="footer"><a href={'/'}>View all</a></li>-->
@@ -282,20 +137,6 @@
                                     <small>Registered since Mar. 2022</small>
                                 </p>
                             </li>
-                            <!-- Menu Body -->
-                            <!--<li class="user-body">
-                  <div class="row">
-                    <div class="col-xs-4 text-center">
-                      <a href={'/'}>Followers</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href={'/'}>Sales</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href={'/'}>Friends</a>
-                    </div>
-                  </div>
-                </li> -->
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">

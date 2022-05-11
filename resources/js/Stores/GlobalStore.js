@@ -12,3 +12,5 @@ export let Data = writable({
 
 
 export let currentRow = writable({});
+
+export let notifications = writable([]);

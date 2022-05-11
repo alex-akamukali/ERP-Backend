@@ -8,6 +8,8 @@
 
     import { currentRow } from "../../Stores/GlobalStore";
 
+    import {notifications} from "../../Stores/GlobalStore";
+
     export const layout = Layout;
 </script>
 
@@ -36,6 +38,10 @@
     function removeRow(data) {
         if (confirm("Do you want to confirm this action?")) {
             $form.delete(resource + data.id);
+            $notifications = [...$notifications,{
+                name:'Just removed vendor-company',
+                href:''
+            }];
         }
     }
 
@@ -47,8 +53,16 @@
     function callStore() {
         if (mode == "create") {
             $form.post(resource);
+            $notifications = [...$notifications,{
+                name:'New vendor-company added',
+                href:''
+            }];
         } else {
             $form.put(resource + $form.id);
+            $notifications = [...$notifications,{
+                name:'Vendor-company updated',
+                href:''
+            }];
         }
     }
 </script>
