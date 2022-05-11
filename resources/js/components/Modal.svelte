@@ -1,5 +1,6 @@
 <script context="module">
    import {createEventDispatcher,onMount} from "svelte";
+   import {useCloseModalOnSuccess} from "../Helpers/closeModalOnSuccess";
 </script>
 <script>
     export let id;
@@ -18,7 +19,7 @@
 
 
 </script>
-<div class="modal fade" {id}>
+<div class="modal fade" use:useCloseModalOnSuccess {id}>
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

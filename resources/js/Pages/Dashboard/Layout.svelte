@@ -29,6 +29,7 @@
         settings_knowledge_area_index_route,
     } = $page.props;
 </script>
+
 <MessageNotification />
 
 <div class="wrapper" style="height: auto; min-height: 100%;">

@@ -3,6 +3,7 @@ import Modal from "../../components/Modal.svelte";
 import { page, useForm } from "@inertiajs/inertia-svelte";
 import MessageNotification from "../Components/MessageNotification.svelte";
 
+
 </script>
 
 <script>
@@ -71,29 +72,27 @@ function callStore() {
     }
 }
 
-function onResetMessage() {
-    // toastr.success(message);
-    message = "";
-    $form.clearErrors();
-}
+// function onResetMessage() {
+//     // toastr.success(message);
+//     message = "";
+//     $form.clearErrors();
+// }
 
-function onCloseModal() {
-    // alert('called');
-    // console.log(closeModal);
-    closeModal.click();
-}
+// function onCloseModal() {
+//     // alert('called');
+//     // console.log(closeModal);
+//     closeModal.click();
+// }
 
-function onFilterChange() {
-    $form.get(resource);
-}
+// function onFilterChange() {
+//     $form.get(resource);
+// }
 
-$:{
-    console.log(!$page.props.errors,$page.props.errors);
-    console.log(closeModal);
-    if (Object.keys($page.props.errors).length <= 0 && closeModal && $page.props.message != ''){
-       closeModal.click();
-    }
-}
+// $:{
+    // if (Object.keys($page.props.errors).length <= 0 && closeModal && $page.props.message != ''){
+    //    closeModal.click();
+    // }
+// }
 
 // $: console.log($form.message);
 

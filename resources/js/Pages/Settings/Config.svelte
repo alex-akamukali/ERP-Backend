@@ -13,7 +13,7 @@
 <script>
     export let list;
     export let message;
-    export let error;
+    // export let error;
     // export let csrf;
 
     let mode = "create";
@@ -69,14 +69,6 @@
     }
 </script>
 
-<MessageNotification
-    {message}
-    {error}
-    errors={$form.errors}
-    {onResetMessage}
-    hasErrors={$form.hasErrors}
-    {onCloseModal}
-/>
 
 <Page>
     <span slot="title">#Config Options</span>
