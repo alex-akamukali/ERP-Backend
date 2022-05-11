@@ -1,4 +1,5 @@
 <script context="module">
+    import {useSelect2} from "../../Helpers/useSelect2";
     import Layout from "../Dashboard/Layout.svelte";
     import { page, useForm ,inertia} from "@inertiajs/inertia-svelte";
     import Pagination from "../../components/Pagination.svelte";
@@ -23,6 +24,19 @@
     export let error;
     export let auth;
     export let types;
+
+    let form = useForm({
+        skills:auth.skills || ''
+    });
+
+    function onSkillChange(skl){
+       $form.skills = skl;
+       $form.put("/update-user-skill/" + auth.id);
+    }
+
+    form.subscribe(function(data){
+        console.log(data,'Form data changed....');
+    });
     // export let csrf;
 </script>
 
@@ -76,13 +90,25 @@
 
                   <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
 
-                  <p>
+                  <select class="form-control"  use:useSelect2={{
+                      cb:(vls)=>{
+                        //  $form.skills = vls;
+                         onSkillChange(vls);
+                      },
+                      store:form
+                  }} multiple>
+                    {#each $form.skills.split(',') as skill}
+                     <option value={skill} selected>{skill}</option>
+                    {/each}
+                  </select>
+
+                  <!-- <p>
                     <span class="label label-danger">UI Design</span>
                     <span class="label label-success">Coding</span>
                     <span class="label label-info">Javascript</span>
                     <span class="label label-warning">PHP</span>
                     <span class="label label-primary">Node.js</span>
-                  </p>
+                  </p> -->
 
                   <hr>
                 <!--
@@ -220,8 +246,6 @@
 
 
 <!-- </Page> -->
-
-
 
 
 

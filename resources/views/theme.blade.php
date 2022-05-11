@@ -30,6 +30,7 @@
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <!-- Calendly link widget end -->
 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,6 +40,13 @@
     <![endif]-->
 
     {{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script> --}}
+    <style>
+        .select2-selection__choice__display,.select2-selection__choice__remove,.select2-selection__choice {
+            background-color: #3a3a92 !important;
+        }
+
+    </style>
+
 
     <script src="https://cdn.ckeditor.com/4.18.0/standard/ckeditor.js"></script>
 
@@ -73,6 +81,7 @@
     {{-- <script src="{{ asset('theme/dist/js/demo.js') }}"></script> --}}
 
     <script src="{{ asset('asset1/toastr.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </body>
 
 </html>

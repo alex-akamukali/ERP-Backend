@@ -18832,6 +18832,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Pagination_svelte__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Pagination.svelte */ "./resources/js/components/Pagination.svelte");
 /* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
 /* harmony import */ var _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Dashboard/Layout.svelte */ "./resources/js/Pages/Dashboard/Layout.svelte");
+/* harmony import */ var _Helpers_useSelect2__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../Helpers/useSelect2 */ "./resources/js/Helpers/useSelect2.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -18879,6 +18880,57 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+function get_each_context(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[9] = list[i];
+  return child_ctx;
+} // (100:20) {#each $form.skills.split(',') as skill}
+
+
+function create_each_block(ctx) {
+  var option;
+  var t_value =
+  /*skill*/
+  ctx[9] + "";
+  var t;
+  var option_value_value;
+  return {
+    c: function c() {
+      option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
+      option.__value = option_value_value =
+      /*skill*/
+      ctx[9];
+      option.value = option.__value;
+      option.selected = true;
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, option, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(option, t);
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*$form*/
+      32 && t_value !== (t_value =
+      /*skill*/
+      ctx[9] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+
+      if (dirty &
+      /*$form*/
+      32 && option_value_value !== (option_value_value =
+      /*skill*/
+      ctx[9])) {
+        option.__value = option_value_value;
+        option.value = option.__value;
+      }
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
+    }
+  };
+}
+
 function create_fragment(ctx) {
   var section0;
   var t5;
@@ -18888,20 +18940,52 @@ function create_fragment(ctx) {
   var myprofileavatar;
   var t6;
   var div2;
-  var t29;
+  var div0;
+  var t8;
+  var div1;
+  var strong0;
+  var t10;
+  var p0;
+  var t11;
+  var hr0;
+  var t12;
+  var strong1;
+  var t14;
+  var p1;
+  var t15;
+  var hr1;
+  var t16;
+  var strong2;
+  var t18;
+  var select;
+  var useSelect2_action;
+  var t19;
+  var hr2;
+  var t20;
   var div30;
   var div29;
   var ul0;
-  var t35;
+  var t26;
   var div28;
   var div25;
-  var t81;
+  var t72;
   var div26;
   var mydocument;
-  var t82;
+  var t73;
   var div27;
   var current;
+  var mounted;
+  var dispose;
   myprofileavatar = new _MyProfileAvatar_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({});
+  var each_value =
+  /*$form*/
+  ctx[5].skills.split(',');
+  var each_blocks = [];
+
+  for (var i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+
   mydocument = new _MyDocument_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
     props: {
       user_id:
@@ -18932,23 +19016,57 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(myprofileavatar.$$.fragment);
       t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div2.innerHTML = "<div class=\"box-header with-border\"><h3 class=\"box-title\">About Me</h3></div> \n                \n                <div class=\"box-body\"><strong><i class=\"fa fa-book margin-r-5\"></i> Education</strong> \n\n                  <p class=\"text-muted\"></p> \n\n                  <hr/> \n\n                  <strong><i class=\"fa fa-map-marker margin-r-5\"></i> Location</strong> \n\n                  <p class=\"text-muted\"></p> \n\n                  <hr/> \n\n                  <strong><i class=\"fa fa-pencil margin-r-5\"></i> Skills</strong> \n\n                  <p><span class=\"label label-danger\">UI Design</span> \n                    <span class=\"label label-success\">Coding</span> \n                    <span class=\"label label-info\">Javascript</span> \n                    <span class=\"label label-warning\">PHP</span> \n                    <span class=\"label label-primary\">Node.js</span></p> \n\n                  <hr/></div>";
-      t29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0.innerHTML = "<h3 class=\"box-title\">About Me</h3>";
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      strong0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("strong");
+      strong0.innerHTML = "<i class=\"fa fa-book margin-r-5\"></i> Education";
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      p0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      hr0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("hr");
+      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      strong1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("strong");
+      strong1.innerHTML = "<i class=\"fa fa-map-marker margin-r-5\"></i> Location";
+      t14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      p1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      hr1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("hr");
+      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      strong2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("strong");
+      strong2.innerHTML = "<i class=\"fa fa-pencil margin-r-5\"></i> Skills";
+      t18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      select = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+
+      for (var _i = 0; _i < each_blocks.length; _i += 1) {
+        each_blocks[_i].c();
+      }
+
+      t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      hr2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("hr");
+      t20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       ul0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
       ul0.innerHTML = "<li class=\"active\"><a href=\"#biodata\" data-toggle=\"tab\" aria-expanded=\"true\">Bio-data</a></li> \n                  <li class=\"\"><a href=\"#myactivity\" data-toggle=\"tab\" aria-expanded=\"false\">Activity</a></li> \n                  <li class=\"\"><a href=\"#mydocument\" data-toggle=\"tab\" aria-expanded=\"false\">Document</a></li>";
-      t35 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div25.innerHTML = "<form class=\"form-horizontal\" action=\"../utility/updatebio\" method=\"post\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">First Name <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"FirstName\" id=\"inputName\" value=\"Alex\" placeholder=\"First Name\" required=\"\"/></div> \n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Middle Name</label> \n                                <input type=\"text\" class=\"form-control\" name=\"MiddleName\" id=\"inputName\" value=\"\" placeholder=\"Middle Name\"/></div> \n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Last Name <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"LastName\" id=\"inputName\" value=\"Akamukali\" placeholder=\"Last Name\" required=\"\"/></div></div></div> \n\n                      <div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Gender <b style=\"color:red\">*</b></label> \n                               \n                               <div class=\"form-control\"><label><input type=\"radio\" name=\"Gender\" value=\"M\" class=\"flat-green\"/> Male</label> \xA0 \xA0\n                                 <label><input type=\"radio\" name=\"Gender\" value=\"F\" class=\"flat-green\"/> Female</label></div></div> \n\n                          <div class=\"col-md-8\"><label for=\"inputName\" class=\"control-label\">Profession <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"Profession\" id=\"inputName\" value=\"\" placeholder=\"e.g : Business Analyst\" required=\"\"/></div> \n\n                          <div class=\"col-md-12\"><label for=\"inputName\" class=\"control-label\">Education <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"Education\" id=\"inputName\" placeholder=\"\" value=\"\" required=\"\"/></div> \n                           <div class=\"col-md-12\"><label for=\"inputName\" class=\"control-label\">Address <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"Address\" id=\"inputName\" placeholder=\"\" value=\"\" required=\"\"/></div></div></div> \n\n                      <div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Date of Birth <b style=\"color:red\">*</b></label> \n                                \n                                <div class=\"input-group date\"><div class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></div> \n                                  <input type=\"text\" class=\"form-control pull-right datepicker\" placeholder=\"Click to set date\" name=\"DOB\" value=\"\"/></div></div> \n\n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Phone: <b style=\"color:red\">*</b></label> \n                                <input type=\"tel\" class=\"form-control\" name=\"Phone\" id=\"inputName\" value=\"\" placeholder=\"\" data-inputmask=\"&#39;mask&#39;: [&#39;999-999-9999 [x99999]&#39;, &#39;+999 99 99 9999[9] 999&#39;]\" data-mask=\"\" required=\"\"/></div> \n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Email <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" id=\"inputName\" value=\"alex.akamukali@proinsight.ca\" disabled=\"\"/></div></div></div> \n\n                     <div class=\"row\"><br/> \n                      <div class=\"col-md-3 pull-right\"><button type=\"submit\" class=\"btn btn-primary btn-block\">Update Bio-data</button></div></div></form>";
-      t81 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t72 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(mydocument.$$.fragment);
-      t82 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t73 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div27.innerHTML = "<ul class=\"timeline timeline-inverse\"><li><i class=\"fa fa-clock-o bg-gray\"></i></li></ul>";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section0, "class", "content-header");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "box-header with-border");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p0, "class", "text-muted");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p1, "class", "text-muted");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "class", "form-control");
+      select.multiple = true;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "box-body");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "box box-primary");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "col-md-3");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul0, "class", "nav nav-tabs");
@@ -18973,23 +19091,90 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(myprofileavatar, div3, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, t6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, div2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, t29);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, t8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, strong0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, p0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, hr0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, strong1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t14);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, p1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t15);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, hr1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, strong2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t18);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, select);
+
+      for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
+        each_blocks[_i2].m(select, null);
+      }
+
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, hr2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, t20);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, div30);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, div29);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div29, ul0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div29, t35);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div29, t26);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div29, div28);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, div25);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, t81);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, t72);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, div26);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(mydocument, div26, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, t82);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, t73);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, div27);
       current = true;
+
+      if (!mounted) {
+        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(useSelect2_action = _Helpers_useSelect2__WEBPACK_IMPORTED_MODULE_10__.useSelect2.call(null, select, {
+          cb:
+          /*useSelect2_function*/
+          ctx[8],
+          store:
+          /*form*/
+          ctx[6]
+        }));
+        mounted = true;
+      }
     },
     p: function p(ctx, _ref) {
       var _ref2 = _slicedToArray(_ref, 1),
           dirty = _ref2[0];
+
+      if (dirty &
+      /*$form*/
+      32) {
+        each_value =
+        /*$form*/
+        ctx[5].skills.split(',');
+
+        var _i3;
+
+        for (_i3 = 0; _i3 < each_value.length; _i3 += 1) {
+          var child_ctx = get_each_context(ctx, each_value, _i3);
+
+          if (each_blocks[_i3]) {
+            each_blocks[_i3].p(child_ctx, dirty);
+          } else {
+            each_blocks[_i3] = create_each_block(child_ctx);
+
+            each_blocks[_i3].c();
+
+            each_blocks[_i3].m(select, null);
+          }
+        }
+
+        for (; _i3 < each_blocks.length; _i3 += 1) {
+          each_blocks[_i3].d(1);
+        }
+
+        each_blocks.length = each_value.length;
+      }
 
       var mydocument_changes = {};
       if (dirty &
@@ -19035,7 +19220,10 @@ function create_fragment(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t5);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(myprofileavatar);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(mydocument);
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -19043,11 +19231,32 @@ function create_fragment(ctx) {
 var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_9__["default"];
 
 function instance($$self, $$props, $$invalidate) {
+  var $form;
   var my_documents = $$props.my_documents;
   var message = $$props.message;
   var error = $$props.error;
   var auth = $$props.auth;
   var types = $$props.types;
+  var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_8__.useForm)({
+    skills: auth.skills || ''
+  });
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
+    return $$invalidate(5, $form = value);
+  });
+
+  function onSkillChange(skl) {
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.skills = skl, $form);
+    $form.put("/update-user-skill/" + auth.id);
+  }
+
+  form.subscribe(function (data) {
+    console.log(data, 'Form data changed....');
+  });
+
+  var useSelect2_function = function useSelect2_function(vls) {
+    //  $form.skills = vls;
+    onSkillChange(vls);
+  };
 
   $$self.$$set = function ($$props) {
     if ('my_documents' in $$props) $$invalidate(0, my_documents = $$props.my_documents);
@@ -19057,7 +19266,7 @@ function instance($$self, $$props, $$invalidate) {
     if ('types' in $$props) $$invalidate(4, types = $$props.types);
   };
 
-  return [my_documents, message, error, auth, types];
+  return [my_documents, message, error, auth, types, $form, form, onSkillChange, useSelect2_function];
 }
 
 var MyProfile = /*#__PURE__*/function (_SvelteComponent) {
@@ -21159,6 +21368,44 @@ __webpack_require__.r(__webpack_exports__);
 function useModal(node, id) {
   node.addEventListener('click', function (e) {
     jQuery(id).modal();
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Helpers/useSelect2.js":
+/*!********************************************!*\
+  !*** ./resources/js/Helpers/useSelect2.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useSelect2": () => (/* binding */ useSelect2)
+/* harmony export */ });
+function useSelect2(node, _ref) {
+  var cb = _ref.cb,
+      store = _ref.store;
+  var values = '';
+  jQuery(node).select2({
+    tags: true
+  });
+
+  if (store) {
+    store.subscribe(function () {// jQuery(node).select2("val", values.split(','));
+    });
+  } //$("#customers_select").select2("val", "");
+
+
+  jQuery(node).on('change', function (e) {
+    // alert(JSON.stringify(e.target.value));
+    // node.change();
+    // alert(node.value);
+    // jQuery(node).trigger('input');
+    console.log(jQuery(node).val());
+    values = jQuery(node).val().join(',');
+    cb(values);
   });
 }
 
