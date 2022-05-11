@@ -1,5 +1,7 @@
 <script context="module">
     import MessageStore from "../../components/MessageStore";
+    import {Data} from "../../Stores/GlobalStore";
+
 </script>
 
 <script>
@@ -10,12 +12,21 @@
     export let hasErrors;
     export let onCloseModal;
 
-    $: if (message != "") {
+
+
+    $:{
+        // alert(message);
+        $Data.message = message;
+
+        // alert($Data.message);
+    }
+
+    $: if ($Data.message != "") {
         if (error) {
-            toastr.error(message);
+            toastr.error($Data.message);
         }
         if (!error) {
-            toastr.success(message);
+            toastr.success($Data.message);
             if (onCloseModal)onCloseModal();
         }
         if (onResetMessage) {
@@ -25,7 +36,7 @@
 
     $: if (hasErrors) {
         for (let i in errors) {
-            if (errors[i] != message) toastr.error(errors[i]);
+            if (errors[i] != $Data.message) toastr.error(errors[i]);
         }
         if (onResetMessage) {
             onResetMessage();

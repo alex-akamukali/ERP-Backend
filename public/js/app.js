@@ -4919,7 +4919,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
-/* harmony import */ var _components_MessageStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/MessageStore */ "./resources/js/components/MessageStore.js");
+/* harmony import */ var _Stores_GlobalStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Stores/GlobalStore */ "./resources/js/Stores/GlobalStore.js");
+/* harmony import */ var _components_MessageStore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/MessageStore */ "./resources/js/components/MessageStore.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -4946,7 +4947,12 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 function instance($$self, $$props, $$invalidate) {
+  var $Data;
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, _Stores_GlobalStore__WEBPACK_IMPORTED_MODULE_1__.Data, function ($$value) {
+    return $$invalidate(6, $Data = $$value);
+  });
   var message = $$props.message;
   var error = $$props.error;
   var onResetMessage = $$props.onResetMessage;
@@ -4965,15 +4971,25 @@ function instance($$self, $$props, $$invalidate) {
 
   $$self.$$.update = function () {
     if ($$self.$$.dirty &
-    /*message, error, onCloseModal, onResetMessage*/
-    39) {
-      $: if (message != "") {
+    /*message*/
+    1) {
+      $: {
+        // alert(message);
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(_Stores_GlobalStore__WEBPACK_IMPORTED_MODULE_1__.Data, $Data.message = message, $Data);
+      } // alert($Data.message);
+
+    }
+
+    if ($$self.$$.dirty &
+    /*$Data, error, onCloseModal, onResetMessage*/
+    102) {
+      $: if ($Data.message != "") {
         if (error) {
-          toastr.error(message);
+          toastr.error($Data.message);
         }
 
         if (!error) {
-          toastr.success(message);
+          toastr.success($Data.message);
           if (onCloseModal) onCloseModal();
         }
 
@@ -4984,11 +5000,11 @@ function instance($$self, $$props, $$invalidate) {
     }
 
     if ($$self.$$.dirty &
-    /*hasErrors, errors, message, onResetMessage*/
-    29) {
+    /*hasErrors, errors, $Data, onResetMessage*/
+    92) {
       $: if (hasErrors) {
         for (var i in errors) {
-          if (errors[i] != message) toastr.error(errors[i]);
+          if (errors[i] != $Data.message) toastr.error(errors[i]);
         }
 
         if (onResetMessage) {
@@ -4998,7 +5014,7 @@ function instance($$self, $$props, $$invalidate) {
     }
   };
 
-  return [message, error, onResetMessage, errors, hasErrors, onCloseModal];
+  return [message, error, onResetMessage, errors, hasErrors, onCloseModal, $Data];
 }
 
 var MessageNotification = /*#__PURE__*/function (_SvelteComponent) {
@@ -21072,6 +21088,30 @@ var Pagination = /*#__PURE__*/function (_SvelteComponent) {
 }(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Pagination);
+
+/***/ }),
+
+/***/ "./resources/js/Stores/GlobalStore.js":
+/*!********************************************!*\
+  !*** ./resources/js/Stores/GlobalStore.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Data": () => (/* binding */ Data)
+/* harmony export */ });
+/* harmony import */ var svelte_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/store */ "./node_modules/svelte/store/index.mjs");
+
+var Data = (0,svelte_store__WEBPACK_IMPORTED_MODULE_0__.writable)({
+  myDocument: {
+    selected: {},
+    list: []
+  },
+  message: '',
+  error: false
+});
 
 /***/ }),
 
