@@ -13,7 +13,7 @@ class StoreMyDocumentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,21 @@ class StoreMyDocumentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'user_id'=>['required','exists:users,id'],
+            'type'=>'required',
+            'path'=>['required','file'],
+            'title'=>'required'
         ];
     }
+
+    function uploadDocument(){
+        $uploaded = $this->file('path')->store("my_documents",[
+            'disk'=>'upload'
+        ]);
+        $data = $this->validated();
+        $data['path'] = $uploaded;
+        return $data;
+    }
+
 }
+

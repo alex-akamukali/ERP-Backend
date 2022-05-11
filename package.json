@@ -20,7 +20,6 @@
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1",
-        "svelte": "^3.1.0",
         "svelte-loader": "^2.13.4"
     },
     "dependencies": {
@@ -28,6 +27,7 @@
         "@inertiajs/inertia-react": "^0.8.0",
         "@inertiajs/inertia-svelte": "^0.8.0",
         "@inertiajs/progress": "^0.2.7",
-        "react-calendly": "^3.0.3"
+        "react-calendly": "^3.0.3",
+        "svelte": "^3.48.0"
     }
 }

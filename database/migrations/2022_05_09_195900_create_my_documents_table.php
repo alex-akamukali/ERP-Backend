@@ -15,6 +15,10 @@ class CreateMyDocumentsTable extends Migration
     {
         Schema::create('my_documents', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id')->nullable();
+            $table->string('type')->nullable()->comment('resume or certificate or expense');
+            $table->string('title')->nullable();
+            $table->text('path')->nullable();
             $table->timestamps();
         });
     }

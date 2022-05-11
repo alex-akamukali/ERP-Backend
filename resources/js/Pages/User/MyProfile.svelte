@@ -6,14 +6,21 @@
     import Modal from "../../components/Modal.svelte";
     import MessageNotification from "../Components/MessageNotification.svelte";
 
+    // import {FormResource} from "../../Helpers/FormResource";
+    import Form from "../../Helpers/Form.svelte";
+
+    import MyDocument from "./MyDocument.svelte";
+
     export const layout = Layout;
 </script>
 
 <script>
     // export let list;
+    export let my_documents;
     export let message;
     export let error;
     export let auth;
+    export let types;
     // export let csrf;
 
     let mode = "create";
@@ -27,6 +34,7 @@
         avatar: null,
         id:"jjjkj"
     });
+
 
     function selectRow(data) {
         $form.name = data.name;
@@ -46,10 +54,11 @@
     }
 
     function updateAvatar(){
-        $form.post("/upload-avatar/" + auth.id);
+        // $form.post("/upload-avatar/" + auth.id);
+        // $uploadAvatarResource.post("/upload-avatar/" + auth.id);
     }
 
-    function callStore() {
+    function callStore(){
         if (mode == "create") {
             $form.post(resource);
         } else {
@@ -67,7 +76,7 @@
     function onCloseModal() {
         // alert('called');
         console.log(closeModal);
-        closeModal.click();
+        // closeModal.click();
     }
 
     let avatar;
@@ -101,16 +110,17 @@
                   }
 
 
+
 </script>
 
-<MessageNotification
+<!-- <MessageNotification
     {message}
     {error}
     errors={$form.errors}
     {onResetMessage}
     hasErrors={$form.hasErrors}
     {onCloseModal}
-/>
+/> -->
 
 <!-- <Page> -->
     <!-- <span slot="title">My Profile</span> -->
@@ -151,6 +161,7 @@
                     <img bind:this={avatarImage} id="myProfileImage" src={'/uploads/' + auth.avatar} class="profile-user-img img-responsive img-circle" alt="User Profile" width="100" height="100">
 
                   <h3 class="profile-username text-center">Alex Akamukali</h3>
+
 
                   <p class="text-muted text-center"></p>
                   <input on:input={e => $form.avatar = e.target.files[0]}  bind:this={avatar} style="display: none;" type="file" id="fileLoader" name="ProfilePhoto" accept="image/*" on:change={onFileSelected}>
@@ -306,34 +317,10 @@
                   </div>
                   <!-- /.tab-pane -->
                   <div class="tab-pane" id="mydocument">
-                   <div class="row">
-                     <div class="col-md-12"> <button class="btn btn-success btn-sm pull-right"> <i class="fa fa-plus"></i> Upload Document  </button>  </div>
-                   </div>
-                    <div class="table-responsive">
-                      <table class="table table-stripe">
-                        <thead>
-                          <tr>
-                            <th>Doc ID</th>
-                            <th>Doc Type</th>
-                            <th>Doc Title</th>
-                            <th> &nbsp; </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td> doc-3903 </td>
-                            <td> Resume </td>
-                            <td> My First Resume </td>
-                            <td>
-                              <i class="fa fa-download text-blue"></i> &nbsp; &nbsp;
-                              <i class="fa fa-edit text-blue"></i>
-                            </td>
-                          </tr>
-                        </tbody>
 
-                      </table>
-                    </div>
 
+                    <!-- my documents -->
+                    <MyDocument user_id={auth.id} list={my_documents} message={message} error={error} types={types} />
 
 
                   </div>
@@ -364,35 +351,6 @@
     </section>
 
 
-
-
-      <Modal id="modal-progtype"  on:submit={callStore} on:setRef={(ref)=>closeModal=ref.detail}>
-        <span slot="title">Province</span>
-
-        <div class="col-md-12" slot="content">
-            <div class="col-md-12">
-                <!-- svelte-ignore a11y-label-has-associated-control -->
-                <label class="control-label"
-                    >Name <b style="color:red">*</b></label
-                >
-                <input
-                    type="text"
-                    class="form-control"
-                    name="proTitle"
-                    placeholder=""
-                    required=""
-                    bind:value={$form.name}
-                />
-            </div>
-
-        </div>
-
-        <button type="submit" class="btn btn-primary" slot="storeButton">
-            <i class="fa fa-save" /> &nbsp; {mode == "create"
-                ? "Add Province"
-                : "Update Province"}
-        </button>
-      </Modal>
 <!-- </Page> -->
 
 

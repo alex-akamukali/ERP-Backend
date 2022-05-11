@@ -10,6 +10,9 @@ class MyDocumentRepository
     function fetch($filters = [])
     {
         $query = MyDocument::query();
+        if (isset($filters['user_id'])){
+          $query = $query->where('user_id',$filters['user_id']);
+        }
         return $query;
     }
 
@@ -38,5 +41,9 @@ class MyDocumentRepository
         $record = MyDocument::query()->find($id);
         $record->delete();
         return $record;
+    }
+
+    function types(){
+        return MyDocument::TYPES;
     }
 }

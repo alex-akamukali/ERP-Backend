@@ -24,8 +24,9 @@ class MyDocumentController extends Controller
 
     public function store(StoreMyDocumentRequest $request,MyDocumentRepository $myDocumentRepository)
     {
-        $record = $myDocumentRepository->create($request->validated());
-        return $this->respondWithSuccess("New record added.");
+        $data = $request->uploadDocument();
+        $record = $myDocumentRepository->create($data);
+        return $this->respondWithSuccess("Document uploaded.");
     }
 
     public function show($id,MyDocumentRepository $myDocumentRepository)
@@ -44,14 +45,15 @@ class MyDocumentController extends Controller
 
     public function update(UpdateMyDocumentRequest $request, $id ,MyDocumentRepository $myDocumentRepository)
     {
-        $record = $myDocumentRepository->update($id,$request->validated());
-        return $this->respondWithSuccess("Record updated.");
+        $data = $request->uploadDocument();
+        $record = $myDocumentRepository->update($id,$data);
+        return $this->respondWithSuccess("Document updated.");
     }
 
     public function destroy($id,MyDocumentRepository $myDocumentRepository)
     {
         $myDocumentRepository->remove($id);
-        return $this->respondWithSuccess("Record removed.");
+        return $this->respondWithSuccess("Document removed.");
     }
 
 }
