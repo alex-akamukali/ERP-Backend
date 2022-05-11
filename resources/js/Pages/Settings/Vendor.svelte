@@ -6,6 +6,8 @@
     import Modal from "../../components/Modal.svelte";
     import MessageNotification from "../Components/MessageNotification.svelte";
 
+    import {currentRow} from "../../Stores/GlobalStore";
+
     export const layout = Layout;
 </script>
 
@@ -17,6 +19,10 @@
 
 
     let mode = "create";
+
+    $currentRow = 23;
+
+    console.log($currentRow);
 
 
 

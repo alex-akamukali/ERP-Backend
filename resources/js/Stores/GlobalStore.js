@@ -9,3 +9,6 @@ export let Data = writable({
     message:'',
     error:false
 });
+
+
+export let currentRow = writable({});

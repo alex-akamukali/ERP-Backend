@@ -6,41 +6,32 @@
     import Modal from "../../components/Modal.svelte";
     import MessageNotification from "../Components/MessageNotification.svelte";
 
+    import { currentRow } from "../../Stores/GlobalStore";
+
     export const layout = Layout;
 </script>
 
 <script>
     export let list;
-    export let message;
 
-    export let error;
-
+    console.log($currentRow);
 
     let mode = "create";
 
-
-
     const resource = "/vendor-company/";
 
-    let closeModal = null;
-
-    // alert(id);
-
-
     let form = useForm({
-        description: '',
+        description: "",
         name: "",
-        id:0
+        id: 0,
     });
 
-
-
-    function selectRow(data) {
+    currentRow.subscribe((data) => {
         $form.name = data.name;
         $form.description = data.description;
         $form.id = data.id;
         mode = "update";
-    }
+    });
 
     function removeRow(data) {
         if (confirm("Do you want to confirm this action?")) {
@@ -60,34 +51,7 @@
             $form.put(resource + $form.id);
         }
     }
-
-    function onResetMessage() {
-        // toastr.success(message);
-        message = "";
-        $form.clearErrors();
-    }
-
-    function onCloseModal() {
-        // alert('called');
-        console.log(closeModal);
-        closeModal.click();
-    }
-
-    function onFilterChange() {
-        $form.get(resource);
-    }
-
-
 </script>
-
-<MessageNotification
-    {message}
-    {error}
-    errors={$form.errors}
-    {onResetMessage}
-    hasErrors={$form.hasErrors}
-    {onCloseModal}
-/>
 
 <Page>
     <span slot="title">Vendors</span>
@@ -101,9 +65,7 @@
         <i class="fa fa-plus" /> Add Vendor.
     </button>
 
-
     <div class="col-sm-12" slot="content">
-
         <table
             id="example1"
             class="table table-data table-striped table-hover dataTable no-footer"
@@ -125,7 +87,8 @@
                                 data-toggle="modal"
                                 data-target="#modal-progtype"
                                 href={null}
-                                on:click|preventDefault={() => selectRow(item)}
+                                on:click|preventDefault={() =>
+                                    ($currentRow = item)}
                             >
                                 <i class="fa fa-edit text-green" />
                             </a>
@@ -143,15 +106,10 @@
         </table>
     </div>
 
-    <Modal
-        id="modal-progtype"
-        on:submit={callStore}
-        on:setRef={(ref) => (closeModal = ref.detail)}
-    >
+    <Modal id="modal-progtype" on:submit={callStore}>
         <span slot="title">Vendor</span>
 
         <div class="col-md-12" slot="content">
-
             <div class="col-md-12">
                 <!-- svelte-ignore a11y-label-has-associated-control -->
                 <label class="control-label"
@@ -179,9 +137,8 @@
                     placeholder=""
                     required=""
                     bind:value={$form.description}
-                ></textarea>
+                />
             </div>
-
         </div>
 
         <button type="submit" class="btn btn-primary" slot="storeButton">
