@@ -8,9 +8,9 @@ import MessageNotification from "../Components/MessageNotification.svelte";
 <script>
 export let list;
 
-export let message;
+// export let message;
 
-export let error;
+// export let error;
 
 export let types;
 
@@ -23,6 +23,14 @@ let mode = "create";
 const resource = "/my-document/";
 
 let closeModal = null;
+let message = '';
+let errors = {};
+
+$: {
+    message = $page.props.message;
+    errors = $page.props.errors;
+    console.log(errors);
+}
 
 // alert(id);
 
@@ -79,21 +87,29 @@ function onFilterChange() {
     $form.get(resource);
 }
 
-$: console.log($form.message);
+$:{
+    console.log(!$page.props.errors,$page.props.errors);
+    console.log(closeModal);
+    if (Object.keys($page.props.errors).length <= 0 && closeModal && $page.props.message != ''){
+       closeModal.click();
+    }
+}
+
+// $: console.log($form.message);
 
 //export let name;
 
 </script>
 
 
-<MessageNotification
+<!-- <MessageNotification
     {message}
     {error}
     errors={$form.errors}
     {onResetMessage}
     hasErrors={$form.hasErrors}
     {onCloseModal}
-/>
+/> -->
 
 
 <div class="row">

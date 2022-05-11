@@ -1,5 +1,6 @@
 <script context="module">
     import CheckAuthComponent from "../Auth/CheckAuthComponent.svelte";
+    import MessageNotification from "../../Pages/Components/MessageNotification.svelte";
 </script>
 
 <script>
@@ -28,6 +29,7 @@
         settings_knowledge_area_index_route,
     } = $page.props;
 </script>
+<MessageNotification />
 
 <div class="wrapper" style="height: auto; min-height: 100%;">
     <header class="main-header">

@@ -51,7 +51,18 @@ class HandleInertiaRequests extends Middleware
             'dashboard_route'=>route('dashboard'),
             'program_type_index_route'=>route('program-type.index'),
             'is_logged'=>Auth::check(),
-            // 'message'=>'ok',
+            'message'=>function(){
+                if (session()->has('message')){
+                   return session('message');
+                }
+                return '';
+            },
+            'error'=>function(){
+               if (session()->has('error')){
+                  return session('error');
+               }
+               return '';
+            }
             // 'error'=>false
 
         ]);

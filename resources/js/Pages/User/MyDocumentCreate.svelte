@@ -76,7 +76,7 @@
 
     function onCloseModal() {
         // alert('called');
-        console.log(closeModal);
+        // console.log(closeModal);
         closeModal.click();
     }
 </script>

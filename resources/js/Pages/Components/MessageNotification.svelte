@@ -1,46 +1,50 @@
 <script context="module">
     import MessageStore from "../../components/MessageStore";
     import {Data} from "../../Stores/GlobalStore";
+    import {page} from "@inertiajs/inertia-svelte";
 
 </script>
 
 <script>
-    export let message;
-    export let error;
-    export let onResetMessage;
-    export let errors;
-    export let hasErrors;
+    let message;
+    let error;
+    // export let onResetMessage;
+    let errors;
+    // export let hasErrors;
     export let onCloseModal;
 
 
 
     $:{
-        // alert(message);
-        $Data.message = message;
 
-        // alert($Data.message);
+    message = $page.props.message;
+    errors = $page.props.errors;
+    error = $page.props.error;
+    // console.log(errors);
+
     }
 
-    $: if ($Data.message != "") {
+    $: if (message != "") {
         if (error) {
-            toastr.error($Data.message);
+            toastr.error(message);
+
         }
         if (!error) {
-            toastr.success($Data.message);
-            if (onCloseModal)onCloseModal();
+            toastr.success(message);
+            // if (onCloseModal)onCloseModal();
         }
-        if (onResetMessage) {
-            onResetMessage();
-        }
+        // if (onResetMessage) {
+        //     // onResetMessage();
+        // }
     }
 
-    $: if (hasErrors) {
+    $: if (errors) {
         for (let i in errors) {
-            if (errors[i] != $Data.message) toastr.error(errors[i]);
+            if (errors[i] != message) toastr.error(errors[i]);
         }
-        if (onResetMessage) {
-            onResetMessage();
-        }
+        // if (onResetMessage) {
+        //     // onResetMessage();
+        // }
 
     }
 </script>
