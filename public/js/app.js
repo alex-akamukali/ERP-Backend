@@ -17584,7 +17584,7 @@ function create_content_slot(ctx) {
       ctx[4].type === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
         return (
           /*select_change_handler*/
-          ctx[13].call(select)
+          ctx[14].call(select)
         );
       });
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "col-md-12");
@@ -17630,11 +17630,11 @@ function create_content_slot(ctx) {
       if (!mounted) {
         dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
         /*input0_input_handler*/
-        ctx[12]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
+        ctx[13]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
         /*select_change_handler*/
-        ctx[13]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
+        ctx[14]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
         /*input_handler*/
-        ctx[14])];
+        ctx[15])];
         mounted = true;
       }
     },
@@ -17739,6 +17739,8 @@ function create_fragment(ctx) {
   var messagenotification;
   var t0;
   var div1;
+  var div0;
+  var button;
   var t2;
   var div2;
   var table;
@@ -17748,6 +17750,8 @@ function create_fragment(ctx) {
   var t11;
   var modal;
   var current;
+  var mounted;
+  var dispose;
   messagenotification = new _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({
     props: {
       message:
@@ -17761,13 +17765,13 @@ function create_fragment(ctx) {
       ctx[4].errors,
       onResetMessage:
       /*onResetMessage*/
-      ctx[9],
+      ctx[10],
       hasErrors:
       /*$form*/
       ctx[4].hasErrors,
       onCloseModal:
       /*onCloseModal*/
-      ctx[10]
+      ctx[11]
     }
   });
   var each_value_1 =
@@ -17794,16 +17798,18 @@ function create_fragment(ctx) {
   });
   modal.$on("submit",
   /*callStore*/
-  ctx[8]);
+  ctx[9]);
   modal.$on("setRef",
   /*setRef_handler*/
-  ctx[15]);
+  ctx[16]);
   return {
     c: function c() {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(messagenotification.$$.fragment);
       t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div1.innerHTML = "<div class=\"col-md-12\"><button data-toggle=\"modal\" data-target=\"#modal-my-document\" class=\"btn btn-success btn-sm pull-right\"><i class=\"fa fa-plus\"></i> Upload Document</button></div>";
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      button.innerHTML = "<i class=\"fa fa-plus\"></i> Upload Document";
       t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       table = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("table");
@@ -17818,6 +17824,10 @@ function create_fragment(ctx) {
 
       t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(modal.$$.fragment);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "data-toggle", "modal");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "data-target", "#modal-my-document");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn btn-success btn-sm pull-right");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(table, "class", "table table-stripe");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "table-responsive");
@@ -17826,6 +17836,8 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(messagenotification, target, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t0, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div1, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, button);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t2, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div2, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, table);
@@ -17840,6 +17852,13 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t11, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(modal, target, anchor);
       current = true;
+
+      if (!mounted) {
+        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        /*clearForm*/
+        ctx[8]));
+        mounted = true;
+      }
     },
     p: function p(ctx, _ref) {
       var _ref2 = _slicedToArray(_ref, 1),
@@ -17931,6 +17950,8 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(modal, detaching);
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -18025,18 +18046,18 @@ function instance($$self, $$props, $$invalidate) {
     if ('message' in $$props) $$invalidate(0, message = $$props.message);
     if ('error' in $$props) $$invalidate(2, error = $$props.error);
     if ('types' in $$props) $$invalidate(3, types = $$props.types);
-    if ('user_id' in $$props) $$invalidate(11, user_id = $$props.user_id);
+    if ('user_id' in $$props) $$invalidate(12, user_id = $$props.user_id);
   };
 
   $$self.$$.update = function () {
     if ($$self.$$.dirty &
     /*$form*/
     16) {
-      $: console.log($form.errors);
+      $: console.log($form.message);
     }
   };
 
-  return [message, list, error, types, $form, mode, closeModal, form, callStore, onResetMessage, onCloseModal, user_id, input0_input_handler, select_change_handler, input_handler, setRef_handler];
+  return [message, list, error, types, $form, mode, closeModal, form, clearForm, callStore, onResetMessage, onCloseModal, user_id, input0_input_handler, select_change_handler, input_handler, setRef_handler];
 }
 
 var MyDocument = /*#__PURE__*/function (_SvelteComponent) {
@@ -18055,7 +18076,7 @@ var MyDocument = /*#__PURE__*/function (_SvelteComponent) {
       message: 0,
       error: 2,
       types: 3,
-      user_id: 11
+      user_id: 12
     });
     return _this;
   }

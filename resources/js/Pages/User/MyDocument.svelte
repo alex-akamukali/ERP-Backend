@@ -79,7 +79,7 @@ function onFilterChange() {
     $form.get(resource);
 }
 
-$: console.log($form.errors);
+$: console.log($form.message);
 
 //export let name;
 
@@ -97,7 +97,7 @@ $: console.log($form.errors);
 
 
 <div class="row">
-    <div class="col-md-12"> <button data-toggle="modal" data-target="#modal-my-document" class="btn btn-success btn-sm pull-right"> <i class="fa fa-plus"></i> Upload Document  </button>  </div>
+    <div class="col-md-12"> <button on:click|preventDefault={clearForm} data-toggle="modal" data-target="#modal-my-document" class="btn btn-success btn-sm pull-right"> <i class="fa fa-plus"></i> Upload Document  </button>  </div>
   </div>
   <div class="table-responsive">
      <table class="table table-stripe">
