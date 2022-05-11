@@ -26,17 +26,19 @@ class UpdateMyDocumentRequest extends FormRequest
         return [
             'user_id'=>['required','exists:users,id'],
             'type'=>'required',
-            'path'=>['required','file'],
+            // 'path'=>['nullable','file'],
             'title'=>'required'
         ];
     }
 
     function uploadDocument(){
-        $uploaded = $this->file('avatar')->store("avatar",[
-            'disk'=>'upload'
-        ]);
         $data = $this->validated();
-        $data['path'] = $uploaded;
+        if ($this->file('path')){
+            $uploaded = $this->file('path')->store("my_documents",[
+                'disk'=>'upload'
+            ]);
+            $data['path'] = $uploaded;
+        }
         return $data;
     }
 

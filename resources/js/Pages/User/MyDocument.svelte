@@ -1,17 +1,11 @@
 <script context="module">
 import Modal from "../../components/Modal.svelte";
 import { page, useForm } from "@inertiajs/inertia-svelte";
-import MessageNotification from "../Components/MessageNotification.svelte";
-
+import {useModal} from "../../Helpers/useModal";
 
 </script>
-
 <script>
 export let list;
-
-// export let message;
-
-// export let error;
 
 export let types;
 
@@ -19,36 +13,27 @@ export let user_id;
 
 let mode = "create";
 
-
-
 const resource = "/my-document/";
-
-let closeModal = null;
-let message = '';
-let errors = {};
-
-$: {
-    message = $page.props.message;
-    errors = $page.props.errors;
-    console.log(errors);
-}
-
-// alert(id);
 
 
 let form = useForm({
     title: '',
     path: null,
+    path2:null,
     type:'',
     id:0,
-    user_id
+    user_id,
+    _method:'POST'
 });
 
 
 
 function selectRow(data) {
-    $form.name = data.name;
-    $form.description = data.description;
+    $form.title = data.title;
+    $form._method = 'PUT';
+    $form.path = data.path;
+    $form.type = data.type;
+    $form.user_id = data.user_id;
     $form.id = data.id;
     mode = "update";
 }
@@ -61,6 +46,7 @@ function removeRow(data) {
 
 function clearForm() {
     $form.reset();
+    // alert('called...');
     mode = "create";
 }
 
@@ -68,51 +54,15 @@ function callStore() {
     if (mode == "create") {
         $form.post(resource);
     } else {
-        $form.put(resource + $form.id);
+        $form.post(resource + $form.id);
     }
 }
 
-// function onResetMessage() {
-//     // toastr.success(message);
-//     message = "";
-//     $form.clearErrors();
-// }
-
-// function onCloseModal() {
-//     // alert('called');
-//     // console.log(closeModal);
-//     closeModal.click();
-// }
-
-// function onFilterChange() {
-//     $form.get(resource);
-// }
-
-// $:{
-    // if (Object.keys($page.props.errors).length <= 0 && closeModal && $page.props.message != ''){
-    //    closeModal.click();
-    // }
-// }
-
-// $: console.log($form.message);
-
-//export let name;
 
 </script>
 
-
-<!-- <MessageNotification
-    {message}
-    {error}
-    errors={$form.errors}
-    {onResetMessage}
-    hasErrors={$form.hasErrors}
-    {onCloseModal}
-/> -->
-
-
 <div class="row">
-    <div class="col-md-12"> <button on:click|preventDefault={clearForm} data-toggle="modal" data-target="#modal-my-document" class="btn btn-success btn-sm pull-right"> <i class="fa fa-plus"></i> Upload Document  </button>  </div>
+    <div class="col-md-12"> <button on:click|preventDefault={clearForm} use:useModal={'#modal-my-document'}  class="btn btn-success btn-sm pull-right"> <i class="fa fa-plus"></i> Upload Document  </button>  </div>
   </div>
   <div class="table-responsive">
      <table class="table table-stripe">
@@ -132,13 +82,22 @@ function callStore() {
            <td> {item.title}</td>
            <td>
              <a href={'/uploads/' + item.path} target="_blank">
-               <i class="fa fa-edit text-blue"></i>
+               <i class="fa fa-download text-blue"></i>
              </a>
                &nbsp; &nbsp;
              <!-- svelte-ignore a11y-invalid-attribute -->
-             <a href="#">
+             <a href="#" use:useModal={'#modal-my-document'} on:click={selectRow(item)}>
                <i class="fa fa-edit text-blue"></i>
              </a>
+
+             &nbsp; &nbsp;
+
+             <!-- svelte-ignore a11y-invalid-attribute -->
+             <a href="#" on:click={removeRow(item)}>
+                <i class="fa fa-trash text-blue"></i>
+             </a>
+
+
            </td>
          </tr>
          {/each}
@@ -152,7 +111,6 @@ function callStore() {
    <Modal
     id="modal-my-document"
     on:submit={callStore}
-    on:setRef={(ref) => (closeModal = ref.detail)}
 >
     <span slot="title">My Documents</span>
 
@@ -202,7 +160,11 @@ function callStore() {
                 name="proTitle"
                 placeholder=""
                 required=""
-                on:input={(e) => ($form.path = e.target.files[0])}
+                on:input={(e) => {
+                    $form.path = e.target.files[0];
+                    // console.log($form);
+                    // alert(e.target.files[0]);
+                }}
             />
         </div>
     </div>

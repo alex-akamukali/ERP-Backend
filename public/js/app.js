@@ -6160,6 +6160,10 @@ function create_fragment(ctx) {
   var img2_src_value;
   var t44;
   var span4;
+  var t45_value =
+  /*user*/
+  ctx[0].name + "";
+  var t45;
   var a20_href_value;
   var t46;
   var ul2;
@@ -6305,9 +6309,7 @@ function create_fragment(ctx) {
       img2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("img");
       t44 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       span4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
-      span4.textContent = "".concat(
-      /*user*/
-      ctx[2].name);
+      t45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t45_value);
       t46 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       ul2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
       li20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
@@ -6431,13 +6433,13 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img0, "alt", "img");
       if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img0.src, img0_src_value =
       /*olade_logo*/
-      ctx[0])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img0, "src", img0_src_value);
+      ctx[1])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img0, "src", img0_src_value);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img0, "height", "37px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span0, "class", "logo-mini");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img1, "alt", "img");
       if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img1.src, img1_src_value =
       /*olade_logo*/
-      ctx[0])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img1, "src", img1_src_value);
+      ctx[1])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img1, "src", img1_src_value);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img1, "height", "37px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span1, "class", "logo-lg");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", a0_href_value = "");
@@ -6450,7 +6452,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li19, "class", "dropdown notifications-menu svelte-9fvhrt");
       if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img2.src, img2_src_value = '/uploads/' +
       /*user*/
-      ctx[2].avatar)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "src", img2_src_value);
+      ctx[0].avatar)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "src", img2_src_value);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "class", "img-circle");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "alt", " .");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img2, "width", "20px");
@@ -6461,7 +6463,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a20, "data-toggle", "dropdown");
       if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img3.src, img3_src_value = '/uploads/' +
       /*user*/
-      ctx[2].avatar)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "src", img3_src_value);
+      ctx[0].avatar)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "src", img3_src_value);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "class", "img-circle");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "alt", "img");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li20, "class", "user-header");
@@ -6485,7 +6487,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i18, "class", "fa fa-tachometer");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a23, "href",
       /*dashboard_route*/
-      ctx[1]);
+      ctx[2]);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a23, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li24, "class", "active svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a24, "href", a24_href_value = "/");
@@ -6577,6 +6579,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a20, img2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a20, t44);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a20, span4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span4, t45);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li22, t46);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li22, ul2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul2, li20);
@@ -6704,6 +6707,28 @@ function create_fragment(ctx) {
       var _ref2 = _slicedToArray(_ref, 1),
           dirty = _ref2[0];
 
+      if (!current || dirty &
+      /*user*/
+      1 && !(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img2.src, img2_src_value = '/uploads/' +
+      /*user*/
+      ctx[0].avatar)) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "src", img2_src_value);
+      }
+
+      if ((!current || dirty &
+      /*user*/
+      1) && t45_value !== (t45_value =
+      /*user*/
+      ctx[0].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t45, t45_value);
+
+      if (!current || dirty &
+      /*user*/
+      1 && !(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img3.src, img3_src_value = '/uploads/' +
+      /*user*/
+      ctx[0].avatar)) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "src", img3_src_value);
+      }
+
       if (default_slot) {
         if (default_slot.p && (!current || dirty &
         /*$$scope*/
@@ -6761,12 +6786,16 @@ function instance($$self, $$props, $$invalidate) {
       csrf = _$page$props.csrf,
       program_type_index_route = _$page$props.program_type_index_route,
       settings_knowledge_area_index_route = _$page$props.settings_knowledge_area_index_route;
+  _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.page.subscribe(function (_ref3) {
+    var props = _ref3.props;
+    $$invalidate(0, user = props.user);
+  });
 
   $$self.$$set = function ($$props) {
     if ('$$scope' in $$props) $$invalidate(5, $$scope = $$props.$$scope);
   };
 
-  return [olade_logo, dashboard_route, user, logout_route, program_type_index_route, $$scope, slots];
+  return [user, olade_logo, dashboard_route, logout_route, program_type_index_route, $$scope, slots];
 }
 
 var Layout = /*#__PURE__*/function (_SvelteComponent) {
@@ -17225,7 +17254,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
-/* harmony import */ var _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/MessageNotification.svelte */ "./resources/js/Pages/Components/MessageNotification.svelte");
+/* harmony import */ var _Helpers_useModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Helpers/useModal */ "./resources/js/Helpers/useModal.js");
 /* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
 /* harmony import */ var _components_Modal_svelte__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Modal.svelte */ "./resources/js/components/Modal.svelte");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -17270,15 +17299,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[18] = list[i];
+  child_ctx[13] = list[i];
   return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[21] = list[i];
+  child_ctx[16] = list[i];
   return child_ctx;
-} // (128:9) {#each list as item}
+} // (78:9) {#each list as item}
 
 
 function create_each_block_1(ctx) {
@@ -17287,19 +17316,19 @@ function create_each_block_1(ctx) {
   var t0;
   var t1_value =
   /*item*/
-  ctx[21].id + "";
+  ctx[16].id + "";
   var t1;
   var t2;
   var td1;
   var t3_value =
   /*item*/
-  ctx[21].type + "";
+  ctx[16].type + "";
   var t3;
   var t4;
   var td2;
   var t5_value =
   /*item*/
-  ctx[21].title + "";
+  ctx[16].title + "";
   var t5;
   var t6;
   var td3;
@@ -17308,7 +17337,12 @@ function create_each_block_1(ctx) {
   var a0_href_value;
   var t7;
   var a1;
+  var useModal_action;
   var t8;
+  var a2;
+  var t9;
+  var mounted;
+  var dispose;
   return {
     c: function c() {
       tr = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("tr");
@@ -17328,13 +17362,17 @@ function create_each_block_1(ctx) {
       t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("\n                  \n             \n             ");
       a1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       a1.innerHTML = "<i class=\"fa fa-edit text-blue\"></i>";
-      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i0, "class", "fa fa-edit text-blue");
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("\n\n                \n\n             \n             ");
+      a2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a2.innerHTML = "<i class=\"fa fa-trash text-blue\"></i>";
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i0, "class", "fa fa-download text-blue");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", a0_href_value = '/uploads/' +
       /*item*/
-      ctx[21].path);
+      ctx[16].path);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "target", "_blank");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", "#");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", "#");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, tr, anchor);
@@ -17353,38 +17391,68 @@ function create_each_block_1(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a0, i0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td3, t7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td3, a1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td3, t8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td3, a2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t9);
+
+      if (!mounted) {
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(useModal_action = _Helpers_useModal__WEBPACK_IMPORTED_MODULE_1__.useModal.call(null, a1, '#modal-my-document')), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(a1, "click", function () {
+          if ((0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.is_function)(
+          /*selectRow*/
+          ctx[5](
+          /*item*/
+          ctx[16])))
+            /*selectRow*/
+            ctx[5](
+            /*item*/
+            ctx[16]).apply(this, arguments);
+        }), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(a2, "click", function () {
+          if ((0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.is_function)(
+          /*removeRow*/
+          ctx[6](
+          /*item*/
+          ctx[16])))
+            /*removeRow*/
+            ctx[6](
+            /*item*/
+            ctx[16]).apply(this, arguments);
+        })];
+        mounted = true;
+      }
     },
-    p: function p(ctx, dirty) {
+    p: function p(new_ctx, dirty) {
+      ctx = new_ctx;
       if (dirty &
       /*list*/
       1 && t1_value !== (t1_value =
       /*item*/
-      ctx[21].id + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1, t1_value);
+      ctx[16].id + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1, t1_value);
       if (dirty &
       /*list*/
       1 && t3_value !== (t3_value =
       /*item*/
-      ctx[21].type + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t3, t3_value);
+      ctx[16].type + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t3, t3_value);
       if (dirty &
       /*list*/
       1 && t5_value !== (t5_value =
       /*item*/
-      ctx[21].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
+      ctx[16].title + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
 
       if (dirty &
       /*list*/
       1 && a0_href_value !== (a0_href_value = '/uploads/' +
       /*item*/
-      ctx[21].path)) {
+      ctx[16].path)) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", a0_href_value);
       }
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
+      mounted = false;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
-} // (157:4) 
+} // (115:4) 
 
 
 function create_title_slot(ctx) {
@@ -17403,14 +17471,14 @@ function create_title_slot(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
     }
   };
-} // (188:16) {#each types as type}
+} // (146:16) {#each types as type}
 
 
 function create_each_block(ctx) {
   var option;
   var t_value =
   /*type*/
-  ctx[18] + "";
+  ctx[13] + "";
   var t;
   var option_value_value;
   return {
@@ -17419,7 +17487,7 @@ function create_each_block(ctx) {
       t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
       option.__value = option_value_value =
       /*type*/
-      ctx[18];
+      ctx[13];
       option.value = option.__value;
     },
     m: function m(target, anchor) {
@@ -17431,13 +17499,13 @@ function create_each_block(ctx) {
       /*types*/
       2 && t_value !== (t_value =
       /*type*/
-      ctx[18] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+      ctx[13] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
 
       if (dirty &
       /*types*/
       2 && option_value_value !== (option_value_value =
       /*type*/
-      ctx[18])) {
+      ctx[13])) {
         option.__value = option_value_value;
         option.value = option.__value;
       }
@@ -17446,7 +17514,7 @@ function create_each_block(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
     }
   };
-} // (159:4) 
+} // (117:4) 
 
 
 function create_content_slot(ctx) {
@@ -17521,10 +17589,10 @@ function create_content_slot(ctx) {
       select.required = "";
       if (
       /*$form*/
-      ctx[4].type === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
+      ctx[3].type === void 0) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.add_render_callback)(function () {
         return (
           /*select_change_handler*/
-          ctx[12].call(select)
+          ctx[11].call(select)
         );
       });
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "col-md-12");
@@ -17546,7 +17614,7 @@ function create_content_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, input0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
       /*$form*/
-      ctx[4].title);
+      ctx[3].title);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, t3);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, div1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, label1);
@@ -17560,7 +17628,7 @@ function create_content_slot(ctx) {
 
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
       /*$form*/
-      ctx[4].type);
+      ctx[3].type);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, t8);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, div2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, label2);
@@ -17570,23 +17638,23 @@ function create_content_slot(ctx) {
       if (!mounted) {
         dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
         /*input0_input_handler*/
-        ctx[11]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
+        ctx[10]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
         /*select_change_handler*/
-        ctx[12]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
+        ctx[11]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
         /*input_handler*/
-        ctx[13])];
+        ctx[12])];
         mounted = true;
       }
     },
     p: function p(ctx, dirty) {
       if (dirty &
       /*$form, types*/
-      18 && input0.value !==
+      10 && input0.value !==
       /*$form*/
-      ctx[4].title) {
+      ctx[3].title) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
         /*$form*/
-        ctx[4].title);
+        ctx[3].title);
       }
 
       if (dirty &
@@ -17621,10 +17689,10 @@ function create_content_slot(ctx) {
 
       if (dirty &
       /*$form, types*/
-      18) {
+      10) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
         /*$form*/
-        ctx[4].type);
+        ctx[3].type);
       }
     },
     d: function d(detaching) {
@@ -17634,7 +17702,7 @@ function create_content_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
-} // (210:4) 
+} // (172:4) 
 
 
 function create_storeButton_slot(ctx) {
@@ -17679,6 +17747,7 @@ function create_fragment(ctx) {
   var div1;
   var div0;
   var button;
+  var useModal_action;
   var t1;
   var div2;
   var table;
@@ -17714,10 +17783,7 @@ function create_fragment(ctx) {
   });
   modal.$on("submit",
   /*callStore*/
-  ctx[7]);
-  modal.$on("setRef",
-  /*setRef_handler*/
-  ctx[14]);
+  ctx[8]);
   return {
     c: function c() {
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
@@ -17738,8 +17804,6 @@ function create_fragment(ctx) {
 
       t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(modal.$$.fragment);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "data-toggle", "modal");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "data-target", "#modal-my-document");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn btn-success btn-sm pull-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "row");
@@ -17766,9 +17830,9 @@ function create_fragment(ctx) {
       current = true;
 
       if (!mounted) {
-        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
         /*clearForm*/
-        ctx[6]));
+        ctx[7])), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(useModal_action = _Helpers_useModal__WEBPACK_IMPORTED_MODULE_1__.useModal.call(null, button, '#modal-my-document'))];
         mounted = true;
       }
     },
@@ -17777,8 +17841,8 @@ function create_fragment(ctx) {
           dirty = _ref2[0];
 
       if (dirty &
-      /*list*/
-      1) {
+      /*removeRow, list, selectRow*/
+      97) {
         each_value_1 =
         /*list*/
         ctx[0];
@@ -17810,7 +17874,7 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*$$scope, mode, $form, types*/
-      16777238) {
+      524302) {
         modal_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -17836,7 +17900,7 @@ function create_fragment(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t10);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(modal, detaching);
       mounted = false;
-      dispose();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
 }
@@ -17845,32 +17909,29 @@ var resource = "/my-document/";
 
 function instance($$self, $$props, $$invalidate) {
   var $form;
-  var $page;
-  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.page, function ($$value) {
-    return $$invalidate(10, $page = $$value);
-  });
   var list = $$props.list;
   var types = $$props.types;
   var user_id = $$props.user_id;
   var mode = "create";
-  var closeModal = null;
-  var message = '';
-  var errors = {}; // alert(id);
-
   var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.useForm)({
     title: '',
     path: null,
+    path2: null,
     type: '',
     id: 0,
-    user_id: user_id
+    user_id: user_id,
+    _method: 'POST'
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
-    return $$invalidate(4, $form = value);
+    return $$invalidate(3, $form = value);
   });
 
   function selectRow(data) {
-    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.name = data.name, $form);
-    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.description = data.description, $form);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.title = data.title, $form);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form._method = 'PUT', $form);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.path = data.path, $form);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.type = data.type, $form);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.user_id = data.user_id, $form);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.id = data.id, $form);
     $$invalidate(2, mode = "update");
   }
@@ -17882,7 +17943,8 @@ function instance($$self, $$props, $$invalidate) {
   }
 
   function clearForm() {
-    $form.reset();
+    $form.reset(); // alert('called...');
+
     $$invalidate(2, mode = "create");
   }
 
@@ -17890,7 +17952,7 @@ function instance($$self, $$props, $$invalidate) {
     if (mode == "create") {
       $form.post(resource);
     } else {
-      $form.put(resource + $form.id);
+      $form.post(resource + $form.id);
     }
   }
 
@@ -17907,32 +17969,18 @@ function instance($$self, $$props, $$invalidate) {
   }
 
   var input_handler = function input_handler(e) {
-    return (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.path = e.target.files[0], $form);
-  };
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.path = e.target.files[0], $form);
+  }; // console.log($form);
+  // alert(e.target.files[0]);
 
-  var setRef_handler = function setRef_handler(ref) {
-    return $$invalidate(3, closeModal = ref.detail);
-  };
 
   $$self.$$set = function ($$props) {
     if ('list' in $$props) $$invalidate(0, list = $$props.list);
     if ('types' in $$props) $$invalidate(1, types = $$props.types);
-    if ('user_id' in $$props) $$invalidate(8, user_id = $$props.user_id);
+    if ('user_id' in $$props) $$invalidate(9, user_id = $$props.user_id);
   };
 
-  $$self.$$.update = function () {
-    if ($$self.$$.dirty &
-    /*$page, errors*/
-    1536) {
-      $: {
-        message = $page.props.message;
-        $$invalidate(9, errors = $page.props.errors);
-        console.log(errors);
-      }
-    }
-  };
-
-  return [list, types, mode, closeModal, $form, form, clearForm, callStore, user_id, errors, $page, input0_input_handler, select_change_handler, input_handler, setRef_handler];
+  return [list, types, mode, $form, form, selectRow, removeRow, clearForm, callStore, user_id, input0_input_handler, select_change_handler, input_handler];
 }
 
 var MyDocument = /*#__PURE__*/function (_SvelteComponent) {
@@ -17949,7 +17997,7 @@ var MyDocument = /*#__PURE__*/function (_SvelteComponent) {
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
       list: 0,
       types: 1,
-      user_id: 8
+      user_id: 9
     });
     return _this;
   }
@@ -18703,14 +18751,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "layout": () => (/* binding */ layout)
 /* harmony export */ });
 /* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
-/* harmony import */ var _MyDocument_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyDocument.svelte */ "./resources/js/Pages/User/MyDocument.svelte");
-/* harmony import */ var _Helpers_Form_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Helpers/Form.svelte */ "./resources/js/Helpers/Form.svelte");
-/* harmony import */ var _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Components/MessageNotification.svelte */ "./resources/js/Pages/Components/MessageNotification.svelte");
-/* harmony import */ var _components_Modal_svelte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Modal.svelte */ "./resources/js/components/Modal.svelte");
-/* harmony import */ var _components_Page_svelte__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Page.svelte */ "./resources/js/components/Page.svelte");
-/* harmony import */ var _components_Pagination_svelte__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Pagination.svelte */ "./resources/js/components/Pagination.svelte");
-/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
-/* harmony import */ var _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Dashboard/Layout.svelte */ "./resources/js/Pages/Dashboard/Layout.svelte");
+/* harmony import */ var _MyProfileAvatar_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyProfileAvatar.svelte */ "./resources/js/Pages/User/MyProfileAvatar.svelte");
+/* harmony import */ var _MyDocument_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MyDocument.svelte */ "./resources/js/Pages/User/MyDocument.svelte");
+/* harmony import */ var _Helpers_Form_svelte__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Helpers/Form.svelte */ "./resources/js/Helpers/Form.svelte");
+/* harmony import */ var _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Components/MessageNotification.svelte */ "./resources/js/Pages/Components/MessageNotification.svelte");
+/* harmony import */ var _components_Modal_svelte__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Modal.svelte */ "./resources/js/components/Modal.svelte");
+/* harmony import */ var _components_Page_svelte__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Page.svelte */ "./resources/js/components/Page.svelte");
+/* harmony import */ var _components_Pagination_svelte__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Pagination.svelte */ "./resources/js/components/Pagination.svelte");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+/* harmony import */ var _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Dashboard/Layout.svelte */ "./resources/js/Pages/Dashboard/Layout.svelte");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -18747,6 +18796,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /* resources/js/Pages/User/MyProfile.svelte generated by Svelte v3.47.0 */
 
+
  // import {FormResource} from "../../Helpers/FormResource";
 
 
@@ -18761,50 +18811,36 @@ function create_fragment(ctx) {
   var section0;
   var t5;
   var section1;
-  var div33;
-  var div5;
-  var div1;
-  var div0;
-  var img;
-  var img_src_value;
-  var t6;
-  var h30;
-  var t8;
-  var p0;
-  var t9;
-  var input0;
-  var t10;
-  var ul0;
-  var t14;
-  var button0;
-  var t16;
-  var div4;
-  var t39;
-  var div32;
   var div31;
-  var ul1;
-  var t45;
+  var div3;
+  var myprofileavatar;
+  var t6;
+  var div2;
+  var t29;
   var div30;
-  var div27;
-  var t91;
-  var div28;
-  var mydocument;
-  var t92;
   var div29;
+  var ul0;
+  var t35;
+  var div28;
+  var div25;
+  var t81;
+  var div26;
+  var mydocument;
+  var t82;
+  var div27;
   var current;
-  var mounted;
-  var dispose;
-  mydocument = new _MyDocument_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({
+  myprofileavatar = new _MyProfileAvatar_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({});
+  mydocument = new _MyDocument_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
     props: {
       user_id:
       /*auth*/
       ctx[3].id,
       list:
       /*my_documents*/
-      ctx[1],
+      ctx[0],
       message:
       /*message*/
-      ctx[0],
+      ctx[1],
       error:
       /*error*/
       ctx[2],
@@ -18819,140 +18855,69 @@ function create_fragment(ctx) {
       section0.innerHTML = "<h1>My Profile</h1> \n        <ol class=\"breadcrumb\"><li><a href=\"#\"><i class=\"fa fa-dashboard\"></i> Home</a></li> \n            <li class=\"active\">My Profile</li></ol>";
       t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       section1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
-      div33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      img = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("img");
-      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      h30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h3");
-      h30.textContent = "Alex Akamukali";
-      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      p0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
-      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      ul0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
-      ul0.innerHTML = "<li class=\"list-group-item\"><b>Contracts</b> \n                      \n                      <a href=\"#\" class=\"pull-right\">543</a></li>";
-      t14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      button0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
-      button0.innerHTML = "<b>Upload My Passport Photo</b>";
-      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div4.innerHTML = "<div class=\"box-header with-border\"><h3 class=\"box-title\">About Me</h3></div> \n                \n                <div class=\"box-body\"><strong><i class=\"fa fa-book margin-r-5\"></i> Education</strong> \n\n                  <p class=\"text-muted\"></p> \n\n                  <hr/> \n\n                  <strong><i class=\"fa fa-map-marker margin-r-5\"></i> Location</strong> \n\n                  <p class=\"text-muted\"></p> \n\n                  <hr/> \n\n                  <strong><i class=\"fa fa-pencil margin-r-5\"></i> Skills</strong> \n\n                  <p><span class=\"label label-danger\">UI Design</span> \n                    <span class=\"label label-success\">Coding</span> \n                    <span class=\"label label-info\">Javascript</span> \n                    <span class=\"label label-warning\">PHP</span> \n                    <span class=\"label label-primary\">Node.js</span></p> \n\n                  <hr/></div>";
-      t39 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div32 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      ul1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
-      ul1.innerHTML = "<li class=\"active\"><a href=\"#biodata\" data-toggle=\"tab\" aria-expanded=\"true\">Bio-data</a></li> \n                  <li class=\"\"><a href=\"#myactivity\" data-toggle=\"tab\" aria-expanded=\"false\">Activity</a></li> \n                  <li class=\"\"><a href=\"#mydocument\" data-toggle=\"tab\" aria-expanded=\"false\">Document</a></li>";
-      t45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(myprofileavatar.$$.fragment);
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div2.innerHTML = "<div class=\"box-header with-border\"><h3 class=\"box-title\">About Me</h3></div> \n                \n                <div class=\"box-body\"><strong><i class=\"fa fa-book margin-r-5\"></i> Education</strong> \n\n                  <p class=\"text-muted\"></p> \n\n                  <hr/> \n\n                  <strong><i class=\"fa fa-map-marker margin-r-5\"></i> Location</strong> \n\n                  <p class=\"text-muted\"></p> \n\n                  <hr/> \n\n                  <strong><i class=\"fa fa-pencil margin-r-5\"></i> Skills</strong> \n\n                  <p><span class=\"label label-danger\">UI Design</span> \n                    <span class=\"label label-success\">Coding</span> \n                    <span class=\"label label-info\">Javascript</span> \n                    <span class=\"label label-warning\">PHP</span> \n                    <span class=\"label label-primary\">Node.js</span></p> \n\n                  <hr/></div>";
+      t29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div27.innerHTML = "<form class=\"form-horizontal\" action=\"../utility/updatebio\" method=\"post\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">First Name <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"FirstName\" id=\"inputName\" value=\"Alex\" placeholder=\"First Name\" required=\"\"/></div> \n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Middle Name</label> \n                                <input type=\"text\" class=\"form-control\" name=\"MiddleName\" id=\"inputName\" value=\"\" placeholder=\"Middle Name\"/></div> \n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Last Name <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"LastName\" id=\"inputName\" value=\"Akamukali\" placeholder=\"Last Name\" required=\"\"/></div></div></div> \n\n                      <div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Gender <b style=\"color:red\">*</b></label> \n                               \n                               <div class=\"form-control\"><label><input type=\"radio\" name=\"Gender\" value=\"M\" class=\"flat-green\"/> Male</label> \xA0 \xA0\n                                 <label><input type=\"radio\" name=\"Gender\" value=\"F\" class=\"flat-green\"/> Female</label></div></div> \n\n                          <div class=\"col-md-8\"><label for=\"inputName\" class=\"control-label\">Profession <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"Profession\" id=\"inputName\" value=\"\" placeholder=\"e.g : Business Analyst\" required=\"\"/></div> \n\n                          <div class=\"col-md-12\"><label for=\"inputName\" class=\"control-label\">Education <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"Education\" id=\"inputName\" placeholder=\"\" value=\"\" required=\"\"/></div> \n                           <div class=\"col-md-12\"><label for=\"inputName\" class=\"control-label\">Address <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"Address\" id=\"inputName\" placeholder=\"\" value=\"\" required=\"\"/></div></div></div> \n\n                      <div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Date of Birth <b style=\"color:red\">*</b></label> \n                                \n                                <div class=\"input-group date\"><div class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></div> \n                                  <input type=\"text\" class=\"form-control pull-right datepicker\" placeholder=\"Click to set date\" name=\"DOB\" value=\"\"/></div></div> \n\n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Phone: <b style=\"color:red\">*</b></label> \n                                <input type=\"tel\" class=\"form-control\" name=\"Phone\" id=\"inputName\" value=\"\" placeholder=\"\" data-inputmask=\"&#39;mask&#39;: [&#39;999-999-9999 [x99999]&#39;, &#39;+999 99 99 9999[9] 999&#39;]\" data-mask=\"\" required=\"\"/></div> \n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Email <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" id=\"inputName\" value=\"alex.akamukali@proinsight.ca\" disabled=\"\"/></div></div></div> \n\n                     <div class=\"row\"><br/> \n                      <div class=\"col-md-3 pull-right\"><button type=\"submit\" class=\"btn btn-primary btn-block\">Update Bio-data</button></div></div></form>";
-      t91 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(mydocument.$$.fragment);
-      t92 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div29.innerHTML = "<ul class=\"timeline timeline-inverse\"><li><i class=\"fa fa-clock-o bg-gray\"></i></li></ul>";
+      ul0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+      ul0.innerHTML = "<li class=\"active\"><a href=\"#biodata\" data-toggle=\"tab\" aria-expanded=\"true\">Bio-data</a></li> \n                  <li class=\"\"><a href=\"#myactivity\" data-toggle=\"tab\" aria-expanded=\"false\">Activity</a></li> \n                  <li class=\"\"><a href=\"#mydocument\" data-toggle=\"tab\" aria-expanded=\"false\">Document</a></li>";
+      t35 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div25.innerHTML = "<form class=\"form-horizontal\" action=\"../utility/updatebio\" method=\"post\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">First Name <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"FirstName\" id=\"inputName\" value=\"Alex\" placeholder=\"First Name\" required=\"\"/></div> \n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Middle Name</label> \n                                <input type=\"text\" class=\"form-control\" name=\"MiddleName\" id=\"inputName\" value=\"\" placeholder=\"Middle Name\"/></div> \n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Last Name <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"LastName\" id=\"inputName\" value=\"Akamukali\" placeholder=\"Last Name\" required=\"\"/></div></div></div> \n\n                      <div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Gender <b style=\"color:red\">*</b></label> \n                               \n                               <div class=\"form-control\"><label><input type=\"radio\" name=\"Gender\" value=\"M\" class=\"flat-green\"/> Male</label> \xA0 \xA0\n                                 <label><input type=\"radio\" name=\"Gender\" value=\"F\" class=\"flat-green\"/> Female</label></div></div> \n\n                          <div class=\"col-md-8\"><label for=\"inputName\" class=\"control-label\">Profession <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"Profession\" id=\"inputName\" value=\"\" placeholder=\"e.g : Business Analyst\" required=\"\"/></div> \n\n                          <div class=\"col-md-12\"><label for=\"inputName\" class=\"control-label\">Education <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"Education\" id=\"inputName\" placeholder=\"\" value=\"\" required=\"\"/></div> \n                           <div class=\"col-md-12\"><label for=\"inputName\" class=\"control-label\">Address <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" name=\"Address\" id=\"inputName\" placeholder=\"\" value=\"\" required=\"\"/></div></div></div> \n\n                      <div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Date of Birth <b style=\"color:red\">*</b></label> \n                                \n                                <div class=\"input-group date\"><div class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></div> \n                                  <input type=\"text\" class=\"form-control pull-right datepicker\" placeholder=\"Click to set date\" name=\"DOB\" value=\"\"/></div></div> \n\n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Phone: <b style=\"color:red\">*</b></label> \n                                <input type=\"tel\" class=\"form-control\" name=\"Phone\" id=\"inputName\" value=\"\" placeholder=\"\" data-inputmask=\"&#39;mask&#39;: [&#39;999-999-9999 [x99999]&#39;, &#39;+999 99 99 9999[9] 999&#39;]\" data-mask=\"\" required=\"\"/></div> \n                           <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Email <b style=\"color:red\">*</b></label> \n                                <input type=\"text\" class=\"form-control\" id=\"inputName\" value=\"alex.akamukali@proinsight.ca\" disabled=\"\"/></div></div></div> \n\n                     <div class=\"row\"><br/> \n                      <div class=\"col-md-3 pull-right\"><button type=\"submit\" class=\"btn btn-primary btn-block\">Update Bio-data</button></div></div></form>";
+      t81 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(mydocument.$$.fragment);
+      t82 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div27.innerHTML = "<ul class=\"timeline timeline-inverse\"><li><i class=\"fa fa-clock-o bg-gray\"></i></li></ul>";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section0, "class", "content-header");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "id", "myProfileImage");
-      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = '/uploads/' +
-      /*auth*/
-      ctx[3].avatar)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "class", "profile-user-img img-responsive img-circle");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "alt", "User Profile");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "width", "100");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "height", "100");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h30, "class", "profile-username text-center");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p0, "class", "text-muted text-center");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(input0, "display", "none");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "file");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "id", "fileLoader");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "name", "ProfilePhoto");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "accept", "image/*");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul0, "class", "list-group list-group-unbordered");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button0, "class", "btn btn-primary btn-block");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "box-body box-profile");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "box box-primary");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "box box-primary");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "col-md-3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul1, "class", "nav nav-tabs");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div27, "class", "tab-pane active");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div27, "id", "biodata");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div28, "class", "tab-pane");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div28, "id", "mydocument");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div29, "class", "tab-pane");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div29, "id", "myactivity");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div30, "class", "tab-content");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div31, "class", "nav-tabs-custom");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div32, "class", "col-md-9");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div33, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "box box-primary");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "col-md-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul0, "class", "nav nav-tabs");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div25, "class", "tab-pane active");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div25, "id", "biodata");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div26, "class", "tab-pane");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div26, "id", "mydocument");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div27, "class", "tab-pane");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div27, "id", "myactivity");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div28, "class", "tab-content");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div29, "class", "nav-tabs-custom");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div30, "class", "col-md-9");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div31, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section1, "class", "content");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, section0, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t5, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, section1, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, div33);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div33, div5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, div1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, div0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, img);
-      /*img_binding*/
-
-      ctx[11](img);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, h30);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t8);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, p0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t9);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, input0);
-      /*input0_binding*/
-
-      ctx[13](input0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t10);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, ul0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t14);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, button0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, t16);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, div4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div33, t39);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div33, div32);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div32, div31);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, ul1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, t45);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, div31);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, div3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(myprofileavatar, div3, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, div2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, t29);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, div30);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, div27);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, t91);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, div28);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(mydocument, div28, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, t92);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, div29);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div29, ul0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div29, t35);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div29, div28);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, div25);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, t81);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, div26);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(mydocument, div26, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, t82);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, div27);
       current = true;
-
-      if (!mounted) {
-        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
-        /*input_handler*/
-        ctx[12]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "change",
-        /*onFileSelected*/
-        ctx[10]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button0, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
-        /*openfileDialog*/
-        ctx[9]))];
-        mounted = true;
-      }
     },
     p: function p(ctx, _ref) {
       var _ref2 = _slicedToArray(_ref, 1),
           dirty = _ref2[0];
-
-      if (!current || dirty &
-      /*auth*/
-      8 && !(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = '/uploads/' +
-      /*auth*/
-      ctx[3].avatar)) {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
-      }
 
       var mydocument_changes = {};
       if (dirty &
@@ -18962,14 +18927,14 @@ function create_fragment(ctx) {
       ctx[3].id;
       if (dirty &
       /*my_documents*/
-      2) mydocument_changes.list =
+      1) mydocument_changes.list =
       /*my_documents*/
-      ctx[1];
+      ctx[0];
       if (dirty &
       /*message*/
-      1) mydocument_changes.message =
+      2) mydocument_changes.message =
       /*message*/
-      ctx[0];
+      ctx[1];
       if (dirty &
       /*error*/
       4) mydocument_changes.error =
@@ -18984,10 +18949,12 @@ function create_fragment(ctx) {
     },
     i: function i(local) {
       if (current) return;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(myprofileavatar.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(mydocument.$$.fragment, local);
       current = true;
     },
     o: function o(local) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(myprofileavatar.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(mydocument.$$.fragment, local);
       current = false;
     },
@@ -18995,89 +18962,229 @@ function create_fragment(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section0);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t5);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(myprofileavatar);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(mydocument);
+    }
+  };
+}
+
+var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_9__["default"];
+
+function instance($$self, $$props, $$invalidate) {
+  var my_documents = $$props.my_documents;
+  var message = $$props.message;
+  var error = $$props.error;
+  var auth = $$props.auth;
+  var types = $$props.types;
+
+  $$self.$$set = function ($$props) {
+    if ('my_documents' in $$props) $$invalidate(0, my_documents = $$props.my_documents);
+    if ('message' in $$props) $$invalidate(1, message = $$props.message);
+    if ('error' in $$props) $$invalidate(2, error = $$props.error);
+    if ('auth' in $$props) $$invalidate(3, auth = $$props.auth);
+    if ('types' in $$props) $$invalidate(4, types = $$props.types);
+  };
+
+  return [my_documents, message, error, auth, types];
+}
+
+var MyProfile = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(MyProfile, _SvelteComponent);
+
+  var _super = _createSuper(MyProfile);
+
+  function MyProfile(options) {
+    var _this;
+
+    _classCallCheck(this, MyProfile);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
+      my_documents: 0,
+      message: 1,
+      error: 2,
+      auth: 3,
+      types: 4
+    });
+    return _this;
+  }
+
+  return _createClass(MyProfile);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyProfile);
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/User/MyProfileAvatar.svelte":
+/*!********************************************************!*\
+  !*** ./resources/js/Pages/User/MyProfileAvatar.svelte ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/User/MyProfileAvatar.svelte generated by Svelte v3.47.0 */
+
+
+
+function create_fragment(ctx) {
+  var div1;
+  var div0;
+  var img;
+  var img_src_value;
+  var t0;
+  var h3;
+  var t2;
+  var p;
+  var t3;
+  var input;
+  var t4;
+  var ul;
+  var t8;
+  var button;
+  var mounted;
+  var dispose;
+  return {
+    c: function c() {
+      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      img = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("img");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      h3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h3");
+      h3.textContent = "Alex Akamukali";
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      p = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      ul = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+      ul.innerHTML = "<li class=\"list-group-item\"><b>Contracts</b> \n                \n                <a href=\"#\" class=\"pull-right\">543</a></li>";
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      button = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("button");
+      button.innerHTML = "<b>Upload My Passport Photo</b>";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "id", "myProfileImage");
+      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = "/uploads/" +
+      /*user*/
+      ctx[3].avatar)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "class", "profile-user-img img-responsive img-circle");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "alt", "User Profile");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "width", "100");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "height", "100");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(h3, "class", "profile-username text-center");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p, "class", "text-muted text-center");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(input, "display", "none");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "type", "file");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "id", "fileLoader");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "name", "ProfilePhoto");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "accept", "image/*");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul, "class", "list-group list-group-unbordered");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(button, "class", "btn btn-primary btn-block");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "box-body box-profile");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "box box-primary");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div1, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, img);
       /*img_binding*/
 
-      ctx[11](null);
-      /*input0_binding*/
+      ctx[7](img);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, h3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, p);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, input);
+      /*input_binding*/
 
-      ctx[13](null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(mydocument);
+      ctx[9](input);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, ul);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, button);
+
+      if (!mounted) {
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input, "input",
+        /*input_handler*/
+        ctx[8]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input, "change",
+        /*onFileSelected*/
+        ctx[6]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(button, "click", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        /*openfileDialog*/
+        ctx[5]))];
+        mounted = true;
+      }
+    },
+    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div1);
+      /*img_binding*/
+
+      ctx[7](null);
+      /*input_binding*/
+
+      ctx[9](null);
       mounted = false;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
     }
   };
 }
 
-var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_8__["default"];
-var resource = '/province/';
-var closeModal = null;
-
-function updateAvatar() {} // $form.post("/upload-avatar/" + auth.id);
-// $uploadAvatarResource.post("/upload-avatar/" + auth.id);
-
-
-function onCloseModal() {} // alert('called');
-// console.log(closeModal);
-
-
 function instance($$self, $$props, $$invalidate) {
   var $form;
-  var my_documents = $$props.my_documents;
-  var message = $$props.message;
-  var error = $$props.error;
-  var auth = $$props.auth;
-  var types = $$props.types; // export let csrf;
-
-  var mode = "create";
-  var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_7__.useForm)({
-    _method: 'PUT',
+  var $page;
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.page, function ($$value) {
+    return $$invalidate(10, $page = $$value);
+  });
+  var user = $page.props.user;
+  var avatarImage = null;
+  var avatar = null;
+  var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.useForm)({
     avatar: null,
-    id: "jjjkj"
+    _method: 'PUT'
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
-    return $$invalidate(7, $form = value);
+    return $$invalidate(2, $form = value);
   });
 
-  function selectRow(data) {
-    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.name = data.name, $form);
-    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.id = data.id, $form);
-    mode = "update";
+  function updateAvatar() {
+    $form.post("/upload-avatar/" + user.id);
   }
-
-  function removeRow(data) {
-    if (confirm("Do you want to confirm this action?")) {
-      $form["delete"](resource + data.id);
-    }
-  }
-
-  function clearForm() {
-    $form.reset();
-    mode = "create";
-  }
-
-  function callStore() {
-    if (mode == "create") {
-      $form.post(resource);
-    } else {
-      $form.put(resource + $form.id);
-    }
-  }
-
-  function onResetMessage() {
-    // toastr.success(message);
-    $$invalidate(0, message = "");
-  } // $form.clearErrors();
-  // avatarImage.src = null;
-  // closeModal.click();
-
-
-  var avatar;
-  var avatarImage;
 
   function openfileDialog() {
     //   $("#fileLoader").click();
     // avatarImage.src = null;
-    $$invalidate(5, avatar.value = null, avatar);
+    $$invalidate(1, avatar.value = null, avatar);
     avatar.click();
   }
 
@@ -19101,7 +19208,7 @@ function instance($$self, $$props, $$invalidate) {
   function img_binding($$value) {
     svelte_internal__WEBPACK_IMPORTED_MODULE_0__.binding_callbacks[$$value ? 'unshift' : 'push'](function () {
       avatarImage = $$value;
-      $$invalidate(6, avatarImage);
+      $$invalidate(0, avatarImage);
     });
   }
 
@@ -19109,50 +19216,35 @@ function instance($$self, $$props, $$invalidate) {
     return (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.avatar = e.target.files[0], $form);
   };
 
-  function input0_binding($$value) {
+  function input_binding($$value) {
     svelte_internal__WEBPACK_IMPORTED_MODULE_0__.binding_callbacks[$$value ? 'unshift' : 'push'](function () {
       avatar = $$value;
-      $$invalidate(5, avatar);
+      $$invalidate(1, avatar);
     });
   }
 
-  $$self.$$set = function ($$props) {
-    if ('my_documents' in $$props) $$invalidate(1, my_documents = $$props.my_documents);
-    if ('message' in $$props) $$invalidate(0, message = $$props.message);
-    if ('error' in $$props) $$invalidate(2, error = $$props.error);
-    if ('auth' in $$props) $$invalidate(3, auth = $$props.auth);
-    if ('types' in $$props) $$invalidate(4, types = $$props.types);
-  };
-
-  return [message, my_documents, error, auth, types, avatar, avatarImage, $form, form, openfileDialog, onFileSelected, img_binding, input_handler, input0_binding];
+  return [avatarImage, avatar, $form, user, form, openfileDialog, onFileSelected, img_binding, input_handler, input_binding];
 }
 
-var MyProfile = /*#__PURE__*/function (_SvelteComponent) {
-  _inherits(MyProfile, _SvelteComponent);
+var MyProfileAvatar = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(MyProfileAvatar, _SvelteComponent);
 
-  var _super = _createSuper(MyProfile);
+  var _super = _createSuper(MyProfileAvatar);
 
-  function MyProfile(options) {
+  function MyProfileAvatar(options) {
     var _this;
 
-    _classCallCheck(this, MyProfile);
+    _classCallCheck(this, MyProfileAvatar);
 
     _this = _super.call(this);
-    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
-      my_documents: 1,
-      message: 0,
-      error: 2,
-      auth: 3,
-      types: 4
-    });
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
     return _this;
   }
 
-  return _createClass(MyProfile);
+  return _createClass(MyProfileAvatar);
 }(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyProfile);
-
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyProfileAvatar);
 
 /***/ }),
 
@@ -20977,6 +21069,25 @@ function useCloseModalOnSuccess(node) {
     }
   }); // alert('seen');
   // }
+}
+
+/***/ }),
+
+/***/ "./resources/js/Helpers/useModal.js":
+/*!******************************************!*\
+  !*** ./resources/js/Helpers/useModal.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useModal": () => (/* binding */ useModal)
+/* harmony export */ });
+function useModal(node, id) {
+  node.addEventListener('click', function (e) {
+    jQuery(id).modal();
+  });
 }
 
 /***/ }),
@@ -26742,6 +26853,7 @@ var map = {
 	"./User/MyDocumentEdit.svelte": "./resources/js/Pages/User/MyDocumentEdit.svelte",
 	"./User/MyDocumentShow.svelte": "./resources/js/Pages/User/MyDocumentShow.svelte",
 	"./User/MyProfile.svelte": "./resources/js/Pages/User/MyProfile.svelte",
+	"./User/MyProfileAvatar.svelte": "./resources/js/Pages/User/MyProfileAvatar.svelte",
 	"./User/MyProfileCreate.svelte": "./resources/js/Pages/User/MyProfileCreate.svelte",
 	"./User/MyProfileEdit.svelte": "./resources/js/Pages/User/MyProfileEdit.svelte",
 	"./User/MyProfileShow.svelte": "./resources/js/Pages/User/MyProfileShow.svelte",

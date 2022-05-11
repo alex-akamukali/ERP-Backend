@@ -28,6 +28,10 @@
         program_type_index_route,
         settings_knowledge_area_index_route,
     } = $page.props;
+
+    page.subscribe(function({props}){
+       user = props.user;
+    });
 </script>
 
 <MessageNotification />

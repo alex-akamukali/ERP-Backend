@@ -47,7 +47,9 @@ class HandleInertiaRequests extends Middleware
             'user_logo'=>asset('asset1/user2-160x160.jpg'),
             'user_profile_route'=>route('user.profile'),
             'all_users_route'=>route('all.users'),
-            'user'=>$request->user(),
+            'user'=>function() use ($request){
+                return $request->user();
+            },
             'dashboard_route'=>route('dashboard'),
             'program_type_index_route'=>route('program-type.index'),
             'is_logged'=>Auth::check(),

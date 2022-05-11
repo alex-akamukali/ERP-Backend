@@ -11,6 +11,8 @@
 
     import MyDocument from "./MyDocument.svelte";
 
+    import MyProfileAvatar from "./MyProfileAvatar.svelte";
+
     export const layout = Layout;
 </script>
 
@@ -22,117 +24,8 @@
     export let auth;
     export let types;
     // export let csrf;
-
-    let mode = "create";
-
-    const resource = '/province/';
-
-    let closeModal = null;
-
-    let form = useForm({
-        _method:'PUT',
-        avatar: null,
-        id:"jjjkj"
-    });
-
-
-    function selectRow(data) {
-        $form.name = data.name;
-        $form.id = data.id;
-        mode = "update";
-    }
-
-    function removeRow(data) {
-        if (confirm("Do you want to confirm this action?")) {
-            $form.delete(resource + data.id);
-        }
-    }
-
-    function clearForm() {
-        $form.reset();
-        mode = "create";
-    }
-
-    function updateAvatar(){
-        // $form.post("/upload-avatar/" + auth.id);
-        // $uploadAvatarResource.post("/upload-avatar/" + auth.id);
-    }
-
-    function callStore(){
-        if (mode == "create") {
-            $form.post(resource);
-        } else {
-            $form.put(resource + $form.id);
-        }
-    }
-
-    function onResetMessage() {
-        // toastr.success(message);
-        message = "";
-        // $form.clearErrors();
-        // avatarImage.src = null;
-    }
-
-    function onCloseModal() {
-        // alert('called');
-        // console.log(closeModal);
-        // closeModal.click();
-    }
-
-    let avatar;
-    let avatarImage;
-
-    function openfileDialog() {
-                    //   $("#fileLoader").click();
-                    // avatarImage.src = null;
-                    avatar.value = null;
-                    avatar.click();
-
-    }
-
-                  function onFileSelected(event) {
-                    //   console.log(event);
-                    //   return;
-                    var selectedFile = event.target.files[0];
-                    var reader = new FileReader();
-
-                    var imgtag = avatarImage; // document.getElementById("myProfileImage");
-                    imgtag.title = selectedFile.name;
-
-                    reader.onload = function(event) {
-                      imgtag.src = event.target.result;
-                    };
-
-                    reader.readAsDataURL(selectedFile);
-
-                    updateAvatar();
-
-                  }
-
-
-
 </script>
 
-<!-- <MessageNotification
-    {message}
-    {error}
-    errors={$form.errors}
-    {onResetMessage}
-    hasErrors={$form.hasErrors}
-    {onCloseModal}
-/> -->
-
-<!-- <Page> -->
-    <!-- <span slot="title">My Profile</span> -->
-    <!-- <button
-        slot="createButton"
-        class="btn btn-primary btn-sm"
-        data-toggle="modal"
-        data-target="#modal-progtype"
-        on:click|preventDefault={clearForm}
-    >
-        <i class="fa fa-plus" /> Add Province
-    </button> -->
     <section class="content-header">
         <h1>
             My Profile
@@ -154,35 +47,10 @@
             <div class="col-md-3">
 
               <!-- Profile Image -->
-              <div class="box box-primary">
-                <div class="box-body box-profile">
+                <!-- box -->
+                <MyProfileAvatar />
+              <!-- /.box-body -->
 
-
-                    <img bind:this={avatarImage} id="myProfileImage" src={'/uploads/' + auth.avatar} class="profile-user-img img-responsive img-circle" alt="User Profile" width="100" height="100">
-
-                  <h3 class="profile-username text-center">Alex Akamukali</h3>
-
-
-                  <p class="text-muted text-center"></p>
-                  <input on:input={e => $form.avatar = e.target.files[0]}  bind:this={avatar} style="display: none;" type="file" id="fileLoader" name="ProfilePhoto" accept="image/*" on:change={onFileSelected}>
-
-
-                  <ul class="list-group list-group-unbordered">
-
-                    <li class="list-group-item">
-                      <!-- svelte-ignore a11y-missing-attribute -->
-                      <b>Contracts</b>
-                      <!-- svelte-ignore a11y-invalid-attribute -->
-                      <a href="#" class="pull-right">543</a>
-                    </li>
-
-                  </ul>
-
-                  <button class="btn btn-primary btn-block" on:click|preventDefault={openfileDialog}><b>Upload My Passport Photo</b></button>
-
-                </div>
-                <!-- /.box-body -->
-              </div>
               <!-- /.box -->
 
               <!-- About Me Box -->
