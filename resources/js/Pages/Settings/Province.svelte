@@ -11,9 +11,6 @@
 
 <script>
     export let list;
-    export let message;
-    export let error;
-    // export let csrf;
 
     let mode = "create";
 
@@ -51,27 +48,8 @@
         }
     }
 
-    function onResetMessage() {
-        // toastr.success(message);
-        message = "";
-        $form.clearErrors();
-    }
-
-    function onCloseModal() {
-        // alert('called');
-        console.log(closeModal);
-        closeModal.click();
-    }
 </script>
 
-<MessageNotification
-    {message}
-    {error}
-    errors={$form.errors}
-    {onResetMessage}
-    hasErrors={$form.hasErrors}
-    {onCloseModal}
-/>
 
 <Page>
     <span slot="title">Province</span>
@@ -131,7 +109,7 @@
         </table>
     </div>
 
-    <Modal id="modal-progtype"  on:submit={callStore} on:setRef={(ref)=>closeModal=ref.detail}>
+    <Modal id="modal-progtype"  on:submit={callStore}>
         <span slot="title">Province</span>
 
         <div class="col-md-12" slot="content">
