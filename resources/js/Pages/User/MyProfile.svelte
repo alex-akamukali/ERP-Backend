@@ -25,24 +25,6 @@
     export let error;
     export let auth;
     export let types;
-
-    let form = useForm({
-        skills:auth.skills || ''
-    });
-
-    function onSkillChange(skl){
-       $form.skills = skl;
-       $form.put("/update-user-skill/" + auth.id);
-    }
-
-    form.subscribe(function(data){
-        console.log(data,'Form data changed....');
-    });
-
-    $: {
-        $form.skills = auth.skills;
-        console.log($form.skills,auth.skills);
-    }
     // export let csrf;
 </script>
 

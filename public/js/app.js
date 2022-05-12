@@ -19139,27 +19139,11 @@ function create_fragment(ctx) {
 var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_10__["default"];
 
 function instance($$self, $$props, $$invalidate) {
-  var $form;
   var my_documents = $$props.my_documents;
   var message = $$props.message;
   var error = $$props.error;
   var auth = $$props.auth;
   var types = $$props.types;
-  var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_9__.useForm)({
-    skills: auth.skills || ''
-  });
-  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
-    return $$invalidate(6, $form = value);
-  });
-
-  function onSkillChange(skl) {
-    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.skills = skl, $form);
-    $form.put("/update-user-skill/" + auth.id);
-  }
-
-  form.subscribe(function (data) {
-    console.log(data, 'Form data changed....');
-  });
 
   $$self.$$set = function ($$props) {
     if ('my_documents' in $$props) $$invalidate(0, my_documents = $$props.my_documents);
@@ -19169,18 +19153,7 @@ function instance($$self, $$props, $$invalidate) {
     if ('types' in $$props) $$invalidate(4, types = $$props.types);
   };
 
-  $$self.$$.update = function () {
-    if ($$self.$$.dirty &
-    /*auth, $form*/
-    72) {
-      $: {
-        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.skills = auth.skills, $form);
-        console.log($form.skills, auth.skills);
-      }
-    }
-  };
-
-  return [my_documents, message, error, auth, types, form, $form];
+  return [my_documents, message, error, auth, types];
 }
 
 var MyProfile = /*#__PURE__*/function (_SvelteComponent) {
