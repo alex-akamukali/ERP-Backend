@@ -1,12 +1,13 @@
-export function useSelect2(node,{cb,store}){
+export function useSelect2(node,{cb,store,key}){
     let values = '';
     jQuery(node).select2({
         tags:true
     });
 
     if (store){
-      store.subscribe(()=>{
-        // jQuery(node).select2("val", values.split(','));
+      store.subscribe((data)=>{
+          console.log(key,data[key],data);
+        // jQuery(node).select2("val", data[key].split(','));
       });
     }
     //$("#customers_select").select2("val", "");

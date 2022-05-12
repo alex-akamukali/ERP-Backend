@@ -95,7 +95,8 @@
                         //  $form.skills = vls;
                          onSkillChange(vls);
                       },
-                      store:form
+                      store:form,
+                      key:'skills'
                   }} multiple>
                     {#each $form.skills.split(',') as skill}
                      <option value={skill} selected>{skill}</option>

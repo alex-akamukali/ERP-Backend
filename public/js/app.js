@@ -18885,7 +18885,7 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[9] = list[i];
   return child_ctx;
-} // (100:20) {#each $form.skills.split(',') as skill}
+} // (101:20) {#each $form.skills.split(',') as skill}
 
 
 function create_each_block(ctx) {
@@ -19137,7 +19137,8 @@ function create_fragment(ctx) {
           ctx[8],
           store:
           /*form*/
-          ctx[6]
+          ctx[6],
+          key: 'skills'
         }));
         mounted = true;
       }
@@ -21386,14 +21387,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function useSelect2(node, _ref) {
   var cb = _ref.cb,
-      store = _ref.store;
+      store = _ref.store,
+      key = _ref.key;
   var values = '';
   jQuery(node).select2({
     tags: true
   });
 
   if (store) {
-    store.subscribe(function () {// jQuery(node).select2("val", values.split(','));
+    store.subscribe(function (data) {
+      console.log(key, data[key], data); // jQuery(node).select2("val", data[key].split(','));
     });
   } //$("#customers_select").select2("val", "");
 
