@@ -6564,6 +6564,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "data-toggle", "offcanvas");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "role", "button");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i0, "class", "fa fa-bell-o");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(i0, "color", "#073367");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span3, "class", "label label-danger");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", a2_href_value = "/");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "class", "dropdown-toggle svelte-9fvhrt");
@@ -19665,8 +19666,9 @@ function add_css(target) {
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[14] = list[i];
+  child_ctx[16] = i;
   return child_ctx;
-} // (51:4) {#each list as item}
+} // (53:4) {#each list as item,key}
 
 
 function create_each_block(ctx) {
@@ -19846,7 +19848,7 @@ function instance($$self, $$props, $$invalidate) {
   var skills = $$props.skills;
   var userId = $$props.userId;
   var indexes = ["danger", "success", "info", "warning", "primary"];
-  var indexPointer = 0;
+  var indexPointer = -1;
   var list = [];
   var val = "";
   var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.useForm)({
@@ -19883,6 +19885,7 @@ function instance($$self, $$props, $$invalidate) {
     $$invalidate(0, list = list.filter(function (item1) {
       return item1 != item;
     }));
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.skills = list.join(','), $form);
     updateSkills();
   }
 
@@ -19906,7 +19909,8 @@ function instance($$self, $$props, $$invalidate) {
     64) {
       $: {
         $$invalidate(0, list = skills.split(","));
-      }
+      } // indexPointer = -1;
+
     }
   };
 

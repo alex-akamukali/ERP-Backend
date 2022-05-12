@@ -80,7 +80,7 @@
                             class="dropdown-toggle"
                             data-toggle="dropdown"
                         >
-                            <i class="fa fa-bell-o" />
+                            <i class="fa fa-bell-o" style="color: #073367;" />
                             <span class="label label-danger">
                                 {$notifications.length}
                             </span>

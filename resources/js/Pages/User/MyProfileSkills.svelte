@@ -7,12 +7,13 @@
     export let userId;
 
     let indexes = ["danger", "success", "info", "warning", "primary"];
-    let indexPointer = 0;
+    let indexPointer = -1;
     let list = [];
     let val = "";
 
     $: {
         list = skills.split(",");
+        // indexPointer = -1;
     }
 
     let form = useForm({
@@ -42,13 +43,14 @@
 
     function removeFromList(item){
        list = list.filter((item1)=>(item1 != item));
+       $form.skills = list.join(',');
        updateSkills();
     }
 </script>
 
 <!-- <p> -->
 <form on:submit|preventDefault={appendList}>
-    {#each list as item}
+    {#each list as item,key}
         <span on:dblclick={()=>removeFromList(item)} class={`label label-${getNextClass()}`}>{item}</span>&nbsp;
     {/each}
     <input type="text" bind:value={val} style="border: 0;outline: none;;margin-top:3px;" placeholder="Add Skill..." />
