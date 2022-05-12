@@ -18826,13 +18826,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MyProfileAvatar_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyProfileAvatar.svelte */ "./resources/js/Pages/User/MyProfileAvatar.svelte");
 /* harmony import */ var _MyDocument_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MyDocument.svelte */ "./resources/js/Pages/User/MyDocument.svelte");
 /* harmony import */ var _Helpers_Form_svelte__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Helpers/Form.svelte */ "./resources/js/Helpers/Form.svelte");
-/* harmony import */ var _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Components/MessageNotification.svelte */ "./resources/js/Pages/Components/MessageNotification.svelte");
-/* harmony import */ var _components_Modal_svelte__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Modal.svelte */ "./resources/js/components/Modal.svelte");
-/* harmony import */ var _components_Page_svelte__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Page.svelte */ "./resources/js/components/Page.svelte");
-/* harmony import */ var _components_Pagination_svelte__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Pagination.svelte */ "./resources/js/components/Pagination.svelte");
-/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
-/* harmony import */ var _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Dashboard/Layout.svelte */ "./resources/js/Pages/Dashboard/Layout.svelte");
-/* harmony import */ var _Helpers_useSelect2__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../Helpers/useSelect2 */ "./resources/js/Helpers/useSelect2.js");
+/* harmony import */ var _MyProfileSkills_svelte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MyProfileSkills.svelte */ "./resources/js/Pages/User/MyProfileSkills.svelte");
+/* harmony import */ var _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Components/MessageNotification.svelte */ "./resources/js/Pages/Components/MessageNotification.svelte");
+/* harmony import */ var _components_Modal_svelte__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Modal.svelte */ "./resources/js/components/Modal.svelte");
+/* harmony import */ var _components_Page_svelte__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/Page.svelte */ "./resources/js/components/Page.svelte");
+/* harmony import */ var _components_Pagination_svelte__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/Pagination.svelte */ "./resources/js/components/Pagination.svelte");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+/* harmony import */ var _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Dashboard/Layout.svelte */ "./resources/js/Pages/Dashboard/Layout.svelte");
+/* harmony import */ var _Helpers_useSelect2__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../Helpers/useSelect2 */ "./resources/js/Helpers/useSelect2.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -18881,55 +18882,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function get_each_context(ctx, list, i) {
-  var child_ctx = ctx.slice();
-  child_ctx[9] = list[i];
-  return child_ctx;
-} // (101:20) {#each $form.skills.split(',') as skill}
-
-
-function create_each_block(ctx) {
-  var option;
-  var t_value =
-  /*skill*/
-  ctx[9] + "";
-  var t;
-  var option_value_value;
-  return {
-    c: function c() {
-      option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
-      option.__value = option_value_value =
-      /*skill*/
-      ctx[9];
-      option.value = option.__value;
-      option.selected = true;
-    },
-    m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, option, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(option, t);
-    },
-    p: function p(ctx, dirty) {
-      if (dirty &
-      /*$form*/
-      32 && t_value !== (t_value =
-      /*skill*/
-      ctx[9] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
-
-      if (dirty &
-      /*$form*/
-      32 && option_value_value !== (option_value_value =
-      /*skill*/
-      ctx[9])) {
-        option.__value = option_value_value;
-        option.value = option.__value;
-      }
-    },
-    d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
-    }
-  };
-}
 
 function create_fragment(ctx) {
   var section0;
@@ -18957,8 +18909,7 @@ function create_fragment(ctx) {
   var t16;
   var strong2;
   var t18;
-  var select;
-  var useSelect2_action;
+  var myprofileskills;
   var t19;
   var hr2;
   var t20;
@@ -18974,18 +18925,17 @@ function create_fragment(ctx) {
   var t73;
   var div27;
   var current;
-  var mounted;
-  var dispose;
   myprofileavatar = new _MyProfileAvatar_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({});
-  var each_value =
-  /*$form*/
-  ctx[5].skills.split(',');
-  var each_blocks = [];
-
-  for (var i = 0; i < each_value.length; i += 1) {
-    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
-  }
-
+  myprofileskills = new _MyProfileSkills_svelte__WEBPACK_IMPORTED_MODULE_4__["default"]({
+    props: {
+      skills:
+      /*auth*/
+      ctx[3].skills,
+      userId:
+      /*auth*/
+      ctx[3].id
+    }
+  });
   mydocument = new _MyDocument_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
     props: {
       user_id:
@@ -19037,12 +18987,7 @@ function create_fragment(ctx) {
       strong2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("strong");
       strong2.innerHTML = "<i class=\"fa fa-pencil margin-r-5\"></i> Skills";
       t18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      select = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
-
-      for (var _i = 0; _i < each_blocks.length; _i += 1) {
-        each_blocks[_i].c();
-      }
-
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(myprofileskills.$$.fragment);
       t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       hr2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("hr");
       t20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
@@ -19064,8 +19009,6 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "box-header with-border");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p0, "class", "text-muted");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p1, "class", "text-muted");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "class", "form-control");
-      select.multiple = true;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "box-body");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "box box-primary");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "col-md-3");
@@ -19108,12 +19051,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t16);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, strong2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t18);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, select);
-
-      for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
-        each_blocks[_i2].m(select, null);
-      }
-
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(myprofileskills, div1, null);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t19);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, hr2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, t20);
@@ -19129,54 +19067,23 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, t73);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, div27);
       current = true;
-
-      if (!mounted) {
-        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(useSelect2_action = _Helpers_useSelect2__WEBPACK_IMPORTED_MODULE_10__.useSelect2.call(null, select, {
-          cb:
-          /*useSelect2_function*/
-          ctx[8],
-          store:
-          /*form*/
-          ctx[6],
-          key: 'skills'
-        }));
-        mounted = true;
-      }
     },
     p: function p(ctx, _ref) {
       var _ref2 = _slicedToArray(_ref, 1),
           dirty = _ref2[0];
 
+      var myprofileskills_changes = {};
       if (dirty &
-      /*$form*/
-      32) {
-        each_value =
-        /*$form*/
-        ctx[5].skills.split(',');
-
-        var _i3;
-
-        for (_i3 = 0; _i3 < each_value.length; _i3 += 1) {
-          var child_ctx = get_each_context(ctx, each_value, _i3);
-
-          if (each_blocks[_i3]) {
-            each_blocks[_i3].p(child_ctx, dirty);
-          } else {
-            each_blocks[_i3] = create_each_block(child_ctx);
-
-            each_blocks[_i3].c();
-
-            each_blocks[_i3].m(select, null);
-          }
-        }
-
-        for (; _i3 < each_blocks.length; _i3 += 1) {
-          each_blocks[_i3].d(1);
-        }
-
-        each_blocks.length = each_value.length;
-      }
-
+      /*auth*/
+      8) myprofileskills_changes.skills =
+      /*auth*/
+      ctx[3].skills;
+      if (dirty &
+      /*auth*/
+      8) myprofileskills_changes.userId =
+      /*auth*/
+      ctx[3].id;
+      myprofileskills.$set(myprofileskills_changes);
       var mydocument_changes = {};
       if (dirty &
       /*auth*/
@@ -19208,11 +19115,13 @@ function create_fragment(ctx) {
     i: function i(local) {
       if (current) return;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(myprofileavatar.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(myprofileskills.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(mydocument.$$.fragment, local);
       current = true;
     },
     o: function o(local) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(myprofileavatar.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(myprofileskills.$$.fragment, local);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(mydocument.$$.fragment, local);
       current = false;
     },
@@ -19221,15 +19130,13 @@ function create_fragment(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t5);
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(section1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(myprofileavatar);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(myprofileskills);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(mydocument);
-      mounted = false;
-      dispose();
     }
   };
 }
 
-var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_9__["default"];
+var layout = _Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_10__["default"];
 
 function instance($$self, $$props, $$invalidate) {
   var $form;
@@ -19238,11 +19145,11 @@ function instance($$self, $$props, $$invalidate) {
   var error = $$props.error;
   var auth = $$props.auth;
   var types = $$props.types;
-  var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_8__.useForm)({
+  var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_9__.useForm)({
     skills: auth.skills || ''
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
-    return $$invalidate(5, $form = value);
+    return $$invalidate(6, $form = value);
   });
 
   function onSkillChange(skl) {
@@ -19254,11 +19161,6 @@ function instance($$self, $$props, $$invalidate) {
     console.log(data, 'Form data changed....');
   });
 
-  var useSelect2_function = function useSelect2_function(vls) {
-    //  $form.skills = vls;
-    onSkillChange(vls);
-  };
-
   $$self.$$set = function ($$props) {
     if ('my_documents' in $$props) $$invalidate(0, my_documents = $$props.my_documents);
     if ('message' in $$props) $$invalidate(1, message = $$props.message);
@@ -19267,7 +19169,18 @@ function instance($$self, $$props, $$invalidate) {
     if ('types' in $$props) $$invalidate(4, types = $$props.types);
   };
 
-  return [my_documents, message, error, auth, types, $form, form, onSkillChange, useSelect2_function];
+  $$self.$$.update = function () {
+    if ($$self.$$.dirty &
+    /*auth, $form*/
+    72) {
+      $: {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.skills = auth.skills, $form);
+        console.log($form.skills, auth.skills);
+      }
+    }
+  };
+
+  return [my_documents, message, error, auth, types, form, $form];
 }
 
 var MyProfile = /*#__PURE__*/function (_SvelteComponent) {
@@ -19710,6 +19623,345 @@ var MyProfileShow = /*#__PURE__*/function (_SvelteComponent) {
 }(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyProfileShow);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/User/MyProfileSkills.svelte":
+/*!********************************************************!*\
+  !*** ./resources/js/Pages/User/MyProfileSkills.svelte ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/* resources/js/Pages/User/MyProfileSkills.svelte generated by Svelte v3.48.0 */
+
+
+
+function add_css(target) {
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-oni5ys", ".label.svelte-oni5ys,input.svelte-oni5ys{display:inline-block !important;cursor:pointer}");
+}
+
+function get_each_context(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[14] = list[i];
+  return child_ctx;
+} // (51:4) {#each list as item}
+
+
+function create_each_block(ctx) {
+  var span;
+  var t0_value =
+  /*item*/
+  ctx[14] + "";
+  var t0;
+  var span_class_value;
+  var t1;
+  var mounted;
+  var dispose;
+
+  function dblclick_handler() {
+    return (
+      /*dblclick_handler*/
+      ctx[8](
+      /*item*/
+      ctx[14])
+    );
+  }
+
+  return {
+    c: function c() {
+      span = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" ");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span, "class", span_class_value = "" + ((0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.null_to_empty)("label label-".concat(
+      /*getNextClass*/
+      ctx[3]())) + " svelte-oni5ys"));
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, span, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t1, anchor);
+
+      if (!mounted) {
+        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(span, "dblclick", dblclick_handler);
+        mounted = true;
+      }
+    },
+    p: function p(new_ctx, dirty) {
+      ctx = new_ctx;
+      if (dirty &
+      /*list*/
+      1 && t0_value !== (t0_value =
+      /*item*/
+      ctx[14] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t1);
+      mounted = false;
+      dispose();
+    }
+  };
+}
+
+function create_fragment(ctx) {
+  var form_1;
+  var t0;
+  var input;
+  var t1;
+  var div;
+  var mounted;
+  var dispose;
+  var each_value =
+  /*list*/
+  ctx[0];
+  var each_blocks = [];
+
+  for (var i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+
+  return {
+    c: function c() {
+      form_1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
+
+      for (var _i = 0; _i < each_blocks.length; _i += 1) {
+        each_blocks[_i].c();
+      }
+
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div.innerHTML = "<small><em>&quot;Double click on a skill to remove&quot;</em></small>";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "type", "text");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(input, "border", "0");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(input, "outline", "none");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(input, "margin-top", "3px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "placeholder", "Add Skill...");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "class", "svelte-oni5ys");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, form_1, anchor);
+
+      for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
+        each_blocks[_i2].m(form_1, null);
+      }
+
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form_1, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form_1, input);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input,
+      /*val*/
+      ctx[1]);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form_1, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form_1, div);
+
+      if (!mounted) {
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input, "input",
+        /*input_input_handler*/
+        ctx[9]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form_1, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        /*appendList*/
+        ctx[4]))];
+        mounted = true;
+      }
+    },
+    p: function p(ctx, _ref) {
+      var _ref2 = _slicedToArray(_ref, 1),
+          dirty = _ref2[0];
+
+      if (dirty &
+      /*getNextClass, removeFromList, list*/
+      41) {
+        each_value =
+        /*list*/
+        ctx[0];
+
+        var _i3;
+
+        for (_i3 = 0; _i3 < each_value.length; _i3 += 1) {
+          var child_ctx = get_each_context(ctx, each_value, _i3);
+
+          if (each_blocks[_i3]) {
+            each_blocks[_i3].p(child_ctx, dirty);
+          } else {
+            each_blocks[_i3] = create_each_block(child_ctx);
+
+            each_blocks[_i3].c();
+
+            each_blocks[_i3].m(form_1, t0);
+          }
+        }
+
+        for (; _i3 < each_blocks.length; _i3 += 1) {
+          each_blocks[_i3].d(1);
+        }
+
+        each_blocks.length = each_value.length;
+      }
+
+      if (dirty &
+      /*val*/
+      2 && input.value !==
+      /*val*/
+      ctx[1]) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input,
+        /*val*/
+        ctx[1]);
+      }
+    },
+    i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(form_1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+      mounted = false;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
+    }
+  };
+}
+
+function instance($$self, $$props, $$invalidate) {
+  var $form;
+  var skills = $$props.skills;
+  var userId = $$props.userId;
+  var indexes = ["danger", "success", "info", "warning", "primary"];
+  var indexPointer = 0;
+  var list = [];
+  var val = "";
+  var form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.useForm)({
+    skills: skills || ''
+  });
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
+    return $$invalidate(11, $form = value);
+  });
+
+  function updateSkills() {
+    $form.put("/update-user-skill/" + userId, {
+      preserveScroll: true
+    });
+  }
+
+  function getNextClass() {
+    ++indexPointer;
+
+    if (indexPointer >= indexes.length) {
+      indexPointer = 0;
+    }
+
+    return indexes[indexPointer];
+  }
+
+  function appendList() {
+    $$invalidate(0, list = [].concat(_toConsumableArray(list), [val]));
+    $$invalidate(1, val = '');
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.skills = list.join(','), $form);
+    updateSkills();
+  }
+
+  function removeFromList(item) {
+    $$invalidate(0, list = list.filter(function (item1) {
+      return item1 != item;
+    }));
+    updateSkills();
+  }
+
+  var dblclick_handler = function dblclick_handler(item) {
+    return removeFromList(item);
+  };
+
+  function input_input_handler() {
+    val = this.value;
+    $$invalidate(1, val);
+  }
+
+  $$self.$$set = function ($$props) {
+    if ('skills' in $$props) $$invalidate(6, skills = $$props.skills);
+    if ('userId' in $$props) $$invalidate(7, userId = $$props.userId);
+  };
+
+  $$self.$$.update = function () {
+    if ($$self.$$.dirty &
+    /*skills*/
+    64) {
+      $: {
+        $$invalidate(0, list = skills.split(","));
+      }
+    }
+  };
+
+  return [list, val, form, getNextClass, appendList, removeFromList, skills, userId, dblclick_handler, input_input_handler];
+}
+
+var MyProfileSkills = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(MyProfileSkills, _SvelteComponent);
+
+  var _super = _createSuper(MyProfileSkills);
+
+  function MyProfileSkills(options) {
+    var _this;
+
+    _classCallCheck(this, MyProfileSkills);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
+      skills: 6,
+      userId: 7
+    }, add_css);
+    return _this;
+  }
+
+  return _createClass(MyProfileSkills);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyProfileSkills);
 
 /***/ }),
 
@@ -27183,6 +27435,7 @@ var map = {
 	"./User/MyProfileCreate.svelte": "./resources/js/Pages/User/MyProfileCreate.svelte",
 	"./User/MyProfileEdit.svelte": "./resources/js/Pages/User/MyProfileEdit.svelte",
 	"./User/MyProfileShow.svelte": "./resources/js/Pages/User/MyProfileShow.svelte",
+	"./User/MyProfileSkills.svelte": "./resources/js/Pages/User/MyProfileSkills.svelte",
 	"./User/User.svelte": "./resources/js/Pages/User/User.svelte"
 };
 

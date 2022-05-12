@@ -6,6 +6,7 @@
     import Page from "../../components/Page.svelte";
     import Modal from "../../components/Modal.svelte";
     import MessageNotification from "../Components/MessageNotification.svelte";
+    import MyProfileSkills from "./MyProfileSkills.svelte";
 
     // import {FormResource} from "../../Helpers/FormResource";
     import Form from "../../Helpers/Form.svelte";
@@ -37,6 +38,11 @@
     form.subscribe(function(data){
         console.log(data,'Form data changed....');
     });
+
+    $: {
+        $form.skills = auth.skills;
+        console.log($form.skills,auth.skills);
+    }
     // export let csrf;
 </script>
 
@@ -90,18 +96,7 @@
 
                   <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
 
-                  <select class="form-control"  use:useSelect2={{
-                      cb:(vls)=>{
-                        //  $form.skills = vls;
-                         onSkillChange(vls);
-                      },
-                      store:form,
-                      key:'skills'
-                  }} multiple>
-                    {#each $form.skills.split(',') as skill}
-                     <option value={skill} selected>{skill}</option>
-                    {/each}
-                  </select>
+                  <MyProfileSkills skills={auth.skills} userId={auth.id} />
 
                   <!-- <p>
                     <span class="label label-danger">UI Design</span>
