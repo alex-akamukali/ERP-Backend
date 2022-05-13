@@ -64,7 +64,7 @@ Route::get('logout',[LoginController::class,'destroy'])->name('logout');
 
 
 
-Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware(['auth']);
+Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware(['auth']);
 
 Route::get('all-users',[UserController::class,'index'])->name('all.users')->middleware(['auth']);
 
