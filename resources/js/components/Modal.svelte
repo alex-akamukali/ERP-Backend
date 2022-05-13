@@ -37,7 +37,7 @@
                 </h4>
             </div>
             <form
-                on:submit|preventDefault={(e)=>dispatch("submit",e)}
+                on:submit={(e)=>dispatch("submit",e)}
                 class="form-horizontal"
                 method="post"
             >

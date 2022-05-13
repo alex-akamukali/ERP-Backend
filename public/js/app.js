@@ -20663,9 +20663,9 @@ function create_fragment(ctx) {
       current = true;
 
       if (!mounted) {
-        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit",
         /*submit_handler*/
-        ctx[6])), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(useCloseModalOnSuccess_action = _Helpers_closeModalOnSuccess__WEBPACK_IMPORTED_MODULE_1__.useCloseModalOnSuccess.call(null, div6))];
+        ctx[6]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(useCloseModalOnSuccess_action = _Helpers_closeModalOnSuccess__WEBPACK_IMPORTED_MODULE_1__.useCloseModalOnSuccess.call(null, div6))];
         mounted = true;
       }
     },
