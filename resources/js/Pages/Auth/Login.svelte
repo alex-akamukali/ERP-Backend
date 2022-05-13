@@ -7,7 +7,7 @@
     //export let name;
     export let message;
     export let error;
-    export let asset;
+    // export let asset;
 
     let loginForm = useForm({
         email: "",
@@ -37,7 +37,7 @@
 >
     <div class="login-box2">
         <div class="login-logo">
-            {asset}
+            <!-- {asset} -->
             <!-- <a href="null"><b>Admin</b>LTE</a> -->
         </div>
 
