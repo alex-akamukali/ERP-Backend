@@ -37,5 +37,5 @@ jobs:
           # ftp password
           password: "deploy-user"
           # Server port to connect to (read your web hosts docs)
-          server-dir: /public_html/dev-erp/ # optional
+          server-dir: /adea21.sg-host.com/public_html/dev-erp/ # optional
           # Path and name of the state file - this file is used to track which files have been deployed
