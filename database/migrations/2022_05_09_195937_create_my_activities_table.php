@@ -15,6 +15,10 @@ class CreateMyActivitiesTable extends Migration
     {
         Schema::create('my_activities', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id')->nullable();
+            $table->string('action')->nullable();
+            $table->string('entity')->nullable();
+            $table->text('payload')->nullable();
             $table->timestamps();
         });
     }
