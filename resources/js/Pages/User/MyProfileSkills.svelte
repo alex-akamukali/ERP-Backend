@@ -12,7 +12,12 @@
     let val = "";
 
     $: {
-        list = skills.split(",");
+        if (skills){
+            list = skills.split(",");
+        }else{
+            list = ['Researcher'];
+        }
+
         // indexPointer = -1;
     }
 

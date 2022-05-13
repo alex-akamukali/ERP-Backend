@@ -19669,7 +19669,7 @@ function get_each_context(ctx, list, i) {
   child_ctx[14] = list[i];
   child_ctx[16] = i;
   return child_ctx;
-} // (53:4) {#each list as item,key}
+} // (58:4) {#each list as item,key}
 
 
 function create_each_block(ctx) {
@@ -19909,7 +19909,11 @@ function instance($$self, $$props, $$invalidate) {
     /*skills*/
     64) {
       $: {
-        $$invalidate(0, list = skills.split(","));
+        if (skills) {
+          $$invalidate(0, list = skills.split(","));
+        } else {
+          $$invalidate(0, list = ['Researcher']);
+        }
       } // indexPointer = -1;
 
     }

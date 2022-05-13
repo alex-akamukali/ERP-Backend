@@ -68,7 +68,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $appends = ['created_ago','skills'];
+    protected $appends = ['created_ago'];
 
     /**
      * The attributes that should be cast.
@@ -97,13 +97,13 @@ class User extends Authenticatable
         return $query->where('account_type',self::ACCOUNT_TYPE_CANDIDATE);
     }
 
-    function getskillsAttribute(){
-       $val = $this->skills;
-       if (empty($val)){
-         return 'Researcher';
-       }
-       return $val;
-    }
+    // function getskillsAttribute(){
+    //    $val = $this->skills;
+    //    if (empty($val)){
+    //      return 'Researcher';
+    //    }
+    //    return $val;
+    // }
 
 
 
