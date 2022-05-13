@@ -43,6 +43,7 @@ class CreateOnboardingsTable extends Migration
             $table->string('start_date')->nullable();
             $table->string('end_date')->nullable();
 
+            $table->string('status')->nullable()->comment('active or pending');
 
             $table->timestamps();
         });
