@@ -16,7 +16,9 @@ class LoginController extends Controller
         if ($userRepository->isLogged()) {
             return $this->respondWithSuccessRoute('Currently logged in.',route('dashboard'));
         }
-        return inertia()->render('Auth/Login',$this->data([]));
+        return inertia()->render('Auth/Login',$this->data([
+            'asset'=>asset('')
+        ]));
     }
 
     //

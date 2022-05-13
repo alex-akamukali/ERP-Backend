@@ -3741,32 +3741,33 @@ function create_fragment(ctx) {
   var div22;
   var div0;
   var t1;
+  var t2;
   var div21;
   var div20;
   var div19;
   var div4;
-  var t5;
-  var div5;
   var t6;
+  var div5;
+  var t7;
   var div18;
   var div17;
   var p;
-  var t8;
+  var t9;
   var form;
   var div9;
   var div8;
   var div6;
   var input0;
-  var t9;
-  var span2;
   var t10;
+  var span2;
+  var t11;
   var div7;
   var input1;
-  var t11;
-  var span3;
   var t12;
+  var span3;
+  var t13;
   var div13;
-  var t16;
+  var t17;
   var div16;
   var current;
   var mounted;
@@ -3775,7 +3776,7 @@ function create_fragment(ctx) {
     props: {
       errors:
       /*$loginForm*/
-      ctx[2].errors,
+      ctx[3].errors,
       error:
       /*error*/
       ctx[1],
@@ -3784,10 +3785,10 @@ function create_fragment(ctx) {
       ctx[0],
       onResetMessage:
       /*onResetMessage*/
-      ctx[4],
+      ctx[5],
       hasErrors:
       /*$loginForm*/
-      ctx[2].hasErrors
+      ctx[3].hasErrors
     }
   });
   return {
@@ -3797,37 +3798,40 @@ function create_fragment(ctx) {
       span4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       div22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(
+      /*asset*/
+      ctx[2]);
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div4.innerHTML = "<div class=\"row\"><div class=\"col-md-6\" style=\"padding-top: 11px;\"><img alt=\"img\" src=\"/asset1/Olade_logo_white.png\" style=\"height: 55px;\"/></div> \n                            <div class=\"col-md-6\"><a href=\"".concat("\" style=\"color: #fff;font-size: 17px;font-weight: bold;position: relative;top: 27px;float: right;\">Contact Us</a></div></div>\n\n                        \xA0");
-      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div5.innerHTML = "<img alt=\"img\" src=\"/asset1/uNGdWHi.png\" style=\"max-width: 100%;\"/>";
-      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       p = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
       p.innerHTML = "<span class=\"line svelte-dduplo\"></span>\n                                Sign In\n                                <span class=\"line svelte-dduplo\"></span>";
-      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       form = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
       div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      span2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      span3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div13.innerHTML = "<div class=\"col-md-6\"><div class=\"\"><label><input type=\"checkbox\"/> Remember\n                                            Me</label></div></div> \n                                <div class=\"col-md-6\"><a href=\"".concat("\" style=\"float: right;margin-bottom: 11px;font-weight: bold;\">I forgot my password</a><br/></div>");
-      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div16.innerHTML = "<div class=\"col-xs-8\"></div> \n                                    \n                                    <div class=\"col-xs-4\"><button style=\"background: #093F82;margin-top: 15px;\" type=\"submit\" class=\"btn btn-primary btn-block btn-flat\">Sign In</button></div>";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "login-logo");
@@ -3874,18 +3878,19 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, span4, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span4, div22);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, div0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, t2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, div21);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div20);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, div19);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div5);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div18);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div17);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, p);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t9);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, form);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div9);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, div8);
@@ -3893,31 +3898,31 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, input0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
       /*$loginForm*/
-      ctx[2].email);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t9);
+      ctx[3].email);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t10);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, span2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, input1);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
       /*$loginForm*/
-      ctx[2].password);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, t11);
+      ctx[3].password);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, t12);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, span3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t13);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div13);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t17);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div16);
       current = true;
 
       if (!mounted) {
         dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
         /*input0_input_handler*/
-        ctx[6]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
+        ctx[7]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
         /*input1_input_handler*/
-        ctx[7]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        ctx[8]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
         /*loginAction*/
-        ctx[5]))];
+        ctx[6]))];
         mounted = true;
       }
     },
@@ -3928,9 +3933,9 @@ function create_fragment(ctx) {
       var messagenotification_changes = {};
       if (dirty &
       /*$loginForm*/
-      4) messagenotification_changes.errors =
+      8) messagenotification_changes.errors =
       /*$loginForm*/
-      ctx[2].errors;
+      ctx[3].errors;
       if (dirty &
       /*error*/
       2) messagenotification_changes.error =
@@ -3943,29 +3948,34 @@ function create_fragment(ctx) {
       ctx[0];
       if (dirty &
       /*$loginForm*/
-      4) messagenotification_changes.hasErrors =
+      8) messagenotification_changes.hasErrors =
       /*$loginForm*/
-      ctx[2].hasErrors;
+      ctx[3].hasErrors;
       messagenotification.$set(messagenotification_changes);
+      if (!current || dirty &
+      /*asset*/
+      4) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1,
+      /*asset*/
+      ctx[2]);
 
       if (dirty &
       /*$loginForm*/
-      4 && input0.value !==
+      8 && input0.value !==
       /*$loginForm*/
-      ctx[2].email) {
+      ctx[3].email) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
         /*$loginForm*/
-        ctx[2].email);
+        ctx[3].email);
       }
 
       if (dirty &
       /*$loginForm*/
-      4 && input1.value !==
+      8 && input1.value !==
       /*$loginForm*/
-      ctx[2].password) {
+      ctx[3].password) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
         /*$loginForm*/
-        ctx[2].password);
+        ctx[3].password);
       }
     },
     i: function i(local) {
@@ -3991,12 +4001,13 @@ function instance($$self, $$props, $$invalidate) {
   var $loginForm;
   var message = $$props.message;
   var error = $$props.error;
+  var asset = $$props.asset;
   var loginForm = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.useForm)({
     email: "",
     password: ""
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, loginForm, function (value) {
-    return $$invalidate(2, $loginForm = value);
+    return $$invalidate(3, $loginForm = value);
   });
 
   function onResetMessage() {
@@ -4021,9 +4032,10 @@ function instance($$self, $$props, $$invalidate) {
   $$self.$$set = function ($$props) {
     if ('message' in $$props) $$invalidate(0, message = $$props.message);
     if ('error' in $$props) $$invalidate(1, error = $$props.error);
+    if ('asset' in $$props) $$invalidate(2, asset = $$props.asset);
   };
 
-  return [message, error, $loginForm, loginForm, onResetMessage, loginAction, input0_input_handler, input1_input_handler];
+  return [message, error, asset, $loginForm, loginForm, onResetMessage, loginAction, input0_input_handler, input1_input_handler];
 }
 
 var Login = /*#__PURE__*/function (_SvelteComponent) {
@@ -4039,7 +4051,8 @@ var Login = /*#__PURE__*/function (_SvelteComponent) {
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
       message: 0,
-      error: 1
+      error: 1,
+      asset: 2
     }, add_css);
     return _this;
   }
