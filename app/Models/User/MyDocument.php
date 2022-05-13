@@ -10,8 +10,7 @@ class MyDocument extends Model
 
     use HasFactory;
 
-    protected $fillable = ['user_id','type','title','path'];
+    protected $fillable = ['user_id', 'type', 'title', 'path'];
 
-    const TYPES = ['resume','certificate','expense'];
-
+    const TYPES = ['resume', 'certificate', 'expense'];
 }

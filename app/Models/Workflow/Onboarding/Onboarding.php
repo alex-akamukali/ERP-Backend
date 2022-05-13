@@ -28,7 +28,8 @@ class Onboarding extends Model
         'hst_no',
         'onboarding_status',
         'start_date',
-        'end_date'
+        'end_date',
+        'status'
 
     ];
 }

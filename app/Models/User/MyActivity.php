@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class MyActivity extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['user_id', 'action', 'entity', 'payload'];
 }
