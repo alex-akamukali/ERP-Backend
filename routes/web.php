@@ -10,6 +10,7 @@ use App\Http\Controllers\User\UserController;
 // use App\Http\Controllers\User\DashboardController;
 // use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\User\Workflow\Assessment\PreEmploymentAssessmentController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 
@@ -43,6 +44,15 @@ use Illuminate\Support\Facades\Route;
 //         'message'=>$message
 //     ]);
 // });
+
+
+Route::get('migrate',function(){
+   Artisan::call("migrate --seed");
+   return [
+       'message'=>'Migration ran with seeders',
+       'error'=>false
+   ];
+});
 
 Route::get('/',[LoginController::class,'index'])->name('login');
 
