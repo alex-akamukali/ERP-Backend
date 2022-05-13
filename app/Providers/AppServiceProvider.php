@@ -34,7 +34,9 @@ class AppServiceProvider extends ServiceProvider
         // }
         // return $message;
 
-        #insertRepository
+        $this->app->bind(\App\Repositories\Settings\Interfaces\ConfigRepositoryInterface::class,\App\Repositories\Settings\ConfigRepository::class);
+#insertRepository
+
     }
 
     /**
