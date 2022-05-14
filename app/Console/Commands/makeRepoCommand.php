@@ -122,7 +122,7 @@ class ' . $repositoryBuilder['className'] . ' implements ' . $interfaceBuilder['
 }
 ';
 
-$controllerPath = 'Http/Controllers/' . $name . 'Controller';
+$controllerPath = 'Http/Controllers/v1/' . $name . 'Controller';
 
 $storeRequestPath = 'Http/Requests/' . $name . 'StoreRequest';
 $updateRequestPath = 'Http/Requests/' . $name . 'UpdateRequest';
@@ -197,12 +197,22 @@ class ' . $updateRequestBuilder['className'] . ' extends FormRequest
 // dd($clsStoreRequest,$clsUpdateRequest);
 
 $controllerBuilder = $this->decodePath($controllerPath);
+$svelteViewRootPath = 'resources/js/Pages/';
+$controllerIndexPath = 'v2/' . $name . '/Index';
+$controllerCreatePath = 'v2/' . $name . '/Create';
+$controllerEditPath = 'v2/' . $name . '/Edit';
+$controllerShowPath = 'v2/' . $name . '/Show';
+
+$controllerIndexPathBuilder = $this->decodePath($controllerIndexPath);
+$controllerCreatePathBuilder = $this->decodePath($controllerCreatePath);
+$controllerEditPathBuilder = $this->decodePath($controllerEditPath);
+$controllerShowPathBuilder = $this->decodePath($controllerShowPath);
 
 $clsController = '<?php
 
 ' . $controllerBuilder['namespace'] . '
 
-' . $repositoryBuilder['classUseStatement'] . '
+' . $interfaceBuilder['classUseStatement'] . '
 ' . $storeRequestBuilder['classUseStatement'] . '
 ' . $updateRequestBuilder['classUseStatement'] . '
 use App\Http\Controllers\Controller;
@@ -213,16 +223,37 @@ class ' . $controllerBuilder['className'] . ' extends Controller
     //
     private ' . $repositoryBuilder['instanceName'] . ' = null;
 
-    function __construct(' . $repositoryBuilder['className']  . ' ' . $repositoryBuilder['instanceName']  . '){
+    function __construct(' . $interfaceBuilder['className']  . ' ' . $repositoryBuilder['instanceName']  . '){
         $this->' . $repositoryBuilder['instanceNamePlain'] . ' = ' . $repositoryBuilder['instanceName'] . ';
     }
 
     function index(){
-        return inertia()->render("Dashboard/Dashboard",[]);
+        $list = $this->' . $repositoryBuilder['instanceNamePlain'] . '->fetch(request()->all())->get();
+        return inertia()->render("' . $controllerIndexPathBuilder['pathFileNameNoExt'] . '",[
+            "list"=>$list
+        ]);
     }
 
-    function store(' . $storeRequestBuilder['className'] . ' ' . $storeRequestBuilder['instanceName']  . '){
-      $record = $this->' . $repositoryBuilder['instanceNamePlain'] . '->create(' . $storeRequestBuilder['instanceName'] . '->validated());
+    function create(){
+        return inertia()->render("' . $controllerCreatePathBuilder['pathFileNameNoExt'] . '");
+    }
+
+    function edit($id){
+        $data = $this->' . $repositoryBuilder['instanceNamePlain'] . '->fetchById($id);
+        return inertia()->render("' . $controllerEditPathBuilder['pathFileNameNoExt'] . '",[
+            "data"=>$data
+        ]);
+    }
+
+    function show($id){
+        $data = $this->' . $repositoryBuilder['instanceNamePlain'] . '->fetchById($id);
+        return inertia()->render("' . $controllerShowPathBuilder['pathFileNameNoExt'] . '",[
+            "data"=>$data
+        ]);
+    }
+
+    function store(' . $storeRequestBuilder['className'] . ' $request){
+      $record = $this->' . $repositoryBuilder['instanceNamePlain'] . '->create($request->validated());
       return $this->respondWithSuccess("New record added");
     }
 
@@ -251,6 +282,24 @@ Storage::disk("root")->put('app/' . $storeRequestBuilder['pathFileName'],$clsSto
 Storage::disk("root")->put('app/' . $updateRequestBuilder['pathFileName'],$clsUpdateRequest);
 
 Storage::disk("root")->put('app/' . $controllerBuilder['pathFileName'],$clsController);
+
+$svelteTemplate = '<script context="module">
+
+import { page, useForm } from "@inertiajs/inertia-svelte";
+
+</script>
+
+<script>
+
+//export let name;
+
+</script>';
+
+$this->createScafold($svelteViewRootPath . $controllerIndexPathBuilder['pathFileNameNoExt'] . '.svelte',$svelteTemplate);
+$this->createScafold($svelteViewRootPath . $controllerCreatePathBuilder['pathFileNameNoExt'] . '.svelte',$svelteTemplate);
+$this->createScafold($svelteViewRootPath . $controllerEditPathBuilder['pathFileNameNoExt'] . '.svelte',$svelteTemplate);
+$this->createScafold($svelteViewRootPath . $controllerShowPathBuilder['pathFileNameNoExt'] . '.svelte',$svelteTemplate);
+
 
 
 $serviceProvider = Storage::disk("root")->get('app/Providers/AppServiceProvider.php');
@@ -281,6 +330,7 @@ Storage::disk("root")->put('app/Providers/AppServiceProvider.php',$serviceProvid
        $className = array_pop($list);
        $pathName = implode('/',$list);
        $pathFileName = $pathName . '/' . $className . '.php';
+       $pathFileNameNoExt = $pathName . '/' . $className;
        $namespace = 'namespace App\\' . implode('\\',$list) . ';';
        $instanceName = '$' . lcfirst($className);
        $instanceNamePlain = lcfirst($className);
@@ -289,6 +339,7 @@ Storage::disk("root")->put('app/Providers/AppServiceProvider.php',$serviceProvid
        $classClassStatement = '\\App\\' . implode('\\',$list) . '\\' . $className . '::class';
 
        return [
+           'pathFileNameNoExt'=>$pathFileNameNoExt,
            'classUseStatement'=>$classUseStatement,
            'instanceNamePlain'=>$instanceNamePlain,
            'classClassStatement'=>$classClassStatement,
@@ -305,7 +356,9 @@ Storage::disk("root")->put('app/Providers/AppServiceProvider.php',$serviceProvid
 
     }
 
-    function decodeModel($model){
-
+    function createScafold($path,$value){
+      if (!Storage::disk("root")->exists($path)){
+         Storage::disk("root")->put($path,$value);
+      }
     }
 }
