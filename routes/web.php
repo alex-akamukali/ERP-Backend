@@ -116,3 +116,8 @@ Route::resource('my-profile',\App\Http\Controllers\User\MyProfileController::cla
 Route::resource('upload-avatar',\App\Http\Controllers\User\UploadAvatarController::class)->middleware(['auth']);
 
 Route::resource('update-user-skill',\App\Http\Controllers\User\UpdateUserSkillController::class)->middleware(['auth']);
+
+
+
+
+///////////////New Divide/////////////////////////

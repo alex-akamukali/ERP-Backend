@@ -3,7 +3,9 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class makeRepoCommand extends Command
 {
@@ -51,6 +53,8 @@ class makeRepoCommand extends Command
             $this->error('model argument is required!');
             return 0;
         }
+
+        $nameBuilder = $this->decodePath($name);
 
         $repositoryBuilder = $this->decodePath('Repositories/' . $name . 'Repository');
         $modelBuilder = $this->decodePath($model);
@@ -274,14 +278,13 @@ class ' . $controllerBuilder['className'] . ' extends Controller
 // dd($clsRepository);
 // dd($clsInterface);
 
+$this->createScafold('app/' . $interfaceBuilder['pathFileName'],$clsInterface);
 
-Storage::disk("root")->put('app/' . $interfaceBuilder['pathFileName'],$clsInterface);
-Storage::disk("root")->put('app/' . $repositoryBuilder['pathFileName'],$clsRepository);
+$this->createScafold('app/' . $repositoryBuilder['pathFileName'],$clsRepository);
+$this->createScafold('app/' . $storeRequestBuilder['pathFileName'],$clsStoreRequest);
+$this->createScafold('app/' . $updateRequestBuilder['pathFileName'],$clsUpdateRequest);
+$this->createScafold('app/' . $controllerBuilder['pathFileName'],$clsController);
 
-Storage::disk("root")->put('app/' . $storeRequestBuilder['pathFileName'],$clsStoreRequest);
-Storage::disk("root")->put('app/' . $updateRequestBuilder['pathFileName'],$clsUpdateRequest);
-
-Storage::disk("root")->put('app/' . $controllerBuilder['pathFileName'],$clsController);
 
 $svelteTemplate = '<script context="module">
 
@@ -311,13 +314,26 @@ $serviceProvider = explode("#insertRepository",$serviceProvider);
 $serviceProvider = implode($repoBind,$serviceProvider);
 Storage::disk("root")->put('app/Providers/AppServiceProvider.php',$serviceProvider);
 
+//Register controller in route.
+
+$route = Storage::disk("root")->get("routes/web.php");
+$resource = Str::snake($nameBuilder['className']);
+$resource = explode("_",$resource);
+$resource = implode("-",$resource);
+
+//Route::resource('update-user-skill',\App\Http\Controllers\User\UpdateUserSkillController::class)->middleware(['auth']);
+$inlineRouteResourceTemplate = 'Route::resource("' . $resource . '",' . $controllerBuilder['classClassStatement'] . ')->middleware(["auth"]);';
+Storage::disk("root")->put("routes/web.php",$route . '
+' . $inlineRouteResourceTemplate . '
+');
+
 // dd($repoBind);
 // dd($serviceProvider);
 
 
 // Storage::disk("root")->put('app/' . $path . '/' . $name . '.php',$clsRepo);
 
-        $this->info("class name '" . $name . "' generated successfully");
+        $this->info("Repository '" . $name . "' scafolded successfully");
         return 0;
     }
 
