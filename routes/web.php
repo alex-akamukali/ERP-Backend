@@ -54,17 +54,19 @@ Route::get('migrate',function(){
    ];
 });
 
-Route::get('/',[LoginController::class,'index'])->name('login');
+Route::get('/',function(){
+    return redirect()->route('login.index');
+})->name('root');
 
 
 
-Route::resource('login',LoginController::class);
+// Route::resource('login',LoginController::class);
 
-Route::get('logout',[LoginController::class,'destroy'])->name('logout');
+// Route::get('logout',[LoginController::class,'destroy'])->name('logout');
 
 
 
-Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware(['auth']);
+// Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware(['auth']);
 
 Route::get('all-users',[UserController::class,'index'])->name('all.users')->middleware(['auth']);
 
@@ -130,6 +132,8 @@ Route::resource("program-type",\App\Http\Controllers\v1\Settings\ProgramTypeCont
 
 Route::resource("user",\App\Http\Controllers\v1\Auth\UserController::class)->middleware(["auth"]);
 
-Route::resource("user",\App\Http\Controllers\v1\Auth\UserController::class)->middleware(["auth"]);
+Route::resource("login",\App\Http\Controllers\v1\Auth\LoginController::class);
 
-Route::resource("user",\App\Http\Controllers\v1\Auth\UserController::class)->middleware(["auth"]);
+Route::resource("logout",\App\Http\Controllers\v1\Auth\LogoutController::class)->middleware(["auth"]);
+
+Route::resource("dashboard",\App\Http\Controllers\v1\Auth\DashboardController::class)->middleware(["auth"]);

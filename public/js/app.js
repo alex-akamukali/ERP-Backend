@@ -4920,9 +4920,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
-/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
-/* harmony import */ var _Stores_GlobalStore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Stores/GlobalStore */ "./resources/js/Stores/GlobalStore.js");
-/* harmony import */ var _components_MessageStore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/MessageStore */ "./resources/js/components/MessageStore.js");
+/* harmony import */ var svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! svelte */ "./node_modules/svelte/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+/* harmony import */ var _Stores_GlobalStore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Stores/GlobalStore */ "./resources/js/Stores/GlobalStore.js");
+/* harmony import */ var _components_MessageStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/MessageStore */ "./resources/js/components/MessageStore.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -4951,8 +4952,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 function instance($$self) {
-  _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.page.subscribe(function (_ref) {
+  var unsub = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.page.subscribe(function (_ref) {
     var props = _ref.props;
     var message = props.message,
         error = props.error,
@@ -4984,6 +4986,7 @@ function instance($$self) {
       }
     }
   });
+  (0,svelte__WEBPACK_IMPORTED_MODULE_1__.onDestroy)(unsub);
 
   $: {} // message = $page.props.message;
   // errors = $page.props.errors;
@@ -6266,8 +6269,6 @@ function create_fragment(ctx) {
   var inertia_action;
   var t22;
   var div1;
-  var a5;
-  var t23;
   var t24;
   var aside0;
   var section;
@@ -6439,8 +6440,7 @@ function create_fragment(ctx) {
       a4.textContent = "Profile";
       t22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      a5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
-      t23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Sign out");
+      div1.innerHTML = "<a href=\"/logout\" class=\"btn btn-primary btn-flat svelte-9fvhrt\">Sign out</a>";
       t24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       aside0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("aside");
       section = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
@@ -6595,10 +6595,6 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "href", "/my-profile");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "class", "btn btn-primary btn-flat svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "pull-left");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a5, "href",
-      /*logout_route*/
-      ctx[4]);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a5, "class", "btn btn-primary btn-flat svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "pull-right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li4, "class", "user-footer svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul2, "class", "dropdown-menu");
@@ -6737,8 +6733,6 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, a4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li4, t22);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li4, div1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, a5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a5, t23);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, t24);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, aside0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(aside0, section);
@@ -20128,6 +20122,1927 @@ var User = /*#__PURE__*/function (_SvelteComponent) {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/v2/Auth/Dashboard/Create.svelte":
+/*!************************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Dashboard/Create.svelte ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Dashboard/Create.svelte generated by Svelte v3.48.0 */
+
+
+
+var Create = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Create, _SvelteComponent);
+
+  var _super = _createSuper(Create);
+
+  function Create(options) {
+    var _this;
+
+    _classCallCheck(this, Create);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Create);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Create);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Dashboard/Edit.svelte":
+/*!**********************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Dashboard/Edit.svelte ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Dashboard/Edit.svelte generated by Svelte v3.48.0 */
+
+
+
+var Edit = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Edit, _SvelteComponent);
+
+  var _super = _createSuper(Edit);
+
+  function Edit(options) {
+    var _this;
+
+    _classCallCheck(this, Edit);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Edit);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Edit);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Dashboard/Index.svelte":
+/*!***********************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Dashboard/Index.svelte ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "layout": () => (/* binding */ layout)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! svelte */ "./node_modules/svelte/index.mjs");
+/* harmony import */ var _Layout_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Layout.svelte */ "./resources/js/Pages/v2/Auth/Dashboard/Layout.svelte");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Dashboard/Index.svelte generated by Svelte v3.48.0 */
+
+
+
+
+function create_fragment(ctx) {
+  var t;
+  return {
+    c: function c() {
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Dashboard");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t, anchor);
+    },
+    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
+    }
+  };
+}
+
+var layout = _Layout_svelte__WEBPACK_IMPORTED_MODULE_2__["default"];
+var content = '';
+
+var Index = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Index, _SvelteComponent);
+
+  var _super = _createSuper(Index);
+
+  function Index(options) {
+    var _this;
+
+    _classCallCheck(this, Index);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Index);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Index);
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Dashboard/Layout.svelte":
+/*!************************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Dashboard/Layout.svelte ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _Stores_GlobalStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../Stores/GlobalStore */ "./resources/js/Stores/GlobalStore.js");
+/* harmony import */ var _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Components/MessageNotification.svelte */ "./resources/js/Pages/Components/MessageNotification.svelte");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/* resources/js/Pages/v2/Auth/Dashboard/Layout.svelte generated by Svelte v3.48.0 */
+
+
+ //Pages/Components/MessageNotification.svelte";
+// import {CheckAuthComponent} from "../Auth/CheckAuthComponent.svelte";
+
+
+
+function add_css(target) {
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-9fvhrt", "nav.svelte-9fvhrt.svelte-9fvhrt.svelte-9fvhrt{background-color:#fff !important}.sidebar-toggle.svelte-9fvhrt.svelte-9fvhrt.svelte-9fvhrt{color:#006a9d !important}.sidebar-toggle.svelte-9fvhrt.svelte-9fvhrt.svelte-9fvhrt:hover{background-color:#fff !important}.user-menu.svelte-9fvhrt a.svelte-9fvhrt.svelte-9fvhrt{color:#006a9d !important}aside.svelte-9fvhrt.svelte-9fvhrt.svelte-9fvhrt{background-color:#073367 !important}li.active.svelte-9fvhrt.svelte-9fvhrt.svelte-9fvhrt,li.active.svelte-9fvhrt a.svelte-9fvhrt.svelte-9fvhrt{color:#ffffff !important;background:#042042 !important}aside.svelte-9fvhrt li.svelte-9fvhrt.svelte-9fvhrt:hover,aside.svelte-9fvhrt li.svelte-9fvhrt:hover a.svelte-9fvhrt{color:#ffffff !important;background:#042042 !important}");
+}
+
+function get_each_context(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[14] = list[i];
+  return child_ctx;
+} // (94:36) {#each $notifications as notification}
+
+
+function create_each_block(ctx) {
+  var li;
+  var a;
+  var i;
+  var t0;
+  var t1_value =
+  /*notification*/
+  ctx[14].name + "";
+  var t1;
+  var t2;
+  return {
+    c: function c() {
+      li = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      i = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("i");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t1_value);
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i, "class", "fa fa-comment text-green");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "href", "#");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li, "class", "svelte-9fvhrt");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, li, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li, a);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a, i);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li, t2);
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*$notifications*/
+      2 && t1_value !== (t1_value =
+      /*notification*/
+      ctx[14].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t1, t1_value);
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(li);
+    }
+  };
+}
+
+function create_fragment(ctx) {
+  var div27;
+  var header;
+  var a0;
+  var span0;
+  var img0;
+  var img0_src_value;
+  var t0;
+  var span1;
+  var img1;
+  var img1_src_value;
+  var a0_href_value;
+  var t1;
+  var nav;
+  var a1;
+  var a1_href_value;
+  var t3;
+  var div2;
+  var ul3;
+  var li2;
+  var a2;
+  var i0;
+  var t4;
+  var span3;
+  var t5_value =
+  /*$notifications*/
+  ctx[1].length + "";
+  var t5;
+  var a2_href_value;
+  var t6;
+  var ul1;
+  var li0;
+  var t7;
+  var t8_value =
+  /*$notifications*/
+  ctx[1].length + "";
+  var t8;
+  var t9;
+  var t10_value = (
+  /*$notifications*/
+  ctx[1].length <= 1 ? '' : 's') + "";
+  var t10;
+  var t11;
+  var li1;
+  var ul0;
+  var t12;
+  var li5;
+  var a3;
+  var img2;
+  var img2_src_value;
+  var t13;
+  var span4;
+  var t14_value =
+  /*user*/
+  ctx[0].name + "";
+  var t14;
+  var a3_href_value;
+  var t15;
+  var ul2;
+  var li3;
+  var img3;
+  var img3_src_value;
+  var t16;
+  var p0;
+  var t19;
+  var li4;
+  var div0;
+  var a4;
+  var inertia_action;
+  var t21;
+  var div1;
+  var t23;
+  var aside0;
+  var section;
+  var ul10;
+  var li6;
+  var t25;
+  var li7;
+  var a6;
+  var inertia_action_1;
+  var t28;
+  var li12;
+  var a7;
+  var a7_href_value;
+  var t32;
+  var ul4;
+  var li8;
+  var a8;
+  var inertia_action_2;
+  var t34;
+  var li9;
+  var t36;
+  var li10;
+  var t38;
+  var li11;
+  var t40;
+  var li16;
+  var t50;
+  var li17;
+  var t53;
+  var li20;
+  var t61;
+  var li26;
+  var t75;
+  var li27;
+  var t78;
+  var li28;
+  var t81;
+  var li36;
+  var a28;
+  var a28_href_value;
+  var t85;
+  var ul8;
+  var li29;
+  var a29;
+  var inertia_action_3;
+  var t87;
+  var li30;
+  var a30;
+  var a30_href_value;
+  var inertia_action_4;
+  var t89;
+  var li31;
+  var a31;
+  var inertia_action_5;
+  var t91;
+  var li32;
+  var a32;
+  var inertia_action_6;
+  var t93;
+  var li33;
+  var a33;
+  var inertia_action_7;
+  var t95;
+  var li34;
+  var a34;
+  var inertia_action_8;
+  var t97;
+  var li35;
+  var a35;
+  var inertia_action_9;
+  var t99;
+  var li39;
+  var t107;
+  var li40;
+  var a39;
+  var i40;
+  var t108;
+  var span15;
+  var t110;
+  var div3;
+  var t111;
+  var footer;
+  var t118;
+  var aside1;
+  var t182;
+  var div26;
+  var current;
+  var mounted;
+  var dispose;
+  var each_value =
+  /*$notifications*/
+  ctx[1];
+  var each_blocks = [];
+
+  for (var i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+
+  var default_slot_template =
+  /*#slots*/
+  ctx[5]["default"];
+  var default_slot = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_slot)(default_slot_template, ctx,
+  /*$$scope*/
+  ctx[4], null);
+  return {
+    c: function c() {
+      div27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      header = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("header");
+      a0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      span0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      img0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("img");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      img1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("img");
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      nav = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("nav");
+      a1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a1.innerHTML = "<span class=\"sr-only\">Toggle navigation</span>";
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      ul3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+      li2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      i0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("i");
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t5_value);
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      ul1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+      li0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("You have ");
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t8_value);
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(" notification");
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t10_value);
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      ul0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+
+      for (var _i = 0; _i < each_blocks.length; _i += 1) {
+        each_blocks[_i].c();
+      }
+
+      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      img2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("img");
+      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      t14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t14_value);
+      t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      ul2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+      li3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      img3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("img");
+      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      p0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      p0.innerHTML = "Alex Akamukali - \n                                    <small>Registered since Mar. 2022</small>";
+      t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      a4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a4.textContent = "Profile";
+      t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div1.innerHTML = "<a href=\"/logout\" class=\"btn btn-primary btn-flat svelte-9fvhrt\">Sign out</a>";
+      t23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      aside0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("aside");
+      section = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
+      ul10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+      li6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li6.textContent = " ";
+      t25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a6.innerHTML = "<i class=\"fa fa-tachometer\"></i> \n                        <span>Dashboard</span>";
+      t28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a7.innerHTML = "<i class=\"fa fa-users\"></i>  <span>Users</span> \n\n                        <i class=\"fa fa-angle-left pull-right\"></i>";
+      t32 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      ul4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+      li8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a8.innerHTML = "<i class=\"fa fa-user\"></i> All User";
+      t34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li9.innerHTML = "<a href=\"activeusers\" class=\"svelte-9fvhrt\"><i class=\"fa fa-id-card fa-user text-green\"></i> Active</a>";
+      t36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li10.innerHTML = "<a href=\"inactiveusers\" class=\"svelte-9fvhrt\"><i class=\"fa fa-user fa-id-card text-red\"></i> Inactive</a>";
+      t38 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li11.innerHTML = "<a href=\"alumniusers\" class=\"svelte-9fvhrt\"><i class=\"fa fa-user fa-id-card text-yellow\"></i> Alumni</a>";
+      t40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li16.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-pie-chart\"></i>  <span>Reports</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li class=\"svelte-9fvhrt\"><a href=\"JobDetailsConsultants\" class=\"svelte-9fvhrt\"><i class=\"fa fa-line-chart text-green\"></i> Consultants\n                                on Job</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-bar-chart text-blue\"></i> On FTE Job</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-bar-chart text-aqua\"></i> On Contract\n                                Job</a></li></ul>");
+      t50 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li17.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-envelope\"></i> \n                        <span>Communication</span></a>");
+      t53 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li20.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-money text-aqua\"></i> \n                        <span>Accounts Payments</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li class=\"svelte-9fvhrt\"><a href=\"ACCOUNTcontractPayment\" class=\"svelte-9fvhrt\"><i class=\"fa fa-money text-green\"></i> Contract Payment</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"ACCOUNTFTEPayment\" class=\"svelte-9fvhrt\"><i class=\"fa fa-money text-blue\"></i> FTE Payment</a></li></ul>");
+      t61 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li26.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-tasks\"></i>  <span>Document Library</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li class=\"svelte-9fvhrt\"><a href=\"docContract\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file\"></i> Olade Contract</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file-o\"></i> Employment Contract</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file text-green\"></i> Invoices</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-money\"></i> Payment Stub</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file text-aqua\"></i> Resumes</a></li></ul>");
+      t75 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li27.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-folder\"></i>  <span>Projects</span></a>");
+      t78 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li28.innerHTML = "<a href=\"usersTeams\" class=\"svelte-9fvhrt\"><i class=\"fa fa-users\"></i>  <span>Teams</span></a>";
+      t81 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a28.innerHTML = "<i class=\"fa fa-cogs\"></i>  <span>Settings</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i>";
+      t85 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      ul8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+      li29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a29.innerHTML = "<i class=\"fa fa-graduation-cap\"></i> Program Type";
+      t87 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a30.innerHTML = "<i class=\"fa fa-book text-orange\"></i> Knowledge Area";
+      t89 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a31.innerHTML = "<i class=\"fa fa-file-o text-green\"></i> Olade Contract\n                                Type";
+      t91 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li32 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a32 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a32.innerHTML = "<i class=\"fa fa-bank text-aqua\"></i> Vendors";
+      t93 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a33.innerHTML = "<i class=\"fa fa-bank text-aqua\"></i> Province";
+      t95 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a34.innerHTML = "<i class=\"fa fa-money text-blue\"></i> Payroll Mgrs.";
+      t97 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li35 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a35 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a35.innerHTML = "<i class=\"fa fa-desktop text-orange\"></i> Configurations";
+      t99 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li39 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      li39.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-key\"></i>  <span>Role Management</span> \n                        <i class=\"fa fa-angle-left pull-right\"></i></a> \n                    <ul class=\"treeview-menu\"><li class=\"svelte-9fvhrt\"><a href=\"roles\" class=\"svelte-9fvhrt\"><i class=\"fa fa-wrench text-aqua\"></i> Assign Roles</a></li> \n                        <li class=\"svelte-9fvhrt\"><a href=\"docusignsigners\" class=\"svelte-9fvhrt\"><i class=\"fa fa-edit text-aqua\"></i> DocuSign Signers</a></li></ul>");
+      t107 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a39 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      i40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("i");
+      t108 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span15.textContent = "Sign Out";
+      t110 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      if (default_slot) default_slot.c();
+      t111 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      footer = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("footer");
+      footer.innerHTML = "<div class=\"pull-right hidden-xs\"><b>Version</b> 1.0</div> \n        <strong>Copyright \xA9 2021 <a href=\"https://oladeconsulting.com\" target=\"_blank\">Olade Consulting</a></strong> All rights reserved.";
+      t118 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      aside1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("aside");
+      aside1.innerHTML = "<ul class=\"nav nav-tabs nav-justified control-sidebar-tabs\"><li class=\"svelte-9fvhrt\"><a href=\"control-sidebar-home-tab\" data-toggle=\"tab\" class=\"svelte-9fvhrt\"><i class=\"fa fa-home\"></i></a></li> \n            <li class=\"svelte-9fvhrt\"><a href=\"control-sidebar-settings-tab\" data-toggle=\"tab\" class=\"svelte-9fvhrt\"><i class=\"fa fa-gears\"></i></a></li></ul> \n        \n        <div class=\"tab-content\"><div class=\"tab-pane\" id=\"control-sidebar-home-tab\"><h3 class=\"control-sidebar-heading\">Recent Activity</h3> \n                <ul class=\"control-sidebar-menu\"><li class=\"svelte-9fvhrt\"><a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"menu-icon fa fa-birthday-cake bg-red\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Langdon&#39;s Birthday</h4> \n\n                                <p>Will be 23 on April 24th</p></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"menu-icon fa fa-user bg-yellow\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Frodo Updated His Profile</h4> \n\n                                <p>New phone +1(800)555-1234</p></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"menu-icon fa fa-envelope-o bg-light-blue\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Nora Joined Mailing List</h4> \n\n                                <p>nora@example.com</p></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><i class=\"menu-icon fa fa-file-code-o bg-green\"></i> \n\n                            <div class=\"menu-info\"><h4 class=\"control-sidebar-subheading\">Cron Job 254 Executed</h4> \n\n                                <p>Execution time 5 seconds</p></div></a></li></ul> \n                \n\n                <h3 class=\"control-sidebar-heading\">Tasks Progress</h3> \n                <ul class=\"control-sidebar-menu\"><li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><h4 class=\"control-sidebar-subheading\">Custom Template Design\n                                <span class=\"label label-danger pull-right\">70%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-danger\" style=\"width: 70%\"></div></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><h4 class=\"control-sidebar-subheading\">Update Resume\n                                <span class=\"label label-success pull-right\">95%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-success\" style=\"width: 95%\"></div></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><h4 class=\"control-sidebar-subheading\">Laravel Integration\n                                <span class=\"label label-warning pull-right\">50%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-warning\" style=\"width: 50%\"></div></div></a></li> \n                    <li class=\"svelte-9fvhrt\"><a href=\"", "/", "\" class=\"svelte-9fvhrt\"><h4 class=\"control-sidebar-subheading\">Back End Framework\n                                <span class=\"label label-primary pull-right\">68%</span></h4> \n\n                            <div class=\"progress progress-xxs\"><div class=\"progress-bar progress-bar-primary\" style=\"width: 68%\"></div></div></a></li></ul></div> \n            \n\n            \n            <div class=\"tab-pane\" id=\"control-sidebar-settings-tab\"><form method=\"post\"><h3 class=\"control-sidebar-heading\">General Settings</h3> \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Report panel usage\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Some information about this general settings option</p></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Allow mail redirect\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Other sets of options are available</p></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Expose author name in posts\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label> \n\n                        <p>Allow the user to show his name in blog posts</p></div> \n                    \n\n                    <h3 class=\"control-sidebar-heading\">Chat Settings</h3> \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Show me as online\n                            <input type=\"checkbox\" class=\"pull-right\" checked=\"\"/></label></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Turn off notifications\n                            <input type=\"checkbox\" class=\"pull-right\"/></label></div> \n                    \n\n                    <div class=\"form-group\"><label class=\"control-sidebar-subheading\">Delete chat history\n                            <a href=\"", "/", "\" class=\"text-red pull-right svelte-9fvhrt\"><i class=\"fa fa-trash-o\"></i></a></label></div></form></div></div>");
+      t182 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img0, "alt", "img");
+      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img0.src, img0_src_value =
+      /*olade_logo*/
+      ctx[2])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img0, "src", img0_src_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img0, "height", "37px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span0, "class", "logo-mini");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img1, "alt", "img");
+      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img1.src, img1_src_value =
+      /*olade_logo*/
+      ctx[2])) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img1, "src", img1_src_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img1, "height", "37px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span1, "class", "logo-lg");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", a0_href_value = "");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "class", "logo");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(a0, "background-color", "#093F82");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", a1_href_value = "/");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "class", "sidebar-toggle svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "data-toggle", "offcanvas");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "role", "button");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i0, "class", "fa fa-bell-o");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(i0, "color", "#073367");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span3, "class", "label label-danger");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", a2_href_value = "/");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "class", "dropdown-toggle svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "data-toggle", "dropdown");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li0, "class", "header");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul0, "class", "menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li1, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul1, "class", "dropdown-menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li2, "class", "dropdown notifications-menu svelte-9fvhrt");
+      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img2.src, img2_src_value = '/uploads/' +
+      /*user*/
+      ctx[0].avatar)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "src", img2_src_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "class", "img-circle");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "alt", " .");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img2, "width", "20px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img2, "height", "20px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span4, "class", "hidden-xs");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a3, "href", a3_href_value = "/");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a3, "class", "dropdown-toggle svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a3, "data-toggle", "dropdown");
+      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img3.src, img3_src_value = '/uploads/' +
+      /*user*/
+      ctx[0].avatar)) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "src", img3_src_value);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "class", "img-circle");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "alt", "img");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li3, "class", "user-header");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "href", "/my-profile");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "class", "btn btn-primary btn-flat svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "pull-left");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "pull-right");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li4, "class", "user-footer svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul2, "class", "dropdown-menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li5, "class", "dropdown user user-menu svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul3, "class", "nav navbar-nav");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "navbar-custom-menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(nav, "class", "navbar navbar-static-top svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(header, "class", "main-header");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li6, "class", "header svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(li6, "background-color", "#073367");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a6, "href", "/dashboard");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a6, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li7, "class", "active svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a7, "href", a7_href_value = "/");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a7, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a8, "href", "/all-users");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a8, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li8, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li9, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li10, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li11, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul4, "class", "treeview-menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li12, "class", "treeview svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li16, "class", "treeview svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li17, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li20, "class", "treeview svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li26, "class", "treeview svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li27, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li28, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a28, "href", a28_href_value = "/");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a28, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a29, "href", "/program-type");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a29, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li29, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a30, "href", a30_href_value = '/knowledge-area');
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a30, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li30, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a31, "href", "/olade-contract-type");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a31, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li31, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a32, "href", "/vendor-company");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a32, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li32, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a33, "href", "/province");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a33, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li33, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a34, "href", "/payroll-manager");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a34, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li34, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a35, "href", "/config");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a35, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li35, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul8, "class", "treeview-menu");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li36, "class", "treeview svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li39, "class", "treeview svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(i40, "class", "fa fa-power-off");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a39, "href",
+      /*logout_route*/
+      ctx[3]);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a39, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li40, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul10, "class", "sidebar-menu tree");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul10, "data-widget", "tree");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section, "class", "sidebar active");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(section, "height", "auto");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(aside0, "class", "main-sidebar svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "content-wrapper");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div3, "min-height", "531.141px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(footer, "class", "main-footer");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(aside1, "class", "control-sidebar control-sidebar-dark svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div26, "class", "control-sidebar-bg");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div27, "class", "wrapper");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div27, "height", "auto");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div27, "min-height", "100%");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div27, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, header);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(header, a0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a0, span0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span0, img0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a0, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a0, span1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span1, img1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(header, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(header, nav);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(nav, a1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(nav, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(nav, div2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, ul3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul3, li2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li2, a2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a2, i0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a2, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a2, span3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span3, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li2, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li2, ul1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul1, li0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li0, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li0, t8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li0, t9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li0, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul1, t11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul1, li1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li1, ul0);
+
+      for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
+        each_blocks[_i2].m(ul0, null);
+      }
+
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul3, t12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul3, li5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li5, a3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a3, img2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a3, t13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a3, span4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span4, t14);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li5, t15);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li5, ul2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul2, li3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li3, img3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li3, t16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li3, p0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul2, t19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul2, li4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li4, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, a4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li4, t21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li4, div1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, t23);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, aside0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(aside0, section);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section, ul10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t25);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li7, a6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t28);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li12, a7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li12, t32);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li12, ul4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul4, li8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li8, a8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul4, t34);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul4, li9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul4, t36);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul4, li10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul4, t38);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul4, li11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t40);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t50);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li17);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t53);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li20);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t61);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li26);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t75);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li27);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t78);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li28);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t81);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li36);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li36, a28);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li36, t85);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li36, ul8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, li29);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li29, a29);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, t87);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, li30);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li30, a30);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, t89);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, li31);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li31, a31);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, t91);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, li32);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li32, a32);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, t93);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, li33);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li33, a33);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, t95);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, li34);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li34, a34);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, t97);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul8, li35);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li35, a35);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t99);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li39);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, t107);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul10, li40);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li40, a39);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a39, i40);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a39, t108);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a39, span15);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, t110);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, div3);
+
+      if (default_slot) {
+        default_slot.m(div3, null);
+      }
+
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, t111);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, footer);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, t118);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, aside1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, t182);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, div26);
+      current = true;
+
+      if (!mounted) {
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a4)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_1 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a6, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_2 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a8, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_3 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a29, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_4 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a30, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_5 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a31, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_6 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a32, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_7 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a33, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_8 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a34, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_9 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a35, {
+          preserveScroll: true
+        }))];
+        mounted = true;
+      }
+    },
+    p: function p(ctx, _ref) {
+      var _ref2 = _slicedToArray(_ref, 1),
+          dirty = _ref2[0];
+
+      if ((!current || dirty &
+      /*$notifications*/
+      2) && t5_value !== (t5_value =
+      /*$notifications*/
+      ctx[1].length + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
+      if ((!current || dirty &
+      /*$notifications*/
+      2) && t8_value !== (t8_value =
+      /*$notifications*/
+      ctx[1].length + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t8, t8_value);
+      if ((!current || dirty &
+      /*$notifications*/
+      2) && t10_value !== (t10_value = (
+      /*$notifications*/
+      ctx[1].length <= 1 ? '' : 's') + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t10, t10_value);
+
+      if (dirty &
+      /*$notifications*/
+      2) {
+        each_value =
+        /*$notifications*/
+        ctx[1];
+
+        var _i3;
+
+        for (_i3 = 0; _i3 < each_value.length; _i3 += 1) {
+          var child_ctx = get_each_context(ctx, each_value, _i3);
+
+          if (each_blocks[_i3]) {
+            each_blocks[_i3].p(child_ctx, dirty);
+          } else {
+            each_blocks[_i3] = create_each_block(child_ctx);
+
+            each_blocks[_i3].c();
+
+            each_blocks[_i3].m(ul0, null);
+          }
+        }
+
+        for (; _i3 < each_blocks.length; _i3 += 1) {
+          each_blocks[_i3].d(1);
+        }
+
+        each_blocks.length = each_value.length;
+      }
+
+      if (!current || dirty &
+      /*user*/
+      1 && !(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img2.src, img2_src_value = '/uploads/' +
+      /*user*/
+      ctx[0].avatar)) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img2, "src", img2_src_value);
+      }
+
+      if ((!current || dirty &
+      /*user*/
+      1) && t14_value !== (t14_value =
+      /*user*/
+      ctx[0].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t14, t14_value);
+
+      if (!current || dirty &
+      /*user*/
+      1 && !(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img3.src, img3_src_value = '/uploads/' +
+      /*user*/
+      ctx[0].avatar)) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img3, "src", img3_src_value);
+      }
+
+      if (default_slot) {
+        if (default_slot.p && (!current || dirty &
+        /*$$scope*/
+        16)) {
+          (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.update_slot_base)(default_slot, default_slot_template, ctx,
+          /*$$scope*/
+          ctx[4], !current ? (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.get_all_dirty_from_scope)(
+          /*$$scope*/
+          ctx[4]) : (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.get_slot_changes)(default_slot_template,
+          /*$$scope*/
+          ctx[4], dirty, null), null);
+        }
+      }
+    },
+    i: function i(local) {
+      if (current) return;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(default_slot, local);
+      current = true;
+    },
+    o: function o(local) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(default_slot, local);
+      current = false;
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div27);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+      if (default_slot) default_slot.d(detaching);
+      mounted = false;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
+    }
+  };
+}
+
+var c = 90;
+
+function instance($$self, $$props, $$invalidate) {
+  var $notifications;
+  var $page;
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, _Stores_GlobalStore__WEBPACK_IMPORTED_MODULE_1__.notifications, function ($$value) {
+    return $$invalidate(1, $notifications = $$value);
+  });
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.page, function ($$value) {
+    return $$invalidate(6, $page = $$value);
+  });
+  var _$$props$$$slots = $$props.$$slots,
+      slots = _$$props$$$slots === void 0 ? {} : _$$props$$$slots,
+      $$scope = $$props.$$scope;
+  var _$page$props = $page.props,
+      olade_logo = _$page$props.olade_logo,
+      user_logo = _$page$props.user_logo,
+      dashboard_route = _$page$props.dashboard_route,
+      all_users_route = _$page$props.all_users_route,
+      user_profile_route = _$page$props.user_profile_route,
+      user = _$page$props.user,
+      logout_route = _$page$props.logout_route,
+      csrf = _$page$props.csrf,
+      program_type_index_route = _$page$props.program_type_index_route,
+      settings_knowledge_area_index_route = _$page$props.settings_knowledge_area_index_route;
+  _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.page.subscribe(function (_ref3) {
+    var props = _ref3.props;
+    $$invalidate(0, user = props.user);
+  });
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(_Stores_GlobalStore__WEBPACK_IMPORTED_MODULE_1__.notifications, $notifications = [].concat(_toConsumableArray($notifications), [{
+    name: 'Just logged in',
+    href: '#'
+  }]), $notifications);
+
+  $$self.$$set = function ($$props) {
+    if ('$$scope' in $$props) $$invalidate(4, $$scope = $$props.$$scope);
+  };
+
+  return [user, $notifications, olade_logo, logout_route, $$scope, slots];
+}
+
+var Layout = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Layout, _SvelteComponent);
+
+  var _super = _createSuper(Layout);
+
+  function Layout(options) {
+    var _this;
+
+    _classCallCheck(this, Layout);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {}, add_css);
+    return _this;
+  }
+
+  return _createClass(Layout);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Dashboard/Show.svelte":
+/*!**********************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Dashboard/Show.svelte ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Dashboard/Show.svelte generated by Svelte v3.48.0 */
+
+
+
+var Show = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Show, _SvelteComponent);
+
+  var _super = _createSuper(Show);
+
+  function Show(options) {
+    var _this;
+
+    _classCallCheck(this, Show);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Show);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Show);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Login/Create.svelte":
+/*!********************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Login/Create.svelte ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Login/Create.svelte generated by Svelte v3.48.0 */
+
+
+
+var Create = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Create, _SvelteComponent);
+
+  var _super = _createSuper(Create);
+
+  function Create(options) {
+    var _this;
+
+    _classCallCheck(this, Create);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Create);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Create);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Login/Edit.svelte":
+/*!******************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Login/Edit.svelte ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Login/Edit.svelte generated by Svelte v3.48.0 */
+
+
+
+var Edit = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Edit, _SvelteComponent);
+
+  var _super = _createSuper(Edit);
+
+  function Edit(options) {
+    var _this;
+
+    _classCallCheck(this, Edit);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Edit);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Edit);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Login/Index.svelte":
+/*!*******************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Login/Index.svelte ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Components/MessageNotification.svelte */ "./resources/js/Pages/Components/MessageNotification.svelte");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/* resources/js/Pages/v2/Auth/Login/Index.svelte generated by Svelte v3.48.0 */
+
+
+
+
+function add_css(target) {
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-dduplo", ".line.svelte-dduplo{display:inline-block;border-top:1px solid #aaa;height:2px;width:10%;position:relative;top:-2px}");
+}
+
+function create_fragment(ctx) {
+  var messagenotification;
+  var t0;
+  var span4;
+  var div22;
+  var div0;
+  var t1;
+  var div21;
+  var div20;
+  var div19;
+  var div4;
+  var t5;
+  var div5;
+  var t6;
+  var div18;
+  var div17;
+  var p;
+  var t8;
+  var form;
+  var div9;
+  var div8;
+  var div6;
+  var input0;
+  var t9;
+  var span2;
+  var t10;
+  var div7;
+  var input1;
+  var t11;
+  var span3;
+  var t12;
+  var div13;
+  var t16;
+  var div16;
+  var current;
+  var mounted;
+  var dispose;
+  messagenotification = new _Components_MessageNotification_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({});
+  return {
+    c: function c() {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(messagenotification.$$.fragment);
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      div22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div4.innerHTML = "<div class=\"row\"><div class=\"col-md-6\" style=\"padding-top: 11px;\"><img alt=\"img\" src=\"/asset1/Olade_logo_white.png\" style=\"height: 55px;\"/></div> \n                            <div class=\"col-md-6\"><a href=\"".concat("\" style=\"color: #fff;font-size: 17px;font-weight: bold;position: relative;top: 27px;float: right;\">Contact Us</a></div></div>\n\n                        \xA0");
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div5.innerHTML = "<img alt=\"img\" src=\"/asset1/uNGdWHi.png\" style=\"max-width: 100%;\"/>";
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      p = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      p.innerHTML = "<span class=\"line svelte-dduplo\"></span>\n                                Sign In\n                                <span class=\"line svelte-dduplo\"></span>";
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      form = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
+      div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div13.innerHTML = "<div class=\"col-md-6\"><div class=\"\"><label><input type=\"checkbox\"/> Remember\n                                            Me</label></div></div> \n                                <div class=\"col-md-6\"><a href=\"".concat("\" style=\"float: right;margin-bottom: 11px;font-weight: bold;\">I forgot my password</a><br/></div>");
+      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div16.innerHTML = "<div class=\"col-xs-8\"></div> \n                                    \n                                    <div class=\"col-xs-4\"><button style=\"background: #093F82;margin-top: 15px;\" type=\"submit\" class=\"btn btn-primary btn-block btn-flat\">Sign In</button></div>";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "login-logo");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div4, "background-color", "#093F82");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div4, "height", "92px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "col-md-6");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(p, "class", "login-box-msg");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(p, "font-weight", "bold");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(p, "font-size", "22px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(p, "color", "#093F82");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "email");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "placeholder", "Email");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span2, "class", "glyphicon glyphicon-envelope form-control-feedback");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "form-group has-feedback");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "type", "password");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "placeholder", "Password");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span3, "class", "glyphicon glyphicon-lock form-control-feedback");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div7, "class", "form-group has-feedback");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div13, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div16, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "method", "post");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div17, "class", "login-box-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div18, "class", "col-md-6");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div18, "border-left", "1px solid #ddd");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div19, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div19, "box-shadow", "3px 3px #ccc");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div20, "background-color", "#fff");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div22, "class", "login-box2");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span4, "class", "hold-transition login-page");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "display", "block");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "height", "100vh");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "padding-top", "41px");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(messagenotification, target, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t0, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, span4, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span4, div22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, div21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div20);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, div19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div18);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div17);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, p);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, form);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, div8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, input0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
+      /*$loginForm*/
+      ctx[0].email);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, span2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, input1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
+      /*$loginForm*/
+      ctx[0].password);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, t11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, span3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div16);
+      current = true;
+
+      if (!mounted) {
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input0, "input",
+        /*input0_input_handler*/
+        ctx[3]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input1, "input",
+        /*input1_input_handler*/
+        ctx[4]), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        /*loginAction*/
+        ctx[2]))];
+        mounted = true;
+      }
+    },
+    p: function p(ctx, _ref) {
+      var _ref2 = _slicedToArray(_ref, 1),
+          dirty = _ref2[0];
+
+      if (dirty &
+      /*$loginForm*/
+      1 && input0.value !==
+      /*$loginForm*/
+      ctx[0].email) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input0,
+        /*$loginForm*/
+        ctx[0].email);
+      }
+
+      if (dirty &
+      /*$loginForm*/
+      1 && input1.value !==
+      /*$loginForm*/
+      ctx[0].password) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_input_value)(input1,
+        /*$loginForm*/
+        ctx[0].password);
+      }
+    },
+    i: function i(local) {
+      if (current) return;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(messagenotification.$$.fragment, local);
+      current = true;
+    },
+    o: function o(local) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(messagenotification.$$.fragment, local);
+      current = false;
+    },
+    d: function d(detaching) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(messagenotification, detaching);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t0);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span4);
+      mounted = false;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.run_all)(dispose);
+    }
+  };
+}
+
+function instance($$self, $$props, $$invalidate) {
+  var $loginForm;
+  var loginForm = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_2__.useForm)({
+    email: "",
+    password: ""
+  });
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, loginForm, function (value) {
+    return $$invalidate(0, $loginForm = value);
+  });
+
+  function loginAction() {
+    $loginForm.post("/login");
+  }
+
+  function input0_input_handler() {
+    $loginForm.email = this.value;
+    loginForm.set($loginForm);
+  }
+
+  function input1_input_handler() {
+    $loginForm.password = this.value;
+    loginForm.set($loginForm);
+  }
+
+  return [$loginForm, loginForm, loginAction, input0_input_handler, input1_input_handler];
+}
+
+var Index = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Index, _SvelteComponent);
+
+  var _super = _createSuper(Index);
+
+  function Index(options) {
+    var _this;
+
+    _classCallCheck(this, Index);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {}, add_css);
+    return _this;
+  }
+
+  return _createClass(Index);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Index);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Login/Show.svelte":
+/*!******************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Login/Show.svelte ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Login/Show.svelte generated by Svelte v3.48.0 */
+
+
+
+var Show = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Show, _SvelteComponent);
+
+  var _super = _createSuper(Show);
+
+  function Show(options) {
+    var _this;
+
+    _classCallCheck(this, Show);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Show);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Show);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Logout/Create.svelte":
+/*!*********************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Logout/Create.svelte ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Logout/Create.svelte generated by Svelte v3.48.0 */
+
+
+
+var Create = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Create, _SvelteComponent);
+
+  var _super = _createSuper(Create);
+
+  function Create(options) {
+    var _this;
+
+    _classCallCheck(this, Create);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Create);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Create);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Logout/Edit.svelte":
+/*!*******************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Logout/Edit.svelte ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Logout/Edit.svelte generated by Svelte v3.48.0 */
+
+
+
+var Edit = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Edit, _SvelteComponent);
+
+  var _super = _createSuper(Edit);
+
+  function Edit(options) {
+    var _this;
+
+    _classCallCheck(this, Edit);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Edit);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Edit);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Logout/Index.svelte":
+/*!********************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Logout/Index.svelte ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Logout/Index.svelte generated by Svelte v3.48.0 */
+
+
+
+var Index = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Index, _SvelteComponent);
+
+  var _super = _createSuper(Index);
+
+  function Index(options) {
+    var _this;
+
+    _classCallCheck(this, Index);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Index);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Index);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Logout/Show.svelte":
+/*!*******************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Logout/Show.svelte ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Logout/Show.svelte generated by Svelte v3.48.0 */
+
+
+
+var Show = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Show, _SvelteComponent);
+
+  var _super = _createSuper(Show);
+
+  function Show(options) {
+    var _this;
+
+    _classCallCheck(this, Show);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Show);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Show);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/v2/Auth/User/Create.svelte":
 /*!*******************************************************!*\
   !*** ./resources/js/Pages/v2/Auth/User/Create.svelte ***!
@@ -29976,6 +31891,19 @@ var map = {
 	"./User/MyProfileShow.svelte": "./resources/js/Pages/User/MyProfileShow.svelte",
 	"./User/MyProfileSkills.svelte": "./resources/js/Pages/User/MyProfileSkills.svelte",
 	"./User/User.svelte": "./resources/js/Pages/User/User.svelte",
+	"./v2/Auth/Dashboard/Create.svelte": "./resources/js/Pages/v2/Auth/Dashboard/Create.svelte",
+	"./v2/Auth/Dashboard/Edit.svelte": "./resources/js/Pages/v2/Auth/Dashboard/Edit.svelte",
+	"./v2/Auth/Dashboard/Index.svelte": "./resources/js/Pages/v2/Auth/Dashboard/Index.svelte",
+	"./v2/Auth/Dashboard/Layout.svelte": "./resources/js/Pages/v2/Auth/Dashboard/Layout.svelte",
+	"./v2/Auth/Dashboard/Show.svelte": "./resources/js/Pages/v2/Auth/Dashboard/Show.svelte",
+	"./v2/Auth/Login/Create.svelte": "./resources/js/Pages/v2/Auth/Login/Create.svelte",
+	"./v2/Auth/Login/Edit.svelte": "./resources/js/Pages/v2/Auth/Login/Edit.svelte",
+	"./v2/Auth/Login/Index.svelte": "./resources/js/Pages/v2/Auth/Login/Index.svelte",
+	"./v2/Auth/Login/Show.svelte": "./resources/js/Pages/v2/Auth/Login/Show.svelte",
+	"./v2/Auth/Logout/Create.svelte": "./resources/js/Pages/v2/Auth/Logout/Create.svelte",
+	"./v2/Auth/Logout/Edit.svelte": "./resources/js/Pages/v2/Auth/Logout/Edit.svelte",
+	"./v2/Auth/Logout/Index.svelte": "./resources/js/Pages/v2/Auth/Logout/Index.svelte",
+	"./v2/Auth/Logout/Show.svelte": "./resources/js/Pages/v2/Auth/Logout/Show.svelte",
 	"./v2/Auth/User/Create.svelte": "./resources/js/Pages/v2/Auth/User/Create.svelte",
 	"./v2/Auth/User/Edit.svelte": "./resources/js/Pages/v2/Auth/User/Edit.svelte",
 	"./v2/Auth/User/Index.svelte": "./resources/js/Pages/v2/Auth/User/Index.svelte",

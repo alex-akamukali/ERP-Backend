@@ -1,7 +1,7 @@
 <script context="module">
-    import CheckAuthComponent from "../Auth/CheckAuthComponent.svelte";
-    import MessageNotification from "../../Pages/Components/MessageNotification.svelte";
-    import {notifications} from "../../Stores/GlobalStore";
+
+    import MessageNotification from "../../../Components/MessageNotification.svelte"; //Pages/Components/MessageNotification.svelte";
+    import {notifications} from "../../../../Stores/GlobalStore";
 </script>
 
 <script>
@@ -42,7 +42,7 @@
 
 </script>
 
-<MessageNotification />
+<!-- <MessageNotification /> -->
 
 <div class="wrapper" style="height: auto; min-height: 100%;">
     <header class="main-header">
@@ -180,7 +180,7 @@
                 </li>
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active">
-                    <a use:inertia="{{ preserveScroll: true }}" href={dashboard_route}
+                    <a use:inertia="{{ preserveScroll: true }}" href="/dashboard"
                         ><i class="fa fa-tachometer" />
                         <span> Dashboard </span></a
                     >
@@ -328,7 +328,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li>
-                            <a use:inertia="{{ preserveScroll: true }}" href={program_type_index_route}>
+                            <a use:inertia="{{ preserveScroll: true }}" href="/program-type">
                                 <i class="fa fa-graduation-cap" /> Program Type
                             </a>
                         </li>

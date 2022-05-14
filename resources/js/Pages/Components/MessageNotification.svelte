@@ -2,6 +2,7 @@
     import MessageStore from "../../components/MessageStore";
     import {Data} from "../../Stores/GlobalStore";
     import {page} from "@inertiajs/inertia-svelte";
+    import {onDestroy} from "svelte";
 
 </script>
 
@@ -24,7 +25,7 @@
 
     }
 
-    page.subscribe(function({props}){
+    let unsub = page.subscribe(function({props}){
 
         const {message,error,errors} = props;
 
@@ -56,6 +57,8 @@
 
 
     });
+
+    onDestroy(unsub);
 
 
 </script>
