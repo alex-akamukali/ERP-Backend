@@ -52,7 +52,7 @@ class makeRepoCommand extends Command
             return 0;
         }
 
-        $repositoryBuilder = $this->decodePath($name);
+        $repositoryBuilder = $this->decodePath('Repositories/' . $name . 'Repository');
         $modelBuilder = $this->decodePath($model);
 
         $interfacePath = $repositoryBuilder['pathName'] . '/Interfaces/' . $repositoryBuilder['className'] . 'Interface';
@@ -122,12 +122,132 @@ class ' . $repositoryBuilder['className'] . ' implements ' . $interfaceBuilder['
 }
 ';
 
+$controllerPath = 'Http/Controllers/' . $name . 'Controller';
+
+$storeRequestPath = 'Http/Requests/' . $name . 'StoreRequest';
+$updateRequestPath = 'Http/Requests/' . $name . 'UpdateRequest';
+
+$storeRequestBuilder = $this->decodePath($storeRequestPath);
+$updateRequestBuilder = $this->decodePath($updateRequestPath);
+
+$clsStoreRequest = '<?php
+
+' . $storeRequestBuilder['namespace'] . '
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class ' . $storeRequestBuilder['className'] . ' extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return false;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            //
+        ];
+    }
+}
+';
+
+$clsUpdateRequest = '<?php
+
+' . $updateRequestBuilder['namespace'] . '
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class ' . $updateRequestBuilder['className'] . ' extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return false;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            //
+        ];
+    }
+}
+';
+
+// dd($clsStoreRequest,$clsUpdateRequest);
+
+$controllerBuilder = $this->decodePath($controllerPath);
+
+$clsController = '<?php
+' . $controllerBuilder['namespace'] . '
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class ' . $controllerBuilder['className'] . ' extends Controller
+{
+    //
+    private ' . $repositoryBuilder['instanceName'] . ' = null;
+
+    function __construct(' . $repositoryBuilder['className']  . ' ' . $repositoryBuilder['instanceName']  . '){
+        $this->' . $repositoryBuilder['instanceNamePlain'] . ' = ' . $repositoryBuilder['instanceName'] . ';
+    }
+
+    function index(){
+        return inertia()->render("Dashboard/Dashboard",[]);
+    }
+
+    function store(' . $storeRequestBuilder['className'] . ' ' . $storeRequestBuilder['instanceName']  . '){
+      $record = $this->' . $repositoryBuilder['instanceNamePlain'] . '->create(' . $storeRequestBuilder['instanceName'] . '->validated());
+      return $this->respondWithSuccess("New record added");
+    }
+
+    function update($id,' . $updateRequestBuilder['className'] . ' ' . $updateRequestBuilder['instanceName']  . '){
+        $record = $this->' . $repositoryBuilder['instanceNamePlain'] . '->update($id,' . $updateRequestBuilder['instanceName'] . '->validated());
+        return $this->respondWithSuccess("Record updated");
+    }
+
+    function destroy($id){
+      $record = $this->' . $repositoryBuilder['instanceNamePlain'] . '->remove($id);
+      return $this->respondWithSuccess("Record removed");
+    }
+}
+';
+
+// dd($clsController);
+
 // dd($clsRepository);
 // dd($clsInterface);
 
 
 Storage::disk("root")->put('app/' . $interfaceBuilder['pathFileName'],$clsInterface);
 Storage::disk("root")->put('app/' . $repositoryBuilder['pathFileName'],$clsRepository);
+
+Storage::disk("root")->put('app/' . $storeRequestBuilder['pathFileName'],$clsStoreRequest);
+Storage::disk("root")->put('app/' . $updateRequestBuilder['pathFileName'],$clsUpdateRequest);
+
+Storage::disk("root")->put('app/' . $controllerBuilder['pathFileName'],$clsController);
+
 
 $serviceProvider = Storage::disk("root")->get('app/Providers/AppServiceProvider.php');
 //#insertRepository
@@ -159,12 +279,14 @@ Storage::disk("root")->put('app/Providers/AppServiceProvider.php',$serviceProvid
        $pathFileName = $pathName . '/' . $className . '.php';
        $namespace = 'namespace App\\' . implode('\\',$list) . ';';
        $instanceName = '$' . lcfirst($className);
+       $instanceNamePlain = lcfirst($className);
        $instanceTypeName = $className;
        $classUseStatement = 'use App\\' . implode('\\',$list) . '\\' . $className . ';';
        $classClassStatement = '\\App\\' . implode('\\',$list) . '\\' . $className . '::class';
 
        return [
            'classUseStatement'=>$classUseStatement,
+           'instanceNamePlain'=>$instanceNamePlain,
            'classClassStatement'=>$classClassStatement,
            'path'=>$path,
            'className'=>$className,
