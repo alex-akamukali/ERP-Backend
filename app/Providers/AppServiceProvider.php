@@ -39,6 +39,9 @@ class AppServiceProvider extends ServiceProvider
 $this->app->bind(\App\Repositories\Settings\Interfaces\ConfigRepositoryInterface::class,\App\Repositories\Settings\ConfigRepository::class);
 $this->app->bind(\App\Repositories\Settings\Interfaces\KnowledgeAreaRepositoryInterface::class,\App\Repositories\Settings\KnowledgeAreaRepository::class);
 $this->app->bind(\App\Repositories\Settings\Interfaces\ProgramTypeRepositoryInterface::class,\App\Repositories\Settings\ProgramTypeRepository::class);
+$this->app->bind(\App\Repositories\Auth\Interfaces\UserRepositoryInterface::class,\App\Repositories\Auth\UserRepository::class);
+$this->app->bind(\App\Repositories\Auth\Interfaces\UserRepositoryInterface::class,\App\Repositories\Auth\UserRepository::class);
+$this->app->bind(\App\Repositories\Auth\Interfaces\UserRepositoryInterface::class,\App\Repositories\Auth\UserRepository::class);
 #insertRepository
 
     }

@@ -14,7 +14,7 @@ class makeRepoCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:repository {name} {--model=}';
+    protected $signature = 'make:repository {name} {--model=} {--useAuth}';
 
     /**
      * The console command description.
@@ -45,6 +45,13 @@ class makeRepoCommand extends Command
         // $path = $this->option('path');
         $model = $this->option('model');
 
+        $useAuth = $this->option('useAuth');
+
+        $authSnipinInterfaceTemplate = '';
+        $authSnipinRepositoryTemplate = '';
+
+
+
         if (!$name){
             $this->error('name argument is required!');
             return 0;
@@ -63,7 +70,44 @@ class makeRepoCommand extends Command
 
         $interfaceBuilder = $this->decodePath($interfacePath);
 
+        $authPath = 'Illuminate\Support\Facades\Auth';
+        $authPathBuilder = $this->decodePath($authPath);
 
+
+        if ($useAuth){
+
+            $authSnipinInterfaceTemplate = '
+
+function login($request=[]);
+function logout();
+function isLogged();
+function auth();
+
+            ';
+
+            $authSnipinRepositoryTemplate = '
+
+function login($request=[]){
+    $auth = Auth::attempt($request);
+    return $auth;
+}
+
+function logout(){
+    Auth::logout();
+    return true;
+}
+
+function isLogged(){
+    return Auth::check();
+}
+
+function auth(){
+    return Auth::user();
+}
+
+            ';
+
+        }
         // 'className'=>$className,
         // 'pathName'=>$pathName,
         // 'pathFileName'=>$pathFileName,
@@ -83,6 +127,8 @@ interface ' . $interfaceBuilder['className'] . '{
     function update($id,$data);
     function remove($id);
 
+    ' . $authSnipinInterfaceTemplate . '
+
 }
 
 ';
@@ -91,6 +137,7 @@ interface ' . $interfaceBuilder['className'] . '{
 ' . $repositoryBuilder['namespace'] . '
 ' . $interfaceBuilder['classUseStatement'] . '
 ' . $modelBuilder['classUseStatement'] . '
+' . $authPathBuilder['classUseRawStatement'] . '
 
 class ' . $repositoryBuilder['className'] . ' implements ' . $interfaceBuilder['className'] . '
 {
@@ -122,6 +169,8 @@ class ' . $repositoryBuilder['className'] . ' implements ' . $interfaceBuilder['
         $record->delete();
         return $record;
     }
+
+    ' . $authSnipinRepositoryTemplate . '
 
 }
 ';
@@ -352,9 +401,11 @@ Storage::disk("root")->put("routes/web.php",$route . '
        $instanceNamePlain = lcfirst($className);
        $instanceTypeName = $className;
        $classUseStatement = 'use App\\' . implode('\\',$list) . '\\' . $className . ';';
+       $classUseRawStatement = 'use ' . implode('\\',$list) . '\\' . $className . ';';
        $classClassStatement = '\\App\\' . implode('\\',$list) . '\\' . $className . '::class';
 
        return [
+           'classUseRawStatement'=>$classUseRawStatement,
            'pathFileNameNoExt'=>$pathFileNameNoExt,
            'classUseStatement'=>$classUseStatement,
            'instanceNamePlain'=>$instanceNamePlain,

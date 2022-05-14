@@ -127,3 +127,9 @@ Route::resource("config",\App\Http\Controllers\v1\Settings\ConfigController::cla
 Route::resource("knowledge-area",\App\Http\Controllers\v1\Settings\KnowledgeAreaController::class)->middleware(["auth"]);
 
 Route::resource("program-type",\App\Http\Controllers\v1\Settings\ProgramTypeController::class)->middleware(["auth"]);
+
+Route::resource("user",\App\Http\Controllers\v1\Auth\UserController::class)->middleware(["auth"]);
+
+Route::resource("user",\App\Http\Controllers\v1\Auth\UserController::class)->middleware(["auth"]);
+
+Route::resource("user",\App\Http\Controllers\v1\Auth\UserController::class)->middleware(["auth"]);
