@@ -5,31 +5,32 @@
     import Page from "../../../../components/Page.svelte";
     import Modal from "../../../../components/Modal.svelte";
 
-    import Calendly from "../../../../components/Calendly.svelte";
-
     export const layout = Layout;
 </script>
 
 <script>
     export let list;
+    // export let csrf;
 
     let mode = "create";
 
-    const resource = '/config/';
+    const resource = "/program-type/";
 
     let closeModal = null;
 
     let form = useForm({
-        name: "",
-        value: "",
+        description: "",
+        title: "",
+        status: "active",
         id: "0",
     });
 
     // alert(message);
 
     function selectRow(data) {
-        $form.name = data.name;
-        $form.value = data.value;
+        $form.description = data.description;
+        $form.title = data.title;
+        $form.status = data.status;
         $form.id = data.id;
         mode = "update";
     }
@@ -68,7 +69,7 @@
 
 
 <Page>
-    <span slot="title">#Config Options</span>
+    <span slot="title">Program Type</span>
     <button
         slot="createButton"
         class="btn btn-primary btn-sm"
@@ -76,11 +77,10 @@
         data-target="#modal-progtype"
         on:click|preventDefault={clearForm}
     >
-        <i class="fa fa-plus" /> Add Config
+        <i class="fa fa-plus" /> Program Type
     </button>
 
     <div class="col-sm-12" slot="content">
-        <!-- <Calendly on:eventScheduled={(e)=>console.log(e.detail)} url="easymagic1/30min" /> -->
         <table
             id="example1"
             class="table table-data table-striped table-hover dataTable no-footer"
@@ -90,18 +90,21 @@
             <thead>
                 <!-- svelte-ignore a11y-no-redundant-roles -->
                 <tr role="row"
-                    ><th>#Config Name</th><th>Value</th>
+                    ><th>Title</th><th>Description</th><th>Status</th>
                     <th> Actions </th>
                 </tr>
             </thead>
             <tbody>
-                {#each list as item}
+                {#each list as programType}
                     <tr class="odd">
                         <td>
-                            {item.name}
+                            {programType.title}
                         </td>
                         <td>
-                            {item.value}
+                            {programType.description}
+                        </td>
+                        <td>
+                            {programType.status}
                         </td>
                         <td>
                             <a
@@ -109,7 +112,7 @@
                                 data-target="#modal-progtype"
                                 href={null}
                                 on:click|preventDefault={() =>
-                                    selectRow(item)}
+                                    selectRow(programType)}
                             >
                                 <i class="fa fa-edit text-green" />
                             </a>
@@ -117,7 +120,7 @@
                             <a
                                 href={null}
                                 on:click|preventDefault={() =>
-                                    removeRow(item)}
+                                    removeRow(programType)}
                             >
                                 <i class="fa fa-trash text-red" />
                             </a>
@@ -128,14 +131,18 @@
         </table>
     </div>
 
-    <Modal id="modal-progtype"  on:submit={callStore} on:setRef={(ref)=>closeModal=ref.detail}>
-        <span slot="title">Config</span>
+    <Modal
+        id="modal-progtype"
+        on:submit={callStore}
+        on:setRef={(ref) => (closeModal = ref.detail)}
+    >
+        <span slot="title">Program Type</span>
 
         <div class="col-md-12" slot="content">
             <div class="col-md-12">
                 <!-- svelte-ignore a11y-label-has-associated-control -->
                 <label class="control-label"
-                    >Config Name <b style="color:red">*</b></label
+                    >Program Title <b style="color:red">*</b></label
                 >
                 <input
                     type="text"
@@ -143,28 +150,44 @@
                     name="proTitle"
                     placeholder=""
                     required=""
-                    bind:value={$form.name}
+                    bind:value={$form.title}
                 />
             </div>
 
             <div class="col-md-12">
                 <!-- svelte-ignore a11y-label-has-associated-control -->
                 <label class="control-label"
-                    >Config Value <b style="color:red">*</b></label
+                    >Program Description <b style="color:red">*</b></label
                 >
                 <textarea
                     class="form-control"
                     name="proDescription"
                     required=""
-                    bind:value={$form.value}
+                    bind:value={$form.description}
                 />
+            </div>
+            <div class="col-md-12">
+                <!-- svelte-ignore a11y-label-has-associated-control -->
+                <label class="control-label"
+                    >Status<b style="color:red">*</b></label
+                >
+                <select
+                    class="form-control"
+                    name="proDescription"
+                    required=""
+                    bind:value={$form.status}
+                >
+                    <option value="">Select</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
             </div>
         </div>
 
         <button type="submit" class="btn btn-primary" slot="storeButton">
             <i class="fa fa-save" /> &nbsp; {mode == "create"
-                ? "Add Config"
-                : "Update Config"}
+                ? "Add Program Type"
+                : "Update Program Type"}
         </button>
     </Modal>
 </Page>

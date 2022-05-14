@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\v1\Settings;
 
 use App\Repositories\Settings\Interfaces\ConfigRepositoryInterface;
-use App\Http\Requests\Settings\ConfigStoreRequest;
-use App\Http\Requests\Settings\ConfigUpdateRequest;
+use App\Http\Requests\Settings\Config\StoreRequest;
+use App\Http\Requests\Settings\Config\UpdateRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -42,13 +42,13 @@ class ConfigController extends Controller
         ]);
     }
 
-    function store(ConfigStoreRequest $request){
+    function store(StoreRequest $request){
       $record = $this->configRepository->create($request->validated());
       return $this->respondWithSuccess("New record added");
     }
 
-    function update($id,ConfigUpdateRequest $configUpdateRequest){
-        $record = $this->configRepository->update($id,$configUpdateRequest->validated());
+    function update($id,UpdateRequest $updateRequest){
+        $record = $this->configRepository->update($id,$updateRequest->validated());
         return $this->respondWithSuccess("Record updated");
     }
 

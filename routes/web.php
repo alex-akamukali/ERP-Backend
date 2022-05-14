@@ -103,7 +103,7 @@ Route::resource('province-town-city',\App\Http\Controllers\Settings\ProvinceTown
 
 Route::resource('payroll-manager',\App\Http\Controllers\Settings\PayrollManagerController::class)->middleware(['auth']);
 
-Route::resource('config',\App\Http\Controllers\Settings\ConfigController::class)->middleware(['auth']);
+// Route::resource('config',\App\Http\Controllers\Settings\ConfigController::class)->middleware(['auth']);
 
 Route::resource('vendor-company',\App\Http\Controllers\Settings\VendorCompanyController::class)->middleware(['auth']);
 
@@ -121,3 +121,9 @@ Route::resource('update-user-skill',\App\Http\Controllers\User\UpdateUserSkillCo
 
 
 ///////////////New Divide/////////////////////////
+
+Route::resource("config",\App\Http\Controllers\v1\Settings\ConfigController::class)->middleware(["auth"]);
+
+Route::resource("knowledge-area",\App\Http\Controllers\v1\Settings\KnowledgeAreaController::class)->middleware(["auth"]);
+
+Route::resource("program-type",\App\Http\Controllers\v1\Settings\ProgramTypeController::class)->middleware(["auth"]);

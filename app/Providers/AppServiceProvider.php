@@ -35,6 +35,10 @@ class AppServiceProvider extends ServiceProvider
         // return $message;
 
 
+
+$this->app->bind(\App\Repositories\Settings\Interfaces\ConfigRepositoryInterface::class,\App\Repositories\Settings\ConfigRepository::class);
+$this->app->bind(\App\Repositories\Settings\Interfaces\KnowledgeAreaRepositoryInterface::class,\App\Repositories\Settings\KnowledgeAreaRepository::class);
+$this->app->bind(\App\Repositories\Settings\Interfaces\ProgramTypeRepositoryInterface::class,\App\Repositories\Settings\ProgramTypeRepository::class);
 #insertRepository
 
     }

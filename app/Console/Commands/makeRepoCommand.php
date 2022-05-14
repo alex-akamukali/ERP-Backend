@@ -128,8 +128,8 @@ class ' . $repositoryBuilder['className'] . ' implements ' . $interfaceBuilder['
 
 $controllerPath = 'Http/Controllers/v1/' . $name . 'Controller';
 
-$storeRequestPath = 'Http/Requests/' . $name . 'StoreRequest';
-$updateRequestPath = 'Http/Requests/' . $name . 'UpdateRequest';
+$storeRequestPath = 'Http/Requests/' . $name . '/StoreRequest';
+$updateRequestPath = 'Http/Requests/' . $name . '/UpdateRequest';
 
 $storeRequestBuilder = $this->decodePath($storeRequestPath);
 $updateRequestBuilder = $this->decodePath($updateRequestPath);
