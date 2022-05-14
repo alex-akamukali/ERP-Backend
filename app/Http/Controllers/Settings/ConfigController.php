@@ -2,49 +2,37 @@
 
 namespace App\Http\Controllers\Settings;
 
+use App\Repositories\Settings\ConfigRepository;
+use App\Http\Requests\Settings\ConfigStoreRequest;
+use App\Http\Requests\Settings\ConfigUpdateRequest;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Settings\StoreConfigRequest;
-use App\Http\Requests\Settings\UpdateConfigRequest;
-use App\Settings\ConfigRepository;
+use Illuminate\Http\Request;
 
 class ConfigController extends Controller
 {
+    //
+    private $configRepository = null;
 
-    public function index(ConfigRepository $configRepository)
-    {
-        return inertia()->render("Settings/Config",$this->data([
-            'list'=>$configRepository->fetch(request()->all())->get()
-        ]));
+    function __construct(ConfigRepository $configRepository){
+        $this->configRepository = $configRepository;
     }
 
-    public function create()
-    {
+    function index(){
+        return inertia()->render("Dashboard/Dashboard",[]);
     }
 
-    public function store(StoreConfigRequest $request,ConfigRepository $configRepository)
-    {
-        $record = $configRepository->create($request->validated());
-        return $this->respondWithSuccess("New record added.");
+    function store(ConfigStoreRequest $configStoreRequest){
+      $record = $this->configRepository->create($configStoreRequest->validated());
+      return $this->respondWithSuccess("New record added");
     }
 
-    public function show($id)
-    {
+    function update($id,ConfigUpdateRequest $configUpdateRequest){
+        $record = $this->configRepository->update($id,$configUpdateRequest->validated());
+        return $this->respondWithSuccess("Record updated");
     }
 
-    public function edit($id)
-    {
+    function destroy($id){
+      $record = $this->configRepository->remove($id);
+      return $this->respondWithSuccess("Record removed");
     }
-
-    public function update(UpdateConfigRequest $request, $id ,ConfigRepository $configRepository)
-    {
-        $record = $configRepository->update($id,$request->validated());
-        return $this->respondWithSuccess("Record updated.");
-    }
-
-    public function destroy($id,ConfigRepository $configRepository)
-    {
-        $configRepository->remove($id);
-        return $this->respondWithSuccess("Record removed.");
-    }
-
 }

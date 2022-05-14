@@ -199,8 +199,12 @@ class ' . $updateRequestBuilder['className'] . ' extends FormRequest
 $controllerBuilder = $this->decodePath($controllerPath);
 
 $clsController = '<?php
+
 ' . $controllerBuilder['namespace'] . '
 
+' . $repositoryBuilder['classUseStatement'] . '
+' . $storeRequestBuilder['classUseStatement'] . '
+' . $updateRequestBuilder['classUseStatement'] . '
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
