@@ -42,7 +42,7 @@
 
 </script>
 
-<!-- <MessageNotification /> -->
+<MessageNotification />
 
 <div class="wrapper" style="height: auto; min-height: 100%;">
     <header class="main-header">
@@ -193,8 +193,8 @@
                     </a>
                     <ul class="treeview-menu">
                         <li>
-                            <a use:inertia="{{ preserveScroll: true }}" href="/all-users">
-                                <i class="fa fa-user" /> All User</a
+                            <a use:inertia="{{ preserveScroll: true }}" href="/user">
+                                <i class="fa fa-user" /> All Users</a
                             >
                         </li>
                         <li>

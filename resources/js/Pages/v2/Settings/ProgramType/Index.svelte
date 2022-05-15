@@ -1,5 +1,5 @@
 <script context="module">
-    import Layout from "../../../Dashboard/Layout.svelte";
+    import Layout from "../../Auth/Dashboard/Layout.svelte";
     import { useForm } from "@inertiajs/inertia-svelte";
 
     import Page from "../../../../components/Page.svelte";

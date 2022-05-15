@@ -87,7 +87,7 @@ Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\
 
 // Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\AssessmentResultController::class)->middleware(['auth']);
 
-Route::resource('invite-candidate',\App\Http\Controllers\User\InviteCandidateController::class)->middleware(['auth']);
+// Route::resource('invite-candidate',\App\Http\Controllers\User\InviteCandidateController::class)->middleware(['auth']);
 
 Route::resource('check-auth',\App\Http\Controllers\Auth\CheckAuthController::class);
 
@@ -130,7 +130,7 @@ Route::resource("knowledge-area",\App\Http\Controllers\v1\Settings\KnowledgeArea
 
 Route::resource("program-type",\App\Http\Controllers\v1\Settings\ProgramTypeController::class)->middleware(["auth"]);
 
-Route::resource("user",\App\Http\Controllers\v1\Auth\UserController::class)->middleware(["auth"]);
+// Route::resource("user",\App\Http\Controllers\v1\Auth\UserController::class)->middleware(["auth"]);
 
 
 // Route::resource("dashboard",\App\Http\Controllers\v1\Auth\DashboardController::class)->middleware(["auth"]);
@@ -148,3 +148,7 @@ Route::resource("my-document",\App\Http\Controllers\v2\Auth\MyDocumentController
 Route::resource("upload-avatar",\App\Http\Controllers\v2\Auth\UploadAvatarController::class)->middleware(["auth"]);
 
 Route::resource("update-user-skill",\App\Http\Controllers\v2\Auth\UpdateUserSkillController::class)->middleware(["auth"]);
+
+Route::resource("user",\App\Http\Controllers\v2\Auth\UserController::class)->middleware(["auth"]);
+
+Route::resource("invite-candidate",\App\Http\Controllers\v2\Auth\InviteCandidateController::class)->middleware(["auth"]);

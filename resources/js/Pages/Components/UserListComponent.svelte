@@ -3,15 +3,16 @@
     import { page, useForm } from "@inertiajs/inertia-svelte";
     import Pagination from "../../components/Pagination.svelte";
     import {createEventDispatcher} from "svelte";
+    import Modal from "../../components/Modal.svelte";
     // export const layout = Layout;
 </script>
 
 <script>
     export let users; // = $page.props.users;
-    export let invite_candidate_route;
-    export let reinvite_candidate_route;
-    export let message;
-    export let error;
+    let invite_candidate_route = '/invite-candidate/';
+    let reinvite_candidate_route = '/invite-candidate/';
+    // export let message;
+    // export let error;
     export let label;
 
     let dispatch = createEventDispatcher();
@@ -31,22 +32,6 @@
 
     // inviteModal
 
-    $: console.log(message,'message.');
-
-    $: if (message != '' && !error){
-        inviteModal.click();
-        toastr.success(message);
-        message = "";
-        dispatch("clearMessage",message);
-        $inviteCandidateForm.reset();
-    }
-
-    $: if ($inviteCandidateForm.hasErrors){
-        for (let i in $inviteCandidateForm.errors){
-            toastr.error($inviteCandidateForm.errors[i]);
-        }
-        $inviteCandidateForm.clearErrors();
-    }
 
     function sendInvitation(){
        $inviteCandidateForm.post(invite_candidate_route);
@@ -58,9 +43,6 @@
     }
 
 
-    function setCalend(){
-      Calendly.initPopupWidget({url: 'https://calendly.com/easymagic1/30min'});
-    }
 
 </script>
 
@@ -266,136 +248,111 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-ivuser">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button
-                        type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                        bind:this={inviteModal}
-                    >
-                        <span aria-hidden="true">×</span></button
-                    >
-                    <h4 class="modal-title">Invite User</h4>
+    <Modal
+    id="modal-ivuser"
+    on:submit={sendInvitation}
+>
+    <span slot="title">Invite User</span>
+
+    <div class="col-md-12" slot="content">
+
+
+        <div class="col-md-6">
+            <label for="inputName" class="control-label"
+                >First Name <b style="color:red">*</b
+                ></label
+            >
+            <input
+                type="text"
+                class="form-control"
+                name="FirstName"
+                id="inputName"
+                placeholder="First Name"
+                required=""
+                bind:value={$inviteCandidateForm.first_name}
+            />
+            <!-- {#if $inviteCandidateForm.errors.first_name}
+                <div style="color: red;">
+                    {$inviteCandidateForm.errors.first_name}
                 </div>
-                <form
-                    class="form-horizontal"
-                    on:submit|preventDefault={sendInvitation}
-                    method="post"
-                >
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="col-md-6">
-                                    <label for="inputName" class="control-label"
-                                        >First Name <b style="color:red">*</b
-                                        ></label
-                                    >
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        name="FirstName"
-                                        id="inputName"
-                                        placeholder="First Name"
-                                        required=""
-                                        bind:value={$inviteCandidateForm.first_name}
-                                    />
-                                    <!-- {#if $inviteCandidateForm.errors.first_name}
-                                        <div style="color: red;">
-                                            {$inviteCandidateForm.errors.first_name}
-                                        </div>
-                                    {/if} -->
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="inputName" class="control-label"
-                                        >Last Name <b style="color:red">*</b
-                                        ></label
-                                    >
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        name="LastName"
-                                        id="inputName"
-                                        placeholder="Last Name"
-                                        required=""
-                                        bind:value={$inviteCandidateForm.last_name}
-                                    />
-                                    <!-- {#if $inviteCandidateForm.errors.last_name}
-                                        <div style="color: red;">
-                                            {$inviteCandidateForm.errors.last_name}
-                                        </div>
-                                    {/if} -->
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputName" class="control-label"
-                                        >Email <b style="color:red">*</b></label
-                                    >
-                                    <input
-                                        type="email"
-                                        class="form-control"
-                                        name="Email"
-                                        id="inputName"
-                                        placeholder="Candidate's Email"
-                                        required=""
-                                        bind:value={$inviteCandidateForm.email}
-                                    />
-                                    <!-- {#if $inviteCandidateForm.errors.email}
-                                        <div style="color: red;">
-                                            {$inviteCandidateForm.errors.email}
-                                        </div>
-                                    {/if} -->
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="inputName" class="control-label"
-                                        >Account Type <b style="color:red">*</b></label
-                                    >
-                                    <select
-                                        type="email"
-                                        class="form-control"
-                                        name="Email"
-                                        id="inputName"
-                                        placeholder="Candidate's Email"
-                                        required=""
-                                        bind:value={$inviteCandidateForm.account_type}
-                                    >
-                                    <option value="">Select</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="candidate">Candidate</option>
-                                    <option value="staff">Staff</option>
-
-                                </select>
-                                    <!-- {#if $inviteCandidateForm.errors.account_type}
-                                        <div style="color: red;">
-                                            {$inviteCandidateForm.errors.account_type}
-                                        </div>
-                                    {/if} -->
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button
-                            type="button"
-                            class="btn btn-default pull-left"
-                            data-dismiss="modal">Close</button
-                        >
-                        <button type="submit" disabled={$inviteCandidateForm.processing} class="btn btn-primary">
-                            <i class="fa fa-envelope" /> Send Invite</button
-                        >
-                    </div>
-                </form>
-            </div>
-            <!-- /.modal-content -->
+            {/if} -->
         </div>
-        <!-- /.modal-dialog -->
+
+        <div class="col-md-6">
+            <label for="inputName" class="control-label"
+                >Last Name <b style="color:red">*</b
+                ></label
+            >
+            <input
+                type="text"
+                class="form-control"
+                name="LastName"
+                id="inputName"
+                placeholder="Last Name"
+                required=""
+                bind:value={$inviteCandidateForm.last_name}
+            />
+            <!-- {#if $inviteCandidateForm.errors.last_name}
+                <div style="color: red;">
+                    {$inviteCandidateForm.errors.last_name}
+                </div>
+            {/if} -->
+        </div>
+        <div class="col-md-6">
+            <label for="inputName" class="control-label"
+                >Email <b style="color:red">*</b></label
+            >
+            <input
+                type="email"
+                class="form-control"
+                name="Email"
+                id="inputName"
+                placeholder="Candidate's Email"
+                required=""
+                bind:value={$inviteCandidateForm.email}
+            />
+            <!-- {#if $inviteCandidateForm.errors.email}
+                <div style="color: red;">
+                    {$inviteCandidateForm.errors.email}
+                </div>
+            {/if} -->
+        </div>
+
+        <div class="col-md-6">
+            <label for="inputName" class="control-label"
+                >Account Type <b style="color:red">*</b></label
+            >
+            <select
+                type="email"
+                class="form-control"
+                name="Email"
+                id="inputName"
+                placeholder="Candidate's Email"
+                required=""
+                bind:value={$inviteCandidateForm.account_type}
+            >
+            <option value="">Select</option>
+            <option value="admin">Admin</option>
+            <option value="candidate">Candidate</option>
+            <option value="staff">Staff</option>
+
+        </select>
+            <!-- {#if $inviteCandidateForm.errors.account_type}
+                <div style="color: red;">
+                    {$inviteCandidateForm.errors.account_type}
+                </div>
+            {/if} -->
+        </div>
+
+
     </div>
+
+
+
+    <button type="submit" class="btn btn-primary" slot="storeButton">
+        <i class="fa fa-save" /> &nbsp; Send Invite
+    </button>
+</Modal>
 
     <!-- /.modal -->
 </section>
