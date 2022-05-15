@@ -115,9 +115,9 @@ Route::resource('my-activity',\App\Http\Controllers\User\MyActivityController::c
 
 Route::resource('my-profile',\App\Http\Controllers\User\MyProfileController::class)->middleware(['auth']);
 
-Route::resource('upload-avatar',\App\Http\Controllers\User\UploadAvatarController::class)->middleware(['auth']);
+// Route::resource('upload-avatar',\App\Http\Controllers\User\UploadAvatarController::class)->middleware(['auth']);
 
-Route::resource('update-user-skill',\App\Http\Controllers\User\UpdateUserSkillController::class)->middleware(['auth']);
+// Route::resource('update-user-skill',\App\Http\Controllers\User\UpdateUserSkillController::class)->middleware(['auth']);
 
 
 
@@ -132,8 +132,19 @@ Route::resource("program-type",\App\Http\Controllers\v1\Settings\ProgramTypeCont
 
 Route::resource("user",\App\Http\Controllers\v1\Auth\UserController::class)->middleware(["auth"]);
 
-Route::resource("login",\App\Http\Controllers\v1\Auth\LoginController::class);
 
-Route::resource("logout",\App\Http\Controllers\v1\Auth\LogoutController::class)->middleware(["auth"]);
+// Route::resource("dashboard",\App\Http\Controllers\v1\Auth\DashboardController::class)->middleware(["auth"]);
 
-Route::resource("dashboard",\App\Http\Controllers\v1\Auth\DashboardController::class)->middleware(["auth"]);
+Route::resource("login",\App\Http\Controllers\v2\Auth\LoginController::class);
+
+Route::resource("logout",\App\Http\Controllers\v2\Auth\LogoutController::class)->middleware(["auth"]);
+
+Route::resource("dashboard",\App\Http\Controllers\v2\Auth\DashboardController::class)->middleware(["auth"]);
+
+Route::resource("my-profile",\App\Http\Controllers\v2\Auth\MyProfileController::class)->middleware(["auth"]);
+
+Route::resource("my-document",\App\Http\Controllers\v2\Auth\MyDocumentController::class)->middleware(["auth"]);
+
+Route::resource("upload-avatar",\App\Http\Controllers\v2\Auth\UploadAvatarController::class)->middleware(["auth"]);
+
+Route::resource("update-user-skill",\App\Http\Controllers\v2\Auth\UpdateUserSkillController::class)->middleware(["auth"]);
