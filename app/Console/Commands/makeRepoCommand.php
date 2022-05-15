@@ -50,6 +50,8 @@ class makeRepoCommand extends Command
         $authSnipinInterfaceTemplate = '';
         $authSnipinRepositoryTemplate = '';
 
+        $version = 'v' . env('CG_VERSION',1);
+
 
 
         if (!$name){
@@ -133,13 +135,14 @@ interface ' . $interfaceBuilder['className'] . '{
 
 ';
 
+//' . $interfaceBuilder['classUseStatement'] . '
+// implements ' . $interfaceBuilder['className'] . '
   $clsRepository = '<?php
 ' . $repositoryBuilder['namespace'] . '
-' . $interfaceBuilder['classUseStatement'] . '
 ' . $modelBuilder['classUseStatement'] . '
 ' . $authPathBuilder['classUseRawStatement'] . '
 
-class ' . $repositoryBuilder['className'] . ' implements ' . $interfaceBuilder['className'] . '
+class ' . $repositoryBuilder['className'] . '
 {
 
     function fetch($filters=[]){
@@ -175,7 +178,7 @@ class ' . $repositoryBuilder['className'] . ' implements ' . $interfaceBuilder['
 }
 ';
 
-$controllerPath = 'Http/Controllers/v1/' . $name . 'Controller';
+$controllerPath = 'Http/Controllers/' . $version . '/' . $name . 'Controller';
 
 $storeRequestPath = 'Http/Requests/' . $name . '/StoreRequest';
 $updateRequestPath = 'Http/Requests/' . $name . '/UpdateRequest';
@@ -251,32 +254,31 @@ class ' . $updateRequestBuilder['className'] . ' extends FormRequest
 
 $controllerBuilder = $this->decodePath($controllerPath);
 $svelteViewRootPath = 'resources/js/Pages/';
-$controllerIndexPath = 'v2/' . $name . '/Index';
-$controllerCreatePath = 'v2/' . $name . '/Create';
-$controllerEditPath = 'v2/' . $name . '/Edit';
-$controllerShowPath = 'v2/' . $name . '/Show';
+$controllerIndexPath = $version . '/' . $name . '/Index';
+$controllerCreatePath = $version . '/' . $name . '/Create';
+$controllerEditPath = $version . '/' . $name . '/Edit';
+$controllerShowPath = $version . '/' . $name . '/Show';
 
 $controllerIndexPathBuilder = $this->decodePath($controllerIndexPath);
 $controllerCreatePathBuilder = $this->decodePath($controllerCreatePath);
 $controllerEditPathBuilder = $this->decodePath($controllerEditPath);
 $controllerShowPathBuilder = $this->decodePath($controllerShowPath);
 
+//' . $interfaceBuilder['classUseStatement'] . '
 $clsController = '<?php
-
 ' . $controllerBuilder['namespace'] . '
-
-' . $interfaceBuilder['classUseStatement'] . '
+' . $repositoryBuilder['classUseStatement'] . '
 ' . $storeRequestBuilder['classUseStatement'] . '
 ' . $updateRequestBuilder['classUseStatement'] . '
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 
 class ' . $controllerBuilder['className'] . ' extends Controller
 {
     //
     private ' . $repositoryBuilder['instanceName'] . ' = null;
 
-    function __construct(' . $interfaceBuilder['className']  . ' ' . $repositoryBuilder['instanceName']  . '){
+    function __construct(' . $repositoryBuilder['className']  . ' ' . $repositoryBuilder['instanceName']  . '){
         $this->' . $repositoryBuilder['instanceNamePlain'] . ' = ' . $repositoryBuilder['instanceName'] . ';
     }
 
@@ -327,7 +329,7 @@ class ' . $controllerBuilder['className'] . ' extends Controller
 // dd($clsRepository);
 // dd($clsInterface);
 
-$this->createScafold('app/' . $interfaceBuilder['pathFileName'],$clsInterface);
+// $this->createScafold('app/' . $interfaceBuilder['pathFileName'],$clsInterface);
 
 $this->createScafold('app/' . $repositoryBuilder['pathFileName'],$clsRepository);
 $this->createScafold('app/' . $storeRequestBuilder['pathFileName'],$clsStoreRequest);
@@ -354,14 +356,14 @@ $this->createScafold($svelteViewRootPath . $controllerShowPathBuilder['pathFileN
 
 
 
-$serviceProvider = Storage::disk("root")->get('app/Providers/AppServiceProvider.php');
+// $serviceProvider = Storage::disk("root")->get('app/Providers/AppServiceProvider.php');
 //#insertRepository
 //$this->app->bind('','');
-$repoBind = '$this->app->bind(' . $interfaceBuilder['classClassStatement'] . ',' . $repositoryBuilder['classClassStatement'] . ');
+// $repoBind = '$this->app->bind(' . $interfaceBuilder['classClassStatement'] . ',' . $repositoryBuilder['classClassStatement'] . ');
 #insertRepository';
-$serviceProvider = explode("#insertRepository",$serviceProvider);
-$serviceProvider = implode($repoBind,$serviceProvider);
-Storage::disk("root")->put('app/Providers/AppServiceProvider.php',$serviceProvider);
+// $serviceProvider = explode("#insertRepository",$serviceProvider);
+// $serviceProvider = implode($repoBind,$serviceProvider);
+// Storage::disk("root")->put('app/Providers/AppServiceProvider.php',$serviceProvider);
 
 //Register controller in route.
 

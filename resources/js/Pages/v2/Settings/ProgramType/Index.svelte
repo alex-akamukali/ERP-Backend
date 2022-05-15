@@ -69,7 +69,7 @@
 
 
 <Page>
-    <span slot="title">Program Type</span>
+    <span slot="title">Program Type.</span>
     <button
         slot="createButton"
         class="btn btn-primary btn-sm"
