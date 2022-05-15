@@ -68,11 +68,11 @@ Route::get('/',function(){
 
 // Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware(['auth']);
 
-Route::get('all-users',[UserController::class,'index'])->name('all.users')->middleware(['auth']);
+// Route::get('all-users',[UserController::class,'index'])->name('all.users')->middleware(['auth']);
 
-Route::get('user/profile',[ProfileController::class,'index'])->name('user.profile')->middleware(['auth']);
+// Route::get('user/profile',[ProfileController::class,'index'])->name('user.profile')->middleware(['auth']);
 
-Route::resource('program-type',ProgramTypeController::class)->middleware(['auth']);
+// Route::resource('program-type',ProgramTypeController::class)->middleware(['auth']);
 
 // Route::resource('invite-candidate',InviteCandidateController::class);
 
@@ -89,31 +89,31 @@ Route::resource('workflow-assessment',\App\Http\Controllers\Workflow\Assessment\
 
 // Route::resource('invite-candidate',\App\Http\Controllers\User\InviteCandidateController::class)->middleware(['auth']);
 
-Route::resource('check-auth',\App\Http\Controllers\Auth\CheckAuthController::class);
+// Route::resource('check-auth',\App\Http\Controllers\Auth\CheckAuthController::class);
 
-Route::resource('knowledge-area',\App\Http\Controllers\Settings\KnowledgeAreaController::class)->middleware(['auth']);
+// Route::resource('knowledge-area',\App\Http\Controllers\Settings\KnowledgeAreaController::class)->middleware(['auth']);
 
-// Route::get('xlogin',[CheckAuthController::class,'xlogin'])->name('xlogin');
+// // Route::get('xlogin',[CheckAuthController::class,'xlogin'])->name('xlogin');
 
-Route::resource('olade-contract-type',\App\Http\Controllers\Settings\OladeContractTypeController::class)->middleware(['auth']);
+// Route::resource('olade-contract-type',\App\Http\Controllers\Settings\OladeContractTypeController::class)->middleware(['auth']);
 
-Route::resource('province',\App\Http\Controllers\Settings\ProvinceController::class)->middleware(['auth']);
+// Route::resource('province',\App\Http\Controllers\Settings\ProvinceController::class)->middleware(['auth']);
 
-Route::resource('province-town-city',\App\Http\Controllers\Settings\ProvinceTownCityController::class)->middleware(['auth']);
+// Route::resource('province-town-city',\App\Http\Controllers\Settings\ProvinceTownCityController::class)->middleware(['auth']);
 
-// Route::resource('vendor-company',\App\Http\Controllers\Settings\VendorController::class)->middleware(['auth']);
+// // Route::resource('vendor-company',\App\Http\Controllers\Settings\VendorController::class)->middleware(['auth']);
 
-Route::resource('payroll-manager',\App\Http\Controllers\Settings\PayrollManagerController::class)->middleware(['auth']);
+// Route::resource('payroll-manager',\App\Http\Controllers\Settings\PayrollManagerController::class)->middleware(['auth']);
 
-// Route::resource('config',\App\Http\Controllers\Settings\ConfigController::class)->middleware(['auth']);
+// // Route::resource('config',\App\Http\Controllers\Settings\ConfigController::class)->middleware(['auth']);
 
-Route::resource('vendor-company',\App\Http\Controllers\Settings\VendorCompanyController::class)->middleware(['auth']);
+// Route::resource('vendor-company',\App\Http\Controllers\Settings\VendorCompanyController::class)->middleware(['auth']);
 
-// Route::resource('my-document',\App\Http\Controllers\User\MyDocumentController::class)->middleware(['auth']);
+// // Route::resource('my-document',\App\Http\Controllers\User\MyDocumentController::class)->middleware(['auth']);
 
-Route::resource('my-activity',\App\Http\Controllers\User\MyActivityController::class)->middleware(['auth']);
+// Route::resource('my-activity',\App\Http\Controllers\User\MyActivityController::class)->middleware(['auth']);
 
-Route::resource('my-profile',\App\Http\Controllers\User\MyProfileController::class)->middleware(['auth']);
+// Route::resource('my-profile',\App\Http\Controllers\User\MyProfileController::class)->middleware(['auth']);
 
 // Route::resource('upload-avatar',\App\Http\Controllers\User\UploadAvatarController::class)->middleware(['auth']);
 
@@ -124,11 +124,11 @@ Route::resource('my-profile',\App\Http\Controllers\User\MyProfileController::cla
 
 ///////////////New Divide/////////////////////////
 
-Route::resource("config",\App\Http\Controllers\v1\Settings\ConfigController::class)->middleware(["auth"]);
+// Route::resource("config",\App\Http\Controllers\v1\Settings\ConfigController::class)->middleware(["auth"]);
 
-Route::resource("knowledge-area",\App\Http\Controllers\v1\Settings\KnowledgeAreaController::class)->middleware(["auth"]);
+// Route::resource("knowledge-area",\App\Http\Controllers\v1\Settings\KnowledgeAreaController::class)->middleware(["auth"]);
 
-Route::resource("program-type",\App\Http\Controllers\v1\Settings\ProgramTypeController::class)->middleware(["auth"]);
+// Route::resource("program-type",\App\Http\Controllers\v1\Settings\ProgramTypeController::class)->middleware(["auth"]);
 
 // Route::resource("user",\App\Http\Controllers\v1\Auth\UserController::class)->middleware(["auth"]);
 
@@ -152,3 +152,19 @@ Route::resource("update-user-skill",\App\Http\Controllers\v2\Auth\UpdateUserSkil
 Route::resource("user",\App\Http\Controllers\v2\Auth\UserController::class)->middleware(["auth"]);
 
 Route::resource("invite-candidate",\App\Http\Controllers\v2\Auth\InviteCandidateController::class)->middleware(["auth"]);
+
+Route::resource("program-type",\App\Http\Controllers\v2\Settings\ProgramTypeController::class)->middleware(["auth"]);
+
+Route::resource("config",\App\Http\Controllers\v2\Settings\ConfigController::class)->middleware(["auth"]);
+
+Route::resource("knowledge-area",\App\Http\Controllers\v2\Settings\KnowledgeAreaController::class)->middleware(["auth"]);
+
+Route::resource("olade-contract-type",\App\Http\Controllers\v2\Settings\OladeContractTypeController::class)->middleware(["auth"]);
+
+Route::resource("payroll-manager",\App\Http\Controllers\v2\Settings\PayrollManagerController::class)->middleware(["auth"]);
+
+Route::resource("province",\App\Http\Controllers\v2\Settings\ProvinceController::class)->middleware(["auth"]);
+
+Route::resource("province-town-city",\App\Http\Controllers\v2\Settings\ProvinceTownCityController::class)->middleware(["auth"]);
+
+Route::resource("vendor-company",\App\Http\Controllers\v2\Settings\VendorCompanyController::class)->middleware(["auth"]);

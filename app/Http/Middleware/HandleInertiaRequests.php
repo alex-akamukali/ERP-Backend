@@ -44,8 +44,8 @@ class HandleInertiaRequests extends Middleware
             'csrf'=>csrf_token(),
             'olade_logo'=>asset('asset1/Olade_logo_white.png'),
             'user_logo'=>asset('asset1/user2-160x160.jpg'),
-            'user_profile_route'=>route('user.profile'),
-            'all_users_route'=>route('all.users'),
+            // 'user_profile_route'=>route('user.profile'),
+            // 'all_users_route'=>route('all.users'),
             'user'=>function() use ($request){
                 return $request->user();
             },
