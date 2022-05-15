@@ -41,12 +41,12 @@ class MyDocumentController extends Controller
     }
 
     function store(StoreRequest $request){
-      $record = $this->myDocumentRepository->create($request->validated());
+      $record = $this->myDocumentRepository->create($request->uploadDocument());
       return $this->respondWithSuccess("New Document uploaded.");
     }
 
     function update($id,UpdateRequest $updateRequest){
-        $record = $this->myDocumentRepository->update($id,$updateRequest->validated());
+        $record = $this->myDocumentRepository->update($id,$updateRequest->uploadDocument());
         return $this->respondWithSuccess("Document updated");
     }
 
