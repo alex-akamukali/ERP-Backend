@@ -8,12 +8,19 @@ class OladeContractTypeRepository
 
     function fetch($filters=[]){
         $query = OladeContractType::query();
+        if (isset($filters['status'])){
+            $query = $query->withStatus($filters['status']);
+        }
         return $query;
     }
 
     function fetchById($id){
         $record = OladeContractType::query()->find($id);
         return $record;
+    }
+
+    function statuses(){
+        return OladeContractType::STATUSES;
     }
 
 
@@ -34,6 +41,6 @@ class OladeContractTypeRepository
         return $record;
     }
 
-    
+
 
 }

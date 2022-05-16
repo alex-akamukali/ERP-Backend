@@ -18,18 +18,22 @@ class OladeContractTypeController extends Controller
     function index(){
         $list = $this->oladeContractTypeRepository->fetch(request()->all())->get();
         return inertia()->render("v2/Settings/OladeContractType/Index",[
-            "list"=>$list
+            "list"=>$list,
+            "statuses"=>$this->oladeContractTypeRepository->statuses()
         ]);
     }
 
     function create(){
-        return inertia()->render("v2/Settings/OladeContractType/Create");
+        return inertia()->render("v2/Settings/OladeContractType/Create",[
+            "statuses"=>$this->oladeContractTypeRepository->statuses()
+        ]);
     }
 
     function edit($id){
         $data = $this->oladeContractTypeRepository->fetchById($id);
         return inertia()->render("v2/Settings/OladeContractType/Edit",[
-            "data"=>$data
+            "data"=>$data,
+            "statuses"=>$this->oladeContractTypeRepository->statuses()
         ]);
     }
 
@@ -42,12 +46,12 @@ class OladeContractTypeController extends Controller
 
     function store(StoreRequest $request){
       $record = $this->oladeContractTypeRepository->create($request->validated());
-      return $this->respondWithSuccess("New record added");
+      return $this->respondWithSuccessRoute("New contract type added",route("olade-contract-type.index"));
     }
 
     function update($id,UpdateRequest $updateRequest){
         $record = $this->oladeContractTypeRepository->update($id,$updateRequest->validated());
-        return $this->respondWithSuccess("Record updated");
+        return $this->respondWithSuccessRoute("Contract type updated",route("olade-contract-type.index"));
     }
 
     function destroy($id){
