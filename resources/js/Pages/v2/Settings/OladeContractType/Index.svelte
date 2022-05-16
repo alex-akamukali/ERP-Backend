@@ -3,7 +3,7 @@
     import { useForm , inertia } from "@inertiajs/inertia-svelte";
 
     import Page from "../../../../components/Page.svelte";
-    import Modal from "../../../../components/Modal.svelte";
+    // import Modal from "../../../../components/Modal.svelte";
 
     export const layout = Layout;
 </script>
