@@ -4,6 +4,8 @@ use App\Repositories\Settings\ProvinceTownCityRepository;
 use App\Http\Requests\Settings\ProvinceTownCity\StoreRequest;
 use App\Http\Requests\Settings\ProvinceTownCity\UpdateRequest;
 use App\Http\Controllers\Controller;
+use App\Repositories\Settings\ProvinceRepository;
+
 //use Illuminate\Http\Request;
 
 class ProvinceTownCityController extends Controller
@@ -15,10 +17,12 @@ class ProvinceTownCityController extends Controller
         $this->provinceTownCityRepository = $provinceTownCityRepository;
     }
 
-    function index(){
+    function index(ProvinceRepository $provinceRepository){
         $list = $this->provinceTownCityRepository->fetch(request()->all())->get();
         return inertia()->render("v2/Settings/ProvinceTownCity/Index",[
-            "list"=>$list
+            "list"=>$list,
+            'provinces' => $provinceRepository->fetch(request()->all())->get(),
+            'id' => request('province_id')
         ]);
     }
 
