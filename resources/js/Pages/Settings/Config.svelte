@@ -12,7 +12,7 @@
 
 <script>
     export let list;
-    export let message;
+    // export let message;
     // export let error;
     // export let csrf;
 

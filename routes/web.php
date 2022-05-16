@@ -168,3 +168,25 @@ Route::resource("province",\App\Http\Controllers\v2\Settings\ProvinceController:
 Route::resource("province-town-city",\App\Http\Controllers\v2\Settings\ProvinceTownCityController::class)->middleware(["auth"]);
 
 Route::resource("vendor-company",\App\Http\Controllers\v2\Settings\VendorCompanyController::class)->middleware(["auth"]);
+
+Route::resource("assessment-interview",\App\Http\Controllers\v2\Workflow\Assessment\AssessmentInterviewController::class)->middleware(["auth"]);
+
+Route::resource("assessment-result",\App\Http\Controllers\v2\Workflow\Assessment\AssessmentResultController::class)->middleware(["auth"]);
+
+Route::resource("pre-employment-assessment",\App\Http\Controllers\v2\Workflow\Assessment\PreEmploymentAssessmentController::class)->middleware(["auth"]);
+
+Route::resource("service-agreement",\App\Http\Controllers\v2\Workflow\Assessment\ServiceAgreementController::class)->middleware(["auth"]);
+
+Route::resource("job-application",\App\Http\Controllers\v2\Workflow\JobApplication\JobApplicationController::class)->middleware(["auth"]);
+
+Route::resource("mock-interview",\App\Http\Controllers\v2\Workflow\JobProfile\MockInterviewController::class)->middleware(["auth"]);
+
+Route::resource("mock-interview-result",\App\Http\Controllers\v2\Workflow\JobProfile\MockInterviewResultController::class)->middleware(["auth"]);
+
+Route::resource("profile-discussion",\App\Http\Controllers\v2\Workflow\JobProfile\ProfileDiscussionController::class)->middleware(["auth"]);
+
+Route::resource("profile-launch",\App\Http\Controllers\v2\Workflow\JobProfile\ProfileLaunchController::class)->middleware(["auth"]);
+
+Route::resource("resume-walkthrough",\App\Http\Controllers\v2\Workflow\JobProfile\ResumeWalkthroughController::class)->middleware(["auth"]);
+
+Route::resource("onboarding",\App\Http\Controllers\v2\Workflow\Onboarding\OnboardingController::class)->middleware(["auth"]);
