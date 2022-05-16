@@ -47,7 +47,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('migrate',function(){
-   Artisan::call("migrate --seed");
+   Artisan::call("migrate");
+   // --seed
    return [
        'message'=>'Migration ran with seeders',
        'error'=>false
