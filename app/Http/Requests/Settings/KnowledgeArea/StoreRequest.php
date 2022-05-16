@@ -13,7 +13,7 @@ class StoreRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'program_type_id'=>'required',
+            'knowledge_area_type'=>'required',
+            'name'=>'required',
+            'no_of_questions'=>'required',
+            'status'=>'required'
         ];
     }
 }

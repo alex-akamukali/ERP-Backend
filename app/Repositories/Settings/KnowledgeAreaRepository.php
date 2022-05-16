@@ -8,6 +8,9 @@ class KnowledgeAreaRepository
 
     function fetch($filters=[]){
         $query = KnowledgeArea::query();
+        if (isset($filters['knowledge_area_type'])){
+            $query = $query->knowledgeAreaType($filters['knowledge_area_type']);
+        }
         return $query;
     }
 
@@ -16,6 +19,13 @@ class KnowledgeAreaRepository
         return $record;
     }
 
+    function types(){
+        return KnowledgeArea::KNOWLEDGE_AREA_TYPES;
+    }
+
+    function statuses(){
+        return KnowledgeArea::STATUSES;
+    }
 
     function update($id,$data){
         $record = KnowledgeArea::query()->find($id);
@@ -34,6 +44,6 @@ class KnowledgeAreaRepository
         return $record;
     }
 
-    
+
 
 }
