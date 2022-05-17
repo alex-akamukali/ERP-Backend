@@ -284,7 +284,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li>
-                            <a href="docContract">
+                            <a href="/olade-contract" use:inertia>
                                 <i class="fa fa-file" /> Olade Contract</a
                             >
                         </li>

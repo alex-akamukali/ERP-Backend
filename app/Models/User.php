@@ -55,8 +55,15 @@ class User extends Authenticatable
         'gender',
 
         'avatar',
-        'skills'
+        'skills',
+
+        'permission_profile_status',
+        'permission_is_super_admin',
+        'permission_is_mgt_admin',
+        'permission_is_accountant'
     ];
+
+
 
     /**
      * The attributes that should be hidden for serialization.

@@ -191,3 +191,5 @@ Route::resource("profile-launch",\App\Http\Controllers\v2\Workflow\JobProfile\Pr
 Route::resource("resume-walkthrough",\App\Http\Controllers\v2\Workflow\JobProfile\ResumeWalkthroughController::class)->middleware(["auth"]);
 
 Route::resource("onboarding",\App\Http\Controllers\v2\Workflow\Onboarding\OnboardingController::class)->middleware(["auth"]);
+
+Route::resource("olade-contract",\App\Http\Controllers\v2\DocumentLibrary\OladeContractController::class)->middleware(["auth"]);
