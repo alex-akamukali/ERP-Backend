@@ -1,5 +1,5 @@
 <script context="module">
-
+// let path = '';
 import Layout from "../../Auth/Dashboard/Layout.svelte";
     import { useForm,page,inertia } from "@inertiajs/inertia-svelte";
 

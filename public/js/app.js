@@ -21845,7 +21845,7 @@ function create_fragment(ctx) {
       div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div4.innerHTML = "<div class=\"row\"><div class=\"col-md-6\" style=\"padding-top: 11px;\"><img alt=\"img\" src=\"/asset1/Olade_logo_white.png\" style=\"height: 55px;\"/></div> \n                            <div class=\"col-md-6\"><a href=\"".concat("\" style=\"color: #fff;font-size: 17px;font-weight: bold;position: relative;top: 27px;float: right;\">Contact Us</a></div></div>\n\n                        \xA0");
+      div4.innerHTML = "<div class=\"row\" style=\"\"><div class=\"col-md-6\" style=\"padding-top: 11px;\"><img alt=\"img\" src=\"/asset1/Olade_logo_white.png\" style=\"height: 55px;\"/></div> \n                            <div class=\"col-md-6\"><a href=\"".concat("\" style=\"color: #fff;font-size: 17px;font-weight: bold;position: relative;top: 27px;float: right;\">Contact Us</a></div></div>\n\n                        \xA0");
       t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div5.innerHTML = "<img alt=\"img\" src=\"/asset1/uNGdWHi.png\" style=\"max-width: 100%;\"/>";
@@ -21902,14 +21902,16 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div18, "border-left", "1px solid #ddd");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div19, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div19, "box-shadow", "3px 3px #ccc");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div19, "height", "600px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div20, "background-color", "#fff");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div21, "padding", "5px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div22, "class", "login-box2");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span4, "class", "hold-transition login-page");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "display", "block");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "height", "100vh");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "padding-top", "41px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "height", "126vh");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "padding-top", "16px");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(messagenotification, target, anchor);
@@ -32846,6 +32848,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+ // let path = '';
 
 
 

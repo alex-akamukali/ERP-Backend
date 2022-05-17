@@ -18,7 +18,7 @@
 <MessageNotification />
 <span
     class="hold-transition login-page"
-    style="display: block; height: 100vh;padding-top: 41px;"
+    style="display: block; height: 126vh;padding-top: 16px;"
 >
     <div class="login-box2">
         <div class="login-logo">
@@ -28,14 +28,14 @@
 
         <!-- /.login-logo -->
 
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding:5px;">
             <div class="col-md-12" style="background-color: #fff;">
-                <div class="row" style="box-shadow: 3px 3px #ccc;">
+                <div class="row" style="box-shadow: 3px 3px #ccc;height: 600px;">
                     <div
                         class="col-md-12"
                         style="background-color: #093F82;height: 92px;"
                     >
-                        <div class="row">
+                        <div class="row" style="">
                             <div class="col-md-6" style="padding-top: 11px;">
                                 <img
                                     alt="img"
