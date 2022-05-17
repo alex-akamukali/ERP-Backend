@@ -18,7 +18,7 @@
 <MessageNotification />
 <span
     class="hold-transition login-page"
-    style="display: block; height: 126vh;padding-top: 16px;"
+    style="display: block; height: 126vh;padding-top: 16px;background-color: #B0BEC5;"
 >
     <div class="login-box2">
         <div class="login-logo">

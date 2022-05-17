@@ -21912,6 +21912,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "display", "block");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "height", "126vh");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "padding-top", "16px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span4, "background-color", "#B0BEC5");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(messagenotification, target, anchor);
