@@ -300,7 +300,7 @@
                         </li>
                         <li>
                             <a href={"/"}>
-                                <i class="fa fa-money" /> Payment Stub
+                                <i class="fa fa-money" /> Pay Stub
                             </a>
                         </li>
                         <li>

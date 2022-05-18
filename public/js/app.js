@@ -20822,7 +20822,7 @@ function create_fragment(ctx) {
       li23.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file text-green\"></i> Invoices</a>");
       t72 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li24.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-money\"></i> Payment Stub</a>");
+      li24.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-money\"></i> Pay Stub</a>");
       t74 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       li25.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file text-aqua\"></i> Resumes</a>");
