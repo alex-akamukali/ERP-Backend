@@ -1,11 +1,12 @@
 <script context="module">
-import {doCalc} from "nodejs-svelte-crud-helper";
-import Layout from "../../Auth/Dashboard/Layout.svelte";
-    import { useForm,page,inertia } from "@inertiajs/inertia-svelte";
-
-    import Page from "../../../../components/Page.svelte";
-    import Modal from "../../../../components/Modal.svelte";
-
+    import {
+        Modal,
+        Page,
+        useForm,
+        page,
+        inertia,
+        Layout,
+    } from "nodejs-svelte-crud-helper";
     export const layout = Layout;
 </script>
 
@@ -14,13 +15,13 @@ import Layout from "../../Auth/Dashboard/Layout.svelte";
 
     let mode = "create";
 
-    const resource = '/province/';
+    const resource = "/province/";
 
     let closeModal = null;
 
     let form = useForm({
         name: "",
-        id:"0"
+        id: "0",
     });
 
     function selectRow(data) {
@@ -47,9 +48,7 @@ import Layout from "../../Auth/Dashboard/Layout.svelte";
             $form.put(resource + $form.id);
         }
     }
-
 </script>
-
 
 <Page>
     <span slot="title">Province</span>
@@ -72,9 +71,7 @@ import Layout from "../../Auth/Dashboard/Layout.svelte";
         >
             <thead>
                 <!-- svelte-ignore a11y-no-redundant-roles -->
-                <tr role="row"
-                    ><th>name</th>
-                </tr>
+                <tr role="row"><th>name</th> </tr>
             </thead>
             <tbody>
                 {#each list as item}
@@ -87,18 +84,20 @@ import Layout from "../../Auth/Dashboard/Layout.svelte";
                                 data-toggle="modal"
                                 data-target="#modal-progtype"
                                 href={null}
-                                on:click|preventDefault={() =>
-                                    selectRow(item)}
+                                on:click|preventDefault={() => selectRow(item)}
                             >
                                 <i class="fa fa-edit text-green" />
                             </a>
                             &nbsp;&nbsp;
-                            <a use:inertia href={`/province-town-city/?province_id=${item.id}`}>Town/Cities</a>
+                            <a
+                                use:inertia
+                                href={`/province-town-city/?province_id=${item.id}`}
+                                >Town/Cities</a
+                            >
                             &nbsp;&nbsp;
                             <a
-                                href={'#'}
-                                on:click|preventDefault={() =>
-                                    removeRow(item)}
+                                href={"#"}
+                                on:click|preventDefault={() => removeRow(item)}
                             >
                                 <i class="fa fa-trash text-red" />
                             </a>
@@ -109,7 +108,7 @@ import Layout from "../../Auth/Dashboard/Layout.svelte";
         </table>
     </div>
 
-    <Modal id="modal-progtype"  on:submit={callStore}>
+    <Modal id="modal-progtype" on:submit={callStore}>
         <span slot="title">Province</span>
 
         <div class="col-md-12" slot="content">
@@ -128,7 +127,6 @@ import Layout from "../../Auth/Dashboard/Layout.svelte";
                     bind:value={$form.name}
                 />
             </div>
-
         </div>
 
         <button type="submit" class="btn btn-primary" slot="storeButton">
