@@ -7,13 +7,17 @@ import {
         page,
         inertia,
         Layout,
+        form,
+        initForm,
+        selectRow,
+        onSelectRow
     } from "nodejs-svelte-crud-helper";
     export const layout = Layout;
-
 
 </script>
 
 <script>
+
     export let list;
     // export let csrf;
 
@@ -23,22 +27,37 @@ import {
 
     let closeModal = null;
 
-    let form = useForm({
+    initForm({
         description: "",
         title: "",
         status: "active",
         id: "0",
     });
 
-    // alert(message);
-
-    function selectRow(data) {
+    onSelectRow((data)=>{
         $form.description = data.description;
         $form.title = data.title;
         $form.status = data.status;
         $form.id = data.id;
         mode = "update";
-    }
+    });
+
+    // let form = useForm({
+    //     description: "",
+    //     title: "",
+    //     status: "active",
+    //     id: "0",
+    // });
+
+    // alert(message);
+
+    // function selectRow(data) {
+    //     $form.description = data.description;
+    //     $form.title = data.title;
+    //     $form.status = data.status;
+    //     $form.id = data.id;
+    //     mode = "update";
+    // }
 
     function removeRow(data) {
         if (confirm("Do you want to confirm this action?")) {
@@ -63,15 +82,17 @@ import {
         // toastr.success(message);
         message = "";
         $form.clearErrors();
+        //  n.....
     }
 
     function onCloseModal() {
         // alert('called');
         console.log(closeModal);
         closeModal.click();
+        //
     }
-</script>
 
+</script>
 
 <Page>
     <span slot="title">Program Type.</span>
