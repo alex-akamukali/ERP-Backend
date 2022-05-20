@@ -25463,7 +25463,7 @@ function create_fragment(ctx) {
   return {
     c: function c() {
       section0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
-      section0.innerHTML = "<h1>My Profile</h1> \n    <ol class=\"breadcrumb\"><li><a href=\"#\"><i class=\"fa fa-dashboard\"></i> Home</a></li> \n        <li class=\"active\">My Profile</li></ol>";
+      section0.innerHTML = "<h1>My Profile</h1> \n    <ol class=\"breadcrumb\"><li><a href=\"#\"><i class=\"fa fa-dashboard\"></i> Home</a></li> \n        <li class=\"active\">My Profile.</li></ol>";
       t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       section1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("section");
       div31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");

@@ -31,7 +31,7 @@
     <ol class="breadcrumb">
         <!-- svelte-ignore a11y-invalid-attribute -->
         <li><a href="#"><i class="fa fa-dashboard" /> Home</a></li>
-        <li class="active">My Profile</li>
+        <li class="active">My Profile.</li>
     </ol>
 </section>
 
