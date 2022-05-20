@@ -1,11 +1,16 @@
 <script context="module">
-    import Layout from "../../Auth/Dashboard/Layout.svelte";
-    import { useForm } from "@inertiajs/inertia-svelte";
 
-    import Page from "../../../../components/Page.svelte";
-    import Modal from "../../../../components/Modal.svelte";
-
+import {
+        Modal,
+        Page,
+        useForm,
+        page,
+        inertia,
+        Layout,
+    } from "nodejs-svelte-crud-helper";
     export const layout = Layout;
+
+
 </script>
 
 <script>
