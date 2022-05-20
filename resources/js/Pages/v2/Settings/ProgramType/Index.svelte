@@ -1,45 +1,69 @@
 <script context="module">
-
-import {
+    import {
         Modal,
         Page,
         useForm,
         page,
         inertia,
         Layout,
-        form,
         initForm,
         selectRow,
-        onSelectRow
+        onSelectRow,
+        save,
+        remove,
+        onCreate,
+        onUpdate,
+        onRemove,
+        getMode,
+        reset,
+        onReset
     } from "nodejs-svelte-crud-helper";
     export const layout = Layout;
-
 </script>
 
 <script>
-
     export let list;
     // export let csrf;
 
-    let mode = "create";
+    let mode = getMode();
 
     const resource = "/program-type/";
 
-    let closeModal = null;
+    // let closeModal = null;
 
-    initForm({
+    let form = useForm({
         description: "",
         title: "",
         status: "active",
         id: "0",
     });
 
-    onSelectRow((data)=>{
+    onSelectRow((data) => {
         $form.description = data.description;
         $form.title = data.title;
         $form.status = data.status;
         $form.id = data.id;
-        mode = "update";
+        // mode = "update";
+    });
+
+    onCreate(() => {
+        $form.post(resource);
+        // mode = "create";
+    });
+
+    onRemove((data) => {
+        if (confirm("Do you want to confirm this action?")) {
+            $form.delete(resource + data.id);
+        }
+    });
+
+    onUpdate((data) => {
+        $form.put(resource + data.id);
+        // mode = "update";
+    });
+
+    onReset(()=>{
+        $form.reset();
     });
 
     // let form = useForm({
@@ -59,39 +83,38 @@ import {
     //     mode = "update";
     // }
 
-    function removeRow(data) {
-        if (confirm("Do you want to confirm this action?")) {
-            $form.delete(resource + data.id);
-        }
-    }
+    // function removeRow(data) {
+    //     if (confirm("Do you want to confirm this action?")) {
+    //         $form.delete(resource + data.id);
+    //     }
+    // }
 
-    function clearForm() {
-        $form.reset();
-        mode = "create";
-    }
+    // function clearForm() {
+    //     $form.reset();
+    //     mode = "create";
+    // }
 
-    function callStore() {
-        if (mode == "create") {
-            $form.post(resource);
-        } else {
-            $form.put(resource + $form.id);
-        }
-    }
+    // function callStore() {
+    //     if (mode == "create") {
+    //         $form.post(resource);
+    //     } else {
+    //         $form.put(resource + $form.id);
+    //     }
+    // }
 
-    function onResetMessage() {
-        // toastr.success(message);
-        message = "";
-        $form.clearErrors();
-        //  n.....
-    }
+    // function onResetMessage() {
+    //     // toastr.success(message);
+    //     message = "";
+    //     $form.clearErrors();
+    //     //  n.....
+    // }
 
-    function onCloseModal() {
-        // alert('called');
-        console.log(closeModal);
-        closeModal.click();
-        //
-    }
-
+    // function onCloseModal() {
+    //     // alert('called');
+    //     console.log(closeModal);
+    //     closeModal.click();
+    //     //
+    // }
 </script>
 
 <Page>
@@ -101,7 +124,7 @@ import {
         class="btn btn-primary btn-sm"
         data-toggle="modal"
         data-target="#modal-progtype"
-        on:click|preventDefault={clearForm}
+        on:click|preventDefault={reset}
     >
         <i class="fa fa-plus" /> Program Type
     </button>
@@ -146,7 +169,7 @@ import {
                             <a
                                 href={null}
                                 on:click|preventDefault={() =>
-                                    removeRow(programType)}
+                                    remove(programType)}
                             >
                                 <i class="fa fa-trash text-red" />
                             </a>
@@ -157,11 +180,7 @@ import {
         </table>
     </div>
 
-    <Modal
-        id="modal-progtype"
-        on:submit={callStore}
-        on:setRef={(ref) => (closeModal = ref.detail)}
-    >
+    <Modal id="modal-progtype" on:submit={save}>
         <span slot="title">Program Type</span>
 
         <div class="col-md-12" slot="content">
@@ -211,7 +230,7 @@ import {
         </div>
 
         <button type="submit" class="btn btn-primary" slot="storeButton">
-            <i class="fa fa-save" /> &nbsp; {mode == "create"
+            <i class="fa fa-save" /> &nbsp; {$mode == "create"
                 ? "Add Program Type"
                 : "Update Program Type"}
         </button>
