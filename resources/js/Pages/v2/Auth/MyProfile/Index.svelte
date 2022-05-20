@@ -10,6 +10,18 @@
         page,
         inertia,
         Layout,
+        initForm,
+        selectRow,
+        onSelectRow,
+        save,
+        remove,
+        onCreate,
+        onUpdate,
+        onRemove,
+        getMode,
+        reset,
+        onReset,
+        update,
     } from "nodejs-svelte-crud-helper";
     export const layout = Layout;
 </script>
@@ -20,7 +32,24 @@
     //my_documents
     export let auth;
     export let types;
-    // export let csrf;
+
+    let resource = "/my-profile/";
+    let form = useForm({
+        first_name: auth.first_name,
+        middle_name: auth.middle_name,
+        last_name: auth.last_name,
+        gender: auth.gender,
+        profession: auth.profession,
+        highest_qualification: auth.highest_qualification,
+        address: auth.address,
+        date_of_birth: auth.date_of_birth,
+        phone: auth.phone,
+        email: auth.email,
+    });
+
+    onUpdate((data) => {
+        $form.put(resource + data.id);
+    });
 </script>
 
 <section class="content-header">
@@ -121,7 +150,7 @@
                     <div class="tab-pane active" id="biodata">
                         <form
                             class="form-horizontal"
-                            action="../utility/updatebio"
+                            on:submit|preventDefault={update(auth)}
                             method="post"
                         >
                             <div class="row">
@@ -139,7 +168,7 @@
                                             class="form-control"
                                             name="FirstName"
                                             id="inputName"
-                                            value="Alex"
+                                            bind:value={$form.first_name}
                                             placeholder="First Name"
                                             required=""
                                         />
@@ -155,7 +184,7 @@
                                             class="form-control"
                                             name="MiddleName"
                                             id="inputName"
-                                            value=""
+                                            bind:value={$form.middle_name}
                                             placeholder="Middle Name"
                                         />
                                     </div>
@@ -171,7 +200,7 @@
                                             class="form-control"
                                             name="LastName"
                                             id="inputName"
-                                            value="Akamukali"
+                                            bind:value={$form.last_name}
                                             placeholder="Last Name"
                                             required=""
                                         />
@@ -195,6 +224,7 @@
                                                     type="radio"
                                                     name="Gender"
                                                     value="M"
+                                                    bind:group={$form.gender}
                                                     class="flat-green"
                                                 /> Male
                                             </label>
@@ -204,6 +234,7 @@
                                                     type="radio"
                                                     name="Gender"
                                                     value="F"
+                                                    bind:group={$form.gender}
                                                     class="flat-green"
                                                 /> Female
                                             </label>
@@ -223,7 +254,7 @@
                                             class="form-control"
                                             name="Profession"
                                             id="inputName"
-                                            value=""
+                                            bind:value={$form.profession}
                                             placeholder="e.g : Business Analyst"
                                             required=""
                                         />
@@ -242,7 +273,7 @@
                                             name="Education"
                                             id="inputName"
                                             placeholder=""
-                                            value=""
+                                            bind:value={$form.highest_qualification}
                                             required=""
                                         />
                                     </div>
@@ -259,7 +290,7 @@
                                             name="Address"
                                             id="inputName"
                                             placeholder=""
-                                            value=""
+                                            bind:value={$form.address}
                                             required=""
                                         />
                                     </div>
@@ -282,11 +313,11 @@
                                                 <i class="fa fa-calendar" />
                                             </div>
                                             <input
-                                                type="text"
+                                                type="date"
                                                 class="form-control pull-right datepicker"
                                                 placeholder="Click to set date"
                                                 name="DOB"
-                                                value=""
+                                                bind:value={$form.date_of_birth}
                                             />
                                         </div>
                                     </div>
@@ -303,7 +334,7 @@
                                             class="form-control"
                                             name="Phone"
                                             id="inputName"
-                                            value=""
+                                            bind:value={$form.phone}
                                             placeholder=""
                                             data-inputmask="'mask': ['999-999-9999 [x99999]', '+999 99 99 9999[9] 999']"
                                             data-mask=""
@@ -318,11 +349,13 @@
                                             ></label
                                         >
                                         <input
-                                            type="text"
+                                            type="email"
+                                            readonly
+                                            disabled
                                             class="form-control"
                                             id="inputName"
-                                            value="alex.akamukali@proinsight.ca"
-                                            disabled=""
+                                            bind:value={$form.email}
+
                                         />
                                     </div>
                                 </div>

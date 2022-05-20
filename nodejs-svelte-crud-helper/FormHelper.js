@@ -68,6 +68,10 @@ export function remove(data){
    resetMode();
 }
 
+export function update(data){
+   callbackUpdateRecord(data);
+}
+
 export function save(){
     if (get(mode) == "create") {
         callbackCreateRecord();

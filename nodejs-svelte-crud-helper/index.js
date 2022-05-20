@@ -3,6 +3,7 @@ import Modal from "./Modal.svelte";
 import Page from "./Page.svelte";
 import MessageNotification from "./MessageNotification.svelte";
 import { notifications, currentRow } from "./GlobalStore.js";
+import Calendly from "./Calendly.svelte";
 import Layout from "./Layout.svelte";
 import {
     onSelectRow,
@@ -16,6 +17,7 @@ import {
     getMode,
     onReset,
     reset,
+    update
 } from "./FormHelper.js";
 
 export const doCalc = (a, b) => {
@@ -43,4 +45,6 @@ export {
     getMode,
     onReset,
     reset,
+    Calendly,
+    update
 };

@@ -60,7 +60,9 @@ class User extends Authenticatable
         'permission_profile_status',
         'permission_is_super_admin',
         'permission_is_mgt_admin',
-        'permission_is_accountant'
+        'permission_is_accountant',
+
+        'profession'
     ];
 
 

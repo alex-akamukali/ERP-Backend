@@ -16,20 +16,17 @@
         onRemove,
         getMode,
         reset,
-        onReset
+        onReset,
     } from "nodejs-svelte-crud-helper";
     export const layout = Layout;
 </script>
 
 <script>
     export let list;
-    // export let csrf;
 
     let mode = getMode();
 
     const resource = "/program-type/";
-
-    // let closeModal = null;
 
     let form = useForm({
         description: "",
@@ -43,12 +40,10 @@
         $form.title = data.title;
         $form.status = data.status;
         $form.id = data.id;
-        // mode = "update";
     });
 
     onCreate(() => {
         $form.post(resource);
-        // mode = "create";
     });
 
     onRemove((data) => {
@@ -59,62 +54,11 @@
 
     onUpdate((data) => {
         $form.put(resource + data.id);
-        // mode = "update";
     });
 
-    onReset(()=>{
+    onReset(() => {
         $form.reset();
     });
-
-    // let form = useForm({
-    //     description: "",
-    //     title: "",
-    //     status: "active",
-    //     id: "0",
-    // });
-
-    // alert(message);
-
-    // function selectRow(data) {
-    //     $form.description = data.description;
-    //     $form.title = data.title;
-    //     $form.status = data.status;
-    //     $form.id = data.id;
-    //     mode = "update";
-    // }
-
-    // function removeRow(data) {
-    //     if (confirm("Do you want to confirm this action?")) {
-    //         $form.delete(resource + data.id);
-    //     }
-    // }
-
-    // function clearForm() {
-    //     $form.reset();
-    //     mode = "create";
-    // }
-
-    // function callStore() {
-    //     if (mode == "create") {
-    //         $form.post(resource);
-    //     } else {
-    //         $form.put(resource + $form.id);
-    //     }
-    // }
-
-    // function onResetMessage() {
-    //     // toastr.success(message);
-    //     message = "";
-    //     $form.clearErrors();
-    //     //  n.....
-    // }
-
-    // function onCloseModal() {
-    //     // alert('called');
-    //     console.log(closeModal);
-    //     closeModal.click();
-    //     //
-    // }
 </script>
 
 <Page>

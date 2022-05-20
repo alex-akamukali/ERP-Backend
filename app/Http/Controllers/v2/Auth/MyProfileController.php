@@ -10,7 +10,7 @@ use App\Repositories\Auth\MyDocumentRepository;
 
 class MyProfileController extends Controller
 {
-    //
+
     private $myProfileRepository = null;
 
     function __construct(MyProfileRepository $myProfileRepository){
@@ -30,7 +30,7 @@ class MyProfileController extends Controller
         $record = $this->myProfileRepository->update($id,$updateRequest->validated());
         return $this->respondWithSuccess("Record updated");
     }
-
+//my-profile
     function destroy($id){
       //$record = $this->myProfileRepository->remove($id);
       return $this->respondWithSuccess("Record removed");
