@@ -27,6 +27,7 @@
         "@inertiajs/inertia-react": "^0.8.0",
         "@inertiajs/inertia-svelte": "^0.8.0",
         "@inertiajs/progress": "^0.2.7",
+        "nodejs-svelte-crud-helper": "file:nodejs-svelte-crud-helper",
         "react-calendly": "^3.0.3",
         "svelte": "^3.48.0"
     }

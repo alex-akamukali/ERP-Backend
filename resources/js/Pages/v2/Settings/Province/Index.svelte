@@ -1,5 +1,5 @@
 <script context="module">
-
+import {doCalc} from "nodejs-svelte-crud-helper";
 import Layout from "../../Auth/Dashboard/Layout.svelte";
     import { useForm,page,inertia } from "@inertiajs/inertia-svelte";
 
@@ -114,6 +114,7 @@ import Layout from "../../Auth/Dashboard/Layout.svelte";
 
         <div class="col-md-12" slot="content">
             <div class="col-md-12">
+                <!-- 9990{doCalc(1,23)} -->
                 <!-- svelte-ignore a11y-label-has-associated-control -->
                 <label class="control-label"
                     >Name <b style="color:red">*</b></label
