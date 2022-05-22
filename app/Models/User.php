@@ -62,7 +62,9 @@ class User extends Authenticatable
         'permission_is_mgt_admin',
         'permission_is_accountant',
 
-        'profession'
+        'profession',
+
+        'is_docusigner'
     ];
 
 
