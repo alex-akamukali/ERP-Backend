@@ -9,6 +9,6 @@
     //export let name;
 </script>
 
-<UserManagement user={data} title="User Profile." currentTab="profile">
+<UserManagement user={data} title="User Profile." currentTab="payment-portal">
     content....
 </UserManagement>

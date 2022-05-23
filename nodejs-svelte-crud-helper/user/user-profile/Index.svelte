@@ -63,31 +63,31 @@
 
                     <div class="col-md-12">
                         <ul class="nav nav-tabs nav-justified">
-                            <li class="active">
+                            <li  class={currentTab == "dashboard"? 'active':''}>
                                 <a
                                     style="border: none"
                                     href="userProfileDashboard">Dashboard</a
                                 >
                             </li>
-                            <li>
+                            <li class={currentTab == "profile"? 'active':''}>
                                 <a
                                     style="border: none"
                                     href="userProfileProfile">Profile</a
                                 >
                             </li>
-                            <li>
+                            <li class={currentTab == "workflow"? 'active':''}>
                                 <a
                                     style="border: none"
                                     href="userProfileWorkflow">Workflow</a
                                 >
                             </li>
-                            <li>
+                            <li class={currentTab == "contracts"? 'active':''}>
                                 <a
                                     style="border: none"
                                     href="userProfileContracts">Contracts</a
                                 >
                             </li>
-                            <li>
+                            <li class={currentTab == "payment-portal"? 'active':''}>
                                 <a
                                     style="border: none"
                                     href="userProfilePayments">Payment Portal</a
@@ -179,5 +179,9 @@
         color: #073367;
         text-transform: uppercase;
         font-weight: 800;
+    }
+
+    .active a{
+        color: #555 !important;
     }
 </style>
