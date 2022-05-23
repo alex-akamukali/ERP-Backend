@@ -1,5 +1,6 @@
 <script context="module">
     import { createEventDispatcher } from "svelte";
+    import {inertia} from "@inertiajs/inertia-svelte";
 </script>
 
 <script>
@@ -50,9 +51,8 @@
                 </label>
                 <ul class="dropdown-menu" role="menu" style="z-index:9000">
                     <li>
-                        <a
-                            href="userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae"
-                        >
+                        <a use:inertia  href={`/user-management/${data.id}`}>
+
                             <i class="fa fa-file text-info" /> View Profile
                         </a>
                     </li>

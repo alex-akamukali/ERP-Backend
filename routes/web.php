@@ -197,3 +197,5 @@ Route::resource("employment-contract",\App\Http\Controllers\v2\DocumentLibrary\O
 Route::resource("docusign",\App\Http\Controllers\v2\Auth\DocusignController::class)->middleware(["auth"]);
 
 Route::resource("user-permission",\App\Http\Controllers\v2\Auth\UserPermissionController::class)->middleware(["auth"]);
+
+Route::resource("user-management",\App\Http\Controllers\v2\Auth\UserManagementController::class)->middleware(["auth"]);

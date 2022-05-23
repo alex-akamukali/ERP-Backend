@@ -1,9 +1,11 @@
 <script context="module">
     // import Layout from "../Dashboard/Layout.svelte";
-    import { page, useForm } from "@inertiajs/inertia-svelte";
-    import Pagination from "../../components/Pagination.svelte";
+    // import { page, useForm } from "@inertiajs/inertia-svelte";
+    // import Pagination from "../../components/Pagination.svelte";
     import {createEventDispatcher} from "svelte";
-    import Modal from "../../components/Modal.svelte";
+    // import Modal from "../../components/Modal.svelte";
+    import {Layout,Modal,useForm} from "nodejs-svelte-crud-helper";
+    import Pagination from "nodejs-svelte-crud-helper/Pagination.svelte";
 
     import UserManagementRow from "nodejs-svelte-crud-helper/UserManagementRow.svelte";
     import UserManagementHead from "nodejs-svelte-crud-helper/UserManagementHead.svelte";
