@@ -79,7 +79,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $appends = ['created_ago'];
+    protected $appends = ['created_ago','is_docusigner_validated'];
 
     /**
      * The attributes that should be cast.
@@ -106,6 +106,17 @@ class User extends Authenticatable
 
     function scopeCandidates($query){
         return $query->where('account_type',self::ACCOUNT_TYPE_CANDIDATE);
+    }
+
+    function scopeStatus($query,$status){
+        return $query->where('account_status',$status);
+    }
+
+    function getIsDocusignerValidatedAttribute(){
+        if (empty($this->is_docusigner)){
+          return "no";
+        }
+        return $this->is_docusigner;
     }
 
     // function getskillsAttribute(){

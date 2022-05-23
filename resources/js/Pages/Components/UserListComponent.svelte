@@ -4,6 +4,10 @@
     import Pagination from "../../components/Pagination.svelte";
     import {createEventDispatcher} from "svelte";
     import Modal from "../../components/Modal.svelte";
+
+    import UserManagementRow from "nodejs-svelte-crud-helper/UserManagementRow.svelte";
+    import UserManagementHead from "nodejs-svelte-crud-helper/UserManagementHead.svelte";
+
     // export const layout = Layout;
 </script>
 
@@ -92,140 +96,11 @@
                                 <div class="col-sm-12">
                                     <table class="table  table-striped">
                                         <thead>
-                                            <!-- svelte-ignore a11y-no-redundant-roles -->
-                                            <tr role="row"
-                                                ><th
-                                                    class="sorting_asc"
-                                                    tabindex="0"
-                                                    aria-controls="DataTables_Table_0"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-sort="ascending"
-                                                    aria-label="Name: activate to sort column descending"
-                                                    >Name</th
-                                                ><th
-                                                    class="sorting"
-                                                    tabindex="0"
-                                                    aria-controls="DataTables_Table_0"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-label="Email: activate to sort column ascending"
-                                                    >Email</th
-                                                ><th
-                                                    class="sorting"
-                                                    tabindex="0"
-                                                    aria-controls="DataTables_Table_0"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-label="Program: activate to sort column ascending"
-                                                    >Program</th
-                                                ><th
-                                                    class="sorting"
-                                                    tabindex="0"
-                                                    aria-controls="DataTables_Table_0"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-label="Date: activate to sort column ascending"
-                                                    >Created</th
-                                                ><th
-                                                    class="sorting"
-                                                    tabindex="0"
-                                                    aria-controls="DataTables_Table_0"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-label="Status: activate to sort column ascending"
-                                                    >Status</th
-                                                ><th
-                                                    class="sorting"
-                                                    tabindex="0"
-                                                    aria-controls="DataTables_Table_0"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-label=" &amp;nbsp; : activate to sort column ascending"
-                                                >
-                                                    Account-Type
-                                                </th><th
-                                                    class="sorting"
-                                                    tabindex="0"
-                                                    aria-controls="DataTables_Table_0"
-                                                    rowspan="1"
-                                                    colspan="1"
-                                                    aria-label=" &amp;nbsp; : activate to sort column ascending"
-                                                >
-                                                    Actions
-                                                </th></tr
-                                            >
+                                            <UserManagementHead template="management" />
                                         </thead>
                                         <tbody>
-                                            <!-- svelte-ignore a11y-no-redundant-roles -->
                                             {#each users.data as user}
-                                                <tr role="row" class="odd">
-                                                    <td class="sorting_1">
-                                                        {user.name}
-                                                    </td>
-                                                    <td>
-                                                        {user.email}
-                                                    </td>
-                                                    <td />
-                                                    <td> {user.created_ago}</td>
-
-                                                    <!-- svelte-ignore a11y-label-has-associated-control -->
-                                                    <td>
-                                                        <label
-                                                            class="text-success"
-                                                            id="acctstc2aa1951a32f33b047954754f0ae"
-                                                        >
-                                                            {user.account_status}
-                                                        </label></td
-                                                    >
-                                                    <td>
-                                                        {user.account_type}
-                                                    </td>
-                                                    <td>
-                                                        <div class="btn-group">
-                                                            <!-- svelte-ignore a11y-label-has-associated-control -->
-                                                            <label
-                                                                class="dropdown-toggle"
-                                                                data-toggle="dropdown"
-                                                            >
-                                                                ... <!-- <span class="caret"></span> -->
-                                                                <span
-                                                                    class="sr-only"
-                                                                    >Toggle
-                                                                    Dropdown</span
-                                                                >
-                                                            </label>
-                                                            <ul
-                                                                class="dropdown-menu"
-                                                                role="menu"
-                                                                style="z-index:9000"
-                                                            >
-                                                                <li>
-                                                                    <a
-                                                                        href="userProfileDashboard?scand=c2aa1951a32f33b047954754f0ae"
-                                                                    >
-                                                                        <i
-                                                                            class="fa fa-file text-info"
-                                                                        /> View Profile
-                                                                    </a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a
-                                                                        href="null"
-                                                                        usx="c2aa1951a32f33b047954754f0ae"
-                                                                        on:click|preventDefault={()=>sendReInvitation(user)}
-
-                                                                    >
-                                                                        <i
-                                                                            class="fa fa-refresh text-info"
-                                                                        /> Re-invite</a
-                                                                    >
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                              <UserManagementRow template="management" data={user} on:sendReInvitation={(e)=>sendReInvitation(e.detail)} />
                                             {/each}
                                         </tbody>
                                     </table>

@@ -388,7 +388,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="docusignsigners">
+                            <a use:inertia href="/docusign" >
                                 <i class="fa fa-edit text-aqua" /> DocuSign Signers
                             </a>
                         </li>

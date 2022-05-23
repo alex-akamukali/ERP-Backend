@@ -193,3 +193,5 @@ Route::resource("resume-walkthrough",\App\Http\Controllers\v2\Workflow\JobProfil
 Route::resource("onboarding",\App\Http\Controllers\v2\Workflow\Onboarding\OnboardingController::class)->middleware(["auth"]);
 
 Route::resource("olade-contract",\App\Http\Controllers\v2\DocumentLibrary\OladeContractController::class)->middleware(["auth"]);
+
+Route::resource("docusign",\App\Http\Controllers\v2\Auth\DocusignController::class)->middleware(["auth"]);
