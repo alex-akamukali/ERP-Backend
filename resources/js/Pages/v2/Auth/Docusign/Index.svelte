@@ -1,10 +1,9 @@
 <script context="module">
 
-    import UserManagementRow from "nodejs-svelte-crud-helper/UserManagementRow.svelte";
-    import UserManagementHead from "nodejs-svelte-crud-helper/UserManagementHead.svelte";
     import {Page,Layout,update,onUpdate,useForm} from "nodejs-svelte-crud-helper";
     import Pagination from "nodejs-svelte-crud-helper/Pagination.svelte";
     import {onDestroy} from "svelte";
+    import UserDocuSignManagement from "nodejs-svelte-crud-helper/user/user-management-docusign/Index.svelte";
 
     export const layout = Layout;
 </script>
@@ -42,17 +41,7 @@
 
         <div class="row">
             <div class="col-sm-12">
-                <table class="table  table-striped">
-                    <thead>
-                        <UserManagementHead template="docusign" />
-                    </thead>
-                    <tbody>
-                        {#each list.data as user}
-                        <!-- e.detail -->
-                          <UserManagementRow template="docusign" data={user} on:changeDocusignPermission={(e)=>(changeDocusignPermission(e.detail))} />
-                        {/each}
-                    </tbody>
-                </table>
+                <UserDocuSignManagement list={list.data} on:changeDocusignPermission={(e)=>(changeDocusignPermission(e.detail))} />
             </div>
         </div>
         <div class="row">
