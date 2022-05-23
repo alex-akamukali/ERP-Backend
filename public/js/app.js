@@ -5931,13 +5931,14 @@ function create_if_block_1(ctx) {
   return {
     c: function c() {
       th = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("th");
-      th.textContent = "Has Docusign Right?";
+      th.textContent = "Apply Docusign Permission";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(th, "class", "sorting");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(th, "tabindex", "0");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(th, "aria-controls", "DataTables_Table_0");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(th, "rowspan", "1");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(th, "colspan", "1");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(th, "aria-label", "Program: activate to sort column ascending");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(th, "text-align", "right");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, th, anchor);
@@ -5946,7 +5947,7 @@ function create_if_block_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(th);
     }
   };
-} // (82:4) {#if template == "role-permission"}
+} // (83:4) {#if template == "role-permission"}
 
 
 function create_if_block(ctx) {
@@ -6347,16 +6348,12 @@ function create_if_block_1(ctx) {
 function create_if_block(ctx) {
   var td;
   var input;
-  var t0;
-  var t1;
   var mounted;
   var dispose;
   return {
     c: function c() {
       td = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("td");
       input = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(is_docusigner);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input, "type", "checkbox");
       input.__value = "yes";
       input.value = input.__value;
@@ -6369,6 +6366,7 @@ function create_if_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td, "rowspan", "1");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td, "colspan", "1");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td, "aria-label", "Program: activate to sort column ascending");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(td, "text-align", "right");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, td, anchor);
@@ -6376,8 +6374,6 @@ function create_if_block(ctx) {
       input.checked = ~
       /*data*/
       ctx[0].is_docusigner_validated.indexOf(input.__value);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td, t0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(td, t1);
 
       if (!mounted) {
         dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(input, "change",

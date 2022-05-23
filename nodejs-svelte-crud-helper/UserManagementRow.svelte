@@ -80,10 +80,11 @@
             rowspan="1"
             colspan="1"
             aria-label="Program: activate to sort column ascending"
+            style="text-align: right;"
         >
        <input type="checkbox" bind:group={data.is_docusigner_validated} value="yes"  on:change={(e)=>dispatch("changeDocusignPermission",{checked:e.target.checked,data})} />
        <!-- bind:group={is_docusigner} -->
-       {is_docusigner}
+       <!-- {is_docusigner} -->
     </td>
     {/if}
 </tr>

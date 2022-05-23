@@ -74,7 +74,8 @@
             rowspan="1"
             colspan="1"
             aria-label="Program: activate to sort column ascending"
-            >Has Docusign Right?</th
+            style="text-align: right;"
+            >Apply Docusign Permission</th
         >
     {/if}
 
