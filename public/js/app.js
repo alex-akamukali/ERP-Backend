@@ -25600,7 +25600,7 @@ function create_title_slot(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
     }
   };
-} // (39:4) 
+} // (41:4) 
 
 
 function create_content_slot(ctx) {
@@ -25765,7 +25765,9 @@ function instance($$self, $$props, $$invalidate) {
     // alert(checked);
     // alert(JSON.stringify(data));
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.is_docusigner = checked ? "yes" : "no", $form);
-    $form.put("/docusign/" + data.id);
+    $form.put("/docusign/" + data.id, {
+      preserveScroll: true
+    });
   }
 
   (0,svelte__WEBPACK_IMPORTED_MODULE_2__.onDestroy)(function () {}); // alert('des');
@@ -30424,7 +30426,7 @@ function create_title_slot(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(span);
     }
   };
-} // (37:4) 
+} // (39:4) 
 
 
 function create_content_slot(ctx) {
@@ -30592,7 +30594,9 @@ function instance($$self, $$props, $$invalidate) {
     // alert(JSON.stringify(data));
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.value = value ? 1 : 0, $form);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.key = key, $form);
-    $form.put("/user-permission/" + data.id);
+    $form.put("/user-permission/" + data.id, {
+      preserveScroll: true
+    });
   }
 
   var changeUserPermission_handler = function changeUserPermission_handler(e) {

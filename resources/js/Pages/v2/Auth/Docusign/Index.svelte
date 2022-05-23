@@ -20,7 +20,9 @@
         // alert(checked);
         // alert(JSON.stringify(data));
         $form.is_docusigner = checked? "yes":"no";
-        $form.put("/docusign/" + data.id);
+        $form.put("/docusign/" + data.id,{
+            preserveScroll: true,
+        });
     }
 
     onDestroy(()=>{
