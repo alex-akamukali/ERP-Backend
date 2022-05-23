@@ -138,31 +138,31 @@ class User extends Authenticatable
     function getPermissionProfileStatusValidatedAttribute()
     {
         if (empty($this->permission_profile_status)) {
-            return "no";
+            return "0";
         }
-        return $this->permission_profile_status;
+        return $this->permission_profile_status . "";
     }
 
     function getPermissionIsSuperAdminValidatedAttribute()
     {
         if (empty($this->permission_is_super_admin)) {
-            return "no";
+            return "0";
         }
-        return $this->permission_is_super_admin;
+        return $this->permission_is_super_admin . "";
     }
     function getPermissionIsMgtAdminValidatedAttribute()
     {
         if (empty($this->permission_is_mgt_admin)) {
-            return "no";
+            return "0";
         }
-        return $this->permission_is_mgt_admin;
+        return $this->permission_is_mgt_admin . "";
     }
     function getPermissionIsAccountantValidatedAttribute()
     {
         if (empty($this->permission_is_accountant)) {
-            return "no";
+            return "0";
         }
-        return $this->permission_is_accountant;
+        return $this->permission_is_accountant . "";
     }
 
     // function getskillsAttribute(){

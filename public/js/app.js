@@ -7132,7 +7132,7 @@ function create_each_block(ctx) {
       t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td0, "class", "sorting_1");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "checkbox");
-      input0.__value = "yes";
+      input0.__value = "1";
       input0.value = input0.__value;
       /*$$binding_groups*/
 
@@ -7147,7 +7147,7 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td2, "aria-label", "Program: activate to sort column ascending");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(td2, "text-align", "center");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "type", "checkbox");
-      input1.__value = "yes";
+      input1.__value = "1";
       input1.value = input1.__value;
       /*$$binding_groups*/
 
@@ -7162,7 +7162,7 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td3, "aria-label", "Program: activate to sort column ascending");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(td3, "text-align", "center");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "type", "checkbox");
-      input2.__value = "yes";
+      input2.__value = "1";
       input2.value = input2.__value;
       /*$$binding_groups*/
 
@@ -7177,7 +7177,7 @@ function create_each_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(td4, "aria-label", "Program: activate to sort column ascending");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(td4, "text-align", "center");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input3, "type", "checkbox");
-      input3.__value = "yes";
+      input3.__value = "1";
       input3.value = input3.__value;
       /*$$binding_groups*/
 
@@ -30583,7 +30583,7 @@ function instance($$self, $$props, $$invalidate) {
         data = _ref3.data;
     // alert(checked);
     // alert(JSON.stringify(data));
-    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.value = value ? "yes" : "no", $form);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.value = value ? 1 : 0, $form);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.key = key, $form);
     $form.put("/user-permission/" + data.id);
   }

@@ -20,7 +20,7 @@
     function changeUserPermission({key,value,data}){
         // alert(checked);
         // alert(JSON.stringify(data));
-        $form.value = value? "yes":"no";
+        $form.value = value? 1 : 0;
         $form.key = key;
         $form.put("/user-permission/" + data.id);
     }

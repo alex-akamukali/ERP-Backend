@@ -88,7 +88,7 @@
                     <input
                         type="checkbox"
                         bind:group={user.permission_profile_status_validated}
-                        value="yes"
+                        value="1"
                         on:change={(e) =>
                             dispatch("changeUserPermission", {
                                 value: e.target.checked,
@@ -112,7 +112,7 @@
                     <input
                         type="checkbox"
                         bind:group={user.permission_is_super_admin_validated}
-                        value="yes"
+                        value="1"
                         on:change={(e) =>
                             dispatch("changeUserPermission", {
                                 value: e.target.checked,
@@ -133,7 +133,7 @@
                     <input
                         type="checkbox"
                         bind:group={user.permission_is_mgt_admin_validated}
-                        value="yes"
+                        value="1"
                         on:change={(e) =>
                             dispatch("changeUserPermission", {
                                 value: e.target.checked,
@@ -154,7 +154,7 @@
                     <input
                         type="checkbox"
                         bind:group={user.permission_is_accountant_validated}
-                        value="yes"
+                        value="1"
                         on:change={(e) =>
                             dispatch("changeUserPermission", {
                                 value: e.target.checked,
