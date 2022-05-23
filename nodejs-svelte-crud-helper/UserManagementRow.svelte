@@ -51,7 +51,7 @@
                 </label>
                 <ul class="dropdown-menu" role="menu" style="z-index:9000">
                     <li>
-                        <a use:inertia  href={`/user-management/${data.id}`}>
+                        <a use:inertia  href={`/user-management-dashboard/${data.id}`}>
 
                             <i class="fa fa-file text-info" /> View Profile
                         </a>

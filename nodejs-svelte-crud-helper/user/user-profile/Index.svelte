@@ -23,9 +23,18 @@
 
 <section class="content">
     <div class="row">
+
+
+
         <div class="col-md-12">
             <div class="box">
                 <div class="row">
+
+                    <div class="col-md-12" style="text-align: right;">
+                        <button style="margin: 11px;" class="btn btn-sm btn-primary" on:click={()=>window.history.back()}>Back</button>
+                    </div>
+
+
                     <div class="col-md-12">
                         <img
                             id="myProfileImage"
