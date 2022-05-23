@@ -286,12 +286,12 @@
                     </a>
                     <ul class="treeview-menu">
                         <li>
-                            <a href="/olade-contract" use:inertia>
+                            <a href="/" use:inertia>
                                 <i class="fa fa-file" /> Olade Contract</a
                             >
                         </li>
                         <li>
-                            <a href={"/"}>
+                            <a use:inertia href={"/employment-contract"}>
                                 <i class="fa fa-file-o" /> Employment Contract</a
                             >
                         </li>

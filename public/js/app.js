@@ -3839,6 +3839,9 @@ function create_fragment(ctx) {
   var inertia_action_3;
   var t68;
   var li22;
+  var a22;
+  var a22_href_value;
+  var inertia_action_4;
   var t70;
   var li23;
   var t72;
@@ -3857,32 +3860,32 @@ function create_fragment(ctx) {
   var ul8;
   var li29;
   var a29;
-  var inertia_action_4;
+  var inertia_action_5;
   var t88;
   var li30;
   var a30;
   var a30_href_value;
-  var inertia_action_5;
+  var inertia_action_6;
   var t90;
   var li31;
   var a31;
-  var inertia_action_6;
+  var inertia_action_7;
   var t92;
   var li32;
   var a32;
-  var inertia_action_7;
+  var inertia_action_8;
   var t94;
   var li33;
   var a33;
-  var inertia_action_8;
+  var inertia_action_9;
   var t96;
   var li34;
   var a34;
-  var inertia_action_9;
+  var inertia_action_10;
   var t98;
   var li35;
   var a35;
-  var inertia_action_10;
+  var inertia_action_11;
   var t100;
   var li39;
   var a36;
@@ -3891,11 +3894,11 @@ function create_fragment(ctx) {
   var ul9;
   var li37;
   var a37;
-  var inertia_action_11;
+  var inertia_action_12;
   var t106;
   var li38;
   var a38;
-  var inertia_action_12;
+  var inertia_action_13;
   var t108;
   var li40;
   var a39;
@@ -4039,7 +4042,8 @@ function create_fragment(ctx) {
       a21.innerHTML = "<i class=\"fa fa-file\"></i> Olade Contract";
       t68 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
-      li22.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file-o\"></i> Employment Contract</a>");
+      a22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a22.innerHTML = "<i class=\"fa fa-file-o\"></i> Employment Contract";
       t70 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       li23.innerHTML = "<a href=\"".concat("/", "\" class=\"svelte-9fvhrt\"><i class=\"fa fa-file text-green\"></i> Invoices</a>");
@@ -4197,9 +4201,11 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li20, "class", "treeview svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a20, "href", a20_href_value = "/");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a20, "class", "svelte-9fvhrt");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a21, "href", "/olade-contract");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a21, "href", "/");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a21, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li21, "class", "svelte-9fvhrt");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a22, "href", a22_href_value = "/employment-contract");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a22, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li22, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li23, "class", "svelte-9fvhrt");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li24, "class", "svelte-9fvhrt");
@@ -4356,6 +4362,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li21, a21);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul7, t68);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul7, li22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li22, a22);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul7, t70);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul7, li23);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul7, t72);
@@ -4427,21 +4434,21 @@ function create_fragment(ctx) {
           preserveScroll: true
         })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_2 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a8, {
           preserveScroll: true
-        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_3 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a21)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_4 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a29, {
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_3 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a21)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_4 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a22)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_5 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a29, {
           preserveScroll: true
-        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_5 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a30, {
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_6 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a30, {
           preserveScroll: true
-        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_6 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a31, {
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_7 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a31, {
           preserveScroll: true
-        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_7 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a32, {
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_8 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a32, {
           preserveScroll: true
-        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_8 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a33, {
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_9 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a33, {
           preserveScroll: true
-        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_9 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a34, {
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_10 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a34, {
           preserveScroll: true
-        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_10 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a35, {
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_11 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a35, {
           preserveScroll: true
-        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_11 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a37)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_12 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a38))];
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_12 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a37)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_13 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__.inertia.call(null, a38))];
         mounted = true;
       }
     },
@@ -31372,7 +31379,7 @@ function create_title_slot(ctx) {
   return {
     c: function c() {
       span = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
-      span.textContent = "Olade Contract Documents";
+      span.textContent = "Employement Contract";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span, "slot", "title");
     },
     m: function m(target, anchor) {
@@ -31793,7 +31800,7 @@ function create_fragment(ctx) {
 }
 
 var layout = _Auth_Dashboard_Layout_svelte__WEBPACK_IMPORTED_MODULE_4__["default"];
-var resource = "/olade-contract/";
+var resource = "/employment-contract/";
 var closeModal = null;
 
 function onCloseModal() {

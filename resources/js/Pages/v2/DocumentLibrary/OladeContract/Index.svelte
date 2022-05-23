@@ -16,7 +16,7 @@
 
     let mode = "create";
 
-    const resource = "/olade-contract/";
+    const resource = "/employment-contract/";
 
     let closeModal = null;
 
@@ -79,7 +79,7 @@
 
 
 <Page>
-    <span slot="title">Olade Contract Documents</span>
+    <span slot="title">Employement Contract</span>
     <button
         slot="createButton"
         class="btn btn-primary btn-sm"
