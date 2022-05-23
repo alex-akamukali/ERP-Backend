@@ -47,7 +47,7 @@ class DocusignController extends Controller
 
     function update($id,UpdateRequest $updateRequest){
         $record = $this->docusignRepository->update($id,$updateRequest->validated());
-        return $this->respondWithSuccess("Record updated");
+        return $this->respondWithSuccess("Docusign Permission Updated");
     }
 
     function destroy($id){

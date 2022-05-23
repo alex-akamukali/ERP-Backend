@@ -79,7 +79,19 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $appends = ['created_ago','is_docusigner_validated'];
+    protected $appends = [
+        'created_ago',
+        'is_docusigner_validated',
+        'permission_profile_status_validated',
+        'permission_is_super_admin_validated',
+        'permission_is_mgt_admin_validated',
+        'permission_is_accountant_validated'
+    ];
+
+    // 'permission_profile_status',
+    // 'permission_is_super_admin',
+    // 'permission_is_mgt_admin',
+    // 'permission_is_accountant',
 
     /**
      * The attributes that should be cast.
@@ -100,23 +112,57 @@ class User extends Authenticatable
     const ACCOUNT_STATUS_INACTIVE = 'inactive';
 
 
-    function getCreatedAgoAttribute(){
+    function getCreatedAgoAttribute()
+    {
         return $this->created_at->diffForHumans();
     }
 
-    function scopeCandidates($query){
-        return $query->where('account_type',self::ACCOUNT_TYPE_CANDIDATE);
+    function scopeCandidates($query)
+    {
+        return $query->where('account_type', self::ACCOUNT_TYPE_CANDIDATE);
     }
 
-    function scopeStatus($query,$status){
-        return $query->where('account_status',$status);
+    function scopeStatus($query, $status)
+    {
+        return $query->where('account_status', $status);
     }
 
-    function getIsDocusignerValidatedAttribute(){
-        if (empty($this->is_docusigner)){
-          return "no";
+    function getIsDocusignerValidatedAttribute()
+    {
+        if (empty($this->is_docusigner)) {
+            return "no";
         }
         return $this->is_docusigner;
+    }
+
+    function getPermissionProfileStatusValidatedAttribute()
+    {
+        if (empty($this->permission_profile_status)) {
+            return "no";
+        }
+        return $this->permission_profile_status;
+    }
+
+    function getPermissionIsSuperAdminValidatedAttribute()
+    {
+        if (empty($this->permission_is_super_admin)) {
+            return "no";
+        }
+        return $this->permission_is_super_admin;
+    }
+    function getPermissionIsMgtAdminValidatedAttribute()
+    {
+        if (empty($this->permission_is_mgt_admin)) {
+            return "no";
+        }
+        return $this->permission_is_mgt_admin;
+    }
+    function getPermissionIsAccountantValidatedAttribute()
+    {
+        if (empty($this->permission_is_accountant)) {
+            return "no";
+        }
+        return $this->permission_is_accountant;
     }
 
     // function getskillsAttribute(){
@@ -126,7 +172,5 @@ class User extends Authenticatable
     //    }
     //    return $val;
     // }
-
-
 
 }

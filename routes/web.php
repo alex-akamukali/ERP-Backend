@@ -195,3 +195,5 @@ Route::resource("onboarding",\App\Http\Controllers\v2\Workflow\Onboarding\Onboar
 Route::resource("olade-contract",\App\Http\Controllers\v2\DocumentLibrary\OladeContractController::class)->middleware(["auth"]);
 
 Route::resource("docusign",\App\Http\Controllers\v2\Auth\DocusignController::class)->middleware(["auth"]);
+
+Route::resource("user-permission",\App\Http\Controllers\v2\Auth\UserPermissionController::class)->middleware(["auth"]);

@@ -35,7 +35,7 @@
                 rowspan="1"
                 colspan="1"
                 aria-label="Program: activate to sort column ascending"
-                style="text-align: right;">Apply Docusign Permission</th
+                style="text-align: center;">Apply Docusign Permission</th
             >
         </tr>
     </thead>
@@ -57,7 +57,7 @@
                     rowspan="1"
                     colspan="1"
                     aria-label="Program: activate to sort column ascending"
-                    style="text-align: right;"
+                    style="text-align: center;"
                 >
                     <input
                         type="checkbox"

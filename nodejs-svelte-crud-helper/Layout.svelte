@@ -383,7 +383,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li>
-                            <a href="roles">
+                            <a href="/user-permission" use:inertia>
                                 <i class="fa fa-wrench text-aqua" /> Assign Roles
                             </a>
                         </li>
