@@ -16,9 +16,9 @@ class UserManagementDashboardController extends Controller
     }
 
     function index(){
-        $list = $this->userManagementDashboardRepository->fetch(request()->all())->get();
+        // $list = $this->userManagementDashboardRepository->fetch(request()->all())->get();
         return inertia()->render("v2/Auth/UserManagementDashboard/Index",[
-            "list"=>$list
+            "list"=>[]
         ]);
     }
 
@@ -35,8 +35,10 @@ class UserManagementDashboardController extends Controller
 
     function show($id){
         $data = $this->userManagementDashboardRepository->fetchById($id);
+        $report = $this->userManagementDashboardRepository->fetch($id);
         return inertia()->render("v2/Auth/UserManagementDashboard/Show",[
-            "data"=>$data
+            "data"=>$data,
+            "report"=>$report
         ]);
     }
 

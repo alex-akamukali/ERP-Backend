@@ -1,14 +1,27 @@
 <?php
 namespace App\Repositories\Auth;
 use App\Models\User;
+use App\Repositories\Workflow\Assessment\PreEmploymentAssessmentRepository;
 use Illuminate\Support\Facades\Auth;
 
 class UserManagementDashboardRepository
 {
+    private $preEmploymentAssessmentRepository;
 
-    function fetch($filters=[]){
-        $query = User::query();
-        return $query;
+    function __construct(PreEmploymentAssessmentRepository $preEmploymentAssessmentRepository)
+    {
+      $this->preEmploymentAssessmentRepository = $preEmploymentAssessmentRepository;
+    }
+
+
+    function fetch($userId){
+        // $query = User::query();
+        // return $query;
+        $completedPremploymentAssessment = $this->preEmploymentAssessmentRepository->approved($userId)->exists();
+        return [
+            'completedPremploymentAssessment'=>$completedPremploymentAssessment
+        ];
+
     }
 
     function fetchById($id){
@@ -34,6 +47,6 @@ class UserManagementDashboardRepository
         return $record;
     }
 
-    
+
 
 }

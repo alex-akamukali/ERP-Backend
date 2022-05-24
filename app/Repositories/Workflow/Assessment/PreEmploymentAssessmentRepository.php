@@ -11,6 +11,11 @@ class PreEmploymentAssessmentRepository
         return $query;
     }
 
+    function approved($userId){
+       $query = PreEmploymentAssessment::query()->getByUserId($userId)->statusApproved();
+       return $query;
+    }
+
     function fetchById($id){
         $record = PreEmploymentAssessment::query()->find($id);
         return $record;
@@ -34,6 +39,6 @@ class PreEmploymentAssessmentRepository
         return $record;
     }
 
-    
+
 
 }

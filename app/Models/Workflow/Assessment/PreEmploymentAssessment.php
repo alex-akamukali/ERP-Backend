@@ -15,4 +15,31 @@ class PreEmploymentAssessment extends Model
        'scheduled_date',
        'created_by'
     ];
+
+    const STATUS_APPROVED = 'approved';
+    const STATUS_UNAPPROVED = 'unapproved';
+    const STATUSES = [self::STATUS_APPROVED,self::STATUS_UNAPPROVED];
+
+
+    function scopeGetByStatus($query,$status){
+        if (in_array($status,self::STATUSES)){
+          $query = $query->where('status',$status);
+        }
+        return $query;
+    }
+
+    function scopeStatusApproved($query){
+        return $query->getByStatus(self::STATUS_APPROVED);
+    }
+
+    function scopeStatusUnapproved($query){
+        return $query->getByStatus(self::STATUS_UNAPPROVED);
+    }
+
+    function scopeGetByUserId($query,$userId){
+        return $query->where('user_id',$userId);
+    }
+
+
+
 }

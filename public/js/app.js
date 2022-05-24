@@ -31312,7 +31312,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function add_css(target) {
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-55u25c", ".info-box.svelte-55u25c{padding-left:5px}.icon-plate.svelte-55u25c{font-size:27px;display:inline-block;background:#FEF0F1;padding:8px;width:64px;height:64px;position:relative;border-radius:50%;margin-top:3px}.dash-icon.svelte-55u25c{color:#F8989F;margin-top:10px;margin-left:10px}.dash-info.svelte-55u25c{display:inline-block;margin-left:12px}.dash-num.svelte-55u25c{font-size:23px;margin-top:3px}");
-} // (12:0) <UserManagement user={data} title="User Profile." currentTab="dashboard">
+} // (14:0) <UserManagement user={data} title="User Profile." currentTab="dashboard">
 
 
 function create_default_slot(ctx) {
@@ -31373,7 +31373,7 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*$$scope*/
-      2) {
+      4) {
         usermanagement_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -31401,12 +31401,15 @@ var layout = nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_1__.Layout;
 
 function instance($$self, $$props, $$invalidate) {
   var data = $$props.data;
+  var report = $$props.report;
+  console.log(report);
 
   $$self.$$set = function ($$props) {
     if ('data' in $$props) $$invalidate(0, data = $$props.data);
+    if ('report' in $$props) $$invalidate(1, report = $$props.report);
   };
 
-  return [data];
+  return [data, report];
 }
 
 var Show = /*#__PURE__*/function (_SvelteComponent) {
@@ -31421,7 +31424,8 @@ var Show = /*#__PURE__*/function (_SvelteComponent) {
 
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
-      data: 0
+      data: 0,
+      report: 1
     }, add_css);
     return _this;
   }

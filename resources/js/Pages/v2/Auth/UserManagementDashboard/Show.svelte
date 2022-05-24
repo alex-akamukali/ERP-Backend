@@ -6,11 +6,13 @@
 
 <script>
     export let data;
+    export let report;
+    console.log(report);
     //export let name;
 </script>
 
 <UserManagement user={data} title="User Profile." currentTab="dashboard">
-
+<!-- {JSON.stringify(report)} -->
 
 
           <div class="box-body" style="background: #EEF1F6">
