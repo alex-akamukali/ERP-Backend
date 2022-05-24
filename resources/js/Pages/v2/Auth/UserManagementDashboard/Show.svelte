@@ -15,13 +15,16 @@
 <!-- {JSON.stringify(report)} -->
 
 
-          <div class="box-body" style="background: #EEF1F6">
-            <div class="col-md-12">
-                <div class="col-md-6">
+          <div class="box-body" style="background: rgb(238, 241, 246);margin: 0;padding-left: 0;padding-right: 0;">
+            <div class="col-md-12" style="padding: 0;">
+                <div class="col-md-6" style="padding: 0;">
                       <!-- small box -->
-                         <div class="info-box bg-white">
+                         <div class="info-box bg-white" style="min-height: 195px;">
                            <div class="inner">
-                             <h3>Project Management</h3>
+                             <h3 style="padding-top:11px;margin: 0;font-size: 19px;font-weight: bold;margin-bottom: 11px;">
+                                No Job Role Assigned
+                                <!-- Project Management -->
+                             </h3>
 
                              <p>Joined 2022, March 09</p>
                            </div>
@@ -31,7 +34,7 @@
                          </div>
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" style="padding: 0;">
 
               <div class="col-md-6">
 
