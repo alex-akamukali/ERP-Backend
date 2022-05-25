@@ -30,7 +30,8 @@ class Onboarding extends Model
         'start_date',
         'end_date',
         'status',
-        'payroll_manager_id'
+        'payroll_manager_id',
+        'user_id'
 
     ];
 }

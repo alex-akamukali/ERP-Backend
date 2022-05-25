@@ -17,6 +17,7 @@ class JobApplication extends Model
         'job_status',
         'company_name',
         'interview_date',
-        'job_description'
+        'job_description',
+        'status'
     ];
 }
