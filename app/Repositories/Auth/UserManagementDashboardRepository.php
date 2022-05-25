@@ -7,6 +7,11 @@ use App\Repositories\Workflow\Assessment\AssessmentInterviewRepository;
 use App\Repositories\Workflow\Assessment\AssessmentResultRepository;
 use App\Repositories\Workflow\Assessment\PreEmploymentAssessmentRepository;
 use App\Repositories\Workflow\Assessment\ServiceAgreementRepository;
+use App\Repositories\Workflow\JobProfile\MockInterviewRepository;
+use App\Repositories\Workflow\JobProfile\MockInterviewResultRepository;
+use App\Repositories\Workflow\JobProfile\ProfileDiscussionRepository;
+use App\Repositories\Workflow\JobProfile\ProfileLaunchRepository;
+use App\Repositories\Workflow\JobProfile\ResumeWalkthroughRepository;
 use Illuminate\Support\Facades\Auth;
 
 class UserManagementDashboardRepository
@@ -20,7 +25,16 @@ class UserManagementDashboardRepository
         PreEmploymentAssessmentRepository $preEmploymentAssessmentRepository,
         AssessmentResultRepository $assessmentResultRepository,
         AssessmentInterviewRepository $assessmentInterviewRepository,
-        ServiceAgreementRepository $serviceAgreementRepository
+        ServiceAgreementRepository $serviceAgreementRepository,
+
+        MockInterviewRepository $mockInterviewRepository,
+        MockInterviewResultRepository $mockInterviewResultRepository,
+        ProfileDiscussionRepository $profileDiscussionRepository,
+        ProfileLaunchRepository $profileLaunchRepository,
+        ResumeWalkthroughRepository $resumeWalkthroughRepository
+
+
+
     ) {
         $this->preEmploymentAssessmentRepository = $preEmploymentAssessmentRepository;
         $this->assessmentResultRepository = $assessmentResultRepository;
@@ -63,6 +77,15 @@ class UserManagementDashboardRepository
             'progress' => $progresss,
             'progressTotal' => $progressTotal
         ];
+    }
+
+    function getProfileProgress($userId){
+        $progresss = 0;
+        $progressTotal = 0;
+
+
+
+
     }
 
     function fetchById($id)
