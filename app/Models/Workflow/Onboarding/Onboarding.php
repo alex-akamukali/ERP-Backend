@@ -2,12 +2,14 @@
 
 namespace App\Models\Workflow\Onboarding;
 
+use App\Traits\Workflow\Assessment\UseAssessmentTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Onboarding extends Model
 {
     use HasFactory;
+    use UseAssessmentTrait;
 
     protected $fillable = [
         'job_application_id',
