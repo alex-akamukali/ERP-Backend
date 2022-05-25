@@ -20,7 +20,7 @@ trait UseAssessmentTrait{
     }
 
     function scopeStatusUnapproved($query){
-        return $query->getByStatus(static::$STATUS_UNAPPROVED);
+        return $query->getByStatus(static::$STATUS_UNAPPROVED)->orWhereNull('status');
     }
 
     function scopeGetByUserId($query,$userId){
