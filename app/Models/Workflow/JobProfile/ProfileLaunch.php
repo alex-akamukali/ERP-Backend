@@ -15,5 +15,6 @@ class ProfileLaunch extends Model
         'email_password',
         'resume',
         'created_by',
+        'status'
     ];
 }

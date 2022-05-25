@@ -14,6 +14,7 @@ class MockInterviewResult extends Model
         'first_trial',
         'second_trial',
         'created_by',
-        'updated_by'
+        'updated_by',
+        'status'
     ];
 }
