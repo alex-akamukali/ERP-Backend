@@ -16,6 +16,12 @@ class ProfileLaunchRepository
         return $record;
     }
 
+    function approved($userId){
+        $query = ProfileLaunch::query()->getByUserId($userId)->statusApproved();
+        return $query;
+     }
+
+
 
     function update($id,$data){
         $record = ProfileLaunch::query()->find($id);
@@ -34,6 +40,6 @@ class ProfileLaunchRepository
         return $record;
     }
 
-    
+
 
 }

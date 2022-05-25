@@ -16,6 +16,11 @@ class ProfileDiscussionRepository
         return $record;
     }
 
+    function approved($userId){
+        $query = ProfileDiscussion::query()->getByUserId($userId)->statusApproved();
+        return $query;
+     }
+
 
     function update($id,$data){
         $record = ProfileDiscussion::query()->find($id);
@@ -34,6 +39,6 @@ class ProfileDiscussionRepository
         return $record;
     }
 
-    
+
 
 }

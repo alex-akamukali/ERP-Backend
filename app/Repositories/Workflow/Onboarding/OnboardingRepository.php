@@ -16,6 +16,12 @@ class OnboardingRepository
         return $record;
     }
 
+    function approved($userId){
+        $query = Onboarding::query()->getByUserId($userId)->statusApproved();
+        return $query;
+     }
+
+
 
     function update($id,$data){
         $record = Onboarding::query()->find($id);
@@ -34,6 +40,6 @@ class OnboardingRepository
         return $record;
     }
 
-    
+
 
 }

@@ -16,6 +16,12 @@ class MockInterviewRepository
         return $record;
     }
 
+    function approved($userId){
+        $query = MockInterview::query()->getByUserId($userId)->statusApproved();
+        return $query;
+     }
+
+
 
     function update($id,$data){
         $record = MockInterview::query()->find($id);
@@ -34,6 +40,6 @@ class MockInterviewRepository
         return $record;
     }
 
-    
+
 
 }

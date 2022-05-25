@@ -16,6 +16,12 @@ class ResumeWalkthroughRepository
         return $record;
     }
 
+    function approved($userId){
+        $query = ResumeWalkthrough::query()->getByUserId($userId)->statusApproved();
+        return $query;
+     }
+
+
 
     function update($id,$data){
         $record = ResumeWalkthrough::query()->find($id);
@@ -34,6 +40,6 @@ class ResumeWalkthroughRepository
         return $record;
     }
 
-    
+
 
 }

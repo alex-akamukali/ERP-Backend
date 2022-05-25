@@ -16,6 +16,12 @@ class JobApplicationRepository
         return $record;
     }
 
+    function approved($userId){
+        $query = JobApplication::query()->getByUserId($userId)->statusApproved();
+        return $query;
+     }
+
+
 
     function update($id,$data){
         $record = JobApplication::query()->find($id);
@@ -34,6 +40,6 @@ class JobApplicationRepository
         return $record;
     }
 
-    
+
 
 }
