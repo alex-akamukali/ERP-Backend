@@ -45,7 +45,7 @@
                  </div>
 
                    <div class="dash-info">
-                     <div class="dash-num">5/5</div>
+                     <div class="dash-num">{report.assessmentProgress.progress}/{report.assessmentProgress.progressTotal}</div>
                      <span>Assessment</span>
                    </div>
                </div>

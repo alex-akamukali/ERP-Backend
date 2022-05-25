@@ -1,52 +1,94 @@
 <?php
+
 namespace App\Repositories\Auth;
+
 use App\Models\User;
+use App\Repositories\Workflow\Assessment\AssessmentInterviewRepository;
+use App\Repositories\Workflow\Assessment\AssessmentResultRepository;
 use App\Repositories\Workflow\Assessment\PreEmploymentAssessmentRepository;
+use App\Repositories\Workflow\Assessment\ServiceAgreementRepository;
 use Illuminate\Support\Facades\Auth;
 
 class UserManagementDashboardRepository
 {
     private $preEmploymentAssessmentRepository;
+    private $assessmentResultRepository;
+    private $assessmentInterviewRepository;
+    private $serviceAgreementRepository;
 
-    function __construct(PreEmploymentAssessmentRepository $preEmploymentAssessmentRepository)
-    {
-      $this->preEmploymentAssessmentRepository = $preEmploymentAssessmentRepository;
+    function __construct(
+        PreEmploymentAssessmentRepository $preEmploymentAssessmentRepository,
+        AssessmentResultRepository $assessmentResultRepository,
+        AssessmentInterviewRepository $assessmentInterviewRepository,
+        ServiceAgreementRepository $serviceAgreementRepository
+    ) {
+        $this->preEmploymentAssessmentRepository = $preEmploymentAssessmentRepository;
+        $this->assessmentResultRepository = $assessmentResultRepository;
+        $this->assessmentInterviewRepository = $assessmentInterviewRepository;
+        $this->serviceAgreementRepository = $serviceAgreementRepository;
     }
 
 
-    function fetch($userId){
+    function fetch($userId)
+    {
         // $query = User::query();
         // return $query;
-        $completedPremploymentAssessment = $this->preEmploymentAssessmentRepository->approved($userId)->exists();
+        $assessmentProgress = $this->getAssessmentProgresss($userId);
         return [
-            'completedPremploymentAssessment'=>$completedPremploymentAssessment
+            'assessmentProgress' => $assessmentProgress
         ];
-
     }
 
-    function fetchById($id){
+    function getAssessmentProgresss($userId)
+    {
+        $progresss = 0;
+        $progressTotal = 4;
+
+        if ($this->preEmploymentAssessmentRepository->approved($userId)->exists()) {
+            $progresss++;
+        }
+
+        if ($this->assessmentResultRepository->approved($userId)->exists()) {
+            $progresss++;
+        }
+
+        if ($this->assessmentInterviewRepository->approved($userId)->exists()) {
+            $progresss++;
+        }
+        if ($this->serviceAgreementRepository->approved($userId)->exists()) {
+            $progresss++;
+        }
+
+        return [
+            'progress' => $progresss,
+            'progressTotal' => $progressTotal
+        ];
+    }
+
+    function fetchById($id)
+    {
         $record = User::query()->find($id);
         return $record;
     }
 
 
-    function update($id,$data){
+    function update($id, $data)
+    {
         $record = User::query()->find($id);
         $record->update($data);
         return $record;
     }
 
-    function create($data){
+    function create($data)
+    {
         $record = User::create($data);
         return $record;
     }
 
-    function remove($id){
+    function remove($id)
+    {
         $record = User::query()->find($id);
         $record->delete();
         return $record;
     }
-
-
-
 }

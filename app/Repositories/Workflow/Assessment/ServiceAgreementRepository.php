@@ -16,6 +16,12 @@ class ServiceAgreementRepository
         return $record;
     }
 
+    function approved($userId){
+        $query = ServiceAgreement::query()->getByUserId($userId)->statusApproved();
+        return $query;
+     }
+
+
 
     function update($id,$data){
         $record = ServiceAgreement::query()->find($id);
@@ -34,6 +40,6 @@ class ServiceAgreementRepository
         return $record;
     }
 
-    
+
 
 }

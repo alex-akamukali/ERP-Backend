@@ -11,6 +11,12 @@ class AssessmentResultRepository
         return $query;
     }
 
+    function approved($userId){
+        $query = AssessmentResult::query()->getByUserId($userId)->statusApproved();
+        return $query;
+     }
+
+
     function fetchById($id){
         $record = AssessmentResult::query()->find($id);
         return $record;
@@ -34,6 +40,6 @@ class AssessmentResultRepository
         return $record;
     }
 
-    
+
 
 }
