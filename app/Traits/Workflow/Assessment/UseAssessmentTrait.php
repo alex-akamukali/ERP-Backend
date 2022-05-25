@@ -27,4 +27,6 @@ trait UseAssessmentTrait{
         return $query->where('user_id',$userId);
     }
 
+
+
 }

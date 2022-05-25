@@ -21,6 +21,11 @@ class OnboardingRepository
         return $query;
      }
 
+     function getByUserId($userId){
+         $query = Onboarding::query()->getByUserId($userId);
+         return $query;
+     }
+
 
 
     function update($id,$data){

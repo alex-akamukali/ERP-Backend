@@ -7,19 +7,35 @@ use App\Repositories\Workflow\Assessment\AssessmentInterviewRepository;
 use App\Repositories\Workflow\Assessment\AssessmentResultRepository;
 use App\Repositories\Workflow\Assessment\PreEmploymentAssessmentRepository;
 use App\Repositories\Workflow\Assessment\ServiceAgreementRepository;
+use App\Repositories\Workflow\JobApplication\JobApplicationRepository;
 use App\Repositories\Workflow\JobProfile\MockInterviewRepository;
 use App\Repositories\Workflow\JobProfile\MockInterviewResultRepository;
 use App\Repositories\Workflow\JobProfile\ProfileDiscussionRepository;
 use App\Repositories\Workflow\JobProfile\ProfileLaunchRepository;
 use App\Repositories\Workflow\JobProfile\ResumeWalkthroughRepository;
+use App\Repositories\Workflow\Onboarding\OnboardingRepository;
 use Illuminate\Support\Facades\Auth;
 
 class UserManagementDashboardRepository
 {
+    //Assessment
     private $preEmploymentAssessmentRepository;
     private $assessmentResultRepository;
     private $assessmentInterviewRepository;
     private $serviceAgreementRepository;
+
+    //JobProfile
+    private $mockInterviewRepository;
+    private $mockInterviewResultRepository;
+    private $profileDiscussionRepository;
+    private $profileLaunchRepository;
+    private $resumeWalkthroughRepository;
+
+    //Onboarding
+    private $onboardingRepository;
+
+    //JobApplication
+    private $jobApplicationRepository;
 
     function __construct(
         PreEmploymentAssessmentRepository $preEmploymentAssessmentRepository,
@@ -31,15 +47,31 @@ class UserManagementDashboardRepository
         MockInterviewResultRepository $mockInterviewResultRepository,
         ProfileDiscussionRepository $profileDiscussionRepository,
         ProfileLaunchRepository $profileLaunchRepository,
-        ResumeWalkthroughRepository $resumeWalkthroughRepository
+        ResumeWalkthroughRepository $resumeWalkthroughRepository,
 
+        OnboardingRepository $onboardingRepository,
 
+        JobApplicationRepository $jobApplicationRepository
 
     ) {
+        //Assessment
         $this->preEmploymentAssessmentRepository = $preEmploymentAssessmentRepository;
         $this->assessmentResultRepository = $assessmentResultRepository;
         $this->assessmentInterviewRepository = $assessmentInterviewRepository;
         $this->serviceAgreementRepository = $serviceAgreementRepository;
+
+        //JobProfile
+        $this->mockInterviewRepository = $mockInterviewRepository;
+        $this->mockInterviewResultRepository = $mockInterviewResultRepository;
+        $this->profileDiscussionRepository = $profileDiscussionRepository;
+        $this->profileLaunchRepository = $profileLaunchRepository;
+        $this->resumeWalkthroughRepository = $resumeWalkthroughRepository;
+
+        //Onboarding
+        $this->onboardingRepository = $onboardingRepository;
+
+        //JobApplication
+        $this->jobApplicationRepository = $jobApplicationRepository;
     }
 
 
@@ -48,8 +80,12 @@ class UserManagementDashboardRepository
         // $query = User::query();
         // return $query;
         $assessmentProgress = $this->getAssessmentProgresss($userId);
+        $jobProfileProgress = $this->getJobProfileProgress($userId);
+        $onboardingProgress = $this->getOnboardingProgress($userId);
         return [
-            'assessmentProgress' => $assessmentProgress
+            'assessmentProgress' => $assessmentProgress,
+            'jobProfileProgress' => $jobProfileProgress,
+            'onboardingProgress' => $onboardingProgress
         ];
     }
 
@@ -79,13 +115,45 @@ class UserManagementDashboardRepository
         ];
     }
 
-    function getProfileProgress($userId){
+    function getJobProfileProgress($userId)
+    {
         $progresss = 0;
-        $progressTotal = 0;
+        $progressTotal = 5;
 
+        if ($this->mockInterviewRepository->approved($userId)->exists()) {
+            $progresss++;
+        }
+        if ($this->mockInterviewResultRepository->approved($userId)->exists()) {
+            $progresss++;
+        }
+        if ($this->profileDiscussionRepository->approved($userId)->exists()) {
+            $progresss++;
+        }
+        if ($this->profileLaunchRepository->approved($userId)->exists()) {
+            $progresss++;
+        }
+        if ($this->resumeWalkthroughRepository->approved($userId)->exists()) {
+            $progresss++;
+        }
+        return [
+            'progress' => $progresss,
+            'progressTotal' => $progressTotal
+        ];
+    }
 
+    function getOnboardingProgress($userId)
+    {
+        $progresss = 0;
+        $progressTotal = $this->onboardingRepository->getByUserId($userId)->count();
 
+        if ($this->onboardingRepository->approved($userId)) {
+            $progresss++;
+        }
 
+        return [
+            'progress' => $progresss,
+            'progressTotal' => $progressTotal
+        ];
     }
 
     function fetchById($id)
