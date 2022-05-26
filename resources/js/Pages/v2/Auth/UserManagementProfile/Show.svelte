@@ -12,6 +12,8 @@
     export let data;
     export let province;
     export let towncity; //towncity
+    export let programTypes;
+
     let profileForm = useForm({
         first_name:"",
         middle_name:"",
@@ -79,16 +81,16 @@
                   <div class="col-md-12">
                     <div class="col-md-4">
                         <label for="inputName" class="control-label">First Name <b style="color:red">*</b></label>
-                          <input type="text" class="form-control" name="FirstName" id="inputName" value="Chidi" placeholder="First Name" required="">
-                          <input type="hidden" name="Usx" value="c2aa1951a32f33b047954754f0ae">
+                          <input type="text" class="form-control" name="FirstName" id="inputName" bind:value={$profileForm.first_name} placeholder="First Name" required="">
+
                     </div>
                      <div class="col-md-4">
                         <label for="inputName" class="control-label">Middle Name</label>
-                          <input type="text" class="form-control" name="MiddleName" id="inputName" value="" placeholder="Middle Name">
+                          <input type="text" class="form-control" name="MiddleName" id="inputName" bind:value={$profileForm.middle_name} placeholder="Middle Name">
                     </div>
                      <div class="col-md-4">
                         <label for="inputName" class="control-label">Last Name <b style="color:red">*</b></label>
-                          <input type="text" class="form-control" name="LastName" id="inputName" value="Moses" placeholder="Last Name" required="">
+                          <input type="text" class="form-control" name="LastName" id="inputName" bind:value={$profileForm.last_name} placeholder="Last Name" required="">
                     </div>
                   </div>
                 </div>
@@ -99,8 +101,8 @@
                         <label for="inputName" class="control-label">Gender <b style="color:red">*</b></label>
                          <!-- <input type="text" class="form-control" name="Gender" id="inputName" value=""  required > -->
                          <div class="form-control">
-                           <label><input type="radio" name="Gender" value="M" class="flat-green"> Male </label> &nbsp; &nbsp;
-                           <label><input type="radio" name="Gender" value="F" class="flat-green"> Female </label>
+                           <label><input type="radio" name="Gender" bind:group={$profileForm.gender} value="M" class="flat-green"> Male </label> &nbsp; &nbsp;
+                           <label><input type="radio" name="Gender" bind:group={$profileForm.gender} value="F" class="flat-green"> Female </label>
                          </div>
                     </div>
 
@@ -112,9 +114,9 @@
                   -->
 
                     <div class="col-md-4">
-                        <label for="inputName" class="control-label">Highest Qualification  <b style="color:red">*</b></label>
+                        <label for="inputName"  class="control-label">Highest Qualification  <b style="color:red">*</b></label>
                          <!-- <input type="text" class="form-control" name="Education" id="inputName" placeholder="" value="Under Graduate" required > -->
-                         <select class="form-control" name="Education" required="">
+                         <select class="form-control" bind:value={$profileForm.highest_qualification} name="Education" required="">
                           <option value=""> --- </option>
                           <option value="Under Graduate" selected=""> Under graduate </option>
                           <option value="Graduate"> Graduate </option>
@@ -130,7 +132,7 @@
                             <div class="input-group-addon">
                               <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="date" class="form-control pull-right datepickerDOB" placeholder="Click to set date" name="DOB" value="">
+                            <input type="date" class="form-control pull-right datepickerDOB" placeholder="Click to set date" name="DOB" bind:value={$profileForm.dob}>
                           </div>
                     </div>
 
@@ -144,19 +146,22 @@
 
                      <div class="col-md-4">
                         <label for="inputName" class="control-label">Phone: <b style="color:red">*</b></label>
-                          <input type="tel" class="form-control" name="Phone" id="inputName" value="08170718416" placeholder="" data-inputmask="'mask': ['999-999-9999 [x99999]', '+999 99 99 9999[9] 999']" data-mask="" required="">
+                          <input type="tel" class="form-control" name="Phone" id="inputName" bind:value={$profileForm.phone} placeholder="" data-inputmask="'mask': ['999-999-9999 [x99999]', '+999 99 99 9999[9] 999']" data-mask="" required="">
                     </div>
                      <div class="col-md-4">
                         <label for="inputName" class="control-label">Email <b style="color:red">*</b> <span usx="c2aa1951a32f33b047954754f0ae" onclick="addAnotherEmail(this)" class="text-blue"> <i class="fa fa-plus"></i> Add Email </span></label>
-                          <input type="text" class="form-control" id="inputName" value="Chidorimoses@gmail.com" disabled="">
+                          <input type="text" class="form-control" id="inputName" value={$profileForm.email} disabled="">
                     </div>
                     <div class="col-md-4">
                         <label for="AcctProgram" class="control-label">Program Type <b style="color:red">*</b></label>
 
 
-                          <select class="form-control" id="AcctProgram" name="AcctProgram" required="">
+                          <select bind:value={$profileForm.program_type_id} class="form-control" id="AcctProgram" name="AcctProgram" required="">
                             <option value="">--</option>
-                            <option value="1"> Business Analysis </option><option value="2" selected=""> Project Management </option>                            </select>
+                            {#each programTypes as item}
+                               <option value={item.id}>{item.name}</option>
+                            {/each}
+                          </select>
 
                     </div>
                   </div>
@@ -172,20 +177,20 @@
                     </div>
                       <div class="col-md-4">
                         <label for="inputName" class="control-label">Province: <b style="color:red">*</b></label>
-                        <ProvinceSelect list={province} on:change={(e)=>1}  />
+                        <ProvinceSelect list={province} on:change={(e)=>$profileForm.province_id = e.detail}  />
                     </div>
 
                      <div class="col-md-4">
                         <label for="inputName" class="control-label">Town/City: <b style="color:red">*</b></label>
                           <!--<input type="text" class="form-control"  name="Town"  value="116"  placeholder="" required > -->
 
-                       <TownCitySelect {query} list={towncity} on:change={(e)=>1} />
+                       <TownCitySelect {query} list={towncity} on:change={(e)=>$profileForm.province_town_city_id = e.detail} />
 
 
                     </div>
                       <div class="col-md-4">
                         <label for="inputName" class="control-label">Postal Code: <b style="color:red">*</b></label>
-                          <input type="text" class="form-control" name="PostalCode" value="102214" placeholder="" required="">
+                          <input type="text" class="form-control" name="PostalCode" bind:value={$profileForm.postal_code} placeholder="" required="">
                     </div>
 
 
@@ -200,8 +205,8 @@
                         <label for="ActStatus" class="control-label">Account Status <b style="color:red">*</b></label>
                          <!-- <input type="text" class="form-control" name="Gender" id="inputName" value=""  required > -->
                          <div class="form-control">
-                           <label class="text-green"><input type="radio" name="AccountStatus" value="1" class="flat-green" checked=""> Active </label> &nbsp; &nbsp;
-                            <label class="text-red"><input type="radio" name="AccountStatus" value="0" class="flat-green"> Inactive </label> &nbsp; &nbsp;
+                           <label class="text-green"><input type="radio" name="AccountStatus" bind:group={$profileForm.account_status} value="1" class="flat-green" checked=""> Active </label> &nbsp; &nbsp;
+                            <label class="text-red"><input type="radio" name="AccountStatus" bind:group={$profileForm.account_status} value="0" class="flat-green"> Inactive </label> &nbsp; &nbsp;
 
                          </div>
                     </div>
@@ -211,14 +216,14 @@
                         <!-- svelte-ignore a11y-label-has-associated-control -->
                         <label>Incorporation Name</label>
 
-                         <input type="text" class="form-control" name="myIncorp" value="ABC INC">
+                         <input type="text" class="form-control" name="myIncorp" bind:value={$profileForm.incorporation_name} />
                     </div>
 
                      <div class="col-md-4">
                          <!-- svelte-ignore a11y-label-has-associated-control -->
                         <label>Incorporation Address</label>
 
-                         <input type="text" class="form-control" name="myIncorpAddress" value="">
+                         <input type="text" class="form-control" name="myIncorpAddress" bind:value={$profileForm.incorporation_address} />
                     </div>
 
                   </div>
@@ -228,30 +233,29 @@
                     <div class="col-md-4">
                         <!-- svelte-ignore a11y-label-has-associated-control -->
                        <label class="control-label">Notes</label>
-                       <textarea class="form-control" placeholder="Enter notes about this user here."></textarea>
+                       <textarea bind:value={$profileForm.notes} class="form-control" placeholder="Enter notes about this user here."></textarea>
                     </div>
 
                     <div class="col-md-2">
                         <!-- svelte-ignore a11y-label-has-associated-control -->
                        <label class="control-label">Resume</label>
-                                                 <a href="../utility/../UploadDocs/RESUME1646824641.pdf" target="_blank">
-                       <i class="fa fa-file form-control text-green" style="font-size: 20px; cursor: pointer"></i>
-                        </a>
-                                           </div>
+                       <input type="file" on:change={(e)=>$profileForm.resume = e.target.files[0]} />
+                        <i class="fa fa-file form-control text-green" style="font-size: 20px; cursor: pointer"></i>
+                    </div>
 
                      <div class="col-md-2">
                          <!-- svelte-ignore a11y-label-has-associated-control -->
                        <label class="control-label">ID Card</label>
-                                                   <a href="../../UploadDocs/ID1646824641.jpg" target="_blank">
+                       <input type="file" on:change={(e)=>$profileForm.id_card = e.target.files[0]} />
                        <i class="fa fa-id-badge form-control text-green" style="font-size: 20px; cursor: pointer"></i>
-                        </a>
-                                           </div>
+                    </div>
 
                     <div class="col-md-2">
                         <!-- svelte-ignore a11y-label-has-associated-control -->
                        <label class="control-label">Void Check Doc</label>
-                                                 <br> Void Check Doc
-                                           </div>
+                       <input type="file" on:change={(e)=>$profileForm.void_check_doc = e.target.files[0]} />
+                        <br> Void Check Doc
+                    </div>
 
 
 
@@ -261,7 +265,7 @@
                       <div class="col-md-4">
                           <!-- svelte-ignore a11y-label-has-associated-control -->
                        <label class="control-label">HST No.</label>
-                        <input type="text" class="form-control" name="HST" value="123468">
+                        <input type="text" class="form-control" name="HST" bind:value={$profileForm.hst_no} />
                     </div>
                     <div class="col-md-4">
                         <!-- svelte-ignore a11y-label-has-associated-control -->
