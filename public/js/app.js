@@ -31311,7 +31311,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function add_css(target) {
-  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-55u25c", ".info-box.svelte-55u25c{padding-left:5px}.icon-plate.svelte-55u25c{font-size:27px;display:inline-block;background:#FEF0F1;padding:8px;width:64px;height:64px;position:relative;border-radius:50%;margin-top:3px}.dash-icon.svelte-55u25c{color:#F8989F;margin-top:10px;margin-left:10px}.dash-info.svelte-55u25c{display:inline-block;margin-left:12px}.dash-num.svelte-55u25c{font-size:23px;margin-top:3px}");
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-140dz5a", ".info-box.svelte-140dz5a{padding-left:5px}.icon-plate.svelte-140dz5a{font-size:27px;display:inline-block;background:#fef0f1;padding:8px;width:64px;height:64px;position:relative;border-radius:50%;margin-top:3px}.dash-icon.svelte-140dz5a{color:#f8989f;margin-top:10px;margin-left:10px}.dash-info.svelte-140dz5a{display:inline-block;margin-left:12px}.dash-num.svelte-140dz5a{font-size:23px;margin-top:3px}");
 } // (14:0) <UserManagement user={data} title="User Profile." currentTab="dashboard">
 
 
@@ -31319,71 +31319,203 @@ function create_default_slot(ctx) {
   var div26;
   var div25;
   var div3;
+  var div2;
+  var div0;
+  var h3;
+  var t0_value =
+  /*report*/
+  ctx[1].currentJob + "";
+  var t0;
+  var t1;
+  var p;
+  var t2;
+  var t3_value =
+  /*report*/
+  ctx[1].lastJoined + "";
+  var t3;
+  var t4;
+  var div1;
+  var t5_value =
+  /*report*/
+  ctx[1].lastSignedContract + "";
   var t5;
+  var t6;
   var div24;
   var div8;
   var div7;
   var div4;
-  var t6;
+  var t7;
   var div6;
   var div5;
-  var t7_value =
+  var t8_value =
   /*report*/
   ctx[1].assessmentProgress.progress + "";
-  var t7;
   var t8;
-  var t9_value =
+  var t9;
+  var t10_value =
   /*report*/
   ctx[1].assessmentProgress.progressTotal + "";
-  var t9;
   var t10;
+  var t11;
   var span0;
-  var t12;
+  var t13;
   var div13;
+  var div12;
+  var div9;
+  var t14;
+  var div11;
+  var div10;
+  var t15_value =
+  /*report*/
+  ctx[1].jobProfileProgress.progress + "";
+  var t15;
+  var t16;
+  var t17_value =
+  /*report*/
+  ctx[1].jobProfileProgress.progressTotal + "";
   var t17;
+  var t18;
+  var span1;
+  var t20;
   var div18;
+  var div17;
+  var div14;
+  var t21;
+  var div16;
+  var div15;
+  var t22_value =
+  /*report*/
+  ctx[1].jobApplicationProgress.progress + "";
   var t22;
+  var t23;
+  var t24_value =
+  /*report*/
+  ctx[1].jobApplicationProgress.progressTotal + "";
+  var t24;
+  var t25;
+  var span2;
+  var t27;
   var div23;
+  var div22;
+  var div19;
+  var t28;
+  var div21;
+  var div20;
+  var t29_value =
+  /*report*/
+  ctx[1].onboardingProgress.progress + "";
+  var t29;
+  var t30;
+  var t31_value =
+  /*report*/
+  ctx[1].onboardingProgress.progressTotal + "";
+  var t31;
+  var t32;
+  var span3;
   return {
     c: function c() {
       div26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div3.innerHTML = "<div class=\"info-box bg-white svelte-55u25c\" style=\"min-height: 195px;\"><div class=\"inner\"><h3 style=\"padding-top:11px;margin: 0;font-size: 19px;font-weight: bold;margin-bottom: 11px;\">No Job Role Assigned</h3> \n\n                             <p>Joined 2022, March 09</p></div> \n                           <div>No Signed Contract</div></div>";
-      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      h3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("h3");
+      t0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t0_value);
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      p = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("p");
+      t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Joined ");
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t3_value);
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t5_value);
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div4.innerHTML = "<i class=\"fa fa-file-o dash-icon svelte-55u25c\" style=\"color:#8D78F1\"></i>";
-      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div4.innerHTML = "<i class=\"fa fa-file-o dash-icon svelte-140dz5a\" style=\"color:#8D78F1\"></i>";
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t7_value);
-      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("/");
-      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t9_value);
-      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t8_value);
+      t9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("/");
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t10_value);
+      t11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       span0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
       span0.textContent = "Assessment";
-      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div13.innerHTML = "<div class=\"info-box svelte-55u25c\"><div class=\"icon-plate svelte-55u25c\" style=\"background:#E7F7F9 \"><i class=\"fa fa-list dash-icon svelte-55u25c\" style=\"color:#36BECD\"></i></div> \n\n                   <div class=\"dash-info svelte-55u25c\"><div class=\"dash-num svelte-55u25c\">5/5</div> \n                     <span>Profile</span></div></div>";
-      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div9.innerHTML = "<i class=\"fa fa-list dash-icon svelte-140dz5a\" style=\"color:#36BECD\"></i>";
+      t14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t15_value);
+      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("/");
+      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t17_value);
+      t18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span1.textContent = "Profile";
+      t20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div18.innerHTML = "<div class=\"info-box svelte-55u25c\"><div class=\"icon-plate svelte-55u25c\"><i class=\"fa fa-send-o dash-icon svelte-55u25c\"></i></div> \n\n                   <div class=\"dash-info svelte-55u25c\"><div class=\"dash-num svelte-55u25c\">0/2</div> \n                     <span>Applications</span></div></div>";
-      t22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div14.innerHTML = "<i class=\"fa fa-send-o dash-icon svelte-140dz5a\"></i>";
+      t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t22_value);
+      t23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("/");
+      t24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t24_value);
+      t25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span2.textContent = "Applications";
+      t27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div23.innerHTML = "<div class=\"info-box svelte-55u25c\"><div class=\"icon-plate svelte-55u25c\"><i class=\"fa fa-suitcase dash-icon svelte-55u25c\"></i></div> \n\n                   <div class=\"dash-info svelte-55u25c\"><div class=\"dash-num svelte-55u25c\">1/3</div> \n                     <span>Onboarding</span></div></div>";
+      div22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div19.innerHTML = "<i class=\"fa fa-suitcase dash-icon svelte-140dz5a\"></i>";
+      t28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t29_value);
+      t30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("/");
+      t31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t31_value);
+      t32 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      span3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      span3.textContent = "Onboarding";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(h3, "padding-top", "11px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(h3, "margin", "0");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(h3, "font-size", "19px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(h3, "font-weight", "bold");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(h3, "margin-bottom", "11px");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "inner");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "info-box bg-white svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div2, "min-height", "195px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "col-md-6");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div3, "padding", "0");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "icon-plate svelte-55u25c");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "icon-plate svelte-140dz5a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div4, "background", "#EFECFD");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "dash-num svelte-55u25c");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "dash-info svelte-55u25c");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div7, "class", "info-box svelte-55u25c");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "dash-num svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "dash-info svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div7, "class", "info-box svelte-140dz5a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "col-md-6");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "icon-plate svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div9, "background", "#E7F7F9 ");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div10, "class", "dash-num svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div11, "class", "dash-info svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div12, "class", "info-box svelte-140dz5a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div13, "class", "col-md-6");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div14, "class", "icon-plate svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div15, "class", "dash-num svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div16, "class", "dash-info svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div17, "class", "info-box svelte-140dz5a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div18, "class", "col-md-6");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div19, "class", "icon-plate svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "dash-num svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "dash-info svelte-140dz5a");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div22, "class", "info-box svelte-140dz5a");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div23, "class", "col-md-6");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div24, "class", "col-md-6");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div24, "padding", "0");
@@ -31399,37 +31531,123 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div26, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div26, div25);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div25, div3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div25, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, div2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, h3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(h3, t0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div0, p);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(p, t2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(p, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, t4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, div1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div1, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div25, t6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div25, div24);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, div8);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div8, div7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, div4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, t7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div7, div6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, div5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, t7);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, t8);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, t9);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div5, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, t11);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div6, span0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, t12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, t13);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, div13);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, t17);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div13, div12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, div9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, t14);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, div11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, div10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, t15);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, t16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, t17);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, t18);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, span1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, t20);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, div18);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, t22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div17);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, div14);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, div16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, div15);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, t22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, t23);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, t24);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t25);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, span2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, t27);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, div23);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, div22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, div19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, t28);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div22, div21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div20);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t29);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t30);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t31);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, t32);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, span3);
     },
     p: function p(ctx, dirty) {
       if (dirty &
       /*report*/
-      2 && t7_value !== (t7_value =
+      2 && t0_value !== (t0_value =
       /*report*/
-      ctx[1].assessmentProgress.progress + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t7, t7_value);
+      ctx[1].currentJob + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
       if (dirty &
       /*report*/
-      2 && t9_value !== (t9_value =
+      2 && t3_value !== (t3_value =
       /*report*/
-      ctx[1].assessmentProgress.progressTotal + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t9, t9_value);
+      ctx[1].lastJoined + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t3, t3_value);
+      if (dirty &
+      /*report*/
+      2 && t5_value !== (t5_value =
+      /*report*/
+      ctx[1].lastSignedContract + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
+      if (dirty &
+      /*report*/
+      2 && t8_value !== (t8_value =
+      /*report*/
+      ctx[1].assessmentProgress.progress + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t8, t8_value);
+      if (dirty &
+      /*report*/
+      2 && t10_value !== (t10_value =
+      /*report*/
+      ctx[1].assessmentProgress.progressTotal + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t10, t10_value);
+      if (dirty &
+      /*report*/
+      2 && t15_value !== (t15_value =
+      /*report*/
+      ctx[1].jobProfileProgress.progress + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t15, t15_value);
+      if (dirty &
+      /*report*/
+      2 && t17_value !== (t17_value =
+      /*report*/
+      ctx[1].jobProfileProgress.progressTotal + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t17, t17_value);
+      if (dirty &
+      /*report*/
+      2 && t22_value !== (t22_value =
+      /*report*/
+      ctx[1].jobApplicationProgress.progress + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t22, t22_value);
+      if (dirty &
+      /*report*/
+      2 && t24_value !== (t24_value =
+      /*report*/
+      ctx[1].jobApplicationProgress.progressTotal + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t24, t24_value);
+      if (dirty &
+      /*report*/
+      2 && t29_value !== (t29_value =
+      /*report*/
+      ctx[1].onboardingProgress.progress + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t29, t29_value);
+      if (dirty &
+      /*report*/
+      2 && t31_value !== (t31_value =
+      /*report*/
+      ctx[1].onboardingProgress.progressTotal + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t31, t31_value);
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div26);

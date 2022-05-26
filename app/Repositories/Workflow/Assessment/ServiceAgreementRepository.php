@@ -21,6 +21,14 @@ class ServiceAgreementRepository
         return $query;
      }
 
+     function getLastSignedContract($userId){
+        if ($this->approved($userId)->exists()){
+            $record = $this->approved($userId)->first();
+            return ' Signed contract ' . $record->updated_at->diffForHumans();
+          }
+          return 'No Signed Contract(s)';
+     }
+
 
 
     function update($id,$data){

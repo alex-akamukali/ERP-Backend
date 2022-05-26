@@ -37,6 +37,9 @@ class UserManagementDashboardRepository
     //JobApplication
     private $jobApplicationRepository;
 
+    //User
+    private $userRepository;
+
     function __construct(
         PreEmploymentAssessmentRepository $preEmploymentAssessmentRepository,
         AssessmentResultRepository $assessmentResultRepository,
@@ -51,7 +54,10 @@ class UserManagementDashboardRepository
 
         OnboardingRepository $onboardingRepository,
 
-        JobApplicationRepository $jobApplicationRepository
+        JobApplicationRepository $jobApplicationRepository,
+
+        //
+        UserRepository $userRepository
 
     ) {
         //Assessment
@@ -72,6 +78,9 @@ class UserManagementDashboardRepository
 
         //JobApplication
         $this->jobApplicationRepository = $jobApplicationRepository;
+
+        //User
+        $this->userRepository = $userRepository;
     }
 
 
@@ -87,7 +96,10 @@ class UserManagementDashboardRepository
             'assessmentProgress' => $assessmentProgress,
             'jobProfileProgress' => $jobProfileProgress,
             'onboardingProgress' => $onboardingProgress,
-            'jobApplicationProgress' => $jobApplicationProgress
+            'jobApplicationProgress' => $jobApplicationProgress,
+            'currentJob' => $this->jobApplicationRepository->getCurrentJob($userId),
+            'lastJoined' => $this->userRepository->getLastJoined($userId),
+            'lastSignedContract' => $this->serviceAgreementRepository->getLastSignedContract($userId)
         ];
     }
 
@@ -116,6 +128,7 @@ class UserManagementDashboardRepository
             'progressTotal' => $progressTotal
         ];
     }
+
 
     function getJobProfileProgress($userId)
     {

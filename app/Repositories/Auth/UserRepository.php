@@ -16,6 +16,11 @@ class UserRepository
         return $record;
     }
 
+    function getLastJoined($userId){
+        $record = $this->fetchById($userId);
+        return $record->created_at->diffForHumans();
+    }
+
 
     function update($id,$data){
         $record = User::query()->find($id);
@@ -34,6 +39,6 @@ class UserRepository
         return $record;
     }
 
-    
+
 
 }

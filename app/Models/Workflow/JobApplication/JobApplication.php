@@ -22,4 +22,7 @@ class JobApplication extends Model
         'job_description',
         'status'
     ];
+
+
+
 }

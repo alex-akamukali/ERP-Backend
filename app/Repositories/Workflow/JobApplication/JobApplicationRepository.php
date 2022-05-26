@@ -16,6 +16,14 @@ class JobApplicationRepository
         return $record;
     }
 
+    function getCurrentJob($userId){
+      $query = JobApplication::query()->getByUserId($userId);
+      if ($query->exists()){
+        return $query->first()->job_title; //job_title
+      }
+      return 'No Job Role Assigned.';
+    }
+
     function approved($userId){
         $query = JobApplication::query()->getByUserId($userId)->statusApproved();
         return $query;
