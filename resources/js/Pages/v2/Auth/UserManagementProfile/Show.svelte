@@ -350,7 +350,7 @@
                                         type="radio"
                                         name="AccountStatus"
                                         bind:group={$profileForm.account_status}
-                                        value="1"
+                                        value="active"
                                         class="flat-green"
                                         checked=""
                                     /> Active
@@ -361,7 +361,7 @@
                                         type="radio"
                                         name="AccountStatus"
                                         bind:group={$profileForm.account_status}
-                                        value="0"
+                                        value="pending"
                                         class="flat-green"
                                     /> Inactive
                                 </label> &nbsp; &nbsp;

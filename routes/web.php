@@ -203,3 +203,5 @@ Route::resource("user-management",\App\Http\Controllers\v2\Auth\UserManagementCo
 Route::resource("user-management-dashboard",\App\Http\Controllers\v2\Auth\UserManagementDashboardController::class)->middleware(["auth"]);
 
 Route::resource("user-management-profile",\App\Http\Controllers\v2\Auth\UserManagementProfileController::class)->middleware(["auth"]);
+
+Route::resource("assessment",\App\Http\Controllers\v2\Auth\AssessmentController::class)->middleware(["auth"]);

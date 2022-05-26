@@ -84,7 +84,7 @@
                                     : ""}
                             >
                                 <a
-                                    use:inertia
+                                    use:inertia="{{ preserveScroll: true }}"
                                     style="border: none"
                                     href={`/user-management-dashboard/${user.id}`}
                                     >Dashboard</a
@@ -92,7 +92,7 @@
                             </li>
                             <li class={currentTab == "profile" ? "active" : ""}>
                                 <a
-                                    use:inertia
+                                    use:inertia="{{ preserveScroll: true }}"
                                     style="border: none"
                                     href={`/user-management-profile/${user.id}`}
                                     >Profile</a
@@ -102,9 +102,9 @@
                                 class={currentTab == "workflow" ? "active" : ""}
                             >
                                 <a
-                                    use:inertia
+                                    use:inertia="{{ preserveScroll: true }}"
                                     style="border: none"
-                                    href="userProfileWorkflow">Workflow</a
+                                    href={`/assessment/${user.id}`}>Workflow</a
                                 >
                             </li>
                             <li
@@ -113,7 +113,7 @@
                                     : ""}
                             >
                                 <a
-                                    use:inertia
+                                    use:inertia="{{ preserveScroll: true }}"
                                     style="border: none"
                                     href="userProfileContracts">Contracts</a
                                 >
@@ -124,7 +124,7 @@
                                     : ""}
                             >
                                 <a
-                                    use:inertia
+                                    use:inertia="{{ preserveScroll: true }}"
                                     style="border: none"
                                     href="userProfilePayments">Payment Portal</a
                                 >
@@ -139,9 +139,9 @@
 
     <div class="row">
         <div class="col-md-12">
-            <div class="box box-default">
+            <!-- <div class="box box-default"> -->
                 <slot />
-            </div>
+            <!-- </div> -->
         </div>
     </div>
     <!-- /.row -->

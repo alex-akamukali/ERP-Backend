@@ -8163,6 +8163,8 @@ function create_fragment(ctx) {
   var t18;
   var li4;
   var a4;
+  var t19;
+  var a4_href_value;
   var inertia_action_3;
   var li4_class_value;
   var t20;
@@ -8176,7 +8178,6 @@ function create_fragment(ctx) {
   var inertia_action_5;
   var li6_class_value;
   var t24;
-  var div10;
   var div9;
   var div8;
   var current;
@@ -8240,7 +8241,7 @@ function create_fragment(ctx) {
       t18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       a4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
-      a4.textContent = "Workflow";
+      t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("Workflow");
       t20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       li5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
       a5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
@@ -8250,7 +8251,6 @@ function create_fragment(ctx) {
       a6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
       a6.textContent = "Payment Portal";
       t24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       if (default_slot) default_slot.c();
@@ -8303,7 +8303,9 @@ function create_fragment(ctx) {
       /*currentTab*/
       ctx[0] == "profile" ? "active" : "") + " svelte-1kya9v9"));
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(a4, "border", "none");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "href", "userProfileWorkflow");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "href", a4_href_value = "/assessment/".concat(
+      /*user*/
+      ctx[1].id));
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "class", "svelte-1kya9v9");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li4, "class", li4_class_value = "" + ((0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.null_to_empty)(
       /*currentTab*/
@@ -8326,9 +8328,8 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "box");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div7, "class", "row");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "box box-default");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "col-md-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div10, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(section1, "class", "content");
     },
     m: function m(target, anchor) {
@@ -8375,6 +8376,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, t18);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li4, a4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(a4, t19);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, t20);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li5);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li5, a5);
@@ -8382,8 +8384,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li6, a6);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, t24);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, div10);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, div9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(section1, div9);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, div8);
 
       if (default_slot) {
@@ -8393,7 +8394,17 @@ function create_fragment(ctx) {
       current = true;
 
       if (!mounted) {
-        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a1)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_1 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a2)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_2 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a3)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_3 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a4)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_4 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a5)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_5 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a6))];
+        dispose = [(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a1)), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_1 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a2, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_2 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a3, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_3 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a4, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_4 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a5, {
+          preserveScroll: true
+        })), (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.action_destroyer)(inertia_action_5 = _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.inertia.call(null, a6, {
+          preserveScroll: true
+        }))];
         mounted = true;
       }
     },
@@ -8447,6 +8458,14 @@ function create_fragment(ctx) {
       /*currentTab*/
       ctx[0] == "profile" ? "active" : "") + " svelte-1kya9v9"))) {
         (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li3, "class", li3_class_value);
+      }
+
+      if (!current || dirty &
+      /*user*/
+      2 && a4_href_value !== (a4_href_value = "/assessment/".concat(
+      /*user*/
+      ctx[1].id))) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a4, "href", a4_href_value);
       }
 
       if (!current || dirty &
@@ -8524,6 +8543,664 @@ function instance($$self, $$props, $$invalidate) {
   };
 
   return [currentTab, user, title, $$scope, slots];
+}
+
+var Index = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Index, _SvelteComponent);
+
+  var _super = _createSuper(Index);
+
+  function Index(options) {
+    var _this;
+
+    _classCallCheck(this, Index);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
+      currentTab: 0,
+      user: 1,
+      title: 2
+    }, add_css);
+    return _this;
+  }
+
+  return _createClass(Index);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Index);
+
+/***/ }),
+
+/***/ "./nodejs-svelte-crud-helper/user/workflow/Index.svelte":
+/*!**************************************************************!*\
+  !*** ./nodejs-svelte-crud-helper/user/workflow/Index.svelte ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _user_profile_Index_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../user-profile/Index.svelte */ "./nodejs-svelte-crud-helper/user/user-profile/Index.svelte");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/* nodejs-svelte-crud-helper/user/workflow/Index.svelte generated by Svelte v3.48.0 */
+
+
+
+function add_css(target) {
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-2y2k0g", ".boxTText.svelte-2y2k0g{font-size:15px;color:#5F7A9C}.headTText.svelte-2y2k0g{font-size:14px;color:#4F4F4F;font-weight:700}.box-header.svelte-2y2k0g{border:1px solid #BFD7DD}.panel.svelte-2y2k0g{margin-bottom:5px}");
+} // (9:0) <UserProfile {title} {user} currentTab="workflow">
+
+
+function create_default_slot(ctx) {
+  var div99;
+  var ul;
+  var li0;
+  var a0;
+  var li0_class_value;
+  var t1;
+  var li1;
+  var a1;
+  var li1_class_value;
+  var t3;
+  var li2;
+  var a2;
+  var li2_class_value;
+  var t5;
+  var li3;
+  var a3;
+  var li3_class_value;
+  var t7;
+  var div98;
+  var div94;
+  var div93;
+  var div92;
+  var div91;
+  var div90;
+  var div4;
+  var t13;
+  var div89;
+  var div18;
+  var t36;
+  var div41;
+  var a6;
+  var t42;
+  var div40;
+  var div39;
+  var div38;
+  var div37;
+  var div25;
+  var t43;
+  var div34;
+  var form0;
+  var div27;
+  var t47;
+  var div29;
+  var div28;
+  var label2;
+  var t49;
+  var select0;
+  var option0;
+  var option1;
+  var option2;
+  var t53;
+  var input0;
+  var t54;
+  var div31;
+  var div30;
+  var label3;
+  var t56;
+  var select1;
+  var option3;
+  var t58;
+  var input1;
+  var t59;
+  var div33;
+  var t63;
+  var div36;
+  var t88;
+  var div58;
+  var t104;
+  var div75;
+  var a8;
+  var t110;
+  var div74;
+  var div73;
+  var div72;
+  var div71;
+  var div69;
+  var form1;
+  var div66;
+  var div65;
+  var label7;
+  var t112;
+  var select2;
+  var option4;
+  var option5;
+  var option6;
+  var option7;
+  var option8;
+  var t118;
+  var input7;
+  var t119;
+  var div68;
+  var t123;
+  var div70;
+  var t148;
+  var div88;
+  var t154;
+  var div95;
+  var t156;
+  var div96;
+  var t158;
+  var div97;
+  return {
+    c: function c() {
+      div99 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      ul = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("ul");
+      li0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a0.innerHTML = "<b>Assessment</b>";
+      t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a1.innerHTML = "<b>Job Profile</b>";
+      t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a2.innerHTML = "<b>Job Application</b>";
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      li3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("li");
+      a3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a3.innerHTML = "<b>Onboarding</b>";
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div98 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div94 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div93 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div92 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div91 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div90 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div4.innerHTML = "<div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"boxTText svelte-2y2k0g\">Stage</span></div> \n                        <div class=\"col-md-4\"><span class=\"boxTText svelte-2y2k0g\">Date</span></div> \n                        <div class=\"col-md-4\"><span class=\"boxTText pull-right svelte-2y2k0g\">Activity Status</span></div></div>";
+      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div89 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div18.innerHTML = "<a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#userAssessment\" class=\"collapsed\" aria-expanded=\"false\"><div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4 col-sm-4\"><span class=\"headTText svelte-2y2k0g\">Pre-employment Assessment</span></div> \n                        <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">2022-03-09</span></div> \n                        <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\"><b class=\"text-green\">Active</b></span></div></div></div></div></a> \n\n              <div id=\"userAssessment\" class=\"panel-collapse collapse\" aria-expanded=\"false\" style=\"height: 198px;\"><div class=\"box-body\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><button type=\"button\" class=\"btn btn-primary btn-block\" style=\"width:150px\" meetingtype=\"Pre-employement Assessment\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"setMeetingType(this)\"><i class=\"fa fa-handshake-o\"></i> Propose Meeting</button></div> \n                      <div class=\"col-md-8\"><div class=\"table-responsive\"><table class=\"table table-stripe\"><thead><tr><th>Assessment Date</th><th>Duration</th><th>Status</th></tr></thead> \n                            <tbody><tr class=\"warning\"><td>16-04-2022 11:30 PM</td><td>0:00</td><td>Raised by Admin</td></tr><tr class=\"warning\"><td>14-03-2022 9:00 PM</td><td>0:00</td><td>Raised by Admin</td></tr><tr class=\"success\"><td>9-03-2022 9:45 PM</td><td>0:00</td><td>Accepted \xA0 \xA0 <a target=\"_blank\" href=\"https://us06web.zoom.us/j/86011459210?pwd=dzVSci8zWnoxbkU0K2p5dlM1d0VPUT09\"><button class=\"btn-sm btn btn-primary\">Join meeting <i class=\"fa fa-comments text-green\"></i></button></a></td></tr></tbody></table></div></div></div></div></div></div>";
+      t36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div41 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      a6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a6.innerHTML = "<div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">Assessment Result</span></div> \n                        <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">2022-04-19</span></div> \n                        <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\"><b class=\"text-green\">Active</b></span></div></div></div></div>";
+      t42 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div39 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div38 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div37 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t43 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      form0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
+      div27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div27.innerHTML = "<div class=\"form-group\"><label for=\"inputName\" class=\"control-label\">Program Type</label> \n\n                                 \n                                 <label class=\"form-control\"><b style=\"color:green\">Project Management</b></label></div>";
+      t47 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      label2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label2.textContent = "Exam Type";
+      t49 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      select0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option0.textContent = "--";
+      option1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option1.textContent = "Internal";
+      option2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option2.textContent = "External";
+      t53 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t54 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      label3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label3.textContent = "Knowledge Area";
+      t56 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      select1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option3.textContent = "--";
+      t58 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t59 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div33.innerHTML = "<div class=\"form-group\"><label class=\"control-label\">\xA0</label> \n                                 <button type=\"button\" class=\"btn btn-primary btn-sm form-control\"><i class=\"fa fa-plus\"></i> Add</button></div>";
+      t63 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div36.innerHTML = "<div class=\"table-responsive\"><table class=\"table table-bordered table-hover table-striped\"><thead><tr><th>Knowledge Area</th><th>No. of Quest.</th>  <th>No. of Correct Answer  </th><th>Score</th></tr></thead> \n                          <tbody><tr><td>Project integration management</td>  <td>10</td>   <td><input style=\"width:40px\" class=\"IsNumber\" type=\"text\" pmf=\"2\" kmf=\"7\" nq=\"10\" nm=\"20\" usx=\"c2aa1951a32f33b047954754f0ae\" oninput=\"updateKAScore(this)\" value=\"10\"/></td>  <td id=\"fresult-7\">100% </td></tr><tr><td>Project scope management</td>  <td>20</td>   <td><input style=\"width:40px\" class=\"IsNumber\" type=\"text\" pmf=\"2\" kmf=\"8\" nq=\"20\" nm=\"5\" usx=\"c2aa1951a32f33b047954754f0ae\" oninput=\"updateKAScore(this)\" value=\"9\"/></td>  <td id=\"fresult-8\">45% </td></tr><tr><td>Project time management</td>  <td>50</td>   <td><input style=\"width:40px\" class=\"IsNumber\" type=\"text\" pmf=\"2\" kmf=\"9\" nq=\"50\" nm=\"0\" usx=\"c2aa1951a32f33b047954754f0ae\" oninput=\"updateKAScore(this)\" value=\"30\"/></td>  <td id=\"fresult-9\">60%</td></tr></tbody></table></div>";
+      t88 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div58 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div58.innerHTML = "<a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#schInterviewAssess\" class=\"collapsed\" aria-expanded=\"false\"><div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">Assessment Interview</span></div> \n    <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\"></span></div> \n                        <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\">Pending</span></div></div></div></div></a> \n\n              <div id=\"schInterviewAssess\" class=\"panel-collapse collapse\" aria-expanded=\"false\"><div class=\"box-body\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-12\"><div class=\"col-md-4\"><button type=\"button\" class=\"btn btn-primary btn-block\" style=\"width:150px\" meetingtype=\"Assessment Interview\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"setMeetingType(this)\"><i class=\"fa fa-handshake-o\"></i> Propose Meeting</button></div> \n                      <div class=\"col-md-8\"><div class=\"table-responsive\"><table class=\"table table-stripe\"><thead><tr><th>Interview Date</th><th>Duration</th><th>Status</th></tr></thead> \n                            <tbody></tbody></table></div></div></div> \n\n                      <div class=\"col-md-12\"><div class=\"form-group\"><label class=\"text-green\"><input type=\"radio\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"chkResultRec(this)\" name=\"AssessmentRt\" value=\"accP\" class=\"flat-green\" checked=\"\"/> Pass</label>\n                         \xA0 \xA0  \xA0\n                         <label class=\"text-danger\"><input type=\"radio\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"chkResultRec(this)\" name=\"AssessmentRt\" value=\"accF\" class=\"flat-green\"/> Failed</label></div></div></div></div></div></div>";
+      t104 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div75 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      a8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a8.innerHTML = "<div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">Service Agreement</span></div> \n                        <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">2022-03-14</span></div> \n                        <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\">Pending</span></div></div></div></div>";
+      t110 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div74 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div73 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div72 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div71 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div69 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      form1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
+      div66 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div65 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      label7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label7.textContent = "Olade Consulting Contract with Candidate";
+      t112 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      select2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option4.textContent = "--";
+      option5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option5.textContent = "2 Years Contract";
+      option6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option6.textContent = "1 Year Contract (External)";
+      option7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option7.textContent = "Part tine";
+      option8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option8.textContent = "Part tine";
+      t118 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t119 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div68 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div68.innerHTML = "<div class=\"form-group\"><label class=\"control-label\">\xA0</label> \n                           <button type=\"submit\" class=\"btn btn-primary form-control\">Send</button></div>";
+      t123 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div70 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div70.innerHTML = "<table class=\"table table-striped\"><thead><tr><th>S/N</th><th>Contract Type</th><th>Pri. %</th><th>Sec. %</th><th>No. of Mths</th><th>Sent On</th><th>Opened On</th><th>Signed On</th><th>Status</th></tr></thead> \n                          <tbody><tr><td>1</td><td>2 Years Contract</td><td style=\"background:green; color:#FFF; border-radius:14px; text-align:center\">15%</td><td>10%</td><td>12</td><td>2022-03-14 21:02:48</td><td></td><td></td><td>\xA0 \xA0  </td></tr><tr><td>2</td><td>2 Years Contract</td><td style=\"background:green; color:#FFF; border-radius:14px; text-align:center\">15%</td><td>10%</td><td>12</td><td>2022-03-14 21:02:53</td><td></td><td></td><td>\xA0 \xA0</td></tr></tbody></table>";
+      t148 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div88 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div88.innerHTML = "<a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#PortalAccess\" class=\"collapsed\" aria-expanded=\"false\"><div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">Portal Access</span></div> \n                        <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\"></span></div> \n                        <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\"></span></div></div></div></div></a> \n\n              <div id=\"PortalAccess\" class=\"panel-collapse collapse\" aria-expanded=\"false\"><div class=\"box-body\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-12\"><div class=\"row\"><button class=\"btn btn-primary\" type=\"button\" usx=\"c2aa1951a32f33b047954754f0ae\" disabled=\"\">Invite Candidate To Access Portal</button></div></div></div></div></div></div>";
+      t154 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div95 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div95.textContent = "///";
+      t156 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div96 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div96.textContent = "///";
+      t158 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div97 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div97.textContent = "////";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", "");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li0, "class", li0_class_value =
+      /*currentTab*/
+      ctx[0] == "assessment" ? "active" : "");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", "");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li1, "class", li1_class_value =
+      /*currentTab*/
+      ctx[0] == "job-profile" ? "active" : "");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", "");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li2, "class", li2_class_value =
+      /*currentTab*/
+      ctx[0] == "job-application" ? "active" : "");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a3, "href", "");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li3, "class", li3_class_value =
+      /*currentTab*/
+      ctx[0] == "onboarding" ? "active" : "");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(ul, "class", "nav nav-pills nav-justified");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div18, "class", "panel svelte-2y2k0g");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a6, "data-toggle", "collapse");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a6, "data-parent", "#accordion");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a6, "href", "#examCompleted");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a6, "class", "collapsed");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a6, "aria-expanded", "false");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div25, "class", "col-md-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div27, "class", "col-md-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label2, "for", "inputName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label2, "class", "control-label");
+      option0.__value = "";
+      option0.value = option0.__value;
+      option1.__value = "Internal";
+      option1.value = option1.__value;
+      option2.__value = "External";
+      option2.value = option2.__value;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select0, "name", "KAType");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select0, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select0, "onchange", "setKAByType(this)");
+      select0.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div28, "class", "form-group");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "hidden");
+      input0.value = "c2aa1951a32f33b047954754f0ae";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "name", "usx");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div29, "class", "col-md-2");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label3, "for", "inputName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label3, "class", "control-label");
+      option3.__value = "";
+      option3.value = option3.__value;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select1, "id", "mKA");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select1, "name", "KA");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select1, "class", "form-control");
+      select1.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div30, "class", "form-group");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "type", "hidden");
+      input1.value = "c2aa1951a32f33b047954754f0ae";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "name", "usx");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div31, "class", "col-md-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div33, "class", "col-md-2");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form0, "method", "post");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div34, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div36, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div37, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div38, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div39, "class", "box-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div40, "id", "examCompleted");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div40, "class", "panel-collapse collapse");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div40, "aria-expanded", "false");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div41, "class", "panel svelte-2y2k0g");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div58, "class", "panel svelte-2y2k0g");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a8, "data-toggle", "collapse");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a8, "data-parent", "#accordion");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a8, "href", "#ServiceAgreement");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a8, "class", "collapsed");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a8, "aria-expanded", "false");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label7, "for", "inputName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label7, "class", "control-label");
+      option4.__value = "";
+      option4.value = option4.__value;
+      option5.__value = "1";
+      option5.value = option5.__value;
+      option6.__value = "2";
+      option6.value = option6.__value;
+      option7.__value = "3";
+      option7.value = option7.__value;
+      option8.__value = "4";
+      option8.value = option8.__value;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "name", "oladeContract");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "class", "form-control");
+      select2.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div65, "class", "form-group");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input7, "type", "hidden");
+      input7.value = "c2aa1951a32f33b047954754f0ae";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input7, "name", "usx");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div66, "class", "col-md-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div68, "class", "col-md-2");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form1, "method", "post");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form1, "action", "../utility/sendDocuSignContract");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div69, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div70, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div71, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div72, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div73, "class", "box-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div74, "id", "ServiceAgreement");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div74, "class", "panel-collapse collapse");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div74, "aria-expanded", "false");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div75, "class", "panel svelte-2y2k0g");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div88, "class", "panel svelte-2y2k0g");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div89, "class", "box-group");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div89, "id", "accordion");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div90, "class", "box-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div91, "class", "box box-solid");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div92, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div93, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div94, "class", "tab-pane active");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div94, "id", "tab_1");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div95, "class", "tab-pane");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div95, "id", "tab_2");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div96, "class", "tab-pane");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div96, "id", "tab_3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div97, "class", "tab-pane");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div97, "id", "tab_4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div98, "class", "tab-content");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div99, "class", "nav-tabs-custom");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div99, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div99, ul);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li0, a0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, t1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li1, a1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, t3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li2, a2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(ul, li3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(li3, a3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div99, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div99, div98);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div98, div94);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div94, div93);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div93, div92);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div92, div91);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div91, div90);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div90, div4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div90, t13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div90, div89);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div89, div18);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div89, t36);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div89, div41);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div41, a6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div41, t42);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div41, div40);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div40, div39);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, div38);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, div37);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, div25);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, t43);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, div34);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div34, form0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, div27);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, t47);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, div29);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div29, div28);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, label2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, t49);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, select0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select0, option0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select0, option1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select0, option2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div29, t53);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div29, input0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, t54);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, div31);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, div30);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, label3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, t56);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, select1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select1, option3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, t58);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, input1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, t59);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, div33);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, t63);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, div36);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div89, t88);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div89, div58);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div89, t104);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div89, div75);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div75, a8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div75, t110);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div75, div74);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div74, div73);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div73, div72);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div72, div71);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div71, div69);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div69, form1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form1, div66);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div66, div65);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div65, label7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div65, t112);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div65, select2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div66, t118);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div66, input7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form1, t119);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form1, div68);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div71, t123);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div71, div70);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div89, t148);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div89, div88);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div98, t154);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div98, div95);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div98, t156);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div98, div96);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div98, t158);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div98, div97);
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*currentTab*/
+      1 && li0_class_value !== (li0_class_value =
+      /*currentTab*/
+      ctx[0] == "assessment" ? "active" : "")) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li0, "class", li0_class_value);
+      }
+
+      if (dirty &
+      /*currentTab*/
+      1 && li1_class_value !== (li1_class_value =
+      /*currentTab*/
+      ctx[0] == "job-profile" ? "active" : "")) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li1, "class", li1_class_value);
+      }
+
+      if (dirty &
+      /*currentTab*/
+      1 && li2_class_value !== (li2_class_value =
+      /*currentTab*/
+      ctx[0] == "job-application" ? "active" : "")) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li2, "class", li2_class_value);
+      }
+
+      if (dirty &
+      /*currentTab*/
+      1 && li3_class_value !== (li3_class_value =
+      /*currentTab*/
+      ctx[0] == "onboarding" ? "active" : "")) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(li3, "class", li3_class_value);
+      }
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div99);
+    }
+  };
+}
+
+function create_fragment(ctx) {
+  var userprofile;
+  var current;
+  userprofile = new _user_profile_Index_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({
+    props: {
+      title:
+      /*title*/
+      ctx[2],
+      user:
+      /*user*/
+      ctx[1],
+      currentTab: "workflow",
+      $$slots: {
+        "default": [create_default_slot]
+      },
+      $$scope: {
+        ctx: ctx
+      }
+    }
+  });
+  return {
+    c: function c() {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(userprofile.$$.fragment);
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(userprofile, target, anchor);
+      current = true;
+    },
+    p: function p(ctx, _ref) {
+      var _ref2 = _slicedToArray(_ref, 1),
+          dirty = _ref2[0];
+
+      var userprofile_changes = {};
+      if (dirty &
+      /*title*/
+      4) userprofile_changes.title =
+      /*title*/
+      ctx[2];
+      if (dirty &
+      /*user*/
+      2) userprofile_changes.user =
+      /*user*/
+      ctx[1];
+
+      if (dirty &
+      /*$$scope, currentTab*/
+      9) {
+        userprofile_changes.$$scope = {
+          dirty: dirty,
+          ctx: ctx
+        };
+      }
+
+      userprofile.$set(userprofile_changes);
+    },
+    i: function i(local) {
+      if (current) return;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(userprofile.$$.fragment, local);
+      current = true;
+    },
+    o: function o(local) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(userprofile.$$.fragment, local);
+      current = false;
+    },
+    d: function d(detaching) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(userprofile, detaching);
+    }
+  };
+}
+
+function instance($$self, $$props, $$invalidate) {
+  var currentTab = $$props.currentTab;
+  var user = $$props.user;
+  var title = $$props.title;
+
+  $$self.$$set = function ($$props) {
+    if ('currentTab' in $$props) $$invalidate(0, currentTab = $$props.currentTab);
+    if ('user' in $$props) $$invalidate(1, user = $$props.user);
+    if ('title' in $$props) $$invalidate(2, title = $$props.title);
+  };
+
+  return [currentTab, user, title];
 }
 
 var Index = /*#__PURE__*/function (_SvelteComponent) {
@@ -25148,6 +25825,360 @@ var User = /*#__PURE__*/function (_SvelteComponent) {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/v2/Auth/Assessment/Create.svelte":
+/*!*************************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Assessment/Create.svelte ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Assessment/Create.svelte generated by Svelte v3.48.0 */
+
+
+
+var Create = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Create, _SvelteComponent);
+
+  var _super = _createSuper(Create);
+
+  function Create(options) {
+    var _this;
+
+    _classCallCheck(this, Create);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Create);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Create);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Assessment/Edit.svelte":
+/*!***********************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Assessment/Edit.svelte ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Assessment/Edit.svelte generated by Svelte v3.48.0 */
+
+
+
+var Edit = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Edit, _SvelteComponent);
+
+  var _super = _createSuper(Edit);
+
+  function Edit(options) {
+    var _this;
+
+    _classCallCheck(this, Edit);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Edit);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Edit);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Assessment/Index.svelte":
+/*!************************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Assessment/Index.svelte ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/* resources/js/Pages/v2/Auth/Assessment/Index.svelte generated by Svelte v3.48.0 */
+
+
+
+var Index = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Index, _SvelteComponent);
+
+  var _super = _createSuper(Index);
+
+  function Index(options) {
+    var _this;
+
+    _classCallCheck(this, Index);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    return _this;
+  }
+
+  return _createClass(Index);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Index);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/v2/Auth/Assessment/Show.svelte":
+/*!***********************************************************!*\
+  !*** ./resources/js/Pages/v2/Auth/Assessment/Show.svelte ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "layout": () => (/* binding */ layout)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nodejs-svelte-crud-helper */ "./nodejs-svelte-crud-helper/index.js");
+/* harmony import */ var nodejs_svelte_crud_helper_user_workflow_Index_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! nodejs-svelte-crud-helper/user/workflow/Index.svelte */ "./nodejs-svelte-crud-helper/user/workflow/Index.svelte");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/* resources/js/Pages/v2/Auth/Assessment/Show.svelte generated by Svelte v3.48.0 */
+
+
+
+
+
+function create_default_slot(ctx) {
+  var t;
+  return {
+    c: function c() {
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)("content...");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t, anchor);
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t);
+    }
+  };
+}
+
+function create_fragment(ctx) {
+  var workflow;
+  var current;
+  workflow = new nodejs_svelte_crud_helper_user_workflow_Index_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
+    props: {
+      title: "Assessment",
+      user:
+      /*data*/
+      ctx[0],
+      currentTab: "assessment",
+      $$slots: {
+        "default": [create_default_slot]
+      },
+      $$scope: {
+        ctx: ctx
+      }
+    }
+  });
+  return {
+    c: function c() {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(workflow.$$.fragment);
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(workflow, target, anchor);
+      current = true;
+    },
+    p: function p(ctx, _ref) {
+      var _ref2 = _slicedToArray(_ref, 1),
+          dirty = _ref2[0];
+
+      var workflow_changes = {};
+      if (dirty &
+      /*data*/
+      1) workflow_changes.user =
+      /*data*/
+      ctx[0];
+
+      if (dirty &
+      /*$$scope*/
+      2) {
+        workflow_changes.$$scope = {
+          dirty: dirty,
+          ctx: ctx
+        };
+      }
+
+      workflow.$set(workflow_changes);
+    },
+    i: function i(local) {
+      if (current) return;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(workflow.$$.fragment, local);
+      current = true;
+    },
+    o: function o(local) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(workflow.$$.fragment, local);
+      current = false;
+    },
+    d: function d(detaching) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(workflow, detaching);
+    }
+  };
+}
+
+var layout = nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_1__.Layout;
+
+function instance($$self, $$props, $$invalidate) {
+  var data = $$props.data;
+
+  $$self.$$set = function ($$props) {
+    if ('data' in $$props) $$invalidate(0, data = $$props.data);
+  };
+
+  return [data];
+}
+
+var Show = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(Show, _SvelteComponent);
+
+  var _super = _createSuper(Show);
+
+  function Show(options) {
+    var _this;
+
+    _classCallCheck(this, Show);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
+      data: 0
+    });
+    return _this;
+  }
+
+  return _createClass(Show);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Show);
+
+
+/***/ }),
+
 /***/ "./resources/js/Pages/v2/Auth/Dashboard/Create.svelte":
 /*!************************************************************!*\
   !*** ./resources/js/Pages/v2/Auth/Dashboard/Create.svelte ***!
@@ -33457,7 +34488,7 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label15, "class", "control-label");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input10, "type", "radio");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input10, "name", "AccountStatus");
-      input10.__value = "1";
+      input10.__value = "active";
       input10.value = input10.__value;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input10, "class", "flat-green");
       input10.checked = "";
@@ -33467,7 +34498,7 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label16, "class", "text-green");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input11, "type", "radio");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input11, "name", "AccountStatus");
-      input11.__value = "0";
+      input11.__value = "pending";
       input11.value = input11.__value;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input11, "class", "flat-green");
       /*$$binding_groups*/
@@ -56032,6 +57063,10 @@ var map = {
 	"./User/MyProfileShow.svelte": "./resources/js/Pages/User/MyProfileShow.svelte",
 	"./User/MyProfileSkills.svelte": "./resources/js/Pages/User/MyProfileSkills.svelte",
 	"./User/User.svelte": "./resources/js/Pages/User/User.svelte",
+	"./v2/Auth/Assessment/Create.svelte": "./resources/js/Pages/v2/Auth/Assessment/Create.svelte",
+	"./v2/Auth/Assessment/Edit.svelte": "./resources/js/Pages/v2/Auth/Assessment/Edit.svelte",
+	"./v2/Auth/Assessment/Index.svelte": "./resources/js/Pages/v2/Auth/Assessment/Index.svelte",
+	"./v2/Auth/Assessment/Show.svelte": "./resources/js/Pages/v2/Auth/Assessment/Show.svelte",
 	"./v2/Auth/Dashboard/Create.svelte": "./resources/js/Pages/v2/Auth/Dashboard/Create.svelte",
 	"./v2/Auth/Dashboard/Edit.svelte": "./resources/js/Pages/v2/Auth/Dashboard/Edit.svelte",
 	"./v2/Auth/Dashboard/Index.svelte": "./resources/js/Pages/v2/Auth/Dashboard/Index.svelte",
