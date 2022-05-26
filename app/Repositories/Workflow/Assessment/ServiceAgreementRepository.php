@@ -21,6 +21,12 @@ class ServiceAgreementRepository
         return $query;
      }
 
+     function getByUserId($userId){
+        $query = ServiceAgreement::query()->getByUserId($userId);
+        return $query;
+     }
+
+
      function getLastSignedContract($userId){
         if ($this->approved($userId)->exists()){
             $record = $this->approved($userId)->first();

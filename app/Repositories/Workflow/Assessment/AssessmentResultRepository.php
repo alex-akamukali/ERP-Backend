@@ -16,6 +16,12 @@ class AssessmentResultRepository
         return $query;
      }
 
+     function getByUserId($userId){
+        $query = AssessmentResult::query()->getByUserId($userId);
+        return $query;
+     }
+
+
 
     function fetchById($id){
         $record = AssessmentResult::query()->find($id);

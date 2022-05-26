@@ -16,6 +16,11 @@ class AssessmentInterviewRepository
         return $query;
      }
 
+     function getByUserId($userId){
+        $query = AssessmentInterview::query()->getByUserId($userId);
+        return $query;
+     }
+
 
     function fetchById($id){
         $record = AssessmentInterview::query()->find($id);

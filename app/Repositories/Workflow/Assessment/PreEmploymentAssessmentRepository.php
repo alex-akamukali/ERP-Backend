@@ -16,6 +16,12 @@ class PreEmploymentAssessmentRepository
        return $query;
     }
 
+    function getByUserId($userId){
+        $query = PreEmploymentAssessment::query()->getByUserId($userId);
+        return $query;
+     }
+
+
     function fetchById($id){
         $record = PreEmploymentAssessment::query()->find($id);
         return $record;
