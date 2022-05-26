@@ -6,6 +6,7 @@ use App\Repositories\Auth\UserManagementProfileRepository;
 use App\Http\Requests\Auth\UserManagementProfile\StoreRequest;
 use App\Http\Requests\Auth\UserManagementProfile\UpdateRequest;
 use App\Http\Controllers\Controller;
+use App\Repositories\Auth\UserRepository;
 use App\Repositories\Settings\ProgramTypeRepository;
 use App\Repositories\Settings\ProvinceRepository;
 use App\Repositories\Settings\ProvinceTownCityRepository;
@@ -48,16 +49,20 @@ class UserManagementProfileController extends Controller
         ]);
     }
 
-    function show($id, ProvinceRepository $provinceRepository, ProvinceTownCityRepository $provinceTownCityRepository,
-     ProgramTypeRepository $programTypeRepository
-    )
-    {
+    function show(
+        $id,
+        ProvinceRepository $provinceRepository,
+        ProvinceTownCityRepository $provinceTownCityRepository,
+        ProgramTypeRepository $programTypeRepository,
+        UserRepository $userRepository
+    ) {
         $data = $this->userManagementProfileRepository->fetchById($id);
         return inertia()->render("v2/Auth/UserManagementProfile/Show", [
             "data" => $data,
             "province" => $provinceRepository->fetch([])->get(),
             "towncity" => $provinceTownCityRepository->fetch(request()->all())->get(),
-            "programTypes"=>$programTypeRepository->fetch([])->get()
+            "programTypes" => $programTypeRepository->fetch([])->get(),
+            "users" => $userRepository->fetch([])->get()
         ]);
     }
 

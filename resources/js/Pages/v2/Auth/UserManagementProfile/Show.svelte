@@ -13,31 +13,32 @@
     export let province;
     export let towncity; //towncity
     export let programTypes;
+    export let users;
 
     let profileForm = useForm({
-        first_name:"",
-        middle_name:"",
-        last_name:"",
-        gender:"",
-        highest_qualification:"",
-        dob:"",
-        phone:"",
-        email:"",
-        program_type_id:"",
-        address:"",
-        province_id:"",
-        province_town_city_id:"",
-        postal_code:"",
-        account_status:"",
-        incorporation_name:"",
-        incorporation_address:"",
-        notes:"",
-        resume:"",
-        id_card:"",
-        void_check_doc:"",
-        hst_no:"",
-        assign_admin:"",
-        assign_director_id:"",
+        first_name:data.first_name,
+        middle_name:data.middle_name,
+        last_name:data.last_name,
+        gender:data.gender,
+        highest_qualification:data.highest_qualification,
+        dob:data.dob,
+        phone:data.phone,
+        email:data.email,
+        program_type_id:data.program_type_id,
+        address:data.address,
+        province_id:data.program_type_id,
+        province_town_city_id:data.province_town_city_id,
+        postal_code:data.postal_code,
+        account_status:data.account_status,
+        incorporation_name:data.incorporation_name,
+        incorporation_address:data.incorporation_address,
+        notes:data.notes,
+        resume:data.resume,
+        id_card:data.id_card,
+        void_check_doc:data.void_check_doc,
+        hst_no:data.hst_no,
+        assign_admin:data.assign_admin,
+        assign_director_id:data.assign_director_id,
         _method:"PUT"
     });
 
@@ -150,7 +151,7 @@
                     </div>
                      <div class="col-md-4">
                         <label for="inputName" class="control-label">Email <b style="color:red">*</b> <span usx="c2aa1951a32f33b047954754f0ae" onclick="addAnotherEmail(this)" class="text-blue"> <i class="fa fa-plus"></i> Add Email </span></label>
-                          <input type="text" class="form-control" id="inputName" value={$profileForm.email} disabled="">
+                          <input type="text" class="form-control" id="inputName" value={$profileForm.email} readonly disabled>
                     </div>
                     <div class="col-md-4">
                         <label for="AcctProgram" class="control-label">Program Type <b style="color:red">*</b></label>
@@ -159,7 +160,7 @@
                           <select bind:value={$profileForm.program_type_id} class="form-control" id="AcctProgram" name="AcctProgram" required="">
                             <option value="">--</option>
                             {#each programTypes as item}
-                               <option value={item.id}>{item.name}</option>
+                               <option value={item.id}>{item.title}</option>
                             {/each}
                           </select>
 
@@ -270,17 +271,23 @@
                     <div class="col-md-4">
                         <!-- svelte-ignore a11y-label-has-associated-control -->
                        <label class="control-label">Assign Admin</label>
-                        <select class="form-control" name="Admin" required="">
+                        <select bind:value={$profileForm.assign_admin} class="form-control" name="Admin" required="">
                           <option value=""> -- </option>
-                          <option value="3">VICTOR N1 OKONKWO</option><option value="12">puneet  mehta</option><option value="13">Fumi  Olasimbo</option><option value="14">Martin  Martin</option><option value="17">Ade  Adeyemi</option><option value="21">Victor  Test1</option><option value="23">Busayo  Omisore</option><option value="24">Chris  Nkwontah</option><option value="26">Bolaji  Ola</option><option value="27">Bolaji  Olarenwaju</option><option value="28">Damola  Afo</option><option value="29">Anita  Ezeaba</option><option value="30" selected="">Nkechi  Moses</option><option value="31">Jennifer  Vangelis-Oden</option><option value="38">Jamila  Rufai</option><option value="40">Alex  Akamukali</option>                          </select>
+                          {#each users as item}
+                             <option value={item.id}>{item.name},{item.email}</option>
+                          {/each}
+                        </select>
                     </div>
 
                     <div class="col-md-4">
                         <!-- svelte-ignore a11y-label-has-associated-control -->
                        <label class="control-label">Assign Director</label>
-                       <select class="form-control" name="Director" required="">
+                       <select bind:value={$profileForm.assign_director_id} class="form-control" name="Director" required="">
                          <option value=""> -- </option>
-                          <option value="3">VICTOR N1 OKONKWO</option><option value="12">puneet  mehta</option><option value="13">Fumi  Olasimbo</option><option value="14">Martin  Martin</option><option value="17">Ade  Adeyemi</option><option value="21">Victor  Test1</option><option value="23">Busayo  Omisore</option><option value="24">Chris  Nkwontah</option><option value="26">Bolaji  Ola</option><option value="27">Bolaji  Olarenwaju</option><option value="28">Damola  Afo</option><option value="29">Anita  Ezeaba</option><option value="30" selected="">Nkechi  Moses</option><option value="31">Jennifer  Vangelis-Oden</option><option value="38">Jamila  Rufai</option><option value="40">Alex  Akamukali</option>                         </select>
+                         {#each users as item}
+                             <option value={item.id}>{item.name},{item.email}</option>
+                         {/each}
+                        </select>
                     </div>
                     </div>
 
