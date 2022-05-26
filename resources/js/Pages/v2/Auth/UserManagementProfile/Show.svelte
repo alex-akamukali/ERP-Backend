@@ -26,7 +26,7 @@
         email:data.email,
         program_type_id:data.program_type_id,
         address:data.address,
-        province_id:data.program_type_id,
+        province_id:data.province_id,
         province_town_city_id:data.province_town_city_id,
         postal_code:data.postal_code,
         account_status:data.account_status,
@@ -49,7 +49,9 @@
 
     onUpdate((data)=>{
 
-        $profileForm.post("/user-management-profile/" + data.id);
+        $profileForm.post("/user-management-profile/" + data.id,{
+            preserveScroll:true
+        });
 
     });
 
@@ -61,9 +63,9 @@
     // console.log(report);
     //export let name;
     function query(province_id){
-       $townCityFilter.province_id = province_id;
+       $profileForm.province_id = province_id;
     //    alert(province_id);
-       $townCityFilter.get("/user-management-profile/" + data.id,{
+       $profileForm.get("/user-management-profile/" + data.id,{
            preserveScroll:true
        });
     }
@@ -178,14 +180,14 @@
                     </div>
                       <div class="col-md-4">
                         <label for="inputName" class="control-label">Province: <b style="color:red">*</b></label>
-                        <ProvinceSelect list={province} on:change={(e)=>$profileForm.province_id = e.detail}  />
+                        <ProvinceSelect list={province} on:change={(e)=>$profileForm.province_id = e.detail} value={$profileForm.province_id}  />
                     </div>
 
                      <div class="col-md-4">
                         <label for="inputName" class="control-label">Town/City: <b style="color:red">*</b></label>
                           <!--<input type="text" class="form-control"  name="Town"  value="116"  placeholder="" required > -->
 
-                       <TownCitySelect {query} list={towncity} on:change={(e)=>$profileForm.province_town_city_id = e.detail} />
+                       <TownCitySelect {query} list={towncity} on:change={(e)=>$profileForm.province_town_city_id = e.detail} value={$profileForm.province_town_city_id} />
 
 
                     </div>

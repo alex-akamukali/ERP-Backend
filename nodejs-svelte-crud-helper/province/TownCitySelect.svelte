@@ -6,6 +6,7 @@
 <script>
     export let list;
     export let query;
+    export let value;
     let dispatch = createEventDispatcher();
     function emitChange(e) {
         dispatch("change", e.target.value);
@@ -16,7 +17,7 @@
     });
 </script>
 
-<select class="form-control" on:change={emitChange}>
+<select class="form-control" on:change={emitChange} bind:value={value}>
     <option>--Select Town/City--</option>
     {#each list as item}
         <option value={item.id}>{item.name}</option>
