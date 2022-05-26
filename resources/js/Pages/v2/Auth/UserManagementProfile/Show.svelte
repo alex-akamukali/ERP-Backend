@@ -1,6 +1,6 @@
 <script context="module">
     import UserManagement from "nodejs-svelte-crud-helper/user/user-profile/Index.svelte";
-    import { Layout, useForm } from "nodejs-svelte-crud-helper";
+    import { Layout, useForm , update, onUpdate } from "nodejs-svelte-crud-helper";
     import ProvinceSelect from "nodejs-svelte-crud-helper/province/ProvinceSelect.svelte";
     import TownCitySelect from "nodejs-svelte-crud-helper/province/TownCitySelect.svelte";
 
@@ -12,10 +12,48 @@
     export let data;
     export let province;
     export let towncity; //towncity
-    let profileForm = useForm({});
+    let profileForm = useForm({
+        first_name:"",
+        middle_name:"",
+        last_name:"",
+        gender:"",
+        highest_qualification:"",
+        dob:"",
+        phone:"",
+        email:"",
+        program_type_id:"",
+        address:"",
+        province_id:"",
+        province_town_city_id:"",
+        postal_code:"",
+        account_status:"",
+        incorporation_name:"",
+        incorporation_address:"",
+        notes:"",
+        resume:"",
+        id_card:"",
+        void_check_doc:"",
+        hst_no:"",
+        assign_admin:"",
+        assign_director_id:"",
+        _method:"PUT"
+    });
+
     let townCityFilter = useForm({
        province_id:''
     });
+
+
+    onUpdate((data)=>{
+
+        $profileForm.post("/user-management-profile/" + data.id);
+
+    });
+
+    function submit(){
+        update(data);
+    }
+
     // export let report;
     // console.log(report);
     //export let name;
@@ -36,7 +74,7 @@
           <h4>Profile Information</h4>
         </div>
          <div class="box-body">
-           <form class="form-horizontal" action="../utility/userupdatebio" method="post">
+           <form class="form-horizontal"  method="post" on:submit|preventDefault={submit}>
                 <div class="row">
                   <div class="col-md-12">
                     <div class="col-md-4">
@@ -243,14 +281,17 @@
                     </div>
 
                   </div>
+
+                  <div class="row">
+                    <br>
+                    <div class="col-md-3 pull-right">
+                        <button type="submit" class="btn btn-primary btn-block">Update Profile</button>
+                    </div>
+                  </div>
+
+
                 </form></div>
 
-               <div class="row">
-                <br>
-                <div class="col-md-3 pull-right">
-                    <button type="submit" class="btn btn-primary btn-block">Update Profile</button>
-                </div>
-              </div>
 
          </div>
 

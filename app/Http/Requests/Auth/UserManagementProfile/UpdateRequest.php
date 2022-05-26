@@ -13,7 +13,7 @@ class UpdateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,5 +26,11 @@ class UpdateRequest extends FormRequest
         return [
             //
         ];
+    }
+
+    function preparedData(){
+        $data = $this->validated();
+
+        return $data;
     }
 }

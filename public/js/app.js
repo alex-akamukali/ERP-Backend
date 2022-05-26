@@ -32506,7 +32506,7 @@ function create_default_slot(ctx) {
   var div43;
   var div0;
   var t1;
-  var div40;
+  var div42;
   var form;
   var div5;
   var t13;
@@ -32609,8 +32609,10 @@ function create_default_slot(ctx) {
   var option41;
   var option42;
   var t138;
-  var div42;
+  var div41;
   var current;
+  var mounted;
+  var dispose;
   provinceselect = new nodejs_svelte_crud_helper_province_ProvinceSelect_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
     props: {
       list:
@@ -32623,7 +32625,7 @@ function create_default_slot(ctx) {
     props: {
       query:
       /*query*/
-      ctx[4],
+      ctx[6],
       list:
       /*towncity*/
       ctx[2]
@@ -32636,7 +32638,7 @@ function create_default_slot(ctx) {
       div0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div0.innerHTML = "<h4>Profile Information</h4>";
       t1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div42 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       form = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div5.innerHTML = "<div class=\"col-md-12\"><div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">First Name <b style=\"color:red\">*</b></label> \n                          <input type=\"text\" class=\"form-control\" name=\"FirstName\" id=\"inputName\" value=\"Chidi\" placeholder=\"First Name\" required=\"\"/> \n                          <input type=\"hidden\" name=\"Usx\" value=\"c2aa1951a32f33b047954754f0ae\"/></div> \n                     <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Middle Name</label> \n                          <input type=\"text\" class=\"form-control\" name=\"MiddleName\" id=\"inputName\" value=\"\" placeholder=\"Middle Name\"/></div> \n                     <div class=\"col-md-4\"><label for=\"inputName\" class=\"control-label\">Last Name <b style=\"color:red\">*</b></label> \n                          <input type=\"text\" class=\"form-control\" name=\"LastName\" id=\"inputName\" value=\"Moses\" placeholder=\"Last Name\" required=\"\"/></div></div>";
@@ -32798,8 +32800,8 @@ function create_default_slot(ctx) {
       option42 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
       option42.textContent = "Alex  Akamukali";
       t138 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div42 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div42.innerHTML = "<br/> \n                <div class=\"col-md-3 pull-right\"><button type=\"submit\" class=\"btn btn-primary btn-block\">Update Profile</button></div>";
+      div41 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div41.innerHTML = "<br/> \n                    <div class=\"col-md-3 pull-right\"><button type=\"submit\" class=\"btn btn-primary btn-block\">Update Profile</button></div>";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "box-header");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div7, "class", "col-md-4");
@@ -32938,11 +32940,10 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div37, "class", "col-md-4");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div38, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div39, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div41, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "class", "form-horizontal");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "action", "../utility/userupdatebio");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "method", "post");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div40, "class", "box-body");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div42, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div42, "class", "box-body");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div43, "class", "box box-default");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div43, "padding", "11px");
     },
@@ -32950,8 +32951,8 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div43, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div43, div0);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div43, t1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div43, div40);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div40, form);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div43, div42);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div42, form);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div5);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t13);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div13);
@@ -33052,9 +33053,16 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option40);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option41);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option42);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div43, t138);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div43, div42);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t138);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div41);
       current = true;
+
+      if (!mounted) {
+        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(form, "submit", (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.prevent_default)(
+        /*submit*/
+        ctx[5]));
+        mounted = true;
+      }
     },
     p: function p(ctx, dirty) {
       var provinceselect_changes = {};
@@ -33087,6 +33095,8 @@ function create_default_slot(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div43);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(provinceselect);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(towncityselect);
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -33130,7 +33140,7 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*$$scope, towncity, province*/
-      134) {
+      518) {
         usermanagement_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -33166,18 +33176,55 @@ var change_handler_1 = function change_handler_1(e) {
 
 function instance($$self, $$props, $$invalidate) {
   var $townCityFilter;
+  var $profileForm;
   var data = $$props.data;
   var province = $$props.province;
   var towncity = $$props.towncity;
-  var profileForm = (0,nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__.useForm)({});
+  var profileForm = (0,nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__.useForm)({
+    first_name: "",
+    middle_name: "",
+    last_name: "",
+    gender: "",
+    highest_qualification: "",
+    dob: "",
+    phone: "",
+    email: "",
+    program_type_id: "",
+    address: "",
+    province_id: "",
+    province_town_city_id: "",
+    postal_code: "",
+    account_status: "",
+    incorporation_name: "",
+    incorporation_address: "",
+    notes: "",
+    resume: "",
+    id_card: "",
+    void_check_doc: "",
+    hst_no: "",
+    assign_admin: "",
+    assign_director_id: "",
+    _method: "PUT"
+  });
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, profileForm, function (value) {
+    return $$invalidate(8, $profileForm = value);
+  });
   var townCityFilter = (0,nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__.useForm)({
     province_id: ''
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, townCityFilter, function (value) {
-    return $$invalidate(5, $townCityFilter = value);
-  }); // export let report;
+    return $$invalidate(7, $townCityFilter = value);
+  });
+  (0,nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__.onUpdate)(function (data) {
+    $profileForm.post("/user-management-profile/" + data.id);
+  });
+
+  function submit() {
+    (0,nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__.update)(data);
+  } // export let report;
   // console.log(report);
   //export let name;
+
 
   function query(province_id) {
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(townCityFilter, $townCityFilter.province_id = province_id, $townCityFilter); //    alert(province_id);
@@ -33193,7 +33240,7 @@ function instance($$self, $$props, $$invalidate) {
     if ('towncity' in $$props) $$invalidate(2, towncity = $$props.towncity);
   };
 
-  return [data, province, towncity, townCityFilter, query];
+  return [data, province, towncity, profileForm, townCityFilter, submit, query];
 }
 
 var Show = /*#__PURE__*/function (_SvelteComponent) {

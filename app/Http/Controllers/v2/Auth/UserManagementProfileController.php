@@ -65,8 +65,8 @@ class UserManagementProfileController extends Controller
 
     function update($id, UpdateRequest $updateRequest)
     {
-        $record = $this->userManagementProfileRepository->update($id, $updateRequest->validated());
-        return $this->respondWithSuccess("Record updated");
+        $record = $this->userManagementProfileRepository->update($id, $updateRequest->preparedData());
+        return $this->respondWithSuccess("Record updated...");
     }
 
     function destroy($id)
