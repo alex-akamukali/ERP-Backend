@@ -16,10 +16,10 @@ class AssessmentController extends Controller
     }
 
     function index(){
-        $list = $this->assessmentRepository->fetch(request()->all())->get();
-        return inertia()->render("v2/Auth/Assessment/Index",[
-            "list"=>$list
-        ]);
+        // $list = $this->assessmentRepository->fetch(request()->all())->get();
+        // return inertia()->render("v2/Auth/Assessment/Index",[
+        //     "list"=>$list
+        // ]);
     }
 
     function create(){
@@ -37,7 +37,8 @@ class AssessmentController extends Controller
         $data = $this->assessmentRepository->fetchById($id);
         // dd($data);
         return inertia()->render("v2/Auth/Assessment/Show",[
-            "data"=>$data
+            "data"=>$data,
+            "assessment"=>$this->assessmentRepository->fetch($id)
         ]);
     }
 

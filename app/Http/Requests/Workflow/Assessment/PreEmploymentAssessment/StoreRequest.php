@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Workflow\Assessment\PreEmploymentAssessment;
 
+use App\Models\Workflow\Assessment\PreEmploymentAssessment;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreRequest extends FormRequest
@@ -13,7 +14,7 @@ class StoreRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +25,15 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "user_id"=>"required|exists:users,id",
+            "scheduled_date"=>"required"
         ];
+    }
+
+    function prepareData(){
+        $data = $this->validated();
+        $data['status'] = PreEmploymentAssessment::$STATUS_UNAPPROVED;
+        $data['created_by'] = request()->user()->id;
+        return $data;
     }
 }

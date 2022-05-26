@@ -41,13 +41,13 @@ class PreEmploymentAssessmentController extends Controller
     }
 
     function store(StoreRequest $request){
-      $record = $this->preEmploymentAssessmentRepository->create($request->validated());
-      return $this->respondWithSuccess("New record added");
+      $record = $this->preEmploymentAssessmentRepository->create($request->prepareData());
+      return $this->respondWithSuccess("New schedule logged");
     }
 
     function update($id,UpdateRequest $updateRequest){
         $record = $this->preEmploymentAssessmentRepository->update($id,$updateRequest->validated());
-        return $this->respondWithSuccess("Record updated");
+        return $this->respondWithSuccess("Status updated.");
     }
 
     function destroy($id){

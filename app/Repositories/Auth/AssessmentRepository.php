@@ -32,10 +32,14 @@ class AssessmentRepository
         $this->serviceAgreementRepository = $serviceAgreementRepository;
     }
 
-    function fetch($filters=[]){
-        // $query = User::query();
-
-        return [];
+    function fetch($userId){
+        return [
+            'preEmploymentAssessment'=>$this->preEmploymentAssessmentRepository->getByUserId($userId)->get(),
+            "assessmentResult"=>$this->assessmentResultRepository->getByUserId($userId)->get(),
+            "assessmentInterview"=>$this->assessmentInterviewRepository->getByUserId($userId)->get(),
+            "serviceAgreement"=>$this->serviceAgreementRepository->getByUserId($userId)->get(),
+            "statuses"=>$this->preEmploymentAssessmentRepository->statuses()
+        ];
     }
 
     function fetchById($id){

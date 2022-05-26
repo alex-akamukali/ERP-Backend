@@ -1,6 +1,8 @@
 <?php
 namespace App\Traits\Workflow\Assessment;
 
+use App\Models\User;
+
 trait UseAssessmentTrait{
 
     static $STATUS_APPROVED = 'approved';
@@ -25,6 +27,10 @@ trait UseAssessmentTrait{
 
     function scopeGetByUserId($query,$userId){
         return $query->where('user_id',$userId);
+    }
+
+    function raised_by(){
+        return $this->belongsTo(User::class,'created_by');
     }
 
 

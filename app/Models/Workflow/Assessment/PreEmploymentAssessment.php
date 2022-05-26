@@ -19,6 +19,8 @@ class PreEmploymentAssessment extends Model
        'created_by'
     ];
 
+    protected $with = ['raised_by'];
+
     // const STATUS_APPROVED = 'approved';
     // const STATUS_UNAPPROVED = 'unapproved';
     // const STATUSES = [self::STATUS_APPROVED,self::STATUS_UNAPPROVED];

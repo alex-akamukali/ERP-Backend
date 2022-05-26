@@ -4,6 +4,7 @@
 
 <script>
     export let url;
+    export let label;
     const dispatch = createEventDispatcher();
 
     function openCalendly() {
@@ -63,9 +64,15 @@
 </script>
 
 <!-- svelte-ignore a11y-invalid-attribute -->
-<a
+<button type="button" class="btn btn-primary btn-block" style="width:150px"
+on:click|preventDefault={openCalendly}
+> <i class="fa fa-handshake-o"></i>
+ {label}
+</button>
+<!-- <a
     class="btn btn-sm btn-primary"
     href="#"
-    on:click|preventDefault={openCalendly}>Schedule time with me</a
->
+    >{label}</a
+> -->
 <!-- Calendly link widget end -->
+<!-- Propose Meeting -->

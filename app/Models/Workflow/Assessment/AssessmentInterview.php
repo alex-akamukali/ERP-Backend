@@ -19,4 +19,7 @@ class AssessmentInterview extends Model
         'created_by'
 
     ];
+
+    protected $with = ['raised_by'];
+
 }
