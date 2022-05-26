@@ -1,13 +1,18 @@
+<script context="module">
+    import { inertia } from "@inertiajs/inertia-svelte";
+</script>
+
 <script>
     export let currentTab;
     export let user;
     export let title;
-    console.log(currentTab,user);
+    console.log(currentTab, user);
 </script>
+
 <section class="content-header">
     <h1>
         <!-- User Profile -->
-            {title}
+        {title}
         <small>
             <!-- Version 1.0 -->
         </small>
@@ -23,17 +28,16 @@
 
 <section class="content">
     <div class="row">
-
-
-
         <div class="col-md-12">
             <div class="box">
                 <div class="row">
-
                     <div class="col-md-12" style="text-align: right;">
-                        <button style="margin: 11px;" class="btn btn-sm btn-primary" on:click={()=>window.history.back()}>Back</button>
+                        <button
+                            style="margin: 11px;"
+                            class="btn btn-sm btn-primary"
+                            on:click={() => window.history.back()}>Back</button
+                        >
                     </div>
-
 
                     <div class="col-md-12">
                         <img
@@ -72,32 +76,53 @@
 
                     <div class="col-md-12">
                         <ul class="nav nav-tabs nav-justified">
-                            <li  class={currentTab == "dashboard"? 'active':''}>
+                            <li
+                                class={currentTab == "dashboard"
+                                    ? "active"
+                                    : ""}
+                            >
                                 <a
+                                    use:inertia
                                     style="border: none"
-                                    href="userProfileDashboard">Dashboard</a
+                                    href={`/user-management-dashboard/${user.id}`}
+                                    >Dashboard</a
                                 >
                             </li>
-                            <li class={currentTab == "profile"? 'active':''}>
+                            <li class={currentTab == "profile" ? "active" : ""}>
                                 <a
+                                    use:inertia
                                     style="border: none"
-                                    href="userProfileProfile">Profile</a
+                                    href={`/user-management-profile/${user.id}`}
+                                    >Profile</a
                                 >
                             </li>
-                            <li class={currentTab == "workflow"? 'active':''}>
+                            <li
+                                class={currentTab == "workflow" ? "active" : ""}
+                            >
                                 <a
+                                    use:inertia
                                     style="border: none"
                                     href="userProfileWorkflow">Workflow</a
                                 >
                             </li>
-                            <li class={currentTab == "contracts"? 'active':''}>
+                            <li
+                                class={currentTab == "contracts"
+                                    ? "active"
+                                    : ""}
+                            >
                                 <a
+                                    use:inertia
                                     style="border: none"
                                     href="userProfileContracts">Contracts</a
                                 >
                             </li>
-                            <li class={currentTab == "payment-portal"? 'active':''}>
+                            <li
+                                class={currentTab == "payment-portal"
+                                    ? "active"
+                                    : ""}
+                            >
                                 <a
+                                    use:inertia
                                     style="border: none"
                                     href="userProfilePayments">Payment Portal</a
                                 >
@@ -113,9 +138,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box box-default">
-
                 <slot />
-
             </div>
         </div>
     </div>
@@ -190,7 +213,7 @@
         font-weight: 800;
     }
 
-    .active a{
+    .active a {
         color: #555 !important;
     }
 </style>

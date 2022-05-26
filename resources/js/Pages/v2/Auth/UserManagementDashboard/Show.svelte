@@ -11,7 +11,7 @@
     //export let name;
 </script>
 
-<UserManagement user={data} title="User Profile." currentTab="dashboard">
+<UserManagement user={data} title="User Dashboard" currentTab="dashboard">
     <!-- {JSON.stringify(report)} -->
 
     <div
