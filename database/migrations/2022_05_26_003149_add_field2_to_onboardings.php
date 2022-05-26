@@ -14,7 +14,7 @@ class AddField2ToOnboardings extends Migration
     public function up()
     {
         Schema::table('onboardings', function (Blueprint $table) {
-            $table->string('status')->nullable();
+            // $table->string('status')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddField2ToOnboardings extends Migration
     public function down()
     {
         Schema::table('onboardings', function (Blueprint $table) {
-            $table->dropColumn('status');
+            // $table->dropColumn('status');
         });
     }
 }
