@@ -6604,6 +6604,479 @@ var UserManagementRow = /*#__PURE__*/function (_SvelteComponent) {
 
 /***/ }),
 
+/***/ "./nodejs-svelte-crud-helper/province/ProvinceSelect.svelte":
+/*!******************************************************************!*\
+  !*** ./nodejs-svelte-crud-helper/province/ProvinceSelect.svelte ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _Store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Store */ "./nodejs-svelte-crud-helper/province/Store.js");
+/* harmony import */ var svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! svelte */ "./node_modules/svelte/index.mjs");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/* nodejs-svelte-crud-helper/province/ProvinceSelect.svelte generated by Svelte v3.48.0 */
+
+
+
+
+function get_each_context(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[4] = list[i];
+  return child_ctx;
+} // (18:4) {#each list as item}
+
+
+function create_each_block(ctx) {
+  var option;
+  var t_value =
+  /*item*/
+  ctx[4].name + "";
+  var t;
+  var option_value_value;
+  return {
+    c: function c() {
+      option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
+      option.__value = option_value_value =
+      /*item*/
+      ctx[4].id;
+      option.value = option.__value;
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, option, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(option, t);
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*list*/
+      1 && t_value !== (t_value =
+      /*item*/
+      ctx[4].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+
+      if (dirty &
+      /*list*/
+      1 && option_value_value !== (option_value_value =
+      /*item*/
+      ctx[4].id)) {
+        option.__value = option_value_value;
+        option.value = option.__value;
+      }
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
+    }
+  };
+}
+
+function create_fragment(ctx) {
+  var select;
+  var option;
+  var mounted;
+  var dispose;
+  var each_value =
+  /*list*/
+  ctx[0];
+  var each_blocks = [];
+
+  for (var i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+
+  return {
+    c: function c() {
+      select = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option.textContent = "--Select Province--";
+
+      for (var _i = 0; _i < each_blocks.length; _i += 1) {
+        each_blocks[_i].c();
+      }
+
+      option.__value = "--Select Province--";
+      option.value = option.__value;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "class", "form-control");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, select, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option);
+
+      for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
+        each_blocks[_i2].m(select, null);
+      }
+
+      if (!mounted) {
+        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
+        /*emitChange*/
+        ctx[1]);
+        mounted = true;
+      }
+    },
+    p: function p(ctx, _ref) {
+      var _ref2 = _slicedToArray(_ref, 1),
+          dirty = _ref2[0];
+
+      if (dirty &
+      /*list*/
+      1) {
+        each_value =
+        /*list*/
+        ctx[0];
+
+        var _i3;
+
+        for (_i3 = 0; _i3 < each_value.length; _i3 += 1) {
+          var child_ctx = get_each_context(ctx, each_value, _i3);
+
+          if (each_blocks[_i3]) {
+            each_blocks[_i3].p(child_ctx, dirty);
+          } else {
+            each_blocks[_i3] = create_each_block(child_ctx);
+
+            each_blocks[_i3].c();
+
+            each_blocks[_i3].m(select, null);
+          }
+        }
+
+        for (; _i3 < each_blocks.length; _i3 += 1) {
+          each_blocks[_i3].d(1);
+        }
+
+        each_blocks.length = each_value.length;
+      }
+    },
+    i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(select);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+      mounted = false;
+      dispose();
+    }
+  };
+}
+
+function instance($$self, $$props, $$invalidate) {
+  var $provinceStore;
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, _Store__WEBPACK_IMPORTED_MODULE_1__.provinceStore, function ($$value) {
+    return $$invalidate(2, $provinceStore = $$value);
+  });
+  var list = $$props.list;
+  var dispatch = (0,svelte__WEBPACK_IMPORTED_MODULE_2__.createEventDispatcher)();
+
+  function emitChange(e) {
+    dispatch("change", e.target.value); // alert('vl' + e.target.value);
+
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(_Store__WEBPACK_IMPORTED_MODULE_1__.provinceStore, $provinceStore.province = e.target.value, $provinceStore);
+  }
+
+  $$self.$$set = function ($$props) {
+    if ('list' in $$props) $$invalidate(0, list = $$props.list);
+  };
+
+  return [list, emitChange];
+}
+
+var ProvinceSelect = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(ProvinceSelect, _SvelteComponent);
+
+  var _super = _createSuper(ProvinceSelect);
+
+  function ProvinceSelect(options) {
+    var _this;
+
+    _classCallCheck(this, ProvinceSelect);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
+      list: 0
+    });
+    return _this;
+  }
+
+  return _createClass(ProvinceSelect);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProvinceSelect);
+
+/***/ }),
+
+/***/ "./nodejs-svelte-crud-helper/province/TownCitySelect.svelte":
+/*!******************************************************************!*\
+  !*** ./nodejs-svelte-crud-helper/province/TownCitySelect.svelte ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
+/* harmony import */ var _Store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Store */ "./nodejs-svelte-crud-helper/province/Store.js");
+/* harmony import */ var svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! svelte */ "./node_modules/svelte/index.mjs");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/* nodejs-svelte-crud-helper/province/TownCitySelect.svelte generated by Svelte v3.48.0 */
+
+
+
+
+function get_each_context(ctx, list, i) {
+  var child_ctx = ctx.slice();
+  child_ctx[4] = list[i];
+  return child_ctx;
+} // (21:4) {#each list as item}
+
+
+function create_each_block(ctx) {
+  var option;
+  var t_value =
+  /*item*/
+  ctx[4].name + "";
+  var t;
+  var option_value_value;
+  return {
+    c: function c() {
+      option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
+      option.__value = option_value_value =
+      /*item*/
+      ctx[4].id;
+      option.value = option.__value;
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, option, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(option, t);
+    },
+    p: function p(ctx, dirty) {
+      if (dirty &
+      /*list*/
+      1 && t_value !== (t_value =
+      /*item*/
+      ctx[4].name + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+
+      if (dirty &
+      /*list*/
+      1 && option_value_value !== (option_value_value =
+      /*item*/
+      ctx[4].id)) {
+        option.__value = option_value_value;
+        option.value = option.__value;
+      }
+    },
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
+    }
+  };
+}
+
+function create_fragment(ctx) {
+  var select;
+  var option;
+  var mounted;
+  var dispose;
+  var each_value =
+  /*list*/
+  ctx[0];
+  var each_blocks = [];
+
+  for (var i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+
+  return {
+    c: function c() {
+      select = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option.textContent = "--Select Town/City--";
+
+      for (var _i = 0; _i < each_blocks.length; _i += 1) {
+        each_blocks[_i].c();
+      }
+
+      option.__value = "--Select Town/City--";
+      option.value = option.__value;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "class", "form-control");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, select, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option);
+
+      for (var _i2 = 0; _i2 < each_blocks.length; _i2 += 1) {
+        each_blocks[_i2].m(select, null);
+      }
+
+      if (!mounted) {
+        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change",
+        /*emitChange*/
+        ctx[1]);
+        mounted = true;
+      }
+    },
+    p: function p(ctx, _ref) {
+      var _ref2 = _slicedToArray(_ref, 1),
+          dirty = _ref2[0];
+
+      if (dirty &
+      /*list*/
+      1) {
+        each_value =
+        /*list*/
+        ctx[0];
+
+        var _i3;
+
+        for (_i3 = 0; _i3 < each_value.length; _i3 += 1) {
+          var child_ctx = get_each_context(ctx, each_value, _i3);
+
+          if (each_blocks[_i3]) {
+            each_blocks[_i3].p(child_ctx, dirty);
+          } else {
+            each_blocks[_i3] = create_each_block(child_ctx);
+
+            each_blocks[_i3].c();
+
+            each_blocks[_i3].m(select, null);
+          }
+        }
+
+        for (; _i3 < each_blocks.length; _i3 += 1) {
+          each_blocks[_i3].d(1);
+        }
+
+        each_blocks.length = each_value.length;
+      }
+    },
+    i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(select);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+      mounted = false;
+      dispose();
+    }
+  };
+}
+
+function instance($$self, $$props, $$invalidate) {
+  var list = $$props.list;
+  var query = $$props.query;
+  var dispatch = (0,svelte__WEBPACK_IMPORTED_MODULE_2__.createEventDispatcher)();
+
+  function emitChange(e) {
+    dispatch("change", e.target.value);
+  } //   $provinceStore.province = e.target.value;
+
+
+  _Store__WEBPACK_IMPORTED_MODULE_1__.provinceStore.subscribe(function (_ref3) {
+    var province = _ref3.province;
+    query(province);
+  });
+
+  $$self.$$set = function ($$props) {
+    if ('list' in $$props) $$invalidate(0, list = $$props.list);
+    if ('query' in $$props) $$invalidate(2, query = $$props.query);
+  };
+
+  return [list, emitChange, query];
+}
+
+var TownCitySelect = /*#__PURE__*/function (_SvelteComponent) {
+  _inherits(TownCitySelect, _SvelteComponent);
+
+  var _super = _createSuper(TownCitySelect);
+
+  function TownCitySelect(options) {
+    var _this;
+
+    _classCallCheck(this, TownCitySelect);
+
+    _this = _super.call(this);
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
+      list: 0,
+      query: 2
+    });
+    return _this;
+  }
+
+  return _createClass(TownCitySelect);
+}(svelte_internal__WEBPACK_IMPORTED_MODULE_0__.SvelteComponent);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TownCitySelect);
+
+/***/ }),
+
 /***/ "./nodejs-svelte-crud-helper/user/user-management-docusign/Index.svelte":
 /*!******************************************************************************!*\
   !*** ./nodejs-svelte-crud-helper/user/user-management-docusign/Index.svelte ***!
@@ -31988,8 +32461,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "layout": () => (/* binding */ layout)
 /* harmony export */ });
 /* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
-/* harmony import */ var nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nodejs-svelte-crud-helper */ "./nodejs-svelte-crud-helper/index.js");
-/* harmony import */ var nodejs_svelte_crud_helper_user_user_profile_Index_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! nodejs-svelte-crud-helper/user/user-profile/Index.svelte */ "./nodejs-svelte-crud-helper/user/user-profile/Index.svelte");
+/* harmony import */ var nodejs_svelte_crud_helper_province_TownCitySelect_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nodejs-svelte-crud-helper/province/TownCitySelect.svelte */ "./nodejs-svelte-crud-helper/province/TownCitySelect.svelte");
+/* harmony import */ var nodejs_svelte_crud_helper_province_ProvinceSelect_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! nodejs-svelte-crud-helper/province/ProvinceSelect.svelte */ "./nodejs-svelte-crud-helper/province/ProvinceSelect.svelte");
+/* harmony import */ var nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! nodejs-svelte-crud-helper */ "./nodejs-svelte-crud-helper/index.js");
+/* harmony import */ var nodejs_svelte_crud_helper_user_user_profile_Index_svelte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! nodejs-svelte-crud-helper/user/user-profile/Index.svelte */ "./nodejs-svelte-crud-helper/user/user-profile/Index.svelte");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -32025,6 +32500,8 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /* resources/js/Pages/v2/Auth/UserManagementProfile/Show.svelte generated by Svelte v3.48.0 */
+
+
 
 
 
@@ -32075,6 +32552,26 @@ function create_default_slot(ctx) {
   var div20;
   var label12;
   var t59;
+  var provinceselect;
+  var t60;
+  var div21;
+  var label13;
+  var t63;
+  var towncityselect;
+  var t64;
+  var div22;
+  var t68;
+  var div39;
+  var div29;
+  var t82;
+  var div34;
+  var t95;
+  var div38;
+  var div35;
+  var t98;
+  var div36;
+  var label25;
+  var t100;
   var select2;
   var option9;
   var option10;
@@ -32090,15 +32587,14 @@ function create_default_slot(ctx) {
   var option20;
   var option21;
   var option22;
-  var span6;
-  var t75;
-  var div21;
-  var label13;
-  var t78;
-  var select3;
   var option23;
   var option24;
   var option25;
+  var t118;
+  var div37;
+  var label26;
+  var t120;
+  var select3;
   var option26;
   var option27;
   var option28;
@@ -32116,96 +32612,28 @@ function create_default_slot(ctx) {
   var option40;
   var option41;
   var option42;
-  var option43;
-  var option44;
-  var option45;
-  var option46;
-  var option47;
-  var option48;
-  var option49;
-  var option50;
-  var option51;
-  var option52;
-  var option53;
-  var option54;
-  var option55;
-  var option56;
-  var option57;
-  var option58;
-  var option59;
-  var option60;
-  var option61;
-  var option62;
-  var option63;
-  var option64;
-  var option65;
-  var option66;
-  var option67;
-  var option68;
-  var option69;
-  var option70;
-  var option71;
-  var option72;
-  var option73;
-  var option74;
-  var option75;
-  var span12;
-  var t133;
-  var div22;
-  var t137;
-  var div39;
-  var div29;
-  var t151;
-  var div34;
-  var t164;
-  var div38;
-  var div35;
-  var t167;
-  var div36;
-  var label25;
-  var t169;
-  var select4;
-  var option76;
-  var option77;
-  var option78;
-  var option79;
-  var option80;
-  var option81;
-  var option82;
-  var option83;
-  var option84;
-  var option85;
-  var option86;
-  var option87;
-  var option88;
-  var option89;
-  var option90;
-  var option91;
-  var option92;
-  var t187;
-  var div37;
-  var label26;
-  var t189;
-  var select5;
-  var option93;
-  var option94;
-  var option95;
-  var option96;
-  var option97;
-  var option98;
-  var option99;
-  var option100;
-  var option101;
-  var option102;
-  var option103;
-  var option104;
-  var option105;
-  var option106;
-  var option107;
-  var option108;
-  var option109;
-  var t207;
+  var t138;
   var div42;
+  var current;
+  provinceselect = new nodejs_svelte_crud_helper_province_ProvinceSelect_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
+    props: {
+      list:
+      /*province*/
+      ctx[1]
+    }
+  });
+  provinceselect.$on("change", change_handler);
+  towncityselect = new nodejs_svelte_crud_helper_province_TownCitySelect_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({
+    props: {
+      query:
+      /*query*/
+      ctx[4],
+      list:
+      /*towncity*/
+      ctx[2]
+    }
+  });
+  towncityselect.$on("change", change_handler_1);
   return {
     c: function c() {
       div43 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
@@ -32241,7 +32669,7 @@ function create_default_slot(ctx) {
       option5.textContent = "Post Doctorial";
       t30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div11.innerHTML = "<label for=\"inputName\" class=\"control-label\">Date of Birth <b style=\"color:red\">*</b></label> \n                          \n                          <div class=\"input-group date\"><div class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></div> \n                            <input type=\"text\" class=\"form-control pull-right datepickerDOB\" placeholder=\"Click to set date\" name=\"DOB\" value=\"\"/></div>";
+      div11.innerHTML = "<label for=\"inputName\" class=\"control-label\">Date of Birth <b style=\"color:red\">*</b></label> \n                          \n                          <div class=\"input-group date\"><div class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></div> \n                            <input type=\"date\" class=\"form-control pull-right datepickerDOB\" placeholder=\"Click to set date\" name=\"DOB\" value=\"\"/></div>";
       t35 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
@@ -32272,246 +32700,108 @@ function create_default_slot(ctx) {
       label12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label12.innerHTML = "Province: <b style=\"color:red\">*</b>";
       t59 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      select2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
-      option9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option9.textContent = "--";
-      option10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option10.textContent = "Alberta ";
-      option11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option11.textContent = "British Columbia ";
-      option12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option12.textContent = "Manitoba ";
-      option13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option13.textContent = "New Brunswick ";
-      option14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option14.textContent = "Newfoundland and Labrador ";
-      option15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option15.textContent = "Nova Scotia ";
-      option16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option16.textContent = "Ontario ";
-      option17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option17.textContent = "Prince Edward Island ";
-      option18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option18.textContent = "Quebec ";
-      option19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option19.textContent = "Saskatchewan ";
-      option20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option20.textContent = "Northwest Territories ";
-      option21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option21.textContent = "Nunavut ";
-      option22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option22.textContent = "Yukon ";
-      span6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
-      span6.innerHTML = "<span class=\"selection\"><span class=\"select2-selection select2-selection--single\" role=\"combobox\" aria-haspopup=\"true\" aria-expanded=\"false\" tabindex=\"0\" aria-labelledby=\"select2-Province-container\"><span class=\"select2-selection__rendered\" id=\"select2-Province-container\" role=\"textbox\" aria-readonly=\"true\" title=\" Ontario \">Ontario </span><span class=\"select2-selection__arrow\" role=\"presentation\"><b role=\"presentation\"></b></span></span></span><span class=\"dropdown-wrapper\" aria-hidden=\"true\"></span>";
-      t75 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(provinceselect.$$.fragment);
+      t60 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label13.innerHTML = "Town/City: <b style=\"color:red\">*</b>";
-      t78 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      select3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
-      option23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option23.textContent = "-- ";
-      option24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option24.textContent = "Barrie ";
-      option25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option25.textContent = "Belleville ";
-      option26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option26.textContent = "Brampton ";
-      option27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option27.textContent = "Brant ";
-      option28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option28.textContent = "Brantford ";
-      option29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option29.textContent = "Brockville ";
-      option30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option30.textContent = "Burlington ";
-      option31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option31.textContent = "Cambridge ";
-      option32 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option32.textContent = "Clarence-Rockland ";
-      option33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option33.textContent = "Cornwall ";
-      option34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option34.textContent = "Dryden ";
-      option35 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option35.textContent = "Elliot Lake ";
-      option36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option36.textContent = "Greater Sudbury ";
-      option37 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option37.textContent = "Guelph ";
-      option38 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option38.textContent = "Haldimand County ";
-      option39 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option39.textContent = "Hamilton ";
-      option40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option40.textContent = "Kawartha Lakes ";
-      option41 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option41.textContent = "Kenora ";
-      option42 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option42.textContent = "Kingston ";
-      option43 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option43.textContent = "Kitchener ";
-      option44 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option44.textContent = "London ";
-      option45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option45.textContent = "Markham ";
-      option46 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option46.textContent = "Mississauga ";
-      option47 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option47.textContent = "Niagara Falls ";
-      option48 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option48.textContent = "Norfolk County ";
-      option49 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option49.textContent = "North Bay ";
-      option50 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option50.textContent = "Orillia ";
-      option51 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option51.textContent = "Oshawa ";
-      option52 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option52.textContent = "Ottawa ";
-      option53 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option53.textContent = "Owen Sound ";
-      option54 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option54.textContent = "Pembroke ";
-      option55 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option55.textContent = "Peterborough ";
-      option56 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option56.textContent = "Pickering ";
-      option57 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option57.textContent = "Port Colborne ";
-      option58 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option58.textContent = "Prince Edward County ";
-      option59 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option59.textContent = "Quinte West ";
-      option60 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option60.textContent = "Richmond Hill ";
-      option61 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option61.textContent = "Sarnia ";
-      option62 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option62.textContent = "Sault Ste. Marie ";
-      option63 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option63.textContent = "St. Catharines ";
-      option64 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option64.textContent = "St. Thomas ";
-      option65 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option65.textContent = "Stratford ";
-      option66 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option66.textContent = "Temiskaming Shores ";
-      option67 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option67.textContent = "Thorold ";
-      option68 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option68.textContent = "Thunder Bay ";
-      option69 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option69.textContent = "Timmins ";
-      option70 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option70.textContent = "Toronto ";
-      option71 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option71.textContent = "Vaughan ";
-      option72 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option72.textContent = "Waterloo ";
-      option73 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option73.textContent = "Welland ";
-      option74 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option74.textContent = "Windsor ";
-      option75 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option75.textContent = "Woodstock ";
-      span12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
-      span12.innerHTML = "<span class=\"selection\"><span class=\"select2-selection select2-selection--single\" role=\"combobox\" aria-haspopup=\"true\" aria-expanded=\"false\" tabindex=\"0\" aria-labelledby=\"select2-Town-container\"><span class=\"select2-selection__rendered\" id=\"select2-Town-container\" role=\"textbox\" aria-readonly=\"true\" title=\" Niagara Falls \">Niagara Falls </span><span class=\"select2-selection__arrow\" role=\"presentation\"><b role=\"presentation\"></b></span></span></span><span class=\"dropdown-wrapper\" aria-hidden=\"true\"></span>";
-      t133 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t63 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(towncityselect.$$.fragment);
+      t64 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div22.innerHTML = "<label for=\"inputName\" class=\"control-label\">Postal Code: <b style=\"color:red\">*</b></label> \n                          <input type=\"text\" class=\"form-control\" name=\"PostalCode\" value=\"102214\" placeholder=\"\" required=\"\"/>";
-      t137 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t68 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div39 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div29.innerHTML = "<div class=\"col-md-4\"><label for=\"ActStatus\" class=\"control-label\">Account Status <b style=\"color:red\">*</b></label> \n                         \n                         <div class=\"form-control\"><label class=\"text-green\"><input type=\"radio\" name=\"AccountStatus\" value=\"1\" class=\"flat-green\" checked=\"\"/> Active</label> \xA0 \xA0\n                            <label class=\"text-red\"><input type=\"radio\" name=\"AccountStatus\" value=\"0\" class=\"flat-green\"/> Inactive</label> \xA0 \xA0</div></div> \n\n\n                     <div class=\"col-md-4\"><label>Incorporation Name</label> \n\n                         <input type=\"text\" class=\"form-control\" name=\"myIncorp\" value=\"ABC INC\"/></div> \n\n                     <div class=\"col-md-4\"><label>Incorporation Address</label> \n\n                         <input type=\"text\" class=\"form-control\" name=\"myIncorpAddress\" value=\"\"/></div>";
-      t151 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t82 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div34.innerHTML = "<div class=\"col-md-4\"><label class=\"control-label\">Notes</label> \n                       <textarea class=\"form-control\" placeholder=\"Enter notes about this user here.\"></textarea></div> \n\n                    <div class=\"col-md-2\"><label class=\"control-label\">Resume</label> \n                                                 <a href=\"../utility/../UploadDocs/RESUME1646824641.pdf\" target=\"_blank\"><i class=\"fa fa-file form-control text-green\" style=\"font-size: 20px; cursor: pointer\"></i></a></div> \n\n                     <div class=\"col-md-2\"><label class=\"control-label\">ID Card</label> \n                                                   <a href=\"../../UploadDocs/ID1646824641.jpg\" target=\"_blank\"><i class=\"fa fa-id-badge form-control text-green\" style=\"font-size: 20px; cursor: pointer\"></i></a></div> \n\n                    <div class=\"col-md-2\"><label class=\"control-label\">Void Check Doc</label> \n                                                 <br/> Void Check Doc</div>";
-      t164 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t95 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div38 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div35 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div35.innerHTML = "<label class=\"control-label\">HST No.</label> \n                        <input type=\"text\" class=\"form-control\" name=\"HST\" value=\"123468\"/>";
-      t167 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t98 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label25.textContent = "Assign Admin";
-      t169 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      select4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
-      option76 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option76.textContent = "-- ";
-      option77 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option77.textContent = "VICTOR N1 OKONKWO";
-      option78 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option78.textContent = "puneet  mehta";
-      option79 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option79.textContent = "Fumi  Olasimbo";
-      option80 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option80.textContent = "Martin  Martin";
-      option81 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option81.textContent = "Ade  Adeyemi";
-      option82 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option82.textContent = "Victor  Test1";
-      option83 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option83.textContent = "Busayo  Omisore";
-      option84 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option84.textContent = "Chris  Nkwontah";
-      option85 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option85.textContent = "Bolaji  Ola";
-      option86 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option86.textContent = "Bolaji  Olarenwaju";
-      option87 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option87.textContent = "Damola  Afo";
-      option88 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option88.textContent = "Anita  Ezeaba";
-      option89 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option89.textContent = "Nkechi  Moses";
-      option90 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option90.textContent = "Jennifer  Vangelis-Oden";
-      option91 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option91.textContent = "Jamila  Rufai";
-      option92 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option92.textContent = "Alex  Akamukali";
-      t187 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t100 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      select2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option9.textContent = "-- ";
+      option10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option10.textContent = "VICTOR N1 OKONKWO";
+      option11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option11.textContent = "puneet  mehta";
+      option12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option12.textContent = "Fumi  Olasimbo";
+      option13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option13.textContent = "Martin  Martin";
+      option14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option14.textContent = "Ade  Adeyemi";
+      option15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option15.textContent = "Victor  Test1";
+      option16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option16.textContent = "Busayo  Omisore";
+      option17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option17.textContent = "Chris  Nkwontah";
+      option18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option18.textContent = "Bolaji  Ola";
+      option19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option19.textContent = "Bolaji  Olarenwaju";
+      option20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option20.textContent = "Damola  Afo";
+      option21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option21.textContent = "Anita  Ezeaba";
+      option22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option22.textContent = "Nkechi  Moses";
+      option23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option23.textContent = "Jennifer  Vangelis-Oden";
+      option24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option24.textContent = "Jamila  Rufai";
+      option25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option25.textContent = "Alex  Akamukali";
+      t118 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div37 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
       label26.textContent = "Assign Director";
-      t189 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      select5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
-      option93 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option93.textContent = "-- ";
-      option94 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option94.textContent = "VICTOR N1 OKONKWO";
-      option95 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option95.textContent = "puneet  mehta";
-      option96 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option96.textContent = "Fumi  Olasimbo";
-      option97 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option97.textContent = "Martin  Martin";
-      option98 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option98.textContent = "Ade  Adeyemi";
-      option99 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option99.textContent = "Victor  Test1";
-      option100 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option100.textContent = "Busayo  Omisore";
-      option101 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option101.textContent = "Chris  Nkwontah";
-      option102 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option102.textContent = "Bolaji  Ola";
-      option103 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option103.textContent = "Bolaji  Olarenwaju";
-      option104 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option104.textContent = "Damola  Afo";
-      option105 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option105.textContent = "Anita  Ezeaba";
-      option106 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option106.textContent = "Nkechi  Moses";
-      option107 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option107.textContent = "Jennifer  Vangelis-Oden";
-      option108 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option108.textContent = "Jamila  Rufai";
-      option109 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option109.textContent = "Alex  Akamukali";
-      t207 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      t120 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      select3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option26.textContent = "-- ";
+      option27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option27.textContent = "VICTOR N1 OKONKWO";
+      option28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option28.textContent = "puneet  mehta";
+      option29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option29.textContent = "Fumi  Olasimbo";
+      option30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option30.textContent = "Martin  Martin";
+      option31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option31.textContent = "Ade  Adeyemi";
+      option32 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option32.textContent = "Victor  Test1";
+      option33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option33.textContent = "Busayo  Omisore";
+      option34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option34.textContent = "Chris  Nkwontah";
+      option35 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option35.textContent = "Bolaji  Ola";
+      option36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option36.textContent = "Bolaji  Olarenwaju";
+      option37 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option37.textContent = "Damola  Afo";
+      option38 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option38.textContent = "Anita  Ezeaba";
+      option39 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option39.textContent = "Nkechi  Moses";
+      option40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option40.textContent = "Jennifer  Vangelis-Oden";
+      option41 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option41.textContent = "Jamila  Rufai";
+      option42 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option42.textContent = "Alex  Akamukali";
+      t138 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div42 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div42.innerHTML = "<br/> \n                <div class=\"col-md-3 pull-right\"><button type=\"submit\" class=\"btn btn-primary btn-block\">Update Profile</button></div>";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "box-header");
@@ -32560,169 +32850,9 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div19, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label12, "for", "inputName");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label12, "class", "control-label");
-      option9.__value = "";
-      option9.value = option9.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option9, "data-select2-id", "2");
-      option10.__value = "1";
-      option10.value = option10.__value;
-      option11.__value = "2";
-      option11.value = option11.__value;
-      option12.__value = "3";
-      option12.value = option12.__value;
-      option13.__value = "4";
-      option13.value = option13.__value;
-      option14.__value = "5";
-      option14.value = option14.__value;
-      option15.__value = "6";
-      option15.value = option15.__value;
-      option16.__value = "7";
-      option16.value = option16.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option16, "data-select2-id", "5");
-      option17.__value = "8";
-      option17.value = option17.__value;
-      option18.__value = "9";
-      option18.value = option18.__value;
-      option19.__value = "10";
-      option19.value = option19.__value;
-      option20.__value = "11";
-      option20.value = option20.__value;
-      option21.__value = "12";
-      option21.value = option21.__value;
-      option22.__value = "13";
-      option22.value = option22.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "class", "form-control select2 select2-hidden-accessible");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "name", "Province");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "id", "Province");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "onchange", "setCities()");
-      select2.required = "";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "data-select2-id", "Province");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "tabindex", "-1");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "aria-hidden", "true");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span6, "class", "select2 select2-container select2-container--default");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span6, "dir", "ltr");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span6, "data-select2-id", "1");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span6, "width", "268.328px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "col-md-4");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label13, "for", "inputName");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label13, "class", "control-label");
-      option23.__value = "";
-      option23.value = option23.__value;
-      option24.__value = "93";
-      option24.value = option24.__value;
-      option25.__value = "94";
-      option25.value = option25.__value;
-      option26.__value = "95";
-      option26.value = option26.__value;
-      option27.__value = "96";
-      option27.value = option27.__value;
-      option28.__value = "97";
-      option28.value = option28.__value;
-      option29.__value = "98";
-      option29.value = option29.__value;
-      option30.__value = "99";
-      option30.value = option30.__value;
-      option31.__value = "100";
-      option31.value = option31.__value;
-      option32.__value = "101";
-      option32.value = option32.__value;
-      option33.__value = "102";
-      option33.value = option33.__value;
-      option34.__value = "103";
-      option34.value = option34.__value;
-      option35.__value = "104";
-      option35.value = option35.__value;
-      option36.__value = "105";
-      option36.value = option36.__value;
-      option37.__value = "106";
-      option37.value = option37.__value;
-      option38.__value = "107";
-      option38.value = option38.__value;
-      option39.__value = "108";
-      option39.value = option39.__value;
-      option40.__value = "109";
-      option40.value = option40.__value;
-      option41.__value = "110";
-      option41.value = option41.__value;
-      option42.__value = "111";
-      option42.value = option42.__value;
-      option43.__value = "112";
-      option43.value = option43.__value;
-      option44.__value = "113";
-      option44.value = option44.__value;
-      option45.__value = "114";
-      option45.value = option45.__value;
-      option46.__value = "115";
-      option46.value = option46.__value;
-      option47.__value = "116";
-      option47.value = option47.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(option47, "data-select2-id", "7");
-      option48.__value = "117";
-      option48.value = option48.__value;
-      option49.__value = "118";
-      option49.value = option49.__value;
-      option50.__value = "119";
-      option50.value = option50.__value;
-      option51.__value = "120";
-      option51.value = option51.__value;
-      option52.__value = "121";
-      option52.value = option52.__value;
-      option53.__value = "122";
-      option53.value = option53.__value;
-      option54.__value = "123";
-      option54.value = option54.__value;
-      option55.__value = "124";
-      option55.value = option55.__value;
-      option56.__value = "125";
-      option56.value = option56.__value;
-      option57.__value = "126";
-      option57.value = option57.__value;
-      option58.__value = "127";
-      option58.value = option58.__value;
-      option59.__value = "128";
-      option59.value = option59.__value;
-      option60.__value = "129";
-      option60.value = option60.__value;
-      option61.__value = "130";
-      option61.value = option61.__value;
-      option62.__value = "131";
-      option62.value = option62.__value;
-      option63.__value = "132";
-      option63.value = option63.__value;
-      option64.__value = "133";
-      option64.value = option64.__value;
-      option65.__value = "134";
-      option65.value = option65.__value;
-      option66.__value = "135";
-      option66.value = option66.__value;
-      option67.__value = "136";
-      option67.value = option67.__value;
-      option68.__value = "137";
-      option68.value = option68.__value;
-      option69.__value = "138";
-      option69.value = option69.__value;
-      option70.__value = "139";
-      option70.value = option70.__value;
-      option71.__value = "140";
-      option71.value = option71.__value;
-      option72.__value = "141";
-      option72.value = option72.__value;
-      option73.__value = "142";
-      option73.value = option73.__value;
-      option74.__value = "143";
-      option74.value = option74.__value;
-      option75.__value = "144";
-      option75.value = option75.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select3, "class", "form-control select2 select2-hidden-accessible");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select3, "name", "Town");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select3, "id", "Town");
-      select3.required = "";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select3, "data-select2-id", "Town");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select3, "tabindex", "-1");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select3, "aria-hidden", "true");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span12, "class", "select2 select2-container select2-container--default");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span12, "dir", "ltr");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span12, "data-select2-id", "3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(span12, "width", "268.328px");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "col-md-4");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div22, "class", "col-md-4");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div23, "class", "col-md-12");
@@ -32731,84 +32861,84 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div34, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div35, "class", "col-md-4");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label25, "class", "control-label");
-      option76.__value = "";
-      option76.value = option76.__value;
-      option77.__value = "3";
-      option77.value = option77.__value;
-      option78.__value = "12";
-      option78.value = option78.__value;
-      option79.__value = "13";
-      option79.value = option79.__value;
-      option80.__value = "14";
-      option80.value = option80.__value;
-      option81.__value = "17";
-      option81.value = option81.__value;
-      option82.__value = "21";
-      option82.value = option82.__value;
-      option83.__value = "23";
-      option83.value = option83.__value;
-      option84.__value = "24";
-      option84.value = option84.__value;
-      option85.__value = "26";
-      option85.value = option85.__value;
-      option86.__value = "27";
-      option86.value = option86.__value;
-      option87.__value = "28";
-      option87.value = option87.__value;
-      option88.__value = "29";
-      option88.value = option88.__value;
-      option89.__value = "30";
-      option89.value = option89.__value;
-      option89.selected = "";
-      option90.__value = "31";
-      option90.value = option90.__value;
-      option91.__value = "38";
-      option91.value = option91.__value;
-      option92.__value = "40";
-      option92.value = option92.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select4, "class", "form-control");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select4, "name", "Admin");
-      select4.required = "";
+      option9.__value = "";
+      option9.value = option9.__value;
+      option10.__value = "3";
+      option10.value = option10.__value;
+      option11.__value = "12";
+      option11.value = option11.__value;
+      option12.__value = "13";
+      option12.value = option12.__value;
+      option13.__value = "14";
+      option13.value = option13.__value;
+      option14.__value = "17";
+      option14.value = option14.__value;
+      option15.__value = "21";
+      option15.value = option15.__value;
+      option16.__value = "23";
+      option16.value = option16.__value;
+      option17.__value = "24";
+      option17.value = option17.__value;
+      option18.__value = "26";
+      option18.value = option18.__value;
+      option19.__value = "27";
+      option19.value = option19.__value;
+      option20.__value = "28";
+      option20.value = option20.__value;
+      option21.__value = "29";
+      option21.value = option21.__value;
+      option22.__value = "30";
+      option22.value = option22.__value;
+      option22.selected = "";
+      option23.__value = "31";
+      option23.value = option23.__value;
+      option24.__value = "38";
+      option24.value = option24.__value;
+      option25.__value = "40";
+      option25.value = option25.__value;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "name", "Admin");
+      select2.required = "";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div36, "class", "col-md-4");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label26, "class", "control-label");
-      option93.__value = "";
-      option93.value = option93.__value;
-      option94.__value = "3";
-      option94.value = option94.__value;
-      option95.__value = "12";
-      option95.value = option95.__value;
-      option96.__value = "13";
-      option96.value = option96.__value;
-      option97.__value = "14";
-      option97.value = option97.__value;
-      option98.__value = "17";
-      option98.value = option98.__value;
-      option99.__value = "21";
-      option99.value = option99.__value;
-      option100.__value = "23";
-      option100.value = option100.__value;
-      option101.__value = "24";
-      option101.value = option101.__value;
-      option102.__value = "26";
-      option102.value = option102.__value;
-      option103.__value = "27";
-      option103.value = option103.__value;
-      option104.__value = "28";
-      option104.value = option104.__value;
-      option105.__value = "29";
-      option105.value = option105.__value;
-      option106.__value = "30";
-      option106.value = option106.__value;
-      option106.selected = "";
-      option107.__value = "31";
-      option107.value = option107.__value;
-      option108.__value = "38";
-      option108.value = option108.__value;
-      option109.__value = "40";
-      option109.value = option109.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select5, "class", "form-control");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select5, "name", "Director");
-      select5.required = "";
+      option26.__value = "";
+      option26.value = option26.__value;
+      option27.__value = "3";
+      option27.value = option27.__value;
+      option28.__value = "12";
+      option28.value = option28.__value;
+      option29.__value = "13";
+      option29.value = option29.__value;
+      option30.__value = "14";
+      option30.value = option30.__value;
+      option31.__value = "17";
+      option31.value = option31.__value;
+      option32.__value = "21";
+      option32.value = option32.__value;
+      option33.__value = "23";
+      option33.value = option33.__value;
+      option34.__value = "24";
+      option34.value = option34.__value;
+      option35.__value = "26";
+      option35.value = option35.__value;
+      option36.__value = "27";
+      option36.value = option36.__value;
+      option37.__value = "28";
+      option37.value = option37.__value;
+      option38.__value = "29";
+      option38.value = option38.__value;
+      option39.__value = "30";
+      option39.value = option39.__value;
+      option39.selected = "";
+      option40.__value = "31";
+      option40.value = option40.__value;
+      option41.__value = "38";
+      option41.value = option41.__value;
+      option42.__value = "40";
+      option42.value = option42.__value;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select3, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select3, "name", "Director");
+      select3.required = "";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div37, "class", "col-md-4");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div38, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div39, "class", "row");
@@ -32866,7 +32996,27 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, div20);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, label12);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, t59);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, select2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(provinceselect, div20, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, t60);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, div21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, label13);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, t63);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(towncityselect, div21, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, t64);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, div22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t68);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div39);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, div29);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, t82);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, div34);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, t95);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, div38);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, div35);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, t98);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, div36);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div36, label25);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div36, t100);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div36, select2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option9);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option10);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option11);
@@ -32881,15 +33031,14 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option20);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option21);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option22);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, span6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, t75);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, div21);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, label13);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, t78);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, select3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option23);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option24);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option25);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option23);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option24);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option25);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, t118);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, div37);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, label26);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, t120);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, select3);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option26);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option27);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option28);
@@ -32907,100 +33056,41 @@ function create_default_slot(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option40);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option41);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option42);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option43);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option44);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option45);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option46);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option47);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option48);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option49);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option50);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option51);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option52);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option53);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option54);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option55);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option56);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option57);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option58);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option59);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option60);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option61);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option62);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option63);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option64);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option65);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option66);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option67);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option68);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option69);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option70);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option71);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option72);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option73);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option74);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select3, option75);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, span12);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, t133);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div23, div22);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t137);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div39);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, div29);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, t151);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, div34);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, t164);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, div38);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, div35);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, t167);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, div36);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div36, label25);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div36, t169);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div36, select4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option76);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option77);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option78);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option79);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option80);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option81);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option82);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option83);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option84);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option85);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option86);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option87);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option88);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option89);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option90);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option91);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select4, option92);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, t187);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, div37);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, label26);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, t189);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, select5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option93);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option94);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option95);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option96);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option97);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option98);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option99);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option100);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option101);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option102);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option103);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option104);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option105);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option106);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option107);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option108);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select5, option109);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div43, t207);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div43, t138);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div43, div42);
+      current = true;
     },
-    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    p: function p(ctx, dirty) {
+      var provinceselect_changes = {};
+      if (dirty &
+      /*province*/
+      2) provinceselect_changes.list =
+      /*province*/
+      ctx[1];
+      provinceselect.$set(provinceselect_changes);
+      var towncityselect_changes = {};
+      if (dirty &
+      /*towncity*/
+      4) towncityselect_changes.list =
+      /*towncity*/
+      ctx[2];
+      towncityselect.$set(towncityselect_changes);
+    },
+    i: function i(local) {
+      if (current) return;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(provinceselect.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(towncityselect.$$.fragment, local);
+      current = true;
+    },
+    o: function o(local) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(provinceselect.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(towncityselect.$$.fragment, local);
+      current = false;
+    },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div43);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(provinceselect);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(towncityselect);
     }
   };
 }
@@ -33008,7 +33098,7 @@ function create_default_slot(ctx) {
 function create_fragment(ctx) {
   var usermanagement;
   var current;
-  usermanagement = new nodejs_svelte_crud_helper_user_user_profile_Index_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
+  usermanagement = new nodejs_svelte_crud_helper_user_user_profile_Index_svelte__WEBPACK_IMPORTED_MODULE_4__["default"]({
     props: {
       user:
       /*data*/
@@ -33043,8 +33133,8 @@ function create_fragment(ctx) {
       ctx[0];
 
       if (dirty &
-      /*$$scope*/
-      2) {
+      /*$$scope, towncity, province*/
+      134) {
         usermanagement_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -33068,16 +33158,46 @@ function create_fragment(ctx) {
   };
 }
 
-var layout = nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_1__.Layout;
+var layout = nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__.Layout;
+
+var change_handler = function change_handler(e) {
+  return 1;
+};
+
+var change_handler_1 = function change_handler_1(e) {
+  return 1;
+};
 
 function instance($$self, $$props, $$invalidate) {
+  var $townCityFilter;
   var data = $$props.data;
+  var province = $$props.province;
+  var towncity = $$props.towncity;
+  var profileForm = (0,nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__.useForm)({});
+  var townCityFilter = (0,nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__.useForm)({
+    province_id: ''
+  });
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, townCityFilter, function (value) {
+    return $$invalidate(5, $townCityFilter = value);
+  }); // export let report;
+  // console.log(report);
+  //export let name;
+
+  function query(province_id) {
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(townCityFilter, $townCityFilter.province_id = province_id, $townCityFilter); //    alert(province_id);
+
+    $townCityFilter.get("/user-management-profile/" + data.id, {
+      preserveScroll: true
+    });
+  }
 
   $$self.$$set = function ($$props) {
     if ('data' in $$props) $$invalidate(0, data = $$props.data);
+    if ('province' in $$props) $$invalidate(1, province = $$props.province);
+    if ('towncity' in $$props) $$invalidate(2, towncity = $$props.towncity);
   };
 
-  return [data];
+  return [data, province, towncity, townCityFilter, query];
 }
 
 var Show = /*#__PURE__*/function (_SvelteComponent) {
@@ -33092,7 +33212,9 @@ var Show = /*#__PURE__*/function (_SvelteComponent) {
 
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
-      data: 0
+      data: 0,
+      province: 1,
+      towncity: 2
     });
     return _this;
   }
@@ -48713,6 +48835,25 @@ var doCalc = function doCalc(a, b) {
   return a + b + 11;
 };
 
+
+/***/ }),
+
+/***/ "./nodejs-svelte-crud-helper/province/Store.js":
+/*!*****************************************************!*\
+  !*** ./nodejs-svelte-crud-helper/province/Store.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "provinceStore": () => (/* binding */ provinceStore)
+/* harmony export */ });
+/* harmony import */ var svelte_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/store */ "./node_modules/svelte/store/index.mjs");
+
+var provinceStore = (0,svelte_store__WEBPACK_IMPORTED_MODULE_0__.writable)({
+  province: 0
+});
 
 /***/ }),
 

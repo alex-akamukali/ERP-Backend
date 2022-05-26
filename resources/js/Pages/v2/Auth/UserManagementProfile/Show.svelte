@@ -1,14 +1,31 @@
 <script context="module">
     import UserManagement from "nodejs-svelte-crud-helper/user/user-profile/Index.svelte";
     import { Layout, useForm } from "nodejs-svelte-crud-helper";
+    import ProvinceSelect from "nodejs-svelte-crud-helper/province/ProvinceSelect.svelte";
+    import TownCitySelect from "nodejs-svelte-crud-helper/province/TownCitySelect.svelte";
+
     export const layout = Layout;
+
 </script>
 
 <script>
     export let data;
+    export let province;
+    export let towncity; //towncity
+    let profileForm = useForm({});
+    let townCityFilter = useForm({
+       province_id:''
+    });
     // export let report;
     // console.log(report);
     //export let name;
+    function query(province_id){
+       $townCityFilter.province_id = province_id;
+    //    alert(province_id);
+       $townCityFilter.get("/user-management-profile/" + data.id,{
+           preserveScroll:true
+       });
+    }
 </script>
 
 <UserManagement user={data} title="User Profile." currentTab="profile">
@@ -75,7 +92,7 @@
                             <div class="input-group-addon">
                               <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="text" class="form-control pull-right datepickerDOB" placeholder="Click to set date" name="DOB" value="">
+                            <input type="date" class="form-control pull-right datepickerDOB" placeholder="Click to set date" name="DOB" value="">
                           </div>
                     </div>
 
@@ -117,17 +134,14 @@
                     </div>
                       <div class="col-md-4">
                         <label for="inputName" class="control-label">Province: <b style="color:red">*</b></label>
-                          <!--<input type="text" class="form-control"  name="Province"  value="7"  placeholder="" required > -->
-                          <select class="form-control select2 select2-hidden-accessible" name="Province" id="Province" onchange="setCities()" required="" data-select2-id="Province" tabindex="-1" aria-hidden="true">
-                             <option value="" data-select2-id="2">--</option>
-                             <option value="1"> Alberta </option><option value="2"> British Columbia </option><option value="3"> Manitoba </option><option value="4"> New Brunswick </option><option value="5"> Newfoundland and Labrador </option><option value="6"> Nova Scotia </option><option value="7" data-select2-id="5"> Ontario </option><option value="8"> Prince Edward Island </option><option value="9"> Quebec </option><option value="10"> Saskatchewan </option><option value="11"> Northwest Territories </option><option value="12"> Nunavut </option><option value="13"> Yukon </option>                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: 268.328px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-Province-container"><span class="select2-selection__rendered" id="select2-Province-container" role="textbox" aria-readonly="true" title=" Ontario "> Ontario </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        <ProvinceSelect list={province} on:change={(e)=>1}  />
                     </div>
 
                      <div class="col-md-4">
                         <label for="inputName" class="control-label">Town/City: <b style="color:red">*</b></label>
                           <!--<input type="text" class="form-control"  name="Town"  value="116"  placeholder="" required > -->
 
-                          <select class="form-control select2 select2-hidden-accessible" name="Town" id="Town" required="" data-select2-id="Town" tabindex="-1" aria-hidden="true"><option value=""> -- </option><option value="93"> Barrie </option><option value="94"> Belleville </option><option value="95"> Brampton </option><option value="96"> Brant </option><option value="97"> Brantford </option><option value="98"> Brockville </option><option value="99"> Burlington </option><option value="100"> Cambridge </option><option value="101"> Clarence-Rockland </option><option value="102"> Cornwall </option><option value="103"> Dryden </option><option value="104"> Elliot Lake </option><option value="105"> Greater Sudbury </option><option value="106"> Guelph </option><option value="107"> Haldimand County </option><option value="108"> Hamilton </option><option value="109"> Kawartha Lakes </option><option value="110"> Kenora </option><option value="111"> Kingston </option><option value="112"> Kitchener </option><option value="113"> London </option><option value="114"> Markham </option><option value="115"> Mississauga </option><option value="116" data-select2-id="7"> Niagara Falls </option><option value="117"> Norfolk County </option><option value="118"> North Bay </option><option value="119"> Orillia </option><option value="120"> Oshawa </option><option value="121"> Ottawa </option><option value="122"> Owen Sound </option><option value="123"> Pembroke </option><option value="124"> Peterborough </option><option value="125"> Pickering </option><option value="126"> Port Colborne </option><option value="127"> Prince Edward County </option><option value="128"> Quinte West </option><option value="129"> Richmond Hill </option><option value="130"> Sarnia </option><option value="131"> Sault Ste. Marie </option><option value="132"> St. Catharines </option><option value="133"> St. Thomas </option><option value="134"> Stratford </option><option value="135"> Temiskaming Shores </option><option value="136"> Thorold </option><option value="137"> Thunder Bay </option><option value="138"> Timmins </option><option value="139"> Toronto </option><option value="140"> Vaughan </option><option value="141"> Waterloo </option><option value="142"> Welland </option><option value="143"> Windsor </option><option value="144"> Woodstock </option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="3" style="width: 268.328px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-Town-container"><span class="select2-selection__rendered" id="select2-Town-container" role="textbox" aria-readonly="true" title=" Niagara Falls "> Niagara Falls </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                       <TownCitySelect {query} list={towncity} on:change={(e)=>1} />
 
 
                     </div>

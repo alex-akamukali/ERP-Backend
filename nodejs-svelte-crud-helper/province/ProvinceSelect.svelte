@@ -8,6 +8,7 @@
     let dispatch = createEventDispatcher();
     function emitChange(e) {
         dispatch("change", e.target.value);
+        // alert('vl' + e.target.value);
         $provinceStore.province = e.target.value;
     }
 </script>
