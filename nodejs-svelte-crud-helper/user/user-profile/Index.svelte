@@ -32,10 +32,12 @@
             <div class="box">
                 <div class="row">
                     <div class="col-md-12" style="text-align: right;">
-                        <button
+                        <a
+                        use:inertia
+                        href="/user"
                             style="margin: 11px;"
                             class="btn btn-sm btn-primary"
-                            on:click={() => window.history.back()}>Back</button
+                           >Back</a
                         >
                     </div>
 
