@@ -21,6 +21,11 @@ class JobApplicationRepository
         return $query;
      }
 
+     function getByUserId($userId){
+        $query = JobApplication::query()->getByUserId($userId);
+        return $query;
+    }
+
 
 
     function update($id,$data){

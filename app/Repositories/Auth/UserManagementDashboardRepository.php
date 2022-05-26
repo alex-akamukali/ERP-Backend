@@ -82,10 +82,12 @@ class UserManagementDashboardRepository
         $assessmentProgress = $this->getAssessmentProgresss($userId);
         $jobProfileProgress = $this->getJobProfileProgress($userId);
         $onboardingProgress = $this->getOnboardingProgress($userId);
+        $jobApplicationProgress = $this->getJobApplicationProgress($userId);
         return [
             'assessmentProgress' => $assessmentProgress,
             'jobProfileProgress' => $jobProfileProgress,
-            'onboardingProgress' => $onboardingProgress
+            'onboardingProgress' => $onboardingProgress,
+            'jobApplicationProgress' => $jobApplicationProgress
         ];
     }
 
@@ -146,10 +148,24 @@ class UserManagementDashboardRepository
         $progresss = 0;
         $progressTotal = $this->onboardingRepository->getByUserId($userId)->count();
 
-        if ($this->onboardingRepository->approved($userId)) {
+        if ($this->onboardingRepository->approved($userId)->exists()) {
             $progresss++;
         }
 
+        return [
+            'progress' => $progresss,
+            'progressTotal' => $progressTotal
+        ];
+    }
+
+    function getJobApplicationProgress($userId)
+    {
+        $progresss = 0;
+        $progressTotal = $this->jobApplicationRepository->getByUserId($userId)->count();
+
+        if ($this->jobApplicationRepository->approved($userId)->exists()) {
+            $progresss++;
+        }
         return [
             'progress' => $progresss,
             'progressTotal' => $progressTotal
