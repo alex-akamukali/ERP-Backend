@@ -44,7 +44,7 @@
                     <div class="col-md-12">
                         <img
                             id="myProfileImage"
-                            src="/asset1/user2-160x160.jpg"
+                            src={`/uploads/${user.avatar}`}
                             class="profile-user-img img-responsive img-circle"
                             alt="User Profile"
                             style="width:70px; height:70px; margin-left:5px; display: inline-block; margin-top:-27px"

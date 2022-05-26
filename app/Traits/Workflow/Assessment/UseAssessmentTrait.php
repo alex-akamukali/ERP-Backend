@@ -6,8 +6,8 @@ use App\Models\User;
 trait UseAssessmentTrait{
 
     static $STATUS_APPROVED = 'approved';
-    static $STATUS_UNAPPROVED = 'unapproved';
-    static $STATUSES = ['approved','unapproved'];
+    static $STATUS_UNAPPROVED = 'pending';
+    static $STATUSES = ['approved','pending'];
 
 
     function scopeGetByStatus($query,$status){

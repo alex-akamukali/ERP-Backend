@@ -16,8 +16,8 @@ let form  = useForm({
     user_id:""
 });
 
-function eventScheduled({scheduledDate}){
-  $form.scheduled_date = scheduledDate;
+function eventScheduled(e){
+  $form.scheduled_date = e.detail.scheduledDate; //scheduledDate
   $form.user_id = user.id;
   $form.post("/pre-employment-assessment/");
 }
@@ -30,7 +30,9 @@ function eventScheduled({scheduledDate}){
                 <!-- '2022-05-23 16:56:30' -->
               <div class="col-md-4 col-sm-4"> <span class="headTText"> Pre-employment Assessment </span> </div>
               <div class="col-md-4"> <span class="headTText"> {list.length? humanReadble(list[0].created_at) : "Not Scheduled Yet"} </span> </div>
-              <div class="col-md-4"> <span class="headTText pull-right"> <b class="text-green">Active</b>  </span> </div>
+              <div class="col-md-4"> <span class="headTText pull-right"> <b class="text-green">
+                {list.length? list[0].status : "Not Scheduled"}
+              </b>  </span> </div>
             </div>
       </div>
     </div>
@@ -41,7 +43,7 @@ function eventScheduled({scheduledDate}){
         <div class="row">
           <div class="col-md-12">
             <div class="col-md-4">
-              <Calendly on:eventScheduled={eventScheduled} url="easymagic1/30min" label="Propose Meeting" />
+              <Calendly email={user.email} name={user.first_name} on:eventScheduled={eventScheduled} url="easymagic1/30min" label="Propose Meeting" />
             </div>
             <div class="col-md-8">
               <div class="table-responsive">

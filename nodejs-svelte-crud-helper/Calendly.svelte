@@ -5,10 +5,14 @@
 <script>
     export let url;
     export let label;
+    export let name;
+    export let email;
+    let locked = false;
     const dispatch = createEventDispatcher();
 
     function openCalendly() {
-        Calendly.initPopupWidget({ url: "https://calendly.com/" + url });
+        locked = false;
+        Calendly.initPopupWidget({ url: "https://calendly.com/" + url  + "?name=" + name + "&email=" + email});
     }
 
     function isCalendlyEvent(e) {
@@ -49,6 +53,11 @@
             url,
             requestOptions
         ).then((response) => response.json());
+
+        if (locked){
+           return;
+        }
+        locked = true;
 
         dispatch("eventScheduled", {
             scheduledDate:(new Date(result.resource.start_time))

@@ -3547,11 +3547,15 @@ function isCalendlyEvent(e) {
 function instance($$self, $$props, $$invalidate) {
   var url = $$props.url;
   var label = $$props.label;
+  var name = $$props.name;
+  var email = $$props.email;
+  var locked = false;
   var dispatch = (0,svelte__WEBPACK_IMPORTED_MODULE_2__.createEventDispatcher)();
 
   function openCalendly() {
+    locked = false;
     Calendly.initPopupWidget({
-      url: "https://calendly.com/" + url
+      url: "https://calendly.com/" + url + "?name=" + name + "&email=" + email
     });
   }
 
@@ -3594,11 +3598,21 @@ function instance($$self, $$props, $$invalidate) {
 
             case 5:
               result = _context.sent;
+
+              if (!locked) {
+                _context.next = 8;
+                break;
+              }
+
+              return _context.abrupt("return");
+
+            case 8:
+              locked = true;
               dispatch("eventScheduled", {
                 scheduledDate: new Date(result.resource.start_time)
               });
 
-            case 7:
+            case 10:
             case "end":
               return _context.stop();
           }
@@ -3611,9 +3625,11 @@ function instance($$self, $$props, $$invalidate) {
   $$self.$$set = function ($$props) {
     if ('url' in $$props) $$invalidate(2, url = $$props.url);
     if ('label' in $$props) $$invalidate(0, label = $$props.label);
+    if ('name' in $$props) $$invalidate(3, name = $$props.name);
+    if ('email' in $$props) $$invalidate(4, email = $$props.email);
   };
 
-  return [label, openCalendly, url];
+  return [label, openCalendly, url, name, email];
 }
 
 var Calendly_1 = /*#__PURE__*/function (_SvelteComponent) {
@@ -3629,7 +3645,9 @@ var Calendly_1 = /*#__PURE__*/function (_SvelteComponent) {
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_1__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_1__.safe_not_equal, {
       url: 2,
-      label: 0
+      label: 0,
+      name: 3,
+      email: 4
     });
     return _this;
   }
@@ -8299,7 +8317,9 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(div0, "text-align", "right");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "id", "myProfileImage");
-      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = "/asset1/user2-160x160.jpg")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
+      if (!(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = "/uploads/".concat(
+      /*user*/
+      ctx[1].avatar))) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "class", "profile-user-img img-responsive img-circle");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "alt", "User Profile");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_style)(img, "width", "70px");
@@ -8458,6 +8478,15 @@ function create_fragment(ctx) {
       4) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5,
       /*title*/
       ctx[2]);
+
+      if (!current || dirty &
+      /*user*/
+      2 && !(0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.src_url_equal)(img.src, img_src_value = "/uploads/".concat(
+      /*user*/
+      ctx[1].avatar))) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(img, "src", img_src_value);
+      }
+
       if ((!current || dirty &
       /*user*/
       2) && t10_value !== (t10_value =
@@ -47651,7 +47680,7 @@ function get_each_context_1(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[9] = list[i];
   return child_ctx;
-} // (59:36) {#each statuses as status }
+} // (61:36) {#each statuses as status }
 
 
 function create_each_block_1(ctx) {
@@ -47677,13 +47706,13 @@ function create_each_block_1(ctx) {
     p: function p(ctx, dirty) {
       if (dirty &
       /*statuses*/
-      2 && t_value !== (t_value =
+      4 && t_value !== (t_value =
       /*status*/
       ctx[9] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
 
       if (dirty &
       /*statuses*/
-      2 && option_value_value !== (option_value_value =
+      4 && option_value_value !== (option_value_value =
       /*status*/
       ctx[9])) {
         option.__value = option_value_value;
@@ -47694,7 +47723,7 @@ function create_each_block_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
     }
   };
-} // (51:22) {#each list as item}
+} // (53:22) {#each list as item}
 
 
 function create_each_block(ctx) {
@@ -47720,7 +47749,7 @@ function create_each_block(ctx) {
   var t8;
   var each_value_1 =
   /*statuses*/
-  ctx[1];
+  ctx[2];
   var each_blocks = [];
 
   for (var i = 0; i < each_value_1.length; i += 1) {
@@ -47789,10 +47818,10 @@ function create_each_block(ctx) {
 
       if (dirty &
       /*statuses*/
-      2) {
+      4) {
         each_value_1 =
         /*statuses*/
-        ctx[1];
+        ctx[2];
 
         var _i3;
 
@@ -47841,6 +47870,14 @@ function create_fragment(ctx) {
   var t2;
   var t3;
   var div2;
+  var span2;
+  var b;
+  var t4_value = (
+  /*list*/
+  ctx[0].length ?
+  /*list*/
+  ctx[0][0].status : "Not Scheduled") + "";
+  var t4;
   var t5;
   var div12;
   var div11;
@@ -47858,13 +47895,19 @@ function create_fragment(ctx) {
   var current;
   calendly = new nodejs_svelte_crud_helper_Calendly_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({
     props: {
+      email:
+      /*user*/
+      ctx[1].email,
+      name:
+      /*user*/
+      ctx[1].first_name,
       url: "easymagic1/30min",
       label: "Propose Meeting"
     }
   });
   calendly.$on("eventScheduled",
   /*eventScheduled*/
-  ctx[3]);
+  ctx[4]);
   var each_value =
   /*list*/
   ctx[0];
@@ -47888,7 +47931,9 @@ function create_fragment(ctx) {
       t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t2_value);
       t3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div2.innerHTML = "<span class=\"headTText pull-right svelte-1ta4q6m\"><b class=\"text-green\">Active</b></span>";
+      span2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("span");
+      b = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("b");
+      t4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t4_value);
       t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       div12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
@@ -47912,6 +47957,8 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "col-md-4 col-sm-4");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span1, "class", "headTText svelte-1ta4q6m");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "col-md-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(b, "class", "text-green");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(span2, "class", "headTText pull-right svelte-1ta4q6m");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "col-md-4");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "col-md-12");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "row");
@@ -47945,6 +47992,9 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span1, t2);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, t3);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div3, div2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div2, span2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(span2, b);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(b, t4);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t5, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div12, anchor);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, div11);
@@ -47977,10 +48027,29 @@ function create_fragment(ctx) {
       ctx[0].length ? (0,nodejs_svelte_crud_helper_DateHelper__WEBPACK_IMPORTED_MODULE_2__.humanReadble)(
       /*list*/
       ctx[0][0].created_at) : "Not Scheduled Yet") + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t2, t2_value);
+      if ((!current || dirty &
+      /*list*/
+      1) && t4_value !== (t4_value = (
+      /*list*/
+      ctx[0].length ?
+      /*list*/
+      ctx[0][0].status : "Not Scheduled") + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t4, t4_value);
+      var calendly_changes = {};
+      if (dirty &
+      /*user*/
+      2) calendly_changes.email =
+      /*user*/
+      ctx[1].email;
+      if (dirty &
+      /*user*/
+      2) calendly_changes.name =
+      /*user*/
+      ctx[1].first_name;
+      calendly.$set(calendly_changes);
 
       if (dirty &
       /*statuses, list, humanReadble*/
-      3) {
+      5) {
         each_value =
         /*list*/
         ctx[0];
@@ -48040,20 +48109,20 @@ function instance($$self, $$props, $$invalidate) {
     return $$invalidate(5, $form = value);
   });
 
-  function eventScheduled(_ref3) {
-    var scheduledDate = _ref3.scheduledDate;
-    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.scheduled_date = scheduledDate, $form);
+  function eventScheduled(e) {
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.scheduled_date = e.detail.scheduledDate, $form); //scheduledDate
+
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.user_id = user.id, $form);
     $form.post("/pre-employment-assessment/");
   }
 
   $$self.$$set = function ($$props) {
     if ('list' in $$props) $$invalidate(0, list = $$props.list);
-    if ('user' in $$props) $$invalidate(4, user = $$props.user);
-    if ('statuses' in $$props) $$invalidate(1, statuses = $$props.statuses);
+    if ('user' in $$props) $$invalidate(1, user = $$props.user);
+    if ('statuses' in $$props) $$invalidate(2, statuses = $$props.statuses);
   };
 
-  return [list, statuses, form, eventScheduled, user];
+  return [list, user, statuses, form, eventScheduled];
 }
 
 var Index = /*#__PURE__*/function (_SvelteComponent) {
@@ -48069,8 +48138,8 @@ var Index = /*#__PURE__*/function (_SvelteComponent) {
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
       list: 0,
-      user: 4,
-      statuses: 1
+      user: 1,
+      statuses: 2
     }, add_css);
     return _this;
   }
