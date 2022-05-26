@@ -16,6 +16,15 @@ let form  = useForm({
     user_id:""
 });
 
+let updateStatusForm = useForm({
+    status:""
+});
+
+function updateStatus(data,value){
+  $updateStatusForm.status = value;
+  $updateStatusForm.put("/pre-employment-assessment/" + data.id);
+}
+
 function eventScheduled(e){
   $form.scheduled_date = e.detail.scheduledDate; //scheduledDate
   $form.user_id = user.id;
@@ -56,7 +65,9 @@ function eventScheduled(e){
                             <td>0:00</td>
                             <td>Raised by {item.raised_by.email}</td>
                             <td>
-                                <select>
+                                <select value={item.status} on:change={(e)=>{
+                                    updateStatus(item,e.target.value);
+                                }}>
                                     <option>--Status--</option>
                                     {#each statuses as status }
                                       <option value={status}>{status}</option>

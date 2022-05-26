@@ -47672,22 +47672,22 @@ function add_css(target) {
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[6] = list[i];
+  child_ctx[10] = list[i];
   return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[9] = list[i];
+  child_ctx[13] = list[i];
   return child_ctx;
-} // (61:36) {#each statuses as status }
+} // (72:36) {#each statuses as status }
 
 
 function create_each_block_1(ctx) {
   var option;
   var t_value =
   /*status*/
-  ctx[9] + "";
+  ctx[13] + "";
   var t;
   var option_value_value;
   return {
@@ -47696,7 +47696,7 @@ function create_each_block_1(ctx) {
       t = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.text)(t_value);
       option.__value = option_value_value =
       /*status*/
-      ctx[9];
+      ctx[13];
       option.value = option.__value;
     },
     m: function m(target, anchor) {
@@ -47708,13 +47708,13 @@ function create_each_block_1(ctx) {
       /*statuses*/
       4 && t_value !== (t_value =
       /*status*/
-      ctx[9] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
+      ctx[13] + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t, t_value);
 
       if (dirty &
       /*statuses*/
       4 && option_value_value !== (option_value_value =
       /*status*/
-      ctx[9])) {
+      ctx[13])) {
         option.__value = option_value_value;
         option.value = option.__value;
       }
@@ -47723,7 +47723,7 @@ function create_each_block_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(option);
     }
   };
-} // (53:22) {#each list as item}
+} // (62:22) {#each list as item}
 
 
 function create_each_block(ctx) {
@@ -47731,7 +47731,7 @@ function create_each_block(ctx) {
   var td0;
   var t0_value = (0,nodejs_svelte_crud_helper_DateHelper__WEBPACK_IMPORTED_MODULE_2__.humanReadble)(
   /*item*/
-  ctx[6].scheduled_date) + "";
+  ctx[10].scheduled_date) + "";
   var t0;
   var t1;
   var td1;
@@ -47740,13 +47740,16 @@ function create_each_block(ctx) {
   var t4;
   var t5_value =
   /*item*/
-  ctx[6].raised_by.email + "";
+  ctx[10].raised_by.email + "";
   var t5;
   var t6;
   var td3;
   var select;
   var option;
+  var select_value_value;
   var t8;
+  var mounted;
+  var dispose;
   var each_value_1 =
   /*statuses*/
   ctx[2];
@@ -47754,6 +47757,21 @@ function create_each_block(ctx) {
 
   for (var i = 0; i < each_value_1.length; i += 1) {
     each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+  }
+
+  function change_handler() {
+    var _ctx;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return (
+      /*change_handler*/
+      (_ctx = ctx)[7].apply(_ctx, [
+      /*item*/
+      ctx[10]].concat(args))
+    );
   }
 
   return {
@@ -47802,19 +47820,28 @@ function create_each_block(ctx) {
         each_blocks[_i2].m(select, null);
       }
 
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
+      /*item*/
+      ctx[10].status);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(tr, t8);
+
+      if (!mounted) {
+        dispose = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.listen)(select, "change", change_handler);
+        mounted = true;
+      }
     },
-    p: function p(ctx, dirty) {
+    p: function p(new_ctx, dirty) {
+      ctx = new_ctx;
       if (dirty &
       /*list*/
       1 && t0_value !== (t0_value = (0,nodejs_svelte_crud_helper_DateHelper__WEBPACK_IMPORTED_MODULE_2__.humanReadble)(
       /*item*/
-      ctx[6].scheduled_date) + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
+      ctx[10].scheduled_date) + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t0, t0_value);
       if (dirty &
       /*list*/
       1 && t5_value !== (t5_value =
       /*item*/
-      ctx[6].raised_by.email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
+      ctx[10].raised_by.email + "")) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_data)(t5, t5_value);
 
       if (dirty &
       /*statuses*/
@@ -47845,10 +47872,22 @@ function create_each_block(ctx) {
 
         each_blocks.length = each_value_1.length;
       }
+
+      if (dirty &
+      /*list, statuses*/
+      5 && select_value_value !== (select_value_value =
+      /*item*/
+      ctx[10].status)) {
+        (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.select_option)(select,
+        /*item*/
+        ctx[10].status);
+      }
     },
     d: function d(detaching) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(tr);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_each)(each_blocks, detaching);
+      mounted = false;
+      dispose();
     }
   };
 }
@@ -47907,7 +47946,7 @@ function create_fragment(ctx) {
   });
   calendly.$on("eventScheduled",
   /*eventScheduled*/
-  ctx[4]);
+  ctx[6]);
   var each_value =
   /*list*/
   ctx[0];
@@ -48048,8 +48087,8 @@ function create_fragment(ctx) {
       calendly.$set(calendly_changes);
 
       if (dirty &
-      /*statuses, list, humanReadble*/
-      5) {
+      /*list, updateStatus, statuses, humanReadble*/
+      37) {
         each_value =
         /*list*/
         ctx[0];
@@ -48098,6 +48137,7 @@ function create_fragment(ctx) {
 
 function instance($$self, $$props, $$invalidate) {
   var $form;
+  var $updateStatusForm;
   var list = $$props.list;
   var user = $$props.user;
   var statuses = $$props.statuses;
@@ -48106,8 +48146,19 @@ function instance($$self, $$props, $$invalidate) {
     user_id: ""
   });
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, form, function (value) {
-    return $$invalidate(5, $form = value);
+    return $$invalidate(8, $form = value);
   });
+  var updateStatusForm = (0,nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__.useForm)({
+    status: ""
+  });
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.component_subscribe)($$self, updateStatusForm, function (value) {
+    return $$invalidate(9, $updateStatusForm = value);
+  });
+
+  function updateStatus(data, value) {
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(updateStatusForm, $updateStatusForm.status = value, $updateStatusForm);
+    $updateStatusForm.put("/pre-employment-assessment/" + data.id);
+  }
 
   function eventScheduled(e) {
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.set_store_value)(form, $form.scheduled_date = e.detail.scheduledDate, $form); //scheduledDate
@@ -48116,13 +48167,17 @@ function instance($$self, $$props, $$invalidate) {
     $form.post("/pre-employment-assessment/");
   }
 
+  var change_handler = function change_handler(item, e) {
+    updateStatus(item, e.target.value);
+  };
+
   $$self.$$set = function ($$props) {
     if ('list' in $$props) $$invalidate(0, list = $$props.list);
     if ('user' in $$props) $$invalidate(1, user = $$props.user);
     if ('statuses' in $$props) $$invalidate(2, statuses = $$props.statuses);
   };
 
-  return [list, user, statuses, form, eventScheduled];
+  return [list, user, statuses, form, updateStatusForm, updateStatus, eventScheduled, change_handler];
 }
 
 var Index = /*#__PURE__*/function (_SvelteComponent) {

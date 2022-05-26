@@ -33,7 +33,7 @@ class StoreRequest extends FormRequest
     function prepareData(){
         $data = $this->validated();
         $data['status'] = PreEmploymentAssessment::$STATUS_UNAPPROVED;
-        $data['created_by'] = request()->user()->id;
+        $data['created_by'] = auth()->user()->id;
         return $data;
     }
 }
