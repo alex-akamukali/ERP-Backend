@@ -54,7 +54,13 @@ console.log(assessment);
 
 
                  <!-- assessment result -->
-                 <AssessmentResult />
+                 <AssessmentResult
+                    knowledgeAreas={assessment.knowledgeAreas}
+                    programTypes={assessment.programTypes}
+                    statuses={assessment.statuses}
+                    knowledgeAreaTypes={assessment.knowledgeAreaTypes}
+                    user={data}
+                    list={assessment.assessmentResult} />
 
                    <!-- [end] -->
                  </div>

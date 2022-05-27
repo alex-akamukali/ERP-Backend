@@ -11,6 +11,12 @@ class KnowledgeAreaRepository
         if (isset($filters['knowledge_area_type'])){
             $query = $query->knowledgeAreaType($filters['knowledge_area_type']);
         }
+        if (isset($filters['exam_type_id'])){
+            $query = $query->knowledgeAreaType($filters['exam_type_id']);
+        }
+        if (isset($filters['program_type_id'])){
+            $query = $query->byProgramType($filters['program_type_id']);
+        }
         return $query;
     }
 

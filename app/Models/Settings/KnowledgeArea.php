@@ -43,6 +43,10 @@ class KnowledgeArea extends Model
        return $query->where('status',self::STATUS_ACTIVE);
     }
 
+    function scopeByProgramType($query,$programTypeId){
+        return $query->where('program_type_id',$programTypeId);
+    }
+
     function scopeInactive($query){
         return $query->where('status',self::STATUS_INACTIVE);
     }

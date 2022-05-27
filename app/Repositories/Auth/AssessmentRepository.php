@@ -52,7 +52,8 @@ class AssessmentRepository
             "serviceAgreement"=>$this->serviceAgreementRepository->getByUserId($userId)->get(),
             "statuses"=>$this->preEmploymentAssessmentRepository->statuses(),
             "programTypes"=>$this->programTypeRepository->fetch([])->get(),
-            "knowledgeAreas"=>$this->knowledgeAreaRepository->fetch(request()->all())->get()
+            "knowledgeAreas"=>$this->knowledgeAreaRepository->fetch(request()->all())->get(),
+            "knowledgeAreaTypes"=>$this->knowledgeAreaRepository->types()
         ];
     }
 

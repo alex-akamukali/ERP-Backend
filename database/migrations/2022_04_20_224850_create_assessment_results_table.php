@@ -18,7 +18,7 @@ class CreateAssessmentResultsTable extends Migration
 
             $table->integer('user_id')->nullable();
             $table->integer('program_type_id')->nullable();
-            $table->integer('exam_type_id')->nullable();
+            $table->string('exam_type_id')->nullable();
             $table->integer('knowledge_area_id')->nullable();
             $table->string('no_of_correct_answer')->nullable();
             $table->string('score')->nullable();

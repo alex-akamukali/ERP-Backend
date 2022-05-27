@@ -41,12 +41,12 @@ class AssessmentResultController extends Controller
     }
 
     function store(StoreRequest $request){
-      $record = $this->assessmentResultRepository->create($request->validated());
-      return $this->respondWithSuccess("New record added");
+      $record = $this->assessmentResultRepository->create($request->prepareData());
+      return $this->respondWithSuccess("New Assessment Result Logged");
     }
 
     function update($id,UpdateRequest $updateRequest){
-        $record = $this->assessmentResultRepository->update($id,$updateRequest->validated());
+        $record = $this->assessmentResultRepository->update($id,$updateRequest->prepareData());
         return $this->respondWithSuccess("Record updated");
     }
 

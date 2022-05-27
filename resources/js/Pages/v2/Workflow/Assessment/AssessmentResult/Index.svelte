@@ -1,6 +1,7 @@
 <script context="module">
 
-import { page, useForm } from "@inertiajs/inertia-svelte";
+// import { page, useForm } from "@inertiajs/inertia-svelte";
+import {useForm} from "nodejs-svelte-crud-helper";
 
 </script>
 
@@ -9,9 +10,52 @@ import { page, useForm } from "@inertiajs/inertia-svelte";
 export let statuses;
 export let user;
 export let list;
+export let knowledgeAreas;
+export let programTypes;
+export let knowledgeAreaTypes;
 
-console.log(statuses,user,list);
+let form = useForm({
+        user_id:user.id,
+        program_type_id:"",
+        exam_type_id:"",
+        knowledge_area_id:"",
+        no_of_correct_answer:"0"
+});
+
+let formUpdateScore = useForm({
+    no_of_correct_answer:"",
+    no_of_questions:""
+});
+
+// 'user_id'=>'required',
+//             'program_type_id'=>'required',
+//             'exam_type_id'=>'required',
+//             'knowledge_area_id'=>'required',
+//             'no_of_correct_answer'=>'required'
+
+
+console.log(statuses,user,list,programTypes,knowledgeAreas);
 //export let name;
+
+function filter(){
+    $form.get("/assessment/" + user.id,{
+        preserveScroll:true
+    });
+}
+
+function create(){
+    $form.post("/assessment-result/",{
+        preserveScroll:true
+    });
+}
+
+function updateScore(data,value){
+   $formUpdateScore.no_of_correct_answer = value;
+   $formUpdateScore.no_of_questions = data.knowledge_area.no_of_questions;
+   $formUpdateScore.put("/assessment-result/" + data.id,{
+       preserveScroll:true
+   });
+}
 
 </script>
 <a data-toggle="collapse" data-parent="#accordion" href="#examCompleted" class="collapsed" aria-expanded="false">
@@ -37,43 +81,54 @@ console.log(statuses,user,list);
             </div>
 
             <div class="col-md-12">
-                 <form method="post">
+                 <form method="post" on:submit|preventDefault={create}>
                   <div class="col-md-3">
                      <div class="form-group">
                        <label for="inputName" class="control-label"> Program Type </label>
+                       <select bind:value={$form.program_type_id} on:change={filter}  class="form-control">
+                           <option value="">--Select--</option>
+                           {#each programTypes as programType}
+                              <option value={programType.id}>{programType.title}</option>
+                           {/each}
+                       </select>
 
                        <!-- svelte-ignore a11y-label-has-associated-control -->
-                       <label class="form-control"> <b style="color:green"> Project Management </b> </label>
+                       <!-- <label class="form-control"> <b style="color:green"> Project Management </b> </label> -->
                      </div>
                   </div>
                   <div class="col-md-2">
                      <div class="form-group">
                        <label for="inputName" class="control-label"> Exam Type </label>
-                       <select name="KAType" class="form-control" onchange="setKAByType(this)" required="">
-                        <option value="">--</option>
-                        <option>Internal</option>
-                        <option>External</option>
+                       <select  name="KAType" class="form-control" bind:value={$form.exam_type_id} on:change={filter}>
+                        <option value="">--Select--</option>
+                        {#each knowledgeAreaTypes as knowledgeAreaType }
+                            <option value={knowledgeAreaType}>{knowledgeAreaType}</option>
+                        {/each}
                        </select>
                      </div>
-                     <input type="hidden" value="c2aa1951a32f33b047954754f0ae" name="usx">
+
                    </div>
 
                    <div class="col-md-3">
                      <div class="form-group">
                        <label for="inputName" class="control-label"> Knowledge Area </label>
-                       <select id="mKA" name="KA" class="form-control" required="">
-                        <option value="">--</option>
+                       <select class="form-control" bind:value={$form.knowledge_area_id}>
+
+                        <option value="">--Select--</option>
+                        {#each knowledgeAreas as knowledgeArea}
+                            <option value={knowledgeArea.id}>{knowledgeArea.name}</option>
+                        {/each}
 
                        </select>
                      </div>
-                     <input type="hidden" value="c2aa1951a32f33b047954754f0ae" name="usx">
+
                    </div>
 
                      <div class="col-md-2">
                      <div class="form-group">
                        <!-- svelte-ignore a11y-label-has-associated-control -->
                        <label class="control-label"> &nbsp; </label>
-                       <button type="button" class="btn btn-primary btn-sm form-control"> <i class="fa fa-plus"></i> Add </button>
+                       <button type="submit" class="btn btn-primary btn-sm form-control"> <i class="fa fa-plus"></i> Add </button>
                      </div>
                    </div>
                    </form>
@@ -88,9 +143,32 @@ console.log(statuses,user,list);
 
               <table class="table table-bordered table-hover table-striped">
 
-                <thead><tr><th>Knowledge Area</th><th> No. of Quest. </th> <th> No. of Correct Answer  </th><th> Score </th></tr></thead>
+                <thead>
+                    <tr>
+                        <th>Knowledge Area</th>
+                        <th> No. of Quest. </th>
+                        <th> No. of Correct Answer  </th>
+                        <th> Score </th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
                 <tbody>
-                  <tr><td>Project integration management</td> <td>10</td>  <td> <input style="width:40px" class="IsNumber" type="text" pmf="2" kmf="7" nq="10" nm="20" usx="c2aa1951a32f33b047954754f0ae" oninput="updateKAScore(this)" value="10">  </td> <td id="fresult-7"> 100% </td></tr><tr><td>Project scope management</td> <td>20</td>  <td> <input style="width:40px" class="IsNumber" type="text" pmf="2" kmf="8" nq="20" nm="5" usx="c2aa1951a32f33b047954754f0ae" oninput="updateKAScore(this)" value="9">  </td> <td id="fresult-8"> 45% </td></tr><tr><td>Project time management</td> <td>50</td>  <td> <input style="width:40px" class="IsNumber" type="text" pmf="2" kmf="9" nq="50" nm="0" usx="c2aa1951a32f33b047954754f0ae" oninput="updateKAScore(this)" value="30">  </td> <td id="fresult-9"> 60% </td></tr>                              <!-- <tr><td>Project Management</td><td>Project integration management</td><td>10</td></tr><tr><td>Project Management</td><td>Project scope management</td><td>9</td></tr><tr><td>Project Management</td><td>Project time management</td><td>30</td></tr> -->
+
+                    {#each list as item}
+                    <!-- knowledge_area                         -->
+                    <tr>
+                        <td>{item.knowledge_area.name}</td>
+                        <td>{item.knowledge_area.no_of_questions}</td>
+                        <td>
+                            <input style="width:40px" value={item.no_of_correct_answer} on:blur={(e)=>updateScore(item,e.target.value)} class="IsNumber" type="text" />
+                        </td>
+                        <td id="fresult-7">
+                            {item.score}%
+                        </td>
+                        <td>{item.status}</td>
+                   </tr>
+                    {/each}
+
 
                 </tbody>
               </table>
