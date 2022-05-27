@@ -2,7 +2,7 @@
 
 // import { page, useForm } from "@inertiajs/inertia-svelte";
 import {useForm} from "nodejs-svelte-crud-helper";
-
+import {humanReadble} from "nodejs-svelte-crud-helper/DateHelper";
 </script>
 
 <script>
@@ -64,8 +64,10 @@ function updateScore(data,value){
          <div class="row">
             <div class="col-md-12">
               <div class="col-md-4"> <span class="headTText"> Assessment Result </span> </div>
-              <div class="col-md-4"> <span class="headTText"> 2022-04-19 </span> </div>
-              <div class="col-md-4"> <span class="headTText pull-right"> <b class="text-green">Active</b>  </span> </div>
+              <div class="col-md-4"> <span class="headTText"> {list.length? humanReadble(list[0].created_at) : "Not Evaluated"} </span> </div>
+              <div class="col-md-4"> <span class="headTText pull-right"> <b class="text-green">
+                  {list.length? list[0].status : "Pending"}
+              </b>  </span> </div>
             </div>
           </div>
     </div>
