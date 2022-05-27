@@ -25792,10 +25792,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "layout": () => (/* binding */ layout)
 /* harmony export */ });
 /* harmony import */ var svelte_internal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! svelte/internal */ "./node_modules/svelte/internal/index.mjs");
-/* harmony import */ var _Workflow_Assessment_PreEmploymentAssessment_Index_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Workflow/Assessment/PreEmploymentAssessment/Index.svelte */ "./resources/js/Pages/v2/Workflow/Assessment/PreEmploymentAssessment/Index.svelte");
-/* harmony import */ var nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! nodejs-svelte-crud-helper */ "./nodejs-svelte-crud-helper/index.js");
-/* harmony import */ var nodejs_svelte_crud_helper_user_workflow_Index_svelte__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! nodejs-svelte-crud-helper/user/workflow/Index.svelte */ "./nodejs-svelte-crud-helper/user/workflow/Index.svelte");
-/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
+/* harmony import */ var _Workflow_Assessment_AssessmentResult_Index_svelte__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Workflow/Assessment/AssessmentResult/Index.svelte */ "./resources/js/Pages/v2/Workflow/Assessment/AssessmentResult/Index.svelte");
+/* harmony import */ var _Workflow_Assessment_PreEmploymentAssessment_Index_svelte__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Workflow/Assessment/PreEmploymentAssessment/Index.svelte */ "./resources/js/Pages/v2/Workflow/Assessment/PreEmploymentAssessment/Index.svelte");
+/* harmony import */ var nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! nodejs-svelte-crud-helper */ "./nodejs-svelte-crud-helper/index.js");
+/* harmony import */ var nodejs_svelte_crud_helper_user_workflow_Index_svelte__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! nodejs-svelte-crud-helper/user/workflow/Index.svelte */ "./nodejs-svelte-crud-helper/user/workflow/Index.svelte");
+/* harmony import */ var _inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @inertiajs/inertia-svelte */ "./node_modules/@inertiajs/inertia-svelte/src/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -25837,87 +25838,54 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function add_css(target) {
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-2y2k0g", ".boxTText.svelte-2y2k0g{font-size:15px;color:#5F7A9C}.headTText.svelte-2y2k0g{font-size:14px;color:#4F4F4F;font-weight:700}.box-header.svelte-2y2k0g{border:1px solid #BFD7DD}.panel.svelte-2y2k0g{margin-bottom:5px}");
-} // (26:0) <WorkFlow title="Assessment" user={data} currentTab="assessment">
+} // (27:0) <WorkFlow title="Assessment" user={data} currentTab="assessment">
 
 
 function create_default_slot(ctx) {
-  var div77;
+  var div55;
   var div4;
   var t5;
-  var div76;
+  var div54;
   var div5;
   var preemployementassessment;
   var t6;
-  var div28;
-  var a0;
-  var t12;
-  var div27;
-  var div26;
-  var div25;
-  var div24;
-  var div12;
-  var t13;
-  var div21;
-  var form0;
-  var div14;
-  var t17;
-  var div16;
-  var div15;
+  var div6;
+  var assessmentresult;
+  var t7;
+  var div23;
+  var t23;
+  var div40;
+  var a1;
+  var t29;
+  var div39;
+  var div38;
+  var div37;
+  var div36;
+  var div34;
+  var form;
+  var div31;
+  var div30;
   var label2;
-  var t19;
-  var select0;
+  var t31;
+  var select;
   var option0;
   var option1;
   var option2;
-  var t23;
-  var input0;
-  var t24;
-  var div18;
-  var div17;
-  var label3;
-  var t26;
-  var select1;
   var option3;
-  var t28;
-  var input1;
-  var t29;
-  var div20;
-  var t33;
-  var div23;
-  var t58;
-  var div45;
-  var t74;
-  var div62;
-  var a2;
-  var t80;
-  var div61;
-  var div60;
-  var div59;
-  var div58;
-  var div56;
-  var form1;
-  var div53;
-  var div52;
-  var label7;
-  var t82;
-  var select2;
   var option4;
-  var option5;
-  var option6;
-  var option7;
-  var option8;
-  var t88;
-  var input7;
-  var t89;
-  var div55;
-  var t93;
-  var div57;
-  var t118;
-  var div75;
+  var t37;
+  var input2;
+  var t38;
+  var div33;
+  var t42;
+  var div35;
+  var t67;
+  var div53;
   var current;
-  preemployementassessment = new _Workflow_Assessment_PreEmploymentAssessment_Index_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({
+  preemployementassessment = new _Workflow_Assessment_PreEmploymentAssessment_Index_svelte__WEBPACK_IMPORTED_MODULE_2__["default"]({
     props: {
       statuses:
       /*assessment*/
@@ -25930,270 +25898,146 @@ function create_default_slot(ctx) {
       ctx[1].preEmploymentAssessment
     }
   });
+  assessmentresult = new _Workflow_Assessment_AssessmentResult_Index_svelte__WEBPACK_IMPORTED_MODULE_1__["default"]({});
   return {
     c: function c() {
-      div77 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div55 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div4.innerHTML = "<div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"boxTText svelte-2y2k0g\">Stage</span></div> \n                             <div class=\"col-md-4\"><span class=\"boxTText svelte-2y2k0g\">Date</span></div> \n                             <div class=\"col-md-4\"><span class=\"boxTText pull-right svelte-2y2k0g\">Activity Status</span></div></div>";
       t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div76 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div54 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       div5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(preemployementassessment.$$.fragment);
       t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      a0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
-      a0.innerHTML = "<div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">Assessment Result</span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">2022-04-19</span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\"><b class=\"text-green\">Active</b></span></div></div></div></div>";
-      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div27 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div25 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      t13 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      form0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
-      div14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div14.innerHTML = "<div class=\"form-group\"><label for=\"inputName\" class=\"control-label\">Program Type</label> \n\n                                      \n                                      <label class=\"form-control\"><b style=\"color:green\">Project Management</b></label></div>";
-      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(assessmentresult.$$.fragment);
+      t7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div23.innerHTML = "<a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#schInterviewAssess\" class=\"collapsed\" aria-expanded=\"false\"><div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">Assessment Interview</span></div> \n                                <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\"></span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\">Pending</span></div></div></div></div></a> \n\n                   <div id=\"schInterviewAssess\" class=\"panel-collapse collapse\" aria-expanded=\"false\"><div class=\"box-body\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-12\"><div class=\"col-md-4\"><button type=\"button\" class=\"btn btn-primary btn-block\" style=\"width:150px\" meetingtype=\"Assessment Interview\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"setMeetingType(this)\"><i class=\"fa fa-handshake-o\"></i> Propose Meeting</button></div> \n                           <div class=\"col-md-8\"><div class=\"table-responsive\"><table class=\"table table-stripe\"><thead><tr><th>Interview Date</th><th>Duration</th><th>Status</th></tr></thead> \n                                 <tbody></tbody></table></div></div></div> \n\n                           <div class=\"col-md-12\"><div class=\"form-group\"><label class=\"text-green\"><input type=\"radio\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"chkResultRec(this)\" name=\"AssessmentRt\" value=\"accP\" class=\"flat-green\" checked=\"\"/> Pass</label>\n                              \xA0 \xA0  \xA0\n                              <label class=\"text-danger\"><input type=\"radio\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"chkResultRec(this)\" name=\"AssessmentRt\" value=\"accF\" class=\"flat-green\"/> Failed</label></div></div></div></div></div></div>";
+      t23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div40 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      a1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a1.innerHTML = "<div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">Service Agreement</span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">2022-03-14</span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\">Pending</span></div></div></div></div>";
+      t29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div39 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div38 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div37 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div36 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div34 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      form = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
+      div31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div30 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
       label2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
-      label2.textContent = "Exam Type";
-      t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      select0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      label2.textContent = "Olade Consulting Contract with Candidate";
+      t31 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      select = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
       option0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
       option0.textContent = "--";
       option1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option1.textContent = "Internal";
+      option1.textContent = "2 Years Contract";
       option2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option2.textContent = "External";
-      t23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t24 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      label3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
-      label3.textContent = "Knowledge Area";
-      t26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      select1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option2.textContent = "1 Year Contract (External)";
       option3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option3.textContent = "--";
-      t28 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t29 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div20.innerHTML = "<div class=\"form-group\"><label class=\"control-label\">\xA0</label> \n                                      <button type=\"button\" class=\"btn btn-primary btn-sm form-control\"><i class=\"fa fa-plus\"></i> Add</button></div>";
-      t33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div23 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div23.innerHTML = "<div class=\"table-responsive\"><table class=\"table table-bordered table-hover table-striped\"><thead><tr><th>Knowledge Area</th><th>No. of Quest.</th>  <th>No. of Correct Answer  </th><th>Score</th></tr></thead> \n                               <tbody><tr><td>Project integration management</td>  <td>10</td>   <td><input style=\"width:40px\" class=\"IsNumber\" type=\"text\" pmf=\"2\" kmf=\"7\" nq=\"10\" nm=\"20\" usx=\"c2aa1951a32f33b047954754f0ae\" oninput=\"updateKAScore(this)\" value=\"10\"/></td>  <td id=\"fresult-7\">100% </td></tr><tr><td>Project scope management</td>  <td>20</td>   <td><input style=\"width:40px\" class=\"IsNumber\" type=\"text\" pmf=\"2\" kmf=\"8\" nq=\"20\" nm=\"5\" usx=\"c2aa1951a32f33b047954754f0ae\" oninput=\"updateKAScore(this)\" value=\"9\"/></td>  <td id=\"fresult-8\">45% </td></tr><tr><td>Project time management</td>  <td>50</td>   <td><input style=\"width:40px\" class=\"IsNumber\" type=\"text\" pmf=\"2\" kmf=\"9\" nq=\"50\" nm=\"0\" usx=\"c2aa1951a32f33b047954754f0ae\" oninput=\"updateKAScore(this)\" value=\"30\"/></td>  <td id=\"fresult-9\">60%</td></tr></tbody></table></div>";
-      t58 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div45 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div45.innerHTML = "<a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#schInterviewAssess\" class=\"collapsed\" aria-expanded=\"false\"><div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">Assessment Interview</span></div> \n                                <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\"></span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\">Pending</span></div></div></div></div></a> \n\n                   <div id=\"schInterviewAssess\" class=\"panel-collapse collapse\" aria-expanded=\"false\"><div class=\"box-body\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-12\"><div class=\"col-md-4\"><button type=\"button\" class=\"btn btn-primary btn-block\" style=\"width:150px\" meetingtype=\"Assessment Interview\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"setMeetingType(this)\"><i class=\"fa fa-handshake-o\"></i> Propose Meeting</button></div> \n                           <div class=\"col-md-8\"><div class=\"table-responsive\"><table class=\"table table-stripe\"><thead><tr><th>Interview Date</th><th>Duration</th><th>Status</th></tr></thead> \n                                 <tbody></tbody></table></div></div></div> \n\n                           <div class=\"col-md-12\"><div class=\"form-group\"><label class=\"text-green\"><input type=\"radio\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"chkResultRec(this)\" name=\"AssessmentRt\" value=\"accP\" class=\"flat-green\" checked=\"\"/> Pass</label>\n                              \xA0 \xA0  \xA0\n                              <label class=\"text-danger\"><input type=\"radio\" usx=\"c2aa1951a32f33b047954754f0ae\" onclick=\"chkResultRec(this)\" name=\"AssessmentRt\" value=\"accF\" class=\"flat-green\"/> Failed</label></div></div></div></div></div></div>";
-      t74 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div62 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      a2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
-      a2.innerHTML = "<div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">Service Agreement</span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">2022-03-14</span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\">Pending</span></div></div></div></div>";
-      t80 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div61 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div60 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div59 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div58 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div56 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      form1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
-      div53 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div52 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      label7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
-      label7.textContent = "Olade Consulting Contract with Candidate";
-      t82 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      select2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option3.textContent = "Part tine";
       option4 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option4.textContent = "--";
-      option5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option5.textContent = "2 Years Contract";
-      option6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option6.textContent = "1 Year Contract (External)";
-      option7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option7.textContent = "Part tine";
-      option8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
-      option8.textContent = "Part tine";
-      t88 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      input7 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
-      t89 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div55 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div55.innerHTML = "<div class=\"form-group\"><label class=\"control-label\">\xA0</label> \n                                <button type=\"submit\" class=\"btn btn-primary form-control\">Send</button></div>";
-      t93 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div57 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div57.innerHTML = "<table class=\"table table-striped\"><thead><tr><th>S/N</th><th>Contract Type</th><th>Pri. %</th><th>Sec. %</th><th>No. of Mths</th><th>Sent On</th><th>Opened On</th><th>Signed On</th><th>Status</th></tr></thead> \n                               <tbody><tr><td>1</td><td>2 Years Contract</td><td style=\"background:green; color:#FFF; border-radius:14px; text-align:center\">15%</td><td>10%</td><td>12</td><td>2022-03-14 21:02:48</td><td></td><td></td><td>\xA0 \xA0  </td></tr><tr><td>2</td><td>2 Years Contract</td><td style=\"background:green; color:#FFF; border-radius:14px; text-align:center\">15%</td><td>10%</td><td>12</td><td>2022-03-14 21:02:53</td><td></td><td></td><td>\xA0 \xA0</td></tr></tbody></table>";
-      t118 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
-      div75 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
-      div75.innerHTML = "<a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#PortalAccess\" class=\"collapsed\" aria-expanded=\"false\"><div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">Portal Access</span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\"></span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\"></span></div></div></div></div></a> \n\n                   <div id=\"PortalAccess\" class=\"panel-collapse collapse\" aria-expanded=\"false\"><div class=\"box-body\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-12\"><div class=\"row\"><button class=\"btn btn-primary\" type=\"button\" usx=\"c2aa1951a32f33b047954754f0ae\" disabled=\"\">Invite Candidate To Access Portal</button></div></div></div></div></div></div>";
+      option4.textContent = "Part tine";
+      t37 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t38 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div33 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div33.innerHTML = "<div class=\"form-group\"><label class=\"control-label\">\xA0</label> \n                                <button type=\"submit\" class=\"btn btn-primary form-control\">Send</button></div>";
+      t42 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div35 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div35.innerHTML = "<table class=\"table table-striped\"><thead><tr><th>S/N</th><th>Contract Type</th><th>Pri. %</th><th>Sec. %</th><th>No. of Mths</th><th>Sent On</th><th>Opened On</th><th>Signed On</th><th>Status</th></tr></thead> \n                               <tbody><tr><td>1</td><td>2 Years Contract</td><td style=\"background:green; color:#FFF; border-radius:14px; text-align:center\">15%</td><td>10%</td><td>12</td><td>2022-03-14 21:02:48</td><td></td><td></td><td>\xA0 \xA0  </td></tr><tr><td>2</td><td>2 Years Contract</td><td style=\"background:green; color:#FFF; border-radius:14px; text-align:center\">15%</td><td>10%</td><td>12</td><td>2022-03-14 21:02:53</td><td></td><td></td><td>\xA0 \xA0</td></tr></tbody></table>";
+      t67 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div53 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div53.innerHTML = "<a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#PortalAccess\" class=\"collapsed\" aria-expanded=\"false\"><div class=\"box-header svelte-2y2k0g\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\">Portal Access</span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText svelte-2y2k0g\"></span></div> \n                             <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-2y2k0g\"></span></div></div></div></div></a> \n\n                   <div id=\"PortalAccess\" class=\"panel-collapse collapse\" aria-expanded=\"false\"><div class=\"box-body\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-12\"><div class=\"row\"><button class=\"btn btn-primary\" type=\"button\" usx=\"c2aa1951a32f33b047954754f0ae\" disabled=\"\">Invite Candidate To Access Portal</button></div></div></div></div></div></div>";
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "row");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "panel svelte-2y2k0g");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "data-toggle", "collapse");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "data-parent", "#accordion");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "href", "#examCompleted");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "class", "collapsed");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a0, "aria-expanded", "false");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div12, "class", "col-md-3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div14, "class", "col-md-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "panel svelte-2y2k0g");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div23, "class", "panel svelte-2y2k0g");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "data-toggle", "collapse");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "data-parent", "#accordion");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "href", "#ServiceAgreement");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "class", "collapsed");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a1, "aria-expanded", "false");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label2, "for", "inputName");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label2, "class", "control-label");
       option0.__value = "";
       option0.value = option0.__value;
-      option1.__value = "Internal";
+      option1.__value = "1";
       option1.value = option1.__value;
-      option2.__value = "External";
+      option2.__value = "2";
       option2.value = option2.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select0, "name", "KAType");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select0, "class", "form-control");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select0, "onchange", "setKAByType(this)");
-      select0.required = "";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div15, "class", "form-group");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "hidden");
-      input0.value = "c2aa1951a32f33b047954754f0ae";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "name", "usx");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div16, "class", "col-md-2");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label3, "for", "inputName");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label3, "class", "control-label");
-      option3.__value = "";
+      option3.__value = "3";
       option3.value = option3.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select1, "id", "mKA");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select1, "name", "KA");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select1, "class", "form-control");
-      select1.required = "";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div17, "class", "form-group");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "type", "hidden");
-      input1.value = "c2aa1951a32f33b047954754f0ae";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "name", "usx");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div18, "class", "col-md-3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "col-md-2");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form0, "method", "post");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "col-md-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div23, "class", "col-md-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div24, "class", "col-md-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div25, "class", "row");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div26, "class", "box-body");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div27, "id", "examCompleted");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div27, "class", "panel-collapse collapse");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div27, "aria-expanded", "false");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div28, "class", "panel svelte-2y2k0g");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div45, "class", "panel svelte-2y2k0g");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "data-toggle", "collapse");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "data-parent", "#accordion");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "href", "#ServiceAgreement");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "class", "collapsed");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a2, "aria-expanded", "false");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label7, "for", "inputName");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label7, "class", "control-label");
-      option4.__value = "";
+      option4.__value = "4";
       option4.value = option4.__value;
-      option5.__value = "1";
-      option5.value = option5.__value;
-      option6.__value = "2";
-      option6.value = option6.__value;
-      option7.__value = "3";
-      option7.value = option7.__value;
-      option8.__value = "4";
-      option8.value = option8.__value;
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "name", "oladeContract");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select2, "class", "form-control");
-      select2.required = "";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div52, "class", "form-group");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input7, "type", "hidden");
-      input7.value = "c2aa1951a32f33b047954754f0ae";
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input7, "name", "usx");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div53, "class", "col-md-4");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div55, "class", "col-md-2");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form1, "method", "post");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form1, "action", "../utility/sendDocuSignContract");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div56, "class", "col-md-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div57, "class", "col-md-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div58, "class", "col-md-12");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div59, "class", "row");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div60, "class", "box-body");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div61, "id", "ServiceAgreement");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div61, "class", "panel-collapse collapse");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div61, "aria-expanded", "false");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div62, "class", "panel svelte-2y2k0g");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div75, "class", "panel svelte-2y2k0g");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div76, "class", "box-group");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div76, "id", "accordion");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div77, "class", "box-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "name", "oladeContract");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select, "class", "form-control");
+      select.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div30, "class", "form-group");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "type", "hidden");
+      input2.value = "c2aa1951a32f33b047954754f0ae";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input2, "name", "usx");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div31, "class", "col-md-4");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div33, "class", "col-md-2");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "method", "post");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "action", "../utility/sendDocuSignContract");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div34, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div35, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div36, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div37, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div38, "class", "box-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div39, "id", "ServiceAgreement");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div39, "class", "panel-collapse collapse");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div39, "aria-expanded", "false");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div40, "class", "panel svelte-2y2k0g");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div53, "class", "panel svelte-2y2k0g");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div54, "class", "box-group");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div54, "id", "accordion");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div55, "class", "box-body");
     },
     m: function m(target, anchor) {
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div77, anchor);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div77, div4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div77, t5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div77, div76);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div76, div5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div55, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div55, div4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div55, t5);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div55, div54);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div54, div5);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(preemployementassessment, div5, null);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div76, t6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div76, div28);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, a0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, t12);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div28, div27);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div27, div26);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div26, div25);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div25, div24);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, div12);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, t13);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, div21);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, form0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, div14);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, t17);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, div16);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, div15);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, label2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, t19);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, select0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select0, option0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select0, option1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select0, option2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, t23);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div16, input0);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, t24);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, div18);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div17);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, label3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, t26);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div17, select1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select1, option3);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t28);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, input1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, t29);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form0, div20);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, t33);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div24, div23);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div76, t58);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div76, div45);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div76, t74);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div76, div62);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div62, a2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div62, t80);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div62, div61);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div61, div60);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div60, div59);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div59, div58);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div58, div56);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div56, form1);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form1, div53);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div53, div52);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div52, label7);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div52, t82);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div52, select2);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option4);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option5);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option6);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option7);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select2, option8);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div53, t88);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div53, input7);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form1, t89);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form1, div55);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div58, t93);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div58, div57);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div76, t118);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div76, div75);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div54, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div54, div6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.mount_component)(assessmentresult, div6, null);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div54, t7);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div54, div23);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div54, t23);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div54, div40);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div40, a1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div40, t29);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div40, div39);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div39, div38);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div38, div37);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div37, div36);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div36, div34);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div34, form);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div31);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, div30);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, label2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, t31);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div30, select);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select, option4);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, t37);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div31, input2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t38);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div33);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div36, t42);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div36, div35);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div54, t67);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div54, div53);
       current = true;
     },
     p: function p(ctx, dirty) {
@@ -26218,15 +26062,18 @@ function create_default_slot(ctx) {
     i: function i(local) {
       if (current) return;
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(preemployementassessment.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_in)(assessmentresult.$$.fragment, local);
       current = true;
     },
     o: function o(local) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(preemployementassessment.$$.fragment, local);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.transition_out)(assessmentresult.$$.fragment, local);
       current = false;
     },
     d: function d(detaching) {
-      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div77);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div55);
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(preemployementassessment);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(assessmentresult);
     }
   };
 }
@@ -26234,7 +26081,7 @@ function create_default_slot(ctx) {
 function create_fragment(ctx) {
   var workflow;
   var current;
-  workflow = new nodejs_svelte_crud_helper_user_workflow_Index_svelte__WEBPACK_IMPORTED_MODULE_3__["default"]({
+  workflow = new nodejs_svelte_crud_helper_user_workflow_Index_svelte__WEBPACK_IMPORTED_MODULE_4__["default"]({
     props: {
       title: "Assessment",
       user:
@@ -26294,7 +26141,7 @@ function create_fragment(ctx) {
   };
 }
 
-var layout = nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_2__.Layout;
+var layout = nodejs_svelte_crud_helper__WEBPACK_IMPORTED_MODULE_3__.Layout;
 
 function instance($$self, $$props, $$invalidate) {
   var data = $$props.data;
@@ -47406,6 +47253,204 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+function add_css(target) {
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append_styles)(target, "svelte-1ta4q6m", ".headTText.svelte-1ta4q6m{font-size:14px;color:#4F4F4F;font-weight:700}.box-header.svelte-1ta4q6m{border:1px solid #BFD7DD}");
+}
+
+function create_fragment(ctx) {
+  var a;
+  var t5;
+  var div21;
+  var div20;
+  var div19;
+  var div18;
+  var div6;
+  var t6;
+  var div15;
+  var form;
+  var div8;
+  var t10;
+  var div10;
+  var div9;
+  var label2;
+  var t12;
+  var select0;
+  var option0;
+  var option1;
+  var option2;
+  var t16;
+  var input0;
+  var t17;
+  var div12;
+  var div11;
+  var label3;
+  var t19;
+  var select1;
+  var option3;
+  var t21;
+  var input1;
+  var t22;
+  var div14;
+  var t26;
+  var div17;
+  return {
+    c: function c() {
+      a = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("a");
+      a.innerHTML = "<div class=\"box-header svelte-1ta4q6m\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"col-md-4\"><span class=\"headTText svelte-1ta4q6m\">Assessment Result</span></div> \n              <div class=\"col-md-4\"><span class=\"headTText svelte-1ta4q6m\">2022-04-19</span></div> \n              <div class=\"col-md-4\"><span class=\"headTText pull-right svelte-1ta4q6m\"><b class=\"text-green\">Active</b></span></div></div></div></div>";
+      t5 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div20 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div18 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      t6 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div15 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      form = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("form");
+      div8 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div8.innerHTML = "<div class=\"form-group\"><label for=\"inputName\" class=\"control-label\">Program Type</label> \n\n                       \n                       <label class=\"form-control\"><b style=\"color:green\">Project Management</b></label></div>";
+      t10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div10 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div9 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      label2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label2.textContent = "Exam Type";
+      t12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      select0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option0.textContent = "--";
+      option1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option1.textContent = "Internal";
+      option2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option2.textContent = "External";
+      t16 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input0 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div12 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div11 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      label3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("label");
+      label3.textContent = "Knowledge Area";
+      t19 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      select1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("select");
+      option3 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("option");
+      option3.textContent = "--";
+      t21 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      input1 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("input");
+      t22 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div14 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div14.innerHTML = "<div class=\"form-group\"><label class=\"control-label\">\xA0</label> \n                       <button type=\"button\" class=\"btn btn-primary btn-sm form-control\"><i class=\"fa fa-plus\"></i> Add</button></div>";
+      t26 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
+      div17 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("div");
+      div17.innerHTML = "<div class=\"table-responsive\"><table class=\"table table-bordered table-hover table-striped\"><thead><tr><th>Knowledge Area</th><th>No. of Quest.</th>  <th>No. of Correct Answer  </th><th>Score</th></tr></thead> \n                <tbody><tr><td>Project integration management</td>  <td>10</td>   <td><input style=\"width:40px\" class=\"IsNumber\" type=\"text\" pmf=\"2\" kmf=\"7\" nq=\"10\" nm=\"20\" usx=\"c2aa1951a32f33b047954754f0ae\" oninput=\"updateKAScore(this)\" value=\"10\"/></td>  <td id=\"fresult-7\">100% </td></tr><tr><td>Project scope management</td>  <td>20</td>   <td><input style=\"width:40px\" class=\"IsNumber\" type=\"text\" pmf=\"2\" kmf=\"8\" nq=\"20\" nm=\"5\" usx=\"c2aa1951a32f33b047954754f0ae\" oninput=\"updateKAScore(this)\" value=\"9\"/></td>  <td id=\"fresult-8\">45% </td></tr><tr><td>Project time management</td>  <td>50</td>   <td><input style=\"width:40px\" class=\"IsNumber\" type=\"text\" pmf=\"2\" kmf=\"9\" nq=\"50\" nm=\"0\" usx=\"c2aa1951a32f33b047954754f0ae\" oninput=\"updateKAScore(this)\" value=\"30\"/></td>  <td id=\"fresult-9\">60%</td></tr></tbody></table></div>";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "data-toggle", "collapse");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "data-parent", "#accordion");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "href", "#examCompleted");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "class", "collapsed");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(a, "aria-expanded", "false");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "col-md-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div8, "class", "col-md-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label2, "for", "inputName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label2, "class", "control-label");
+      option0.__value = "";
+      option0.value = option0.__value;
+      option1.__value = "Internal";
+      option1.value = option1.__value;
+      option2.__value = "External";
+      option2.value = option2.__value;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select0, "name", "KAType");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select0, "class", "form-control");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select0, "onchange", "setKAByType(this)");
+      select0.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div9, "class", "form-group");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "type", "hidden");
+      input0.value = "c2aa1951a32f33b047954754f0ae";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input0, "name", "usx");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div10, "class", "col-md-2");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label3, "for", "inputName");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(label3, "class", "control-label");
+      option3.__value = "";
+      option3.value = option3.__value;
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select1, "id", "mKA");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select1, "name", "KA");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(select1, "class", "form-control");
+      select1.required = "";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div11, "class", "form-group");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "type", "hidden");
+      input1.value = "c2aa1951a32f33b047954754f0ae";
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(input1, "name", "usx");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div12, "class", "col-md-3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div14, "class", "col-md-2");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(form, "method", "post");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div15, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div17, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div18, "class", "col-md-12");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div19, "class", "row");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div20, "class", "box-body");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "id", "examCompleted");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "class", "panel-collapse collapse");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div21, "aria-expanded", "false");
+    },
+    m: function m(target, anchor) {
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, a, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, t5, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div21, anchor);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div21, div20);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div20, div19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div19, div18);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t6);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div15);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div15, form);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div8);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div10);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, div9);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, label2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, t12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div9, select0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select0, option0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select0, option1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select0, option2);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, t16);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div10, input0);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t17);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div12);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, div11);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, label3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, t19);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div11, select1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(select1, option3);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, t21);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div12, input1);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, t22);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(form, div14);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, t26);
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(div18, div17);
+    },
+    p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__.noop,
+    d: function d(detaching) {
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(a);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t5);
+      if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(div21);
+    }
+  };
+}
+
+function instance($$self, $$props, $$invalidate) {
+  var statuses = $$props.statuses;
+  var user = $$props.user;
+  var list = $$props.list;
+  console.log(statuses, user, list);
+
+  $$self.$$set = function ($$props) {
+    if ('statuses' in $$props) $$invalidate(0, statuses = $$props.statuses);
+    if ('user' in $$props) $$invalidate(1, user = $$props.user);
+    if ('list' in $$props) $$invalidate(2, list = $$props.list);
+  };
+
+  return [statuses, user, list];
+}
+
 var Index = /*#__PURE__*/function (_SvelteComponent) {
   _inherits(Index, _SvelteComponent);
 
@@ -47417,7 +47462,11 @@ var Index = /*#__PURE__*/function (_SvelteComponent) {
     _classCallCheck(this, Index);
 
     _this = _super.call(this);
-    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, null, null, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
+    (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
+      statuses: 0,
+      user: 1,
+      list: 2
+    }, add_css);
     return _this;
   }
 

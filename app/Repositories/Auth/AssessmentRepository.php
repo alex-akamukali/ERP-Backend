@@ -1,6 +1,8 @@
 <?php
 namespace App\Repositories\Auth;
 use App\Models\User;
+use App\Repositories\Settings\KnowledgeAreaRepository;
+use App\Repositories\Settings\ProgramTypeRepository;
 use Illuminate\Support\Facades\Auth;
 
 use App\Repositories\Workflow\Assessment\AssessmentInterviewRepository;
@@ -17,12 +19,19 @@ class AssessmentRepository
     private $assessmentInterviewRepository;
     private $serviceAgreementRepository;
 
+    private $programTypeRepository;
+    private $knowledgeAreaRepository;
+
+
 
     function __construct(
         PreEmploymentAssessmentRepository $preEmploymentAssessmentRepository,
         AssessmentResultRepository $assessmentResultRepository,
         AssessmentInterviewRepository $assessmentInterviewRepository,
-        ServiceAgreementRepository $serviceAgreementRepository
+        ServiceAgreementRepository $serviceAgreementRepository,
+
+        ProgramTypeRepository $programTypeRepository,
+        KnowledgeAreaRepository $knowledgeAreaRepository
     )
     {
         //Assessment
@@ -30,6 +39,9 @@ class AssessmentRepository
         $this->assessmentResultRepository = $assessmentResultRepository;
         $this->assessmentInterviewRepository = $assessmentInterviewRepository;
         $this->serviceAgreementRepository = $serviceAgreementRepository;
+
+        $this->programTypeRepository = $programTypeRepository;
+        $this->knowledgeAreaRepository = $knowledgeAreaRepository;
     }
 
     function fetch($userId){
@@ -38,7 +50,9 @@ class AssessmentRepository
             "assessmentResult"=>$this->assessmentResultRepository->getByUserId($userId)->get(),
             "assessmentInterview"=>$this->assessmentInterviewRepository->getByUserId($userId)->get(),
             "serviceAgreement"=>$this->serviceAgreementRepository->getByUserId($userId)->get(),
-            "statuses"=>$this->preEmploymentAssessmentRepository->statuses()
+            "statuses"=>$this->preEmploymentAssessmentRepository->statuses(),
+            "programTypes"=>$this->programTypeRepository->fetch([])->get(),
+            "knowledgeAreas"=>$this->knowledgeAreaRepository->fetch(request()->all())->get()
         ];
     }
 
