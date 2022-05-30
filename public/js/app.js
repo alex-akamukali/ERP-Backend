@@ -52868,11 +52868,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var _form = (0,_inertiajs_inertia_svelte__WEBPACK_IMPORTED_MODULE_1__.useForm)({
-  /**
-   *
-   * @property {nice3}
-   *
-   */
   description: "",
   title: "",
   status: "active",

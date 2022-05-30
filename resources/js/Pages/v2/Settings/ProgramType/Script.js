@@ -2,19 +2,12 @@ import {writable,get} from "svelte/store";
 import { useForm } from "@inertiajs/inertia-svelte";
 
 let form = useForm({
-/**
- *
- * @property {nice3}
- *
- */
     description: "",
     title: "",
     status: "active",
     id: "0",
     foo_detail:"",
 });
-
-
 
 /**
  copy this to the next page for reference

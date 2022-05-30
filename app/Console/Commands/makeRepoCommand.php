@@ -73,15 +73,90 @@ class makeRepoCommand extends Command
 
         $fields = [];
 
+
+        $fieldsDefinition = '';
+        $fillableDefinition = '';
+
         if ($useFields){
             $modelObject = $modelBuilder['classObject']();
             $tableName = $modelObject->getTable();
             // dd($tableName);
             $fields = Schema::getColumnListing($tableName);
-            $fields = array_diff($fields,["created_at","updated_at"]);
-            dd($fields);
+            $fields = array_diff($fields,["id","created_at","updated_at"]);
+            // dd($fields);
+            //gen fields
+            $fieldsDefinitionArray = [];
+            $fillableDefinitionArray = [];
+            foreach ($fields as $field){
+               $fieldsDefinitionArray[] = $field . ':""';
+               $fillableDefinitionArray[] = "'" . $field . "'";
+            }
+            $fieldsDefinition = implode(",\n",$fieldsDefinitionArray);
+            $fillableDefinition = "\n" . 'protected $fillable = [' . "\n" . implode(",\n",$fillableDefinitionArray) . "];\n";
 
+            dd($fieldsDefinition,$fillableDefinition);
         }
+
+
+        $scriptJsTemplate = '
+        import {writable,get} from "svelte/store";
+        import { useForm } from "@inertiajs/inertia-svelte";
+
+        let form = useForm({
+            ' . $fieldsDefinition . '
+        });
+
+        /**
+         copy this to the next page for reference
+        foo_detail
+
+        * */
+
+
+
+        const Script = writable({
+
+            data(){
+              return form;
+            },
+
+
+
+            form(){
+               return form;
+            },
+
+            get(url){
+               get(form).get(url);
+            },
+
+            select(data){
+              form.update((old)=>({...old,...data}));
+              Script.update((old)=>({...old,...data}));
+            //   get(Script).title = data.title;
+            },
+
+            put(url){
+                get(form).put(url);
+            },
+
+            delete(url){
+                get(form).delete(url);
+            },
+
+            reset(){
+               get(form).reset();
+            },
+
+            post(url){
+                get(form).post(url);
+            }
+
+        });
+
+        export default Script;
+
+        ';
 
         $interfacePath = $repositoryBuilder['pathName'] . '/Interfaces/' . $repositoryBuilder['className'] . 'Interface';
 
