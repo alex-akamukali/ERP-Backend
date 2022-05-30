@@ -18,6 +18,8 @@
         reset,
         onReset,
     } from "nodejs-svelte-crud-helper";
+    import Script from "./Script.js";
+
     export const layout = Layout;
 </script>
 
@@ -28,36 +30,36 @@
 
     const resource = "/program-type/";
 
-    let form = useForm({
-        description: "",
-        title: "",
-        status: "active",
-        id: "0",
-    });
+    let form = $Script.form();
+
 
     onSelectRow((data) => {
-        $form.description = data.description;
-        $form.title = data.title;
-        $form.status = data.status;
-        $form.id = data.id;
+        $Script.select(data);
+        // $form.description = data.description;
+        // $form.title = data.title;
+        // $form.status = data.status;
+        // $form.id = data.id;
+
     });
 
+
     onCreate(() => {
-        $form.post(resource);
+        // $form.post(resource);
+        $Script.post(resource);
     });
 
     onRemove((data) => {
         if (confirm("Do you want to confirm this action?")) {
-            $form.delete(resource + data.id);
+            $Script.delete(resource + data.id);
         }
     });
 
     onUpdate((data) => {
-        $form.put(resource + data.id);
+        $Script.put(resource + data.id);
     });
 
     onReset(() => {
-        $form.reset();
+        $Script.reset();
     });
 </script>
 
@@ -141,6 +143,7 @@
                     required=""
                     bind:value={$form.title}
                 />
+
             </div>
 
             <div class="col-md-12">

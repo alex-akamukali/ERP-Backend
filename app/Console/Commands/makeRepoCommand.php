@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Cache\Store;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -14,7 +15,7 @@ class makeRepoCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:repository {name} {--model=} {--useAuth}';
+    protected $signature = 'make:repository {name} {--model=} {--useAuth} {--useFields}';
 
     /**
      * The console command description.
@@ -47,6 +48,8 @@ class makeRepoCommand extends Command
 
         $useAuth = $this->option('useAuth');
 
+        $useFields = $this->option('useFields');
+
         $authSnipinInterfaceTemplate = '';
         $authSnipinRepositoryTemplate = '';
 
@@ -67,6 +70,18 @@ class makeRepoCommand extends Command
 
         $repositoryBuilder = $this->decodePath('Repositories/' . $name . 'Repository');
         $modelBuilder = $this->decodePath($model);
+
+        $fields = [];
+
+        if ($useFields){
+            $modelObject = $modelBuilder['classObject']();
+            $tableName = $modelObject->getTable();
+            // dd($tableName);
+            $fields = Schema::getColumnListing($tableName);
+            $fields = array_diff($fields,["created_at","updated_at"]);
+            dd($fields);
+
+        }
 
         $interfacePath = $repositoryBuilder['pathName'] . '/Interfaces/' . $repositoryBuilder['className'] . 'Interface';
 
@@ -405,8 +420,13 @@ Storage::disk("root")->put("routes/web.php",$route . '
        $classUseStatement = 'use App\\' . implode('\\',$list) . '\\' . $className . ';';
        $classUseRawStatement = 'use ' . implode('\\',$list) . '\\' . $className . ';';
        $classClassStatement = '\\App\\' . implode('\\',$list) . '\\' . $className . '::class';
+       $classClass = '\\App\\' . implode('\\',$list) . '\\' . $className;
+       $classObject = function() use ($classClass){
+             return new $classClass(); //lazy load this.
+       };
 
        return [
+           "classObject"=>$classObject,
            'classUseRawStatement'=>$classUseRawStatement,
            'pathFileNameNoExt'=>$pathFileNameNoExt,
            'classUseStatement'=>$classUseStatement,
