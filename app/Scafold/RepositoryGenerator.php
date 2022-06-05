@@ -11,7 +11,7 @@ class RepositoryGenerator extends ClassGenerator
         // $this->genRepoCrud($this);
     }
 
-    function buildClass(callable $callback)
+    function buildClass(callable $callback=null)
     {
         parent::buildClass(function () use ($callback) {
             $callback($this);

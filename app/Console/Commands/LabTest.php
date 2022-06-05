@@ -4,7 +4,9 @@ namespace App\Console\Commands;
 
 use App\Models\Workflow\Assessment\AssessmentResult;
 use App\Scafold\ClassGenerator;
+use App\Scafold\RepoScafold;
 use App\Scafold\RepositoryGenerator;
+use App\Scafold\ScafoldGen;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Schema;
 
@@ -46,23 +48,31 @@ class LabTest extends Command
         // $tableName = (new AssessmentResult)->getTable();
         // dd(Schema::getColumnListing($tableName));
         // dd((new AssessmentResult)->getTable());
-        $classBuilder = new RepositoryGenerator("app/RepositoriesExample/UserModule/UserRepository");
-        $classBuilder2 = new ClassGenerator("App\Http\Controllers\Controller");
-        $classModelInject = new ClassGenerator("app/Models/Settings/Config");
-        // $classInject2 = new ClassGenerator("app/Services/Inject2");
-        // $classBuilder->extends($classBuilder2);
-        $classBuilder->uses($classModelInject,'model');
-        // $classBuilder->inject($classInject2);
+        // $classBuilder = new RepositoryGenerator("app/RepositoriesExample/UserModule/UserRepository");
+        // $classBuilder2 = new ClassGenerator("App\Http\Controllers\Controller");
+        // $classModelInject = new ClassGenerator("app/Models/Settings/Config");
+        // // $classInject2 = new ClassGenerator("app/Services/Inject2");
+        // // $classBuilder->extends($classBuilder2);
+        // $classBuilder->uses($classModelInject,'model');
+        // // $classBuilder->inject($classInject2);
 
-        $classBuilder->buildClass(function(ClassGenerator $builder){
-            $builder->newFunction("foo",'$a,$b',function(ClassGenerator $classGenerator){
-                $classGenerator->addBlock('return  $a + $b;',2);
-            });
-        });
+        // $classBuilder->buildClass(function(ClassGenerator $builder){
+        //     $builder->newFunction("foo",'$a,$b',function(ClassGenerator $classGenerator){
+        //         $classGenerator->addBlock('return  $a + $b;',2);
+        //     });
+        // });
 
-        $classBuilder->commit();
+        // $classBuilder->commit();
 
-        dd($classBuilder->output());
+        // dd($classBuilder->output());
+
+        $userModel = new ScafoldGen("app/Models/User");
+        $repoGen = new RepoScafold("app/Repositoriesv2/UserRepository");
+
+        $repoGen->setModelUse($userModel->getUseExpression());
+        $repoGen->setModel($userModel->getName());
+
+        $repoGen->commit("php");
 
         return 0;
     }

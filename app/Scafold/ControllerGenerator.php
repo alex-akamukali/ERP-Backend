@@ -5,7 +5,7 @@ class ControllerGenerator extends ClassGenerator{
 
 
 
-    function buildClass(callable $callback)
+    function buildClass(callable $callback=null)
     {
         parent::buildClass(function() use ($callback){
           $callback($this);
@@ -15,8 +15,17 @@ class ControllerGenerator extends ClassGenerator{
 
 
     function genControllerBuild(){
-       $this->newFunction('index','',function(){});
+
+        $this->newFunction('index','',function(ClassGenerator $classGenerator){
+          $classGenerator->addBlock("inertia()->render(\"" . $classGenerator->getPlugin("svelte.index")->getViewPath() . "\",[
+              \"list\"=>" . $classGenerator->getUses("repository")->getInstanceVariable() . "->fetch(request()->all())->get()
+          ])",2);
+       });
+
+
     }
+
+
 
 
 }

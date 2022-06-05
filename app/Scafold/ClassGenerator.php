@@ -4,6 +4,7 @@ namespace App\Scafold;
 
 use Illuminate\Support\Facades\Storage;
 use stdClass;
+use Illuminate\Support\Str;
 
 class ClassGenerator
 {
@@ -17,6 +18,7 @@ class ClassGenerator
     private $_inject = [];
     private $methods = [];
     private $_uses = [];
+    private $_plugins = [];
     // private $_contructorParams = [];
 
 
@@ -44,6 +46,17 @@ class ClassGenerator
     {
         $this->uses($generator,$tag,'extend');
         // $this->_extends = $generator;
+    }
+
+    function addPlugin($generator,$tag){
+       $this->_plugins[$tag] = $generator;
+    }
+
+    function getPlugin($tag){
+        if (isset($this->_plugins[$tag])){
+           return $this->_plugins[$tag];
+        }
+        return null;
     }
 
     function inject($generator, $tag = '')
@@ -189,6 +202,19 @@ class ClassGenerator
         return $className;
     }
 
+    function getClassClassName(){
+        $cls = implode("\\",$this->pathArray);
+        return $cls . "::class";
+    }
+
+    function getResourceName(){
+        $cls = $this->getClassClassName();
+        $resource = Str::snake($cls);
+        $resource = explode("_",$resource);
+        $resource = implode("-",$resource);
+        return $resource;
+    }
+
     function genClassStatement()
     {
         $className = $this->getClassName();
@@ -232,7 +258,7 @@ class ClassGenerator
     }
 
 
-    function buildClass(callable $callback)
+    function buildClass(callable $callback = null)
     {
         $this->genContructor();
         $this->openScript();
@@ -259,7 +285,9 @@ class ClassGenerator
         $this->newLine();
         $this->genClassStatement();
         //   $this->genContructor();
-        $callback($this);
+        if (!is_null($callback)){
+            $callback($this);
+        }
         $this->newLine();
         foreach ($this->methods as $method) {
             $this->newLine();
@@ -310,9 +338,13 @@ class ClassGenerator
         return $this->code;
     }
 
+    function getPath(){
+        return implode("/",$this->pathArray);
+    }
+
     function commit(){
        $this->getCode();
-       $targetFilePath = implode("/",$this->pathArray) . '.php';
+       $targetFilePath = $this->getPath() . '.php';
        if (!Storage::disk("root")->exists($targetFilePath)){
           Storage::disk("root")->put($targetFilePath,$this->code);
        }
