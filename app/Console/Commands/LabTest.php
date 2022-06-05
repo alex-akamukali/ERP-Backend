@@ -46,7 +46,7 @@ class LabTest extends Command
         // $tableName = (new AssessmentResult)->getTable();
         // dd(Schema::getColumnListing($tableName));
         // dd((new AssessmentResult)->getTable());
-        $classBuilder = new RepositoryGenerator("app/Repositories/UserRepository");
+        $classBuilder = new RepositoryGenerator("app/RepositoriesExample/UserRepository");
         $classBuilder2 = new ClassGenerator("App\Http\Controllers\Controller");
         $classInject = new ClassGenerator("app/Models/Customer");
         $classInject2 = new ClassGenerator("app/Services/Inject2");
@@ -59,6 +59,8 @@ class LabTest extends Command
                 $classGenerator->addBlock(' return  $a + $b;');
             });
         });
+
+        $classBuilder->commit();
 
         dd($classBuilder->output());
 

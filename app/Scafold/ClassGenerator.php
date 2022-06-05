@@ -2,6 +2,9 @@
 
 namespace App\Scafold;
 
+use Illuminate\Support\Facades\Storage;
+use stdClass;
+
 class ClassGenerator
 {
 
@@ -37,39 +40,76 @@ class ClassGenerator
         $this->pathRootArray = $r;
     }
 
-    function extends($generator)
+    function extends($generator,$tag='')
     {
-        $this->_extends = $generator;
+        $this->uses($generator,$tag,'extend');
+        // $this->_extends = $generator;
     }
 
     function inject($generator, $tag = '')
     {
-        if (!empty($tag)) {
-            $this->_inject[$tag] = $generator;
-        } else {
-            $this->_inject[] = $generator;
+        $this->uses($generator,$tag,'inject');
+        // if (!empty($tag)) {
+        //     $this->_inject[$tag] = $generator;
+        // } else {
+        //     $this->_inject[] = $generator;
+        // }
+    }
+
+    function uses($generator, $tag='',$type='use')
+    {
+        $this->_uses[] = [
+            'generator'=>$generator,
+            'tag'=>$tag,
+            'type'=>$type
+        ];
+        // if (empty($tag)){
+        //    $this->_uses[] = $generator;
+        // }else{
+        //     $this->_uses[$tag] = $generator;
+        // }
+    }
+
+    function getInjects()
+    {
+        $injects = [];
+        foreach ($this->_uses as $item){
+           if ($item['type'] == 'inject'){
+              $injects[] = $item['generator'];
+           }
         }
+        return $injects;
     }
 
-    function uses($generator, $tag)
+    function getExtend()
     {
-        $this->_uses[$tag] = $generator;
+        $extend = null;
+        foreach ($this->_uses as $item){
+           if ($item['type'] == 'extend'){
+              $extend = $item['generator'];
+           }
+        }
+        return $extend;
     }
 
-    function getInject($tag)
-    {
-        return $this->_inject[$tag];
-    }
 
     function getUses($tag)
     {
-        return $this->_uses[$tag];
+       $check = new self('');
+       foreach ($this->_uses as $item){
+          if ($item['tag'] == $tag){
+            $check = $item['generator'];
+            break;
+          }
+       }
+       return $check;
     }
 
     function getExtends()
     {
-        if (!is_null($this->_extends)) {
-            return " extends " . $this->_extends->getClassName();
+        $extend = $this->getExtend();
+        if (!is_null($extend)) {
+            return " extends " . $extend->getClassName();
         }
         return "";
     }
@@ -117,13 +157,14 @@ class ClassGenerator
     {
         // $this->newLine();
         $params = [];
-        if (count($this->_inject)) {
-            foreach ($this->_inject as $injectable) {
+        $injects = $this->getInjects();
+        if (count($injects)) {
+            foreach ($injects as $injectable) {
                 $params[] = $injectable->getParameterVariableDeclaration();
             }
         }
         $params = implode(",", $params);
-        $injectables = $this->_inject;
+        $injectables = $this->getInjects();
         $this->newFunction("__constructor", $params, function (ClassGenerator $classGenerator) use ($injectables) {
             foreach ($injectables as $innerInjectable) {
                 $classGenerator->addBlock($innerInjectable->getParameterInjectionStatementDeclaration());
@@ -194,22 +235,22 @@ class ClassGenerator
         $this->newLine();
         $this->genNamespaceStatement();
         $this->newLine();
-        if (count($this->_inject)) {
-            foreach ($this->_inject as $injectable) {
-                $this->addBlock($injectable->getUseStatement());
-            }
-        }
+        // if (count($this->_inject)) {
+        //     foreach ($this->_inject as $injectable) {
+        //         $this->addBlock($injectable->getUseStatement());
+        //     }
+        // }
 
         foreach ($this->_uses as $uses) {
-            $this->addBlock($uses->getUseStatement());
+            $this->addBlock($uses['generator']->getUseStatement());
         }
 
-        $this->newLine();
-        if (!is_null($this->_extends)) {
-            $this->addBlock(
-                $this->_extends->getUseStatement()
-            );
-        }
+        // $this->newLine();
+        // if (!is_null($this->_extends)) {
+        //     $this->addBlock(
+        //         $this->_extends->getUseStatement()
+        //     );
+        // }
         $this->newLine();
         $this->genClassStatement();
         //   $this->genContructor();
@@ -218,8 +259,6 @@ class ClassGenerator
         foreach ($this->methods as $method) {
             $method();
         }
-
-
         $this->newLine();
         $this->addBlock("}");
         $this->newLine();
@@ -256,4 +295,13 @@ class ClassGenerator
         $this->getCode();
         return $this->code;
     }
+
+    function commit(){
+       $this->getCode();
+       $targetFilePath = implode("/",$this->pathArray) . '.php';
+       if (!Storage::disk("root")->exists($targetFilePath)){
+          Storage::disk("root")->put($targetFilePath,$this->code);
+       }
+    }
+
 }
