@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\Workflow\Assessment\AssessmentResult;
 use App\Scafold\ClassGenerator;
+use App\Scafold\RepositoryGenerator;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Schema;
 
@@ -45,13 +46,14 @@ class LabTest extends Command
         // $tableName = (new AssessmentResult)->getTable();
         // dd(Schema::getColumnListing($tableName));
         // dd((new AssessmentResult)->getTable());
-        $classBuilder = new ClassGenerator("app/Services/UserLoginService");
-        $classBuilder2 = new ClassGenerator("app/Services/UserLoginService2");
-        $classInject = new ClassGenerator("app/Services/Inject1");
+        $classBuilder = new RepositoryGenerator("app/Repositories/UserRepository");
+        $classBuilder2 = new ClassGenerator("App\Http\Controllers\Controller");
+        $classInject = new ClassGenerator("app/Models/Customer");
         $classInject2 = new ClassGenerator("app/Services/Inject2");
         $classBuilder->extends($classBuilder2);
-        $classBuilder->inject($classInject);
+        $classBuilder->uses($classInject,'model');
         $classBuilder->inject($classInject2);
+
         $classBuilder->buildClass(function(ClassGenerator $builder){
             $builder->newFunction("foo",'$a,$b',function(ClassGenerator $classGenerator){
                 $classGenerator->addBlock(' return  $a + $b;');
