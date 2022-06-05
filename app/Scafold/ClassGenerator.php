@@ -192,7 +192,7 @@ class ClassGenerator
     function genClassStatement()
     {
         $className = $this->getClassName();
-        $this->addBlock("class " . $className . $this->getExtends() . "{");
+        $this->addBlock("class " . $className . $this->getExtends() . "{",0);
     }
 
     function getUseStatement()
@@ -217,13 +217,17 @@ class ClassGenerator
         $this->buildString[] = "\n";
     }
 
+    function addString($str){
+        $this->buildString[] = $str;
+    }
+
     function newFunction($name, $parameters = '', callable $body)
     {
         $this->methods[] = function () use ($name, $body, $parameters) {
-            $this->addBlock("function " . $name . "(" . $parameters . "){");
+            $this->addBlock("function " . $name . "(" . $parameters . ")\n\t{\n",1);
             $body($this);
             $this->newLine();
-            $this->addBlock("}");
+            $this->addBlock("}",1);
         };
     }
 
@@ -235,6 +239,7 @@ class ClassGenerator
         $this->newLine();
         $this->genNamespaceStatement();
         $this->newLine();
+        $this->newLine();
         // if (count($this->_inject)) {
         //     foreach ($this->_inject as $injectable) {
         //         $this->addBlock($injectable->getUseStatement());
@@ -242,10 +247,10 @@ class ClassGenerator
         // }
 
         foreach ($this->_uses as $uses) {
-            $this->addBlock($uses['generator']->getUseStatement());
+            $this->addBlock($uses['generator']->getUseStatement(),0);
         }
 
-        // $this->newLine();
+        $this->newLine();
         // if (!is_null($this->_extends)) {
         //     $this->addBlock(
         //         $this->_extends->getUseStatement()
@@ -257,18 +262,27 @@ class ClassGenerator
         $callback($this);
         $this->newLine();
         foreach ($this->methods as $method) {
+            $this->newLine();
             $method();
+            $this->newLine();
         }
         $this->newLine();
-        $this->addBlock("}");
+        $this->addBlock("}",0);
         $this->newLine();
         //   $this->getCode();
     }
 
-    function addBlock($block)
+    function addBlock($block,$indentationLevel = 0)
     {
-        $this->buildString[] = $block;
-        $this->newLine();
+        $indent = "";
+
+        for ($c = 0;$c < $indentationLevel;$c++){
+            $indent.="\t";
+        }
+
+        $this->buildString[] = $indent . $block;
+
+
     }
 
 

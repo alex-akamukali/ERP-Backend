@@ -46,17 +46,17 @@ class LabTest extends Command
         // $tableName = (new AssessmentResult)->getTable();
         // dd(Schema::getColumnListing($tableName));
         // dd((new AssessmentResult)->getTable());
-        $classBuilder = new RepositoryGenerator("app/RepositoriesExample/UserRepository");
+        $classBuilder = new RepositoryGenerator("app/RepositoriesExample/UserModule/UserRepository");
         $classBuilder2 = new ClassGenerator("App\Http\Controllers\Controller");
-        $classInject = new ClassGenerator("app/Models/Customer");
-        $classInject2 = new ClassGenerator("app/Services/Inject2");
-        $classBuilder->extends($classBuilder2);
-        $classBuilder->uses($classInject,'model');
-        $classBuilder->inject($classInject2);
+        $classModelInject = new ClassGenerator("app/Models/Settings/Config");
+        // $classInject2 = new ClassGenerator("app/Services/Inject2");
+        // $classBuilder->extends($classBuilder2);
+        $classBuilder->uses($classModelInject,'model');
+        // $classBuilder->inject($classInject2);
 
         $classBuilder->buildClass(function(ClassGenerator $builder){
             $builder->newFunction("foo",'$a,$b',function(ClassGenerator $classGenerator){
-                $classGenerator->addBlock(' return  $a + $b;');
+                $classGenerator->addBlock('return  $a + $b;',2);
             });
         });
 
