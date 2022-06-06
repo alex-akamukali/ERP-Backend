@@ -5,9 +5,11 @@ namespace App\Console\Commands;
 use App\Models\Workflow\Assessment\AssessmentResult;
 use App\Scafold\ClassGenerator;
 use App\Scafold\ControllerScafold;
+use App\Scafold\FormRequestScafold;
 use App\Scafold\RepoScafold;
 use App\Scafold\RepositoryGenerator;
 use App\Scafold\ScafoldGen;
+use App\Scafold\SvelteScafold;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Schema;
 
@@ -70,13 +72,19 @@ class LabTest extends Command
         $userModel = new ScafoldGen("app/Models/User");
         $repoGen = new RepoScafold("app/Repositoriesv2/UserRepository");
         $controllerGen = new ControllerScafold("app/Repositoriesv2/Controllers/User2Controller");
+        $svelteIndex = new SvelteScafold("auth/User2");
+        $storeFormRequest = new FormRequestScafold("app/Repositoriesv2/FormRequests/StoreRequest");
 
         $repoGen->setModel($userModel);
 
         $controllerGen->setRepository($repoGen);
+        $controllerGen->setSvelteIndex($svelteIndex);
+        $controllerGen->setStoreFormRequest($storeFormRequest);
 
         $repoGen->commit("php");
         $controllerGen->commit("php");
+        $storeFormRequest->commit("php");
+        $svelteIndex->commitFile();
 
         return 0;
     }

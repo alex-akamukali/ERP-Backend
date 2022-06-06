@@ -1,7 +1,7 @@
 <?php
 namespace {{$namespace}};
 use {{$repoUse}};
-use App\Http\Requests\Settings\Config\StoreRequest;
+use {{$storeFormRequestUseExpression}};
 use App\Http\Requests\Settings\Config\UpdateRequest;
 use App\Http\Controllers\Controller;
 //use Illuminate\Http\Request;
@@ -17,7 +17,7 @@ class {{$name}} extends Controller
 
     function index(){
         $list = $this->{{$repoInstance}}->fetch(request()->all())->get();
-        return inertia()->render("v2/Settings/Config/Index",[
+        return inertia()->render("{{$svelteIndex}}",[
             "list"=>$list
         ]);
     }

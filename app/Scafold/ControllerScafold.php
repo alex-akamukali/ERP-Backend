@@ -18,4 +18,36 @@ class ControllerScafold extends ScafoldGen
             'repoName'=>$repository->getName()
         ]);
     }
+
+    function setSvelteIndex(SvelteScafold $svelteScafold){
+       $this->setData([
+           'svelteIndex'=>$svelteScafold->getPage()
+       ]);
+    }
+
+    function setSvelteCreate(SvelteScafold $svelteScafold){
+        $this->setData([
+            'svelteCreate'=>$svelteScafold->getPage()
+        ]);
+     }
+
+     function setSvelteEdit(SvelteScafold $svelteScafold){
+        $this->setData([
+            'svelteEdit'=>$svelteScafold->getPage()
+        ]);
+     }
+
+
+     function setSvelteShow(SvelteScafold $svelteScafold){
+        $this->setData([
+            'svelteShow'=>$svelteScafold->getPage()
+        ]);
+     }
+
+     function setStoreFormRequest(FormRequestScafold $formRequestScafold){
+       $this->setData([
+           'storeFormRequestUseExpression'=>$formRequestScafold->getUseExpression()
+       ]);
+     }
+
 }
