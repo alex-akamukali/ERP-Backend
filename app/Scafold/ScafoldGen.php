@@ -70,5 +70,65 @@ class ScafoldGen{
        }
     }
 
+    function evaluateTemplate(){
+
+
+        $name = 6;
+
+        $r1 = [2,3,4,5];
+
+        $r = '
+
+        very good
+        {{$name}}--{{$name+3}}
+        cool
+
+        @if ($name > 2){@
+          nice one
+        @}@
+
+        @foreach ($r1 as $item2){@
+         <--{{$item2*2}}-->
+        @}@
+
+        ';
+
+
+        $r = explode("{{",$r);
+        $r = implode("__sep__=",$r);
+        $r = explode("}}",$r);
+        $r = implode("__sep__",$r);
+        $r = explode("@",$r);
+        $r = implode("__sep__",$r);
+        $r = explode("__sep__",$r);
+
+        $code = [];
+        $code[] = '$list = [];';
+        foreach ($r as $k=>$item){
+          if ($k%2 == 0){
+            $code[] = '$list[]="' . $item . '";';
+          }else{
+            if (count($t = explode("=",$item)) > 1){
+              $code[] = '$list[]=' . $t[1] . ';';
+            }else{
+              $code[] = $item;
+            }
+
+          }
+        }
+        $code[] = '$list = implode("",$list);';
+
+        $code = implode("",$code);
+
+        //echo $code;
+
+        eval($code);
+
+        // echo $list;
+
+
+
+    }
+
 
 }
