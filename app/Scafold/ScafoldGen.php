@@ -18,6 +18,8 @@ class ScafoldGen{
     {
         $this->path = $path;
         $this->initPathArray();
+        $this->data['namespace'] = $this->getNamespace();
+        $this->data['name'] = $this->getName();
     }
 
 
@@ -63,10 +65,16 @@ class ScafoldGen{
         return $r;
     }
 
+    function getNamespace(){
+        $r = $this->pathArray;
+        array_pop($r);
+        return ucfirst(implode("\\",$r));
+    }
+
     function commit($ext){
        $targetFilePath = $this->getPath() . '.' . $ext;
        if (!Storage::disk("root")->exists($targetFilePath)){
-          Storage::disk("root")->put($targetFilePath,$this->getTemplateContent());
+          Storage::disk("root")->put($targetFilePath,$this->evaluateTemplate());
        }
     }
 
@@ -105,7 +113,7 @@ class ScafoldGen{
         $__code__[] = '$__list__ = [];';
         foreach ($r as $k=>$__item__){
           if ($k%2 == 0){
-            $__code__[] = '$__list__[]="' . $__item__ . '";';
+            $__code__[] = '$__list__[]=\'' . $__item__ . '\';';
           }else{
             if (count($__t__ = explode("=",$__item__)) > 1){
               $__code__[] = '$__list__[]=' . $__t__[1] . ';';
@@ -119,7 +127,7 @@ class ScafoldGen{
 
         $__code__ = implode("",$__code__);
 
-        //echo $code;
+        // dd($__code__);
 
         eval($__code__);
 

@@ -1,27 +1,16 @@
 <?php
+
 namespace App\Scafold;
 
-class RepoScafold extends ScafoldGen{
-
+class RepoScafold extends ScafoldGen
+{
 
     protected $template = 'repo';
 
-    function setModelUse($modelUse){
-        $this->setData([
-            'modelUse'=>$modelUse
-        ]);
+    function setModel(ScafoldGen $model){
+      $this->setData([
+          'model'=>$model->getName(),
+          'modelUse'=>$model->getUseExpression()
+      ]);
     }
-
-    function setModel($model){
-        $this->setData([
-            'model'=>$model
-        ]);
-    }
-
-    function setName($name){
-        $this->setData([
-            'name'=>$name
-        ]);
-    }
-
 }

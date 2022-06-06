@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers\v2\Settings;
+namespace {{$namespace}};
 use {{$repoUse}};
 use App\Http\Requests\Settings\Config\StoreRequest;
 use App\Http\Requests\Settings\Config\UpdateRequest;
@@ -9,14 +9,14 @@ use App\Http\Controllers\Controller;
 class {{$name}} extends Controller
 {
     //
-    private $configRepository = null;
+    private ${{$repoInstance}} = null;
 
-    function __construct({{repoName}} ${{repoInstance}}){
-        $this->{{repoInstance}} = ${{repoInstance}};
+    function __construct({{$repoName}} ${{$repoInstance}}){
+        $this->{{$repoInstance}} = ${{$repoInstance}};
     }
 
     function index(){
-        $list = $this->{{repoInstance}}->fetch(request()->all())->get();
+        $list = $this->{{$repoInstance}}->fetch(request()->all())->get();
         return inertia()->render("v2/Settings/Config/Index",[
             "list"=>$list
         ]);
@@ -27,31 +27,31 @@ class {{$name}} extends Controller
     }
 
     function edit($id){
-        $data = $this->{{repoInstance}}->fetchById($id);
+        $data = $this->{{$repoInstance}}->fetchById($id);
         return inertia()->render("v2/Settings/Config/Edit",[
             "data"=>$data
         ]);
     }
 
     function show($id){
-        $data = $this->{{repoInstance}}->fetchById($id);
+        $data = $this->{{$repoInstance}}->fetchById($id);
         return inertia()->render("v2/Settings/Config/Show",[
             "data"=>$data
         ]);
     }
 
     function store(StoreRequest $request){
-      $record = $this->{{repoInstance}}->create($request->validated());
+      $record = $this->{{$repoInstance}}->create($request->validated());
       return $this->respondWithSuccess("New record added");
     }
 
     function update($id,UpdateRequest $updateRequest){
-        $record = $this->{{repoInstance}}->update($id,$updateRequest->validated());
+        $record = $this->{{$repoInstance}}->update($id,$updateRequest->validated());
         return $this->respondWithSuccess("Record updated");
     }
 
     function destroy($id){
-      $record = $this->{{repoInstance}}->remove($id);
+      $record = $this->{{$repoInstance}}->remove($id);
       return $this->respondWithSuccess("Record removed");
     }
 }
