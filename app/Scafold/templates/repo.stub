@@ -1,35 +1,35 @@
 <?php
 namespace App\Repositories\Settings;
-use {{modelUse}};
+use {{$modelUse}};
 use Illuminate\Support\Facades\Auth;
 
-class {{name}}
+class {{$name}}
 {
 
     function fetch($filters=[]){
-        $query = {{model}}::query();
+        $query = {{$model}}::query();
         return $query;
     }
 
     function fetchById($id){
-        $record = {{model}}::query()->find($id);
+        $record = {{$model}}::query()->find($id);
         return $record;
     }
 
 
     function update($id,$data){
-        $record = {{model}}::query()->find($id);
+        $record = {{$model}}::query()->find($id);
         $record->update($data);
         return $record;
     }
 
     function create($data){
-        $record = {{model}}::create($data);
+        $record = {{$model}}::create($data);
         return $record;
     }
 
     function remove($id){
-        $record = {{model}}::query()->find($id);
+        $record = {{$model}}::query()->find($id);
         $record->delete();
         return $record;
     }

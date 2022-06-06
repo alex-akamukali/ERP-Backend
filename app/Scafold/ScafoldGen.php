@@ -71,30 +71,29 @@ class ScafoldGen{
     }
 
     function evaluateTemplate(){
+        $__content__ = Storage::disk("root")->get("app/Scafold/templates/" . $this->template . ".stub");
+        extract($this->data);
+        // $name = 6;
 
+        // $r1 = [2,3,4,5];
 
-        $name = 6;
+        // $r = '
 
-        $r1 = [2,3,4,5];
+        // very good
+        // {{$name}}--{{$name+3}}
+        // cool
 
-        $r = '
+        // @if ($name > 2){@
+        //   nice one
+        // @}@
 
-        very good
-        {{$name}}--{{$name+3}}
-        cool
+        // @foreach ($r1 as $item2){@
+        //  <--{{$item2*2}}-->
+        // @}@
 
-        @if ($name > 2){@
-          nice one
-        @}@
+        // ';
 
-        @foreach ($r1 as $item2){@
-         <--{{$item2*2}}-->
-        @}@
-
-        ';
-
-
-        $r = explode("{{",$r);
+        $r = explode("{{",$__content__);
         $r = implode("__sep__=",$r);
         $r = explode("}}",$r);
         $r = implode("__sep__",$r);
@@ -102,31 +101,30 @@ class ScafoldGen{
         $r = implode("__sep__",$r);
         $r = explode("__sep__",$r);
 
-        $code = [];
-        $code[] = '$list = [];';
-        foreach ($r as $k=>$item){
+        $__code__ = [];
+        $__code__[] = '$__list__ = [];';
+        foreach ($r as $k=>$__item__){
           if ($k%2 == 0){
-            $code[] = '$list[]="' . $item . '";';
+            $__code__[] = '$__list__[]="' . $__item__ . '";';
           }else{
-            if (count($t = explode("=",$item)) > 1){
-              $code[] = '$list[]=' . $t[1] . ';';
+            if (count($__t__ = explode("=",$__item__)) > 1){
+              $__code__[] = '$__list__[]=' . $__t__[1] . ';';
             }else{
-              $code[] = $item;
+              $__code__[] = $__item__;
             }
 
           }
         }
-        $code[] = '$list = implode("",$list);';
+        $__code__[] = '$__list__ = implode("",$__list__);';
 
-        $code = implode("",$code);
+        $__code__ = implode("",$__code__);
 
         //echo $code;
 
-        eval($code);
+        eval($__code__);
 
+        return $__list__;
         // echo $list;
-
-
 
     }
 
