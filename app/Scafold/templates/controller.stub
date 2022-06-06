@@ -41,17 +41,17 @@ class {{name}} extends Controller
     }
 
     function store(StoreRequest $request){
-      $record = $this->configRepository->create($request->validated());
+      $record = $this->{{repoInstance}}->create($request->validated());
       return $this->respondWithSuccess("New record added");
     }
 
     function update($id,UpdateRequest $updateRequest){
-        $record = $this->configRepository->update($id,$updateRequest->validated());
+        $record = $this->{{repoInstance}}->update($id,$updateRequest->validated());
         return $this->respondWithSuccess("Record updated");
     }
 
     function destroy($id){
-      $record = $this->configRepository->remove($id);
+      $record = $this->{{repoInstance}}->remove($id);
       return $this->respondWithSuccess("Record removed");
     }
 }
