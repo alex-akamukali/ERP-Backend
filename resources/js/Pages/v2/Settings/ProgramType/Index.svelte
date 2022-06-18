@@ -2,24 +2,13 @@
     import {
         Modal,
         Page,
-        useForm,
-        page,
-        inertia,
-        Layout,
-        initForm,
-        selectRow,
-        onSelectRow,
-        save,
-        remove,
-        onCreate,
-        onUpdate,
-        onRemove,
-        getMode,
-        reset,
-        onReset,
+        Layout
     } from "nodejs-svelte-crud-helper";
-    import Script from "./Script.js";
-    import InputCreate from "./InputCreate.svelte";
+
+    import {updateForm,createForm,selectRow,update,create,remove,setResource,reset} from "./Form";
+
+    import ModalCreate from "./ModalCreate.svelte";
+    import ModalUpdate from "./ModalUpdate.svelte";
 
     export const layout = Layout;
 </script>
@@ -27,41 +16,10 @@
 <script>
     export let list;
 
-    let mode = getMode();
+    setResource("/program-type/");
 
-    const resource = "/program-type/";
-
-    let form = $Script.form();
-
-
-    onSelectRow((data) => {
-        $Script.select(data);
-        // $form.description = data.description;
-        // $form.title = data.title;
-        // $form.status = data.status;
-        // $form.id = data.id;
-
-    });
-
-
-    onCreate(() => {
-        // $form.post(resource);
-        $Script.post(resource);
-    });
-
-    onRemove((data) => {
-        if (confirm("Do you want to confirm this action?")) {
-            $Script.delete(resource + data.id);
-        }
-    });
-
-    onUpdate((data) => {
-        $Script.put(resource + data.id);
-    });
-
-    onReset(() => {
-        $Script.reset();
-    });
+    // const resource = "/program-type/";
+    // let form = $Script.form();
 </script>
 
 <Page>
@@ -70,7 +28,7 @@
         slot="createButton"
         class="btn btn-primary btn-sm"
         data-toggle="modal"
-        data-target="#modal-progtype"
+        data-target="#modal-create"
         on:click|preventDefault={reset}
     >
         <i class="fa fa-plus" /> Program Type
@@ -105,7 +63,7 @@
                         <td>
                             <a
                                 data-toggle="modal"
-                                data-target="#modal-progtype"
+                                data-target="#modal-update"
                                 href={null}
                                 on:click|preventDefault={() =>
                                     selectRow(programType)}
@@ -127,20 +85,8 @@
         </table>
     </div>
 
-    <Modal id="modal-progtype" on:submit={save}>
-        <span slot="title">Program Type</span>
+<ModalCreate {create} {createForm} />
 
-        <div class="col-md-12" slot="content">
+<ModalUpdate {update} {updateForm} />
 
-<!-- content here  -->
-          <InputCreate />
-
-        </div>
-
-        <button type="submit" class="btn btn-primary" slot="storeButton">
-            <i class="fa fa-save" /> &nbsp; {$mode == "create"
-                ? "Add Program Type"
-                : "Update Program Type"}
-        </button>
-    </Modal>
 </Page>
