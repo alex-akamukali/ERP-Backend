@@ -205,3 +205,9 @@ Route::resource("user-management-dashboard",\App\Http\Controllers\v2\Auth\UserMa
 Route::resource("user-management-profile",\App\Http\Controllers\v2\Auth\UserManagementProfileController::class)->middleware(["auth"]);
 
 Route::resource("assessment",\App\Http\Controllers\v2\Auth\AssessmentController::class)->middleware(["auth"]);
+
+Route::resource("payment",\App\Http\Controllers\v1\Foo\PaymentController::class)->middleware(["auth"]);
+Route::resource("payment",\App\Http\Controllers\v1\Foo\PaymentController::class)->middleware(["auth"]);
+Route::resource("payment",\App\Http\Controllers\v1\Foo\PaymentController::class)->middleware(["auth"]);
+Route::resource("payment",\App\Http\Controllers\v1\Foo\PaymentController::class)->middleware(["auth"]);
+Route::resource("program-type",\App\Http\Controllers\v1\AppSettings\ProgramTypeController::class)->middleware(["auth"]);
